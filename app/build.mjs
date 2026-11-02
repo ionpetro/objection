@@ -16,7 +16,7 @@ const { buildSite } = await import("./site.mjs");
 
 const r = (p) => readFileSync(new URL(p, import.meta.url), "utf8");
 const strip = (js) => js.replace(/^if \(typeof module[^\n]*\n?/m, "");
-const files = unitFiles({ example: process.env.CARPE_INCLUDE_EXAMPLE === "1" });
+const files = unitFiles({ example: process.env.OBJECTION_INCLUDE_EXAMPLE === "1" });
 const units = files.map((f) => `// ---- ${f.split("/").pop()} ----\n${readFileSync(f, "utf8")}`).join("\n");
 
 const out = r("./src/shell.html")
@@ -26,7 +26,7 @@ const out = r("./src/shell.html")
   .replace("/*APP*/", () => r("./src/app.js"));
 mkdirSync(new URL("./dist/", import.meta.url), { recursive: true });
 writeFileSync(new URL("./dist/index.html", import.meta.url), out);
-console.log(`dist/index.html ${(out.length / 1024).toFixed(0)} KB, ${files.length} unit file(s)${files.length ? ": " + files.map((f) => f.split("/").pop().replace(/\.js$/, "")).join(", ") : " (no units yet; the app shows an empty road)"}`);
+console.log(`dist/index.html ${(out.length / 1024).toFixed(0)} KB, ${files.length} unit file(s)${files.length ? ": " + files.map((f) => f.split("/").pop().replace(/\.js$/, "")).join(", ") : " (no units yet; the app shows an empty courthouse)"}`);
 
 const n = buildSite(out, new URL("./vercel/", import.meta.url));
-console.log(`vercel/: app + lexicon (${n} entries) + about, sitemap, manifest, icons`);
+console.log(`vercel/: app + outline (${n} rule cards) + about, sitemap, manifest, icons${process.env.POSTHOG_KEY ? ", PostHog on" : ", no analytics (set POSTHOG_KEY in app/.env)"}`);

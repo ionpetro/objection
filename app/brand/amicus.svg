@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="mascot" viewBox="0 0 130 116" role="img" aria-label="Amicus, the armadillo in a bow tie">
+  <!-- Amicus (amicus curiae, "friend of the court"): an armadillo in a navy bow tie with a brass stud. Moods live in app.js: happy, sad, cheer, robe, sleepy. -->
+  <ellipse cx="65" cy="106" rx="44" ry="5" fill="#ddd2bf"/>
+  <path d="M30 92q0-44 35-44t35 44z" fill="#9d7a4f"/>
+  <path d="M46 44q6-18 12-18M60 44q6-18 12-17M74 44q6-18 12-16" stroke="#6f4f2c" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M112 90q14-4 10-16" stroke="#9d7a4f" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M38 96q0-28 27-28t27 28z" fill="#c7a77c"/>
+  <path d="M36 72q-12-10-8-24" stroke="#c7a77c" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M94 72q12-10 8-24" stroke="#c7a77c" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M40 46 36 22l14 20z" fill="#c7a77c"/><path d="M90 46l4-24-14 20z" fill="#c7a77c"/>
+  <path d="M43 42 40 28l9 14z" fill="#d98a7e" opacity="0.5"/><path d="M87 42l3-14-9 14z" fill="#d98a7e" opacity="0.5"/>
+  <path d="M38 50q-3 20 10 30 17 9 34 0 13-10 10-30-27-16-54 0z" fill="#c7a77c"/>
+  <path d="M50 66q15-10 30 0-4 10-15 11t-15-11z" fill="#e8d8bd"/>
+  <ellipse cx="65" cy="64" rx="5" ry="3.6" fill="#2b2420"/><circle cx="63.5" cy="63" r="1.1" fill="#fff" opacity="0.7"/>
+  <circle cx="48" cy="56" r="3.4" fill="#2b2420"/><circle cx="70" cy="56" r="3.4" fill="#2b2420"/><circle cx="49.3" cy="54.8" r="1.1" fill="#fff"/><circle cx="71.3" cy="54.8" r="1.1" fill="#fff"/>
+  <path d="M52 67q7 8 14 0z" fill="#2b2420"/><path d="M55.5 69.5q3.5 3 7 0z" fill="#d98a7e"/>
+  <path d="M52 82l13 4 13-4v8l-13-4-13 4z" fill="#1f2f52"/><circle cx="65" cy="86" r="2.6" fill="#c9962b"/>
+</svg>

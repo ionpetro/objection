@@ -1,8 +1,8 @@
 // Loads the unit files. In the browser the build concatenates app/src/units/*.js (each pushes to
-// the global CARPE_UNITS) and app.js reads that array. In Node (tests, site build) `loadUnits`
+// the global OBJECTION_UNITS) and app.js reads that array. In Node (tests, site build) `loadUnits`
 // requires every unit file in src/units/ and returns them sorted in course order.
 (function () {
-  if (typeof module === "undefined") return; // browser: nothing to do, app.js reads CARPE_UNITS
+  if (typeof module === "undefined") return; // browser: nothing to do, app.js reads OBJECTION_UNITS
   const fs = require("node:fs");
   const path = require("node:path");
   const DIR = path.join(__dirname, "units");

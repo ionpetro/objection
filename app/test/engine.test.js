@@ -1,4 +1,4 @@
-// Engine unit tests: streaks, spaced review, normaliser, unlocking, countdown, scoring, badges.
+// Engine unit tests: streaks, spaced review, normalisers, unlocking, countdown, drills, mocks, ranks, badges.
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const { loadUnits } = require("../src/course.js");
@@ -14,7 +14,7 @@ test("weekends never break a streak", () => {
   assert.equal(s.freezes, 1);
 });
 
-test("a missed weekday uses a freeze, two missed reset", () => {
+test("a missed weekday uses a continuance, two missed reset", () => {
   const s = E.freshState();
   E.touchStreak(s, "2026-11-02");
   const a = E.touchStreak(s, "2026-11-04");
@@ -25,7 +25,7 @@ test("a missed weekday uses a freeze, two missed reset", () => {
   assert.equal(s.streak, 1);
 });
 
-test("same-day activity doesn't double count and a 7-day streak earns a freeze", () => {
+test("same-day activity doesn't double count and a 7-day streak earns a continuance", () => {
   const s = E.freshState();
   E.touchStreak(s, "2026-11-02");
   E.touchStreak(s, "2026-11-02");
@@ -52,7 +52,7 @@ test("leitner boxes climb on time, drop on a miss, and reach the 60-day box", ()
   assert.equal(E.daysBetween(day, s.items.x.due), 60);
 });
 
-test("swipe grades count half: a miss drops one box, not to box 1", () => {
+test("a self-graded flash miss drops one box only", () => {
   const s = E.freshState();
   E.learn(s, "w", "2026-11-01");
   s.items.w.box = 4;
@@ -60,35 +60,53 @@ test("swipe grades count half: a miss drops one box, not to box 1", () => {
   assert.equal(s.items.w.box, 3);
 });
 
-test("from May every due date is capped at exam minus 7 days", () => {
-  const s = E.freshState();
-  E.learn(s, "y", "2027-04-20");
+test("no review is scheduled later than exam minus 3 days, and Closing argument pulls every card forward", () => {
+  const s = E.freshState(); // exam 2027-07-28
+  E.learn(s, "y", "2027-06-01");
   s.items.y.box = 5;
-  E.grade(s, "y", true, "2027-05-02");
-  assert.equal(s.items.y.due, "2027-05-26");
-  E.grade(s, "y", true, "2027-05-28");
-  assert.equal(s.items.y.due, "2027-05-29", "after the cap, review tomorrow");
-  s.examDate = "2027-06-09";
-  assert.equal(E.reviewCap(s), "2027-06-02");
+  E.grade(s, "y", true, "2027-07-01");
+  assert.equal(s.items.y.due, "2027-07-25");
+  E.grade(s, "y", true, "2027-07-26");
+  assert.equal(s.items.y.due, "2027-07-27", "after the cap, review tomorrow");
+  s.examDate = "2027-02-24";
+  assert.equal(E.reviewCap(s), "2027-02-21");
+  const t = E.freshState();
+  E.learn(t, "a", "2027-07-01"); t.items.a.due = "2027-07-20";
+  assert.deepEqual(E.dueItems(t, "2027-07-10"), [], "not due yet in Discovery");
+  assert.deepEqual(E.dueItems(t, "2027-07-15"), ["a"], "Closing argument: every learned card is due");
 });
 
-test("notebook holds items missed twice, worst first", () => {
+test("the notebook holds items missed twice, worst first, and remembers the distractor type and the self-tag", () => {
   const s = E.freshState();
-  E.grade(s, "a", false, "2026-11-01"); E.grade(s, "a", false, "2026-11-01"); E.grade(s, "a", false, "2026-11-01");
+  E.grade(s, "a", false, "2026-11-01", { trap: 1 }); E.grade(s, "a", false, "2026-11-01", { trap: 1 }); E.grade(s, "a", false, "2026-11-01", { trap: 6 });
   E.grade(s, "b", false, "2026-11-01"); E.grade(s, "b", false, "2026-11-01");
   E.grade(s, "c", false, "2026-11-01");
   assert.deepEqual(E.notebookItems(s), ["a", "b"]);
+  assert.deepEqual(s.items.a.traps, { 1: 2, 6: 1 });
+  E.selfTag(s, "a", "misread");
+  assert.equal(s.items.a.tag, "misread");
+  assert.deepEqual(E.topTraps(s, "2026-11-03"), [["1", 2], ["6", 1]]);
+  assert.deepEqual(E.topTraps(s, "2026-11-20"), [], "only the last seven days");
 });
 
-test("answer normaliser ignores case, macrons and punctuation but not u/v", () => {
-  assert.ok(E.accepts(["dotium"], "Dōtium"));
-  assert.ok(E.accepts(["conferto"], " conferto. "));
-  assert.ok(E.accepts(["iis", "eis", "is"], "EIS"));
-  assert.ok(!E.accepts(["venit"], "uenit"));
-  assert.equal(E.norm("Hoc dictum, paulo post!"), "hoc dictum paulo post");
+test("the English normaliser ignores case, punctuation and articles; the number normaliser reads dollars, days and words", () => {
+  assert.ok(E.accepts(["the forum-defendant rule"], "Forum defendant rule."));
+  assert.ok(E.accepts(["30 days"], "thirty days"));
+  assert.ok(E.accepts(["30 days"], "30"));
+  assert.ok(E.accepts(["$75,000"], "75000"));
+  assert.ok(E.accepts(["$75,000"], "seventy-five thousand dollars"));
+  assert.ok(E.accepts(["21 days"], "Twenty-one"));
+  assert.ok(!E.accepts(["30 days"], "31 days"));
+  assert.ok(!E.accepts(["$75,000"], "$75,001"));
+  assert.equal(E.norm("An opposing party's statement, offered!"), "opposing partys statement offered");
+  assert.ok(E.acceptsCite(["FRE 1006"], "1006"));
+  assert.ok(E.acceptsCite(["FRE 1006"], "Rule 1006"));
+  assert.ok(E.acceptsCite(["UCC 2-209(1)"], "2-209(1)"));
+  assert.ok(E.acceptsCite(["28 U.S.C. §1441(b)(2)"], "1441(b)(2)"));
+  assert.ok(!E.acceptsCite(["FRE 1006"], "1007"));
 });
 
-test("first lesson of every unit is open, the rest unlock in order, roundup last", () => {
+test("first lesson of every unit is open, the rest unlock in order, closing argument last", () => {
   const s = E.freshState();
   const u = IX.course.units[0];
   assert.ok(E.isUnlocked(IX, s, u.lessons[0].id));
@@ -97,9 +115,10 @@ test("first lesson of every unit is open, the rest unlock in order, roundup last
   s.done[u.lessons[0].id] = { perfect: true, at: "2026-11-01" };
   assert.ok(E.isUnlocked(IX, s, u.lessons[1].id));
   s.done[u.lessons[1].id] = { perfect: false, at: "2026-11-01" };
+  s.done[u.lessons[2].id] = { perfect: false, at: "2026-11-01" };
   assert.ok(E.isUnlocked(IX, s, `${u.id}-review`));
   assert.equal(E.nextNode(IX, s).id, `${u.id}-review`);
-  assert.deepEqual(E.unitProgress(IX, s, u.id), { done: 2, total: 3 });
+  assert.deepEqual(E.unitProgress(IX, s, u.id), { done: 3, total: 4 });
 });
 
 test("lessons are split into sittings by weight and every item is served once", () => {
@@ -112,46 +131,88 @@ test("lessons are split into sittings by weight and every item is served once", 
 
 test("countdown counts days to the exam and names the phase", () => {
   const s = E.freshState();
-  const c = E.countdown(s, "2026-11-01");
-  assert.equal(c.days, 213);
+  const c = E.countdown(s, "2026-11-02");
+  assert.equal(c.days, 268);
   assert.equal(c.phase.id, "foundations");
-  assert.equal(c.label, "Τετάρτη 2 Ιουνίου");
-  assert.equal(E.countdown(s, "2027-04-01").phase.id, "walls");
-  assert.equal(E.countdown(s, "2027-05-20").phase.id, "via");
-  assert.equal(E.countdown(s, "2027-06-03").phase.id, "after");
-  s.examDate = "2027-06-09";
-  assert.equal(E.countdown(s, "2027-06-02").days, 7);
+  assert.equal(c.label, "Wednesday, July 28, 2027");
+  assert.match(c.note, /derived/);
+  assert.equal(E.countdown(s, "2027-07-05").phase.id, "discovery");
+  assert.equal(E.countdown(s, "2027-07-14").phase.id, "closing");
+  assert.equal(E.countdown(s, "2027-07-29").phase.id, "after");
+  s.examDate = "2027-02-24";
+  assert.equal(E.countdown(s, "2027-02-17").days, 7);
+  assert.equal(E.countdown(s, "2027-02-17").label, "Wednesday, February 24, 2027");
+  assert.ok(E.EXAM_PRESETS.some((p) => p.date === "2027-02-24"));
 });
 
-test("daily drill maps weekdays to exam sections and records a daily streak", () => {
+test("the Question of the Day rotates subjects by weekday, is date-seeded, and records a daily streak", () => {
+  assert.equal(E.DAILY_BY_WEEKDAY[E.weekday("2026-11-02")], "civpro"); // Monday
+  assert.equal(E.DAILY_BY_WEEKDAY[E.weekday("2026-11-08")], "torts"); // Sunday
   const s = E.freshState();
-  assert.equal(E.buildDaily(IX, s, "2026-11-02").section, "Γ1"); // Monday
-  assert.equal(E.buildDaily(IX, s, "2026-11-05").section, "Δ2"); // Thursday
-  assert.equal(E.buildDaily(IX, s, "2026-11-08").section, "mix"); // Sunday
-  E.recordDaily(s, "2026-11-02", 10, 15, "Γ1");
-  E.recordDaily(s, "2026-11-03", 12, 15, "Γ2");
+  const d = E.buildDaily(IX, s, "2026-11-02");
+  assert.ok(d.steps.length >= 1 && d.steps.length <= 5);
+  assert.ok(d.title);
+  E.recordDaily(s, "2026-11-02", 4, 5, "civpro", d.ids, 400000);
+  E.recordDaily(s, "2026-11-03", 5, 5, "conlaw");
   assert.equal(s.dailyStreak, 2);
-  E.recordDaily(s, "2026-11-03", 13, 15, "Γ2"); // redo same day: no change
+  E.recordDaily(s, "2026-11-03", 3, 5, "conlaw"); // redo same day: no change
   assert.equal(s.dailyStreak, 2);
-  E.recordDaily(s, "2026-11-09", 5, 15, "Γ1"); // Monday after a skipped week
+  E.recordDaily(s, "2026-11-09", 2, 5, "civpro"); // Monday after a skipped week
   assert.equal(s.dailyStreak, 1);
 });
 
-test("section scoring adds marks per section", () => {
-  const res = [{ q: { section: "Γ1", marks: 5 }, score: 1 }, { q: { section: "Γ1", marks: 5 }, score: 0 }, { q: { section: "Δ1", marks: 3 }, score: 0.5 }];
-  assert.deepEqual(E.scoreSections(res), { "Γ1": [5, 10], "Δ1": [1.5, 3] });
+test("a mock apportions questions across subjects with a seeded rotation and NCBE's category fractions", () => {
+  assert.deepEqual(E.apportion(25, [1 / 7, 1 / 7, 1 / 7, 1 / 7, 1 / 7, 1 / 7, 1 / 7]).sort(), [3, 3, 3, 4, 4, 4, 4]);
+  assert.deepEqual(E.apportion(5, [2 / 3, 1 / 3]), [3, 2]);
+  assert.deepEqual(E.apportion(5, [1 / 4, 1 / 3, 1 / 4, 1 / 6]), [1, 2, 1, 1]);
+  // a synthetic seven-subject course: 25 draws give 4-4-4-4-3-3-3 and the extra question rotates with the seed
+  const mk = (sub, i) => ({ id: `u${i}`, title: sub, blurb: "x", subject: sub, assume: "x", exam: ["mbe"], lessons: [{ id: `u${i}l1`, title: "x", items: [...Array(8)].map((_, k) => ({ id: `u${i}-h${k}`, kind: "hypo", cat: ["I", "II", "III", "IV", "V", "VI", "VII"][k % 7], callType: "prevail", rule: "u0-r-x", issue: `issue ${k}`, stem: "s", call: "c?", options: [{ text: "a", why: "w" }, { text: "b", why: "w", trap: 1 }, { text: "c", why: "w", trap: 2 }, { text: "d", why: "w", trap: 3 }], answer: 0, say: "s", status: "general", src: "x" })) }] });
+  const ix = E.indexCourse(E.SUBJECT_IDS.map(mk));
+  const seen = new Set();
+  for (let seed = 1; seed <= 20; seed++) {
+    const m = E.buildMock(ix, E.freshState(), seed, 25);
+    assert.equal(m.steps.length, 25);
+    assert.equal(m.minutes, 45);
+    const counts = {};
+    for (const q of m.steps) counts[q.subject] = (counts[q.subject] || 0) + 1;
+    assert.deepEqual(Object.values(counts).sort(), [3, 3, 3, 4, 4, 4, 4]);
+    seen.add(Object.entries(counts).filter(([, c]) => c === 4).map(([k]) => k).sort().join(","));
+  }
+  assert.ok(seen.size > 1, "the seed decides which subjects get the extra question");
+  const sub = E.buildSubjectSet(ix, E.freshState(), "evidence", 4, 8);
+  assert.equal(sub.steps.length, 8);
+  assert.equal(sub.minutes, 14);
 });
 
-test("badges are Roman and award once", () => {
+test("subject scoring and the trap tally", () => {
+  const res = [{ q: { subject: "torts", marks: 1 }, score: 1 }, { q: { subject: "torts", marks: 1 }, score: 0, trap: 6 }, { q: { subject: "evidence", marks: 1 }, score: 0, trap: 6 }, { q: { subject: "evidence", marks: 1 }, score: 0, trap: 4 }];
+  assert.deepEqual(E.scoreSubjects(res), { torts: [1, 2], evidence: [0, 2] });
+  assert.deepEqual(E.trapTally(res), { 6: 2, 4: 1 });
+});
+
+test("ranks climb with billable minutes", () => {
+  const s = E.freshState();
+  assert.equal(E.rankOf(s).rank.name, "1L");
+  s.xp = 120;
+  assert.equal(E.rankOf(s).rank.name, "2L");
+  assert.equal(E.rankOf(s).next.name, "3L");
+  s.xp = 9999;
+  assert.equal(E.rankOf(s).rank.name, "Justice");
+  assert.equal(E.rankOf(s).next, null);
+  assert.equal(E.fmtMinutes(260), "4h 20m");
+});
+
+test("badges award once", () => {
   const s = E.freshState();
   s.done.x = { perfect: true, at: "2026-11-01" };
-  const fresh = E.awardBadges(s, "2026-11-01", IX);
-  assert.deepEqual(fresh.map((b) => b.id).sort(), ["sine_errore", "tiro"]);
+  assert.deepEqual(E.awardBadges(s, "2026-11-01", IX).map((b) => b.id), ["first_objection"]);
   assert.deepEqual(E.awardBadges(s, "2026-11-02", IX), []);
-  s.colosseumBest = 15;
-  assert.deepEqual(E.awardBadges(s, "2026-11-02", IX).map((b) => b.id), ["triumphator"]);
-  s.mocks.push({ at: "2026-11-02", score: 100, marks: 100 });
-  assert.deepEqual(E.awardBadges(s, "2026-11-02", IX).map((b) => b.id), ["carpe20"]);
+  s.crossExamBest = 15;
+  assert.deepEqual(E.awardBadges(s, "2026-11-02", IX).map((b) => b.id), ["cross_examiner"]);
+  s.mocks.push({ at: "2026-11-02", size: 25, score: 25, total: 25 });
+  assert.deepEqual(E.awardBadges(s, "2026-11-02", IX).map((b) => b.id).sort(), ["moot_court", "sine_errore"]);
+  s.done["u0_example-review"] = { perfect: true, at: "2026-11-02" };
+  assert.deepEqual(E.awardBadges(s, "2026-11-02", IX).map((b) => b.id).sort(), ["closing_argument", "juris_doctor"]);
 });
 
 test("week xp only counts this week", () => {
@@ -162,45 +223,48 @@ test("week xp only counts this week", () => {
   assert.equal(E.weekKey("2026-11-08"), "2026-11-02");
 });
 
-test("sentence find marks the right tokens despite macrons and punctuation", () => {
-  const it = IX.items.get("u0-s35-dotem");
-  const q = E.qFind(IX, it, E.rng(1));
-  assert.deepEqual(q.answer.map((i) => q.words[i]), ["reliquerat"]);
+test("find marks the deciding facts in the stem despite punctuation", () => {
+  const it = IX.items.get("u0-h-forum-defendant");
+  const q = E.qFind(IX, it);
+  assert.deepEqual(q.answer.map((i) => q.words[i]).join(" "), "State C state court principal place of business in State C.", "tokens come back in stem order");
 });
 
-test("clause steps carry 1+1+1+2 marks shape (five scored steps) and the right answers", () => {
-  const it = IX.items.get("u0-c-cum-funderet");
-  const q = E.qClauseSteps(IX, it, E.rng(2));
-  assert.equal(q.steps[0].answer, it.kind_el);
-  assert.equal(q.steps[4].answer, it.tense_el);
+test("the grid question splits the options into two verdicts and keeps the key", () => {
+  const it = IX.items.get("u0-h-habit");
+  const q = E.qGrid(IX, it, E.rng(2));
+  assert.deepEqual(q.verdicts.slice().sort(), ["No", "Yes"]);
+  assert.equal(q.verdictAnswer, "Yes");
+  assert.equal(q.options.filter((o) => E.verdictOf(o.text) === "Yes").length, 2);
 });
 
-test("Β2 match has 5 pairs and 2 spare Greek words when the pool allows", () => {
-  const q = E.qMatchSpare(IX, IX.byKind.hook, E.rng(4));
-  assert.equal(q.pairs.length, 5);
-  assert.equal(q.spare.length, 2);
-  assert.equal(q.right.length, 7);
-});
-
-test("a headword taught in several units shares one progress id and is listed once", () => {
-  const mk = (id, unit, lesson) => ({ id: unit, title: unit, exam: [], lessons: [{ id: lesson, title: lesson, items: [{ id, kind: "word", la: "gero", forms: "gero, gessi, gestum, gerĕre", el: "διεξάγω", pos: "verb", say: "x", src: "x", status: "book" }] }] });
-  const IXd = E.indexCourse([mk("a-gero", "u1", "u1l1"), mk("b-gero", "u2", "u2l1")]);
-  assert.equal(E.canon("b-gero"), "a-gero");
-  assert.equal(IXd.isDup(IXd.items.get("b-gero")), true);
-  assert.equal(IXd.isDup(IXd.items.get("a-gero")), false);
+test("hypo review prefers an unseen sibling with the same rule", () => {
   const s = E.freshState();
-  E.grade(s, "b-gero", true, "2026-11-02");
-  assert.deepEqual(Object.keys(s.items), ["a-gero"]);
+  const seen = IX.items.get("u0-h-forum-defendant");
+  const sib = { ...seen, id: "u0-h-forum-defendant-2" };
+  const ix = { ...IX, siblings: () => [seen, sib], items: new Map([...IX.items, [sib.id, sib]]) };
+  E.learn(s, seen.id, "2026-11-01");
+  const q = E.qReview(ix, seen, E.rng(1), s);
+  assert.equal(q.itemId, sib.id);
+  assert.equal(q.label, E.L.transfer);
 });
 
-test("source labels never show our research file names to the student", () => {
-  assert.equal(E.cleanSrc("Παν. 2024 Γ1· morphology.md §1.5"), "Παν. 2024 Γ1");
-  assert.equal(E.cleanSrc("derivatives.md (el.wiktionary)"), "Βικιλεξικό");
-  assert.equal(E.cleanSrc("syntax.md §3.5 (ctx δικό μας)"), "Carpe");
-  for (const it of IX.items.values()) assert.ok(!/\.(md|jsonl?|txt)\b|§/.test(E.cleanSrc(it.src)), `${it.id}: ${E.cleanSrc(it.src)}`);
+test("the cite question accepts the bare number and offers options as a fallback", () => {
+  const it = IX.items.get("u0-r-habit");
+  const q = E.qCite(IX, it, E.rng(1));
+  assert.equal(q.type, "type");
+  assert.ok(E.acceptsCite(q.answer, "406"));
+  assert.ok(q.fallbackOptions.includes("FRE 406"));
+  assert.equal(E.qCite(IX, IX.items.get("u0-r-miranda"), E.rng(1)), null, "a case-name cite is not a number question");
 });
 
-test("remaining sittings count every part still to play and shrink as parts and roundups are done", () => {
+test("source labels never show our research file names to the learner", () => {
+  assert.equal(E.cleanSrc("28 U.S.C. §1441(b)(2); civpro.md §5.1"), "28 U.S.C. §1441(b)(2)");
+  assert.equal(E.cleanSrc("FRE 406; evidence.md §3 [READ]"), "FRE 406");
+  assert.equal(E.cleanSrc("torts.md §1"), "Objection");
+  for (const it of IX.items.values()) assert.ok(!/\.(md|jsonl?|txt)\b/.test(E.cleanSrc(it.src)), `${it.id}: ${E.cleanSrc(it.src)}`);
+});
+
+test("remaining sittings count every part still to play and shrink as parts and closing arguments are done", () => {
   const s = E.freshState();
   const total = E.remainingSittings(IX, s);
   const nodes = E.pathNodes(IX);
@@ -216,20 +280,11 @@ test("remaining sittings count every part still to play and shrink as parts and 
   assert.equal(E.remainingSittings(IX, s), total - E.lessonSittings(IX, first.id).length - 1);
 });
 
-test("a lesson never re-teaches a headword already learned in an earlier unit, and the yes/no game is asked cold", () => {
-  const dup = IX.byKind.word.find((w) => IX.isDup(w));
-  if (dup) {
-    const s = E.freshState();
-    const sit = E.lessonSittings(IX, dup.lessonId).findIndex((ids) => ids.includes(dup.id));
-    const before = E.buildLesson(IX, s, dup.lessonId, 3, sit);
-    assert.ok(before.some((q) => q.type === "intro" && q.itemId === dup.id), "unlearned duplicate still gets its card");
-    E.learn(s, dup.id, "2026-11-01");
-    const after = E.buildLesson(IX, s, dup.lessonId, 3, sit);
-    assert.ok(!after.some((q) => q.type === "intro" && q.itemId === dup.id), "learned duplicate gets no card");
-    assert.ok(after.some((q) => q.itemId === dup.id && q.type === "mcq"), "but is still asked once");
-  }
-  const origin = IX.byKind.origin[0];
-  const steps = E.buildLesson(IX, E.freshState(), origin.lessonId, 5, E.lessonSittings(IX, origin.lessonId).findIndex((ids) => ids.includes(origin.id)));
-  assert.ok(!steps.some((q) => q.type === "intro" && q.itemId === origin.id), "origin items have no intro card");
-  assert.ok(steps.some((q) => q.itemId === origin.id && q.type === "tf"), "origin items are asked as yes/no");
+test("the focus subject steers the next node", () => {
+  const mk = (sub, i) => ({ id: `u${i}`, title: sub, blurb: "x", subject: sub, assume: "x", exam: ["mbe"], lessons: [{ id: `u${i}l1`, title: "x", items: [{ id: `u${i}-t`, kind: "term", term: `t${i}`, lang: "latin", meaning: `m${i}`, say: "s", status: "general", src: "x" }] }] });
+  const ix = E.indexCourse([mk("civpro", 1), mk("evidence", 2)]);
+  const s = E.freshState();
+  assert.equal(E.nextNode(ix, s).unitId, "u1");
+  s.focus = "evidence";
+  assert.equal(E.nextNode(ix, s).unitId, "u2");
 });
