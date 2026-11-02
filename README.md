@@ -117,3 +117,7 @@ The research is in `research/` (done 2026-11-02; each file says what was read in
 - The first courtroom (reading the call) opens with cards about the exam's format; a candidate who already knows the paper can skip to any subject, since the first lesson of every courtroom is open from day one.
 
 MIT license for the code. The content cites the rules and cases; it does not reproduce anyone's questions or outlines.
+
+## Live site
+
+https://objection-bar.vercel.app (Vercel project `objection-bar`, deployed from `app/vercel`)
