@@ -54,37 +54,38 @@
   function mascot(mood = "happy") {
     const sad = mood === "sad", sleepy = mood === "sleepy";
     const eyes = sleepy
-      ? '<path d="M44 56q4 3 8 0M66 56q4 3 8 0" stroke="var(--m-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
+      ? '<path d="M50 56q4 3 8 0M72 56q4 3 8 0" stroke="var(--m-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
       : sad
-        ? '<path d="M44 56q4-3 8 0M66 56q4-3 8 0" stroke="var(--m-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="48" cy="58" r="2" fill="var(--m-ink)"/><circle cx="70" cy="58" r="2" fill="var(--m-ink)"/>'
-        : '<circle cx="48" cy="56" r="3.4" fill="var(--m-ink)"/><circle cx="70" cy="56" r="3.4" fill="var(--m-ink)"/><circle cx="49.3" cy="54.8" r="1.1" fill="#fff"/><circle cx="71.3" cy="54.8" r="1.1" fill="#fff"/>';
+        ? '<path d="M50 56q4-3 8 0M72 56q4-3 8 0" stroke="var(--m-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="54" cy="58" r="2" fill="var(--m-ink)"/><circle cx="76" cy="58" r="2" fill="var(--m-ink)"/>'
+        : '<circle cx="54" cy="56" r="3.4" fill="var(--m-ink)"/><circle cx="76" cy="56" r="3.4" fill="var(--m-ink)"/><circle cx="55.3" cy="54.8" r="1.1" fill="#fff"/><circle cx="77.3" cy="54.8" r="1.1" fill="#fff"/>';
     const mouth = sad
-      ? '<path d="M54 70q5-4 10 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+      ? '<path d="M59 75q6-4.5 12 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
       : mood === "cheer"
-        ? '<path d="M52 67q7 8 14 0z" fill="var(--m-ink)"/><path d="M55.5 69.5q3.5 3 7 0z" fill="var(--m-tongue)"/>'
-        : sleepy ? '<path d="M55 69q4 2 8 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
-          : '<path d="M53 68q6 5 12 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>';
-    // the shell: a domed back with three bands; the long snout and tall oval ears read «armadillo»
-    const bands = [0, 1, 2].map((i) => `<path d="M${46 + i * 14} 44q${6}-${18} ${12}-${18 - i}" stroke="var(--m-band)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>`).join("");
+        ? '<path d="M57 70.5q8 9 16 0z" fill="var(--m-ink)"/><path d="M61 73.5q4 3.5 8 0z" fill="var(--m-tongue)"/>'
+        : sleepy ? '<path d="M59 72q6 2.5 12 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+          : '<path d="M58 70.5q7 5.5 14 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>';
+    // Armadillo, front view: a wide banded shell body, a pointed snout, small rounded ears and a banded cap on the
+    // head, a long tail, a bow tie at the neck. (Not a wolf: no pointed ears; not a bear: the snout and the bands.)
+    const bands = '<path d="M27 70q38 12 76 0M25 80q40 13 80 0M29 91q36 11 72 0" stroke="var(--m-band)" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.85"/>';
     const arms = mood === "cheer"
-      ? '<path d="M36 72q-12-10-8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M94 72q12-10 8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/>'
-      : '<ellipse cx="44" cy="96" rx="8" ry="5" fill="var(--m-skin)"/><ellipse cx="86" cy="96" rx="8" ry="5" fill="var(--m-skin)"/>';
-    const robe = mood === "robe" ? '<path d="M34 82q31 14 62 0v22H34z" fill="#1a1a1f"/><path d="M58 82h14l-7 12z" fill="#fff"/>' : "";
+      ? '<path d="M30 76q-12-8-8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M100 76q12-8 8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/>'
+      : '<ellipse cx="46" cy="102" rx="9" ry="5" fill="var(--m-skin)"/><ellipse cx="84" cy="102" rx="9" ry="5" fill="var(--m-skin)"/>';
+    const robe = mood === "robe" ? '<path d="M32 88q33 14 66 0v18H32z" fill="#1a1a1f"/><path d="M58 88h14l-7 12z" fill="#fff"/>' : "";
     const zz = sleepy ? '<text x="98" y="36" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="700" font-size="14" fill="var(--muted)">z z</text>' : "";
     return `<svg class="mascot" viewBox="0 0 130 116" role="img" aria-label="Amicus, the armadillo">
-      <ellipse cx="65" cy="106" rx="44" ry="5" fill="var(--line)"/>
-      <path d="M30 92q0-44 35-44t35 44z" fill="var(--m-shell)"/>
+      <ellipse cx="65" cy="107" rx="46" ry="5" fill="var(--line)"/>
+      <path d="M100 92q16 2 20-10" stroke="var(--m-shell)" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <ellipse cx="65" cy="82" rx="42" ry="26" fill="var(--m-shell)"/>
       ${bands}
-      <path d="M112 90q14-4 10-16" stroke="var(--m-shell)" stroke-width="7" stroke-linecap="round" fill="none"/>
-      <path d="M38 96q0-28 27-28t27 28z" fill="var(--m-skin)"/>
       ${arms}
-      <path d="M40 46 36 22l14 20z" fill="var(--m-skin)"/><path d="M90 46l4-24-14 20z" fill="var(--m-skin)"/>
-      <path d="M43 42 40 28l9 14z" fill="var(--m-tongue)" opacity="0.5"/><path d="M87 42l3-14-9 14z" fill="var(--m-tongue)" opacity="0.5"/>
-      <path d="M38 50q-3 20 10 30 17 9 34 0 13-10 10-30-27-16-54 0z" fill="var(--m-skin)"/>
-      <path d="M50 66q15-10 30 0-4 10-15 11t-15-11z" fill="var(--m-belly)"/>
-      <ellipse cx="65" cy="64" rx="5" ry="3.6" fill="var(--m-ink)"/><circle cx="63.5" cy="63" r="1.1" fill="#fff" opacity="0.7"/>
+      <ellipse cx="42" cy="38" rx="7" ry="9" transform="rotate(-22 42 38)" fill="var(--m-skin)"/><ellipse cx="88" cy="38" rx="7" ry="9" transform="rotate(22 88 38)" fill="var(--m-skin)"/>
+      <ellipse cx="42.5" cy="39" rx="3.4" ry="5.4" transform="rotate(-22 42.5 39)" fill="var(--m-tongue)" opacity="0.5"/><ellipse cx="87.5" cy="39" rx="3.4" ry="5.4" transform="rotate(22 87.5 39)" fill="var(--m-tongue)" opacity="0.5"/>
+      <path d="M40 52q0-20 25-20t25 20q0 12-9 20l-16 10-16-10q-9-8-9-20z" fill="var(--m-skin)"/>
+      <path d="M42 45q23-16 46 0l-2.5 4q-20.500-12-41 0z" fill="var(--m-shell)"/><path d="M45 39.500q20-10.500 40 0" stroke="var(--m-band)" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <ellipse cx="65" cy="67" rx="14" ry="11" fill="var(--m-belly)"/>
+      <ellipse cx="65" cy="63.500" rx="5" ry="3.600" fill="var(--m-ink)"/><circle cx="63.500" cy="62.500" r="1.100" fill="#fff" opacity="0.7"/>
       ${eyes}${mouth}
-      <path d="M52 82l13 4 13-4v8l-13-4-13 4z" fill="var(--brand)"/><circle cx="65" cy="86" r="2.6" fill="var(--brass)"/>
+      <path d="M53 85l12 3.500 12-3.500v9l-12-3.500-12 3.500z" fill="var(--brand)"/><circle cx="65" cy="89" r="2.600" fill="var(--brass)"/>
       ${robe}${zz}
     </svg>`;
   }
@@ -270,7 +271,7 @@
     const perDay = cd.days > 0 ? Math.ceil((left / cd.days) * 2) / 2 : 0;
     const paceLine = left === 0 ? "Every courtroom is done: review only from here." : cd.days > 0 ? `To finish every unit by then: ~${perDay} sittings a day, about ${Math.ceil((perDay * 5) / 5) * 5} minutes.` : "";
     const nb = E.notebookItems(S).length;
-    const mockOpen = Object.keys(S.done).length >= 1 && learned >= 10;
+    const mockOpen = (Object.keys(S.done).length >= 1 || Object.keys(S.sittings).length >= 1) && learned >= 10; // one finished sitting is enough: a lesson can take 2-3
     const sessionOpen = Object.keys(S.done).filter((k) => k.endsWith("-review")).length >= 4;
     return `
       <section class="hero">${mascot(late && cd.days <= 14 ? "sleepy" : todayXp >= S.goal ? "cheer" : "happy")}<div class="bubble">${esc(greet.charAt(0).toUpperCase() + greet.slice(1))}</div></section>
@@ -288,9 +289,9 @@
       </section>
       <section class="quick">
         <button class="tile ${daily ? "done" : ""}" data-act="daily"><span style="color:var(--brand)">${I.cal}</span><b>Question of the Day</b><span>${daily ? `today: ${daily.score}/${daily.total}` : `${esc(E.subjectLabel(E.DAILY_BY_WEEKDAY[E.weekday(t)]))} · 5 questions, 9 minutes`}</span></button>
-        <button class="tile" data-act="practice" ${learned < 3 ? "disabled" : ""}><span style="color:var(--ok)">${I.redo}</span><b>Review</b><span>${learned < 3 ? "Opens after the first lesson" : due ? `${plural(due, "card", "cards")} due today` : "Strengthen the weak boxes"}</span></button>
+        <button class="tile" data-act="practice" ${learned < 3 ? "disabled" : ""}><span style="color:var(--ok)">${I.redo}</span><b>Review</b><span>${learned < 3 ? "Opens after your first sitting" : due ? `${plural(due, "card", "cards")} due today` : "Strengthen the weak boxes"}</span></button>
         <button class="tile" data-act="cross"><span style="color:var(--flame)">${I.mic}</span><b>Cross-Examination</b><span>15 s a question · best ${S.crossExamBest}</span></button>
-        <button class="tile" data-act="mock" ${mockOpen ? "" : "disabled"}><span style="color:var(--brass-deep)">${I.paper}</span><b>Mini-MBE</b><span>${mockOpen ? "25 questions, 45 minutes" : "Opens after a lesson and 10 cards"}</span></button>
+        <button class="tile" data-act="mock" ${mockOpen ? "" : "disabled"}><span style="color:var(--brass-deep)">${I.paper}</span><b>Mini-MBE</b><span>${mockOpen ? "25 questions, 45 minutes" : "Opens after your first sitting and 10 cards"}</span></button>
         <button class="tile" data-act="swipe"><span style="color:var(--brand)">${I.cards}</span><b>Flash review</b><span>25 cards in 2 minutes</span></button>
         <button class="tile" data-act="notebook" ${!nb ? "disabled" : ""}><span style="color:var(--bad)">${I.book}</span><b>Overruled</b><span>${nb ? plural(nb, "card", "cards") + " in the notebook" : "Your missed cards land here"}</span></button>
         ${sessionOpen ? `<button class="tile" data-act="session"><span style="color:var(--brass-deep)">${I.bench}</span><b>Session</b><span>100 questions, 3 hours</span></button>` : ""}
@@ -378,7 +379,7 @@
     const subjectOpts = [["", "No subject in focus"]].concat(E.SUBJECTS.map((s) => [s.id, s.label]));
     return `
       <section class="hero">${mascot()}<div class="bubble">${learned ? `You have met ${learned} of ${total} cards.` : "Do one lesson to start the collection."}${lastMock ? ` Last mock: ${Math.round(lastMock.score)}/${lastMock.total}.` : ""}</div></section>
-      <section class="card rank"><div><div class="eyebrow">Rank</div><h2 class="serif">${esc(rk.rank.name)}</h2><p class="muted" style="font-weight:700;font-size:14px">${rk.next ? `${rk.toNext} billable minutes to ${esc(rk.next.name)}` : "The highest bench there is."}</p></div><div><div class="eyebrow">Billed this week</div><h2 class="tnum">${E.fmtMinutes(E.weekXp(S, t))}</h2></div></section>
+      <section class="card rank"><div><div class="eyebrow">Rank</div><h2 class="serif">${esc(rk.rank.name)}</h2><p class="muted" style="font-weight:700;font-size:14px">${rk.next ? `${rk.toNext === 1 ? "1 billable minute" : `${rk.toNext} billable minutes`} to ${esc(rk.next.name)}` : "The highest bench there is."}</p></div><div><div class="eyebrow">Billed this week</div><h2 class="tnum">${E.fmtMinutes(E.weekXp(S, t))}</h2></div></section>
       <section class="grid2">
         ${[["Billable minutes", S.xp], ["Best streak", plural(S.bestStreak, "day", "days")], ["Accuracy", `${acc}%`], ["Cross-Examination", S.crossExamBest], ["Questions of the Day", Object.keys(S.dailies).length], ["Mocks", S.mocks.length]].map(([h, v]) => `<div class="card"><div class="eyebrow">${h}</div><h2 class="tnum">${v}</h2></div>`).join("")}
       </section>
@@ -482,7 +483,7 @@
     if (!o) { o = document.createElement("div"); o.className = "lesson"; o.setAttribute("role", "dialog"); o.setAttribute("aria-modal", "true"); document.body.appendChild(o); document.body.classList.add("run-open"); }
     const prog = run.mode === "cross" ? 100 : (run.i / run.steps.length) * 100;
     const top = run.mode === "cross" ? `<div style="flex:1;font-weight:900">Cross-Examination · <span class="tnum">${run.right}</span> ${run.right === 1 ? "witness" : "witnesses"}</div>`
-      : run.mode === "mock" ? `<div class="progress" aria-hidden="true"><i style="width:${prog}%"></i></div><span class="combo tnum" id="mock-clock">${mmss(run.deadline - Date.now())}</span>`
+      : run.mode === "mock" ? `<div class="progress" aria-hidden="true"><i style="width:${prog}%"></i></div><span class="combo tnum" id="mock-clock">${run.finished ? "" : mmss(run.deadline - Date.now())}</span>`
       : `<div class="progress" aria-hidden="true"><i style="width:${prog}%"></i></div><span class="combo">${run.combo >= 3 ? `${I.flame.replace("<svg", '<svg width="14" height="14"')} ${run.combo}` : ""}</span>`;
     o.innerHTML = `<div class="lesson-inner">
         <div class="lesson-top"><button class="xbtn" id="quit" aria-label="Leave">${I.x}</button>${top}</div>
@@ -995,7 +996,7 @@
     track("cross_started", { best: S.crossExamBest });
     run = { mode: "cross", node: null, steps: [], i: 0, misses: 0, combo: 0, maxCombo: 0, right: 0, scored: 0, requeued: new Set(), answered: false, start: Date.now(), results: [], r: E.rng(seed()) };
     ui.overlay = "lesson";
-    shell(`<div class="results">${mascot("robe")}<h1>Cross-Examination</h1><p class="story" style="max-width:34ch">Every question is a witness: 15 seconds, three options. One wrong answer and the witness walks. How many can you keep on the stand?</p><p class="muted" style="font-weight:800">Best: ${S.crossExamBest}</p></div>`, footerBtn("Call the first witness", "gold"));
+    shell(`<div class="results">${mascot("robe")}<h1>Cross-Examination</h1><p class="story" style="max-width:34ch">Every question is a witness: 15 seconds to answer. One wrong answer and the witness walks. How many can you keep on the stand?</p><p class="muted" style="font-weight:800">Best: ${S.crossExamBest}</p></div>`, footerBtn("Call the first witness", "gold"));
     $("#next").addEventListener("click", nextCross);
   }
   function nextCross() {

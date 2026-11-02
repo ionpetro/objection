@@ -276,8 +276,8 @@ body.run-open { overflow: hidden; } /* the page behind a run must not scroll und
 .bcount { font-size: 13px; color: var(--muted); font-weight: 800; text-align: center; }
 
 /* find */
-.findtext { display: flex; flex-wrap: wrap; gap: 4px 4px; font-family: var(--font-read); font-size: 18px; line-height: 1.5; }
-.tok { border: 0; background: transparent; border-radius: 8px; padding: 2px 6px; cursor: pointer; font: inherit; border-bottom: 3px solid transparent; }
+.findtext { display: flex; flex-wrap: wrap; gap: 0 1px; font-family: var(--font-read); font-size: 16px; line-height: 1.3; }
+.tok { border: 0; background: transparent; border-radius: 6px; padding: 5px 4px 3px; min-height: 30px; cursor: pointer; font: inherit; border-bottom: 3px solid transparent; }
 .tok.sel { background: var(--brand-soft); color: var(--brand); border-bottom-color: var(--brand); }
 .tok.ok { background: var(--ok-soft); color: var(--ok-deep); border-bottom-color: var(--ok); }
 .tok.bad { background: var(--bad-soft); color: var(--bad-deep); border-bottom-color: var(--bad); }
@@ -337,7 +337,9 @@ body.run-open { overflow: hidden; } /* the page behind a run must not scroll und
 .res.olive .h { background: var(--ok-deep); } .res.olive { border-color: var(--ok); }
 .res.flame .h { background: var(--flame); } .res.flame { border-color: var(--flame); }
 .secbars { width: 100%; display: grid; gap: 8px; text-align: left; }
-.secbar { display: grid; grid-template-columns: 34px 1fr 64px; gap: 10px; align-items: center; font-weight: 800; font-size: 14px; }
+.secbar { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; font-weight: 800; font-size: 14px; }
+.secbar .tnum { grid-column: 2; grid-row: 1; text-align: right; }
+.secbar .bar { grid-column: 1 / -1; }
 .secbar .bar { height: 12px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
 .secbar .bar i { display: block; height: 100%; background: var(--ok); border-radius: inherit; }
 .newbadge { display: flex; gap: 10px; align-items: center; padding: 10px 14px; border-radius: 14px; background: var(--brass-soft); border: 2px solid var(--brass); font-weight: 800; text-align: left; }
@@ -413,7 +415,7 @@ body.run-open { overflow: hidden; } /* the page behind a run must not scroll und
 
 /* ---------- the MBE item ---------- */
 .stemblock { font-family: var(--font-read); font-size: 17px; line-height: 1.6; padding: 14px 16px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--oak); text-wrap: pretty; }
-.stemblock.short { font-size: 15px; line-height: 1.5; max-height: 9.5em; overflow: auto; }
+.stemblock.short { font-size: 15px; line-height: 1.5; }
 .call { font-family: var(--font-read); font-size: 19px; font-weight: 700; line-height: 1.4; }
 .assume { font-size: 13px; font-weight: 800; color: var(--brand); padding: 6px 10px; border-radius: 10px; background: var(--brand-soft); }
 .pace { height: 4px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
@@ -455,3 +457,12 @@ body.run-open { overflow: hidden; } /* the page behind a run must not scroll und
 @media (max-width: 430px) { .gh-label { display: none; } .gh { padding: 4px 8px; } }
 .sitenote .gh-cta { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 15px; padding: 10px 18px; margin: 8px 0; }
 .sitenote .gh-cta svg { width: 18px; height: 18px; }
+
+/* Feedback panel on phones: no mascot column, a steady icon, and the panel scrolls instead of eating the screen. */
+.fb-title svg { flex: none; }
+.footer { max-height: 62vh; max-height: 62dvh; overflow-y: auto; }
+@media (max-width: 560px) {
+  .fb-amicus { grid-template-columns: 1fr; }
+  .fb-amicus .mascot { display: none; }
+  .fb-title { font-size: 19px; align-items: flex-start; }
+}

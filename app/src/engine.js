@@ -447,6 +447,8 @@ const Engine = (() => {
       return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
     };
   }
+  /** End a phrase with a full stop unless it already ends in terminal punctuation (issue labels end in a question mark). */
+  function dot(str) { const t = String(str == null ? "" : str).trim(); return /[.?!…)"”]$/.test(t) ? t : `${t}.`; }
   function shuffle(arr, r) {
     const a = arr.slice();
     for (let i = a.length - 1; i > 0; i--) {
@@ -506,7 +508,7 @@ const Engine = (() => {
     let wrong = distinctBy(same.filter((x) => x.unitId === it.unitId), 3, r, [it], (x) => norm(x.issue));
     if (wrong.length < 3) wrong = wrong.concat(distinctBy(same, 3 - wrong.length, r, [it, ...wrong], (x) => norm(x.issue)));
     if (wrong.length < 2) return null;
-    return { type: "mcq", itemId: it.id, guess: true, label: L.guess, prompt: "What is this question really about?", stem: it.short || it.stem, options: shuffle([it.issue, ...wrong.map((x) => x.issue)], r), answer: it.issue, explain: `${it.issue}. ${it.say || ""}`.trim() };
+    return { type: "mcq", itemId: it.id, guess: true, label: L.guess, prompt: "What is this question really about?", stem: it.short || it.stem, options: shuffle([it.issue, ...wrong.map((x) => x.issue)], r), answer: it.issue, explain: `${dot(it.issue)} ${it.say || ""}`.trim() };
   }
   /** The MBE item: stem, call, four options, one best answer. Every option keeps its why and trap type for the feedback. */
   function qHypo(ix, it, r, { label } = {}) {
@@ -570,7 +572,7 @@ const Engine = (() => {
     if (extra.length < 2) extra = extra.concat(distinctBy(own.filter(notMine), 2 - extra.length, r, [...it.elements, ...extra], norm));
     if (extra.length < 1) extra = extra.concat(distinctBy(RULE_BANK.filter(notMine), 2 - extra.length, r, [...it.elements, ...extra], norm));
     const ordered = it.ordered !== false;
-    return { type: "build", itemId: it.id, label: ordered ? L.build : `${L.build} (any order)`, prompt: it.buildAsk || `${it.title}: ${ordered ? "the elements, in order" : "pick every element"}`, tiles: shuffle([...it.elements, ...extra], r), answer: it.elements, orderFree: !ordered, joiner: " ", explain: `${it.elements.join(" → ")}. ${it.say}` };
+    return { type: "build", itemId: it.id, label: ordered ? L.build : `${L.build} (any order)`, prompt: it.buildAsk || `${it.title}: ${ordered ? "the elements, in order" : "pick every element"}`, tiles: shuffle([...it.elements, ...extra], r), answer: it.elements, orderFree: !ordered, joiner: " ", explain: `${dot(it.elements.join(" → "))} ${it.say}` };
   }
   /** Majority or minority? (or Common law / UCC, Traditional / Restatement…): sort one-line rule statements. */
   function qStance(ix, it, r) {
@@ -722,7 +724,7 @@ const Engine = (() => {
     if (!/^\d+$/.test(String(it.cat)) || !TRAP_TYPES[it.cat]) return null;
     const right = TRAP_TYPES[it.cat];
     const wrong = distinctBy(Object.values(TRAP_TYPES).filter((x) => x !== right), 3, r, [right]);
-    return { type: "mcq", itemId: it.id, label: L.trapType, prompt: `Why is this option wrong? ${wrap("“" + it.wrong + "”")}`, stem: it.stem, options: shuffle([right, ...wrong], r), answer: right, explain: `${right}. ${it.why}` };
+    return { type: "mcq", itemId: it.id, label: L.trapType, prompt: `Why is this option wrong? ${wrap("“" + it.wrong + "”")}`, stem: it.stem, options: shuffle([right, ...wrong], r), answer: right, explain: `${dot(right)} ${it.why}` };
   }
   // swipe (self-graded flashcards)
   function swipeCard(it, i = 0) {
@@ -1042,7 +1044,7 @@ const Engine = (() => {
     { id: "first_objection", name: "First Objection", desc: "Your first lesson", test: (s) => Object.keys(s.done).length >= 1 },
     { id: "sustained", name: "Sustained", desc: "A 7-day streak", test: (s) => s.bestStreak >= 7 },
     { id: "of_record", name: "Of Record", desc: "A lesson in every subject", test: (s, ix) => ix && ix.subjectsPresent.length === SUBJECT_IDS.length && SUBJECT_IDS.every((sub) => ix.course.units.some((u) => u.subject === sub && u.lessons.some((l) => s.done[l.id]))) },
-    { id: "rule_book", name: "Rule Book", desc: "Every rule number of a subject in box 3+", test: (s, ix) => ix && SUBJECT_IDS.some((sub) => { const rs = ix.byKind.rule.filter((x) => x.subject === sub && citeable(x)); return rs.length >= 5 && rs.every((x) => (s.items[x.id] || {}).box >= 3); }) },
+    { id: "rule_book", name: "Rule Book", desc: "Every citable rule of a subject in box 3+", test: (s, ix) => ix && SUBJECT_IDS.some((sub) => { const rs = ix.byKind.rule.filter((x) => x.subject === sub && citeable(x)); return rs.length >= 5 && rs.every((x) => (s.items[x.id] || {}).box >= 3); }) },
     { id: "closing_argument", name: "Closing Argument", desc: "A closing argument at 100%", test: (s) => Object.entries(s.done).some(([id, d]) => id.endsWith("-review") && d.perfect) },
     { id: "cross_examiner", name: "Cross-Examiner", desc: "15 witnesses kept on the stand", test: (s) => s.crossExamBest >= 15 },
     { id: "docket_clerk", name: "Docket Clerk", desc: "7 Questions of the Day in a row", test: (s) => s.dailyStreak >= 7 },

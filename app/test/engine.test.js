@@ -4,7 +4,7 @@ const assert = require("node:assert/strict");
 const { loadUnits } = require("../src/course.js");
 const { Engine: E } = require("../src/engine.js");
 
-const IX = E.indexCourse(loadUnits({ example: true }));
+const IX = E.indexCourse(loadUnits({ example: true }).filter((u) => u.id === "u0_example")); // fixture: the example unit only
 
 test("weekends never break a streak", () => {
   const s = E.freshState();
