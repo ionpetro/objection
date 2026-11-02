@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="el"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@500;700;800;900&family=Cormorant+Garamond:ital,wght@0,700;1,600&display=swap">
+<style>
+  :root { --bg:#f7f1e6; --ink:#23202b; --muted:#6b6478; --brand:#6d3fa6; --brand-soft:#efe6fa; --gold:#c9992b; --gold-soft:#faefd3; --olive:#4f8a2f; --olive-soft:#e3f1d8; --clay:#c2412d; --line:#e4ded2; }
+  * { box-sizing:border-box; margin:0; }
+  html,body { width:1600px; height:900px; overflow:hidden; }
+  body { background:var(--bg); color:var(--ink); font-family:Commissioner,sans-serif; font-feature-settings:"lnum"; position:relative; }
+  /* soft sun behind the right side, and a faint Roman-column stripe pattern */
+  .sun { position:absolute; right:-160px; top:-120px; width:1000px; height:1000px; border-radius:50%; background:radial-gradient(circle, #fbe3a8 0%, #f7e7c4 38%, rgba(247,241,230,0) 70%); }
+  .stripes { position:absolute; inset:0; background:repeating-linear-gradient(90deg, rgba(150,112,26,.05) 0 2px, transparent 2px 46px); mask-image:linear-gradient(90deg, transparent 0, #000 60%); }
+  .left { position:absolute; left:96px; top:92px; width:820px; }
+  .mark { display:flex; align-items:center; gap:18px; }
+  .mark .word { font-family:"Cormorant Garamond",serif; font-weight:700; font-size:118px; line-height:.9; color:var(--brand); letter-spacing:-1px; }
+  .mark .pill { font-weight:800; font-size:22px; color:var(--gold-deep,#96701a); background:var(--gold-soft); border:2px solid #ecd59a; border-radius:999px; padding:8px 18px; margin-top:20px; }
+  h1 { font-weight:900; font-size:76px; line-height:1.04; letter-spacing:-1.6px; margin-top:44px; }
+  h1 em { font-style:normal; color:var(--clay); }
+  .tag { font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:600; font-size:44px; color:var(--brand); margin-top:26px; }
+  .tag b { font-family:Commissioner,sans-serif; font-style:normal; font-weight:900; font-size:40px; color:var(--ink); }
+  .chips { display:flex; flex-wrap:wrap; gap:14px; margin-top:44px; }
+  .chip { font-weight:800; font-size:25px; background:#fff; border:2px solid var(--line); border-radius:18px; padding:12px 20px; box-shadow:0 3px 0 var(--line); }
+  .chip span { color:var(--brand); }
+  .chip.os { background:var(--ink); color:#fff; border-color:var(--ink); box-shadow:0 3px 0 #000; }
+  .chip.os span { color:#e6b84a; }
+  .url { position:absolute; left:96px; bottom:62px; font-weight:800; font-size:24px; color:var(--muted); }
+  .url b { color:var(--ink); }
+
+  /* quiz card */
+  .card { position:absolute; right:110px; top:150px; width:500px; background:#fff; border-radius:34px; padding:34px 34px 30px; box-shadow:0 30px 60px rgba(60,40,10,.16), 0 6px 0 var(--line); transform:rotate(2.5deg); }
+  .top { display:flex; justify-content:space-between; align-items:center; }
+  .bar { flex:1; height:16px; background:#efeae0; border-radius:99px; margin-right:18px; overflow:hidden; }
+  .bar i { display:block; width:72%; height:100%; background:var(--olive); border-radius:99px; }
+  .streak { display:flex; align-items:center; gap:6px; font-weight:900; font-size:26px; color:#e8702a; }
+  .kicker { font-weight:800; font-size:20px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-top:28px; }
+  .q { font-family:"Cormorant Garamond",serif; font-weight:700; font-size:44px; white-space:nowrap; margin-top:8px; line-height:1.1; }
+  .q .gap { display:inline-block; min-width:96px; border-bottom:4px solid var(--olive); color:var(--olive); text-align:center; }
+  .opts { display:grid; gap:12px; margin-top:26px; }
+  .opt { font-family:"Cormorant Garamond",serif; font-weight:700; font-size:34px; border:3px solid var(--line); border-radius:18px; padding:10px 22px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 4px 0 var(--line); }
+  .opt.ok { border-color:var(--olive); background:var(--olive-soft); color:#2f5e17; box-shadow:0 4px 0 #a9cf8d; }
+  .opt.ok small { font-family:Commissioner; font-weight:900; font-size:22px; }
+  .xp { position:absolute; right:-26px; top:-28px; background:var(--gold); color:#fff; font-weight:900; font-size:28px; padding:12px 22px; border-radius:18px; box-shadow:0 5px 0 #96701a; transform:rotate(6deg); }
+  .remo { position:absolute; right:590px; bottom:120px; width:250px; transform:rotate(-4deg); filter:drop-shadow(0 12px 14px rgba(60,40,10,.15)); }
+  .bubble { position:absolute; right:700px; bottom:345px; background:#fff; border:2px solid var(--line); border-radius:22px; padding:14px 20px; font-weight:800; font-size:24px; box-shadow:0 4px 0 var(--line); }
+  .bubble:after { content:""; position:absolute; right:40px; bottom:-14px; width:24px; height:24px; background:#fff; border-right:2px solid var(--line); border-bottom:2px solid var(--line); transform:rotate(45deg); }
+  .built { position:absolute; right:110px; bottom:52px; display:flex; align-items:center; gap:16px; background:#1d1a24; color:#f0ecf6; border-radius:14px; padding:12px 20px; font-family:ui-monospace,Menlo,monospace; font-size:21px; font-weight:600; box-shadow:0 5px 0 #000; }
+  .built .lbl { color:#a9a2b8; font-weight:500; }
+</style></head>
+<body>
+  <div class="sun"></div><div class="stripes"></div>
+
+  <div class="left">
+    <div class="mark"><div class="word">Carpe</div><div class="pill">Λατινικά Γ΄ Λυκείου</div></div>
+    <h1>Λατινικά για τις<br>Πανελλαδικές.<br><em>Σαν παιχνίδι.</em></h1>
+    <div class="tag">Carpe diem. Carpe <b>το 20.</b></div>
+    <div class="chips">
+      <div class="chip"><span>13</span> ενότητες</div>
+      <div class="chip"><span>627</span> λέξεις</div>
+      <div class="chip"><span>4.281</span> ασκήσεις</div>
+      <div class="chip os">Δωρεάν · <span>open source</span></div>
+    </div>
+  </div>
+
+  <div class="bubble">Euge! Σωστό!</div>
+  <img class="remo" src="remo.svg" alt="">
+
+  <div class="card">
+    <div class="xp">+10 XP</div>
+    <div class="top">
+      <div class="bar"><i></i></div>
+      <div class="streak"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M13 1c2 6 11 9 11 18a11 11 0 0 1-22 0c0-5 3-8 5-10 0 4 2 6 4 6-2-6 0-10 2-14z" fill="#f08a2e"/><path d="M13 14c1 3 5 4 5 8a5 5 0 0 1-10 0c0-3 3-5 5-8z" fill="#ffd16b"/></svg>12</div>
+    </div>
+    <div class="kicker">Αρχικοί χρόνοι</div>
+    <div class="q">fero, <span class="gap">tuli</span>, lātum, ferre</div>
+    <div class="opts">
+      <div class="opt">fertum</div>
+      <div class="opt ok">tuli <small>✓</small></div>
+      <div class="opt">ferui</div>
+    </div>
+  </div>
+
+  
+  <div class="url"><b>carpe-latin.vercel.app</b> &nbsp;·&nbsp; github.com/ionpetro/carpe</div>
+</body></html>

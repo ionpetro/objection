@@ -1,0 +1,13 @@
+{
+  "name": "objection",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Objection: playful prep for the US bar exam (MBE).",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test \"app/test/*.test.js\"",
+    "validate": "node app/tools/validate.js",
+    "build": "node app/build.mjs"
+  }
+}

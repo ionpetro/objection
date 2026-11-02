@@ -1,0 +1,23 @@
+node_modules/
+.DS_Store
+# build output (regenerate with `npm run build`)
+app/dist/
+app/vercel/
+.vercel/
+video/out/
+video/node_modules/
+app/.env
+
+# Latin Panhellenic: copyrighted state textbooks extracted for internal research only, never publish
+research/source-data/textbook-*.txt
+research/private/
+
+# Full-text copies of copyrighted textbooks and raw exam dumps: local only, never public
+research/source-data/
+research/pastpapers-raw/
+research/official-*.txt
+.vercel
+
+# US bar exam: copyrighted commercial outlines, released NCBE questions and raw dumps stay local
+research/source-data/
+research/pastquestions-raw/
