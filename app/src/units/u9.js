@@ -5,6 +5,17 @@
 // hearsay III: 804 exceptions (L9), the Confrontation Clause (L10).
 // Every rule card carries its rule number as `cite`. Fact patterns are our own; nothing is copied from NCBE or commercial outlines
 // (u9-h-615-claims-manager and u9-h-801d1a-deposition were rewritten from scratch after review found them too close to NCBE samples).
+// 2026-11-02 deep review (two checkers, each claim re-verified): fixed u9-h-408-statement, u9-h-bias-promise, u9-h-607-own-witness,
+// u9-h-801d2c-spokesperson, u9-r-801d2 / u9-h-801d2e-independent / u9-h-801d2e-shipment (Bourjaily vs the 1997 text), u9-r-bias,
+// u9-r-703-705, u9-so-privilege, u9-h-purpose-bias, u9-r-804b3 (2024 text), u9-r-1001-1008, u9-r-413-415, u9-a-611-leading,
+// u9-h-801d1b-memory, u9-r-614-706, u9-h-404a2c-homicide, u9-r-404a, u9-h-611-scope, the recent flags, u9-h-801d1a-unsworn,
+// u9-h-702-weight, u9-h-201-civil, u9-r-1101, u9-so-which-objection, u9-p-contrast, u9-p-exception-features, u9-h-410-police,
+// u9-h-804b3-defense, u9-h-upjohn-employee, u9-h-615-claims-manager (rewritten around a second employee), u9-h-404b-civil,
+// u9-h-413-other-assaults, u9-r-612 and u9-r-803-16-21 (803(21) split into u9-r-803-21 for NextGen). Added: u9-h-105-limiting,
+// u9-h-606b-race, u9-h-615b-transcript, u9-c-doyle, u9-h-collateral-contradiction, u9-h-404a-fear, u9-h-803-1-calm,
+// u9-h-803-8-findings, u9-r-803-21, u9-h-804b1-prelim, u9-h-804b3-williamson, u9-r-face-to-face, u9-h-screen-child, u9-c-pitts,
+// u9-c-williams, u9-h-swidler-death, u9-h-407-nonparty (u9-so-polite moved up so lesson 6's last sitting is not a lone item); FRE 903 (u9-r-902), the FRE 501 state-law clause (u9-r-jaffee), the crime-against-spouse exception
+// (u9-r-spousal-testimonial) and the Hillmon third-person dispute (u9-r-803-3).
 // Counts: 28 items carry transfer: true ("new facts, same rule" cold asks), not eight; about 30% of the hypos and argue items have
 // the key as the longest option (it was 91% before the 2026-11-02 review).
 //
@@ -28,8 +39,13 @@
 //     u9-h-801d1a-unsworn and u9-p-contrast depend on the amended text and carry lawVersion "fre-2026-12-01".
 //   - FRE 609: the 609 cards state the rule text in force; nothing tests the disputed 609(a)(1)(B) amendment.
 //   - Proposed Rule 707 (machine-generated evidence) is not law and is not taught.
-//   - Dec 1, 2024 amendments (107, 613(b) sequence, 801(d)(2) successors, 1006) are `recent: true` where an item turns on them alone
-//     (u9-r-1006-107, u9-h-1006-chart, u9-r-801d2-successor); 2023 amendments (106, 615, 702) are taught as current law.
+//   - Dec 1, 2024 amendments (107, 613(b) sequence, 801(d)(2) successors, 804(b)(3)(B) "totality of circumstances" corroboration, 1006)
+//     and Dec 1, 2023 amendments (106, 615, 702) are all taught as current law with no `recent` badge: by February 2027 they have been in
+//     force for more than two years (research/evidence.md §1.5 lists them as testable). `recent: true` is kept for 2025-26 Supreme Court
+//     decisions only: u9-c-pitts (Pitts v. Mississippi, Nov 24, 2025, read on LII), an extension card; the skill it supports is taught by
+//     u9-r-face-to-face and u9-h-screen-child on Coy and Craig.
+//   - u9-h-801d1a-unsworn stays `book` only because its stem tells the learner to apply the amended text; its key no longer asserts what
+//     NCBE will assume. u9-r-801d1ac states each text with its dates, which is true whatever NCBE decides.
 //   - Items outside the NextGen scope carry exam: ["mbe"] (Rules 104 as a heading, 106, 301, 410 plea talks, 412-415, 611, 614, 706,
 //     615, 803(16), 803(22), 804(b)(4), 807, 1006, 107, 1101, real and demonstrative evidence; Bruton/Samia).
 /* eslint-disable max-len */
@@ -214,6 +230,20 @@
           },
           { id: "u9-t-in-limine", kind: "term", subject: "evidence", term: "in limine", lang: "latin", literal: "at the threshold", meaning: "Before the jury hears anything: a pretrial motion asking the court to rule on admissibility.", use: "FRE 103(b): a definitive in limine ruling preserves the objection without renewing it at trial.", hook: "A limen is a threshold: the ruling is made before anyone steps into the courtroom.", pairWith: "in camera", say: "A motion in limine decides the question before the jury hears it; a definitive ruling saves the objection.", status: "general", src: "FRE 103(b); hooks.jsonl (List of Latin legal terms)" },
           {
+            id: "u9-h-105-limiting", kind: "hypo", cat: "I.A", callType: "instruct", rule: "u9-r-103-105", issue: "limiting instruction on request", grid: true,
+            stem: "A shopper sued a store for injuries from a fall on an outdoor stairway. The store denied that it owned or controlled the stairway, saying it belonged to the landlord. Over objection, the court admitted evidence that the store installed a handrail on the stairway the week after the fall, to show ownership and control. The store then asked the court to instruct the jury that it may consider the handrail evidence only on ownership and control, and not as proof of negligence.",
+            call: "How should the court respond to the store's request?",
+            options: [
+              { text: "Give the instruction, because when evidence is admissible for one purpose but not another, the court must, on timely request, restrict it to its proper scope.", why: "FRE 105, with FRE 407: the repair is admitted on disputed control, not on negligence, and on timely request the instruction is mandatory." },
+              { text: "Refuse the instruction, because once evidence is admitted for any purpose, the jury may consider it for every purpose to which it is relevant.", why: "Rule 105 exists to confine limited-purpose evidence to its proper use.", trap: 5 },
+              { text: "Refuse the instruction, because whether to give a limiting instruction is left to the court's discretion, and juries cannot realistically follow one.", why: "On timely request Rule 105 says the court 'must' restrict the evidence and instruct the jury.", trap: 4 },
+              { text: "Give the instruction, but only if the store first moves to strike the evidence, because an instruction is available only after a motion to strike.", why: "No motion to strike is needed; a timely request for the instruction is enough.", trap: 5 },
+            ],
+            answer: 0, facts: ["only on ownership and control", "installed a handrail"],
+            say: "Admitted for one purpose but not another? On timely request the court must confine it and tell the jury so.",
+            status: "book", src: "FRE 105; FRE 407",
+          },
+          {
             id: "u9-r-201", kind: "rule", title: "Judicial notice of adjudicative facts", cat: "I.A",
             say: "The court must notice an indisputable fact when a party asks and supplies the information; a civil jury must accept it, a criminal jury need not.",
             elements: ["The fact is adjudicative and not subject to reasonable dispute", "It is generally known in the court's territory, or readily determined from sources whose accuracy cannot reasonably be questioned (FRE 201(b))", "The court must take notice if a party requests it and supplies the necessary information", "Civil case: the jury must accept the noticed fact as conclusive; criminal case: it may or may not (FRE 201(f))"],
@@ -261,7 +291,7 @@
               { text: "Deny it, because in a civil case the jury must be instructed to accept a judicially noticed fact as conclusive.", why: "FRE 201(f): civil juries must accept noticed facts." },
               { text: "Grant it, because a jury is not bound by judicial notice in any case and may weigh the noticed fact like other evidence.", why: "A civil jury is bound; only in a criminal case may the jury reject the noticed fact.", trap: 7 },
               { text: "Grant it, because judicial notice is conclusive only in criminal cases, where the jury must accept the noticed fact as established.", why: "This reverses the rule: conclusive in civil, permissive in criminal.", trap: 5 },
-              { text: "Deny it, because the court may not notice a fact that the jury could doubt, so the jury decides the date.", why: "A fact from a source whose accuracy cannot reasonably be questioned is not reasonably disputable, and a civil jury must accept it.", trap: 5 },
+              { text: "Deny it, because a judicially noticed fact is conclusive on the jury in every case, civil or criminal, once the court takes notice.", why: "Only in a civil case; in a criminal case the jury must be told it may, but need not, accept the noticed fact (FRE 201(f)).", trap: 1 },
             ],
             answer: 0, facts: ["civil action for breach of contract", "may accept or reject"],
             say: "Civil: noticed means conclusive. Criminal: noticed means the jury may or may not go along.",
@@ -330,6 +360,20 @@
             status: "book", src: "FRE 606(b)(1)",
           },
           {
+            id: "u9-h-606b-race", kind: "hypo", cat: "I.A", callType: "admissible", rule: "u9-r-601-606", issue: "juror testimony on racial bias", grid: true,
+            stem: "After a jury convicts a defendant of assault, two jurors tell defense counsel that, during deliberations, another juror said the defendant was guilty 'because people of his race are violent and take what they want.' The defendant moves for a new trial and offers the two jurors' affidavits describing the remark. The prosecutor argues that Rule 606(b) bars juror testimony about any statement made during deliberations.",
+            call: "May the court consider the affidavits?",
+            options: [
+              { text: "Yes, because the Sixth Amendment requires an exception to the no-impeachment rule when a juror clearly states that he relied on racial stereotypes or animus to convict.", why: "Pena-Rodriguez v. Colorado (2017): the statement must tend to show that racial animus was a significant motivating factor in the juror's vote." },
+              { text: "No, because Rule 606(b) bars juror testimony about any statement made during deliberations, and the rule's text contains no exception for bias.", why: "The text has no such exception, but the Sixth Amendment requires one for clear racial animus.", trap: 2 },
+              { text: "No, because jurors may testify only about extraneous prejudicial information or an outside influence, and a juror's own views are neither.", why: "Those are the rule's own exceptions; the constitutional exception for racial animus is separate.", trap: 9 },
+              { text: "Yes, because any statement during deliberations showing that a juror misunderstood the law or the evidence may be used to impeach the verdict.", why: "Mistakes in deliberation stay inside Rule 606(b)'s bar; only the narrow racial-animus exception applies.", trap: 5 },
+            ],
+            answer: 0, facts: ["because people of his race are violent"],
+            say: "Jurors may not impeach their verdict, except to show clear racial animus behind a vote to convict.",
+            status: "general", src: "Pena-Rodriguez v. Colorado, 580 U.S. 206 (2017); FRE 606(b)",
+          },
+          {
             id: "u9-h-602-speed", kind: "hypo", cat: "I.A", callType: "motion", rule: "u9-r-601-606", issue: "lack of personal knowledge",
             stem: "A pedestrian sues a trucking company for injuries from a collision. The pedestrian calls a witness who testifies that the truck was going 'at least 60 miles an hour' when it struck the pedestrian. On cross-examination the witness admits that she was inside a shop with her back to the window and turned only after she heard the crash, and that she supposes the truck was fast because the noise was loud. The company moves to strike the testimony about the truck's speed.",
             call: "How should the court rule on the motion?",
@@ -346,7 +390,7 @@
           {
             id: "u9-r-1101", exam: ["mbe"], kind: "rule", title: "Proceedings to which the rules apply", cat: "I.E",
             say: "The rules govern trials; they do not govern preliminary admissibility rulings, grand juries or sentencing, bail and similar hearings, except privilege.",
-            elements: ["The rules apply to proceedings in United States courts, including civil and criminal trials (FRE 1101(a)-(b))", "They do not apply to the judge's decision on a preliminary question of fact governing admissibility (FRE 1101(d)(1))", "They do not apply to grand jury proceedings (FRE 1101(d)(2))", "They do not apply in miscellaneous proceedings such as sentencing, probation or parole revocation, bail and issuing warrants (FRE 1101(d)(3))", "The rules on privilege apply at every stage (FRE 1101(c))"],
+            elements: ["The rules apply to proceedings in United States courts, including civil and criminal trials (FRE 1101(a)-(b))", "They do not apply to the judge's decision on a preliminary question of fact governing admissibility (FRE 1101(d)(1))", "They do not apply to grand jury proceedings (FRE 1101(d)(2))", "They do not apply in miscellaneous proceedings such as sentencing, granting or revoking probation or supervised release, bail, and issuing warrants (FRE 1101(d)(3))", "The rules on privilege apply at every stage (FRE 1101(c))"],
             ordered: false,
             distractorElements: ["The rules of evidence apply in full at sentencing", "Privilege does not apply before trial"],
             exceptions: ["A preliminary examination in a criminal case is among the listed miscellaneous proceedings", "The listed proceedings are those in which the rules do not apply except privilege; every other proceeding in a United States court is governed by them"],
@@ -407,13 +451,13 @@
           },
           {
             id: "u9-h-611-scope", exam: ["mbe"], kind: "hypo", cat: "I.C", callType: "admissible", rule: "u9-r-611", issue: "beyond the scope of direct", grid: true,
-            stem: "In a federal negligence trial, the plaintiff calls an unaffiliated bystander, who testifies on direct only about the color of the traffic light. On cross-examination, defense counsel asks, 'How fast was the plaintiff's car traveling when it entered the intersection?' Speed was not mentioned on direct, and the bystander is not expected to be recalled. The plaintiff objects that the question is beyond the scope of direct, and the court is inclined to allow it.",
-            call: "How should the court rule on the objection?",
+            stem: "In a federal negligence trial, the plaintiff calls an unaffiliated bystander, who testifies on direct only about the color of the traffic light. On cross-examination, defense counsel asks, 'How fast was the plaintiff's car traveling when it entered the intersection?' Speed was not mentioned on direct, and the bystander is not expected to be recalled. The plaintiff objects that the question is beyond the scope of direct.",
+            call: "May the court permit the question?",
             options: [
-              { text: "Overrule it, because the court has discretion to allow inquiry into additional matters, which the examiner then conducts as if on direct.", why: "FRE 611(b): cross is limited to the subject matter of direct and credibility, but the court may allow additional matters as if on direct." },
-              { text: "Sustain it, because cross-examination is limited to the subject matter of direct and credibility, and the court has no discretion to allow more.", why: "The court may allow inquiry into additional matters; the limit is a default, not a bar.", trap: 5 },
-              { text: "Overrule it, because cross-examination in federal court may range over every matter relevant to any issue in the case.", why: "That describes the wide-open rule some states follow; the federal rule starts from the scope of direct.", trap: 4 },
-              { text: "Sustain it, because the bystander's observations of speed are relevant only to the plaintiff's claim and not to the defendant's defense.", why: "Relevance to a defense is not the test; the objection concerns the scope of direct, and the court may allow the inquiry.", trap: 6 },
+              { text: "Yes, because the court may allow inquiry into additional matters, which then proceeds as if on direct examination.", why: "FRE 611(b): cross is limited to the subject matter of direct and credibility, but the court may allow additional matters as if on direct." },
+              { text: "No, because cross-examination is limited to the subject matter of direct and credibility, and the court has no discretion to allow more.", why: "The court may allow inquiry into additional matters; the limit is a default, not a bar.", trap: 5 },
+              { text: "Yes, because cross-examination in federal court may range over every matter relevant to any issue in the case.", why: "That describes the wide-open rule some states follow; the federal rule starts from the scope of direct.", trap: 4 },
+              { text: "No, because a matter beyond the scope of direct may be raised only by recalling the witness later as the cross-examiner's own witness.", why: "Recall is one route, but Rule 611(b) also lets the court allow the inquiry now, as if on direct.", trap: 5 },
             ],
             answer: 0, facts: ["only about the color of the traffic light", "Speed was not mentioned on direct"],
             say: "Cross starts inside the lane of direct, but the judge may widen the lane and treat the extra ground as direct.",
@@ -422,7 +466,7 @@
           {
             id: "u9-r-612", kind: "rule", title: "Refreshing recollection (612) versus recorded recollection (803(5))", cat: "I.A",
             say: "Memory revived: the testimony is the evidence. Memory not revived: the record is read in, and it is an exhibit only if the adversary offers it.",
-            elements: ["The witness cannot remember on the stand", "Counsel shows any writing or object to jog memory", "The witness testifies from the revived memory: the testimony is the evidence", "The adverse party may inspect the writing, cross-examine on it, and introduce the portions that relate to the testimony"],
+            elements: ["The witness cannot remember on the stand", "Counsel shows any writing or object to jog memory", "The witness testifies from the revived memory: the testimony is the evidence", "Used while testifying: the adverse party may inspect it, cross-examine on it and introduce the related portions; used before testifying: only if the court decides justice requires (FRE 612(a))"],
             ordered: true,
             distractorElements: ["The writing itself is read to the jury and received as the proponent's exhibit", "The writing must itself be admissible in evidence"],
             exceptions: ["The writing need not be admissible: it is not offered for its truth", "If memory is not revived and the record qualifies under FRE 803(5), the record is read into evidence and received as an exhibit only if offered by an adverse party", "Irrelevant portions are deleted after an in camera review"],
@@ -436,9 +480,11 @@
               { t: "tf", q: "A writing used to refresh a witness's memory must itself be admissible in evidence.", a: false, why: "The testimony after refreshing is the evidence; the writing is not offered for its truth." },
               { t: "tf", q: "A record admitted as recorded recollection under FRE 803(5) may be received as an exhibit when offered by the proponent.", a: false, why: "It may be read into evidence; it may be received as an exhibit only if offered by an adverse party." },
               { t: "mcq", q: "Which fact decides between refreshing recollection and recorded recollection?", options: ["Whether the writing revived the witness's memory", "Whether the writing was created by the witness", "Whether the writing is kept by a business"], a: "Whether the writing revived the witness's memory", why: "If memory returns, FRE 612 applies and the testimony is the evidence. If it does not, FRE 803(5) puts the record itself before the jury." },
+              { t: "tf", q: "If a witness refreshed her memory with a writing the night before testifying, the adverse party is automatically entitled to see it.", a: false, why: "FRE 612(a)(2): for a writing used before testifying, only if the court decides justice requires it; one used while testifying must be produced." },
+              { t: "tf", q: "In a criminal case, if the prosecution disobeys an order to produce a refreshing writing, the court must strike the witness's testimony or, if justice so requires, declare a mistrial.", a: true, why: "FRE 612(c)." },
             ],
             hook: "Memory back: the witness speaks. Memory gone: the paper speaks.",
-            status: "book", src: "FRE 612; FRE 803(5); evidence.md §2.1, §6.3",
+            status: "book", src: "FRE 612(a)-(c); FRE 803(5); evidence.md §2.1, §6.3",
           },
           {
             id: "u9-h-612-inspect", kind: "hypo", cat: "I.A", callType: "admissible", rule: "u9-r-612", issue: "adversary's rights over a refreshing writing",
@@ -526,23 +572,37 @@
             status: "book", src: "FRE 615(a)(1)-(4), (b) (2023 text); evidence.md §1.5",
           },
           {
-            id: "u9-h-615-claims-manager", exam: ["mbe"], kind: "hypo", cat: "I.C", callType: "motion", rule: "u9-r-615", issue: "designated entity representative who will testify", grid: true,
-            stem: "A customer sues a regional insurance company in federal court, alleging that it wrongfully denied a claim. At the start of trial, the customer moves to exclude all prospective witnesses from the courtroom. The company's attorney asks that its claims manager remain at counsel table as the company's designated representative. The claims manager will testify later about how the claim was handled. The customer objects that a person who will testify must be excluded.",
-            call: "How should the court rule on the company's request?",
+            id: "u9-h-615-claims-manager", exam: ["mbe"], kind: "hypo", cat: "I.C", callType: "motion", rule: "u9-r-615", issue: "one designated entity representative", grid: true,
+            stem: "A customer sues an insurance company in federal court, alleging that it wrongfully denied a claim. At the start of trial, the customer moves to exclude witnesses from the courtroom. The company's attorney designates its claims manager as the company's representative and asks that its field adjuster, who will also testify, be allowed to remain as well. The company offers no reason why the adjuster's presence is needed to present its defense.",
+            call: "Should the court allow the adjuster to remain in the courtroom?",
             options: [
-              { text: "Grant it, because an officer or employee of a party that is not a natural person may be designated by its attorney to remain, even though he will testify.", why: "FRE 615(a)(2): one officer or employee, designated by the party's attorney, may stay. Being a witness does not disqualify him." },
-              { text: "Deny it, because a witness who will testify may remain only if the company shows that his presence is essential to presenting its defense at trial.", why: "That is the separate exception in FRE 615(a)(3); the designated representative under (a)(2) needs no such showing.", trap: 9 },
-              { text: "Deny it, because the only party entitled to stay in the courtroom after a sequestration request is a party who is a natural person.", why: "A party that is not a natural person may keep one designated officer or employee.", trap: 5 },
-              { text: "Grant it, because the company may keep every employee who will testify, so long as its attorney designates each one as a representative.", why: "The rule allows one designated representative per entity party, not several.", trap: 9 },
+              { text: "No, because a party that is not a natural person may keep only one designated officer or employee, unless it shows another person is essential.", why: "FRE 615(a)(2)-(3) (2023 text): one designated representative per entity party; anyone else must be shown essential to presenting the defense." },
+              { text: "Yes, because a party that is not a natural person may designate as many employees as it needs, so long as its attorney designates each one.", why: "The 2023 text limits an entity party to one designated officer or employee.", trap: 5 },
+              { text: "No, because a person who will testify may never remain in the courtroom after a party asks the court to exclude witnesses.", why: "A natural-person party and the one designated representative may stay though they will testify; the adjuster is out because he is a second designee.", trap: 7 },
+              { text: "Yes, because every employee of a party may remain unless the opposing party shows that the employee's presence would be prejudicial.", why: "On request, exclusion is mandatory; the party claiming an exception must bring itself within it.", trap: 5 },
             ],
-            answer: 0, facts: ["claims manager", "designated representative"],
-            say: "An entity party gets one chair at counsel table, and its occupant may still be a witness.",
-            status: "book", src: "FRE 615(a)(2)",
+            answer: 0, facts: ["field adjuster", "offers no reason"],
+            say: "An entity party gets one chair at counsel table; a second employee stays only if shown essential.",
+            status: "book", src: "FRE 615(a)(2)-(3) (2023 text)",
+          },
+          {
+            id: "u9-h-615b-transcript", exam: ["mbe"], kind: "hypo", cat: "I.C", callType: "motion", rule: "u9-r-615", issue: "barring excluded witnesses from testimony", grid: true,
+            stem: "In a federal fraud trial, the court grants the defendant's request to exclude witnesses from the courtroom. Each evening, the prosecutor's paralegal e-mails that day's transcript to a government witness who has not yet testified. The defendant learns of this and moves for an order forbidding it. The prosecutor responds that the exclusion order requires only that witnesses stay out of the courtroom.",
+            call: "May the court grant the defendant's motion?",
+            options: [
+              { text: "Yes, because the court may by order prohibit disclosure of trial testimony to excluded witnesses and prohibit their access to it.", why: "FRE 615(b) (2023 text): an exclusion order reaches only the courtroom, but the court may add these orders." },
+              { text: "No, because an order excluding witnesses operates only to keep them out of the courtroom, and the court has no power to extend it.", why: "The first half is right; Rule 615(b) gives the court power to add orders barring disclosure and access.", trap: 5 },
+              { text: "Yes, because an order excluding witnesses automatically forbids anyone to share trial testimony with them, so the paralegal already violated it.", why: "Since 2023 an exclusion order operates only to exclude witnesses from the courtroom; a further order under Rule 615(b) is needed.", trap: 1 },
+              { text: "No, because a trial transcript is a public record that any person, including a witness who has yet to testify, is entitled to read.", why: "Rule 615(b)(2) lets the court bar excluded witnesses from accessing trial testimony.", trap: 5 },
+            ],
+            answer: 0, facts: ["e-mails that day's transcript", "stay out of the courtroom"],
+            say: "Since 2023, keeping witnesses out of the room is one order; keeping the transcript from them is another the court may add.",
+            status: "book", src: "FRE 615(b) (2023 text)",
           },
           {
             id: "u9-r-614-706", exam: ["mbe"], kind: "rule", title: "The court's own witnesses and experts", cat: "I.C",
             say: "The court may call and question witnesses, with objections allowed later, and may appoint an expert, who is cross-examinable by every party.",
-            elements: ["The court may call a witness on its own or at a party's request, and each party may cross-examine (FRE 614(a))", "The court may examine a witness regardless of who called her (FRE 614(b))", "A party may object to the court's questions at that time or at the next opportunity when the jury is not present (FRE 614(c))", "The court may appoint an expert witness of its own choosing, or one the parties agree on, and may order the parties to show cause (FRE 706(a))", "Any party may cross-examine the court's expert, including the party that called her (FRE 706(b))"],
+            elements: ["The court may call a witness on its own or at a party's request, and each party may cross-examine (FRE 614(a))", "The court may examine a witness regardless of who called her (FRE 614(b))", "A party may object to the court's questions at that time or at the next opportunity when the jury is not present (FRE 614(c))", "The court may appoint an expert witness of its own choosing, or one the parties agree on, and may order the parties to show cause (FRE 706(a))", "Any party may cross-examine the court's expert, including the party that called her (FRE 706(b)(4))"],
             ordered: false,
             distractorElements: ["Only a party may call a witness", "A party that objects to the court's questioning waives the claim by not objecting immediately"],
             exceptions: ["Compensation of a court-appointed expert is set by the court (FRE 706(c))", "The court may tell the jury that it appointed the expert (FRE 706(d))", "A party may still call its own expert"],
@@ -554,7 +614,7 @@
             terms: ["court-appointed expert", "show cause"],
             quiz: [
               { t: "tf", q: "A party must object to the court's questioning of a witness at the moment the question is asked or the objection is waived.", a: false, why: "FRE 614(c): an objection is timely if made when the court calls or examines, or at the next opportunity when the jury is not present." },
-              { t: "tf", q: "The court may appoint an expert witness of its own choosing, and any party may cross-examine her.", a: true, why: "FRE 706(a) and (b)-(c)." },
+              { t: "tf", q: "The court may appoint an expert witness of its own choosing, and any party may cross-examine her.", a: true, why: "FRE 706(a), (b)(4)." },
             ],
             hook: "The judge may bring her own witness; everyone may cross her.",
             status: "book", src: "FRE 614; FRE 706",
@@ -664,7 +724,7 @@
             options: [
               { text: "Sustain the objection, because the plaintiff has not shown it is more likely than not that the opinion rests on reliable principles and methods reliably applied.", why: "FRE 702(c)-(d), as amended in 2023: the proponent must establish reliability to the court before the jury hears it." },
               { text: "Overrule the objection, because challenges to an expert's methods go to the weight of the testimony and are to be explored on cross-examination.", why: "This was a common error before 2023: the amendment makes reliability the proponent's burden at the gate.", trap: 11 },
-              { text: "Overrule the objection, because the engineer's training and experience qualify him, and a qualified expert's opinion is admissible without further showing.", why: "Qualification is only the first requirement; the proponent must also show reliability.", trap: 2 },
+              { text: "Overrule the objection, because the engineer's training and experience qualify her, and a qualified expert's opinion is admissible without further showing.", why: "Qualification is only the first requirement; the proponent must also show reliability.", trap: 2 },
               { text: "Sustain the objection, because the engineer's method has not been generally accepted in the relevant field, which is the controlling test of reliability.", why: "General acceptance is one Daubert factor, not the sole test; the failure here is lack of reliability showing.", trap: 4 },
             ],
             answer: 0, facts: ["did not test the ladder", "a method she devised the day before"],
@@ -722,7 +782,7 @@
             exceptions: ["The expert may describe a defendant's diagnosis and its typical effects; the jury decides the mental state", "In a criminal case, an expert conveying an absent analyst's testimonial statements may also trigger the Confrontation Clause (Smith v. Arizona)"],
             cite: "FRE 703", citeAsk: "Which rule lets an expert rely on facts or data that are not admissible?",
             ex: [
-              { facts: "A physician relies on a radiologist's report that physicians routinely rely on, though the report is hearsay.", result: "Her opinion is admissible; the report itself comes in only if its value outweighs its prejudice." },
+              { facts: "A physician relies on a radiologist's report that physicians routinely rely on, though the report is hearsay.", result: "Her opinion is admissible; the report itself is disclosed to the jury only if its value in evaluating the opinion substantially outweighs its prejudicial effect." },
               { facts: "A psychiatrist is asked whether the defendant was unable to appreciate the wrongfulness of his act.", result: "Barred in a criminal case: FRE 704(b)." },
             ],
             terms: ["ultimate issue", "reasonable reliance", "mental state"],
@@ -768,7 +828,7 @@
             call: "What is the defendant's best objection?",
             options: [
               { text: "The question is leading, and leading questions are not ordinarily allowed on direct examination of a friendly witness.", why: "FRE 611(c): leading questions should not be used on direct except as necessary to develop testimony." },
-              { text: "The question calls for hearsay, because the witness would be repeating what the plaintiff said to him before the collision.", why: "The neighbor is asked about what the neighbor saw, not about an out-of-court statement." },
+              { text: "The question calls for hearsay, because the witness would be repeating what the plaintiff said to him before the fall.", why: "The neighbor is asked about what the neighbor saw, not about an out-of-court statement." },
               { text: "The question asks the witness for an opinion on an ultimate issue, which a lay witness may not give about the defendant's negligence.", why: "Ultimate-issue opinions are not objectionable under FRE 704(a); the question seeks a fact." },
               { text: "The question was not preceded by a showing of the witness's personal knowledge, which must be established before any question on direct examination.", why: "Foundation is a possible objection, but the form of the question is the clearest defect." },
             ],
@@ -893,7 +953,7 @@
               { text: "Overrule it, because any party, including the party that called the witness, may attack the witness's credibility.", why: "FRE 607 abolishes the old voucher rule; no surprise, hostility or damage needs to be shown." },
               { text: "Sustain it, because a party may impeach its own witness only after the court declares the witness hostile or the testimony a surprise.", why: "That was the common-law limit; Rule 607 contains no such requirement.", trap: 11 },
               { text: "Sustain it, because a party who calls a witness vouches for her truthfulness and is bound by what she says on direct.", why: "Rule 607 rejects the vouching theory.", trap: 11 },
-              { text: "Overrule it, because the witness's prior statement is admissible to prove that the plaintiff was driving carefully.", why: "Right result, wrong reason: offered to impeach, the statement is not hearsay, but whether it counts for its truth depends on 801(d)(1)(A).", trap: 1 },
+              { text: "Overrule it, because the witness became hostile when she volunteered testimony that harmed the plaintiff, and hostility permits impeachment.", why: "Rule 607 needs no showing of hostility or surprise; any party may impeach its own witness.", trap: 1 },
             ],
             answer: 0, facts: ["unexpectedly adds", "may not impeach its own witness"],
             say: "Under the Federal Rules, any party may impeach any witness, even one it called.",
@@ -1057,10 +1117,10 @@
           },
           {
             id: "u9-r-bias", kind: "rule", title: "Bias, perception and contradiction", cat: "I.D",
-            say: "Bias and defects of perception may always be shown with extrinsic evidence; contradicting a witness on a collateral detail may not be.",
-            elements: ["Bias, interest or a motive to lie may always be shown (Abel)", "Extrinsic evidence of bias is allowed", "Defects of perception, memory or narration may be shown, with extrinsic evidence", "Contradiction: other evidence showing the testimony is wrong on a relevant point", "No extrinsic evidence to contradict a witness on a collateral matter"],
+            say: "Bias and defects of perception may be proved with extrinsic evidence, usually after asking the witness first; a collateral contradiction may not.",
+            elements: ["Bias, interest or a motive to lie is always a proper subject of impeachment (Abel)", "Extrinsic evidence of bias is allowed (in most courts after a foundation question)", "Defects of perception, memory or narration may be shown, with extrinsic evidence", "Contradiction: other evidence showing the testimony is wrong on a relevant point", "No extrinsic evidence to contradict a witness on a collateral matter"],
             ordered: false,
-            exceptions: ["Abel: the Rules do not mention bias, but bias impeachment has always been allowed", "Evidence of insurance (FRE 411) and settlements (FRE 408) may be offered to show bias"],
+            exceptions: ["Abel: the Rules do not mention bias, but bias impeachment has always been allowed", "Most courts require a foundation first: ask the witness about the bias, then prove it extrinsically if she denies it", "Evidence of insurance (FRE 411) and settlements (FRE 408) may be offered to show bias"],
             cite: "United States v. Abel", citeAsk: "Which Supreme Court decision permits impeachment for bias and allows extrinsic evidence of it?",
             ex: [
               { facts: "A witness denies any reason to favor the prosecution; an investigator will testify that she was promised leniency.", result: "Admissible: bias, with extrinsic evidence." },
@@ -1073,21 +1133,35 @@
               { t: "bucket", q: "Extrinsic evidence allowed?", buckets: ["Allowed", "Not allowed"], items: [{ text: "The witness is the defendant's employer (bias)", bucket: "Allowed" }, { text: "The witness did not wear the glasses she needs (perception)", bucket: "Allowed" }, { text: "Whether the witness ate lunch before testifying (collateral)", bucket: "Not allowed" }, { text: "The witness once cheated on an exam (608(b))", bucket: "Not allowed" }] },
             ],
             hook: "Abel: a secret prison gang membership shows bias, and the proof comes in.",
-            status: "general", src: "United States v. Abel, 469 U.S. 45 (1984); collateral-matter doctrine (general); evidence.md §2.2",
+            status: "general", src: "United States v. Abel, 469 U.S. 45 (1984); foundation for extrinsic bias evidence (general); collateral-matter doctrine (general); evidence.md §2.2",
           },
           {
             id: "u9-h-bias-promise", kind: "hypo", cat: "I.D", callType: "admissible", rule: "u9-r-bias", issue: "extrinsic evidence of bias", grid: true,
             stem: "At a criminal trial, a prosecution witness testifies against the defendant. On cross-examination, he denies that he has any reason to favor the prosecution. The defendant then calls an investigator for the prosecutor's office, who will testify that the witness was promised a reduced sentence on his own pending charge in exchange for testifying. The prosecutor objects.",
             call: "Is the investigator's testimony admissible?",
             options: [
-              { text: "Yes, because bias is a proper subject of impeachment and extrinsic evidence of it is allowed.", why: "The witness's denial does not end the inquiry: bias is always relevant to credibility (Abel)." },
+              { text: "Yes, because bias is a proper subject of impeachment and extrinsic evidence of it is allowed.", why: "The witness was asked and denied favoring the prosecution, so the foundation most courts require is laid; the deal may then be proved by another witness (Abel)." },
               { text: "No, because Rule 608(b) bars extrinsic evidence offered to attack a witness's credibility, and bias is such an attack.", why: "Rule 608(b) concerns specific instances bearing on truthfulness, not bias.", trap: 4 },
               { text: "No, because the witness already denied it and the cross-examiner must accept the answer on any matter bearing on credibility.", why: "The take-the-answer rule applies to 608(b) instances, not to bias.", trap: 10 },
-              { text: "Yes, but only if the witness was first given an opportunity to explain or deny, as Rule 613(b) requires for bias evidence.", why: "The Rule 613(b) sequence governs prior statements; here the witness was asked and denied bias.", trap: 9 },
+              { text: "Yes, but only if the promise of leniency was put in writing and signed by the prosecutor before the witness testified.", why: "Bias may be proved by any competent evidence; no writing is required.", trap: 5 },
             ],
             answer: 0, facts: ["denies that he has any reason to favor the prosecution", "promised a reduced sentence"],
             say: "A deal with the prosecutor is bias, and bias can be proved with a second witness.",
-            status: "general", src: "United States v. Abel, 469 U.S. 45 (1984)",
+            status: "general", src: "United States v. Abel, 469 U.S. 45 (1984); foundation requirement (general)",
+          },
+          {
+            id: "u9-h-collateral-contradiction", kind: "hypo", cat: "I.D", callType: "admissible", rule: "u9-r-bias", issue: "contradiction on a collateral matter", grid: true,
+            stem: "At a bank-robbery trial, a prosecution witness testifies that she saw the defendant run out of the bank. On cross-examination, she says that she had walked to the bank that morning from her apartment. The defendant then calls a parking attendant, who will testify that the witness parked her car in his garage that morning, to show that her testimony was wrong on that point. The prosecutor objects.",
+            call: "Is the attendant's testimony admissible?",
+            options: [
+              { text: "No, because how the witness got to the bank is a collateral matter, and extrinsic evidence may not be used to contradict a witness on a collateral matter.", why: "Collateral-matter doctrine: a detail with no relevance apart from contradicting the witness is left to cross-examination." },
+              { text: "Yes, because any evidence that contradicts a witness's testimony is admissible to impeach her, whatever its subject.", why: "Extrinsic contradiction is limited to matters that are not collateral.", trap: 7 },
+              { text: "Yes, because the attendant's testimony shows the witness lied under oath, a specific instance of untruthfulness provable under Rule 608(b).", why: "Rule 608(b) forbids extrinsic evidence of specific instances; contradiction is a separate method with its own limit.", trap: 10 },
+              { text: "No, because a witness may be impeached only by her own prior statements and convictions, never through the testimony of other witnesses.", why: "Bias, sensory defects and contradiction on a material point may all be proved through other witnesses.", trap: 5 },
+            ],
+            answer: 0, facts: ["walked to the bank that morning", "parked her car in his garage"],
+            say: "Catch a witness wrong on a side detail and you keep the point on cross; you may not call a witness to prove it.",
+            status: "general", src: "Collateral-matter doctrine (general); FRE 403; FRE 608(b)",
           },
           {
             id: "u9-r-801d1b", kind: "rule", title: "Rehabilitating with a prior consistent statement", cat: "I.D",
@@ -1140,7 +1214,7 @@
           },
           {
             id: "u9-h-801d1b-memory", kind: "hypo", cat: "I.D", callType: "admissible", rule: "u9-r-801d1b", issue: "consistent statement after a memory attack",
-            stem: "In a negligence action, the plaintiff's witness testifies that the car that struck the plaintiff was blue. On cross-examination, defense counsel suggests that three years have passed and that the witness's memory of details is poor, but suggests no motive to lie. On redirect, the plaintiff calls a police officer, who will testify that on the day of the collision the witness told him that the car was blue. The witness remains in the courtroom and can be recalled. The defendant objects that the officer's testimony is hearsay.",
+            stem: "In a negligence action, the plaintiff's witness testifies that the car that struck the plaintiff was blue. On cross-examination, defense counsel suggests that three years have passed and that the witness's memory of details is poor, but suggests no motive to lie. After the cross-examination, the plaintiff calls a police officer, who will testify that on the day of the collision the witness told him that the car was blue. The witness remains in the courtroom and can be recalled. The defendant objects that the officer's testimony is hearsay.",
             call: "How should the court rule on the objection?",
             options: [
               { text: "Overrule it, because a consistent statement by a cross-examined witness may be offered to rehabilitate her credibility when attacked on another ground, such as faulty memory.", why: "FRE 801(d)(1)(B)(ii) (2014): not hearsay, and it may be considered for its truth." },
@@ -1214,6 +1288,7 @@
             hook: "My Cousin Vinny: attacking an eyewitness's view, memory and timeline is impeachment for perception.",
             status: "book", src: "FRE 608(b); FRE 609; FRE 613(b); United States v. Abel",
           },
+          { id: "u9-c-doyle", kind: "case", subject: "evidence", name: "Doyle v. Ohio", year: 1976, holding: "Due process bars the prosecution from impeaching a defendant with his silence after he received Miranda warnings.", facts: "Two men arrested for a drug sale said nothing after warnings, then told an exculpatory story at trial; the prosecutor asked why they had not told it at arrest.", say: "Doyle: silence after Miranda warnings may not be used to impeach; silence before the warnings is a different question.", status: "general", src: "Doyle v. Ohio, 426 U.S. 610 (1976)" },
           {
             id: "u9-tr-608b-613b", kind: "trap", cat: "4", subject: "evidence",
             stem: "A defense witness denies on cross-examination that she lied on a loan application. The plaintiff offers the bank officer to prove that she did.",
@@ -1233,10 +1308,10 @@
           {
             id: "u9-r-404a", kind: "rule", title: "Character evidence: the ban and the criminal-case exceptions", cat: "II.C",
             say: "Character never proves conduct, except that a criminal defendant may open the door, and then the prosecutor may walk through it.",
-            elements: ["Evidence of a person's character is not admissible to prove action in conformity on a particular occasion (FRE 404(a)(1))", "Criminal case: the defendant may offer a pertinent trait of his own character", "Criminal case: the defendant may offer a pertinent trait of the victim", "If the defendant opens the door, the prosecutor may rebut; if the defendant offered the victim's trait, the prosecutor may offer the defendant's same trait", "Homicide: the prosecutor may offer the victim's peacefulness to rebut a claim that the victim was the first aggressor"],
+            elements: ["Evidence of a person's character is not admissible to prove action in conformity on a particular occasion (FRE 404(a)(1))", "Criminal case: the defendant may offer a pertinent trait of his own character", "Criminal case: the defendant may offer a pertinent trait of the victim", "If the defendant opens the door, the prosecutor may rebut; if the defendant offered the victim's trait, the prosecutor may offer the defendant's same trait", "Homicide: the prosecutor may offer the victim's peacefulness to rebut evidence that the victim was the first aggressor"],
             ordered: false,
             distractorElements: ["The prosecutor may begin the character inquiry in its case in chief", "A civil party may offer his own good character to prove he acted carefully"],
-            exceptions: ["The exceptions apply only in criminal cases: a civil party may never use character to prove conduct", "Character of a witness for truthfulness follows Rules 607-609", "Past sexual behavior of an alleged victim is limited by Rule 412"],
+            exceptions: ["The 404(a)(2) exceptions apply only in criminal cases; in a civil case character may not prove conduct, except under Rule 415 in sexual-assault and child-molestation cases", "Character of a witness for truthfulness follows Rules 607-609", "Past sexual behavior of an alleged victim is limited by Rule 412"],
             cite: "FRE 404(a)", citeAsk: "Which rule bars character evidence to prove conduct on a particular occasion?",
             ex: [
               { facts: "A defendant charged with assault offers testimony that he has a reputation for peacefulness.", result: "Admissible: a criminal defendant may open the door; the prosecutor may rebut." },
@@ -1296,17 +1371,31 @@
           },
           {
             id: "u9-h-404a2c-homicide", kind: "hypo", cat: "II.C", callType: "admissible", rule: "u9-r-404a", issue: "victim's peacefulness in a homicide case", grid: true,
-            stem: "A defendant is tried for murder and claims that the victim attacked him first with a knife, so that he acted in self-defense. The defendant has offered no evidence about the victim's character. The prosecutor calls a neighbor to testify that the victim was known in the community as a peaceable person, to rebut the claim that the victim was the first aggressor. The defendant objects that the prosecutor may not open the subject of the victim's character.",
+            stem: "A defendant on trial for murder testifies that the victim attacked him first with a knife, so that he acted in self-defense. The defendant has offered no evidence about the victim's character. In rebuttal, the prosecutor calls a neighbor to testify that the victim was known in the community as a peaceable person, to rebut the defendant's testimony that the victim was the first aggressor. The defendant objects that the prosecutor may not open the subject of the victim's character.",
             call: "How should the court rule on the objection?",
             options: [
               { text: "Overrule it, because in a homicide case the prosecutor may offer evidence of the victim's peacefulness to rebut evidence that the victim was the first aggressor.", why: "FRE 404(a)(2)(C): an exception specific to homicide cases, available even if the defendant offered no character evidence." },
               { text: "Sustain it, because the prosecutor may offer evidence of a victim's pertinent trait only after the defendant has first offered evidence of that trait.", why: "That is the rule in other cases under Rule 404(a)(2)(B); homicide has its own exception.", trap: 9 },
               { text: "Sustain it, because evidence of the victim's character is inadmissible in a criminal case when offered by the prosecutor to prove that the victim acted in conformity.", why: "Rule 404(a)(2)(C) permits the prosecutor's use to rebut a first-aggressor claim.", trap: 2 },
-              { text: "Overrule it, because the neighbor's opinion that the victim was peaceable is admissible whenever the victim is dead and cannot testify.", why: "The death of the victim does not by itself admit character evidence; the first-aggressor claim does.", trap: 3 },
+              { text: "Overrule it, because the neighbor's opinion that the victim was peaceable is admissible whenever the victim is dead and cannot testify.", why: "The death of the victim does not by itself admit character evidence; evidence that the victim was the first aggressor does.", trap: 3 },
             ],
-            answer: 0, facts: ["claims that the victim attacked him first", "offered no evidence about the victim's character"],
-            say: "In a homicide case, claiming the victim struck first lets the prosecutor offer the victim's peaceable reputation.",
+            answer: 0, facts: ["testifies that the victim attacked him first", "offered no evidence about the victim's character"],
+            say: "In a homicide case, evidence that the victim struck first lets the prosecutor offer the victim's peaceable character.",
             status: "book", src: "FRE 404(a)(2)(C)",
+          },
+          {
+            id: "u9-h-404a-fear", kind: "hypo", cat: "II.C", callType: "admissible", rule: "u9-r-404a", issue: "victim's violence known to defendant", grid: true,
+            stem: "A defendant charged with assault claims self-defense. He testifies that, before the fight, he had been told that the victim had beaten two men with a tire iron the year before, and that this was why he feared the victim when the victim walked toward him with clenched fists. The prosecutor objects that the testimony is improper evidence of specific acts of the victim's character.",
+            call: "How should the court rule on the objection?",
+            options: [
+              { text: "Overrule it, because the reports are offered to show why the defendant feared the victim, so what matters is that he knew of them.", why: "Not offered to prove the victim acted in conformity: the reports bear on the defendant's state of mind, which self-defense puts in issue. Rule 403 still applies." },
+              { text: "Sustain it, because a defendant may prove a victim's violent character only by reputation or opinion testimony, never by specific acts.", why: "That is Rule 405(a), which governs proof of character; here the acts are offered for the defendant's fear.", trap: 10 },
+              { text: "Sustain it, because the defendant did not see the earlier beatings, so his account of them is hearsay offered to prove that they happened.", why: "The reports are offered for their effect on the defendant, not for their truth.", trap: 5 },
+              { text: "Overrule it, because in a self-defense case a defendant may always prove the victim's violent character by specific acts.", why: "Character is proved by reputation or opinion under Rule 405(a); the acts come in here only because the defendant knew of them.", trap: 1 },
+            ],
+            answer: 0, facts: ["he had been told", "this was why he feared the victim"],
+            say: "What the defendant knew about the victim's violence shows his fear, not the victim's character: knowledge is the key.",
+            status: "general", src: "FRE 404(a)(2)(B); FRE 405(a); FRE 801(c) (effect on the listener); evidence.md §3.2",
           },
           {
             id: "u9-r-405", kind: "rule", title: "Methods of proving character", cat: "II.C",
@@ -1453,15 +1542,15 @@
           },
           {
             id: "u9-h-404b-civil", kind: "hypo", cat: "II.C", callType: "admissible", rule: "u9-r-404b", issue: "propensity in a civil case", transfer: true,
-            stem: "A plaintiff sued a bar patron for battery, alleging that the patron started a fight and punched him. The plaintiff offers testimony that, two years earlier, the patron started a fight in another bar. The plaintiff offers it to show that the patron has an aggressive temperament and probably started this fight too. The patron objects.",
+            stem: "A plaintiff sued a bar patron for battery, alleging that the patron punched him without provocation. The patron admits punching the plaintiff but testifies that the plaintiff swung at him first. The plaintiff offers testimony that, two years earlier, the patron started a fight in another bar. The plaintiff argues that the evidence shows the patron's intent. The patron objects.",
             call: "How should the court rule on the objection?",
             options: [
-              { text: "Sustain it, because the evidence is offered to show propensity, which Rule 404(b) forbids in civil as well as criminal cases.", why: "FRE 404(b)(1)." },
+              { text: "Sustain it, because the earlier fight bears on who started this one only through the patron's propensity, which Rule 404(b) forbids in civil cases too.", why: "FRE 404(b)(1): the patron admits he meant the blow, so 'intent' here is a character inference in disguise." },
               { text: "Overrule it, because Rule 404(b) governs only criminal prosecutions, and in a civil case other acts are admissible for any relevant purpose.", why: "The rule applies in every kind of case.", trap: 5 },
-              { text: "Overrule it, because evidence of a prior similar act is admissible to show intent, and the defendant's intent is in issue in the battery claim.", why: "Intent must be a genuinely disputed purpose that does not depend on a propensity inference.", trap: 7 },
+              { text: "Overrule it, because a prior similar act is admissible to show intent, and the patron's intent is an element of the battery claim.", why: "Intent to strike is not disputed; who started the fight is, and the earlier fight answers that only through propensity.", trap: 10 },
               { text: "Sustain it, because the earlier fight was not the subject of a conviction, and Rule 404(b) admits other acts only if they resulted in a conviction.", why: "A conviction is not required for or against 404(b) evidence.", trap: 3 },
             ],
-            answer: 0, facts: ["aggressive temperament", "started a fight in another bar"],
+            answer: 0, facts: ["admits punching the plaintiff", "started a fight in another bar"],
             say: "Rule 404(b) is not a criminal-only rule: 'he did it before' is propensity in any courtroom.",
             status: "book", src: "FRE 404(b)(1)",
           },
@@ -1551,10 +1640,10 @@
           {
             id: "u9-r-413-415", exam: ["mbe"], kind: "rule", title: "Rules 413 to 415: the accused's other sexual offenses", cat: "II.C",
             say: "In sexual-assault and child-molestation cases, the court may admit the defendant's other such offenses on any relevant matter, including propensity.",
-            elements: ["Rules 413 and 414: in a criminal sexual-assault or child-molestation case, the court may admit the defendant's other such offenses on any relevant matter, including propensity", "Rule 415: the same in a civil case based on sexual assault or child molestation", "Prosecutor discloses the evidence at least 15 days before trial (Rules 413-414)"],
+            elements: ["Rules 413 and 414: in a criminal sexual-assault or child-molestation case, the court may admit the defendant's other such offenses on any relevant matter, including propensity", "Rule 415: the same in a civil case based on sexual assault or child molestation", "The offering party discloses the evidence at least 15 days before trial (Rules 413(b), 414(b), 415(b)), unless the court allows later for good cause"],
             ordered: false,
             exceptions: ["Rule 403 still applies to Rules 413 to 415 evidence", "A conviction for the earlier offense is not required"],
-            numbers: [{ label: "Rules 413-414 disclosure", value: "at least 15 days before trial" }],
+            numbers: [{ label: "Rules 413-415 disclosure", value: "at least 15 days before trial" }],
             cite: "FRE 413", citeAsk: "Which rule admits a defendant's other sexual assaults in a sexual-assault prosecution?",
             ex: [
               { facts: "A sexual-assault defendant's two earlier assaults are offered to show propensity.", result: "May be admitted under Rule 413, subject to Rule 403." },
@@ -1583,7 +1672,7 @@
           },
           {
             id: "u9-h-413-other-assaults", exam: ["mbe"], kind: "hypo", cat: "II.C", callType: "admissible", rule: "u9-r-413-415", issue: "propensity under 413", transfer: true,
-            stem: "A defendant is charged with sexual assault. The prosecutor offers testimony from two women that the defendant sexually assaulted each of them in separate incidents years earlier. The prosecutor gave the defendant notice at least 15 days before trial. The offer is to show the defendant's propensity to commit sexual assault. The defendant objects that the testimony is inadmissible character evidence.",
+            stem: "A defendant is charged with sexual assault. The prosecutor offers testimony from two women that the defendant sexually assaulted each of them in separate incidents years earlier. The prosecutor gave the defendant notice at least 15 days before trial. The defendant objects that the testimony is inadmissible character evidence.",
             call: "How should the court rule on the objection?",
             options: [
               { text: "Overrule it, because Rule 413 permits other sexual assaults to be admitted on any relevant matter, including propensity, subject to Rule 403.", why: "FRE 413(a)." },
@@ -1703,7 +1792,7 @@
             say: "Some items prove themselves: sealed or certified public documents, newspapers, trade labels, notarized papers and certified business or electronic records.",
             elements: ["Domestic public documents under seal and signature", "Certified copies of public records", "Newspapers and periodicals", "Trade inscriptions and labels", "Acknowledged (notarized) documents", "Certified domestic business records (902(11)), with written notice", "Certified records generated by an electronic process or copied from an electronic device (902(13), (14))"],
             ordered: false,
-            exceptions: ["Self-authenticating is not self-admitting: hearsay, privilege and relevance objections remain", "A 902(11) certification needs reasonable written notice and a chance to inspect"],
+            exceptions: ["Self-authenticating is not self-admitting: hearsay, privilege and relevance objections remain", "A 902(11) certification needs reasonable written notice and a chance to inspect", "A subscribing witness need not testify to authenticate a writing unless the law governing its validity requires it (FRE 903)"],
             cite: "FRE 902", citeAsk: "Which rule lists items that are self-authenticating?",
             ex: [
               { facts: "A party offers a copy of a newspaper containing an advertisement.", result: "Authentic without a witness; the use for which it is offered must still be proper." },
@@ -1711,10 +1800,11 @@
             terms: ["self-authenticating", "certification", "acknowledged document"],
             quiz: [
               { t: "tf", q: "A self-authenticating document is also automatically free of hearsay objection.", a: false, why: "FRE 902 supplies authenticity only." },
+              { t: "tf", q: "Under the Federal Rules, a contract signed before attesting witnesses may be authenticated only by calling one of them.", a: false, why: "FRE 903: a subscribing witness is needed only if the law of the jurisdiction governing the writing's validity requires one." },
               { t: "bucket", q: "Self-authenticating (902) or needs a sponsoring witness?", buckets: ["Self-authenticating", "Needs a witness"], items: [{ text: "A certified copy of a deed from the county recorder", bucket: "Self-authenticating" }, { text: "A newspaper's front page", bucket: "Self-authenticating" }, { text: "An unsigned photograph of an accident scene", bucket: "Needs a witness" }, { text: "A business record with a custodian's 902(11) certificate", bucket: "Self-authenticating" }, { text: "A personal letter with no seal or certification", bucket: "Needs a witness" }] },
             ],
             hook: "Self-authenticating is not self-admitting.",
-            status: "book", src: "FRE 902; evidence.md §3.5",
+            status: "book", src: "FRE 902; FRE 903; evidence.md §3.5",
           },
           {
             id: "u9-h-902-certified", kind: "hypo", cat: "II.B", callType: "admissible", rule: "u9-r-902", issue: "certified business records",
@@ -1823,7 +1913,7 @@
             cite: "FRE 1001", citeAsk: "Which rule defines an original, a duplicate and other terms for the best-evidence rule?",
             ex: [
               { facts: "A witness prints an email from a company's server and testifies that it accurately reflects the stored message.", result: "The printout is an original (FRE 1001(d))." },
-              { facts: "A party testifies in a deposition to the terms of a written contract the opposing party now says is lost.", result: "Content proved by the party's own statement without producing the original (FRE 1007)." },
+              { facts: "The opposing party offers, against the defendant, the defendant's own deposition testimony about the terms of a written contract.", result: "Content proved without producing the original (FRE 1007)." },
             ],
             terms: ["original", "duplicate", "counterpart"],
             quiz: [
@@ -1878,7 +1968,7 @@
             status: "book", src: "FRE 1007; FRE 801(d)(2)(A)",
           },
           {
-            id: "u9-r-1006-107", exam: ["mbe"], kind: "rule", title: "Summaries and illustrative aids", cat: "IV.B", recent: true,
+            id: "u9-r-1006-107", exam: ["mbe"], kind: "rule", title: "Summaries and illustrative aids", cat: "IV.B",
             say: "Since 2024, a summary of voluminous records is evidence even if the records are not admitted, if they are made available; an illustrative aid is not evidence.",
             elements: ["Rule 1006: a summary, chart or calculation may prove the content of voluminous admissible records that cannot be conveniently examined in court", "It is admissible whether or not the underlying records have been introduced", "The proponent makes the originals or duplicates available for examination or copying", "Rule 107: an illustrative aid may be used if its utility in helping the jury understand is not substantially outweighed by unfair prejudice, confusion or delay", "An illustrative aid is not evidence and goes to the jury room only by consent or for good cause"],
             ordered: false,
@@ -1897,7 +1987,7 @@
             status: "book", src: "FRE 1006 (2024); FRE 107 (2024); evidence.md §1.5, §5",
           },
           {
-            id: "u9-h-1006-chart", exam: ["mbe"], kind: "hypo", cat: "IV.B", callType: "admissible", rule: "u9-r-1006-107", issue: "summary of voluminous records", recent: true, grid: true,
+            id: "u9-h-1006-chart", exam: ["mbe"], kind: "hypo", cat: "IV.B", callType: "admissible", rule: "u9-r-1006-107", issue: "summary of voluminous records", grid: true,
             stem: "In a fraud trial, the prosecution offers a chart summarizing 4,000 pages of bank records, prepared by an accountant who will testify. The bank records were made available to the defense for inspection and copying but have not been admitted into evidence. The bank's records custodian has testified that the records are kept in the ordinary course of the bank's business. The defendant objects that the underlying records are not in evidence.",
             call: "How should the court rule on the objection?",
             options: [
@@ -1999,7 +2089,7 @@
           },
           {
             id: "u9-h-upjohn-employee", kind: "hypo", cat: "III.B", callType: "admissible", rule: "u9-r-aca", issue: "corporate employee's communication to counsel", grid: true,
-            stem: "A corporation's general counsel investigates possible improper payments. At the direction of the corporation's superiors, she interviews a mid-level sales manager about what the manager did in the course of his duties, to give the corporation legal advice, and the corporation keeps the interviews confidential. In later litigation against the corporation, the plaintiff seeks to compel the general counsel to testify about what the sales manager told her. The corporation asserts the attorney-client privilege.",
+            stem: "A corporation's general counsel investigates possible improper payments. At the direction of the corporation's superiors, she interviews a mid-level sales manager about what the manager did in the course of his duties, to give the corporation legal advice, and the corporation keeps the interviews confidential. In a later federal-question action against the corporation, the plaintiff seeks to compel the general counsel to testify about what the sales manager told her. The corporation asserts the attorney-client privilege.",
             call: "How should the court rule on the assertion of privilege?",
             options: [
               { text: "Sustain it, because an employee's communication to corporate counsel, at superiors' direction about his duties, to obtain legal advice for the corporation, is privileged.", why: "Upjohn: the privilege covers it; the privilege belongs to the corporation. The underlying facts remain discoverable by other means." },
@@ -2024,6 +2114,20 @@
             answer: 0, facts: ["retains an accountant who does not otherwise work for the client", "in confidence"],
             say: "An expert who helps the lawyer help the client stays inside the privilege.",
             status: "general", src: "United States v. Kovel, 296 F.2d 918 (2d Cir. 1961) (general); FRE 501",
+          },
+          {
+            id: "u9-h-swidler-death", kind: "hypo", cat: "III.B", callType: "admissible", rule: "u9-r-aca", issue: "privilege after the client's death", grid: true,
+            stem: "A man consulted a lawyer about his possible criminal exposure two weeks before he died. After his death, a federal grand jury investigating other people subpoenas the lawyer's notes of what the man told him. The government argues that the man can no longer be prosecuted, so the privilege serves no purpose, and that the notes are important to its investigation. The lawyer moves to quash the subpoena.",
+            call: "Should the court quash the subpoena for the notes of the client's communications?",
+            options: [
+              { text: "Yes, because the attorney-client privilege survives the client's death, even when the communications are sought in a criminal investigation.", why: "Swidler & Berlin v. United States (1998): the privilege survives death, and the government's need creates no exception." },
+              { text: "No, because the privilege ends when the client dies, since a dead client can no longer suffer criminal liability.", why: "The privilege also protects reputation and the candor of clients who expect confidentiality after death.", trap: 5 },
+              { text: "No, because in a criminal investigation the court balances the government's need for the communications against the client's interest.", why: "Swidler rejected a balancing exception for criminal cases.", trap: 4 },
+              { text: "Yes, because a lawyer's notes are opinion work product, which no subpoena may ever reach, whatever they contain.", why: "The ground is the privilege's survival; work product is a separate doctrine and is not absolute for facts.", trap: 10 },
+            ],
+            answer: 0, facts: ["After his death", "can no longer be prosecuted"],
+            say: "The attorney-client privilege outlives the client, even when prosecutors want the file.",
+            status: "book", src: "Swidler & Berlin v. United States, 524 U.S. 399 (1998); FRE 501; FRE 1101(c)",
           },
           {
             id: "u9-r-work-product", kind: "rule", title: "Work product", cat: "III.B",
@@ -2100,7 +2204,7 @@
             items: [
               { text: "A client's confidential request to her lawyer for advice about a lawsuit", bucket: "Privileged", why: "Confidential communication for legal advice." },
               { text: "A client's statement to her lawyer in the presence of an unnecessary friend", bucket: "Not privileged", why: "A stranger's presence defeats confidentiality." },
-              { text: "A lawyer's private notes assessing a witness, prepared for trial", bucket: "Privileged", why: "Opinion work product, protected almost absolutely." },
+              { text: "The lawyer's confidential advice to the client about the lawsuit", bucket: "Privileged", why: "The attorney-client privilege covers the lawyer's confidential advice as well as the client's words." },
               { text: "A client's plan, told to her lawyer, to use the lawyer's help to conceal a fraud", bucket: "Not privileged", why: "Crime-fraud exception." },
               { text: "A patient's statements to a licensed psychotherapist during treatment, in a federal case", bucket: "Privileged", why: "Jaffee v. Redmond recognizes the psychotherapist-patient privilege in federal court." },
               { text: "A spouse's confidential remark to her spouse during the marriage, in a later case", bucket: "Privileged", why: "Confidential marital communications privilege." },
@@ -2115,7 +2219,7 @@
             say: "In a criminal case the witness-spouse alone holds the privilege to refuse to testify against the accused spouse, and it ends with the marriage.",
             elements: ["A criminal proceeding", "The witness is married to the accused when she testifies", "The witness-spouse holds the privilege: she may refuse to testify against the accused or choose to testify", "It covers any adverse testimony, not only communications"],
             ordered: false,
-            exceptions: ["The accused cannot block a willing spouse (Trammel)", "The privilege ends with divorce", "It does not stop the government from using other evidence"],
+            exceptions: ["The accused cannot block a willing spouse (Trammel)", "The privilege ends with divorce", "It does not stop the government from using other evidence", "No privilege when the accused is charged with a crime against the witness-spouse or a child of either (general)"],
             cite: "Trammel v. United States", citeAsk: "Which case gives the privilege to refuse adverse spousal testimony to the witness-spouse alone?",
             ex: [
               { facts: "A willing wife is called by the prosecution against her husband in a federal tax-fraud trial.", result: "The husband cannot block her: the privilege is hers." },
@@ -2125,9 +2229,10 @@
             quiz: [
               { t: "tf", q: "The accused spouse may prevent the other spouse from testifying against him by invoking the spousal testimonial privilege.", a: false, why: "Trammel: the privilege belongs to the witness-spouse." },
               { t: "tf", q: "The spousal testimonial privilege continues after a divorce.", a: false, why: "It requires a valid marriage at the time of testimony." },
+              { t: "tf", q: "A wife may invoke the spousal testimonial privilege to refuse to testify at her husband's trial for assaulting her.", a: false, why: "Federal courts recognize an exception when the accused is charged with a crime against the spouse or a child of either." },
             ],
             hook: "She decides whether to testify against him; he cannot veto her.",
-            status: "book", src: "Trammel v. United States, 445 U.S. 40 (1980); FRE 501; evidence.md §4.1",
+            status: "book", src: "Trammel v. United States, 445 U.S. 40 (1980); FRE 501; crime-against-spouse exception (general); evidence.md §4.1",
           },
           {
             id: "u9-r-marital-comm", kind: "rule", title: "Confidential marital communications", cat: "III.A",
@@ -2181,7 +2286,7 @@
             say: "Federal law recognizes a psychotherapist-patient privilege with no balancing test, but no general physician-patient privilege.",
             elements: ["A confidential communication", "Between a licensed psychotherapist (including a licensed clinical social worker) and a patient", "Made in the course of diagnosis or treatment"],
             ordered: true,
-            exceptions: ["No balancing: importance of the evidence does not defeat the privilege (Jaffee)", "No general federal physician-patient privilege (general)", "Clergy-penitent communications are privileged (general)"],
+            exceptions: ["No balancing: importance of the evidence does not defeat the privilege (Jaffee)", "No general federal physician-patient privilege (general)", "Clergy-penitent communications are privileged (general)", "In a civil case, state privilege law governs a claim or defense for which state law supplies the rule of decision, such as a diversity contract claim (FRE 501); federal common law governs federal-question and criminal cases"],
             cite: "Jaffee v. Redmond", citeAsk: "Which case recognized the psychotherapist-patient privilege under Rule 501?",
             ex: [
               { facts: "A police officer confides in a licensed clinical social worker after a shooting.", result: "Privileged; the plaintiff's need for the records does not matter." },
@@ -2190,6 +2295,7 @@
             quiz: [
               { t: "tf", q: "Federal common law recognizes a general physician-patient privilege.", a: false, why: "None exists in federal law, though state law may govern in a state-law case." },
               { t: "tf", q: "A court may order disclosure of psychotherapist-patient communications if the need for them outweighs the patient's privacy interest.", a: false, why: "Jaffee rejected a case-by-case balancing test." },
+              { t: "tf", q: "In a federal diversity action on a state-law contract claim, federal common law decides whether a communication is privileged.", a: false, why: "FRE 501: state law supplies the rule of decision for that claim, so state privilege law governs." },
               { t: "bucket", q: "Recognized federal privilege?", buckets: ["Recognized", "Not recognized"], items: [{ text: "Psychotherapist and patient", bucket: "Recognized" }, { text: "Licensed clinical social worker and patient", bucket: "Recognized" }, { text: "Physician and patient", bucket: "Not recognized" }, { text: "Accountant and client", bucket: "Not recognized" }, { text: "Clergy and penitent", bucket: "Recognized" }] },
             ],
             hook: "Therapy talk is privileged, however badly the other side needs it.",
@@ -2260,30 +2366,30 @@
           },
           {
             id: "u9-h-408-statement", kind: "hypo", cat: "III.G", callType: "admissible", rule: "u9-r-407-411", issue: "statements in settlement negotiations", grid: true,
-            stem: "In a suit over the price of machinery, the buyer disputes that it owes the full price. During settlement negotiations, the buyer's lawyer said, 'We received the machines and they work; we just cannot afford the full price.' The seller offers the statement at trial to prove that the machines were delivered. The buyer objects.",
+            stem: "In a suit over the price of machinery, the buyer disputes that it owes the full price. During settlement negotiations, the buyer's lawyer said, 'We received the machines, but two of them do not work, so we will pay half.' The seller offers the statement at trial to prove that the machines were delivered. The buyer objects.",
             call: "Is the statement admissible?",
             options: [
-              { text: "Inadmissible, because statements made during compromise negotiations are not admissible to prove the validity or amount of a disputed claim.", why: "FRE 408(a)(2): the rule protects conduct and statements, not just offers." },
+              { text: "Inadmissible, because statements made during compromise negotiations are not admissible to prove the validity or amount of a disputed claim.", why: "FRE 408(a)(2): the buyer disputes the amount it owes, and the rule protects statements made in the negotiations, not just offers. Delivery goes to the claim's validity." },
               { text: "Admissible, because it is an opposing party's statement, and a party's own statement is admissible against that party whatever the setting.", why: "Rule 408 limits use even of otherwise admissible party statements.", trap: 10 },
               { text: "Admissible, because the statement is a statement of fact, not an offer to compromise, and Rule 408 protects only the offers themselves.", why: "Pre-1975 law; the modern rule covers statements made in negotiations.", trap: 11 },
               { text: "Inadmissible, because it is hearsay, and a statement made by a party's lawyer is not within any hearsay exception or exclusion.", why: "Right result, wrong reason: it is an opposing party's statement, excluded by Rule 408.", trap: 1 },
             ],
-            answer: 0, facts: ["During settlement negotiations", "we just cannot afford the full price"],
-            say: "Talk in settlement negotiations is as protected as the offer, unlike an offer to pay medical bills.",
-            status: "book", src: "FRE 408(a)",
+            answer: 0, facts: ["During settlement negotiations", "two of them do not work"],
+            say: "Talk in settlement negotiations over a disputed claim is as protected as the offer, unlike an offer to pay medical bills.",
+            status: "book", src: "FRE 408(a)(2)",
           },
           {
             id: "u9-h-purpose-bias", kind: "hypo", cat: "III.G", callType: "admissible", rule: "u9-r-407-411", issue: "purpose, if any, for a compromise offer",
-            stem: "A contractor sues a developer for unpaid fees on one project. The developer's key witness is the chief executive of a supplier. The contractor offers evidence that, in settlement talks over a separate dispute with the contractor, the supplier offered the contractor $50,000 and a promise of future business to drop that dispute. The contractor intends to use the offer to suggest that the executive is biased toward the developer. The developer objects under Rule 408.",
+            stem: "A contractor sues a developer for unpaid fees on one project. The developer's key witness is the chief executive of a supplier. The contractor offers evidence that, a month before trial, the developer settled a separate dispute with the supplier by paying it $50,000 and promising it future business. The contractor intends to use the settlement to suggest that the executive is biased toward the developer. The developer objects under Rule 408.",
             call: "For what purpose, if any, may the evidence be admitted?",
             options: [
-              { text: "To show the witness's bias or prejudice, if the offer is relevant to it, but not to prove the validity or amount of any disputed claim.", why: "FRE 408(b): the court may admit compromise evidence for another purpose, such as proving a witness's bias or prejudice." },
-              { text: "To prove the amount the supplier believed the separate dispute was worth, because an offer to settle is admissible to prove the value of a claim.", why: "That is the use Rule 408(a) prohibits.", trap: 5 },
-              { text: "For no purpose, because evidence of settlement offers is inadmissible in every case in which the dispute has not been settled.", why: "Rule 408(b) permits other purposes whether or not the dispute settled.", trap: 7 },
+              { text: "To show the witness's bias or prejudice, but not to prove the validity or amount of any disputed claim.", why: "FRE 408(b): compromise evidence may be admitted for another purpose, such as a witness's bias. A payment and promised business from the developer give the supplier a reason to favor it." },
+              { text: "To prove what the separate dispute was worth, because a completed settlement is admissible to prove the value of the claim it resolved.", why: "That is the use Rule 408(a) prohibits.", trap: 5 },
+              { text: "For no purpose, because evidence of a compromise is inadmissible for every purpose once a party objects under Rule 408.", why: "Rule 408(b) permits other purposes, such as proving a witness's bias.", trap: 7 },
               { text: "Only to impeach the executive by a prior inconsistent statement, because settlement talks can be used to show inconsistency.", why: "Rule 408(a) also bars use to impeach by a prior inconsistent statement or a contradiction.", trap: 11 },
             ],
-            answer: 0, facts: ["in settlement talks over a separate dispute", "biased toward the developer"],
-            say: "A settlement offer may show a witness's bias, but never prove the claim or contradict her.",
+            answer: 0, facts: ["settled a separate dispute with the supplier", "biased toward the developer"],
+            say: "A settlement may show a witness's bias, but never prove the claim or contradict her.",
             status: "book", src: "FRE 408(a)-(b)",
           },
           {
@@ -2307,7 +2413,7 @@
             options: [
               { text: "Admissible, because Rule 410 protects statements in plea discussions only when they are made with an attorney for the prosecuting authority.", why: "FRE 410(a)(4)." },
               { text: "Inadmissible, because any offer to plead guilty is protected by Rule 410, whether it is made to a prosecutor, an officer or a private person.", why: "The protection applies to discussions with a prosecuting attorney.", trap: 5 },
-              { text: "Inadmissible, because it was made during compromise negotiations that Rule 408 protects, and Rule 408 covers criminal as well as civil cases.", why: "Rule 408 concerns civil claims; Rule 410 governs plea discussions.", trap: 4 },
+              { text: "Inadmissible, because it was made during compromise negotiations that Rule 408 protects, and Rule 408 covers criminal as well as civil cases.", why: "Rule 408 covers compromise of a disputed claim; an offer to plead guilty is governed by Rule 410, which protects only discussions with a prosecuting attorney.", trap: 4 },
               { text: "Admissible, but only to impeach the defendant if he testifies, because plea discussions may be used to test credibility but not for their truth.", why: "It is admissible as substantive evidence, as an opposing party's statement.", trap: 5 },
             ],
             answer: 0, facts: ["had no authority to negotiate pleas", "I will plead guilty if you can get me probation"],
@@ -2327,6 +2433,24 @@
             answer: 0, facts: ["denies that it owned or controlled the van", "paid the premiums"],
             say: "Insurance cannot prove carelessness, but it can prove who owned or controlled the van.",
             status: "book", src: "FRE 411",
+          },
+          {
+            id: "u9-so-polite", kind: "sort", cat: "III.F", mode: "yesno", q: "Admissible for this purpose?",
+            buckets: ["Admissible", "Not admissible"],
+            items: [
+              { text: "Later repairs, to prove ownership when the defendant denies it", bucket: "Admissible", why: "FRE 407 other purpose: ownership if disputed." },
+              { text: "Later repairs, to prove negligence", bucket: "Not admissible", why: "FRE 407." },
+              { text: "A settlement offer, to show a witness's bias", bucket: "Admissible", why: "FRE 408(b) other purpose." },
+              { text: "A settlement statement, to prove the claim's validity", bucket: "Not admissible", why: "FRE 408(a)." },
+              { text: "An offer to pay medical bills, to prove liability", bucket: "Not admissible", why: "FRE 409." },
+              { text: "A nolo contendere plea, against the defendant who entered it", bucket: "Not admissible", why: "FRE 410(a)(2)." },
+              { text: "Liability insurance, to prove the defendant's carelessness", bucket: "Not admissible", why: "FRE 411." },
+              { text: "Liability insurance, to prove ownership of a vehicle when ownership is disputed", bucket: "Admissible", why: "FRE 411 other purpose." },
+              { text: "Later repairs, to prove feasibility when the defendant's expert testifies that no safer design was possible", bucket: "Admissible", why: "FRE 407 other purpose: feasibility, when disputed." },
+              { text: "A statement made in settlement talks, to impeach the speaker by contradiction at trial", bucket: "Not admissible", why: "FRE 408(a) bars impeachment by a prior inconsistent statement or a contradiction." },
+            ],
+            say: "Each polite exclusion has a door marked 'other purpose': bias, ownership, control, feasibility, impeachment.",
+            status: "book", src: "FRE 407-411; evidence.md §4.2",
           },
           {
             id: "u9-h-408-public-office", kind: "hypo", cat: "III.G", callType: "admissible", rule: "u9-r-407-411", issue: "statement to a regulator in settlement talks",
@@ -2357,22 +2481,18 @@
             status: "book", src: "FRE 410(a)(3); FRE 410(b)(2)",
           },
           {
-            id: "u9-so-polite", kind: "sort", cat: "III.F", mode: "yesno", q: "Admissible for this purpose?",
-            buckets: ["Admissible", "Not admissible"],
-            items: [
-              { text: "Later repairs, to prove ownership when the defendant denies it", bucket: "Admissible", why: "FRE 407 other purpose: ownership if disputed." },
-              { text: "Later repairs, to prove negligence", bucket: "Not admissible", why: "FRE 407." },
-              { text: "A settlement offer, to show a witness's bias", bucket: "Admissible", why: "FRE 408(b) other purpose." },
-              { text: "A settlement statement, to prove the claim's validity", bucket: "Not admissible", why: "FRE 408(a)." },
-              { text: "An offer to pay medical bills, to prove liability", bucket: "Not admissible", why: "FRE 409." },
-              { text: "A nolo contendere plea, against the defendant who entered it", bucket: "Not admissible", why: "FRE 410(a)(2)." },
-              { text: "Liability insurance, to prove the defendant's carelessness", bucket: "Not admissible", why: "FRE 411." },
-              { text: "Liability insurance, to prove ownership of a vehicle when ownership is disputed", bucket: "Admissible", why: "FRE 411 other purpose." },
-              { text: "Later repairs, to prove feasibility when the defendant's expert testifies that no safer design was possible", bucket: "Admissible", why: "FRE 407 other purpose: feasibility, when disputed." },
-              { text: "A statement made in settlement talks, to impeach the speaker by contradiction at trial", bucket: "Not admissible", why: "FRE 408(a) bars impeachment by a prior inconsistent statement or a contradiction." },
+            id: "u9-h-407-nonparty", kind: "hypo", cat: "III.F", callType: "admissible", rule: "u9-r-407-411", issue: "remedial measure by a nonparty", grid: true,
+            stem: "A driver sued the maker of a brake component, claiming that its design caused a crash. After the crash, the carmaker that had installed the component, which is not a party to the suit, changed the way the component was mounted on later models. The driver offers evidence of the change to prove that the original design was defective. The component maker objects under Rule 407.",
+            call: "How should the court rule on the objection?",
+            options: [
+              { text: "Overrule it, because most courts hold that Rule 407 does not exclude remedial measures taken by someone who is not a party to the case.", why: "The rule's policy is to avoid discouraging a defendant's own repairs; a nonparty's measure does not implicate it. Rule 403 still applies." },
+              { text: "Sustain it, because Rule 407 excludes any measure taken after an injury that would have made the injury less likely, whoever took it.", why: "Most courts read the rule as reaching only measures taken by a party.", trap: 7 },
+              { text: "Sustain it, because evidence of a later design change is never admissible in a product-liability case to prove a defect.", why: "Rule 407 covers a defendant's own design changes; a nonparty's change falls outside it.", trap: 5 },
+              { text: "Overrule it, because Rule 407 applies only to negligence claims and not to claims that a product was defective in design.", why: "Since 1997 the rule expressly covers a defect in a product or its design and a need for a warning.", trap: 11 },
             ],
-            say: "Each polite exclusion has a door marked 'other purpose': bias, ownership, control, feasibility, impeachment.",
-            status: "book", src: "FRE 407-411; evidence.md §4.2",
+            answer: 0, facts: ["which is not a party to the suit"],
+            say: "Rule 407 shields a party's own repairs; a stranger's later fix is not covered in most courts.",
+            status: "general", src: "FRE 407; majority view on nonparty remedial measures (general)",
           },
         ],
       },
@@ -2479,7 +2599,7 @@
             stem: "A pedestrian sues a driver for injuries. A neighbor called by the pedestrian testifies that the driver's car was traveling about 25 miles per hour. The driver calls a police officer, who will testify that at the scene minutes after the collision the neighbor said, without being sworn, 'That car must have been doing 45.' The neighbor remains in the courtroom and can be cross-examined about the statement. The driver offers the officer's testimony to prove the car's speed, and the pedestrian objects that it is hearsay. Assume that Rule 801(d)(1)(A) is in effect as amended on December 1, 2026.",
             call: "Is the officer's testimony admissible to prove the car's speed?",
             options: [
-              { text: "Yes, because the neighbor testifies and is subject to cross-examination about a prior statement that is inconsistent with her testimony, so it is not hearsay.", why: "Amended FRE 801(d)(1)(A): no oath or proceeding is required. The amended text governs the 2027 sittings." },
+              { text: "Yes, because the neighbor testifies and is subject to cross-examination about a prior statement that is inconsistent with her testimony, so it is not hearsay.", why: "Amended FRE 801(d)(1)(A): no oath or proceeding is required. The stem tells you to apply the amended text." },
               { text: "No, because a prior inconsistent statement is not hearsay only if it was given under penalty of perjury at a trial, hearing, other proceeding or deposition.", why: "That is the text through November 30, 2026; the stem tells you to apply the amended rule.", trap: 11 },
               { text: "No, because a prior inconsistent statement made to a police officer may be used only to impeach the neighbor and not to prove the car's speed.", why: "Under amended Rule 801(d)(1)(A) the statement may be used for its truth, though Rule 403 still applies.", trap: 5 },
               { text: "Yes, because the neighbor spoke at the scene minutes after the collision, so the statement is an excited utterance admissible whether or not she testifies.", why: "Nothing shows the neighbor was under the stress of the event; the key does not depend on 803(2).", trap: 3 },
@@ -2508,7 +2628,7 @@
             say: "A party's own words, adopted words, authorized speaker, scope-of-employment agent, and coconspirator are not hearsay when offered against that party.",
             elements: ["The statement is offered against an opposing party", "(A) The party's own statement", "(B) A statement the party adopted or believed to be true", "(C) A statement by a person the party authorized to speak on the subject", "(D) A statement by the party's agent or employee on a matter within the scope of that relationship, made while it existed", "(E) A statement by a coconspirator during and in furtherance of the conspiracy"],
             ordered: false,
-            exceptions: ["No personal knowledge is required and the statement need not be against the speaker's interest", "The statement must be considered but does not by itself establish authority, the agency relationship or the conspiracy: independent evidence is needed (Bourjaily)", "Adoption by silence needs circumstances in which a person would naturally deny the statement"],
+            exceptions: ["No personal knowledge is required and the statement need not be against the speaker's interest", "The court must consider the statement itself (Bourjaily), but under the rule's text it does not by itself establish authority, the relationship or the conspiracy: some independent evidence is needed (1997 amendment)", "Adoption by silence needs circumstances in which a person would naturally deny the statement"],
             cite: "FRE 801(d)(2)", citeAsk: "Which rule excludes an opposing party's own statements from hearsay?",
             ex: [
               { facts: "A delivery driver tells a witness the day after the collision, 'I was going too fast', and still works for the company.", result: "Admissible against the company: agent's statement within the scope of the employment." },
@@ -2521,7 +2641,7 @@
               { t: "bucket", q: "Which subpart of 801(d)(2)?", buckets: ["(A) own", "(B) adopted", "(D) agent", "(E) coconspirator"], items: [{ text: "The defendant's confession to the police", bucket: "(A) own" }, { text: "The manager's remark, within his duties, to a customer, made during his employment", bucket: "(D) agent" }, { text: "A partner's accusation, met with silence when denial would be natural", bucket: "(B) adopted" }, { text: "A planner's instruction to a lookout during the robbery", bucket: "(E) coconspirator" }] },
             ],
             hook: "A is Alone, B Believed, C Commissioned, D Dependent, E Everyone in the plot.",
-            status: "book", src: "FRE 801(d)(2); Bourjaily v. United States, 483 U.S. 171 (1987); evidence.md §6.2",
+            status: "book", src: "FRE 801(d)(2), including the sentence added in 1997; Bourjaily v. United States, 483 U.S. 171 (1987); evidence.md §6.2",
           },
           {
             id: "u9-h-801d2d-driver", kind: "hypo", cat: "V.A", callType: "admissible", rule: "u9-r-801d2", issue: "employee's statement within scope", grid: true,
@@ -2558,7 +2678,7 @@
             options: [
               { text: "Overrule it, because the statement was made by a person whom the company authorized to make a statement on the subject, so it is an opposing party's statement.", why: "FRE 801(d)(2)(C); employment is not required, and the statement must be considered with independent evidence of authority." },
               { text: "Sustain it, because a statement by someone who is not the company's employee cannot be attributed to the company under any part of Rule 801(d)(2).", why: "Rule 801(d)(2)(C) covers a person authorized to speak, employee or not.", trap: 2 },
-              { text: "Overrule it, because the consultant was the company's agent, and an agent's statement is admissible whenever it concerns the agent's work.", why: "Rule 801(d)(2)(D) needs a matter within the scope of the relationship, made while it existed; authority under (C) is the surer ground.", trap: 9 },
+              { text: "Overrule it, because the consultant's remark was against the company's interest, and a statement against interest is admissible whether or not the declarant is available.", why: "Rule 804(b)(3) needs an unavailable declarant and a statement against the declarant's own interest; the consultant is available and spoke about the company.", trap: 10 },
               { text: "Sustain it, because the consultant lacked personal knowledge of whether the crew used the wrong shingles, and a hearsay declarant must have it.", why: "An opposing party's statement need not rest on personal knowledge.", trap: 5 },
             ],
             answer: 0, facts: ["independent consultant, who is not its employee", "answer reporters' questions"],
@@ -2570,14 +2690,14 @@
             stem: "A defendant is tried for conspiracy to distribute drugs. The prosecutor offers an undercover agent's testimony that, during the conspiracy, a supplier told the agent, 'The defendant handles the Texas deliveries for us.' The prosecutor also offers phone records and a surveillance video showing the defendant meeting the supplier on three occasions and driving the deliveries. The defendant objects that the statement is hearsay and that the conspiracy cannot be proved by the supplier's own words.",
             call: "How should the court rule on the objection?",
             options: [
-              { text: "Overrule it, if the court finds by a preponderance that a conspiracy existed, considering the statement together with independent evidence such as the records.", why: "FRE 104(a) and 801(d)(2) (Bourjaily): the statement may be considered, but does not by itself establish the conspiracy." },
+              { text: "Overrule it, if the court finds by a preponderance that a conspiracy existed, considering the statement together with independent evidence such as the records.", why: "Bourjaily lets the court consider the statement under FRE 104(a); the rule's text, added in 1997, says the statement does not by itself establish the conspiracy." },
               { text: "Sustain it, because the court may not consider the statement itself in deciding whether a conspiracy existed, and must rest on other evidence alone.", why: "Rule 801(d)(2) says the statement must be considered, though it is not enough alone.", trap: 11 },
               { text: "Overrule it, because the jury, not the court, decides under Rule 104(b) whether a conspiracy existed, so the statement may be heard on any showing.", why: "The court decides the foundation under Rule 104(a), by a preponderance, before the jury hears the statement.", trap: 4 },
               { text: "Sustain it, because the existence of the conspiracy must be proved beyond a reasonable doubt before any coconspirator statement may be admitted.", why: "The standard for the foundation is a preponderance of the evidence.", trap: 5 },
             ],
             answer: 0, facts: ["phone records and a surveillance video", "cannot be proved by the supplier's own words"],
             say: "The judge decides the conspiracy by a preponderance, using the statement plus independent proof.",
-            status: "book", src: "FRE 801(d)(2)(E); FRE 104(a); Bourjaily v. United States, 483 U.S. 171 (1987)",
+            status: "book", src: "FRE 801(d)(2)(E) and its 1997 sentence on independent evidence; FRE 104(a); Bourjaily v. United States, 483 U.S. 171 (1987)",
           },
           {
             id: "u9-so-which-objection", kind: "sort", cat: "V.A", mode: "category", q: "What is the best objection?",
@@ -2590,7 +2710,7 @@
               { text: "The plaintiff's earlier unrelated accident, offered to show he is accident-prone", bucket: "Improper character evidence", why: "Propensity inference, barred in a civil case." },
               { text: "A bystander's written note, 'The truck was speeding', offered to prove speed", bucket: "Hearsay", why: "A written out-of-court assertion offered for its truth." },
               { text: "A witness guesses what the defendant 'must have been thinking' from across the street", bucket: "Lack of personal knowledge", why: "No perception of the thought, and no basis for it." },
-              { text: "An inflammatory remark about the defendant's immigration status, with no link to any issue", bucket: "Unfair prejudice (Rule 403)", why: "Its only effect is improper emotion." },
+              { text: "A widow's tearful account of her grief, offered on a cause of death the defendant concedes", bucket: "Unfair prejudice (Rule 403)", why: "Slight value on a conceded point, and a strong pull toward sympathy." },
             ],
             say: "Name the danger first: truth of an out-of-court assertion, propensity, no perception, or improper emotion.",
             status: "book", src: "FRE 801; FRE 404(a); FRE 602; FRE 403",
@@ -2614,14 +2734,14 @@
             stem: "A defendant is charged with conspiracy to import cocaine. The prosecutor offers an informant's testimony that, while the conspirators were planning a shipment, a participant, who did not know the listener was an informant, told him, 'The defendant will pay off the customs inspector.' Independent evidence, apart from this statement, shows that the defendant and the participant were part of the conspiracy at that time. The defendant objects.",
             call: "Is the informant's testimony about the participant's statement admissible?",
             options: [
-              { text: "Admissible, because it was made by a coconspirator during and in furtherance of the conspiracy, and independent evidence shows the conspiracy.", why: "FRE 801(d)(2)(E); Bourjaily." },
+              { text: "Admissible, because it was made by a coconspirator during and in furtherance of the conspiracy, and independent evidence shows the conspiracy.", why: "FRE 801(d)(2)(E): the court considers the statement together with the independent evidence, which the rule's text requires (1997 amendment)." },
               { text: "Inadmissible, because the participant did not testify at trial and the defendant therefore cannot cross-examine him about the statement.", why: "The rule excludes the statement from hearsay without requiring cross-examination.", trap: 4 },
               { text: "Inadmissible, because the statement itself cannot be considered in deciding whether a conspiracy existed, and no independent proof is shown.", why: "The statement must be considered, but it cannot alone establish the conspiracy.", trap: 5 },
               { text: "Admissible, because it was against the participant's penal interest, and a statement against interest is admissible whether or not he is available.", why: "That exception needs an unavailable declarant and corroboration, and is not what is relied on here.", trap: 4 },
             ],
             answer: 0, facts: ["while the conspirators were planning a shipment", "Independent evidence, apart from this statement"],
             say: "A conspirator's statement in the planning counts against every member, if independent evidence proves the plot.",
-            status: "book", src: "FRE 801(d)(2)(E); Bourjaily v. United States",
+            status: "book", src: "FRE 801(d)(2)(E) and its 1997 sentence on independent evidence; Bourjaily v. United States, 483 U.S. 171 (1987)",
           },
           {
             id: "u9-h-801d2e-arrest", kind: "hypo", cat: "V.A", callType: "admissible", rule: "u9-r-801d2", issue: "statement after the conspiracy ended", transfer: true,
@@ -2638,7 +2758,7 @@
             status: "book", src: "FRE 801(d)(2)(E)",
           },
           {
-            id: "u9-r-801d2-successor", kind: "rule", title: "Statements binding a successor in interest", cat: "V.A", recent: true,
+            id: "u9-r-801d2-successor", kind: "rule", title: "Statements binding a successor in interest", cat: "V.A",
             say: "Since 2024, a statement admissible against a predecessor or its principal is also admissible against the successor whose claim derives from it.",
             elements: ["A party's claim, defense or potential liability is directly derived from a declarant or the declarant's principal", "A statement admissible against the declarant or principal under 801(d)(2) is admissible against the party", "Statements made after the transfer do not qualify"],
             ordered: true,
@@ -2664,7 +2784,7 @@
               { l: "Former testimony (804(b)(1))", r: "The declarant is unavailable; earlier opportunity and similar motive to examine" },
               { l: "Excited utterance (803(2))", r: "The declarant's availability is irrelevant; startling event, spoken under stress" },
             ],
-            spare: ["The declarant must be unavailable", "The statement must be made to a police officer"],
+            spare: ["The statement must have been made to a police officer", "The declarant must have written it down when the matter was fresh"],
             say: "Know who the declarant is, whether she must testify or be unavailable, and what else the exclusion requires.",
             status: "book", lawVersion: "fre-2026-12-01", src: "FRE 801(d)(1)-(2); FRE 803(2); FRE 804(b)(1), (3)",
           },
@@ -2712,12 +2832,26 @@
             status: "book", src: "FRE 803(2)",
           },
           {
+            id: "u9-h-803-1-calm", kind: "hypo", cat: "V.B", callType: "admissible", rule: "u9-r-803-1-2", issue: "present sense impression, calm declarant", grid: true,
+            stem: "In a negligence action over a collision, the plaintiff calls a woman's sister to testify about a phone call. The woman, who was waiting at a bus stop, said to her sister in a calm voice, 'A blue van is pulling out without looking; it just clipped that red car.' The woman cannot be located. The plaintiff offers the sister's testimony to prove how the collision happened. The defendant objects that it is hearsay.",
+            call: "Is the sister's testimony about the remark admissible?",
+            options: [
+              { text: "Admissible, because the remark described the event while the declarant was perceiving it or immediately after.", why: "FRE 803(1): a present sense impression needs timing, not stress." },
+              { text: "Inadmissible, because the declarant was calm, and a statement describing an event is admissible only if made under the stress of excitement.", why: "Stress is required for an excited utterance (803(2)), not for a present sense impression.", trap: 9 },
+              { text: "Inadmissible, because the declarant cannot be located, and no exception for an unavailable declarant covers a casual description of an accident.", why: "Availability is irrelevant under Rule 803; the remark fits 803(1).", trap: 4 },
+              { text: "Admissible, because the remark is an excited utterance about a startling event, which a collision plainly is.", why: "Nothing shows stress; the calm, contemporaneous description fits 803(1) instead.", trap: 1 },
+            ],
+            answer: 0, facts: ["in a calm voice", "it just clipped that red car"],
+            say: "Describing it as it happens comes in, calm or not: the present sense impression is about timing, not stress.",
+            status: "book", src: "FRE 803(1); FRE 803(2)",
+          },
+          {
             id: "u9-r-803-3", kind: "rule", title: "Then-existing mental, emotional or physical condition", cat: "V.C",
             say: "Statements of how the declarant feels or what she plans now come in; statements of memory or belief to prove the past fact do not, except wills.",
             elements: ["A statement of the declarant's then-existing state of mind (motive, intent, plan), emotion, sensation or physical condition", "A statement of intent may prove the declarant later acted on it (Hillmon)", "Not a statement of memory or belief offered to prove the fact remembered or believed", "Exception: memory or belief that relates to the validity or terms of the declarant's will"],
             ordered: true,
             distractorElements: ["A statement of memory may prove the fact remembered", "The declarant must be unavailable"],
-            exceptions: ["'I fear Dan' shows state of mind; 'Dan threatened me last week' offered to prove the threat is a statement of memory", "'I have a headache' is a physical condition; 'I had a headache last week' is not then-existing"],
+            exceptions: ["'I fear Dan' shows state of mind; 'Dan threatened me last week' offered to prove the threat is a statement of memory", "'I have a headache' is a physical condition; 'I had a headache last week' is not then-existing", "Using 'I am meeting him tonight' to prove what the other person did is disputed: Hillmon allowed it, Congress's committee report would not, and many courts require independent evidence of his conduct (general)"],
             cite: "FRE 803(3)", citeAsk: "Which rule admits a statement of the declarant's then-existing state of mind?",
             ex: [
               { facts: "A decedent said the day before, 'I am going to take the boat out tomorrow'; offered to prove he did.", result: "Admissible: intent proves later conduct (Hillmon)." },
@@ -2940,6 +3074,20 @@
             status: "book", src: "FRE 803(8)(A)(ii)",
           },
           {
+            id: "u9-h-803-8-findings", kind: "hypo", cat: "V.G", callType: "admissible", rule: "u9-r-803-8", issue: "evaluative findings in a public report", grid: true,
+            stem: "After a military training plane crashed, an officer appointed under military regulations investigated and issued a report concluding that the most probable cause of the crash was pilot error. In a civil wrongful-death action by the pilot's estate against the plane's manufacturer, the manufacturer offers the report's conclusion. The estate does not show that the report's sources or methods lack trustworthiness. The estate objects that the conclusion is an opinion, not a factual finding.",
+            call: "How should the court rule on the objection?",
+            options: [
+              { text: "Overrule it, because factual findings from a legally authorized investigation, offered in a civil case, include conclusions and opinions based on them.", why: "FRE 803(8)(A)(iii) and Beech Aircraft; the opponent bears the burden to show untrustworthiness (803(8)(B))." },
+              { text: "Sustain it, because the public-records exception admits only facts the investigator observed, and an evaluative conclusion about cause is not a factual finding.", why: "Beech Aircraft rejected that narrow reading.", trap: 11 },
+              { text: "Sustain it, because investigative findings in public reports may be offered only by the government, never by a private litigant.", why: "In a civil case any party may offer them; in a criminal case only against the government.", trap: 5 },
+              { text: "Overrule it, because a public report is self-authenticating, and a self-authenticating document is admissible for its truth.", why: "Authentication under Rule 902 does not answer a hearsay objection.", trap: 10 },
+            ],
+            answer: 0, facts: ["concluding that the most probable cause", "civil wrongful-death action"],
+            say: "Civil case, authorized investigation: the report's conclusions and opinions come in unless shown untrustworthy.",
+            status: "book", src: "FRE 803(8)(A)(iii), (B); Beech Aircraft Corp. v. Rainey, 488 U.S. 153 (1988)",
+          },
+          {
             id: "u9-r-803-18", kind: "rule", title: "Learned treatises", cat: "V.H",
             say: "A treatise shown to an expert on cross, or relied on by the expert on direct, and established as reliable may be read to the jury, not received as an exhibit.",
             elements: ["A statement in a treatise, periodical or pamphlet on a subject of history, medicine or other science or art", "Called to the attention of an expert on cross-examination, or relied on by the expert on direct", "The publication is established as a reliable authority", "It may be read into evidence but not received as an exhibit"],
@@ -2972,12 +3120,12 @@
             status: "book", src: "FRE 803(18)",
           },
           {
-            id: "u9-r-803-16-21", exam: ["mbe"], kind: "rule", title: "Ancient documents, market reports and reputation concerning character", cat: "V.K",
-            say: "A document prepared before 1998 with proven authenticity, market lists and directories, and reputation about character are all excepted from hearsay.",
-            elements: ["803(16): a statement in a document prepared before January 1, 1998, whose authenticity is established", "803(17): market quotations, lists, directories or other compilations generally relied on by the public or by persons in particular occupations", "803(21): a reputation among a person's associates or in the community concerning the person's character", "None needs the declarant to be unavailable"],
+            id: "u9-r-803-16-21", exam: ["mbe"], kind: "rule", title: "Ancient documents and market reports", cat: "V.K",
+            say: "A document prepared before 1998 whose authenticity is shown, and market lists and directories people rely on, are excepted from hearsay.",
+            elements: ["803(16): a statement in a document prepared before January 1, 1998, whose authenticity is established", "803(17): market quotations, lists, directories or other compilations generally relied on by the public or by persons in particular occupations", "None needs the declarant to be unavailable"],
             ordered: false,
             distractorElements: ["803(16) covers any document at least twenty years old", "803(17) covers any compilation prepared for litigation"],
-            exceptions: ["The 1998 date is fixed, not a rolling twenty years (2017 amendment); Rule 901(b)(8) separately sets 20 years for authentication", "803(21) is the hearsay exception behind reputation testimony of character witnesses under Rule 405(a)", "Authenticity of the ancient document must still be established"],
+            exceptions: ["The 1998 date is fixed, not a rolling twenty years (2017 amendment); Rule 901(b)(8) separately sets 20 years for authentication", "Authenticity of the ancient document must still be established"],
             numbers: [{ label: "Rule 803(16) cutoff", value: "prepared before January 1, 1998" }],
             cite: "FRE 803(16)", citeAsk: "Which rule admits statements in documents prepared before January 1, 1998?",
             ex: [
@@ -2987,10 +3135,10 @@
             terms: ["ancient document", "market report"],
             quiz: [
               { t: "tf", q: "A document qualifies under FRE 803(16) if it was prepared at least twenty years before it is offered.", a: false, why: "Since the 2017 amendment the exception covers only documents prepared before January 1, 1998." },
-              { t: "tf", q: "FRE 803(21) is an exception for a person's reputation in the community concerning her character.", a: true, why: "It is the exception that lets reputation witnesses testify about character." },
+              { t: "tf", q: "A price list published in a trade journal and generally relied on in the trade may be admitted under FRE 803(17) to prove a price.", a: true, why: "803(17) covers market quotations and compilations generally relied on by the public or by persons in particular occupations." },
             ],
             hook: "1998 is a fixed date, not a moving twenty years.",
-            status: "book", src: "FRE 803(16); FRE 803(17); FRE 803(21); FRE 901(b)(8)",
+            status: "book", src: "FRE 803(16); FRE 803(17); FRE 901(b)(8)",
           },
           {
             id: "u9-h-803-16-letter", exam: ["mbe"], kind: "hypo", cat: "V.K", callType: "admissible", rule: "u9-r-803-16-21", issue: "ancient-document cutoff", grid: true,
@@ -3005,6 +3153,23 @@
             answer: 0, facts: ["dated 2003", "authenticity is not disputed"],
             say: "The ancient-documents exception ends at December 31, 1997, no matter how old the letter is today.",
             status: "book", src: "FRE 803(16)",
+          },
+          {
+            id: "u9-r-803-21", kind: "rule", title: "Reputation concerning character", cat: "V.K",
+            say: "A person's reputation for a trait among associates or in the community is a hearsay exception, which is why reputation witnesses may testify.",
+            elements: ["A reputation among a person's associates or in the community", "Concerning the person's character", "Admissible whether or not the declarant is available (FRE 803(21))"],
+            ordered: false,
+            exceptions: ["803(21) is the hearsay exception behind reputation testimony of character witnesses under Rules 405(a) and 608(a)", "It answers only the hearsay objection: Rules 404, 405 and 608 still decide whether character may be proved at all"],
+            cite: "FRE 803(21)", citeAsk: "Which hearsay exception admits a person's reputation concerning character?",
+            ex: [
+              { facts: "A defendant charged with assault calls a neighbor to testify that he is known in the community as peaceable.", result: "No hearsay bar under 803(21); Rules 404(a)(2)(A) and 405(a) allow it." },
+            ],
+            terms: ["reputation"],
+            quiz: [
+              { t: "tf", q: "FRE 803(21) is an exception for a person's reputation in the community concerning her character.", a: true, why: "It is the exception that lets reputation witnesses testify about character." },
+              { t: "tf", q: "Because reputation testimony falls within FRE 803(21), it is admissible to prove a civil party's conduct on a particular occasion.", a: false, why: "The hearsay exception does not override Rule 404(a)(1), which bars character to prove conduct in a civil case." },
+            ],
+            status: "book", src: "FRE 803(21); FRE 405(a); FRE 608(a)",
           },
           {
             id: "u9-r-803-22", exam: ["mbe"], kind: "rule", title: "Judgment of a previous conviction", cat: "V.K",
@@ -3115,6 +3280,20 @@
             status: "book", src: "FRE 804(b)(1)",
           },
           {
+            id: "u9-h-804b1-prelim", kind: "hypo", cat: "V.I", callType: "admissible", rule: "u9-r-804b1", issue: "preliminary-hearing testimony against the accused", grid: true,
+            stem: "A defendant is charged with armed robbery of a store. At the preliminary hearing, the store clerk testified under oath that the defendant was the robber, and the defendant's lawyer cross-examined her at length about how well she saw the robber. The clerk has since died. At trial, the prosecutor offers a transcript of the clerk's preliminary-hearing testimony. The defendant objects on hearsay and Confrontation Clause grounds.",
+            call: "Is the transcript admissible?",
+            options: [
+              { text: "Yes, because the clerk is unavailable and the defendant had an opportunity and similar motive to cross-examine her at the preliminary hearing.", why: "FRE 804(b)(1); and the prior opportunity to cross-examine satisfies Crawford." },
+              { text: "No, because testimony from a preliminary hearing, like grand-jury testimony, may never be used against the accused at trial.", why: "Unlike a grand jury, the preliminary hearing gave the defendant a lawyer and cross-examination.", trap: 7 },
+              { text: "No, because the statement is testimonial, and testimonial statements are admissible against the accused only if the declarant testifies at trial.", why: "Crawford also admits them when the declarant is unavailable and the accused had a prior opportunity to cross-examine.", trap: 5 },
+              { text: "Yes, because the clerk's testimony was given under oath, and sworn testimony is admissible whenever the witness has died.", why: "Oath and death are not enough; the opportunity and similar motive to examine are what the rule requires.", trap: 2 },
+            ],
+            answer: 0, facts: ["cross-examined her at length", "has since died"],
+            say: "A dead witness's preliminary-hearing testimony comes in if the defense had the chance and the motive to cross-examine.",
+            status: "book", src: "FRE 804(a)(4); FRE 804(b)(1); Crawford v. Washington, 541 U.S. 36 (2004)",
+          },
+          {
             id: "u9-r-804b2", kind: "rule", title: "Statement under belief of imminent death", cat: "V.K",
             say: "A dying declaration comes in only in a homicide prosecution or civil case, about the cause or circumstances of what the declarant believed was impending death.",
             elements: ["The declarant is unavailable", "Offered in a homicide prosecution or a civil case", "The declarant believed death was imminent when speaking", "The statement concerns the cause or circumstances of what the declarant believed to be impending death"],
@@ -3159,7 +3338,7 @@
           {
             id: "u9-r-804b3", kind: "rule", title: "Statement against interest", cat: "V.J",
             say: "An unavailable declarant's statement so against her interest that she would not make it unless true comes in; penal-interest statements need corroboration.",
-            elements: ["The declarant is unavailable", "When made, the statement was so contrary to the declarant's proprietary or pecuniary interest, or had so great a tendency to invalidate her claim against someone else or to expose her to civil or criminal liability, that a reasonable person would not have made it unless true", "Offered in a criminal case as exposing the declarant to criminal liability: supported by corroborating circumstances that clearly indicate trustworthiness", "Only the genuinely self-inculpatory remarks qualify (Williamson)"],
+            elements: ["The declarant is unavailable", "When made, the statement was so contrary to the declarant's proprietary or pecuniary interest, or had so great a tendency to invalidate her claim against someone else or to expose her to civil or criminal liability, that a reasonable person would not have made it unless true", "Criminal case, statement exposing the declarant to criminal liability: corroborating circumstances that clearly indicate trustworthiness, considering the totality of circumstances and any corroborating evidence (2024 text)", "Only the genuinely self-inculpatory remarks qualify (Williamson)"],
             ordered: true,
             exceptions: ["Applies to both the prosecution and the defense", "Different from an opposing party's statement: the declarant is a non-party and must be unavailable"],
             cite: "FRE 804(b)(3)", citeAsk: "Which rule admits a statement against the declarant's interest?",
@@ -3169,11 +3348,11 @@
             ],
             terms: ["penal interest", "corroborating circumstances"],
             quiz: [
-              { t: "tf", q: "A statement against penal interest offered in a criminal case needs corroborating circumstances that clearly indicate trustworthiness.", a: true, why: "FRE 804(b)(3)(B), for the prosecution and for the defense." },
+              { t: "tf", q: "A statement against penal interest offered in a criminal case needs corroborating circumstances that clearly indicate trustworthiness.", a: true, why: "FRE 804(b)(3)(B), for the prosecution and for the defense; since December 1, 2024 the court weighs the totality of the circumstances and any corroborating evidence." },
               { t: "tf", q: "Every remark within a self-inculpatory confession is admissible under FRE 804(b)(3).", a: false, why: "Williamson: only the individual remarks that are self-inculpatory qualify." },
             ],
             hook: "Only the remark that hurts the speaker counts.",
-            status: "book", src: "FRE 804(b)(3); Williamson v. United States, 512 U.S. 594 (1994); evidence.md §6.4",
+            status: "book", src: "FRE 804(b)(3) (as amended Dec. 1, 2024); Williamson v. United States, 512 U.S. 594 (1994); evidence.md §6.4",
           },
           {
             id: "u9-h-804b3-defense", kind: "hypo", cat: "V.J", callType: "admissible", rule: "u9-r-804b3", issue: "statement against penal interest offered by the defense", grid: true,
@@ -3182,12 +3361,26 @@
             options: [
               { text: "Admissible, because the unavailable declarant's statement was against his penal interest and corroborating circumstances indicate its trustworthiness.", why: "FRE 804(b)(3): the Fifth Amendment makes him unavailable, and each remark here is self-inculpatory, which is what Williamson requires." },
               { text: "Inadmissible, because the statement is hearsay that fits no exception when it is offered by the defense, and only the prosecutor may use it.", why: "The exception applies to both sides.", trap: 5 },
-              { text: "Inadmissible, because statements against interest are admissible only when offered by the prosecution, to prove the guilt of a third person.", why: "The rule applies equally to the defense.", trap: 5 },
+              { text: "Inadmissible, because a statement against penal interest offered to exculpate the accused is admissible only if the declarant can be cross-examined at trial.", why: "Rule 804(b)(3) requires unavailability, not cross-examination; the third man's refusal to testify makes him unavailable.", trap: 5 },
               { text: "Admissible, because it is an opposing party's statement, made by a person who is now a participant in the same criminal events.", why: "The declarant is not a party.", trap: 4 },
             ],
             answer: 0, facts: ["invoked the Fifth Amendment", "fingerprints were found at the scene"],
             say: "A confession that hurts only the speaker needs unavailability and corroboration, and either side may use it.",
-            status: "book", src: "FRE 804(b)(3); FRE 804(a)(1)",
+            status: "book", src: "FRE 804(b)(3) (2024 text); FRE 804(a)(1)",
+          },
+          {
+            id: "u9-h-804b3-williamson", kind: "hypo", cat: "V.J", callType: "admissible", rule: "u9-r-804b3", issue: "blame-shifting remarks in a confession",
+            stem: "A defendant is tried for drug trafficking. The day after a courier was caught with a car full of drugs, the courier told a friend, 'Yes, I was carrying the drugs, but they belong to the defendant, and I only did what he told me.' The courier has invoked the privilege against self-incrimination and refuses to testify. The prosecutor offers the friend's testimony about the whole statement to prove that the drugs belonged to the defendant. The defendant objects that it is hearsay.",
+            call: "How should the court rule on the objection?",
+            options: [
+              { text: "Sustain it as to the remarks naming the defendant, because only the parts of a confession that are individually self-inculpatory are statements against interest.", why: "Williamson: the exception covers each self-inculpatory remark, not collateral remarks that shift blame to another." },
+              { text: "Overrule it, because the statement as a whole was against the courier's penal interest, so every part of it comes in.", why: "Williamson rejects admitting a whole narrative because it is generally self-inculpatory.", trap: 9 },
+              { text: "Overrule it, because a coconspirator's statement is not hearsay when offered against another member of the conspiracy.", why: "Telling a friend what happened after being caught does not further the conspiracy.", trap: 10 },
+              { text: "Sustain it as to the whole statement, because a statement against penal interest is admissible only when offered by the accused.", why: "Either side may use the exception; the courier's own admissions would qualify.", trap: 5 },
+            ],
+            answer: 0, facts: ["but they belong to the defendant", "refuses to testify"],
+            say: "Inside a confession, only the remarks that hurt the speaker count; the ones that point at someone else do not.",
+            status: "book", src: "FRE 804(b)(3); Williamson v. United States, 512 U.S. 594 (1994)",
           },
           {
             id: "u9-r-804b6", kind: "rule", title: "Forfeiture by wrongdoing", cat: "V.K",
@@ -3348,7 +3541,7 @@
               { l: "Business record (803(6))", r: "Regular practice, shown by a custodian or a 902(11) certification" },
               { l: "Statement under belief of imminent death (804(b)(2))", r: "Homicide prosecution or civil case, about the cause or circumstances of death" },
             ],
-            spare: ["The declarant must be unavailable", "The statement must be under oath"],
+            spare: ["The declarant must have testified at an earlier hearing", "The statement must be under oath"],
             say: "Memorize the one phrase that sets each exception apart; the rest of the rule follows.",
             status: "book", src: "FRE 803(1)-(6); FRE 804(b)(2)",
           },
@@ -3580,6 +3773,40 @@
             status: "book", src: "Crawford v. Washington, 541 U.S. 36, 56 (2004); FRE 801(d)(2)(E); Davis v. Washington (2006)",
           },
           {
+            id: "u9-r-face-to-face", kind: "rule", title: "Face-to-face confrontation and child witnesses", cat: "V.L",
+            say: "The accused may face the witnesses at trial; a child may testify behind a screen or by one-way video only after a case-specific finding of necessity.",
+            elements: ["The Confrontation Clause guarantees a face-to-face meeting with witnesses at trial (Coy v. Iowa)", "It may give way only to an important public interest, such as protecting a child witness from trauma", "The trial court hears evidence and finds that this child would be traumatized by the defendant's presence (Maryland v. Craig)", "The other safeguards remain: oath, full cross-examination, and the jury's view of the witness"],
+            ordered: true,
+            distractorElements: ["A statute entitling every child witness to a screen is enough", "Face-to-face confrontation also applies in civil cases"],
+            exceptions: ["A generalized legislative finding or a statute that mandates a screen does not replace the case-specific finding (Coy; reaffirmed in Pitts v. Mississippi, 2025)", "The trauma must come from the defendant's presence and be more than mere nervousness (Craig)", "A violation is a trial error reviewed for harmlessness"],
+            cite: "Maryland v. Craig", citeAsk: "Which case allows a child witness to testify by one-way closed-circuit television after a case-specific finding of necessity?",
+            ex: [
+              { facts: "A court places a screen between a child witness and the defendant because a statute says child witnesses are entitled to one, without a hearing.", result: "Violates the Confrontation Clause: no case-specific finding of necessity." },
+              { facts: "After hearing a psychologist, the court finds that this child could not reasonably communicate in the defendant's presence and allows one-way video testimony with full cross-examination.", result: "Permitted under Maryland v. Craig." },
+            ],
+            terms: ["face-to-face confrontation", "case-specific finding"],
+            quiz: [
+              { t: "tf", q: "A trial court may screen a child witness from the defendant whenever a state statute authorizes it, without a hearing.", a: false, why: "Coy and Craig require an individualized finding that this child needs the protection; the Court reaffirmed it in 2025." },
+              { t: "tf", q: "The Confrontation Clause's preference for face-to-face confrontation is absolute.", a: false, why: "Craig: it may yield to an important public interest on a case-specific finding of necessity, if reliability is otherwise assured." },
+            ],
+            hook: "Coy's screen fell for lack of a finding; Craig's video stood because the judge made one.",
+            status: "general", src: "U.S. Const. amend. VI; Coy v. Iowa, 487 U.S. 1012 (1988); Maryland v. Craig, 497 U.S. 836 (1990); Pitts v. Mississippi, 607 U.S. 1 (2025)",
+          },
+          {
+            id: "u9-h-screen-child", kind: "hypo", cat: "V.L", callType: "constitutional", rule: "u9-r-face-to-face", issue: "screen for a child witness", grid: true,
+            stem: "A defendant is tried for sexually abusing a seven-year-old child. Relying on a state statute that entitles every child witness in such cases to testify behind a screen, the trial court, over objection, places a screen between the child and the defendant without hearing any evidence about this child. The child testifies under oath and is fully cross-examined, and the jury can see her. The defendant is convicted and appeals.",
+            call: "Did the screen violate the defendant's rights under the Confrontation Clause?",
+            options: [
+              { text: "Yes, because the court made no case-specific finding that this child needed the screen to be protected from trauma caused by the defendant's presence.", why: "Coy v. Iowa and Maryland v. Craig: a statute cannot substitute for the individualized finding of necessity." },
+              { text: "No, because the child testified under oath and was fully cross-examined, which is all that the Confrontation Clause requires.", why: "The Clause also guarantees a face-to-face meeting, which yields only on a case-specific finding of necessity.", trap: 2 },
+              { text: "No, because a state statute protecting child witnesses expresses an important public policy that overrides face-to-face confrontation.", why: "The policy can justify a screen only through a finding about this particular child.", trap: 7 },
+              { text: "Yes, because the Confrontation Clause never permits a child witness to testify outside the defendant's view.", why: "Craig permits it after a case-specific finding of necessity.", trap: 1 },
+            ],
+            answer: 0, facts: ["without hearing any evidence about this child", "entitles every child witness"],
+            say: "A screen for a child witness needs a judge's finding about this child; a statute alone is not enough.",
+            status: "general", src: "Coy v. Iowa, 487 U.S. 1012 (1988); Maryland v. Craig, 497 U.S. 836 (1990); Pitts v. Mississippi, 607 U.S. 1 (2025)",
+          },
+          {
             id: "u9-r-bruton", exam: ["mbe"], kind: "rule", title: "Codefendants' confessions: Bruton and Samia", cat: "V.L",
             say: "A nontestifying codefendant's confession naming the defendant is barred at a joint trial; one redacted so it does not name him, with an instruction, is allowed.",
             elements: ["A joint trial of two or more defendants", "The prosecutor offers a nontestifying codefendant's confession", "It names or obviously refers to the other defendant: the Clause bars it even with a limiting instruction (Bruton)", "A redaction that does not name or obviously refer to the defendant, such as 'the other person', with a limiting instruction, is permitted (Samia)"],
@@ -3671,6 +3898,8 @@
           },
           { id: "u9-c-crawford", kind: "case", subject: "evidence", name: "Crawford v. Washington", year: 2004, holding: "Testimonial hearsay is inadmissible against a criminal defendant unless the declarant is unavailable and the defendant had a prior opportunity to cross-examine.", facts: "A wife's recorded police statement about a stabbing was offered against her husband; spousal privilege kept him from cross-examining her.", overrules: "Ohio v. Roberts (1980), as to testimonial statements", say: "Crawford: reliability is out; confrontation is in, for testimonial statements.", status: "book", src: "Crawford v. Washington, 541 U.S. 36 (2004); evidence.md §7.1" },
           { id: "u9-c-giles", kind: "case", subject: "evidence", name: "Giles v. California", year: 2008, holding: "The Confrontation Clause forfeiture doctrine applies only when the defendant intended to prevent the witness from testifying.", facts: "A defendant who killed his former girlfriend sought to bar her earlier statements to police about his earlier abuse.", say: "Giles: forfeiture needs intent to silence, not merely a killing.", status: "book", src: "Giles v. California, 554 U.S. 353 (2008); evidence.md §6.4" },
+          { id: "u9-c-pitts", kind: "case", subject: "evidence", name: "Pitts v. Mississippi", year: 2025, recent: true, holding: "A court may not screen a child witness from the defendant just because a statute says so; it must hear evidence and make a case-specific finding that the screen is necessary.", facts: "A trial court followed a state statute giving child witnesses a right to a screen and made no finding about the child; the Court reversed and remanded for harmless-error review.", say: "Pitts (2025): a statute cannot replace the judge's finding that this child needs the screen.", status: "book", src: "Pitts v. Mississippi, No. 24-1159, 607 U.S. 1 (2025) (per curiam)" },
+          { id: "u9-c-williams", kind: "case", subject: "evidence", name: "Williams v. Illinois", year: 2012, holding: "A fractured Court let an expert rely on an outside lab's DNA profile without the analyst testifying; no rationale won five votes, and Smith v. Arizona (2024) rejected the not-for-truth reasoning.", facts: "An expert testified that a DNA profile produced by an outside laboratory matched the defendant; no one from that laboratory testified.", say: "Williams (plurality): no majority rationale, and Smith v. Arizona later rejected its basis-evidence reasoning.", status: "general", src: "Williams v. Illinois, 567 U.S. 50 (2012) (plurality); Smith v. Arizona, 602 U.S. 779 (2024)" },
           { id: "u9-c-hemphill", kind: "case", subject: "evidence", name: "Hemphill v. New York", year: 2022, holding: "A state evidence rule that lets a party 'open the door' cannot override the Confrontation Clause; a judge may not substitute a reliability finding for cross-examination.", facts: "The defense suggested another man committed a shooting; the prosecutor introduced that man's testimonial plea allocution in response.", say: "Hemphill: opening the door to a topic does not waive confrontation of testimonial statements.", status: "book", src: "Hemphill v. New York, 595 U.S. 140 (2022); evidence.md §7.1" },
         ],
       },

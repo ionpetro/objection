@@ -11,18 +11,27 @@
 //     subject-matter jurisdiction) and UCC 2-209(1), (3). NOT re-read: Official Comment 2 to 2-209 (good faith; "extortion of a
 //     modification" is ineffective) and Rest. (2d) Contracts §§89, 131. So u1-r-modification, u1-h-modification-* and
 //     u1-h-modification-hardship are status "general", as is the §131 row of u1-so-absolutes.
-//   - u1-r-forum-defendant, u1-h-forum-waiver, u1-h-forum-fictitious: the statutory text (§1441(b)(1)-(2), §1446(b)(1), §1447(c)) is
-//     primary, but that a forum-defendant violation is non-jurisdictional and waivable is circuit case law. Every court of appeals
-//     to decide it that I know of treats it as waivable and I know of no contrary circuit holding (not re-verified circuit by
-//     circuit); the keys rest on §1447(c). Rule card and waiver item are "general".
+//   - u1-r-forum-defendant, u1-h-forum-waiver: the statutory text (§1441(b)(1)-(2), §1446(b)(1), §1447(c)) is primary, but that a
+//     forum-defendant violation is non-jurisdictional and waivable is circuit case law. Holbein v. TAW Enterprises, 983 F.3d 1049
+//     (8th Cir. 2020) (en banc) overruled the Eighth Circuit's contrary line (Hurt v. Dow Chemical, 1992; Horton v. Conklin, 2005);
+//     all circuits to decide the question now treat the defect as non-jurisdictional and waivable (Holbein checked in secondary
+//     sources, Nov 2026). The keys rest on §1447(c). Rule card and waiver item are "general".
 //   - u1-r-miranda, u1-a-miranda-station, u1-h-miranda-*: case holdings (Berkemer, Innis, Quarles, Mathiason) from summaries.
-//   - u1-r-recording / u1-h-race-notice, u1-r-burglary / u1-h-burglary-*: standard black letter; MPC §221.1 and §223.2 recalled from the Code, not re-read.
+//   - u1-r-recording / u1-h-race-notice / u1-h-notice-statute, u1-r-burglary / u1-h-burglary-*: standard black letter; MPC §221.1
+//     (including §221.1(3), no conviction for both burglary and its object offense unless that offense is a first- or second-degree
+//     felony) and §223.1(2) (theft grading) recalled from the Code, not re-read.
+//   - u1-r-which-exam: NextGen Family Law phase-in (tested with resources provided July 2026 to Feb 2028; a foundational subject
+//     from July 2028) per NCBE's Nov 20, 2024 announcement, checked in NCBE's news pages (Nov 2026).
+//   - Verification pass (Nov 2026): burglary-MPC item rebuilt (old key ignored §221.1(3)); modification-hardship rebuilt (tracked an
+//     NCBE released item too closely); forum-two-defendants distractors replaced; trap labels corrected; u1-h-forum-fictitious,
+//     u1-tr-2-fault and four redundant num cards cut; u1-h-silent-fault and u1-h-notice-statute added.
 //   - Prep-industry material, labelled as such on the cards (not NCBE guidance): the five-step attack, the call-first/facts-first
 //     debate, the 33/66/100 checkpoints, the 2.5-minute soft cap and the six miss tags (UT Austin, JD Advising, ABA Student Lawyer).
 //   - u1-so-absolutes: Rest. (2d) Contracts §131 quoted from memory; In re Winship (1970) and Insurance Corp. of Ireland (1982) from the opinions' holdings as summarised.
 //   - u1-tr-stale-*: Kennedy v. Bremerton (2022), Dobbs (2022), Arizona v. Gant (2009), Crawford (2004) from the opinions' syllabi as summarised in research.
-//   - Fact patterns are our own. Three earlier drafts that tracked NCBE released items too closely (habit, removal, modification)
-//     were rebuilt on different facts and different options; keep them that way.
+//   - Fact patterns are our own. Earlier drafts that tracked NCBE released items too closely (habit, removal, modification, and in
+//     the Nov 2026 pass u1-h-modification-hardship, u1-h-forum-two-defendants and option D of u1-h-habit-courier) were rebuilt on
+//     different facts and different options; keep them that way.
 //   - Known upstream error: research/hooks.jsonl calls the third man hit in Summers v. Tice a "guide"; he was a member of the party.
 /* eslint-disable max-len */
 (function () {
@@ -95,33 +104,6 @@
             status: "exam", src: "NCBE UBE scores page (ncbex.org/exams/ube/scores); NCBE MBE scores page; format.md §2",
           },
           {
-            id: "u1-r-which-exam", kind: "rule", title: "Which exam do you sit in 2027?",
-            say: "Most jurisdictions still give the legacy UBE with the MBE in 2027; ten began NextGen in July 2026 and more switch in July 2027. Check your board.",
-            hook: "Exam is Latin examen, the tongue of a balance: know which scale you will be weighed on.",
-            elements: [
-              "February 2027: the legacy UBE (MBE, MEE, MPT) in most jurisdictions",
-              "February 23-24, 2027: NextGen in the ten jurisdictions that began in July 2026",
-              "July 2027: more jurisdictions switch to NextGen; the rest keep the legacy exam",
-              "February 2028: the last legacy administration",
-            ],
-            ordered: true,
-            distractorElements: ["Every jurisdiction switched to NextGen in February 2027", "NextGen drops Business Associations"],
-            exceptions: ["Your own board announces when it switches: check its page before you plan", "NextGen adds Business Associations and replaces some four-option questions with select-two-of-six items, integrated question sets and performance tasks", "Where you sit NextGen, this app practises the doctrine you share with the MBE; the written and skills parts need other practice"],
-            cite: "NCBE NextGen UBE", citeAsk: "Which NCBE page lists when each jurisdiction switches to NextGen?",
-            numbers: [{ label: "NextGen in the first switching jurisdictions", value: "February 23-24, 2027" }, { label: "Last legacy administration", value: "February 2028" }, { label: "NextGen format", value: "Three 3-hour sections over a day and a half" }],
-            ex: [
-              { facts: "You sit in a jurisdiction that began NextGen in July 2026.", result: "NextGen in February 2027: seven of its eight subjects match the MBE's seven, and Business Associations is new." },
-              { facts: "Your jurisdiction has not announced a switch before 2028.", result: "The legacy UBE, with the MBE: this app's main target." },
-            ],
-            terms: ["legacy UBE", "NextGen"],
-            quiz: [
-              { t: "tf", q: "In February 2027 every jurisdiction gives the NextGen UBE.", a: false, why: "Ten jurisdictions began NextGen in July 2026; most others still give the legacy UBE, with the MBE, in February 2027." },
-              { t: "mcq", q: "Which of these is a NextGen subject that the MBE does not test?", options: ["Business Associations", "Constitutional Law", "Torts"], a: "Business Associations", why: "NextGen's eighth subject is Business Associations, including agency; its other seven match the MBE's subjects." },
-              { t: "tf", q: "The last administration of the legacy bar exam is February 2028.", a: true, why: "NCBE has announced February 2028 as the last administration of the current exam." },
-            ],
-            status: "exam", src: "NCBE NextGen UBE jurisdiction decisions table (last updated Oct 23, 2026); NCBE NextGen UBE Blueprint (June 2025); format.md §0 and §5",
-          },
-          {
             id: "u1-r-assumptions", kind: "rule", title: "The controlling-law assumptions", exam: ["mbe"],
             say: "Each subject names the law it assumes: FRCP and Title 28, the Constitution, UCC Articles 1 and 2, the FRE, pure comparative fault. The stem names any split.",
             hook: "Jurisdiction comes from iurisdictio, 'law-speaking': the exam tells you whose law is speaking before it asks anything.",
@@ -149,6 +131,24 @@
               { t: "tf", q: "In Evidence you must know your own State's evidence code for the MBE.", a: false, why: "NCBE assumes the Federal Rules of Evidence as currently in effect." },
             ],
             status: "exam", src: "NCBE MBE Subject Matter Outline (notes under Civil Procedure, Constitutional Law, Contracts, Evidence, Torts); NCBE MBE page ('generally accepted fundamental legal principles, unless noted otherwise in the question'); format.md §1",
+          },
+          {
+            id: "u1-h-silent-fault", kind: "hypo", subject: "torts", cat: "II.G", callType: "liable", rule: "u1-r-fault-defaults", issue: "default fault rule when silent",
+            hook: "No sentence about the fault rule is itself a sentence: it means pure comparative fault.",
+            stem: "A shopper slipped on a puddle of spilled detergent in a store aisle and broke her wrist. She sued the store for negligence. The jury found that the store was 45 percent at fault for leaving the spill in place for an hour, that the shopper, who was reading her phone as she walked, was 55 percent at fault, and that her damages were $40,000.",
+            short: "A shopper who was reading her phone slips on a spill the store left for an hour. The jury finds her 55 percent at fault; damages are $40,000.",
+            call: "How much may the shopper recover from the store?",
+            options: [
+              { text: "$18,000, because her damages are reduced by her own 55 percent share of fault.", why: "The stem names no fault rule, so the MBE default applies: pure comparative fault takes her 55 percent off $40,000 and never bars recovery." },
+              { text: "Nothing, because she was more at fault than the store, and a plaintiff who is more than half at fault is barred.", why: "That is modified comparative fault, which applies only when the stem names it.", trap: 4 },
+              { text: "Nothing, because her own negligence contributed to her fall, and any fault of the plaintiff bars her recovery.", why: "That is contributory negligence, which applies only when the stem says the jurisdiction follows it.", trap: 4 },
+              { text: "$40,000, because a store owes its customers a duty to keep its aisles reasonably safe.", why: "The duty is real and explains why the store is liable at all, but the call asks how much, and her own share comes off.", trap: 6 },
+            ],
+            answer: 0,
+            facts: ["was 55 percent at fault"],
+            findAsk: "Tap the fact that sets the amount once you know the default rule.",
+            say: "Silent stem, pure comparative fault: even at 55 percent she recovers 45 percent of $40,000.",
+            status: "exam", src: "NCBE MBE Subject Matter Outline, Torts note (joint and several liability with pure comparative negligence unless otherwise indicated); torts.md §1",
           },
           {
             id: "u1-p-assumptions", kind: "pairs", set: "Subject and assumed law", mode: "concept", exam: ["mbe"],
@@ -181,11 +181,7 @@
             status: "exam", src: "NCBE MBE Subject Matter Outline (notes under each subject)",
           },
           { id: "u1-n-scored", kind: "num", exam: ["mbe"], ask: "How many of the 200 MBE questions are scored", answer: "175", say: "175 count; the other 25 are unscored pretest questions that look identical to the rest.", hook: "Pretest: the 25 'practice' questions are indistinguishable, so treat every question as real.", status: "exam", src: "NCBE MBE page (ncbex.org/exams/mbe)" },
-          { id: "u1-n-total", kind: "num", exam: ["mbe"], ask: "Total questions on the MBE, scored and unscored together", answer: "200", alt: ["two hundred"], say: "200 questions in two 3-hour sessions: 175 scored and 25 unscored pretest questions.", hook: "Two hundred answers to give, one hundred in each session.", status: "exam", src: "NCBE MBE page (ncbex.org/exams/mbe)" },
-          { id: "u1-n-pretest", kind: "num", exam: ["mbe"], ask: "Unscored pretest questions among the MBE's 200", answer: "25", alt: ["twenty-five"], say: "25 of the 200 are unscored pretest questions, mixed in and impossible to spot.", hook: "Twenty-five trial balloons, and you cannot tell which.", status: "exam", src: "NCBE MBE page (ncbex.org/exams/mbe)" },
-          { id: "u1-n-subject", kind: "num", exam: ["mbe"], ask: "Scored questions in each of the seven subjects", answer: "25", alt: ["twenty-five"], say: "Seven subjects, 25 scored questions each: every subject is exactly one seventh of the scored paper.", hook: "Seven subjects, 25 each: the exam has no favourites.", status: "exam", src: "NCBE MBE page: 'distributed evenly, with 25 questions from each of the seven subject areas'" },
           { id: "u1-n-pace", kind: "num", exam: ["mbe"], ask: "Minutes available per question (180 minutes for 100 questions)", answer: "1.8 minutes", alt: ["1.8"], say: "1.8 minutes is about 108 seconds a question; the pace bar in this app runs at 110.", hook: "180 minutes, 100 questions: the arithmetic NCBE does not print but the clock enforces.", status: "exam", src: "NCBE MBE page (two 3-hour sessions of 100 questions); format.md §1" },
-          { id: "u1-n-weight", kind: "num", exam: ["mbe"], ask: "Percent of the UBE score that comes from the MBE", answer: "50 percent", alt: ["50", "fifty", "50%"], say: "The MBE is half the UBE: MEE 30%, MPT 20%.", hook: "50-30-20: half, three-tenths, a fifth.", status: "exam", src: "NCBE UBE scores page (ncbex.org/exams/ube/scores)" },
           {
             id: "u1-so-format", kind: "sort", exam: ["mbe"], mode: "yesno", q: "Fact or myth about the MBE?",
             buckets: ["Fact", "Myth"],
@@ -221,7 +217,7 @@
               "Key: the one best answer",
               "Three distractors: plausible, but each wrong for a reason you can state",
             ],
-            ordered: true,
+            ordered: false,
             distractorElements: ["A second key that is also correct", "A paragraph telling you which rule to use"],
             exceptions: ["The stem may state the rule set ('the jurisdiction follows...'); it never states the answer"],
             cite: "NCBE Bar Examiner: how MBE questions are written", citeAsk: "Which NCBE publication describes how MBE questions are written?",
@@ -231,7 +227,7 @@
             terms: ["stem", "lead-in", "key", "distractor"],
             quiz: [
               { t: "mcq", q: "Which part of an item tells you what you are being asked to decide?", options: ["The lead-in", "The stem", "The key"], a: "The lead-in", why: "The lead-in (the call of the question) is the one sentence that sets your task; the stem supplies the facts." },
-              { t: "tf", q: "A distractor may also be correct, as long as the key is better.", a: false, why: "NCBE's drafters build each distractor to be plausible but never a second or partial key; the key is unequivocally correct." },
+              { t: "tf", q: "A distractor may also be a correct answer to the call, as long as the key is better.", a: false, why: "A distractor can state true law, but it never correctly answers this call on these facts; NCBE builds each one to be plausible but never a second or partial key." },
               { t: "mcq", q: "How many facts does a well-written stem contain?", options: ["The fewest that support the key and make the distractors plausible", "Every fact a real case would include", "Facts for the key only, none for the distractors"], a: "The fewest that support the key and make the distractors plausible", why: "NCBE stems use the minimum number of actors and facts; every fact is there for a reason." },
             ],
             status: "exam", src: "NCBE Bar Examiner, 'MBE Test Development' (Sept 2015); NCBE, 'How are questions written for NCBE's exams?'; questions.md §3",
@@ -248,6 +244,12 @@
             ],
             ordered: true,
             distractorElements: ["Choose the option with the most doctrine in it", "Choose the longer of two options with the same verdict"],
+            exceptions: [
+              "Yes/No x because grid: decide the verdict first, cross out the two options with the other verdict, then choose between the two reasons",
+              "'Because': the reason must be true law and supported by these facts",
+              "'If': the condition must be possible on these facts and, if met, enough on its own to produce the verdict",
+              "'Unless': the condition must be the one thing that would flip the verdict; the stem may leave it open",
+            ],
             cite: "NCBE MBE Sample Test Questions", citeAsk: "Which NCBE document publishes sample MBE questions?",
             ex: [
               { facts: "Two options both say 'No'; one adds 'because the seller never signed', the other 'because the buyer paid late'.", result: "Same verdict, different reasons: only the reason that is true on the stem is the key." },
@@ -256,9 +258,11 @@
             quiz: [
               { t: "tf", q: "If two options reach the same result, either one is acceptable.", a: false, why: "The key is the one with the correct reason; the other has the right result and a wrong reason." },
               { t: "mcq", q: "Two options both begin 'Yes'. What separates them?", options: ["The because clause", "The length of the option", "Whether the option cites a statute"], a: "The because clause", why: "With the verdict fixed, the reason is the only thing left to be right or wrong." },
-              { t: "tf", q: "An option that reads 'Yes, unless the exception it names applies' is the key only if the stem supplies that condition.", a: true, why: "'Unless' hinges the verdict on a condition; check whether the stem meets it, rules it out, or never mentions it." },
+              { t: "tf", q: "An option that reads 'Yes, unless…' can be the key even when the stem does not say whether the condition is met.", a: true, why: "'Unless' names the one thing that would flip the verdict. The option is right if that condition is the one the rule really turns on and the stem does not rule it in." },
+              { t: "tf", q: "An option that reads 'Yes, if…' can be the key only if its condition is possible on these facts and would be enough for that verdict.", a: true, why: "An 'if' condition the stem contradicts, or one that would not decide the case even if true, makes the option wrong." },
+              { t: "mcq", q: "Two options say Yes and two say No, each with a reason. What do you do first?", options: ["Decide the verdict and cross out the two options with the other one", "Compare the four reasons and keep the longest", "Pick the option that names a rule you recognise"], a: "Decide the verdict and cross out the two options with the other one", why: "The grid halves the work: settle Yes or No from the rule, then choose between the two reasons that share your verdict." },
             ],
-            status: "general", src: "NCBE MBE sample questions (option shape, read not copied); questions.md §4-5",
+            status: "general", src: "NCBE MBE sample questions (option shape, read not copied); questions.md §4-5 (because / if / unless hinges; prep-industry advice, not NCBE guidance)",
           },
           {
             id: "u1-r-fault-defaults", kind: "rule", title: "The Torts defaults the exam assumes", cat: "II.G",
@@ -266,8 +270,7 @@
             hook: "DBAPD: Duty, Breach, Actual cause, Proximate cause, Damages. Fault percentages matter only after those five boxes.",
             elements: [
               "Find each party's percentage of fault",
-              "Reduce the plaintiff's damages by the plaintiff's own percentage",
-              "Never bar recovery, whatever the plaintiff's share",
+              "Reduce the plaintiff's damages by her own percentage; never bar recovery, whatever her share",
               "Each liable defendant answers for the whole reduced award",
             ],
             ordered: true,
@@ -302,8 +305,8 @@
               { text: "Nothing, because the pedestrian was crossing against the signal and her own fault bars recovery from either driver.", why: "That is contributory negligence, which applies only if the question says the jurisdiction follows it.", trap: 4 },
             ],
             answer: 0,
-            facts: ["crossing against the signal", "fault was 20 percent hers"],
-            findAsk: "Tap the two things that decide it: the plaintiff's own fault, and the percentages the jury found.",
+            facts: ["fault was 20 percent hers", "The injury is indivisible"],
+            findAsk: "Tap the two facts that decide it: her share of fault, and the fact that makes each driver answer for the whole.",
             say: "Silence means the defaults: take her 20 percent off the top, then either defendant can be made to pay the rest.",
             status: "exam", src: "NCBE MBE Subject Matter Outline, Torts note; torts.md §1",
           },
@@ -341,12 +344,12 @@
               { text: "Yes, because evidence of a person's habit is admissible to prove that the person acted in accordance with it on a particular occasion.", why: "Leaving a slip on every unanswered delivery for three years is a specific, regular response: habit under FRE 406." },
               { text: "Yes, because the testimony shows that the driver is a conscientious employee who can be trusted to follow company procedure.", why: "Conscientiousness is character, and FRE 404(a)(1) bars character evidence to prove conduct on an occasion; the testimony comes in only because it shows a habit.", trap: 1 },
               { text: "No, because evidence of the driver's other deliveries is other-act evidence that cannot be used to show he acted the same way on this occasion.", why: "FRE 404(b) bars other acts offered to prove character; a specific, regular practice is habit, which FRE 406 admits for exactly this purpose.", trap: 10 },
-              { text: "No, because habit evidence may be received only from the person whose habit it is, and the driver did not testify.", why: "FRE 406 sets no such limit: a witness with knowledge of the regular practice may describe it, whether or not it is corroborated or anyone witnessed the occasion.", trap: 5 },
+              { text: "No, because habit may be proved only by evidence of specific instances, not by a witness's summary of what the driver usually did.", why: "FRE 406 does not limit how habit is proved: a witness who saw the practice repeated may describe it, and the court may admit it without corroboration or an eyewitness.", trap: 5 },
             ],
             answer: 0,
             facts: ["rode along on the driver's route every week for three years", "never skipped this step"],
             say: "A person's specific, regular response is habit under FRE 406; any witness who knows the practice can describe it.",
-            status: "book", src: "FRE 406; FRE 404(a)(1), (b)(1) (LII); evidence.md §3",
+            status: "book", src: "FRE 406 (no limit on the method of proving habit); FRE 404(a)(1), (b)(1) (LII); evidence.md §3",
           },
           {
             id: "u1-r-forum-defendant", kind: "rule", title: "The forum-defendant rule", cat: "I.A",
@@ -372,7 +375,7 @@
               { t: "mcq", q: "A plaintiff who objects to a removal that violates the forum-defendant rule must move to remand within...", options: ["30 days after the notice of removal", "21 days after the notice of removal", "any time before final judgment"], a: "30 days after the notice of removal", why: "The defect is not jurisdictional, so §1447(c)'s 30-day limit applies." },
               { t: "bucket", q: "Does the forum-defendant rule block removal?", buckets: ["Blocked", "Not blocked"], items: [{ text: "Diversity-only case; the only defendant, served last week, is a forum citizen", bucket: "Blocked" }, { text: "Federal-question case; the defendant is a forum citizen", bucket: "Not blocked" }, { text: "Diversity-only case; the only defendant is a citizen of another State", bucket: "Not blocked" }] },
             ],
-            status: "general", src: "28 U.S.C. §1441(b)(1)-(2); §1446(b)(1); §1447(c) (LII; §1447(c) re-read); that the defect is non-jurisdictional and waivable is circuit case law; civpro.md §5",
+            status: "general", src: "28 U.S.C. §1441(b)(1)-(2); §1446(b)(1); §1447(c) (LII; §1447(c) re-read); that the defect is non-jurisdictional and waivable is circuit case law: Holbein v. TAW Enterprises, 983 F.3d 1049 (8th Cir. 2020) (en banc) overruled the Eighth Circuit's contrary line, and all circuits to decide treat the defect as non-jurisdictional and waivable; civpro.md §5",
           },
           {
             id: "u1-h-forum-two-defendants", kind: "hypo", subject: "civpro", cat: "I.A", callType: "motion", rule: "u1-r-forum-defendant", issue: "forum-defendant rule", grid: true,
@@ -382,14 +385,14 @@
             call: "Should the federal court grant the motion to remand?",
             options: [
               { text: "Yes, because a defendant who was properly joined and served is a citizen of the forum State and the case is removable solely on diversity.", why: "The case rests on diversity alone and one served defendant is a State B citizen (§1441(b)(2)); the plaintiff objected within 30 days of the notice of removal." },
-              { text: "Yes, because the notice of removal was filed more than 30 days after the complaint was filed in the state court.", why: "The stem never says when the complaint was filed, and the 30-day clock runs from service, which was 25 days before removal.", trap: 3 },
-              { text: "No, because both defendants joined in the notice of removal within 30 days after they were served, which satisfies the removal statute.", why: "True as far as it goes, and it settles timeliness and unanimity, but it does not answer the call: §1441(b)(2) still bars removal by a case with a served forum defendant.", trap: 6 },
-              { text: "No, because a defendant may remove any civil action that could have been filed originally in federal court, and this one could have been.", why: "That is the general rule of §1441(a), stated without its limit: diversity-only removal is barred when a served defendant is a forum citizen.", trap: 2 },
+              { text: "Yes, because a plaintiff who sues on a state-law claim in a state court is entitled to keep the forum she chose.", why: "A plaintiff's choice of a state court does not defeat removal by itself; what blocks this removal is the served forum defendant.", trap: 5 },
+              { text: "No, because both defendants joined in the notice of removal within 30 days after they were served, which satisfies the removal statute.", why: "True as far as it goes, and it settles timeliness and unanimity, but it does not answer the call: §1441(b)(2) still bars removal of a case with a served forum defendant.", trap: 6 },
+              { text: "No, because the supplier is a citizen of State C, and one defendant from outside the forum State is enough to allow removal.", why: "Section 1441(b)(2) bars a diversity-only removal if any properly joined and served defendant is a forum citizen, whatever the others' citizenship.", trap: 5 },
             ],
             answer: 0,
-            facts: ["a contractor, a citizen of State B", "joint notice of removal"],
+            facts: ["a contractor, a citizen of State B", "Both defendants were served on May 3"],
             say: "One served defendant at home blocks a diversity-only removal, however many other defendants join; the plaintiff has 30 days to object.",
-            status: "book", src: "28 U.S.C. §1441(a), (b)(2); §1446(b)(1)-(2); §1447(c) (LII; §1447(c) re-read)",
+            status: "book", src: "28 U.S.C. §1441(a), (b)(2); §1446(b)(1)-(2); §1447(c) (LII; §1447(c) re-read); distractors rebuilt Nov 2026 to move away from an NCBE released item",
           },
           { id: "u1-n-removal", kind: "num", cat: "I.A", ask: "Days after service of the initial pleading to file a notice of removal", answer: "30 days", alt: ["30", "thirty days", "thirty"], say: "A defendant has 30 days from service of the initial pleading to remove.", hook: "Thirty days from service, not from the day the complaint was filed.", status: "book", src: "28 U.S.C. §1446(b)(1) (LII)" },
           { id: "u1-n-remand", kind: "num", cat: "I.A", ask: "Days after the notice of removal to move to remand for a defect other than lack of subject-matter jurisdiction", answer: "30 days", alt: ["30", "thirty days", "thirty"], say: "A remand motion on any defect but subject-matter jurisdiction is waived after 30 days from the notice of removal.", hook: "The same thirty days, a different starting gun: the filing of the notice of removal.", status: "book", src: "28 U.S.C. §1447(c) (LII, re-read)" },
@@ -548,7 +551,7 @@
             options: [
               { text: "No, because the painter was already bound to paint the house for $8,000 and gave nothing new for the added promise.", why: "Painting is a service, so the common law governs. No circumstance was unanticipated: a better offer elsewhere is not one." },
               { text: "No, because a promise made after the other party has threatened to stop work can never bind the promisor, whatever the circumstances.", why: "'Can never' overstates: modifications after a threat to stop work can be binding if they are supported by consideration or by a fair and equitable response to unanticipated circumstances.", trap: 7 },
-              { text: "Yes, because the homeowner's signed writing makes her promise to pay $10,000 binding on her, whether or not anything new was given.", why: "A signed writing satisfies a statute of frauds but does not supply the missing consideration.", trap: 2 },
+              { text: "Yes, because the homeowner's signed writing makes her promise to pay $10,000 binding on her, whether or not anything new was given.", why: "A signed writing satisfies a statute of frauds but does not supply the missing consideration.", trap: 5 },
               { text: "Yes, because a modification made in good faith needs no consideration, and the painter acted in good faith.", why: "That is UCC 2-209(1), which governs sales of goods. This contract is for services, so the common law applies.", trap: 4 },
             ],
             answer: 0,
@@ -631,34 +634,18 @@
           {
             id: "u1-h-fault-accurate", kind: "hypo", subject: "torts", cat: "II.D", callType: "accurate", rule: "u1-r-fault-defaults", issue: "defaults with two defendants",
             hook: "'Most accurate' means all four options are on trial: read each as a claim and keep the one that survives the numbers.",
-            stem: "A pedestrian was injured when two negligent drivers' cars collided and one of them struck her. The injury is indivisible. The jury found that the pedestrian was 25 percent at fault and that the two drivers were 40 percent and 35 percent at fault, and it set her damages at $200,000.",
-            call: "Which of the following is the most accurate statement about the pedestrian's recovery?",
+            stem: "Two factories upstream of a farm each discharged chemical runoff into a stream. The farmer, who kept drawing irrigation water from the stream after she noticed that it had turned cloudy, lost her entire crop. The farmer sued both factories for negligence. The jury found that the loss was a single indivisible harm caused by the combined runoff, that the farmer was 10 percent at fault and the factories 60 percent and 30 percent at fault, and it set her damages at $90,000.",
+            call: "Which of the following is the most accurate statement about the farmer's recovery?",
             options: [
-              { text: "She may collect $150,000 from either driver, because her award is reduced by her own share and each driver answers for the rest.", why: "Pure comparative fault takes 25 percent off $200,000, and joint and several liability lets her collect the whole $150,000 from either driver." },
-              { text: "She may collect $80,000 from the first driver and $70,000 from the second, because each driver pays only the share of fault the jury assigned to that driver.", why: "That is several-only liability applied to the full damages; it applies only if the stem says so, and the defaults are different.", trap: 5 },
-              { text: "She may collect nothing from either driver, because she was herself at fault in causing the injury, and her fault bars any recovery.", why: "That is contributory negligence, which applies only if the question says the jurisdiction follows it.", trap: 4 },
-              { text: "She may collect $200,000 from either driver, because the injury is indivisible and each driver was a cause of all of it.", why: "Joint and several liability is right, but it applies to the award after her 25 percent share has been taken off.", trap: 2 },
+              { text: "She may collect $81,000 from either factory, because her award is reduced by her own share and each factory answers for the rest.", why: "Pure comparative fault takes 10 percent off $90,000, and joint and several liability lets her collect the whole $81,000 from either factory." },
+              { text: "She may collect $54,000 from the first factory and $27,000 from the second, because each factory pays only the share of fault the jury assigned to it.", why: "That is several-only liability; it applies only if the stem says so, and the default is joint and several liability.", trap: 5 },
+              { text: "She may collect nothing from either factory, because she kept using the cloudy water, and a plaintiff's own fault bars any recovery.", why: "That is contributory negligence, which applies only if the question says the jurisdiction follows it.", trap: 4 },
+              { text: "She may collect $90,000 from either factory, because the harm is indivisible and each factory's runoff was a cause of all of it.", why: "Joint and several liability is right, but it applies to the award after her 10 percent share has been taken off.", trap: 2 },
             ],
             answer: 0,
-            facts: ["The injury is indivisible", "25 percent at fault"],
+            facts: ["a single indivisible harm", "the farmer was 10 percent at fault"],
             say: "'Most accurate': test each statement against the numbers; here only one both subtracts her share and keeps joint liability.",
-            status: "exam", src: "NCBE MBE Subject Matter Outline, Torts note; torts.md §1",
-          },
-          {
-            id: "u1-h-forum-fictitious", kind: "hypo", subject: "civpro", cat: "I.A", callType: "remedy", rule: "u1-r-forum-defendant", issue: "fictitious defendants in a removed case", grid: true,
-            hook: "A Doe has no passport: for removal purposes, a defendant sued under a fictitious name has no citizenship at all.",
-            stem: "A citizen of State A sued a corporation incorporated and headquartered in State B, and five employees sued under fictitious names, whose true names and citizenship the plaintiff did not know, in a State C state court for $250,000 on a state-law negligence claim. The corporation was served and, within 30 days, filed a notice of removal in the federal district court for the district embracing the state court. The plaintiff, who has still not identified the employees, moved to remand.",
-            call: "Is the plaintiff entitled to have the action remanded to the state court?",
-            options: [
-              { text: "No, because the citizenship of defendants sued under fictitious names is disregarded in deciding whether a diversity case is removable.", why: "Section 1441(b)(1) disregards fictitiously named defendants; the named parties are diverse, the amount exceeds $75,000, and the corporation is not a State C citizen." },
-              { text: "Yes, because a case may not be removed while the citizenship of any defendant remains unknown to the plaintiff.", why: "No such rule exists; the statute tells the court to disregard fictitious defendants instead.", trap: 5 },
-              { text: "Yes, because a defendant sued in a state court may not remove a case that rests solely on diversity of citizenship.", why: "The forum-defendant rule bars removal only when a served defendant is a citizen of the forum State; the corporation is a State B citizen and the forum is State C.", trap: 10 },
-              { text: "No, because the plaintiff waited until after the thirty-day removal period to challenge the citizenship of the fictitious defendants, so the objection was waived.", why: "The stem says nothing about when the plaintiff objected; the objection fails on the statute, not on timing.", trap: 3 },
-            ],
-            answer: 0,
-            facts: ["sued under fictitious names", "has still not identified the employees"],
-            say: "Fictitious defendants are ignored in a diversity removal; the forum-defendant rule needs a real, served forum citizen.",
-            status: "general", src: "28 U.S.C. §1441(b)(1)-(2) (LII); civpro.md §5",
+            status: "exam", src: "NCBE MBE Subject Matter Outline, Torts note; torts.md §1 (facts re-set Nov 2026 so the sibling is not a third pedestrian story)",
           },
         ],
       },
@@ -719,16 +706,6 @@
             status: "book", src: "28 U.S.C. §1441(b)(2)",
           },
           {
-            id: "u1-tr-2-fault", kind: "trap", cat: "2", subject: "torts",
-            stem: "A pedestrian crossing against the signal was injured when two negligent drivers' cars collided and one struck her. The injury is indivisible, the jury found her 20 percent at fault, and her damages are $100,000. The stem is silent on the fault rules. The question: how much may she collect from either driver?",
-            wrong: "$100,000: joint and several liability makes each driver answer for the whole injury.",
-            right: "$80,000: joint and several liability applies to the award after her 20 percent share is taken off.",
-            why: "Half-true: the option is right about joint and several liability and still fails, because it skips the reduction. A distractor can be right about the rule and wrong about the facts; check every number.",
-            say: "An option that is partly true can still fail: finish the arithmetic before you pick it.",
-            hook: "A half-true option is the most expensive kind: it earns your trust, then the number betrays it.",
-            status: "exam", src: "NCBE MBE Subject Matter Outline, Torts note; torts.md §1",
-          },
-          {
             id: "u1-tr-3-habit", kind: "trap", cat: "3", subject: "evidence",
             stem: "A store offers testimony that its night manager locked the rear door every night for six years, to prove the door was locked on the night of a burglary. The question: is the testimony admissible?",
             wrong: "No, because the night manager was fired after the burglary.",
@@ -781,7 +758,7 @@
           {
             id: "u1-tr-8-fault", kind: "trap", cat: "8", subject: "torts",
             stem: "A cyclist, a father of three small children, rode at night without the headlamp the law requires and was struck by a driver who ran a red light. The jury found the cyclist 40 percent at fault and set damages at $100,000. The stem is silent on the fault rule. The question: how much may the cyclist recover?",
-            wrong: "The cyclist recovers the full $100,000 because he is the sole support of three small children.",
+            wrong: "The cyclist recovers the full $100,000 because he is the father of three small children.",
             right: "$60,000: under pure comparative fault the award is reduced by his 40 percent share.",
             why: "Sympathy is not a rule. The exam gives you a sympathetic plaintiff to test whether you apply the law or your feelings.",
             say: "When the facts make you wince, ask which rule changes the answer. If none does, the rule wins.",
@@ -791,11 +768,11 @@
           {
             id: "u1-tr-9-miranda", kind: "trap", cat: "9", subject: "crim",
             stem: "A man was arrested for burglary, handcuffed, and left alone in a police interview room, with no warnings given. No officer questioned him. After twenty minutes he called out to a passing officer that he had done it and knew where the jewelry was. He moves to suppress the statement. The question: should the court suppress it?",
-            wrong: "Yes, because the man was in custody and no warnings were given before he spoke.",
-            right: "No, because although the man was in custody and no warnings were given, he was not being interrogated.",
-            why: "Near-twin: the two options share their opening, and only the longer one adds the element that flips the outcome. Miranda needs custody plus interrogation, and a volunteered statement is not the product of interrogation.",
+            wrong: "The man was in custody and was given no warnings, so the statement must be suppressed.",
+            right: "The man was in custody and was given no warnings, but he was not interrogated, so the statement is admissible.",
+            why: "Near-twin: both options open with the same true facts, custody and no warnings, but only the second checks the element that decides it. Miranda needs custody plus interrogation, and a volunteered statement is not the product of interrogation.",
             say: "Two options that share an opening: read to the end, because the qualifier at the tail can flip the verdict.",
-            hook: "Qualifiers are the whole game: 'although he was not interrogated' is the clause that separates the near-twins.",
+            hook: "Read to the end of both twins: custody without interrogation is half a Miranda claim.",
             status: "general", src: "Miranda v. Arizona (1966); Rhode Island v. Innis (1980)",
           },
           {
@@ -889,12 +866,11 @@
               "First hour: reach question 33",
               "Second hour: reach question 66",
               "Third hour: finish question 100",
-              "Past about 2.5 minutes on a first pass: mark it, guess, move on",
             ],
             ordered: true,
             distractorElements: ["Spend extra time on the first 25 to build a lead", "Leave hard questions blank and return if time allows"],
             cite: "NCBE MBE: two 3-hour sessions of 100 questions", citeAsk: "Which NCBE statement fixes the MBE's pace?",
-            exceptions: ["The 1.8-minute pace is arithmetic on NCBE's format; the 33/66/100 checkpoints and the 2.5-minute cap are prep-industry advice, not NCBE guidance"],
+            exceptions: ["Past about 2.5 minutes on a first pass: mark your best guess, move on, and return if time allows", "The 1.8-minute pace is arithmetic on NCBE's format; the 33/66/100 checkpoints and the 2.5-minute cap are prep-industry advice, not NCBE guidance"],
             numbers: [{ label: "Pace", value: "about 1.8 minutes (108 seconds) per question" }, { label: "Checkpoints", value: "33 at 1:00, 66 at 2:00, 100 at 3:00" }],
             ex: [
               { facts: "At 40 minutes you have reached question 22.", result: "On pace: 33 questions an hour puts you at question 22 at 40 minutes." },
@@ -909,20 +885,20 @@
             status: "general", src: "NCBE MBE page (two 3-hour sessions of 100); checkpoints and the 2.5-minute soft cap from UT Austin MBE-Prep (2020) and JD Advising (secondary); questions.md §6",
           },
           {
-            id: "u1-h-modification-hardship", kind: "hypo", subject: "contracts", cat: "I.E", callType: "prevail", rule: "u1-r-modification", issue: "common-law modification and unanticipated circumstances", grid: true,
-            hook: "Pre-existing duty has a pressure valve: a surprise neither side saw coming.",
-            stem: "A landowner hired a contractor under a signed writing to build a detached garage on her lot for $60,000, to be finished by October 1. The landowner had recently retired from teaching and planned to rent the apartment above the garage to a graduate student. The contractor had built eleven garages in the county, and its crew had just finished a shed for the landowner's neighbor, who recommended it. The contract said nothing about subsurface conditions. When the crew began to excavate for the foundation, it struck a layer of solid rock that neither party had known about, and that no one who had built on similar lots in the area had ever encountered. Removing the rock would cost the contractor an additional $9,000. The contractor told the landowner that it could not complete the garage at the contract price, and the landowner orally agreed to pay an additional $9,000. The contractor finished the garage on time. The landowner paid $60,000 and refuses to pay more.",
+            id: "u1-h-modification-hardship", kind: "hypo", subject: "contracts", cat: "I.E", callType: "prevail", rule: "u1-r-modification", issue: "modification after a risk the contract allocated", grid: true,
+            hook: "Pre-existing duty has a pressure valve, a surprise neither side saw coming, but it does not open for a risk the contract already assigned.",
+            stem: "A landowner hired a contractor under a signed writing to build a detached garage on her lot for $60,000. The contract provided that the contractor bore all risk of subsurface conditions. When the crew began to excavate for the foundation, it struck a layer of solid rock that neither party had known about. Removing the rock would cost the contractor an additional $9,000. The contractor told the landowner that it could not complete the garage at the contract price, and the landowner agreed in a signed writing to pay an additional $9,000. The contractor finished the garage on time. The landowner paid $60,000 and refuses to pay more.",
             call: "Will the contractor prevail in an action against the landowner for the additional $9,000?",
             options: [
-              { text: "Yes, because the modification was fair and equitable in view of circumstances that neither party anticipated.", why: "Services, so the common law governs; Rest. (2d) §89 binds a modification that is fair and equitable in light of circumstances not anticipated when the contract was made." },
-              { text: "No, because the contractor had a pre-existing duty to build the garage for $60,000, and the landowner received nothing new in return for her promise.", why: "That is the general common-law rule, but it yields to the unanticipated-circumstances exception, which these facts satisfy.", trap: 2 },
-              { text: "No, because a modification of a contract to build a structure must be in a writing signed by the landowner to be enforceable.", why: "A contract to build a garage is not within the statute of frauds, so the modification needs no writing.", trap: 5 },
+              { text: "No, because the contract put the risk of subsurface conditions on the contractor, so the rock was not a circumstance that could support the modification.", why: "Construction is a service, so the common law governs. The unanticipated-circumstances exception (Rest. (2d) §89) does not reach a risk the contract expressly allocated to the party now asking for more." },
+              { text: "No, because a promise to pay more for work already owed is never binding without new consideration.", why: "Right verdict, but 'never' is wrong: the common law enforces such a modification when it is fair and equitable in view of circumstances not anticipated, or to the extent reliance makes it just.", trap: 7 },
+              { text: "Yes, because the modification was a fair response to rock that neither party knew was there.", why: "That states the unanticipated-circumstances exception, but its element fails: a risk the contract assigned to the contractor was, by definition, anticipated.", trap: 2 },
               { text: "Yes, because a modification made in good faith needs no consideration, and the contractor acted in good faith.", why: "That is UCC 2-209(1), which governs sales of goods. This is a construction contract, so the common law applies.", trap: 4 },
             ],
             answer: 0,
-            facts: ["struck a layer of solid rock that neither party had known about", "The contract said nothing about subsurface conditions"],
-            say: "Services: extra pay for the same work needs new consideration, unless the surprise was one neither side anticipated.",
-            status: "general", src: "Rest. (2d) Contracts §§73, 89 (research notes, not re-read); UCC 2-209 (contrast); contracts.md §8",
+            facts: ["bore all risk of subsurface conditions"],
+            say: "Services: extra pay for the same work needs new consideration, and the 'unanticipated' escape is closed when the contract assigned that risk.",
+            status: "general", src: "Rest. (2d) Contracts §§73, 89 and §89 comment b (allocated risk), from research notes, not re-read; UCC 2-209 (contrast); contracts.md §8; rebuilt Nov 2026 to move away from an NCBE released item",
           },
           {
             id: "u1-h-habit-character", kind: "hypo", subject: "evidence", cat: "II.C", callType: "admissible", rule: "u1-r-habit", issue: "habit versus character", transfer: true,
@@ -936,7 +912,7 @@
               { text: "Yes, because a party may always offer evidence of his own good character to show that he acted with care.", why: "In a civil case a party may not offer character evidence to show he acted in conformity; 'always' ignores the rule.", trap: 7 },
             ],
             answer: 0,
-            facts: ["most careful person he knows", "longtime friend"],
+            facts: ["most careful person he knows", "when it comes to fire"],
             say: "'A careful person' is character, not habit: in a civil case it cannot prove he was careful that day.",
             status: "book", src: "FRE 404(a)(1); FRE 406 (LII)",
           },
@@ -1002,6 +978,33 @@
             hook: "A misread call is the cheapest point you will ever lose: re-read the lead-in before you choose.",
             status: "general", src: "UT Austin MBE-Prep handout (2020) error taxonomy; questions.md §7",
           },
+          {
+            id: "u1-r-which-exam", kind: "rule", title: "Which exam do you sit in 2027?",
+            say: "Most jurisdictions still give the legacy UBE with the MBE in 2027; ten began NextGen in July 2026 and more switch in July 2027. Check your board.",
+            hook: "Exam is Latin examen, the tongue of a balance: know which scale you will be weighed on.",
+            elements: [
+              "February 23-24, 2027: the legacy UBE in most jurisdictions; NextGen in the ten that began in July 2026",
+              "July 2027: more jurisdictions switch to NextGen; the rest keep the legacy exam",
+              "February 2028: the last legacy administration",
+              "July 2028: Family Law becomes a foundational NextGen subject",
+            ],
+            ordered: true,
+            distractorElements: ["Every jurisdiction switched to NextGen in February 2027", "NextGen drops Business Associations"],
+            exceptions: ["Your own board announces when it switches: check its page before you plan", "NextGen adds Business Associations and replaces some four-option questions with select-two-of-six items, integrated question sets and performance tasks", "Family Law appears on NextGen from July 2026 with the law supplied, and becomes a foundational subject from July 2028", "Where you sit NextGen, this app practises the doctrine you share with the MBE; the written and skills parts need other practice"],
+            cite: "NCBE NextGen UBE", citeAsk: "Which NCBE page lists when each jurisdiction switches to NextGen?",
+            numbers: [{ label: "NextGen in the first switching jurisdictions", value: "February 23-24, 2027" }, { label: "Last legacy administration", value: "February 2028" }, { label: "NextGen format", value: "Three 3-hour sessions over a day and a half" }],
+            ex: [
+              { facts: "You sit in a jurisdiction that began NextGen in July 2026.", result: "NextGen in February 2027: eight foundational subjects, the MBE's seven plus Business Associations (Family Law is added in July 2028)." },
+              { facts: "Your jurisdiction has not announced a switch before 2028.", result: "The legacy UBE, with the MBE: this app's main target." },
+            ],
+            terms: ["legacy UBE", "NextGen"],
+            quiz: [
+              { t: "tf", q: "In February 2027 every jurisdiction gives the NextGen UBE.", a: false, why: "Ten jurisdictions began NextGen in July 2026; most others still give the legacy UBE, with the MBE, in February 2027." },
+              { t: "mcq", q: "Which of these is a NextGen foundational subject that the MBE does not test?", options: ["Business Associations", "Constitutional Law", "Torts"], a: "Business Associations", why: "Business Associations, including agency, joins the MBE's seven subjects on NextGen. Family Law is tested with the law supplied until it becomes a foundational subject in July 2028." },
+              { t: "tf", q: "The last administration of the legacy bar exam is February 2028.", a: true, why: "NCBE has announced February 2028 as the last administration of the current exam." },
+            ],
+            status: "exam", src: "NCBE NextGen UBE jurisdiction decisions table (last updated Oct 23, 2026); NCBE NextGen UBE Blueprint (June 2025); NCBE, Family Law subject matter outline announcement (Nov 20, 2024); format.md §0 and §5",
+          },
         ],
       },
       // ------------------------------------------------------------------------------------------------
@@ -1011,7 +1014,7 @@
         items: [
           {
             id: "u1-r-recording", kind: "rule", title: "Recording acts: race, notice, race-notice", cat: "V.D",
-            say: "A later buyer who pays value and has no notice beats an earlier unrecorded deed; race-notice also requires the later buyer to record first.",
+            say: "Race: first to record wins. Notice: a later buyer for value without notice beats an earlier unrecorded deed. Race-notice: she must also record first.",
             hook: "Notice: no notice, you win. Race-notice: no notice and first to the record office. Race: first to the record office.",
             elements: [
               "Race: the first deed recorded wins, whether or not there was notice",
@@ -1023,7 +1026,7 @@
             exceptions: ["Notice is judged when the later buyer pays and takes the deed", "Donees and heirs are not purchasers for value"],
             cite: "NCBE MBE Subject Matter Outline (Real Property V.D)", citeAsk: "Which part of the NCBE outline lists recording acts?",
             ex: [
-              { facts: "The earlier buyer records first; the later buyer had no notice when she paid.", result: "Race or race-notice: the earlier buyer wins. Notice: the later buyer wins." },
+              { facts: "The later buyer pays without notice; then the earlier buyer records; then the later buyer records.", result: "Race or race-notice: the earlier buyer wins. Notice: the later buyer wins." },
             ],
             terms: ["recording act", "bona fide purchaser", "notice statute", "race-notice statute"],
             quiz: [
@@ -1049,6 +1052,22 @@
             status: "general", src: "NCBE MBE Subject Matter Outline (Real Property V.D); property.md Module 29",
           },
           {
+            id: "u1-h-notice-statute", kind: "hypo", subject: "property", cat: "V.D", callType: "title", rule: "u1-r-recording", issue: "notice recording statute", grid: true,
+            hook: "Same facts, one sentence changed: under a notice statute the race does not matter.",
+            stem: "An owner conveyed a parcel of land by deed to a first buyer, who paid full value but did not record the deed. Two months later, the owner conveyed the same parcel to a second buyer, who paid full value and had no knowledge of the first deed. The first buyer then recorded her deed. A week later, the second buyer recorded her deed. The jurisdiction has a notice recording statute. Each buyer claims title to the parcel.",
+            call: "Which buyer is entitled to the parcel?",
+            options: [
+              { text: "The second buyer, because she paid value and had no notice of the first deed when she took her deed.", why: "A notice statute protects a later buyer for value who had no notice when she took, whether or not she records first; the first deed was then unrecorded and she knew nothing of it." },
+              { text: "The second buyer, because a later deed always defeats an earlier one once both deeds are recorded.", why: "Right buyer, wrong reason: under any recording act a later buyer with notice loses, so 'always' is false.", trap: 7 },
+              { text: "The first buyer, because she recorded her deed before the second buyer recorded hers.", why: "Winning the race to record decides a race or race-notice statute; the stem names a notice statute, where the race does not matter.", trap: 4 },
+              { text: "The first buyer, because her deed was delivered first in time and the owner had nothing left to convey.", why: "First in time is the common-law baseline; the recording statute displaces it for a later buyer for value without notice.", trap: 4 },
+            ],
+            answer: 0,
+            facts: ["notice recording statute", "had no knowledge of the first deed"],
+            say: "Notice statute: a later buyer for value without notice wins even if she loses the race to record.",
+            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property V.D); property.md Module 29 (twin of u1-h-race-notice, added Nov 2026)",
+          },
+          {
             id: "u1-r-burglary", kind: "rule", title: "Burglary: common law versus the Model Penal Code", cat: "II.C",
             say: "Common law: breaking and entering a dwelling at night to commit a felony. MPC: any building not open to the public, entered with criminal purpose.",
             hook: "Common law needed four things: a breaking, an entering, a dwelling, and night.",
@@ -1060,6 +1079,7 @@
             ],
             ordered: false,
             distractorElements: ["Common law: of any building", "Common law: with intent to commit any crime"],
+            exceptions: ["MPC §221.1(3): no conviction for both burglary and the intended offense unless that offense is a felony of the first or second degree; at common law burglary and the felony committed inside do not merge"],
             split: {
               commonLaw: "Breaking and entering the dwelling of another at night with intent to commit a felony therein.",
               mpc: "Entering a building or occupied structure with the purpose to commit a crime there, unless it is open to the public or the entrant is licensed or privileged to enter.",
@@ -1074,8 +1094,9 @@
               { t: "tf", q: "At common law, a closed hardware store is a dwelling for purposes of burglary.", a: false, why: "Common-law burglary protects the dwelling of another; most modern statutes extend the crime to any building." },
               { t: "tf", q: "Under the MPC, entering a shop during business hours with the purpose to steal is burglary.", a: false, why: "The MPC excludes premises that are open to the public at the time." },
               { t: "bucket", q: "Common law or MPC?", buckets: ["Common law", "MPC"], items: [{ text: "Requires a breaking", bucket: "Common law" }, { text: "Covers a closed office building at noon", bucket: "MPC" }, { text: "Requires night", bucket: "Common law" }, { text: "Excludes premises open to the public", bucket: "MPC" }] },
+              { t: "tf", q: "Under the MPC, a man who enters a closed store to steal a drill and takes it may be convicted of both burglary and theft.", a: false, why: "MPC §221.1(3) bars conviction of both burglary and its object offense unless that offense is a first- or second-degree felony; theft of a drill is not." },
             ],
-            status: "general", src: "MPC §221.1(1); common-law burglary (standard black letter); crim.md §8",
+            status: "general", src: "MPC §221.1(1), (3); MPC §223.1(2) (theft grading); common-law burglary (standard black letter); crim.md §8",
           },
           {
             id: "u1-h-burglary-common-law", kind: "hypo", subject: "crim", cat: "II.C", callType: "crime", rule: "u1-r-burglary", issue: "burglary at common law",
@@ -1094,20 +1115,20 @@
             status: "general", src: "Common-law burglary and larceny (standard black letter); crim.md §8",
           },
           {
-            id: "u1-h-burglary-mpc", kind: "hypo", subject: "crim", cat: "II.C", callType: "crime", rule: "u1-r-burglary", issue: "burglary under the Model Penal Code",
+            id: "u1-h-burglary-mpc", kind: "hypo", subject: "crim", cat: "II.C", callType: "crime", rule: "u1-r-burglary", issue: "burglary under the Model Penal Code", grid: true,
             hook: "Same facts, one sentence changed: the rule set flips the answer.",
-            stem: "At midnight, a man opened the unlocked rear door of a closed hardware store and went inside, intending to take tools. He took a power drill and left through the same door. The jurisdiction has adopted the Model Penal Code. The man is charged with burglary and theft.",
-            call: "Of what crime, if any, is the man guilty?",
+            stem: "At midnight, a man opened the unlocked rear door of a closed hardware store and went inside, intending to take tools. He took a power drill and left through the same door. The jurisdiction has adopted the Model Penal Code. The man is charged with burglary.",
+            call: "Is the man guilty of burglary?",
             options: [
-              { text: "Burglary and theft, because he entered a building not open to the public with the purpose of committing a crime inside, and took the drill.", why: "MPC §221.1 reaches any building or occupied structure entered with criminal purpose unless open to the public; the closed store qualifies, and taking the drill is theft." },
-              { text: "Theft only, because a hardware store is not a dwelling, and burglary requires a dwelling entered at night.", why: "That is the common-law element; the MPC does not require a dwelling, and the stem says the jurisdiction has adopted the MPC.", trap: 4 },
-              { text: "Burglary only, because he formed the purpose to take the tools at the moment he entered, and the later taking adds no separate crime.", why: "Burglary is complete at entry, but the taking is a separate theft; the offenses do not merge.", trap: 5 },
-              { text: "No crime, because the store was closed and he formed the intent to take the tools only after he was inside.", why: "The stem says he went inside intending to take tools, so the purpose existed at the entry.", trap: 3 },
+              { text: "Yes, because he entered a building that was not open to the public with the purpose of committing a crime inside.", why: "MPC §221.1(1) reaches any building or occupied structure entered with criminal purpose unless it is open to the public or the entrant is privileged; the closed store qualifies." },
+              { text: "Yes, because he took a power drill after he entered the store.", why: "Right verdict, wrong reason: burglary is complete at entry with criminal purpose; the later taking is not an element.", trap: 1 },
+              { text: "No, because a hardware store is not a dwelling, and burglary requires a dwelling.", why: "That is the common-law element; the MPC does not require a dwelling, and the stem says the jurisdiction has adopted the MPC.", trap: 4 },
+              { text: "No, because he opened an unlocked door and so did not break in.", why: "The MPC has no breaking element, and even at common law opening a closed door is a breaking.", trap: 4 },
             ],
             answer: 0,
             facts: ["a closed hardware store", "has adopted the Model Penal Code"],
-            say: "Told 'MPC'? Any building will do unless it was open to the public: burglary at entry, plus theft of the drill.",
-            status: "general", src: "MPC §221.1(1); MPC §223.2; crim.md §8",
+            say: "Told 'MPC'? Any building not open to the public, entered with criminal purpose, is burglary; no dwelling, night or breaking needed.",
+            status: "general", src: "MPC §221.1(1); MPC §221.1(3) (why the call asks about burglary alone); crim.md §8; rebuilt Nov 2026 (old key 'burglary and theft' ignored §221.1(3))",
           },
           {
             id: "u1-h-contributory", kind: "hypo", subject: "torts", cat: "II.G", callType: "prevail", rule: "u1-r-fault-defaults", issue: "contributory negligence", grid: true,

@@ -8,6 +8,12 @@
 //     suit within the Rule 4(m) period; no law governing the limitations period allows relation back). The majority reading (ignorance of
 //     the defendant's identity is not a "mistake concerning the proper party's identity") is secondary-source law; check the circuits and
 //     Krupski's treatment before shipping.
+//  Deep verification pass (2026-11-02): lesson 1 split into "Pleading a claim and answering" and "Amendment and relation back", and the
+//  motions lesson split into Rule 12 and summary judgment/JMOL, so lesson ids from u3l2 on are renumbered (u3l1-u3l14); stored progress
+//  keyed by the old ids shifts. New: u3-r-collateral-order (Cohen's three requirements), Lucky Brand (2020) on post-complaint conduct,
+//  Rule 26(b)(5)(A) privilege-log and 26(c) protective-order hypos, Rule 45 100-mile, Rule 42(a), Rule 12(e) and Rule 50(c) hypos, and
+//  u3-c-blom-bank (BLOM Bank v. Honickman, No. 23-1259, June 5, 2025; syllabus read on Cornell LII; recent). u3-h-cafa-minimal removed:
+//  CAFA is taught in u2 (u2-h-cafa, u2-n-cafa), and Owen Equipment v. Kroger lives there too.
 //  Read at Cornell LII (full opinion text, 2026-11-02), so now status "general": u3-c-coney-island (No. 24-808, Jan. 20, 2026: the
 //  "reasonable time" requirement of Rule 60(c)(1) applies to a Rule 60(b)(4) motion; the Court did not say what is reasonable) and
 //  u3-c-geo-group (No. 24-758, Feb. 25, 2026: Yearsley is a merits defense, not an immunity from suit, so its denial is not a collateral
@@ -34,7 +40,7 @@
     lessons: [
       {
         id: "u3l1",
-        title: "Pleadings and amendment",
+        title: "Pleading a claim and answering",
         items: [
           {
             id: "u3-r-8a", kind: "rule", title: "Pleading a claim: plausibility, not labels", cat: "III.B",
@@ -45,7 +51,7 @@
             exceptions: ["Fraud or mistake: plead the circumstances with particularity (Rule 9(b)); malice, intent and knowledge may be alleged generally", "Labels, conclusions and formulaic recitals of the elements are not accepted as true (Iqbal)", "Parallel conduct alone does not plausibly show an agreement (Twombly)", "Alternative and inconsistent claims may be pleaded (Rule 8(d)(2)-(3)); the old 'no set of facts' test is retired"],
             cite: "FRCP 8(a)(2)", citeAsk: "Which rule requires a short and plain statement showing that the pleader is entitled to relief?",
             ex: [
-              { facts: "A complaint says only that two rivals 'must have agreed' to raise prices after both raised them the same week.", result: "Dismissed: parallel conduct plus a bare conclusion is not plausible." },
+              { facts: "A complaint says only that three hospitals 'conspired' because they pay nurses similar wages.", result: "Dismissed: parallel conduct plus a bare conclusion is not plausible." },
               { facts: "A complaint alleges that the driver ran a red light and struck the plaintiff's car in the crosswalk.", result: "Enough: concrete facts make negligence plausible." },
             ],
             terms: ["plausible on its face", "conclusory", "particularity"],
@@ -95,6 +101,7 @@
             say: "Fraud needs who, what, when and where; intent and knowledge may be alleged generally.",
             status: "book", src: "FRCP 9(b), 8(a)(2)",
           },
+          { id: "u3-n-answer-21", kind: "num", cat: "III.B", ask: "Days after service of the summons and complaint within which a defendant who has not waived service must serve an answer", answer: "21 days", alt: ["21", "twenty-one days", "twenty-one"], say: "21 days after service; if service was waived, 60 days after the waiver request was sent (90 if sent abroad); 60 for the United States.", status: "book", src: "FRCP 12(a)(1)-(2)" },
           {
             id: "u3-r-8bc", kind: "rule", title: "Answering: denials and affirmative defenses (Rule 8(b)-(c))", cat: "III.B",
             say: "Deny what you dispute or the allegation is admitted; plead each affirmative defense in the answer or lose it unless the court allows an amendment.",
@@ -104,8 +111,8 @@
             exceptions: ["Rule 8(c) lists, among others: statute of limitations, statute of frauds, res judicata, release, payment, estoppel, laches, waiver, contributory negligence, assumption of risk, accord and satisfaction", "A denial that the plaintiff can prove an element is not an affirmative defense; the plaintiff keeps the burden", "A defense mislabeled as a counterclaim, or the reverse, is treated as properly designated if justice requires"],
             cite: "FRCP 8(c)", citeAsk: "Which rule requires a party to plead an affirmative defense in its responsive pleading?",
             ex: [
-              { facts: "An answer denies paragraphs 1 through 6 and says nothing about paragraph 7, which alleges that the defendant owned the truck.", result: "Paragraph 7 is admitted." },
-              { facts: "The defendant's answer never mentions the statute of limitations.", result: "The defense is forfeited unless the court grants leave to amend." },
+              { facts: "An answer denies the breach but says nothing about the allegation that the parties signed the contract.", result: "The signing is admitted." },
+              { facts: "A defendant's answer never mentions the release the plaintiff signed.", result: "The release defense is forfeited unless the court grants leave to amend." },
             ],
             terms: ["affirmative defense", "admitted by silence", "forfeited"],
             quiz: [
@@ -149,21 +156,6 @@
             status: "book", src: "FRCP 8(c)(1), 15(a)(2), 56(b); civpro.md PL-6",
           },
           {
-            id: "u3-h-reply-not-required", kind: "hypo", cat: "III.B", callType: "motion", rule: "u3-r-8bc", issue: "no reply to an answer without an order", grid: true,
-            stem: "A plaintiff sued a supplier in federal court for breach of contract. The supplier's answer denied the breach and asserted, as an affirmative defense, that the plaintiff had released the claim in a signed settlement. The court did not order a reply, and the plaintiff served none. The supplier moved for judgment on the pleadings, arguing that the plaintiff's silence admitted the release.",
-            call: "How should the court rule on the motion?",
-            options: [
-              { text: "Deny, because no reply to an answer is required unless the court orders one, and the answer's allegations are then considered denied.", why: "Rules 7(a)(7) and 8(b)(6): a reply is allowed only on court order, and an allegation to which no responsive pleading is required is considered denied or avoided." },
-              { text: "Grant, because an allegation that is not denied is admitted.", why: "That is the rule when a responsive pleading is required, as with a complaint. An affirmative defense in an answer requires no reply.", trap: 6 },
-              { text: "Grant, because a plaintiff must reply to every affirmative defense within 21 days.", why: "A reply is not required; it is allowed only if the court orders one.", trap: 5 },
-              { text: "Deny, because a release is not an affirmative defense.", why: "Release is listed in Rule 8(c)(1). The ruling turns on whether a reply was required, not on the defense's label.", trap: 5 },
-            ],
-            answer: 0,
-            facts: ["did not order a reply", "served none"],
-            say: "A reply to an answer exists only by court order; without one, the answer's allegations are considered denied.",
-            status: "book", src: "FRCP 7(a)(7), 8(b)(6), 8(c)(1)",
-          },
-          {
             id: "u3-h-8b6-silence", kind: "hypo", cat: "III.B", callType: "status", rule: "u3-r-8bc", issue: "allegation admitted by silence",
             stem: "A plaintiff sued a defendant in federal court for conversion of a truck. The complaint alleged in separate numbered paragraphs that the defendant took the truck and that the plaintiff owned it. The defendant's timely answer denied the allegation in paragraph 1 but did not respond to paragraph 2, the allegation of ownership, and said nothing else about it.",
             call: "What is the effect of the answer's silence about the allegation that the plaintiff owned the truck?",
@@ -179,6 +171,27 @@
             status: "book", src: "FRCP 8(b)(6)",
           },
           {
+            id: "u3-h-reply-not-required", kind: "hypo", cat: "III.B", callType: "motion", rule: "u3-r-8bc", issue: "no reply to an answer without an order", grid: true,
+            stem: "A plaintiff sued a supplier in federal court for breach of contract. The supplier's answer denied the breach and asserted, as an affirmative defense, that the plaintiff had released the claim in a signed settlement. The court did not order a reply, and the plaintiff served none. The supplier moved for judgment on the pleadings, arguing that the plaintiff's silence admitted the release.",
+            call: "How should the court rule on the motion?",
+            options: [
+              { text: "Deny, because no reply to an answer is required unless the court orders one, and the answer's allegations are then considered denied.", why: "Rules 7(a)(7) and 8(b)(6): a reply is allowed only on court order, and an allegation to which no responsive pleading is required is considered denied or avoided." },
+              { text: "Grant, because an allegation that is not denied is admitted.", why: "That is the rule when a responsive pleading is required, as with a complaint. An affirmative defense in an answer requires no reply.", trap: 6 },
+              { text: "Grant, because a plaintiff must reply to every affirmative defense within 21 days.", why: "A reply is not required; it is allowed only if the court orders one.", trap: 5 },
+              { text: "Deny, because a release is not an affirmative defense.", why: "Release is listed in Rule 8(c)(1). The ruling turns on whether a reply was required, not on the defense's label.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["did not order a reply", "served none"],
+            say: "A reply to an answer exists only by court order; without one, the answer's allegations are considered denied.",
+            status: "book", src: "FRCP 7(a)(7), 8(b)(6), 8(c)(1)",
+          },
+        ],
+      },
+      {
+        id: "u3l2",
+        title: "Amendment and relation back",
+        items: [
+          {
             id: "u3-r-15a", kind: "rule", title: "Amending a pleading (Rule 15(a))", cat: "III.B",
             say: "Amend once as of course within 21 days; after that you need the other side's written consent or the court's leave, freely given.",
             elements: ["Once as of course within 21 days after serving the pleading", "Or within 21 days after service of a responsive pleading or a Rule 12(b), (e) or (f) motion, whichever is earlier", "Otherwise: the opposing party's written consent or the court's leave", "Leave is freely given when justice so requires"],
@@ -188,7 +201,7 @@
             cite: "FRCP 15(a)(1)", citeAsk: "Which rule lets a party amend its pleading once as a matter of course?",
             numbers: [{ label: "Amend once as of course", value: "21 days" }, { label: "Response to an amended pleading", value: "the time left or 14 days after service of the amendment, whichever is later" }],
             ex: [
-              { facts: "A plaintiff serves a complaint on day 1, the defendant serves a Rule 12(b)(6) motion on day 10, and the plaintiff serves an amended complaint on day 25.", result: "Proper: within 21 days after the motion, as of course." },
+              { facts: "A complaint is served on day 1, the answer on day 5, and the plaintiff serves an amended complaint on day 24.", result: "Proper: within 21 days after the answer, as of course." },
               { facts: "The same plaintiff serves a second amended complaint on day 40 without consent.", result: "Needs leave of court, which is freely given absent undue delay, bad faith, prejudice, or futility." },
             ],
             terms: ["as a matter of course", "leave of court", "supplemental pleading"],
@@ -216,10 +229,21 @@
             status: "book", src: "FRCP 15(a)(1)(B); civpro.md PL-3",
           },
           { id: "u3-n-amend-21", kind: "num", cat: "III.B", ask: "Days after service of a Rule 12(b), (e) or (f) motion, or a responsive pleading, within which a party may amend once as of course", answer: "21 days", alt: ["21", "twenty-one days", "twenty-one"], hook: "21-14-28-30-60-90: the first number of the drill.", say: "21 days, once. After that: consent or leave.", status: "book", src: "FRCP 15(a)(1)" },
-          { id: "u3-n-answer-21", kind: "num", cat: "III.B", ask: "Days after service of the summons and complaint within which a defendant who has not waived service must serve an answer", answer: "21 days", alt: ["21", "twenty-one days", "twenty-one"], say: "21 days after service; 60 days if the defendant waived service (90 if the request was sent abroad); 60 for the United States.", status: "book", src: "FRCP 12(a)(1)" },
-          { id: "u3-n-answer-after-motion", kind: "num", cat: "III.B", ask: "Days after notice of the court's action within which a defendant must answer when a Rule 12 motion is denied or postponed", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "Making a Rule 12 motion pauses the answer clock; 14 days after the ruling it restarts.", status: "book", src: "FRCP 12(a)(4)(A)" },
           { id: "u3-n-15a3-14", kind: "num", cat: "III.B", ask: "Days after service of an amended pleading within which a party must respond, or the time remaining to respond to the original pleading, whichever is later", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after service of the amended pleading, or the time left on the original period, whichever is later.", status: "book", src: "FRCP 15(a)(3)" },
-          { id: "u3-n-12f-21", kind: "num", cat: "III.B", ask: "Days after being served with a pleading to which no response is allowed within which a party may move to strike it under Rule 12(f)", answer: "21 days", alt: ["21", "twenty-one days", "twenty-one"], say: "21 days when no response is allowed; otherwise before responding.", status: "book", src: "FRCP 12(f)(2)" },
+          {
+            id: "u3-p-pretrial-clocks", kind: "pairs", set: "Pleading and pretrial clocks", mode: "number",
+            pairs: [
+              { l: "Amend once as of course after a responsive pleading or Rule 12(b), (e) or (f) motion", r: "21 days after it is served" },
+              { l: "Respond to an amended pleading (Rule 15(a)(3))", r: "The time left or 14 days after service of the amendment, whichever is later" },
+              { l: "Implead a third party without leave (Rule 14(a)(1))", r: "14 days after serving the original answer" },
+              { l: "Rule 26(f) written report to the court", r: "14 days after the conference" },
+              { l: "Objections to pretrial disclosures (Rule 26(a)(3)(B))", r: "14 days after the disclosures are made" },
+              { l: "Service of the summons and complaint (Rule 4(m))", r: "90 days after the complaint is filed" },
+            ],
+            spare: ["28 days after the complaint is filed"],
+            say: "Six clocks, each with its own trigger: 21 after service, 14 after the amendment, answer, conference or disclosures, 90 after filing.",
+            status: "book", src: "FRCP 15(a)(1), 15(a)(3), 14(a)(1), 26(f)(2), 26(a)(3)(B), 4(m)",
+          },
           {
             id: "u3-r-15c", kind: "rule", title: "Relation back of an amendment (Rule 15(c))", cat: "III.B",
             say: "Same conduct relates back to the original filing date; a new defendant also needs notice within the Rule 4(m) period and a mistake about identity.",
@@ -230,7 +254,7 @@
             cite: "FRCP 15(c)(1)", citeAsk: "Which rule governs whether an amendment relates back to the date of the original pleading?",
             numbers: [{ label: "Rule 4(m) service period, in which the new party must get notice", value: "90 days after the complaint is filed" }],
             ex: [
-              { facts: "A passenger sues the ferry's marketing company by mistake; the real operator, a sister company with the same lawyer and insurer, knew of the suit from week one.", result: "Relation back: notice within the period and a mistake about identity." },
+              { facts: "A shopper sues the parent company of the store where she fell; the subsidiary that runs the store, sharing its lawyer, knew of the suit within a month.", result: "Relation back, if the subsidiary knew or should have known it would have been sued but for a mistake about identity." },
               { facts: "A plaintiff adds a new claim, arising from the same collision, against the same defendant after limitations expires.", result: "Relation back: same conduct, transaction, or occurrence." },
             ],
             terms: ["relation back", "mistake concerning identity", "Rule 4(m) period"],
@@ -253,7 +277,7 @@
               { text: "No, because Rule 15(a) allows a complaint to be amended whenever justice so requires, which includes after limitations has run.", why: "Rule 15(a) governs when an amendment may be made. Whether it is timely under the statute of limitations is a separate relation-back question under Rule 15(c).", trap: 10 },
             ],
             answer: 0,
-            facts: ["Eighty days after filing", "had known of the suit since its first week"],
+            facts: ["had known of the suit since its first week", "shares an office, a lawyer, and an insurer with the named defendant"],
             say: "A mistake about which entity to sue, plus notice within 90 days, lets the amendment relate back.",
             status: "general", src: "FRCP 15(c)(1)(C); Krupski v. Costa Crociere S.p.A., 560 U.S. 538 (2010); civpro.md PL-4",
           },
@@ -301,78 +325,10 @@
             say: "Know the rule numbers: the answer choices cite them as if you do.",
             status: "book", src: "FRCP 8(c), 9(b), 12(e), 12(f), 15(c), 15(d)",
           },
-          {
-            id: "u3-so-12-which-motion", kind: "sort", cat: "III.B", mode: "category", q: "Which Rule 12 motion fits?",
-            buckets: ["12(b)(6)", "12(c)", "12(e)", "12(f)"],
-            items: [
-              { text: "The complaint is so vague that the defendant cannot reasonably prepare a response", bucket: "12(e)", why: "A more definite statement, made before the responsive pleading is filed." },
-              { text: "The defendant wants a clearer statement of which claims are asserted against it", bucket: "12(e)", why: "A more definite statement of a vague or ambiguous pleading." },
-              { text: "The complaint includes an immaterial and scandalous paragraph about the defendant's family", bucket: "12(f)", why: "Motion to strike immaterial, impertinent, or scandalous matter." },
-              { text: "One paragraph repeats an earlier paragraph word for word", bucket: "12(f)", why: "Motion to strike redundant matter." },
-              { text: "Before answering, the defendant says that the complaint's facts, taken as true, show no right to relief", bucket: "12(b)(6)", why: "Failure to state a claim, raised before the responsive pleading." },
-              { text: "The complaint asserts a theory that the law does not recognize", bucket: "12(b)(6)", why: "No plausible claim for relief." },
-              { text: "After the answer, the pleadings alone show that the movant is entitled to judgment", bucket: "12(c)", why: "Judgment on the pleadings, once the pleadings are closed and early enough not to delay trial." },
-              { text: "After answering, a defendant argues that the complaint states no claim", bucket: "12(c)", why: "Failure to state a claim may be raised by a Rule 12(c) motion (Rule 12(h)(2)(B))." },
-            ],
-            say: "Vague: 12(e). Scandalous or redundant: 12(f). No claim before answering: 12(b)(6). Judgment after the pleadings close: 12(c).",
-            status: "book", src: "FRCP 12(b)(6), 12(c), 12(e), 12(f), 12(h)(2)",
-          },
-          {
-            id: "u3-p-pretrial-clocks", kind: "pairs", set: "Pleading and pretrial clocks", mode: "number",
-            pairs: [
-              { l: "Amend once as of course after a responsive pleading or Rule 12 motion", r: "21 days" },
-              { l: "Respond to an amended pleading (Rule 15(a)(3))", r: "The time left or 14 days, whichever is later" },
-              { l: "Rule 26(f) written report to the court", r: "14 days after the conference" },
-              { l: "Objections to pretrial disclosures (Rule 26(a)(3)(B))", r: "14 days after the disclosures" },
-              { l: "Motion to strike when no response is allowed (Rule 12(f)(2))", r: "21 days after service" },
-              { l: "Rule 11 safe harbor", r: "21 days after service of the motion" },
-              { l: "Service of the summons and complaint (Rule 4(m))", r: "90 days after the complaint is filed" },
-            ],
-            spare: ["28 days after the complaint is filed"],
-            say: "Seven pleading and pretrial clocks: 21, 14, 14, 14, 21, 21 and 90.",
-            status: "book", src: "FRCP 15(a)(1), 15(a)(3), 26(f)(2), 26(a)(3)(B), 12(f)(2), 11(c)(2), 4(m)",
-          },
-          {
-            id: "u3-r-6", kind: "rule", title: "Computing time (Rule 6)", cat: "III.B",
-            say: "Skip the trigger day, count every calendar day, and if the last day is a weekend or legal holiday, run to the next day that is not.",
-            elements: ["Exclude the day of the event that triggers the period", "Count every day, including Saturdays, Sundays, and legal holidays", "Include the last day of the period", "If the last day is a Saturday, Sunday, or legal holiday, the period runs until the end of the next day that is not"],
-            ordered: true,
-            distractorElements: ["Count the day of the triggering event as day 1", "Skip weekends when the period is shorter than 11 days"],
-            exceptions: ["Rule 6(d): 3 days are added after a period measured from service when service is by mail, by leaving the paper with the clerk, or by other means the recipient consented to; electronic service adds nothing", "Rule 6(b)(2): the court may not extend the time to act under Rules 50(b) and (d), 52(b), 59(b), (d) and (e), and 60(b)", "For electronic filing, the last day ends at midnight in the court's time zone"],
-            cite: "FRCP 6(a)(1)", citeAsk: "Which rule tells you how to count a time period stated in days?",
-            numbers: [{ label: "Extra days after service by mail", value: "3 days" }],
-            ex: [
-              { facts: "A response is due 21 days after service on Monday, March 1, 2027.", result: "Count from March 2: the last day is Monday, March 22." },
-              { facts: "A 30-day period that began on Thursday, March 4, 2027 ends on Saturday, April 3.", result: "The period runs to Monday, April 5, unless that day is a legal holiday." },
-            ],
-            terms: ["trigger event", "legal holiday", "three-day mail rule"],
-            quiz: [
-              { t: "tf", q: "In counting a 14-day period, the day of the event that triggers the period is day 1.", a: false, why: "Rule 6(a)(1)(A): exclude the day of the triggering event." },
-              { t: "tf", q: "Three days are added to a period that runs from service when the paper was served electronically.", a: false, why: "Since 2016, Rule 6(d) adds three days only for service by mail, with the clerk, or by other consented means." },
-              { t: "mcq", q: "A 30-day period ends on a Saturday. The last day is…", options: ["The next Monday, unless it is a legal holiday", "The preceding Friday", "That Saturday"], a: "The next Monday, unless it is a legal holiday", why: "Rule 6(a)(1)(C): the period continues until the next day that is not a Saturday, Sunday, or legal holiday." },
-            ],
-            hook: "Skip day one, count every day, and a Saturday finish slides to Monday.",
-            status: "book", src: "FRCP 6(a)(1), 6(b)(2), 6(d)",
-          },
-          {
-            id: "u3-h-6a-saturday", kind: "hypo", cat: "III.B", callType: "status", rule: "u3-r-6", issue: "counting days, weekend finish",
-            stem: "A party was served by hand on Thursday, March 4, 2027, with a paper that requires a response within 30 days after service. Neither Saturday, April 3, nor Monday, April 5, is a legal holiday. The party's lawyer asks the last day on which the response is timely.",
-            call: "What is the last day on which the response is timely?",
-            options: [
-              { text: "Monday, April 5, because the thirtieth day is a Saturday, so the period runs to the next day that is not a Saturday, Sunday, or legal holiday.", why: "Rule 6(a)(1)(C). Thirty days after March 4 is Saturday, April 3." },
-              { text: "Friday, April 2, because a response must be made before the weekend begins.", why: "Rule 6(a) counts every day and extends a weekend finish to the next business day; it does not shorten the period.", trap: 5 },
-              { text: "Thursday, April 8, because three days are added to the period after it would otherwise expire.", why: "Rule 6(d) adds three days only for service by mail, with the clerk, or by other consented means, not for hand delivery.", trap: 4 },
-              { text: "Saturday, April 3, because every day counts, including the last one.", why: "Every day counts, but a last day that falls on a Saturday is extended to the next day that is not a weekend or legal holiday.", trap: 2 },
-            ],
-            answer: 0,
-            facts: ["served by hand on Thursday, March 4, 2027", "within 30 days after service"],
-            say: "A period that ends on a weekend runs to Monday; hand delivery earns no extra three days.",
-            status: "book", src: "FRCP 6(a)(1), 6(d)",
-          },
         ],
       },
       {
-        id: "u3l2",
+        id: "u3l3",
         title: "Rule 11: what your signature certifies",
         items: [
           {
@@ -384,7 +340,7 @@
             exceptions: ["The duty attaches when a lawyer or unrepresented party signs, files, submits, or later advocates the paper", "The test is an inquiry reasonable under the circumstances", "Rule 11 does not reach disclosures or discovery requests, responses, objections, or motions under Rules 26 through 37", "Those are governed by Rule 26(g) and Rule 37"],
             cite: "FRCP 11(b)", citeAsk: "Which subdivision of Rule 11 lists what a signature certifies?",
             ex: [
-              { facts: "A lawyer pleads that a manufacturer knew of a defect, identifies the allegation as likely to have support after discovery, and has an inquiry-based reason to think so.", result: "No violation: Rule 11(b)(3) allows an identified allegation that will likely have support after discovery." },
+              { facts: "A lawyer pleads that a landlord knew of mold, identifies the allegation as likely to have support after discovery, and has tenant complaints that back the belief.", result: "No violation: Rule 11(b)(3) allows an identified allegation that will likely have support after discovery." },
               { facts: "A lawyer keeps pressing a claim at a hearing after learning that the key witness has recanted.", result: "Later advocating can violate Rule 11(b), even though the paper was proper when filed." },
             ],
             terms: ["reasonable inquiry", "nonfrivolous argument", "later advocating"],
@@ -422,7 +378,7 @@
             cite: "FRCP 11(c)(2)", citeAsk: "Which subsection creates the 21-day safe harbor for Rule 11 sanctions motions?",
             numbers: [{ label: "Rule 11 safe harbor", value: "21 days after service of the motion" }],
             ex: [
-              { facts: "A defendant serves a sanctions motion on Monday; the plaintiff dismisses the challenged count on Friday.", result: "The motion may not be filed: the paper was withdrawn within 21 days." },
+              { facts: "A plaintiff serves a sanctions motion, and within 21 days the defendant amends its answer to drop a baseless denial.", result: "The motion may not be filed: the paper was corrected within 21 days." },
               { facts: "The judge, reading a frivolous brief, orders the lawyer to show cause why sanctions should not issue.", result: "No safe harbor applies to the court's own order." },
             ],
             terms: ["safe harbor", "order to show cause", "deterrence"],
@@ -446,7 +402,7 @@
               { text: "Deny, because the motion was not made separately from a motion to dismiss.", why: "The stem does not say that the motion was combined with another motion, and the defect that matters is early filing.", trap: 3 },
             ],
             answer: 0,
-            facts: ["served a Rule 11 motion for sanctions", "withdrew the fraud claim by amending the complaint"],
+            facts: ["the same day, filed it with the court", "Five days later"],
             say: "Serve the sanctions motion; do not file it until 21 days pass without withdrawal or correction.",
             status: "book", src: "FRCP 11(c)(2); civpro.md R11-1",
           },
@@ -514,14 +470,14 @@
         ],
       },
       {
-        id: "u3l3",
+        id: "u3l4",
         title: "Joinder: claims and parties",
         items: [
           {
             id: "u3-r-18-20", kind: "rule", title: "Joining claims and parties (Rules 18, 20, 21, 42)", cat: "III.D",
             say: "Claims: join any against an opposing party. Parties: same transaction or series plus a common question; misjoinder is cured by severing.",
             elements: ["Rule 18: a party may join any claims it has against an opposing party, related or not", "Rule 20: parties may be joined if the claims arise from the same transaction, occurrence, or series", "and a question of law or fact common to all parties will arise"],
-            ordered: true,
+            ordered: false,
             distractorElements: ["Every party must be interested in every claim", "The parties must share the same lawyer"],
             exceptions: ["Misjoinder is not a ground for dismissing an action; the court may add or drop a party or sever a claim (Rule 21)", "Rule 18 opens the door only to claims against a party who is already an opposing party", "The court may consolidate actions with a common question (Rule 42(a)) or order separate trials (Rule 42(b))", "Each added claim still needs subject-matter jurisdiction, often supplemental under 28 U.S.C. §1367"],
             cite: "FRCP 20(a)(2)", citeAsk: "Which rule permits joinder of defendants whose liability arises from the same transaction, occurrence, or series?",
@@ -548,7 +504,7 @@
             exceptions: ["A claim already the subject of another pending action is not compulsory", "A compulsory counterclaim falls within supplemental jurisdiction and needs no independent federal basis (28 U.S.C. §1367(a))", "A counterclaim need not reduce the opposing party's recovery; it may seek more than the opposing party's claim", "Rule 13(h): Rules 19 and 20 govern adding parties to a counterclaim or crossclaim"],
             cite: "FRCP 13(a)", citeAsk: "Which rule makes a counterclaim from the same transaction compulsory?",
             ex: [
-              { facts: "A driver sues another driver for a collision; the defendant, injured in the same collision, pleads no counterclaim and loses.", result: "Her own claim from the collision is barred." },
+              { facts: "A contractor sues an owner for its fee; the owner, who says the work was defective, pleads no counterclaim and loses.", result: "The owner's defect claim from the same job is barred." },
               { facts: "Two defendants are sued for one crash; one never asserts a contribution claim against the other.", result: "Not barred: crossclaims are permissive." },
             ],
             terms: ["compulsory counterclaim", "permissive counterclaim", "crossclaim"],
@@ -585,8 +541,8 @@
             cite: "FRCP 14(a)(1)", citeAsk: "Which rule permits a defending party to bring in a nonparty who may be liable to it?",
             numbers: [{ label: "Impleader without leave", value: "14 days after serving the original answer" }],
             ex: [
-              { facts: "A store sues its cleaning contractor, which agreed to indemnify it for claims about floors it cleaned.", result: "Proper impleader: the contractor may be liable to the store for the shopper's claim." },
-              { facts: "A store says a customer who spilled a drink caused the fall and the law gives the store no contribution claim.", result: "A defense, not impleader." },
+              { facts: "A homeowner, sued by a guest hurt on a loose railing, impleads the carpenter who built it and agreed to indemnify her for claims about his work.", result: "Proper impleader: the carpenter may be liable to the homeowner for the guest's claim." },
+              { facts: "The homeowner says a stranger alone loosened the railing, and the law gives her no contribution claim against him.", result: "A defense, not impleader." },
             ],
             terms: ["impleader", "third-party complaint", "derivative liability"],
             quiz: [
@@ -621,7 +577,7 @@
             exceptions: ["Rule 19(b) factors: prejudice to anyone, whether the relief can be shaped to lessen it, whether a judgment would be adequate, and whether the plaintiff has an adequate remedy if the action is dismissed", "Joint tortfeasors are not required parties merely because they are jointly and severally liable (Temple v. Synthes)", "A Rule 19 dismissal is not an adjudication on the merits (Rule 41(b))", "Failure to join under Rule 12(b)(7) is not waived by omission (Rule 12(h)(2))"],
             cite: "FRCP 19(a)", citeAsk: "Which rule decides whether an absent person must be joined?",
             ex: [
-              { facts: "A rival claimant to a ranch is absent from a suit about the ranch, and a judgment would impair his interest; joining him as a defendant would destroy diversity.", result: "Required but not feasible: the court weighs Rule 19(b) and may dismiss without prejudice." },
+              { facts: "An absent co-owner of a building would be hurt in practice by a decree dividing it, and he cannot be served in the forum.", result: "Required but not feasible: the court weighs Rule 19(b) and may dismiss without prejudice." },
               { facts: "A plaintiff sues one of three negligent drivers.", result: "The others are not required parties." },
             ],
             terms: ["required party", "indispensable", "feasible"],
@@ -672,7 +628,7 @@
             exceptions: ["For permissive intervention the court must consider undue delay or prejudice to the original parties", "In a diversity case, 28 U.S.C. §1367(b) limits supplemental jurisdiction over claims by plaintiffs who intervene under Rule 24", "Government officers or agencies may intervene permissively when a claim rests on a statute they administer"],
             cite: "FRCP 24(a)", citeAsk: "Which rule gives a nonparty a right to intervene?",
             ex: [
-              { facts: "A neighbor who would lose a lake view moves, on time, to defend a zoning ordinance; the city's interests differ from hers.", result: "Intervention of right is likely." },
+              { facts: "A landowner whose deed restriction a lawsuit seeks to cancel moves, on time, to defend it; the named defendant has stopped defending.", result: "Intervention of right is likely: an impairable interest that no party represents." },
               { facts: "A competitor with a defense sharing a common question moves to join a suit; the case is nearly over.", result: "Permissive intervention may be denied for delay or prejudice." },
             ],
             terms: ["intervention of right", "permissive intervention", "adequate representation"],
@@ -684,18 +640,18 @@
           },
           {
             id: "u3-h-intervene-neighbor", kind: "hypo", cat: "III.D", callType: "motion", rule: "u3-r-24", issue: "intervention of right", transfer: true,
-            stem: "A landowner sued a city in federal court for a declaration that a zoning ordinance limiting building heights is invalid. A neighbor, who would lose a lake view if the ordinance is struck down, filed a timely motion to intervene as a defendant, with a pleading stating her defense. The city is defending the ordinance only to protect its tax base and has said that it would settle if the landowner pays a fee that lets the landowner exceed the height limit.",
+            stem: "A landowner sued her neighbor, a citizen of another State, in federal court to quiet title to a strip of land worth more than $75,000 that lies between their lots. A conservation trust holds a recorded easement over the strip. The two neighbors have agreed to settle by asking the court for a decree that would extinguish the easement, and neither will defend it. The trust filed a timely motion to intervene, with a pleading asserting the easement. Its intervention would not affect the court's subject-matter jurisdiction.",
             call: "Should the court grant the motion to intervene?",
             options: [
-              { text: "Yes, because the neighbor claims an interest in the subject of the action that a judgment may impair and that the city may not adequately represent.", why: "Rule 24(a)(2): a timely motion, an interest relating to the subject of the action, possible impairment, and no adequate representation by the city." },
+              { text: "Yes, because the trust claims an interest in the property that is the subject of the action, the decree may impair it, and no party will defend it.", why: "Rule 24(a)(2): a timely motion, an interest relating to the property, possible impairment as a practical matter, and no adequate representation by the existing parties." },
               { text: "No, because intervention is available only before the defendant has answered the complaint.", why: "Rule 24 requires only a timely motion; the stem says the motion was timely.", trap: 5 },
-              { text: "No, because a neighbor who is not a party to the zoning dispute lacks a sufficient interest.", why: "A concrete interest in the property or transaction that is the subject of the action can support intervention.", trap: 2 },
+              { text: "No, because a decree between the neighbors cannot legally bind the trust, so its interest cannot be impaired.", why: "Rule 24(a)(2) asks whether the action may as a practical matter impair the interest; a decree extinguishing the easement would cloud it.", trap: 5 },
               { text: "Yes, but only in the court's discretion, because intervention of right requires an unconditional statutory right.", why: "That is only one route to intervention of right; the interest-impairment route is another.", trap: 9 },
             ],
             answer: 0,
-            facts: ["is defending the ordinance only to protect its tax base"],
-            say: "A timely, impairable, inadequately represented interest means intervention of right.",
-            status: "book", src: "FRCP 24(a)(2); civpro.md JN-7",
+            facts: ["holds a recorded easement over the strip", "neither will defend it"],
+            say: "A timely, impairable, unrepresented interest in the property means intervention of right.",
+            status: "book", src: "FRCP 24(a)(2), 24(c); civpro.md JN-7",
           },
           {
             id: "u3-r-22", kind: "rule", title: "Interpleader (Rule 22 and 28 U.S.C. §1335)", cat: "III.D",
@@ -707,7 +663,7 @@
             cite: "FRCP 22", citeAsk: "Which rule permits a stakeholder exposed to rival claims to join the claimants in one action?",
             numbers: [{ label: "Statutory interpleader: value of the fund", value: "$500 or more" }],
             ex: [
-              { facts: "An insurer holds $60,000 in policy proceeds claimed by a citizen of State A and a citizen of State B, and deposits the fund with the court.", result: "Statutory interpleader jurisdiction exists under §1335: diverse claimants and more than $500." },
+              { facts: "A bank holds a $9,000 account claimed by an executor from State A and a niece from State C, and deposits the funds with the court.", result: "Statutory interpleader jurisdiction exists under §1335: diverse claimants and at least $500." },
               { facts: "A stakeholder holds $90,000 claimed by two citizens of one State, and the stakeholder is a citizen of that same State.", result: "No minimal diversity between the claimants under §1335, and no diversity under Rule 22." },
             ],
             terms: ["stakeholder", "double liability", "interpleader"],
@@ -750,6 +706,21 @@
             status: "book", src: "FRCP 13(a), 13(b), 13(g), 14(a)",
           },
           {
+            id: "u3-h-42-consolidate", kind: "hypo", cat: "III.D", callType: "motion", rule: "u3-r-18-20", issue: "consolidation under Rule 42(a)", grid: true,
+            stem: "Two passengers injured in the same bus crash filed separate negligence actions against the bus company in the same federal district court. Both cases turn on whether the driver was speeding, and both are at the same stage of discovery. The company moved to consolidate the two actions for trial. The passengers objected that neither had chosen to join the other's action and that each wanted her own trial.",
+            call: "Should the court grant the motion to consolidate?",
+            options: [
+              { text: "Yes, because a court may consolidate actions before it that involve a common question of law or fact.", why: "Rule 42(a): consolidation is in the court's discretion when actions share a common question; the parties' consent is not required." },
+              { text: "No, because Rule 20 leaves it to the plaintiffs to decide whether to sue together in one action.", why: "Rule 20 governs joinder by the pleader. Rule 42(a) separately lets the court consolidate actions already before it.", trap: 10 },
+              { text: "No, because consolidation requires the consent of every party to each action.", why: "Rule 42(a) requires only a common question of law or fact; it says nothing about consent.", trap: 5 },
+              { text: "Yes, because consolidation merges the actions into one, so the passengers become coplaintiffs for all purposes.", why: "Consolidated actions keep their separate identities; a final judgment in one is appealable on its own (Hall v. Hall, 2018).", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["Both cases turn on whether the driver was speeding"],
+            say: "Actions that share a common question may be consolidated by the court; each keeps its own identity.",
+            status: "general", src: "FRCP 42(a), 42(b); Hall v. Hall, 584 U.S. 59 (2018)",
+          },
+          {
             id: "u3-p-joinder-rules", kind: "pairs", set: "Joinder rule numbers", mode: "rule-number",
             pairs: [
               { l: "FRCP 13(a)", r: "Compulsory counterclaim" },
@@ -768,7 +739,7 @@
         ],
       },
       {
-        id: "u3l4",
+        id: "u3l5",
         title: "Class actions",
         items: [
           {
@@ -780,7 +751,7 @@
             exceptions: ["Wal-Mart v. Dukes: the common contention must be one whose truth or falsity resolves an issue central to every claim in one stroke", "No fixed number satisfies numerosity; the question is whether joinder is practicable", "For diversity jurisdiction, the citizenship of the named representatives counts, not that of absent members (CAFA aside)", "Predominance and superiority belong to Rule 23(b)(3), not to Rule 23(a)", "Class counsel's adequacy is a separate requirement, decided when the court appoints counsel under Rule 23(g); Rule 23(a)(4) looks at the representative parties"],
             cite: "FRCP 23(a)", citeAsk: "Which subdivision of Rule 23 lists numerosity, commonality, typicality and adequacy?",
             ex: [
-              { facts: "Three thousand store employees allege that discretionary decisions by local managers were discriminatory, with no company-wide policy.", result: "No commonality (Wal-Mart v. Dukes)." },
+              { facts: "Ten thousand loan applicants allege bias by branch officers who each used personal judgment, with no common lending policy.", result: "No commonality (Wal-Mart v. Dukes)." },
               { facts: "Twelve customers, all in one town, claim the same defective sign.", result: "Numerosity likely fails: joinder is practicable." },
             ],
             terms: ["numerosity", "commonality", "typicality", "adequacy"],
@@ -891,21 +862,6 @@
             status: "book", src: "FRCP 23(e)(1)-(2)",
           },
           {
-            id: "u3-h-cafa-minimal", kind: "hypo", cat: "I.A", exam: ["mbe"], callType: "jurisdiction", rule: "u3-r-23a", issue: "diversity in a class action under CAFA", grid: true,
-            stem: "A citizen of State A filed in a federal court in State A a putative class action against a corporation that is a citizen of State B, on behalf of 500 consumers, most of whom are citizens of State A. The only claim arises under state law. The complaint alleges that the class members' aggregate damages exceed $6 million, exclusive of interest and costs; each member's damages are about $12,000. The corporation moves to dismiss for lack of subject-matter jurisdiction, arguing that each class member's claim must exceed $75,000.",
-            call: "How should the court rule on the motion?",
-            options: [
-              { text: "Deny, because the Class Action Fairness Act supplies jurisdiction: minimal diversity, at least 100 class members, and more than $5 million in the aggregate.", why: "28 U.S.C. §1332(d)(2), (d)(5)(B). The exceptions for home-state and local controversies do not apply because the defendant is not a citizen of State A." },
-              { text: "Grant, because the claim of each class member must exceed $75,000.", why: "That is the ordinary diversity rule. CAFA aggregates the class members' claims.", trap: 4 },
-              { text: "Grant, because complete diversity is required between every class member and the corporation.", why: "CAFA requires only minimal diversity: any class member diverse from any defendant.", trap: 4 },
-              { text: "Deny, because the citizenship of the named representative alone decides diversity in every class action.", why: "That is the rule for an ordinary diversity class action. CAFA lets minimal diversity among any member and any defendant suffice.", trap: 9 },
-            ],
-            answer: 0,
-            facts: ["500 consumers, most of whom are citizens of State A", "aggregate damages exceed $6 million"],
-            say: "CAFA: any member diverse from any defendant, 100 members, more than $5 million in the aggregate.",
-            status: "book", src: "28 U.S.C. §1332(d)(2), (d)(5)(B), (d)(4); civpro.md §9.4",
-          },
-          {
             id: "u3-so-23b-type", kind: "sort", cat: "III.D", exam: ["mbe"], mode: "category", q: "Which Rule 23(b) class is it?",
             buckets: ["(b)(1)", "(b)(2)", "(b)(3)"],
             items: [
@@ -921,11 +877,10 @@
           },
           { id: "u3-c-amchem", kind: "case", subject: "civpro", exam: ["mbe"], name: "Amchem Products, Inc. v. Windsor", year: 1997, holding: "A class certified for settlement must still satisfy Rule 23(a) and (b); predominance is far more demanding than commonality.", facts: "A sprawling class of people exposed to asbestos, with very different injuries, was certified only to approve a global settlement.", say: "Amchem: a settlement class must still meet Rule 23, and predominance is tougher than commonality.", status: "general", src: "Amchem Products, Inc. v. Windsor, 521 U.S. 591 (1997)" },
           { id: "u3-c-comcast", kind: "case", subject: "civpro", exam: ["mbe"], name: "Comcast Corp. v. Behrend", year: 2013, holding: "A (b)(3) class needs a damages model that measures only the damages attributable to the theory of liability; otherwise individual damages questions predominate.", facts: "Cable subscribers' expert model measured damages from four theories of antitrust harm, but only one theory had been accepted for the class.", say: "Comcast: the damages model must match the liability theory, or individual questions predominate.", status: "general", src: "Comcast Corp. v. Behrend, 569 U.S. 27 (2013)" },
-          { id: "u3-n-23f-45", kind: "num", cat: "VII.A", exam: ["mbe"], ask: "Days after entry of an order granting or denying class certification within which a Rule 23(f) petition must be filed when the United States, a federal agency, or a federal officer sued for official acts is a party", answer: "45 days", alt: ["45", "forty-five days", "forty-five"], say: "45 days if the United States is a party, 14 days otherwise.", status: "book", src: "FRCP 23(f)" },
         ],
       },
       {
-        id: "u3l5",
+        id: "u3l6",
         title: "Discovery",
         items: [
           {
@@ -937,7 +892,7 @@
             exceptions: ["Information need not be admissible in evidence to be discoverable", "Proportionality: importance of the issues, amount in controversy, access to the information, resources, importance of the discovery, burden versus benefit", "Electronically stored information that is not reasonably accessible: the responding party must show undue burden or cost, and the court may still order it for good cause", "For good cause and after a good-faith conferral, a court may issue a protective order (Rule 26(c))"],
             cite: "FRCP 26(b)(1)", citeAsk: "Which rule defines the scope of discovery?",
             ex: [
-              { facts: "A hearsay email that would be inadmissible at trial is relevant and cheap to produce.", result: "Discoverable." },
+              { facts: "A diary entry that would be inadmissible hearsay at trial is relevant and easy to produce.", result: "Discoverable." },
               { facts: "A request would cost a small company more than the case is worth and adds little.", result: "Not proportional; the court may limit it." },
             ],
             terms: ["proportional", "privileged", "protective order"],
@@ -965,6 +920,21 @@
             status: "book", src: "FRCP 26(b)(1); civpro.md DS-1",
           },
           {
+            id: "u3-h-26c-trade-secret", kind: "hypo", cat: "III.E", callType: "remedy", rule: "u3-r-26-scope", issue: "protective order for a trade secret",
+            stem: "A beverage maker sued a former distributor in federal court, alleging that the distributor's competing drink copied the maker's secret syrup formula. The distributor requested production of the formula, which is relevant and necessary to decide whether the two drinks share it. The beverage maker moved for a protective order, certifying that it had conferred in good faith, and showed that disclosure to the distributor's business staff would cause serious competitive harm.",
+            call: "What is the court's most appropriate response?",
+            options: [
+              { text: "Order the formula produced, but only in a specified way, such as to the distributor's lawyers and experts under a protective order.", why: "Rule 26(c)(1)(G): for good cause, the court may order that a trade secret be revealed only in a specified way. Relevance and need make it discoverable; the order limits the harm." },
+              { text: "Bar discovery of the formula entirely, because trade secrets are absolutely privileged from discovery.", why: "There is no absolute trade-secret privilege. Rule 26(c) shapes how relevant secrets are disclosed.", trap: 7 },
+              { text: "Order the formula produced without restriction, because relevant and proportional information must be disclosed.", why: "Discoverable is not the end of it: on good cause, Rule 26(c) lets the court limit how disclosure happens.", trap: 2 },
+              { text: "Deny the motion, because only a nonparty may seek a protective order.", why: "A party or any person from whom discovery is sought may move under Rule 26(c)(1).", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["relevant and necessary", "would cause serious competitive harm"],
+            say: "Relevant secrets are discoverable, but on good cause the court controls who sees them and how.",
+            status: "book", src: "FRCP 26(c)(1), 26(c)(1)(G)",
+          },
+          {
             id: "u3-r-26-timing", kind: "rule", title: "Timing: the Rule 26(f) conference and initial disclosures", cat: "III.E",
             say: "No discovery before the Rule 26(f) conference; disclosures follow 14 days after it; undisclosed witnesses and documents may be barred.",
             elements: ["No discovery from any source before the Rule 26(f) conference", "The conference takes place at least 21 days before the scheduling conference or order is due", "The report to the court is due within 14 days after the conference", "Initial disclosures are due 14 days after the conference"],
@@ -974,7 +944,7 @@
             cite: "FRCP 26(d)(1)", citeAsk: "Which rule bars discovery before the Rule 26(f) conference?",
             numbers: [{ label: "Initial disclosures", value: "14 days after the Rule 26(f) conference" }, { label: "Rule 26(f) conference", value: "at least 21 days before the scheduling order is due" }],
             ex: [
-              { facts: "A plaintiff serves interrogatories the day after serving the complaint, with no stipulation or order.", result: "Premature: no discovery before the Rule 26(f) conference." },
+              { facts: "A plaintiff serves interrogatories the day after serving the complaint, with no stipulation or order.", result: "Premature: no discovery from any source before the Rule 26(f) conference." },
               { facts: "A defendant never disclosed a witness it now wants to call, with no justification and surprise to the plaintiff.", result: "The court may exclude the testimony." },
             ],
             terms: ["Rule 26(f) conference", "initial disclosures", "supplementation"],
@@ -987,18 +957,18 @@
           },
           {
             id: "u3-h-26-too-early", kind: "hypo", cat: "III.E", callType: "motion", rule: "u3-r-26-timing", issue: "discovery before the Rule 26(f) conference", transfer: true,
-            stem: "The day after serving the summons and complaint in a federal action, the plaintiff served interrogatories on the defendant. The Rule 26(f) conference had not taken place, and there was no stipulation or court order about discovery. The defendant did not respond. After 30 days, the plaintiff moved to compel answers.",
-            call: "How should the court rule on the motion to compel?",
+            stem: "Ten days after being served with the summons and complaint in a federal action, the defendant served a notice to take the plaintiff's deposition the following week. The Rule 26(f) conference had not taken place, there was no stipulation or court order about discovery, the action is not exempt from initial disclosures, and the notice contained no certification that the plaintiff was about to leave the United States. The plaintiff moved for a protective order.",
+            call: "How should the court rule on the plaintiff's motion?",
             options: [
-              { text: "Deny, because no party may seek discovery before the Rule 26(f) conference without a stipulation, an order, or an exemption.", why: "Rule 26(d)(1): the interrogatories were premature, so no response was due." },
-              { text: "Grant, because interrogatories must be answered within 30 days after they are served.", why: "The 30-day period applies to proper interrogatories. These were served too early.", trap: 6 },
-              { text: "Grant, because the defendant waived its objections by failing to respond.", why: "Objections to improper requests are not waived by ignoring requests the rules did not allow.", trap: 5 },
-              { text: "Deny, but only because interrogatories may be served only after the defendant has answered the complaint.", why: "The bar runs until the Rule 26(f) conference, not until an answer is filed.", trap: 1 },
+              { text: "Grant it, because no party may seek discovery from any source before the Rule 26(f) conference without a stipulation, an order, or an exemption.", why: "Rule 26(d)(1). A deposition this early also needs leave under Rule 30(a)(2)(A)(iii) unless the notice certifies that the deponent is about to leave the country." },
+              { text: "Deny it, because a party may depose an opposing party at any time after the action is commenced.", why: "The early-discovery bar of Rule 26(d)(1) covers depositions as well as written discovery.", trap: 5 },
+              { text: "Deny it, because the bar on early discovery ends once the defendant has been served.", why: "The bar runs until the Rule 26(f) conference, not until service.", trap: 5 },
+              { text: "Grant it, because a party may never be deposed without leave of court.", why: "After the conference, a party may usually be deposed on reasonable written notice, without leave.", trap: 7 },
             ],
             answer: 0,
-            facts: ["The day after serving the summons and complaint", "had not taken place"],
-            say: "Nothing before the Rule 26(f) conference: even a perfectly drafted request is premature.",
-            status: "book", src: "FRCP 26(d)(1), 33(b)(2); civpro.md DS-3",
+            facts: ["The Rule 26(f) conference had not taken place", "no certification that the plaintiff was about to leave the United States"],
+            say: "Nothing before the Rule 26(f) conference: a deposition notice is as premature as an interrogatory.",
+            status: "book", src: "FRCP 26(d)(1), 26(c), 30(a)(2)(A)(iii); civpro.md DS-3",
           },
           {
             id: "u3-h-37c1-witness", kind: "hypo", cat: "III.E", callType: "motion", rule: "u3-r-26-timing", issue: "undisclosed witness at trial",
@@ -1015,6 +985,9 @@
             say: "An undisclosed witness is barred at trial unless the omission was substantially justified or harmless.",
             status: "general", src: "FRCP 26(a)(1)(A)(i), 26(e), 37(c)(1)",
           },
+          { id: "u3-n-disclosures-14", kind: "num", cat: "III.E", ask: "Days after the Rule 26(f) conference when initial disclosures are due", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after the Rule 26(f) conference, unless stipulated or ordered otherwise.", status: "book", src: "FRCP 26(a)(1)(C)" },
+          { id: "u3-n-26f2-14", kind: "num", cat: "III.E", ask: "Days after the Rule 26(f) conference within which the parties must submit to the court their written report outlining the discovery plan", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after the conference: the report and the initial disclosures both come due.", status: "book", src: "FRCP 26(f)(2)" },
+          { id: "u3-n-expert-90", kind: "num", cat: "III.E", ask: "Days before trial by which a party must disclose its testifying experts, absent a stipulation or order", answer: "90 days", alt: ["90", "ninety days", "ninety"], hook: "21-14-28-30-60-90: and here is the 90.", say: "At least 90 days before trial; rebuttal experts within 30 days after the other side's disclosure.", status: "book", src: "FRCP 26(a)(2)(D)" },
           {
             id: "u3-r-26-wp", kind: "rule", title: "Work product, experts and privilege claims (Rule 26(b)(3)-(5))", cat: "III.E",
             say: "Trial-prep material is discoverable only on substantial need and undue hardship; a lawyer's mental impressions are protected far more strongly.",
@@ -1024,14 +997,14 @@
             exceptions: ["A party may obtain his own earlier statement on request", "A testifying expert gives a report; drafts and most lawyer-expert communications are protected", "A consulting expert is discoverable only on exceptional circumstances", "Clawback: after notice of a claim, the receiver must return, sequester or destroy the material and not use it until the claim is resolved", "The Rule 26(f) plan and scheduling order may address the timing and method of privilege logs (amended Dec. 1, 2025)"],
             cite: "FRCP 26(b)(3)", citeAsk: "Which rule protects materials prepared in anticipation of litigation?",
             ex: [
-              { facts: "An insurer, expecting a lawsuit over a fire, has an investigator photograph the scene the next day; the building is later demolished.", result: "Ordinary work product, but substantial need and undue hardship can be shown." },
-              { facts: "The same investigator writes a memo giving his opinion of who was at fault.", result: "Opinion work product: protected far more strongly." },
+              { facts: "A railroad, expecting a lawsuit over a derailment, has its claims agent take a signed statement from a crew member who has since died.", result: "Ordinary work product, but substantial need and undue hardship can be shown." },
+              { facts: "The railroad's lawyer writes a memo on which crew member a jury would blame.", result: "Opinion work product: protected far more strongly." },
             ],
             terms: ["work product", "substantial need", "clawback"],
             quiz: [
               { t: "tf", q: "Opinion work product is discoverable on the same showing as ordinary work product.", a: false, why: "Mental impressions, conclusions, opinions and legal theories get far stronger protection." },
               { t: "tf", q: "A consulting expert who will not testify is discoverable only on a showing of exceptional circumstances.", a: true, why: "Rule 26(b)(4)(D)." },
-              { t: "bucket", q: "Ordinary work product, or opinion work product?", buckets: ["Ordinary work product", "Opinion work product"], items: [{ text: "Photographs of a fire scene taken by an investigator the next day", bucket: "Ordinary work product" }, { text: "A memorandum giving an investigator's opinion about who was at fault", bucket: "Opinion work product" }, { text: "Signed statements taken from two employee witnesses", bucket: "Ordinary work product" }, { text: "A lawyer's notes setting out trial strategy and legal theories", bucket: "Opinion work product" }] },
+              { t: "bucket", q: "Ordinary work product, or opinion work product?", buckets: ["Ordinary work product", "Opinion work product"], items: [{ text: "Measurements of a collapsed staircase taken by an insurer's adjuster the next day", bucket: "Ordinary work product" }, { text: "An adjuster's memo predicting which party a jury would blame", bucket: "Opinion work product" }, { text: "Signed statements taken from two employee witnesses", bucket: "Ordinary work product" }, { text: "A lawyer's notes setting out trial strategy and legal theories", bucket: "Opinion work product" }] },
             ],
             status: "book", src: "FRCP 26(b)(3), 26(b)(4), 26(b)(5), 26(f)(3)(D), 16(b)(3)(B)(iv); Hickman v. Taylor, 329 U.S. 495 (1947); civpro.md §10.1",
           },
@@ -1067,10 +1040,25 @@
             say: "After a clawback notice: return, sequester or destroy, and do not use the material until the court decides.",
             status: "book", src: "FRCP 26(b)(5)(B); FRE 502(b)",
           },
+          {
+            id: "u3-h-26b5-privilege-log", kind: "hypo", cat: "III.E", callType: "motion", rule: "u3-r-26-wp", issue: "describing withheld privileged documents",
+            stem: "In a federal contract action, the defendant answered a document request by producing some files and withholding 300 others, stating only that they were privileged and protected. It gave no description of the withheld documents. Neither the parties' Rule 26(f) discovery plan nor the scheduling order said anything about the timing or method of privilege logs. The plaintiff moved to compel.",
+            call: "How should the court rule on the motion?",
+            options: [
+              { text: "Order the defendant to describe the withheld documents in a way that, without revealing protected information, lets the plaintiff assess each claim.", why: "Rule 26(b)(5)(A): an express claim plus a description that lets others assess it. Since Dec. 1, 2025, the Rule 26(f) plan and scheduling order may also set a log's timing and method." },
+              { text: "Deny it, because a party asserting privilege need only state that the material is privileged.", why: "A bare label does not satisfy Rule 26(b)(5)(A), which also requires a description of what is withheld.", trap: 2 },
+              { text: "Order all 300 documents produced, because failure to serve a privilege log automatically waives the privilege.", why: "Waiver is not automatic; the ordinary first step is an order to describe the withheld documents.", trap: 7 },
+              { text: "Deny it, because the timing and method of privilege logs may be set only in a scheduling order, and this one is silent.", why: "The 2025 amendments let the plan and order address logs; when they are silent, Rule 26(b)(5)(A) still applies.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["gave no description of the withheld documents"],
+            say: "Withholding for privilege takes an express claim and a description that lets the other side assess it.",
+            status: "book", src: "FRCP 26(b)(5)(A), 26(f)(3)(D), 16(b)(3)(B)(iv) (as amended Dec. 1, 2025)",
+          },
         ],
       },
       {
-        id: "u3l6",
+        id: "u3l7",
         title: "Discovery: tools, limits and sanctions",
         items: [
           {
@@ -1083,8 +1071,8 @@
             cite: "FRCP 30(a)(2)", citeAsk: "Which rule sets the limit of 10 depositions per side?",
             numbers: [{ label: "Depositions per side", value: "10" }, { label: "Deposition length", value: "one day of 7 hours" }, { label: "Interrogatories", value: "25, including discrete subparts" }, { label: "Responses to interrogatories, document requests, admissions", value: "30 days" }],
             ex: [
-              { facts: "A plaintiff, having taken 10 depositions, notices an eleventh without leave.", result: "Needs a stipulation or leave of court." },
-              { facts: "A party ignores requests for admission about a signature for 45 days.", result: "The matter is admitted and conclusively established." },
+              { facts: "A defendant that has taken 10 depositions wants to depose the plaintiff's former supervisor too.", result: "Needs a stipulation or leave of court." },
+              { facts: "A party ignores a request to admit that a shipment arrived on time for 40 days.", result: "The matter is admitted and conclusively established." },
             ],
             terms: ["deposition", "interrogatory", "request for admission", "subpoena"],
             quiz: [
@@ -1100,10 +1088,7 @@
           { id: "u3-n-deposition-hours", kind: "num", cat: "III.E", ask: "Hours in the one day allowed for a deposition", answer: "7 hours", alt: ["7", "seven hours", "seven"], say: "One day of 7 hours; more needs a stipulation or an order.", status: "book", src: "FRCP 30(d)(1)" },
           { id: "u3-n-interrogatories-25", kind: "num", cat: "III.E", ask: "Interrogatories, including discrete subparts, a party may serve on another party without leave", answer: "25", alt: ["twenty-five", "25 interrogatories", "twenty-five interrogatories"], say: "25 including discrete subparts; to parties only.", status: "book", src: "FRCP 33(a)(1)" },
           { id: "u3-n-rfa-30", kind: "num", cat: "III.E", ask: "Days after service within which a party must answer or object to a request for admission before the matter is admitted", answer: "30 days", alt: ["30", "thirty days", "thirty"], hook: "21-14-28-30-60-90: here is the 30.", say: "Silence for 30 days admits the matter; it is conclusively established.", status: "book", src: "FRCP 36(a)(3)" },
-          { id: "u3-n-disclosures-14", kind: "num", cat: "III.E", ask: "Days after the Rule 26(f) conference when initial disclosures are due", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after the Rule 26(f) conference, unless stipulated or ordered otherwise.", status: "book", src: "FRCP 26(a)(1)(C)" },
-          { id: "u3-n-26f2-14", kind: "num", cat: "III.E", ask: "Days after the Rule 26(f) conference within which the parties must submit to the court their written report outlining the discovery plan", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after the conference: the report and the initial disclosures both come due.", status: "book", src: "FRCP 26(f)(2)" },
           { id: "u3-n-26a3-14", kind: "num", cat: "III.E", ask: "Days after pretrial disclosures are made within which objections to deposition designations and to exhibits must be served (an objection not made is waived, except under FRE 402 and 403)", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after the pretrial disclosures, or the objection is waived, except relevance and Rule 403.", status: "book", src: "FRCP 26(a)(3)(B)" },
-          { id: "u3-n-expert-90", kind: "num", cat: "III.E", ask: "Days before trial by which a party must disclose its testifying experts, absent a stipulation or order", answer: "90 days", alt: ["90", "ninety days", "ninety"], hook: "21-14-28-30-60-90: and here is the 90.", say: "At least 90 days before trial; rebuttal experts within 30 days after the other side's disclosure.", status: "book", src: "FRCP 26(a)(2)(D)" },
           { id: "u3-n-subpoena-100", kind: "num", cat: "III.E", ask: "The geographic limit, in miles, on where a Rule 45 subpoena may command a person to attend a deposition or produce documents", answer: "100", alt: ["one hundred"], say: "Within 100 miles of where the person lives, works, or regularly transacts business in person.", status: "book", src: "FRCP 45(c)(1)" },
           {
             id: "u3-p-discovery-numbers", kind: "pairs", set: "Discovery clocks and counts", mode: "number",
@@ -1136,18 +1121,33 @@
           },
           {
             id: "u3-h-30-eleventh", kind: "hypo", cat: "III.E", callType: "motion", rule: "u3-r-26-tools", issue: "ten-deposition limit per side", grid: true,
-            stem: "In a federal action, a plaintiff who has already taken ten depositions notices an eleventh, of a nonparty witness, without a stipulation and without seeking leave of court. The defendant has taken only four depositions. The defendant moves to quash the notice.",
+            stem: "In a federal action, a plaintiff who has already taken ten depositions notices an eleventh, of a nonparty witness, and serves the witness with a subpoena, without a stipulation and without seeking leave of court. The defendant has taken only four depositions. The defendant moves to quash the notice.",
             call: "How should the court rule on the motion?",
             options: [
               { text: "Grant, because a side may take no more than ten depositions without a stipulation or leave of court.", why: "Rule 30(a)(2)(A)(i): leave is required if the deposition would result in more than ten by the plaintiffs, the defendants, or the third-party defendants." },
               { text: "Deny, because the defendant has used only four depositions and the limit is shared by all parties.", why: "The limit is ten per side. One side's unused depositions do not pass to the other.", trap: 5 },
               { text: "Deny, because the deposition of a nonparty does not count toward the limit.", why: "Depositions of nonparties count toward the limit for the side that takes them.", trap: 5 },
-              { text: "Grant, because the deposition of a nonparty requires a Rule 45 subpoena.", why: "True, but it does not answer the call: the objection is that the limit has been reached.", trap: 6 },
+              { text: "Grant, because the deposition of a nonparty requires a Rule 45 subpoena.", why: "A subpoena was served; the defect is that the plaintiffs' side has already taken its ten depositions.", trap: 1 },
             ],
             answer: 0,
             facts: ["has already taken ten depositions", "without a stipulation and without seeking leave of court"],
             say: "Ten depositions per side; the eleventh needs a stipulation or leave.",
             status: "book", src: "FRCP 30(a)(2)(A)(i), 45",
+          },
+          {
+            id: "u3-h-45-hundred-miles", kind: "hypo", cat: "III.E", callType: "motion", rule: "u3-r-26-tools", issue: "subpoena 100-mile limit", grid: true,
+            stem: "In a federal action pending in State A, the plaintiff served a subpoena on a nonparty witness commanding her to appear for a deposition at the plaintiff's lawyer's office. The witness lives and works 250 miles from that office and does not regularly transact business in person anywhere near it. She timely moved, in the court for the district where compliance is required, to quash the subpoena.",
+            call: "How should the court rule on the motion?",
+            options: [
+              { text: "Quash it, because a subpoena may command a deposition only within 100 miles of where the person resides, is employed, or regularly transacts business in person.", why: "Rule 45(c)(1)(A) and 45(d)(3)(A)(ii): the court must quash a subpoena that requires compliance beyond those geographic limits." },
+              { text: "Deny it, because a federal subpoena may be served anywhere in the United States.", why: "Nationwide service is true (Rule 45(b)(2)), but the place of compliance is still limited by Rule 45(c).", trap: 6 },
+              { text: "Deny it, because a nonparty may challenge a subpoena only by refusing to appear and defending a contempt motion.", why: "Rule 45(d)(3) lets a person move to quash or modify a subpoena.", trap: 5 },
+              { text: "Quash it, because a nonparty may never be compelled to testify at a deposition.", why: "A Rule 45 subpoena compels a nonparty's deposition within the geographic limits.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["lives and works 250 miles from that office"],
+            say: "A subpoena can be served nationwide, but compliance must be within 100 miles of where the witness lives, works, or does business in person.",
+            status: "book", src: "FRCP 45(b)(2), 45(c)(1)(A), 45(d)(3)(A)(ii)",
           },
           {
             id: "u3-h-36-silence", kind: "hypo", cat: "III.E", callType: "status", rule: "u3-r-26-tools", issue: "request for admission unanswered",
@@ -1183,13 +1183,13 @@
             id: "u3-r-37", kind: "rule", title: "Discovery sanctions and lost ESI (Rules 26(g) and 37)", cat: "III.E",
             say: "Confer, then move to compel; the loser pays unless justified; lost electronic data earns an adverse inference only on intent to deprive.",
             elements: ["Confer in good faith, then move to compel (Rule 37(a))", "If granted, the court must award expenses unless the position was justified or an award would be unjust", "Violating a discovery order opens the Rule 37(b) menu of sanctions", "Lost ESI: curative measures on prejudice; an adverse inference or default only on intent to deprive"],
-            ordered: true,
+            ordered: false,
             distractorElements: ["Lost ESI: an adverse inference follows from negligence", "Sanctions require a prior court order in every case"],
             exceptions: ["Negligence, even gross negligence, cannot support an adverse-inference instruction for lost ESI (37(e)(2))", "Failure to attend one's own deposition or to serve any response to interrogatories permits sanctions without a prior order (37(d))", "Signing a discovery paper certifies a reasonable inquiry; a violation requires an appropriate sanction (26(g))", "A party that fails to disclose may not use the information unless the failure was substantially justified or harmless (37(c)(1))"],
             cite: "FRCP 37(e)", citeAsk: "Which rule governs the loss of electronically stored information?",
             ex: [
-              { facts: "A company carelessly lets auto-delete wipe texts after litigation was foreseeable; the texts cannot be replaced.", result: "Curative measures on prejudice; no adverse-inference instruction without intent to deprive." },
-              { facts: "A company deletes texts to keep them from the plaintiff.", result: "Intent to deprive: adverse inference, or even default." },
+              { facts: "After suit was foreseeable, an employee carelessly wipes a laptop holding emails that cannot be replaced.", result: "Curative measures on prejudice; no adverse-inference instruction without intent to deprive." },
+              { facts: "A manager deletes a chat log to keep it from the plaintiff.", result: "Intent to deprive: adverse inference, or even default." },
             ],
             terms: ["spoliation", "adverse inference", "intent to deprive"],
             quiz: [
@@ -1231,7 +1231,7 @@
         ],
       },
       {
-        id: "u3l7",
+        id: "u3l8",
         title: "Pretrial order, injunctions, ending without trial",
         items: [
           {
@@ -1244,7 +1244,7 @@
             cite: "FRCP 16(b)(2)", citeAsk: "Which subdivision sets the time for the scheduling order?",
             numbers: [{ label: "Scheduling order", value: "the earlier of 90 days after any defendant is served or 60 days after any defendant appears" }],
             ex: [
-              { facts: "A plaintiff moves to add a new claim three months after the scheduling order's amendment deadline, saying only that justice requires it.", result: "Good cause under Rule 16(b)(4) must be shown first." },
+              { facts: "After the deadline for joining parties, a defendant asks to add a third-party defendant it has known about for a year.", result: "Good cause under Rule 16(b)(4), which turns on diligence, must be shown first." },
               { facts: "A claim is omitted from the final pretrial order and the plaintiff wants to try it.", result: "Only to prevent manifest injustice." },
             ],
             terms: ["scheduling order", "final pretrial order", "manifest injustice"],
@@ -1271,7 +1271,6 @@
           },
           {
             id: "u3-h-16b4-good-cause", kind: "hypo", cat: "III.G", exam: ["mbe"], callType: "motion", rule: "u3-r-16", issue: "amendment after the scheduling deadline", grid: true,
-            assume: "Apply the majority approach to amendments requested after a scheduling-order deadline.",
             stem: "A scheduling order in a federal action set a deadline for amending pleadings. Four months after that deadline passed, and with discovery nearly complete, a plaintiff moved for leave to add a new claim. The plaintiff knew the facts supporting the claim before the deadline but waited, and she offers no reason for the delay other than that leave to amend is freely given when justice so requires.",
             call: "How should the court rule on the motion?",
             options: [
@@ -1297,8 +1296,8 @@
             cite: "FRCP 65(b)(2)", citeAsk: "Which subsection limits a TRO without notice to 14 days?",
             numbers: [{ label: "TRO without notice", value: "up to 14 days; extendable for a like period for good cause, or longer by consent" }],
             ex: [
-              { facts: "A movant shows a strong likelihood of success but only compensable lost sales.", result: "Denied: no irreparable harm." },
-              { facts: "A contractor, knowing of an injunction, helps the enjoined company do the forbidden act.", result: "Bound: acting in concert with the party, with actual notice." },
+              { facts: "A tenant facing removal from a storage unit shows only the cost of moving to another unit.", result: "Denied: money covers it, so no irreparable harm." },
+              { facts: "An enjoined company's sales manager, served with the order, keeps taking orders for the banned product.", result: "Bound: an employee of a party with actual notice." },
             ],
             terms: ["irreparable harm", "status quo", "security", "active concert"],
             quiz: [
@@ -1375,18 +1374,19 @@
           {
             id: "u3-r-41", kind: "rule", title: "Dismissing without a trial (Rule 41)", cat: "III.F", exam: ["mbe"],
             say: "A plaintiff dismisses by notice until the defendant serves an answer or a summary-judgment motion; a second notice dismissal is on the merits.",
-            elements: ["File a notice (or a stipulation of all appearing parties) before an answer or summary-judgment motion is served", "A Rule 12(b) motion does not cut off the right to dismiss by notice", "The dismissal is without prejudice unless the notice says otherwise", "Two-dismissal rule: a second notice dismissal of the same claim is an adjudication on the merits"],
+            elements: ["File a notice of dismissal before the opposing party serves an answer or a summary-judgment motion", "A Rule 12(b) motion does not cut off the right to dismiss by notice", "The dismissal is without prejudice unless the notice says otherwise", "Two-dismissal rule: a second notice dismissal of the same claim is an adjudication on the merits"],
             ordered: false,
-            distractorElements: ["A Rule 12(b) motion ends the right to dismiss by notice", "The defendant must consent to a notice dismissal"],
-            exceptions: ["After that point, dismissal is by stipulation or court order on terms the court considers proper (Rule 41(a)(2)), without prejudice unless stated", "The two-dismissal rule counts a prior dismissal of any federal or state action based on or including the same claim", "Rule 41(b): involuntary dismissal operates as an adjudication on the merits, except for lack of jurisdiction, improper venue, or failure to join a Rule 19 party", "Class actions need court approval to be dismissed (Rule 23(e))"],
+            distractorElements: ["A Rule 12(b) motion ends the right to dismiss by notice", "The defendant must consent to a notice dismissal", "A stipulation of dismissal must be filed before the answer"],
+            exceptions: ["A stipulation signed by all parties who have appeared may be filed at any time (Rule 41(a)(1)(A)(ii)); otherwise dismissal needs a court order on terms the court considers proper (Rule 41(a)(2)), without prejudice unless stated", "The two-dismissal rule counts a prior dismissal of any federal or state action based on or including the same claim", "Rule 41(b): involuntary dismissal operates as an adjudication on the merits, except for lack of jurisdiction, improper venue, or failure to join a Rule 19 party", "Class actions need court approval to be dismissed (Rule 23(e))"],
             cite: "FRCP 41(a)(1)(A)", citeAsk: "Which rule lets a plaintiff dismiss by notice before the defendant answers or moves for summary judgment?",
             ex: [
-              { facts: "A defendant serves a Rule 12(b)(6) motion and the plaintiff files a notice of dismissal two days later.", result: "Effective, without prejudice: no answer or summary-judgment motion yet." },
+              { facts: "A defendant serves a Rule 12(b)(2) motion, and a week later the plaintiff files a notice of dismissal.", result: "Effective, without prejudice: no answer or summary-judgment motion yet." },
               { facts: "A plaintiff who once dismissed a state action by notice dismisses the same claim by notice again in federal court.", result: "The second dismissal is on the merits." },
             ],
             terms: ["voluntary dismissal", "two-dismissal rule", "with prejudice"],
             quiz: [
               { t: "tf", q: "A defendant's Rule 12(b)(6) motion ends the plaintiff's right to dismiss by notice.", a: false, why: "Only the service of an answer or a motion for summary judgment ends it." },
+              { t: "tf", q: "After the defendant has answered, the plaintiff may still dismiss without a court order by filing a stipulation signed by all parties who have appeared.", a: true, why: "Rule 41(a)(1)(A)(ii): the answer cuts off only the notice route; a stipulation may be filed at any time." },
               { t: "tf", q: "Under Rule 41(b), a dismissal for improper venue operates as an adjudication on the merits.", a: false, why: "Dismissals for lack of jurisdiction, improper venue, or failure to join a Rule 19 party are excepted." },
               { t: "mcq", q: "A plaintiff dismisses the same claim by notice twice, once in state court and once in federal court. The second dismissal…", options: ["Operates as an adjudication on the merits", "Is without prejudice", "Requires leave of court"], a: "Operates as an adjudication on the merits", why: "Rule 41(a)(1)(B): the earlier dismissal may be of any federal- or state-court action based on or including the same claim." },
             ],
@@ -1427,7 +1427,7 @@
             id: "u3-so-on-the-merits", kind: "sort", cat: "VI.A", exam: ["mbe"], mode: "yesno", q: "An adjudication on the merits for preclusion, or not?",
             buckets: ["On the merits", "Not on the merits"],
             items: [
-              { text: "Dismissal for failure to prosecute, with no statement about prejudice", bucket: "On the merits", why: "Rule 41(b): on the merits unless the order says otherwise or an exception applies." },
+              { text: "In a federal-question case, dismissal for failure to prosecute, with no statement about prejudice", bucket: "On the merits", why: "Rule 41(b): on the merits unless the order says otherwise. In a diversity case, the forum State's preclusion law sets the effect (Semtek)." },
               { text: "Dismissal for failure to state a claim", bucket: "On the merits", why: "A Rule 12(b)(6) dismissal is an adjudication on the merits." },
               { text: "Summary judgment for the defendant", bucket: "On the merits", why: "A decision on the merits of the claim." },
               { text: "A second notice dismissal of the same claim", bucket: "On the merits", why: "Rule 41(a)(1)(B), the two-dismissal rule." },
@@ -1438,7 +1438,7 @@
               { text: "A first dismissal by notice", bucket: "Not on the merits", why: "Without prejudice unless the notice says otherwise." },
             ],
             say: "Jurisdiction, venue and Rule 19: not the merits. Failure to state a claim and a second notice: the merits.",
-            status: "book", src: "FRCP 41(a)(1)(B), 41(b), 12(b)(6); civpro.md DF-4",
+            status: "book", src: "FRCP 41(a)(1)(B), 41(b), 12(b)(6); Semtek Int'l Inc. v. Lockheed Martin Corp., 531 U.S. 497 (2001); civpro.md DF-4",
           },
           {
             id: "u3-r-68", kind: "rule", title: "Offers of judgment (Rule 68)", cat: "III.F", exam: ["mbe"],
@@ -1450,8 +1450,8 @@
             cite: "FRCP 68(a)", citeAsk: "Which rule governs offers of judgment?",
             numbers: [{ label: "Offer of judgment", value: "served at least 14 days before trial; 14 days to accept" }],
             ex: [
-              { facts: "A defendant offers $20,000, the plaintiff refuses, and the jury awards $15,000.", result: "The plaintiff pays the defendant's post-offer costs." },
-              { facts: "A defendant offers $20,000, the plaintiff refuses, and the defendant wins at trial.", result: "Rule 68 does not apply." },
+              { facts: "A defendant offers $50,000, the plaintiff refuses, and the jury awards $42,000.", result: "The plaintiff pays the defendant's post-offer costs." },
+              { facts: "A defendant offers $50,000, the plaintiff refuses, and the defendant wins at trial.", result: "Rule 68 does not apply." },
             ],
             terms: ["offer of judgment", "post-offer costs"],
             quiz: [
@@ -1481,8 +1481,8 @@
         ],
       },
       {
-        id: "u3l8",
-        title: "Motions: Rule 12, summary judgment, judgment as a matter of law",
+        id: "u3l9",
+        title: "Motions on the pleadings (Rule 12)",
         items: [
           {
             id: "u3-r-12-waiver", kind: "rule", title: "Rule 12 defenses: what is waived and what survives", cat: "V.A",
@@ -1494,7 +1494,7 @@
             cite: "FRCP 12(h)(1)", citeAsk: "Which rule provides that personal-jurisdiction, venue, process and service defenses are waived if omitted?",
             numbers: [{ label: "Answer after a Rule 12 motion is denied or postponed", value: "14 days after notice of the court's action" }],
             ex: [
-              { facts: "A defendant files a Rule 12(b)(6) motion, loses, and then answers asserting improper venue.", result: "Venue was waived by omission from the first Rule 12 motion." },
+              { facts: "A defendant moves to dismiss for insufficient service, loses, and then moves to dismiss for lack of personal jurisdiction.", result: "Personal jurisdiction was waived by omission from the first Rule 12 motion." },
               { facts: "The same defendant's answer asserts failure to state a claim.", result: "Preserved: it may be raised in the answer, by a Rule 12(c) motion, or at trial." },
             ],
             terms: ["waiver", "consolidation of defenses", "failure to state a claim"],
@@ -1546,7 +1546,7 @@
             cite: "FRCP 12(d)", citeAsk: "Which subdivision converts a Rule 12(b)(6) motion into one for summary judgment?",
             numbers: [{ label: "Motion to strike when no response is allowed", value: "21 days after service of the pleading" }],
             ex: [
-              { facts: "A defendant attaches an affidavit contradicting the complaint, and the court considers it.", result: "Converted: treated as a Rule 56 motion, and everyone may submit material." },
+              { facts: "A defendant attaches deposition excerpts from another case to its Rule 12(b)(6) motion, and the court relies on them.", result: "Converted: treated as a Rule 56 motion, and everyone may submit material." },
               { facts: "A defendant answers and then moves on the ground that the complaint states no claim.", result: "A Rule 12(c) motion, decided on the 12(b)(6) standard." },
             ],
             terms: ["conversion", "judgment on the pleadings", "judicial notice"],
@@ -1588,6 +1588,46 @@
             status: "book", src: "FRCP 12(c), 12(h)(2)(B), 7(a), 8(c)(1)",
           },
           {
+            id: "u3-so-12-which-motion", kind: "sort", cat: "III.B", mode: "category", q: "Which Rule 12 motion fits?",
+            buckets: ["12(b)(6)", "12(c)", "12(e)", "12(f)"],
+            items: [
+              { text: "The complaint is so vague that the defendant cannot reasonably prepare a response", bucket: "12(e)", why: "A more definite statement, made before the responsive pleading is filed." },
+              { text: "The defendant wants a clearer statement of which claims are asserted against it", bucket: "12(e)", why: "A more definite statement of a vague or ambiguous pleading." },
+              { text: "The complaint includes an immaterial and scandalous paragraph about the defendant's family", bucket: "12(f)", why: "Motion to strike immaterial, impertinent, or scandalous matter." },
+              { text: "One paragraph repeats an earlier paragraph word for word", bucket: "12(f)", why: "Motion to strike redundant matter." },
+              { text: "Before answering, the defendant says that the complaint's facts, taken as true, show no right to relief", bucket: "12(b)(6)", why: "Failure to state a claim, raised before the responsive pleading." },
+              { text: "Before answering, the defendant argues that the complaint asserts a theory the law does not recognize", bucket: "12(b)(6)", why: "Failure to state a claim, raised before the responsive pleading." },
+              { text: "After the answer, the pleadings alone show that the movant is entitled to judgment", bucket: "12(c)", why: "Judgment on the pleadings, once the pleadings are closed and early enough not to delay trial." },
+              { text: "After answering, a defendant argues that the complaint states no claim", bucket: "12(c)", why: "Failure to state a claim may be raised by a Rule 12(c) motion (Rule 12(h)(2)(B))." },
+            ],
+            say: "Vague: 12(e). Scandalous or redundant: 12(f). No claim before answering: 12(b)(6). Judgment after the pleadings close: 12(c).",
+            status: "book", src: "FRCP 12(b)(6), 12(c), 12(e), 12(f), 12(h)(2)",
+          },
+          {
+            id: "u3-h-12e-definite", kind: "hypo", cat: "III.B", callType: "motion", rule: "u3-r-12b6", issue: "more definite statement not provided", grid: true,
+            stem: "A plaintiff's federal complaint alleged only that 'the defendants breached their agreements,' without saying which of the four defendants made which agreement or when. Before answering, one defendant moved for a more definite statement, pointing out those defects and the details it wanted. The court granted the motion. Thirty days after notice of the order, the plaintiff had filed nothing, and the court had set no other time. The defendant moved to strike the complaint.",
+            call: "May the court strike the complaint?",
+            options: [
+              { text: "Yes, because the plaintiff did not obey the order within 14 days after notice of it, so the court may strike the pleading or issue another appropriate order.", why: "Rule 12(e): if an order for a more definite statement is not obeyed within 14 days after notice, or the time the court sets, the court may strike the pleading." },
+              { text: "No, because a vague complaint may be challenged only by a motion to dismiss for failure to state a claim.", why: "Rule 12(e) is its own motion, for a pleading so vague or ambiguous that a party cannot reasonably prepare a response.", trap: 5 },
+              { text: "No, because the plaintiff has 21 days after notice of the order to provide the more definite statement.", why: "The period is 14 days after notice of the order, unless the court sets another time.", trap: 5 },
+              { text: "Yes, because a complaint that the court has found vague must be dismissed with prejudice.", why: "Striking is permitted, not required, and nothing makes it a dismissal with prejudice.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["Thirty days after notice of the order", "the court had set no other time"],
+            say: "A Rule 12(e) order not obeyed within 14 days after notice lets the court strike the pleading or make another fitting order.",
+            status: "book", src: "FRCP 12(e)",
+          },
+          { id: "u3-n-12e-14", kind: "num", cat: "III.B", ask: "Days after notice of an order granting a motion for a more definite statement within which the pleader must comply, unless the court sets another time", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after notice of the order; otherwise the court may strike the pleading.", status: "book", src: "FRCP 12(e)" },
+          { id: "u3-n-answer-after-motion", kind: "num", cat: "III.B", ask: "Days after notice of the court's action within which a defendant must answer when a Rule 12 motion is denied or postponed", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "Making a Rule 12 motion pauses the answer clock; 14 days after the ruling it restarts.", status: "book", src: "FRCP 12(a)(4)(A)" },
+          { id: "u3-n-12f-21", kind: "num", cat: "III.B", ask: "Days after being served with a pleading to which no response is allowed within which a party may move to strike it under Rule 12(f)", answer: "21 days", alt: ["21", "twenty-one days", "twenty-one"], say: "21 days when no response is allowed; otherwise before responding.", status: "book", src: "FRCP 12(f)(2)" },
+        ],
+      },
+      {
+        id: "u3l10",
+        title: "Summary judgment and judgment as a matter of law",
+        items: [
+          {
             id: "u3-r-56", kind: "rule", title: "Summary judgment (Rule 56)", cat: "V.A",
             say: "Summary judgment asks one question: could a reasonable jury find for the other side? If not, and the law favors the movant, the court grants it.",
             elements: ["The movant shows no genuine dispute as to any material fact", "The movant is entitled to judgment as a matter of law", "The court views the evidence and draws inferences for the nonmovant, without weighing credibility"],
@@ -1597,8 +1637,8 @@
             cite: "FRCP 56(a)", citeAsk: "Which subdivision states the summary-judgment standard?",
             numbers: [{ label: "Summary-judgment motion deadline", value: "30 days after the close of all discovery" }],
             ex: [
-              { facts: "Two witnesses, each with personal knowledge, swear to different prices.", result: "A genuine dispute that turns on credibility: summary judgment is denied." },
-              { facts: "After discovery the plaintiff has identified no evidence of an essential element and cites only her complaint.", result: "Summary judgment for the defendant under Celotex." },
+              { facts: "Two eyewitnesses, each with personal knowledge, swear to different colors of the traffic light.", result: "A genuine dispute that turns on credibility: summary judgment is denied." },
+              { facts: "After discovery a buyer has no evidence that the seller made the promise she sues on, and offers only her pleading.", result: "Summary judgment for the seller under Celotex." },
             ],
             terms: ["genuine dispute", "material fact", "movant"],
             quiz: [
@@ -1628,16 +1668,16 @@
             id: "u3-c-celotex", kind: "case", subject: "civpro", name: "Celotex Corp. v. Catrett", year: 1986, holding: "A summary-judgment movant that will not bear the burden of proof at trial may discharge its burden by pointing to an absence of evidence on an essential element; the nonmovant must then cite specific facts.", facts: "A widow said her husband's death came from asbestos but identified no evidence he had been exposed to the defendant's product.", say: "Celotex: you need not disprove their case, just show they have no evidence for it.", status: "general", src: "Celotex Corp. v. Catrett, 477 U.S. 317 (1986)" },
           {
             id: "u3-h-56-conflicting-affidavits", kind: "hypo", cat: "V.A", callType: "motion", rule: "u3-r-56", issue: "summary judgment: conflicting affidavits", grid: true,
-            stem: "A buyer sued a seller in federal court for breach of an oral agreement to sell equipment for $50,000. The seller moved for summary judgment, supporting the motion with its own affidavit stating that the price discussed was $80,000 and that no agreement was reached. The buyer responded with an affidavit, made on personal knowledge, stating that the parties agreed on $50,000 during a phone call. The judge finds the seller's account more believable.",
+            stem: "A warehouse owner sued a painting contractor from another State in federal court for breach of an oral agreement to repaint the warehouse within two months for $90,000. The contractor moved for summary judgment, supporting the motion with its own affidavit stating that the price discussed was $140,000 and that no agreement was reached. The owner responded with an affidavit, made on personal knowledge, stating that the parties agreed on $90,000 during a phone call. The judge finds the contractor's account more believable.",
             call: "How should the court rule on the motion?",
             options: [
-              { text: "Deny, because the sworn accounts conflict on a material fact, and credibility is for the factfinder.", why: "Rule 56(a): a genuine dispute exists if a reasonable jury could find for the buyer; the court may not weigh credibility." },
-              { text: "Grant, because the seller's account is more believable and the court may choose between conflicting affidavits.", why: "Summary judgment does not permit weighing credibility; inferences go to the nonmovant.", trap: 4 },
-              { text: "Grant, because the buyer's affidavit is self-serving and so cannot create a genuine dispute.", why: "An affidavit on personal knowledge that states specific facts can create a genuine dispute even though it favors the party that submitted it.", trap: 5 },
+              { text: "Deny, because the sworn accounts conflict on a material fact, and credibility is for the factfinder.", why: "Rule 56(a): a genuine dispute exists if a reasonable jury could find for the owner; the court may not weigh credibility." },
+              { text: "Grant, because the contractor's account is more believable and the court may choose between conflicting affidavits.", why: "Summary judgment does not permit weighing credibility; inferences go to the nonmovant.", trap: 4 },
+              { text: "Grant, because the owner's affidavit is self-serving and so cannot create a genuine dispute.", why: "An affidavit on personal knowledge that states specific facts can create a genuine dispute even though it favors the party that submitted it.", trap: 5 },
               { text: "Deny, because summary judgment is unavailable in a case that turns on an oral agreement.", why: "Summary judgment is available whenever there is no genuine dispute; here the dispute exists for a different reason.", trap: 1 },
             ],
             answer: 0,
-            facts: ["made on personal knowledge", "the parties agreed on $50,000 during a phone call"],
+            facts: ["made on personal knowledge", "the parties agreed on $90,000 during a phone call"],
             say: "Two sworn accounts that conflict on a material fact mean a jury question, however believable one sounds.",
             status: "book", src: "FRCP 56(a), 56(c)(4); Anderson v. Liberty Lobby, Inc., 477 U.S. 242 (1986)",
           },
@@ -1668,7 +1708,7 @@
             cite: "FRCP 50(b)", citeAsk: "Which subdivision lets a party renew a motion for judgment as a matter of law after the verdict?",
             numbers: [{ label: "Renewed JMOL (Rule 50(b))", value: "28 days after entry of judgment, not extendable" }],
             ex: [
-              { facts: "A defendant rests without moving for JMOL, loses the verdict, and moves under Rule 50(b) ten days later.", result: "Denied: no Rule 50(a) motion was made before the case went to the jury." },
+              { facts: "A plaintiff never moves for JMOL at trial, loses the verdict, and moves under Rule 50(b) within 28 days.", result: "Denied: no Rule 50(a) motion was made before the case went to the jury." },
               { facts: "A judge personally disbelieves the plaintiff's only witness.", result: "Not a ground for JMOL: the court may not weigh credibility." },
             ],
             terms: ["judgment as a matter of law", "directed verdict", "JNOV", "fully heard"],
@@ -1703,7 +1743,7 @@
               { text: "Deny, because on a motion for judgment as a matter of law the court may not weigh the evidence or assess credibility.", why: "Rule 50(a): the question is whether a reasonable jury could find for the plaintiff. The credibility attack belongs in a new-trial motion." },
               { text: "Grant, because the trial judge may decide credibility when ruling on the motion.", why: "The judge may weigh evidence on a Rule 59 new-trial motion, not on a motion for judgment as a matter of law.", trap: 4 },
               { text: "Grant, because notice cannot be proved through the testimony of a single witness.", why: "One witness's testimony, if believed, can be legally sufficient.", trap: 5 },
-              { text: "Deny, because judgment as a matter of law may be sought only after the jury has returned a verdict.", why: "Rule 50(a) allows the motion once a party has been fully heard, before submission.", trap: 11 },
+              { text: "Deny, because judgment as a matter of law may be sought only after the jury has returned a verdict.", why: "Rule 50(a) allows the motion once a party has been fully heard, before submission; a post-verdict motion renews it under Rule 50(b).", trap: 5 },
             ],
             answer: 0,
             facts: ["the employee had lied", "personally found the employee not credible"],
@@ -1711,12 +1751,27 @@
             status: "book", src: "FRCP 50(a)(1); FRCP 59(a); civpro.md PT-2",
           },
           {
+            id: "u3-h-50c-conditional", kind: "hypo", cat: "V.B", callType: "motion", rule: "u3-r-50", issue: "conditional ruling on a new trial",
+            stem: "After a jury returned a verdict for a plaintiff in a federal negligence action, the defendant, which had moved under Rule 50(a) before the case went to the jury, timely renewed its motion under Rule 50(b) and joined an alternative request for a new trial under Rule 59. The court granted the renewed motion and entered judgment as a matter of law for the defendant.",
+            call: "What must the court do about the alternative request for a new trial?",
+            options: [
+              { text: "Rule on it conditionally, deciding whether a new trial should be granted if the judgment is later vacated or reversed, and state the grounds.", why: "Rule 50(c)(1). If the court of appeals reverses the judgment as a matter of law, the conditional ruling says whether a new trial follows." },
+              { text: "Deny it as moot, because a judgment as a matter of law ends the case.", why: "Rule 50(c)(1) requires a conditional ruling so that a reversal on appeal does not leave the new-trial question open.", trap: 5 },
+              { text: "Grant it, because a party that wins judgment as a matter of law is always entitled to a new trial in the alternative.", why: "The conditional ruling may grant or deny a new trial on its merits; nothing makes it automatic.", trap: 7 },
+              { text: "Defer it until the court of appeals decides any appeal from the judgment.", why: "The district court rules on it now, conditionally; Rule 50(c) exists to avoid that delay.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["joined an alternative request for a new trial"],
+            say: "Grant JMOL, and also rule conditionally on any new-trial motion, with reasons, in case the judgment is reversed.",
+            status: "book", src: "FRCP 50(b), 50(c)(1)",
+          },
+          {
             id: "u3-h-dupree-legal", kind: "hypo", cat: "V.B", callType: "reverse", rule: "u3-r-50", issue: "legal issue preserved by summary judgment", grid: true,
             stem: "A federal court denied a defendant's motion for summary judgment, ruling as a matter of law that a federal statute applied to the plaintiff's claim. The facts were undisputed on that point. The case was tried to a jury, which found for the plaintiff. The defendant made no motion for judgment as a matter of law at trial and none after the verdict. On appeal, the defendant argues only that the district court misinterpreted the statute in the summary-judgment ruling.",
             call: "May the court of appeals consider the defendant's argument?",
             options: [
               { text: "Yes, because a purely legal question decided at summary judgment is preserved for appeal without a Rule 50 motion after trial.", why: "Dupree v. Younger (2023): a purely legal issue resolved at summary judgment need not be renewed in a post-trial Rule 50 motion." },
-              { text: "No, because an argument rejected at summary judgment is reviewable only if renewed in a Rule 50(b) motion.", why: "That was the older approach for fact-based rulings; Dupree holds that purely legal issues are preserved.", trap: 11 },
+              { text: "No, because an argument rejected at summary judgment is reviewable only if renewed in a Rule 50(b) motion.", why: "Some circuits required this even for purely legal issues before 2023; Dupree v. Younger holds that a purely legal issue decided at summary judgment is preserved. Fact-bound rulings still need Rule 50 motions (Ortiz).", trap: 11 },
               { text: "No, because the denial of summary judgment merges into the judgment after a full trial.", why: "Merger governs fact-bound sufficiency rulings (Ortiz), not purely legal ones.", trap: 10 },
               { text: "Yes, because denials of summary judgment are immediately appealable.", why: "A denial of summary judgment is interlocutory and is reviewed with the final judgment.", trap: 5 },
             ],
@@ -1763,10 +1818,24 @@
             say: "Dismissal, summary judgment and JMOL: no weighing. New trial and bench findings: weigh away.",
             status: "book", src: "FRCP 12(b)(6), 50, 52, 56, 59; civpro.md §13.1",
           },
+          {
+            id: "u3-p-motion-cases", kind: "pairs", set: "Motion and review cases", mode: "case-holding",
+            pairs: [
+              { l: "Anderson v. Liberty Lobby", r: "A dispute is genuine if a reasonable jury could find for the nonmovant" },
+              { l: "Scott v. Harris", r: "A version of events blatantly contradicted by an unchallenged video need not be credited" },
+              { l: "Unitherm Food Systems v. Swift-Eckrich", r: "A party that never renewed its motion under Rule 50(b) cannot get judgment as a matter of law or a new trial on appeal for insufficient evidence" },
+              { l: "Ortiz v. Jordan", r: "Denial of summary judgment on a factual dispute is not reviewable after a full trial" },
+              { l: "Dupree v. Younger", r: "A purely legal issue decided at summary judgment is preserved without a post-trial Rule 50(b) motion" },
+              { l: "Celotex Corp. v. Catrett", r: "A movant without the burden of proof may point to the absence of evidence" },
+            ],
+            spare: ["Conley v. Gibson"],
+            say: "Six cases the options may cite as authority; you need only the holdings.",
+            status: "general", src: "Anderson v. Liberty Lobby, Inc., 477 U.S. 242 (1986); Scott v. Harris, 550 U.S. 372 (2007); Unitherm (2006); Ortiz v. Jordan, 562 U.S. 180 (2011); Dupree v. Younger, 598 U.S. 729 (2023); Celotex (1986)",
+          },
         ],
       },
       {
-        id: "u3l9",
+        id: "u3l11",
         title: "After the verdict: new trial and relief from judgment",
         items: [
           {
@@ -1789,7 +1858,7 @@
             numbers: [{ label: "New trial (59(b)), alter or amend (59(e)), amended findings (52(b))", value: "28 days after entry of judgment, not extendable" }],
             ex: [
               { facts: "A jury awards $1,000,000 for a minor injury and the judge finds it excessive.", result: "Remittitur, with the plaintiff's choice of a new trial." },
-              { facts: "A jury awards $1 for undisputed bills above $40,000.", result: "A new trial; the judge may not add to the award." },
+              { facts: "A jury finds a hospital liable but awards less than the patient's undisputed lost wages.", result: "The judge may order a new trial, but may not raise the award." },
             ],
             terms: ["remittitur", "additur", "new trial"],
             quiz: [
@@ -1806,15 +1875,15 @@
             stem: "A jury awarded a plaintiff $1 in a federal personal-injury action, although the undisputed medical bills exceeded $40,000. On the plaintiff's timely Rule 59 motion, the judge found the award grossly inadequate and wished to avoid a retrial.",
             call: "What may the court do?",
             options: [
-              { text: "Grant a new trial on damages, because a federal court may not increase a jury's award by additur.", why: "Dimick v. Schiedt: additur violates the Seventh Amendment. A new trial limited to damages is available when damages are separable from liability." },
+              { text: "Order a new trial, because a federal court may not increase a jury's award by additur.", why: "Dimick v. Schiedt: additur violates the Seventh Amendment. The retrial may be limited to damages only if they are distinct and separable from liability (Gasoline Products)." },
               { text: "Increase the award to the amount of the undisputed medical bills, because additur is the counterpart of remittitur.", why: "Remittitur survives because the plaintiff may choose a new trial and the jury has found at least the reduced sum. Additur has no such support.", trap: 10 },
               { text: "Deny the motion, because a federal court may not disturb a jury's finding of damages.", why: "A court may grant a new trial when damages are inadequate or excessive.", trap: 7 },
-              { text: "Grant a new trial on all issues, including liability, because an inadequate award always shows that the jury compromised on liability.", why: "A retrial may be limited to damages when the issue is separable from liability.", trap: 7 },
+              { text: "Grant a new trial on all issues, including liability, because an inadequate award always shows that the jury compromised on liability.", why: "A tiny award may signal a compromise verdict, but not always; whether the retrial covers liability depends on whether damages are separable.", trap: 7 },
             ],
             answer: 0,
             facts: ["although the undisputed medical bills exceeded $40,000"],
             say: "Remittitur with a new-trial option: yes. Additur: never in federal court.",
-            status: "general", src: "Dimick v. Schiedt, 293 U.S. 474 (1935); FRCP 59(a); civpro.md PT-3",
+            status: "general", src: "Dimick v. Schiedt, 293 U.S. 474 (1935); Gasoline Products Co. v. Champlin Refining Co., 283 U.S. 494 (1931); FRCP 59(a); civpro.md PT-3",
           },
           {
             id: "u3-h-59-instruction-error", kind: "hypo", cat: "V.C", exam: ["mbe"], callType: "motion", rule: "u3-r-59", issue: "erroneous instruction: new trial, not JMOL",
@@ -1847,12 +1916,49 @@
             status: "book", src: "FRCP 59(e), 6(b)(2), 6(d); civpro.md PT-4",
           },
           {
+            id: "u3-r-6", kind: "rule", title: "Computing time (Rule 6)", cat: "III.B",
+            say: "Skip the trigger day, count every calendar day, and if the last day is a weekend or legal holiday, run to the next day that is not.",
+            elements: ["Exclude the day of the event that triggers the period", "Count every day, including Saturdays, Sundays, and legal holidays", "Include the last day of the period", "If the last day is a Saturday, Sunday, or legal holiday, the period runs until the end of the next day that is not"],
+            ordered: true,
+            distractorElements: ["Count the day of the triggering event as day 1", "Skip weekends when the period is shorter than 11 days"],
+            exceptions: ["Rule 6(d): 3 days are added after a period measured from service when service is by mail, by leaving the paper with the clerk, or by other means the recipient consented to; electronic service adds nothing", "Rule 6(b)(2): the court may not extend the time to act under Rules 50(b) and (d), 52(b), 59(b), (d) and (e), and 60(b)", "For electronic filing, the last day ends at midnight in the court's time zone"],
+            cite: "FRCP 6(a)(1)", citeAsk: "Which rule tells you how to count a time period stated in days?",
+            numbers: [{ label: "Extra days after service by mail", value: "3 days" }],
+            ex: [
+              { facts: "A response is due 21 days after service on Monday, March 1, 2027.", result: "Count from March 2: the last day is Monday, March 22." },
+              { facts: "A 21-day period is triggered on Saturday, May 1, 2027, and its last day is Saturday, May 22.", result: "The period runs to Monday, May 24, unless that day is a legal holiday." },
+            ],
+            terms: ["trigger event", "legal holiday", "three-day mail rule"],
+            quiz: [
+              { t: "tf", q: "In counting a 14-day period, the day of the event that triggers the period is day 1.", a: false, why: "Rule 6(a)(1)(A): exclude the day of the triggering event." },
+              { t: "tf", q: "Three days are added to a period that runs from service when the paper was served electronically.", a: false, why: "Since 2016, Rule 6(d) adds three days only for service by mail, with the clerk, or by other consented means." },
+              { t: "mcq", q: "A 30-day period ends on a Saturday. The last day is…", options: ["The next Monday, unless it is a legal holiday", "The preceding Friday", "That Saturday"], a: "The next Monday, unless it is a legal holiday", why: "Rule 6(a)(1)(C): the period continues until the next day that is not a Saturday, Sunday, or legal holiday." },
+            ],
+            hook: "Skip day one, count every day, and a Saturday finish slides to Monday.",
+            status: "book", src: "FRCP 6(a)(1), 6(b)(2), 6(d)",
+          },
+          {
+            id: "u3-h-6a-saturday", kind: "hypo", cat: "III.B", callType: "status", rule: "u3-r-6", issue: "counting days, weekend finish",
+            stem: "A party was served by hand on Thursday, March 4, 2027, with a paper that requires a response within 30 days after service. Neither Saturday, April 3, nor Monday, April 5, is a legal holiday. The party's lawyer asks the last day on which the response is timely.",
+            call: "What is the last day on which the response is timely?",
+            options: [
+              { text: "Monday, April 5, because the thirtieth day is a Saturday, so the period runs to the next day that is not a Saturday, Sunday, or legal holiday.", why: "Rule 6(a)(1)(C). Thirty days after March 4 is Saturday, April 3." },
+              { text: "Friday, April 2, because a response must be made before the weekend begins.", why: "Rule 6(a) counts every day and extends a weekend finish to the next business day; it does not shorten the period.", trap: 5 },
+              { text: "Thursday, April 8, because three days are added to the period after it would otherwise expire.", why: "Rule 6(d) adds three days only for service by mail, with the clerk, or by other consented means, not for hand delivery.", trap: 4 },
+              { text: "Saturday, April 3, because every day counts, including the last one.", why: "Every day counts, but a last day that falls on a Saturday is extended to the next day that is not a weekend or legal holiday.", trap: 2 },
+            ],
+            answer: 0,
+            facts: ["served by hand on Thursday, March 4, 2027", "within 30 days after service"],
+            say: "A period that ends on a weekend runs to Monday; hand delivery earns no extra three days.",
+            status: "book", src: "FRCP 6(a)(1), 6(d)",
+          },
+          {
             id: "u3-r-60", kind: "rule", title: "Relief from a judgment (Rule 60(b))", cat: "V.C", exam: ["mbe"],
             say: "Rule 60(b) has six grounds; the first three expire in one year, all must be sought within a reasonable time, and (b)(6) is the extraordinary leftover.",
             elements: ["(1) Mistake, inadvertence, surprise, or excusable neglect", "(2) Newly discovered evidence that could not have been found in time for a Rule 59(b) motion", "(3) Fraud, misrepresentation, or misconduct by an opposing party", "(4) The judgment is void", "(5) The judgment is satisfied, released, or no longer equitable", "(6) Any other reason that justifies relief"],
             ordered: true,
             distractorElements: ["(7) Dissatisfaction with the result"],
-            exceptions: ["Time: within a reasonable time, and for grounds (1), (2) and (3) no more than 1 year after entry of the judgment", "Rule 60(b)(6) is for extraordinary circumstances and is not available when the reason fits (1) through (5)", "Rule 60(a) lets the court correct clerical mistakes at any time", "An independent action, or setting aside a judgment for fraud on the court, is not subject to the one-year limit (Rule 60(d))", "A motion that the judgment is void under 60(b)(4) is subject to the reasonable-time requirement, not the one-year cap, which governs only (1) through (3) (Coney Island, 2026)"],
+            exceptions: ["Time: within a reasonable time, and for grounds (1), (2) and (3) no more than 1 year after entry of the judgment", "Rule 60(b)(6) is for extraordinary circumstances and is not available when the reason fits (1) through (5)", "Rule 60(a) lets the court correct clerical mistakes at any time", "An independent action, or setting aside a judgment for fraud on the court, is not subject to the one-year limit (Rule 60(d))", "Every Rule 60(b) motion, including one claiming the judgment is void, must be made within a reasonable time (Rule 60(c)(1)); only grounds (1) through (3) also carry the one-year cap"],
             cite: "FRCP 60(b)", citeAsk: "Which subdivision lists the grounds for relief from a final judgment?",
             numbers: [{ label: "Rule 60(b)(1)-(3) outer limit", value: "1 year after entry of judgment" }],
             ex: [
@@ -1864,10 +1970,9 @@
               { t: "tf", q: "A Rule 60(b)(1) motion for excusable neglect may be made fourteen months after judgment if it is made within a reasonable time.", a: false, why: "Grounds (1) through (3) have a one-year outer limit." },
               { t: "mcq", q: "Which Rule 60(b) ground requires evidence that could not have been found in time for a Rule 59(b) motion?", options: ["(2) Newly discovered evidence", "(1) Mistake or excusable neglect", "(4) The judgment is void"], a: "(2) Newly discovered evidence", why: "Rule 60(b)(2) cross-refers to the 28-day new-trial period." },
               { t: "tf", q: "Rule 60(b)(6) may be used to avoid the one-year limit when the reason is mistake or excusable neglect.", a: false, why: "Rule 60(b)(6) is unavailable when the reason fits grounds (1) through (5)." },
-              { t: "tf", q: "A motion to set aside a void judgment under Rule 60(b)(4) may be made at any time, however long after the judgment.", a: false, why: "Coney Island v. Burton (2026): the reasonable-time requirement of Rule 60(c)(1) applies. The one-year cap does not apply to (4)." },
             ],
             hook: "One year for mistake, new evidence and fraud; a reasonable time for everything.",
-            status: "book", src: "FRCP 60(a)-(d); civpro.md §13.1",
+            status: "book", src: "FRCP 60(a)-(d), 60(c)(1); civpro.md §13.1",
           },
           {
             id: "u3-h-60b-thirteen-months", kind: "hypo", cat: "V.C", exam: ["mbe"], callType: "motion", rule: "u3-r-60", issue: "Rule 60(b)(1) one-year limit", grid: true,
@@ -1910,7 +2015,7 @@
               { text: "The motion is untimely as a matter of law, because six years passed after the judgment was entered.", why: "Reasonableness depends on the circumstances, including when the movant learned of the judgment; the Court set no fixed cutoff.", trap: 5 },
             ],
             answer: 0,
-            facts: ["did not comply with the governing service rule", "may be attacked at any time"],
+            facts: ["first learned of the judgment from that seizure", "moved within a week"],
             say: "Even a void judgment must be challenged within a reasonable time; the one-year cap is for grounds (1)-(3).",
             status: "general", src: "Coney Island Auto Parts, Inc. v. Burton, No. 24-808 (U.S. Jan. 20, 2026); FRCP 60(b)(4), 60(c)(1)",
           },
@@ -1923,56 +2028,50 @@
             status: "general", src: "Coney Island Auto Parts, Inc. v. Burton, No. 24-808 (U.S. Jan. 20, 2026) (opinion text read on Cornell LII); FRCP 60(b)(4), 60(c)(1); civpro.md §17",
           },
           {
-            id: "u3-p-motion-cases", kind: "pairs", set: "Motion and review cases", mode: "case-holding",
-            pairs: [
-              { l: "Anderson v. Liberty Lobby", r: "A dispute is genuine if a reasonable jury could find for the nonmovant" },
-              { l: "Scott v. Harris", r: "A version of events blatantly contradicted by an unchallenged video need not be credited" },
-              { l: "Unitherm Food Systems v. Swift-Eckrich", r: "A party that never renewed its motion under Rule 50(b) cannot get judgment as a matter of law or a new trial on appeal for insufficient evidence" },
-              { l: "Ortiz v. Jordan", r: "Denial of summary judgment on a factual dispute is not reviewable after a full trial" },
-              { l: "Dupree v. Younger", r: "A purely legal issue decided at summary judgment is preserved without a post-trial Rule 50(b) motion" },
-              { l: "Celotex Corp. v. Catrett", r: "A movant without the burden of proof may point to the absence of evidence" },
-            ],
-            spare: ["Conley v. Gibson"],
-            say: "Six cases the options may cite as authority; you need only the holdings.",
-            status: "general", src: "Anderson v. Liberty Lobby, Inc., 477 U.S. 242 (1986); Scott v. Harris, 550 U.S. 372 (2007); Unitherm (2006); Ortiz v. Jordan, 562 U.S. 180 (2011); Dupree v. Younger, 598 U.S. 729 (2023); Celotex (1986)",
+            id: "u3-c-blom-bank", kind: "case", subject: "civpro", exam: ["mbe"], recent: true, name: "BLOM Bank SAL v. Honickman", year: 2025,
+            holding: "Rule 60(b)(6) relief requires extraordinary circumstances even when the movant wants to reopen a judgment to amend its complaint; Rule 15(a)'s liberal standard applies only after Rule 60(b) is satisfied.",
+            facts: "Plaintiffs whose antiterrorism claims against a bank were dismissed, after they had said they would not amend and chose to appeal, later moved to reopen the judgment so they could file an amended complaint.",
+            say: "Reopen first, amend second: Rule 60(b)(6) needs extraordinary circumstances even when the goal is an amended complaint (2025).",
+            status: "general", src: "BLOM Bank SAL v. Honickman, No. 23-1259 (U.S. June 5, 2025) (syllabus read on Cornell LII); FRCP 15(a)(2), 60(b)(6)",
           },
           {
-            id: "u3-p-new-trial-cases", kind: "pairs", set: "New trial, findings and void-judgment cases", mode: "case-holding", exam: ["mbe"],
+            id: "u3-p-new-trial-cases", kind: "pairs", set: "New trial, findings and costs cases", mode: "case-holding", exam: ["mbe"],
             pairs: [
               { l: "Dimick v. Schiedt", r: "A federal court may not increase a jury's award by additur" },
               { l: "Hetzel v. Prince William County", r: "A court ordering remittitur must offer the plaintiff a new trial" },
+              { l: "Gasoline Products v. Champlin Refining", r: "A new trial may be limited to one issue only if it is distinct and separable from the others" },
               { l: "Anderson v. City of Bessemer City", r: "A finding is not clearly erroneous when two permissible views of the evidence exist" },
-              { l: "Coney Island Auto Parts v. Burton", r: "A motion to set aside a void judgment must be made within a reasonable time" },
+              { l: "Marek v. Chesny", r: "Rule 68 shifts attorney's fees only if the underlying statute defines costs to include them" },
             ],
-            spare: ["A void judgment may be attacked at any time"],
-            say: "Four cases, four sentences: remit but never add, defer to bench findings, and even a void judgment has a clock.",
-            status: "general", src: "Dimick (1935); Hetzel (1998); Anderson v. City of Bessemer City, 470 U.S. 564 (1985); Coney Island Auto Parts v. Burton (2026)",
+            spare: ["A federal judge may raise an inadequate award if the defendant consents"],
+            say: "Five cases, five sentences: remit but never add, retry only separable issues, defer to bench findings, and costs are not fees.",
+            status: "general", src: "Dimick v. Schiedt, 293 U.S. 474 (1935); Hetzel v. Prince William County, 523 U.S. 208 (1998); Gasoline Products Co. v. Champlin Refining Co., 283 U.S. 494 (1931); Anderson v. City of Bessemer City, 470 U.S. 564 (1985); Marek v. Chesny, 473 U.S. 1 (1985)",
           },
           {
             id: "u3-st-which-motion", kind: "steps", cat: "V", exam: ["mbe"], title: "Which motion, at which moment?",
             steps: ["Before answering: a Rule 12(b) motion, including failure to state a claim", "After the pleadings close: Rule 12(c) judgment on the pleadings", "Until 30 days after discovery closes: Rule 56 summary judgment", "Before the case goes to the jury: Rule 50(a) judgment as a matter of law", "Within 28 days after judgment: Rule 50(b), Rule 59 or Rule 59(e)", "Within a reasonable time, and one year for grounds (1)-(3): Rule 60(b)"],
             distractors: ["After the verdict only: Rule 50(a)", "Within 14 days after judgment: Rule 59", "At any time after judgment: Rule 56"],
-            applyTo: { facts: "The jury returned a verdict and judgment was entered 20 days ago. The losing party never moved for judgment as a matter of law before the case went to the jury and now says the evidence was insufficient.", stop: "Before the case goes to the jury: Rule 50(a) judgment as a matter of law", why: "Without a Rule 50(a) motion, there is no Rule 50(b) renewal. A Rule 59 new-trial motion, where the judge may weigh the evidence, is still open for 28 days." },
+            applyTo: { facts: "The jury returned a verdict and judgment was entered 20 days ago. The losing party never moved for judgment as a matter of law before the case went to the jury and now says the evidence was insufficient.", stop: "Within 28 days after judgment: Rule 50(b), Rule 59 or Rule 59(e)", why: "Rule 50(b) is closed because no Rule 50(a) motion was made, but a Rule 59 new-trial motion, where the judge may weigh the evidence, is still due within 28 days." },
             say: "12(b) before the answer, 12(c) after the pleadings, 56 after discovery, 50(a) before the verdict, 50(b) and 59 within 28 days, 60(b) after that.",
-            status: "book", src: "FRCP 12, 50, 56, 59, 60; civpro.md §§11-13",
+            status: "book", src: "FRCP 12, 50, 56, 59, 60, 6(b)(2); civpro.md §§11-13",
           },
         ],
       },
       {
-        id: "u3l10",
+        id: "u3l12",
         title: "Jury, verdicts and default",
         items: [
           {
             id: "u3-r-7th", kind: "rule", title: "The right to a jury (Seventh Amendment, Rules 38 and 39)", cat: "IV.A",
             say: "Damages claims get a jury, equity gets the judge; shared legal issues go to the jury first; demand it within 14 days of the last pleading or lose it.",
             elements: ["A legal claim or legal issue (damages): the jury right applies in federal court", "An equitable claim (injunction, specific performance): no jury right", "Legal and equitable claims sharing an issue: the jury decides the legal issue first", "Written demand within 14 days after the last pleading directed to the issue is served", "No timely demand: waived, though the court may order a jury on motion (Rule 39(b))"],
-            ordered: true,
+            ordered: false,
             distractorElements: ["Equitable claims are tried first", "A demand may be made any time before trial"],
             exceptions: ["The Seventh Amendment jury right applies in federal court only; it is not incorporated against the States", "SEC v. Jarkesy (2024): a suit for civil penalties for securities fraud is legal in nature and requires a jury", "A declaratory-judgment action takes the character of the coercive claim it replaces", "A demand on specified issues lets any other party demand other issues within 14 days", "A proper demand may be withdrawn only with the consent of the parties"],
             cite: "U.S. Const. amend. VII", citeAsk: "Which constitutional provision preserves the right to a jury trial in federal civil cases?",
             numbers: [{ label: "Jury demand", value: "14 days after the last pleading directed to the issue is served" }],
             ex: [
-              { facts: "A plaintiff seeks damages for breach of a license and an injunction, and both turn on whether the license was terminated.", result: "The jury decides the termination issue first (Beacon Theatres)." },
+              { facts: "A landlord seeks back rent and an injunction against a tenant's use, and both turn on whether the lease was valid.", result: "The jury decides the validity of the lease first (Beacon Theatres)." },
               { facts: "A plaintiff demands a jury three weeks after the answer.", result: "Late: waived, unless the court orders a jury on motion under Rule 39(b)." },
             ],
             terms: ["legal versus equitable", "jury demand", "waiver"],
@@ -2029,8 +2128,8 @@
             cite: "28 U.S.C. §1870", citeAsk: "Which statute gives each party three peremptory challenges in a civil case?",
             numbers: [{ label: "Peremptory challenges per party", value: "3" }, { label: "Jury size", value: "6 to 12" }],
             ex: [
-              { facts: "A civil jury of ten votes eight to two for the plaintiff, and there is no stipulation.", result: "No verdict: it must be unanimous." },
-              { facts: "A defendant's lawyer says nothing when asked for objections to the proposed instructions.", result: "Plain-error review only." },
+              { facts: "A civil jury of seven splits six to one, and there is no stipulation.", result: "No verdict: it must be unanimous." },
+              { facts: "A plaintiff's lawyer never objects to a damages instruction that she later attacks on appeal.", result: "Plain-error review only." },
             ],
             terms: ["peremptory challenge", "challenge for cause", "plain error"],
             quiz: [
@@ -2112,7 +2211,7 @@
             exceptions: ["If the answers are inconsistent with one another and with the verdict, no judgment: the jury is returned or a new trial ordered (Rule 49(b)(4))", "A party that does not demand submission of an issue omitted from a special verdict waives a jury on it (Rule 49(a)(3))", "A motion to amend or add findings is due within 28 days (Rule 52(b))", "On partial findings in a bench trial, the court may enter judgment once a party has been fully heard (Rule 52(c))"],
             cite: "FRCP 49(b)", citeAsk: "Which subdivision governs a general verdict accompanied by answers to written questions?",
             ex: [
-              { facts: "A jury finds for the plaintiff generally, but its consistent answers show the defendant breached no duty.", result: "The court may enter judgment on the answers, return the jury, or order a new trial." },
+              { facts: "A jury finds for the defendant generally, but its consistent answers find every element of the plaintiff's claim.", result: "The court may enter judgment on the answers, return the jury, or order a new trial." },
             ],
             terms: ["general verdict", "special verdict", "interrogatories"],
             quiz: [
@@ -2141,13 +2240,13 @@
             id: "u3-r-default", kind: "rule", title: "Default and default judgment (Rules 55 and 54(c))", cat: "VI.A",
             say: "The clerk enters default; the clerk enters judgment only for a sum certain against a nonappearing adult; and judgment can never exceed the demand.",
             elements: ["The defendant fails to plead or otherwise defend: the clerk enters default", "Default judgment: by the clerk for a sum certain against an adult who has not appeared", "Otherwise the court enters it; a party who has appeared gets written notice at least 7 days before the hearing", "The judgment may not exceed in amount or differ in kind from what the pleading demanded"],
-            ordered: true,
+            ordered: false,
             distractorElements: ["A defaulting defendant is deemed to admit the plaintiff's damages", "The clerk may enter any default judgment"],
             exceptions: ["An entry of default may be set aside for good cause; a final default judgment only under Rule 60(b)", "Default admits well-pleaded allegations of liability but not the amount of damages", "A default judgment is on the merits for claim preclusion, but issues are generally not 'actually litigated' for issue preclusion", "Other final judgments grant the relief a party is entitled to even if it was not demanded (Rule 54(c))"],
             cite: "FRCP 55(b)", citeAsk: "Which subdivision lets the clerk enter a default judgment for a sum certain?",
             numbers: [{ label: "Notice of a default-judgment application to a party that has appeared", value: "at least 7 days before the hearing" }],
             ex: [
-              { facts: "A plaintiff demands $60,000 and proves $90,000 in damages at a default hearing.", result: "Judgment may not exceed $60,000." },
+              { facts: "A supplier's diversity complaint demands $80,000; at the default hearing it proves $130,000.", result: "Judgment may not exceed $80,000." },
               { facts: "A defendant who has informally appeared faces a default-judgment application.", result: "Seven days' written notice before the hearing." },
             ],
             terms: ["entry of default", "default judgment", "sum certain"],
@@ -2161,22 +2260,22 @@
           },
           {
             id: "u3-h-default-amount", kind: "hypo", cat: "VI.A", callType: "remedy", rule: "u3-r-default", issue: "default judgment amount limit",
-            stem: "A plaintiff sued in federal court for $60,000, alleging breach of a services contract. The defendant did not respond, and the clerk entered a default. At the hearing, the plaintiff presented evidence of actual damages of $90,000 and asked for judgment in that amount.",
+            stem: "A plaintiff, a citizen of State A, sued a citizen of State B in federal court for $100,000, alleging breach of a services contract. The defendant did not respond, and the clerk entered a default. At the hearing, the plaintiff presented evidence of actual damages of $150,000 and asked for judgment in that amount.",
             call: "What is the maximum judgment the court may enter?",
             options: [
-              { text: "$60,000, because a default judgment may not exceed in amount what is demanded in the pleadings.", why: "Rule 54(c)." },
-              { text: "$90,000, because a default admits the plaintiff's allegations of damages.", why: "A default admits well-pleaded allegations of liability, not the amount of damages.", trap: 5 },
-              { text: "$90,000, because a court grants the relief to which a party is entitled even if it was not demanded.", why: "That sentence of Rule 54(c) applies to judgments other than default judgments.", trap: 9 },
+              { text: "$100,000, because a default judgment may not exceed in amount what is demanded in the pleadings.", why: "Rule 54(c)." },
+              { text: "$150,000, because a default admits the plaintiff's allegations of damages.", why: "A default admits well-pleaded allegations of liability, not the amount of damages.", trap: 5 },
+              { text: "$150,000, because a court grants the relief to which a party is entitled even if it was not demanded.", why: "That sentence of Rule 54(c) applies to judgments other than default judgments.", trap: 9 },
               { text: "Nothing, because a default judgment may be entered only after a jury trial on damages.", why: "A court may enter default judgment after a hearing on damages when needed.", trap: 5 },
             ],
             answer: 0,
-            facts: ["actual damages of $90,000"],
+            facts: ["actual damages of $150,000"],
             say: "Default judgment: never more than the complaint demanded, however much the plaintiff proves.",
             status: "book", src: "FRCP 54(c), 55(b); civpro.md DF-1",
           },
           {
             id: "u3-h-55b-clerk", kind: "hypo", cat: "VI.A", callType: "status", rule: "u3-r-default", issue: "clerk's default judgment for a sum certain", grid: true,
-            stem: "A plaintiff sued a defendant in federal court for $40,000 on a promissory note. The defendant, an adult, was properly served, did not respond in any way, and never contacted the plaintiff or the court. The clerk entered the default. The plaintiff then filed an affidavit stating that $40,000 plus interest, computed from the note's terms, is due, and asked the clerk to enter judgment.",
+            stem: "A plaintiff, a citizen of State A, sued a defendant, a citizen of State B, in federal court for $120,000 on a promissory note. The defendant, an adult, was properly served, did not respond in any way, and never contacted the plaintiff or the court. The clerk entered the default. The plaintiff then filed an affidavit stating that $120,000 plus interest, computed from the note's terms, is due, and asked the clerk to enter judgment.",
             call: "May the clerk enter the default judgment?",
             options: [
               { text: "Yes, because the claim is for a sum certain that can be computed from the note, and the defendant is an adult who has not appeared.", why: "Rule 55(b)(1): the clerk may enter judgment for a sum certain against a defendant who was defaulted for not appearing and is not a minor or incompetent." },
@@ -2208,7 +2307,7 @@
         ],
       },
       {
-        id: "u3l11",
+        id: "u3l13",
         title: "Preclusion",
         items: [
           {
@@ -2225,20 +2324,21 @@
             elements: ["A valid final judgment on the merits in the first action", "The same claim in the second action: the same transaction, including claims that could have been raised", "The same parties or their privies"],
             ordered: false,
             distractorElements: ["The same issue was actually litigated", "The second action is in the same court", "The first judgment followed a jury trial"],
-            exceptions: ["On the merits: trial, summary judgment, Rule 12(b)(6) dismissal, default judgment, Rule 41(b) dismissal, and a second notice dismissal", "Not on the merits: dismissal for lack of jurisdiction, improper venue, or failure to join a Rule 19 party; a first notice dismissal", "A compulsory counterclaim not pleaded is barred later", "A claim that had not accrued when the first action was decided is not barred", "Effect of a judgment elsewhere: a state judgment in federal court gets the rendering State's preclusion law (28 U.S.C. §1738); a federal diversity judgment gets the law of the State where the federal court sits (Semtek)"],
+            exceptions: ["On the merits: trial, summary judgment, Rule 12(b)(6) dismissal, default judgment, Rule 41(b) dismissal, and a second notice dismissal", "Not on the merits: dismissal for lack of jurisdiction, improper venue, or failure to join a Rule 19 party; a first notice dismissal", "A compulsory counterclaim not pleaded is barred later", "Claims based on events after the first complaint was filed are generally not barred (Lucky Brand Dungarees v. Marcel Fashions Group, 2020)", "Effect of a judgment elsewhere: a state judgment in federal court gets the rendering State's preclusion law (28 U.S.C. §1738); a federal diversity judgment gets the law of the State where the federal court sits (Semtek)"],
             cite: "Rest. (2d) Judgments §24", citeAsk: "Which Restatement section states the transactional test for claim preclusion?",
             ex: [
-              { facts: "A plaintiff wins damage to her car and later sues the same defendant for her injuries from the same collision.", result: "Barred: one transaction, one claim." },
-              { facts: "A plaintiff's first suit was dismissed for lack of personal jurisdiction, and she refiles in the defendant's home State.", result: "Not barred: not a judgment on the merits." },
+              { facts: "A buyer wins damages for late delivery of a machine, then sues the same seller for defects in that same delivery.", result: "Barred: one transaction, one claim." },
+              { facts: "A plaintiff's first suit was dismissed for improper venue, and she refiles in a proper district.", result: "Not barred: not a judgment on the merits." },
             ],
             terms: ["merger", "bar", "privity", "transactional test"],
             quiz: [
               { t: "tf", q: "A dismissal for failure to state a claim is an adjudication on the merits for claim preclusion.", a: true, why: "Rule 41(b) and Rule 12(b)(6) dismissals count." },
               { t: "tf", q: "A dismissal for lack of personal jurisdiction bars a second action on the same claim in a court that has jurisdiction.", a: false, why: "Such a dismissal is not on the merits." },
               { t: "mcq", q: "Claim preclusion bars a second action that…", options: ["Arises from the same transaction and could have been brought in the first", "Raises only the same legal theory", "Seeks a different remedy on a claim that was not part of the transaction"], a: "Arises from the same transaction and could have been brought in the first", why: "The transactional test reaches every theory and remedy from the same transaction." },
+              { t: "tf", q: "Claim preclusion bars a second suit based on conduct that occurred after the complaint in the first suit was filed.", a: false, why: "Lucky Brand (2020): claim preclusion generally does not reach claims based on events after the first complaint was filed." },
             ],
             hook: "Res judicata: judged once means judged for the whole transaction.",
-            status: "general", src: "Rest. (2d) Judgments §§17-19, 24; FRCP 41(b); Federated Dep't Stores, Inc. v. Moitie, 452 U.S. 394 (1981); civpro.md §15.1",
+            status: "general", src: "Rest. (2d) Judgments §§17-19, 24; FRCP 41(b); Federated Dep't Stores, Inc. v. Moitie, 452 U.S. 394 (1981); Lucky Brand Dungarees, Inc. v. Marcel Fashions Group, Inc., 590 U.S. 405 (2020); civpro.md §15.1",
           },
           {
             id: "u3-h-claim-one-collision", kind: "hypo", cat: "VI.D", callType: "motion", rule: "u3-r-claim-preclusion", issue: "claim preclusion, same transaction", grid: true,
@@ -2272,10 +2372,10 @@
           },
           {
             id: "u3-h-claim-12b6-dismissal", kind: "hypo", cat: "VI.D", callType: "motion", rule: "u3-r-claim-preclusion", issue: "12(b)(6) dismissal is on the merits", grid: true,
-            stem: "A plaintiff sued a defendant in federal court for fraud. The court dismissed the complaint under Rule 12(b)(6) for failure to state a claim, the order did not say that the dismissal was without prejudice, and the plaintiff did not appeal. The plaintiff then filed a new federal action against the same defendant arising from the same transaction, alleging additional facts she could have included in the first complaint. The defendant moved to dismiss on the ground of claim preclusion.",
+            stem: "A plaintiff sued a defendant in federal court for securities fraud under a federal statute. The court dismissed the complaint under Rule 12(b)(6) for failure to state a claim, the order did not say that the dismissal was without prejudice, and the plaintiff did not appeal. The plaintiff then filed a new federal action against the same defendant arising from the same transaction, alleging additional facts she could have included in the first complaint. The defendant moved to dismiss on the ground of claim preclusion.",
             call: "How should the court rule on the motion?",
             options: [
-              { text: "Grant, because a Rule 12(b)(6) dismissal is a judgment on the merits, and the claim arises from the same transaction.", why: "Rule 41(b) and Moitie: the dismissal is an adjudication on the merits, and claim preclusion bars claims that could have been raised." },
+              { text: "Grant, because a Rule 12(b)(6) dismissal is a judgment on the merits, and the claim arises from the same transaction.", why: "A federal-question judgment takes federal preclusion law: under Rule 41(b) and Moitie the dismissal is on the merits, and claim preclusion bars claims that could have been raised." },
               { text: "Deny, because a dismissal for failure to state a claim is without prejudice.", why: "Unless the order says otherwise, a Rule 12(b)(6) dismissal operates as an adjudication on the merits.", trap: 5 },
               { text: "Deny, because claim preclusion applies only after a trial.", why: "A dismissal under Rule 12(b)(6) is enough, as are summary judgment and default.", trap: 5 },
               { text: "Grant, because the plaintiff could have appealed the dismissal.", why: "Preclusion rests on the final judgment on the merits, not on the opportunity to appeal.", trap: 1 },
@@ -2283,7 +2383,22 @@
             answer: 0,
             facts: ["did not appeal", "additional facts she could have included in the first complaint"],
             say: "A 12(b)(6) dismissal is on the merits: you cannot refile the same claim with the facts you left out.",
-            status: "general", src: "FRCP 41(b), 12(b)(6); Federated Dep't Stores, Inc. v. Moitie, 452 U.S. 394 (1981)",
+            status: "general", src: "FRCP 41(b), 12(b)(6); Federated Dep't Stores, Inc. v. Moitie, 452 U.S. 394 (1981); Semtek Int'l Inc. v. Lockheed Martin Corp., 531 U.S. 497 (2001)",
+          },
+          {
+            id: "u3-h-claim-later-conduct", kind: "hypo", cat: "VI.D", callType: "motion", rule: "u3-r-claim-preclusion", issue: "conduct after the first complaint", grid: true,
+            stem: "A clothing maker sued a competitor in federal court in 2021 under the federal trademark statute, claiming that the competitor's jacket line infringed the maker's mark. In 2022, while that action was pending, the competitor began selling a different line of shirts with a similar mark. The maker never supplemented its complaint, and in 2024 the court entered a final judgment for the competitor on the jacket claim. In 2025 the maker sued the competitor in federal court over the shirts. The competitor moved to dismiss on the ground of claim preclusion.",
+            call: "How should the court rule on the motion?",
+            options: [
+              { text: "Deny, because claim preclusion generally does not bar claims based on conduct that occurred after the first complaint was filed.", why: "Lucky Brand (2020): claims based on events after the first complaint was filed are generally not barred, even if the plaintiff could have added them." },
+              { text: "Grant, because both actions involve the same parties and the same mark.", why: "Same parties and the same mark do not make the same claim; the shirt sales are later conduct.", trap: 2 },
+              { text: "Grant, because the maker could have supplemented its complaint under Rule 15(d) to add the shirt claim.", why: "Supplementing is permitted, not required, and later conduct is generally not swept into the earlier claim.", trap: 5 },
+              { text: "Deny, because a judgment for the defendant never has claim-preclusive effect.", why: "A defendant's judgment on the merits bars the plaintiff from suing again on the same claim.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["while that action was pending, the competitor began selling a different line"],
+            say: "Claim preclusion looks back from the first complaint: conduct after it was filed is generally a new claim.",
+            status: "general", src: "Lucky Brand Dungarees, Inc. v. Marcel Fashions Group, Inc., 590 U.S. 405 (2020); FRCP 15(d); Rest. (2d) Judgments §24",
           },
           {
             id: "u3-h-claim-1738", kind: "hypo", cat: "VI.D", callType: "accurate", rule: "u3-r-claim-preclusion", issue: "effect of a state judgment in federal court",
@@ -2309,7 +2424,7 @@
             exceptions: ["Defensive nonmutual use is allowed (Blonder-Tongue)", "Offensive nonmutual use is discretionary: a wait-and-see plaintiff, small stakes in the first suit when later suits were not foreseeable, inconsistent judgments, or new procedures all weigh against it (Parklane)", "No offensive nonmutual issue preclusion against the United States (Mendoza)", "A nonparty is bound only by agreement, a preexisting legal relationship, adequate representation, control, proxy, or a special statutory scheme, not 'virtual representation' (Taylor v. Sturgell)", "A criminal acquittal does not bind a civil plaintiff, because the burden of persuasion differs"],
             cite: "Rest. (2d) Judgments §27", citeAsk: "Which Restatement section states the elements of issue preclusion?",
             ex: [
-              { facts: "A plaintiff loses a patent suit after the court holds the patent invalid, then sues a different company on the same patent.", result: "Defensive nonmutual issue preclusion: the new defendant may use the holding." },
+              { facts: "A manufacturer loses a full trial on whether its ladder design was defective; a different injured user then sues it on the same design.", result: "Offensive nonmutual issue preclusion: allowed in the court's discretion (Parklane)." },
               { facts: "A court says in passing that the defendant was careless in an unrelated way.", result: "Not precluded: not actually litigated or essential." },
             ],
             terms: ["collateral estoppel", "mutuality", "full and fair opportunity"],
@@ -2439,7 +2554,7 @@
         ],
       },
       {
-        id: "u3l12",
+        id: "u3l14",
         title: "Appeals and review",
         items: [
           {
@@ -2448,12 +2563,12 @@
             elements: ["The order is a final decision that ends the case on the merits as to all claims and parties", "Notice of appeal within 30 days after entry of judgment (60 if the United States is a party)", "A timely Rule 50(b), 52(b) or 59 motion restarts the period from the order disposing of it", "An order resolving fewer than all claims or parties is not final without a Rule 54(b) determination"],
             ordered: false,
             distractorElements: ["A denial of a motion to dismiss is immediately appealable", "The appeal period runs from the verdict"],
-            exceptions: ["Denials of motions to dismiss, denials of summary judgment, discovery rulings and transfer orders wait for final judgment", "Remand orders are generally unreviewable (28 U.S.C. §1447(d))", "The notice deadline is jurisdictional because a statute sets it (Bowles v. Russell)", "Interlocutory routes: §1292(a)(1) injunctions, §1292(b) certification, Rule 54(b), the collateral-order doctrine, Rule 23(f), and mandamus"],
+            exceptions: ["Denials of motions to dismiss, denials of summary judgment, discovery rulings and transfer orders wait for final judgment", "Remand orders are generally unreviewable (28 U.S.C. §1447(d))", "The notice deadline is jurisdictional because a statute sets it (Bowles v. Russell)", "Interlocutory appeals: §1292(a)(1) injunctions, §1292(b) certification, Rule 54(b), the collateral-order doctrine, and Rule 23(f); mandamus (28 U.S.C. §1651) is a writ, not an appeal"],
             cite: "28 U.S.C. §1291", citeAsk: "Which section gives the courts of appeals jurisdiction over final decisions of the district courts?",
             numbers: [{ label: "Notice of appeal", value: "30 days after entry of judgment (60 if the United States is a party)" }],
             ex: [
-              { facts: "Judgment enters on September 1; a timely Rule 59(e) motion is denied on October 5.", result: "Notice of appeal is due 30 days after October 5: November 4." },
-              { facts: "A court grants summary judgment to one of two defendants with no Rule 54(b) determination.", result: "Not yet final: no appeal." },
+              { facts: "Judgment enters on March 2; a timely Rule 59 motion is denied on April 6.", result: "Notice of appeal is due 30 days after April 6: May 6." },
+              { facts: "A court dismisses one of three claims against the only defendant, with no Rule 54(b) determination.", result: "Not yet final: no appeal." },
             ],
             terms: ["final decision", "notice of appeal", "interlocutory"],
             quiz: [
@@ -2480,6 +2595,42 @@
             status: "book", src: "FRCP 54(b); 28 U.S.C. §1291; civpro.md DF-5",
           },
           {
+            id: "u3-r-collateral-order", kind: "rule", title: "The collateral-order doctrine (Cohen)", cat: "VII.A",
+            say: "A few orders before judgment count as final under §1291: they settle a question for good, apart from the merits, and could not be fixed after judgment.",
+            elements: ["The order conclusively determines the disputed question", "It resolves an important issue completely separate from the merits", "It is effectively unreviewable on appeal from a final judgment"],
+            ordered: false,
+            distractorElements: ["The district judge certified the order for immediate appeal", "The losing party is likely to win on appeal"],
+            exceptions: ["Judged by the class of orders, not the facts of one case, and kept narrow (Will v. Hallock; Mohawk)", "Qualifies: denial of qualified immunity on an issue of law (Mitchell v. Forsyth), and denial of a State's Eleventh Amendment immunity", "Does not qualify: an order to disclose material claimed as privileged (Mohawk), an order on disqualifying counsel, or the denial of a defense to liability that is not a right not to be tried", "No permission is needed: a collateral order is appealable as of right under 28 U.S.C. §1291, within the usual 30 days"],
+            cite: "Cohen v. Beneficial Industrial Loan Corp.", citeAsk: "Which case created the collateral-order doctrine?",
+            ex: [
+              { facts: "A court denies a State agency's motion to dismiss on Eleventh Amendment immunity.", result: "Appealable now: a right not to be sued is lost if the case goes to trial." },
+              { facts: "A court denies a motion to disqualify the opposing party's lawyer.", result: "Not a collateral order: it can be reviewed after final judgment." },
+            ],
+            terms: ["collateral order", "effectively unreviewable", "immunity from suit"],
+            quiz: [
+              { t: "tf", q: "An order is an appealable collateral order whenever the issue is important and the losing party is likely to win on appeal.", a: false, why: "Cohen asks whether the order conclusively decides a question separate from the merits that would be effectively unreviewable after final judgment; likely success is not a factor." },
+              { t: "tf", q: "The denial of qualified immunity that turns on an issue of law is immediately appealable.", a: true, why: "Mitchell v. Forsyth: qualified immunity is a right not to stand trial, lost if review waits for final judgment." },
+              { t: "mcq", q: "Which is NOT a requirement of the collateral-order doctrine?", options: ["The district judge certified that an appeal may materially advance the litigation", "The order conclusively determines the disputed question", "The order is effectively unreviewable after final judgment"], a: "The district judge certified that an appeal may materially advance the litigation", why: "Certification is the §1292(b) route, a different door with its own 10-day application." },
+            ],
+            hook: "Cohen's three Cs: conclusive, collateral, can't wait.",
+            status: "general", src: "Cohen v. Beneficial Indus. Loan Corp., 337 U.S. 541 (1949); Coopers & Lybrand v. Livesay, 437 U.S. 463 (1978); Will v. Hallock, 546 U.S. 345 (2006); Mitchell v. Forsyth, 472 U.S. 511 (1985); Puerto Rico Aqueduct & Sewer Auth. v. Metcalf & Eddy, Inc., 506 U.S. 139 (1993); Firestone Tire & Rubber Co. v. Risjord, 449 U.S. 368 (1981); Mohawk Indus., Inc. v. Carpenter, 558 U.S. 100 (2009); civpro.md §16.1",
+          },
+          {
+            id: "u3-h-collateral-qi", kind: "hypo", cat: "VII.A", callType: "motion", rule: "u3-r-collateral-order", issue: "qualified immunity denial as collateral order", grid: true,
+            stem: "A man sued a state police officer in federal court under a federal civil-rights statute, alleging that the officer used excessive force during an arrest. The officer moved for summary judgment on the ground of qualified immunity. Accepting the plaintiff's version of the facts, the court ruled that the officer's conduct violated clearly established law and denied the motion. The officer immediately filed a notice of appeal, and the plaintiff moved to dismiss the appeal as premature.",
+            call: "How should the court of appeals rule on the motion to dismiss the appeal?",
+            options: [
+              { text: "Deny it, because the denial of qualified immunity on an issue of law is an immediately appealable collateral order.", why: "Mitchell v. Forsyth: immunity from suit is lost if the officer must go to trial, and on the plaintiff's facts the question is purely legal." },
+              { text: "Grant it, because an order denying summary judgment is never appealable before final judgment.", why: "Most such orders are not, but the denial of qualified immunity on a legal question is a collateral order.", trap: 7 },
+              { text: "Grant it, because the officer did not obtain a certification under 28 U.S.C. §1292(b).", why: "A collateral order is appealable as of right under §1291; no certification is needed.", trap: 5 },
+              { text: "Deny it, because any ruling that the losing party believes is wrong may be appealed if waiting would be costly.", why: "Cost and delay do not make an order collateral; the Cohen requirements are narrow.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["Accepting the plaintiff's version of the facts"],
+            say: "Qualified immunity is a right not to be tried: its denial on a legal question is appealable now.",
+            status: "general", src: "Mitchell v. Forsyth, 472 U.S. 511 (1985); Johnson v. Jones, 515 U.S. 304 (1995); 28 U.S.C. §1291",
+          },
+          {
             id: "u3-h-appeal-clock", kind: "hypo", cat: "VII.B", callType: "status", rule: "u3-r-appeal", issue: "post-trial motion restarts appeal clock",
             stem: "Judgment was entered against a defendant in a federal action on September 1. On September 20, the defendant filed a timely motion under Rule 59(e) to alter or amend the judgment, and the court denied it on October 5. The United States is not a party.",
             call: "By what date must the defendant file a notice of appeal?",
@@ -2495,7 +2646,7 @@
             status: "book", src: "FRAP 4(a)(1)(A), 4(a)(4)(A); civpro.md AP-8",
           },
           {
-            id: "u3-h-mohawk-privilege", kind: "hypo", cat: "VII.A", callType: "status", rule: "u3-r-appeal", issue: "privilege order is not a collateral order", grid: true,
+            id: "u3-h-mohawk-privilege", kind: "hypo", cat: "VII.A", callType: "status", rule: "u3-r-collateral-order", issue: "privilege order is not a collateral order", grid: true,
             stem: "In a federal action, the district court ordered a defendant to produce an email that the defendant claims is protected by the attorney-client privilege, and it rejected the privilege claim. The district judge did not certify the order under 28 U.S.C. §1292(b). The defendant wants immediate appellate review before producing the email.",
             call: "May the defendant appeal the order now as of right?",
             options: [
@@ -2542,6 +2693,7 @@
           { id: "u3-n-appeal-30", kind: "num", cat: "VII.B", ask: "Days after entry of judgment within which a notice of appeal must be filed in a civil case in which the United States is not a party", answer: "30 days", alt: ["30", "thirty days", "thirty"], hook: "The last 30 of 21-14-28-30-60-90.", say: "30 days, jurisdictional; a timely post-trial motion restarts it.", status: "book", src: "FRAP 4(a)(1)(A)" },
           { id: "u3-n-appeal-60-us", kind: "num", cat: "VII.B", ask: "Days after entry of judgment within which a notice of appeal must be filed in a civil case in which the United States is a party", answer: "60 days", alt: ["60", "sixty days", "sixty"], hook: "21-14-28-30-60-90: the 60.", say: "60 days when the United States, or its officer or agency, is a party.", status: "book", src: "FRAP 4(a)(1)(B)" },
           { id: "u3-n-1292b-10", kind: "num", cat: "VII.A", ask: "Days after entry of the certifying order within which an application for permission to appeal under 28 U.S.C. §1292(b) must be made to the court of appeals", answer: "10 days", alt: ["10", "ten days", "ten"], say: "10 days, and the court of appeals may still say no.", status: "book", src: "28 U.S.C. §1292(b)" },
+          { id: "u3-n-23f-45", kind: "num", cat: "VII.A", exam: ["mbe"], ask: "Days after entry of an order granting or denying class certification within which a Rule 23(f) petition must be filed when the United States, a federal agency, or a federal officer sued for official acts is a party", answer: "45 days", alt: ["45", "forty-five days", "forty-five"], say: "45 days if the United States is a party, 14 days otherwise.", status: "book", src: "FRCP 23(f)" },
           {
             id: "u3-so-appealable-now", kind: "sort", cat: "VII.A", mode: "category", q: "Can the order be appealed now?",
             buckets: ["Appealable as of right now", "Only with permission", "Not appealable now"],
@@ -2551,7 +2703,6 @@
               { text: "A partial judgment with an express Rule 54(b) determination of no just reason for delay", bucket: "Appealable as of right now", why: "Rule 54(b) makes the partial judgment final." },
               { text: "Denial of a government official's motion for summary judgment on qualified immunity, on a question of law", bucket: "Appealable as of right now", why: "A collateral order (Cohen; Mitchell v. Forsyth)." },
               { text: "An order certifying a class", bucket: "Only with permission", why: "Rule 23(f): a petition within 14 days." },
-              { text: "An order that no later appeal could correct, challenged by a petition for a writ of mandamus", bucket: "Only with permission", why: "Mandamus (28 U.S.C. §1651) is an extraordinary, discretionary writ; the court of appeals decides whether to issue it." },
               { text: "An order the district judge certified as involving a controlling question of law", bucket: "Only with permission", why: "§1292(b): the court of appeals may permit the appeal if the application is made within 10 days." },
               { text: "Denial of a motion to dismiss for lack of personal jurisdiction", bucket: "Not appealable now", why: "Interlocutory; reviewable after final judgment." },
               { text: "An order compelling production of documents over a claim of attorney-client privilege", bucket: "Not appealable now", why: "Mohawk v. Carpenter: not a collateral order; mandamus is the narrow alternative." },
@@ -2563,7 +2714,7 @@
             status: "general", src: "28 U.S.C. §§1291, 1292(a)(1), 1292(b), 1447(d); FRCP 23(f), 54(b); Cohen v. Beneficial Indus. Loan Corp., 337 U.S. 541 (1949); Mohawk Indus., Inc. v. Carpenter, 558 U.S. 100 (2009); civpro.md §16",
           },
           {
-            id: "u3-st-appealable", kind: "steps", cat: "VII.A", title: "Can this order be appealed now?",
+            id: "u3-st-appealable", kind: "steps", cat: "VII.A", title: "Can this order be reviewed now?",
             steps: ["Is it a final decision that ends the case on the merits as to all claims and parties (28 U.S.C. §1291)?", "If not, is it a partial judgment with an express Rule 54(b) determination of no just reason for delay?", "If not, is it an order granting or refusing an injunction (28 U.S.C. §1292(a)(1))?", "If not, did the district judge certify it under §1292(b), and did the court of appeals accept an application made within 10 days?", "If not, is it a collateral order, or a class-certification order under Rule 23(f)?", "If not, is this an extraordinary case in which mandamus under 28 U.S.C. §1651 is the only adequate means of review?"],
             distractors: ["Did the losing party object when the ruling was made?", "Is the ruling one of law rather than fact?", "Did the district judge say that an appeal would be helpful?"],
             applyTo: { facts: "After a trial on all claims against all parties, the district court enters judgment for the plaintiff.", stop: "Is it a final decision that ends the case on the merits as to all claims and parties (28 U.S.C. §1291)?", why: "A final decision under §1291: no exception is needed." },
@@ -2571,7 +2722,7 @@
             status: "general", src: "28 U.S.C. §§1291, 1292; FRCP 23(f), 54(b); civpro.md §16.1",
           },
           {
-            id: "u3-c-geo-group", kind: "case", subject: "civpro", recent: true, name: "GEO Group, Inc. v. Menocal", year: 2026, holding: "Yearsley is a merits defense, not an immunity from suit, so its denial is not a collateral order. Denials of true immunities, such as qualified or sovereign immunity, remain immediately appealable.", facts: "A private detention contractor sought an immediate appeal from the denial of its Yearsley defense to a suit under state law.", say: "Yearsley is a defense to liability, not an immunity from suit: its denial waits for final judgment (2026).", status: "general", src: "GEO Group, Inc. v. Menocal, No. 24-758 (U.S. Feb. 25, 2026) (opinion text read on Cornell LII); civpro.md §16.1, §17" },
+            id: "u3-c-geo-group", kind: "case", subject: "civpro", recent: true, name: "GEO Group, Inc. v. Menocal", year: 2026, holding: "Yearsley is a merits defense, not an immunity from suit, so its denial is not a collateral order. Denials of true immunities, such as qualified or sovereign immunity, remain immediately appealable.", facts: "A private immigration-detention contractor, sued by detainees under the federal Trafficking Victims Protection Act and state unjust-enrichment law, sought an immediate appeal from the denial of its Yearsley defense.", say: "Yearsley is a defense to liability, not an immunity from suit: its denial waits for final judgment (2026).", status: "general", src: "GEO Group, Inc. v. Menocal, No. 24-758 (U.S. Feb. 25, 2026) (opinion text read on Cornell LII); civpro.md §16.1, §17" },
           {
             id: "u3-r-review", kind: "rule", title: "Standards of review", cat: "VII.C",
             say: "Facts after a bench trial: clearly erroneous. Law and summary judgment: de novo. Discretion: abuse of discretion. Unobjected error: plain error.",
@@ -2581,7 +2732,7 @@
             exceptions: ["JMOL is reviewed de novo, on the record made at trial", "A jury verdict stands if a reasonable jury could reach it, viewing the evidence in favor of the verdict winner", "Findings that rest on credibility get special deference (Rule 52(a)(6))", "An appellate court may not reexamine facts tried by a jury other than as the common law permitted"],
             cite: "FRCP 52(a)(6)", citeAsk: "Which provision sets the clear-error standard for a trial court's findings of fact?",
             ex: [
-              { facts: "A judge finds, on conflicting testimony, that the defendant signed the contract.", result: "Clearly erroneous review, with deference to credibility." },
+              { facts: "After a bench trial, a judge credits one engineer over another and finds a dam was built to plan.", result: "Clearly erroneous review, with deference to credibility." },
               { facts: "A court of appeals reviews a summary-judgment grant.", result: "De novo." },
             ],
             terms: ["de novo", "clearly erroneous", "abuse of discretion", "plain error", "harmless error"],
@@ -2628,19 +2779,18 @@
               { l: "Judgment deemed entered when a separate document is required but not set out (Rule 58(c))", r: "150 days after entry in the civil docket" },
               { l: "Automatic stay of execution (Rule 62(a))", r: "30 days after entry of judgment" },
               { l: "Motion to extend the time to appeal (FRAP 4(a)(5))", r: "30 days after the appeal period expires" },
-              { l: "Reopening the time to appeal (FRAP 4(a)(6))", r: "14 days" },
-              { l: "Extra days after service by mail (Rule 6(d))", r: "3 days" },
+              { l: "Reopened time to appeal (FRAP 4(a)(6))", r: "14 days after the order reopening it is entered" },
               { l: "Rule 60(b)(1)-(3) motion", r: "A reasonable time, no more than 1 year" },
-              { l: "Rule 60(b)(4)-(6) motion", r: "A reasonable time" },
+              { l: "Rule 60(b)(4)-(6) motion", r: "A reasonable time, with no one-year cap" },
             ],
             spare: ["60 days after entry of judgment"],
-            say: "After judgment: fees 14, automatic stay 30, deemed-entered 150, appeal extension 30, reopening 14, mail 3.",
-            status: "book", src: "FRCP 54(d)(2), 58(c), 62(a), 6(d), 60(c)(1); FRAP 4(a)(5), 4(a)(6); Coney Island (2026)",
+            say: "After judgment: fees 14, automatic stay 30, deemed entry 150, appeal extension 30, reopening 14, and Rule 60's reasonable time.",
+            status: "book", src: "FRCP 54(d)(2), 58(c), 62(a), 60(c)(1); FRAP 4(a)(5), 4(a)(6)",
           },
           { id: "u3-n-fee-14", kind: "num", cat: "V.C", exam: ["mbe"], ask: "Days after entry of judgment within which a motion for attorney's fees must be filed, unless a statute or court order provides otherwise", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "14 days after entry of judgment, unless a statute or order says otherwise.", status: "book", src: "FRCP 54(d)(2)(B)(i)" },
           { id: "u3-n-58c-150", kind: "num", cat: "VII.B", exam: ["mbe"], ask: "Days after entry in the civil docket at which judgment is deemed entered when a separate document is required but not set out", answer: "150 days", alt: ["150"], say: "150 days after entry in the civil docket, if no separate document is set out.", status: "book", src: "FRCP 58(c)(2)(B)" },
           { id: "u3-n-62a-30", kind: "num", cat: "VII.B", exam: ["mbe"], ask: "Days after entry of judgment during which execution and enforcement proceedings are automatically stayed, unless the court orders otherwise", answer: "30 days", alt: ["30", "thirty days", "thirty"], say: "A 30-day automatic stay of enforcement after judgment.", status: "book", src: "FRCP 62(a)" },
-          { id: "u3-n-frap4a5-30", kind: "num", cat: "VII.B", ask: "Days after the time to appeal expires within which a party may move the district court to extend it, for excusable neglect or good cause", answer: "30 days", alt: ["30", "thirty days", "thirty"], say: "A motion within 30 days after the appeal period expires, and the extension is up to 30 days.", status: "book", src: "FRAP 4(a)(5)(A), 4(a)(5)(C)" },
+          { id: "u3-n-frap4a5-30", kind: "num", cat: "VII.B", ask: "Days after the time to appeal expires within which a party may move the district court to extend it, for excusable neglect or good cause", answer: "30 days", alt: ["30", "thirty days", "thirty"], say: "Move within 30 days after the appeal period expires; the extension may run to 30 days past the original deadline or 14 days after the order, whichever is later.", status: "book", src: "FRAP 4(a)(5)(A), 4(a)(5)(C)" },
           { id: "u3-n-frap4a6-14", kind: "num", cat: "VII.B", ask: "Days for which the district court may reopen the time to appeal after finding that a party did not receive notice of the entry of judgment", answer: "14 days", alt: ["14", "fourteen days", "fourteen"], say: "A reopened appeal period lasts 14 days from the order reopening it.", status: "book", src: "FRAP 4(a)(6)" },
         ],
       },

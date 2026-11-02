@@ -17,17 +17,29 @@
 //     - Ameliorative waste: traditional rule (still waste) versus modern excuse. The life-estate card states both as a split.
 //     - Restraints on a life estate (forfeiture and promissory restraints valid): treated as "traditional; states differ" in an
 //       exceptions line only. No hypo depends on it.
-//     - The slothful executor: "most courts read a reasonable time" (RAP card exception and one sort row). No hypo depends on it.
+//     - The slothful executor: taught as void under the classic common-law rule, with "some courts read in a reasonable time" as the
+//       minority rescue (RAP card exception and one sort row). Fixed 2026-11-02: the earlier text had the rescue as the majority.
 //     - Wait-and-see under Restatement (Second) of Property is taught only through the USRAP hypo: a stand-alone wait-and-see hypo needs the
 //       measuring-lives rules, which no source we read states.
 //     - Conventions that the stem announces any reform, recording act or Restatement adoption, and that silence means the common-law
 //       rule, are standard exam practice but no NCBE document we could read states them for Property (property.md §1.4, §6 row 4).
 //     - Mitigation after abandonment and consent to assignment: phrased as the "modern majority" and "traditional" positions; the
-//       count of states is not stated anywhere (property.md §6 rows 5 and 7).
+//       count of states is not stated anywhere (property.md §6 rows 5 and 7). The mitigation hypo states the jurisdiction's rule.
+//     - Dumpor's Case: taught as the traditional rule (one consent waives the clause for later transfers unless reserved), which many
+//       modern courts and the Restatement (Second) reject. A split, so no hypo turns on it.
+//     - Lease by one joint tenant: a split with no count; the hypo states the jurisdiction's rule (no "majority" label).
 //     - Implied reservation versus implied grant: "traditional" versus "some courts, following the Restatement (Third)"; the exact
 //       Restatement section was not read (property.md §6 row 16).
 //     - Rights of first refusal under the RAP: stated as "most courts" (several states exempt commercial pre-emptive rights).
-//     - Tenancy by the entirety and the Uniform Partition of Heirs Property Act: "about two dozen states" (counts differ by source).
+//     - Tenancy by the entirety and the Uniform Partition of Heirs Property Act: no state count is given (counts differ by source).
+//       The UPHPA is a one-line note on the cotenancy card; its hypo was removed 2026-11-02 (a state-adopted act, not an outline topic).
+//     - Added 2026-11-02, all `general`, each with any split stated in the stem: right of first refusal under the RAP (u10-h-rap-rofr),
+//       license coupled with an interest, scope of a profit, commercial warranty of suitability (Davidow line, not re-read), landlord
+//       tort exceptions (sort + negligent-repair hypo), tenancy types sort, UCC 9-334(d) purchase-money fixture priority (section
+//       recalled, not re-read on LII: re-read before promoting to "book"), touch and concern, sublessee privity, traditional consent
+//       rule, recording act ending an easement, ameliorative waste (modern rule stated), transfer of a life estate.
+//     - Life tenant and mortgage principal (fixed 2026-11-02): the life tenant pays interest up to income; principal is the
+//       remaindermen's burden. Worthier Title is described as abolished or kept as a rule of construction, not "abolished everywhere".
 //     - Landlord tort liability for furnished short-term lets: "many courts"; the other four exceptions are standard.
 //     - New in the second pass: Fall v. Eastin (situs rule), the Uniform Partition of Heirs Property Act buyout, §§3604(e), 3607 and 3617 of the Fair
 //       Housing Act (section text recalled, not re-read on LII; the first FHA card was read), the Restatement (Third) relocation rule, Shelley v. Kraemer,
@@ -42,7 +54,7 @@
     title: "Real Property I: ownership and rights in land",
     blurb: "Two of Property's five equal fifths: who owns the land, and what everyone else may do on it.",
     subject: "property",
-    assume: "Defaults for this unit, because the stems announce anything else: common law with the modern majority rule wherever one exists (lien theory of mortgages; the English rule on delivery of possession (the landlord must deliver actual possession); mitigation after abandonment; an implied warranty of habitability in residential leases; no self-help eviction). Shelley's Case, Worthier Title and the destructibility of contingent remainders are abolished. The common-law Rule Against Perpetuities applies unmodified unless the stem names a reform. A stem names any recording act, limitations period, Restatement adoption or zoning ordinance it needs.",
+    assume: "Defaults for this unit, because the stems announce anything else: common law with the modern majority rule wherever one exists (lien theory of mortgages; the English rule on delivery of possession (the landlord must deliver actual possession); mitigation after abandonment; an implied warranty of habitability in residential leases; no self-help eviction). Shelley's Case, Worthier Title and the destructibility of contingent remainders are treated as abolished. The common-law Rule Against Perpetuities applies unmodified unless the stem names a reform. A stem names any recording act, limitations period, Restatement adoption or zoning ordinance it needs.",
     exam: ["mbe", "nextgen"],
     lessons: [
       // ------------------------------------------------------------------------------------------------------------------
@@ -148,12 +160,13 @@
               "The life tenant may possess, lease, mortgage or convey, but only for the measuring life",
               "No voluntary waste: acts that destroy or diminish value",
               "No permissive waste: neglected repairs, unpaid ordinary taxes",
-              "Ordinary taxes and mortgage interest: the life tenant pays up to the land's income",
+              "Ordinary taxes and mortgage interest: the life tenant pays up to the land's income (its rental value if she occupies it)",
             ],
             ordered: false,
             distractorElements: ["The estate passes to the life tenant's heirs", "The remaindermen pay all ordinary taxes"],
             exceptions: [
-              "Mortgage principal is shared between the life tenant and the remaindermen in proportion to the present values of their interests",
+              "The life tenant pays mortgage interest up to the land's income; the principal is the remaindermen's burden. One who pays off the principal to protect the land may get contribution in proportion to the value of the interests",
+              "Special assessments for long-lasting public improvements are apportioned between the life tenant and the remaindermen",
               "Open-mines doctrine: a life tenant may keep working mines that were open when the estate began",
               "The holder of the future interest may sue for waste, or pay a tax or repair cost and recoup it",
             ],
@@ -172,8 +185,9 @@
               { t: "tf", q: "A life tenant who stops paying ordinary property taxes, on land that earns more than the taxes, commits permissive waste.", a: true, why: "Ordinary taxes and mortgage interest are the life tenant's burden up to the income of the land." },
               { t: "mcq", q: "'To Ann for the life of Ben.' Ann dies while Ben is still living. Who is entitled to possession for the rest of Ben's life?", options: ["Ann's heirs or devisees", "The grantor, through a reversion", "Ben"], a: "Ann's heirs or devisees", why: "A life estate pur autre vie lasts as long as the measuring life, so it passes at Ann's death by will or intestacy." },
               { t: "tf", q: "At common law, a life tenant who replaces a failing old house with a more valuable building commits no waste because the value rose.", a: false, why: "Traditionally an ameliorative change is still waste. Some modern courts excuse it where conditions have changed and the remaindermen are not harmed." },
+              { t: "tf", q: "A life tenant who lives on the land herself, so that it produces no rent, need not pay the ordinary property taxes.", a: false, why: "When the life tenant occupies the land, her duty is measured by its fair rental value instead of its income." },
             ],
-            status: "general", src: "property.md Module 1 (ameliorative waste is a flagged state split); NCBE MBE Subject Matter Outline, Real Property I.A (waste named)",
+            status: "general", src: "property.md Module 1 (ameliorative waste is a flagged state split); NCBE MBE Subject Matter Outline, Real Property I.A (waste named); verification pass 2026-11-02: mortgage principal corrected (interest to the life tenant, principal to the remaindermen); occupying-tenant tax rule added",
           },
           {
             id: "u10-h-waste-roof", kind: "hypo", cat: "I.A", callType: "liable", rule: "u10-r-life-estate", issue: "permissive waste by a life tenant", grid: true,
@@ -189,6 +203,36 @@
             facts: ["has paid none of the $3,500 annual property taxes", "a cracked foundation wall"],
             say: "Neglect is waste too: a life tenant must pay ordinary taxes and keep up ordinary repairs.",
             status: "general", src: "property.md Module 1 (waste; facts rewritten); NCBE MBE Subject Matter Outline, Real Property I.A",
+          },
+          {
+            id: "u10-h-ameliorative", kind: "hypo", cat: "I.A", callType: "prevail", rule: "u10-r-life-estate", issue: "ameliorative waste, modern rule", grid: true,
+            stem: "A landowner devised a farm 'to my son for life, then to my granddaughter.' Over the following decades the farm became surrounded by housing, and farming it now loses money. The son, without the granddaughter's consent, plans to tear down the old barns and build a small group of rental cottages, which would raise the land's value. The granddaughter sues to enjoin the work. The jurisdiction permits a life tenant to make a change that raises the land's value when conditions have changed substantially and the remainderman is not harmed.",
+            call: "Will the granddaughter obtain the injunction?",
+            options: [
+              { text: "No, because in this jurisdiction a value-raising change justified by changed conditions, which does not harm the remainderman, is not waste.", why: "The stem adopts the modern view of ameliorative waste, and the facts meet it: changed surroundings, higher value, no harm." },
+              { text: "Yes, because any substantial change in the character of the land by a life tenant is waste, whatever its effect on value.", why: "That is the traditional rule. The stem adopts the modern view.", trap: 4 },
+              { text: "Yes, because a remainderman may veto any act of the life tenant that alters the land in any way.", why: "A remainderman can stop waste, not every change, and this change is not waste here.", trap: 7 },
+              { text: "No, because a life tenant owns the land outright during life and may do whatever she likes with it.", why: "A life tenant may not commit waste. The change is allowed only because it meets the modern test.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["farming it now loses money", "would raise the land's value"],
+            say: "Where the modern rule applies, a value-raising change that fits changed conditions and harms no one is not waste.",
+            status: "general", src: "property.md Module 1 (ameliorative waste: traditional versus modern, a flagged split; the stem states the rule); verification pass 2026-11-02: new item",
+          },
+          {
+            id: "u10-h-pur-autre-vie", kind: "hypo", cat: "I.A", callType: "title", rule: "u10-r-life-estate", issue: "transfer of a life estate",
+            stem: "A landowner conveyed a house 'to my widowed sister for life, then to my nephew and his heirs.' The sister later sold and conveyed 'all of my interest in the house' to a buyer for $90,000, and the buyer moved in. Three years later the sister died. The buyer is still living in the house, and the nephew demands possession. The buyer argues that she paid full value and that her estate lasts for her own life.",
+            call: "Who is entitled to possession of the house?",
+            options: [
+              { text: "The nephew, because the buyer held a life estate measured by the sister's life, which ended when the sister died.", why: "A life tenant conveys only what she has: the buyer took a life estate pur autre vie, measured by the sister's life." },
+              { text: "The buyer, for the rest of her own life, because a buyer of a life estate takes an estate measured by her own life.", why: "The measuring life does not change on a transfer. It remains the sister's.", trap: 5 },
+              { text: "The buyer, because a purchaser for full value of a life estate takes the fee simple free of the remainder.", why: "The sister held only a life estate, and a grantor cannot convey more than she owns.", trap: 8 },
+              { text: "The sister's heirs, because a life estate passes at the life tenant's death to her heirs or devisees.", why: "A life estate measured by the holder's own life ends at her death and passes to no one.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["all of my interest in the house", "Three years later the sister died"],
+            say: "A life tenant can sell only what she has: the buyer's estate ends when the original life ends.",
+            status: "general", src: "property.md Module 1 (life estate pur autre vie; a grantor conveys only what she holds); verification pass 2026-11-02: new item",
           },
           {
             id: "u10-tr-but-if", kind: "trap", cat: "5", subject: "property",
@@ -248,7 +292,7 @@
             distractorElements: ["The grantor keeps the remainder", "It follows a fee simple"],
             exceptions: [
               "A vested remainder to a named person needs no survival of the life tenant: it passes to the taker's heirs or devisees",
-              "The Rule in Shelley's Case, the Doctrine of Worthier Title and destructibility of contingent remainders are abolished in nearly every state",
+              "Shelley's Case and the destructibility of contingent remainders are abolished in nearly every state; Worthier Title is abolished or kept only as a rule of construction in most",
               "A vested remainder is transferable; a remainder in unborn persons cannot be conveyed until the takers exist",
             ],
             cite: "NCBE MBE Subject Matter Outline (Real Property I.A)", citeAsk: "Which part of the NCBE outline covers vested and contingent remainders?",
@@ -263,7 +307,7 @@
               { t: "mcq", q: "'To Ann for life, then to Cal's children.' Cal has two living children. The remainder is…", options: ["Vested subject to open", "Contingent", "An executory interest"], a: "Vested subject to open", why: "The living children are ascertained and there is no condition, so the remainder is vested. The class stays open for later-born children." },
               { t: "bucket", q: "Vested or contingent remainder?", buckets: ["Vested", "Contingent"], items: [{ text: "To Ann for life, then to Ben", bucket: "Vested" }, { text: "To Ann for life, then to Cal's children, and Cal has none", bucket: "Contingent" }, { text: "To Ann for life, then to Ben if Ben reaches 30 (Ben is 20)", bucket: "Contingent" }, { text: "To Ann for life, then to Ben, but if Ben fails to graduate, to Dee", bucket: "Vested" }] },
             ],
-            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.A (headings); property.md Module 2",
+            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.A (headings); property.md Module 2; verification pass 2026-11-02: Worthier Title status softened",
           },
           {
             id: "u10-r-executory", kind: "rule", cat: "I.A", title: "Executory interests: shifting and springing",
@@ -384,7 +428,7 @@
           },
           {
             id: "u10-h-divestment", kind: "hypo", cat: "I.A", callType: "accurate", rule: "u10-r-remainders", issue: "vested remainder subject to divestment",
-            stem: "A landowner conveyed a vacant lot 'to my aunt for life, then to my nephew, but if my nephew does not survive my aunt, then to my niece.' At the time of the conveyance, the aunt, the nephew and the niece were all living, and the nephew had no known debts or other claimants to his interest. The deed was recorded the same day. The jurisdiction construes a gift and a condition by the common-law rule that a separate 'but if' clause states a condition that may cut the gift short.",
+            stem: "A landowner conveyed a vacant lot 'to my aunt for life, then to my nephew, but if my nephew does not survive my aunt, then to my niece.' At the time of the conveyance, the aunt, the nephew and the niece were all living, and the nephew had no known debts or other claimants to his interest. The deed was recorded the same day.",
             call: "How is the nephew's interest best described?",
             options: [
               { text: "A vested remainder subject to complete divestment, because the gift is unconditional and a later clause could cut it short.", why: "The nephew is ascertained and the gift has no condition precedent. The 'but if' clause is a condition subsequent, and the niece holds a shifting executory interest." },
@@ -393,9 +437,9 @@
               { text: "A springing executory interest, because the nephew's right to possession starts when the aunt's life estate ends, not at the time of the deed.", why: "A remainder waits for a prior estate to end naturally. The nephew's follows the aunt's life estate and so is a remainder.", trap: 10 },
             ],
             answer: 0,
-            facts: ["but if my nephew does not survive my aunt", "recorded the same day"],
+            facts: ["then to my nephew, but if my nephew does not survive my aunt"],
             say: "Unconditional gift, then a separate 'but if' clause: vested subject to divestment, with a shifting executory interest.",
-            status: "general", src: "property.md Module 2 (grammatical test for conditions); NCBE MBE Subject Matter Outline, Real Property I.A",
+            status: "general", src: "property.md Module 2 (grammatical test for conditions); NCBE MBE Subject Matter Outline, Real Property I.A; verification pass 2026-11-02: stem no longer states the construction rule",
           },
           {
             id: "u10-h-springing", kind: "hypo", cat: "I.A", callType: "status", rule: "u10-r-executory", issue: "springing executory interest",
@@ -453,7 +497,7 @@
               "Rule of convenience: the class closes when any member may demand possession",
               "Members born after the class closes take nothing",
             ],
-            ordered: true,
+            ordered: false,
             exceptions: [
               "The rule of convenience is a rule of construction: a contrary intent in the instrument controls",
               "No one is the 'heir' of a living person: a remainder to the heirs of a living person is contingent",
@@ -469,26 +513,26 @@
               { t: "mcq", q: "'To Ann for life, then to Ann's children.' When Ann dies she has two living children and is pregnant with a third, who is later born alive. Who takes?", options: ["All three", "Only the two living children", "Only the children living when the deed was made"], a: "All three", why: "The class closes at Ann's death, and the child in gestation is a member at that moment." },
               { t: "tf", q: "Under the rule of convenience, the class closes when the first member may demand possession, even if the grantor's words show a contrary intent.", a: false, why: "The rule is only a rule of construction; a contrary intent in the instrument controls." },
             ],
-            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.A (headings); property.md Module 2",
+            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.A (headings); property.md Module 2; verification pass 2026-11-02: elements made an unordered set",
           },
           {
             id: "u10-h-convenience", kind: "hypo", cat: "I.A", callType: "title", rule: "u10-r-class-gifts", issue: "rule of convenience closes the class", transfer: true,
-            stem: "A landowner conveyed a lake house 'to my friend for life, then to the children of my sister.' When the deed was delivered, the sister was alive and had one child. When the friend died, the sister had two living children and no others. The sister then had a third child. The jurisdiction applies the rule of convenience, and the instrument shows no contrary intent.",
+            stem: "A landowner conveyed a lake house 'to my friend for life, then to the children of my sister.' When the deed was delivered, the sister was alive and had one child. When the friend died, the sister had two living children and no others. Two years after the friend's death, the sister had a third child. The instrument shows no contrary intent.",
             call: "Who is entitled to the lake house after the friend's death?",
             options: [
               { text: "The sister's first two children, because the class closed when the friend died and a child could first demand possession.", why: "Under the rule of convenience the class closes when a member may demand possession, at the friend's death, which excludes the later-born child." },
               { text: "All three of the sister's children, because the sister was still living and the class stayed open until her own death.", why: "The class closes under the rule of convenience even though more members could still be born.", trap: 5 },
               { text: "Only the child living when the deed was delivered, because the class closed at delivery.", why: "The class does not close at delivery; it stays open until a member can demand possession.", trap: 5 },
-              { text: "The landowner, because the third child's birth destroyed the remainder in the first two.", why: "Destructibility of contingent remainders is abolished, and the remainder was vested subject to open anyway.", trap: 11 },
+              { text: "The landowner, because the third child's birth destroyed the remainder in the first two.", why: "A later birth never destroys a vested remainder subject to open. At most it shares in a class that is still open, and this one had closed.", trap: 5 },
             ],
             answer: 0,
-            facts: ["applies the rule of convenience"],
+            facts: ["When the friend died, the sister had two living children", "Two years after the friend's death"],
             say: "The class closes when the first member may take possession; later-born children are shut out.",
-            status: "general", src: "property.md Module 2 (P2-5 rewritten; rule of convenience is a rule of construction)",
+            status: "general", src: "property.md Module 2 (P2-5 rewritten; rule of convenience is a rule of construction); verification pass 2026-11-02: third child now born two years after the class closed (no gestation ambiguity); rule no longer stated in the stem",
           },
           {
             id: "u10-h-class-open", kind: "hypo", cat: "I.A", callType: "status", rule: "u10-r-class-gifts", issue: "vested remainder subject to open",
-            stem: "A landowner conveyed a ranch 'to my friend for life, then to the children of my sister.' When the deed was delivered, the sister was alive and had two children. The friend is still living. The sister has not had another child, but she is of an age at which she may do so. The jurisdiction applies the rule of convenience, and the deed shows no contrary intent. A creditor of one of the sister's children is trying to learn what interest that child holds in the ranch.",
+            stem: "A landowner conveyed a ranch 'to my friend for life, then to the children of my sister.' When the deed was delivered, the sister was alive and had two children. The friend is still living. The sister has not had another child, but she is of an age at which she may do so. A creditor of one of the sister's children is trying to learn what interest that child holds in the ranch.",
             call: "What interest does each of the sister's two living children hold?",
             options: [
               { text: "A vested remainder subject to open, because the takers are ascertained and the class may still increase.", why: "A class remainder with at least one living member and no condition is vested subject to open. It shrinks each child's share if more are born." },
@@ -497,9 +541,9 @@
               { text: "A shifting executory interest, because later-born children would cut back the shares of the two living children.", why: "Sharing with later-born class members is the class opening, not divestment in favor of a stranger. The interest is a remainder.", trap: 10 },
             ],
             answer: 0,
-            facts: ["had two children", "applies the rule of convenience"],
+            facts: ["had two children", "she is of an age at which she may do so"],
             say: "A living class member and no condition: vested subject to open, until the class closes.",
-            status: "general", src: "property.md Module 2 (class gifts); NCBE MBE Subject Matter Outline, Real Property I.A (class gifts)",
+            status: "general", src: "property.md Module 2 (class gifts); NCBE MBE Subject Matter Outline, Real Property I.A (class gifts); verification pass 2026-11-02: rule-of-convenience clause removed from the stem",
           },
           {
             id: "u10-h-survivorship-fails", kind: "hypo", cat: "I.A", callType: "title", rule: "u10-r-remainders", issue: "survivorship condition and the reversion",
@@ -529,8 +573,8 @@
             ordered: false,
             distractorElements: ["A contingent remainder merges into the life estate at once", "The life estate survives merger and passes to the life tenant's heirs"],
             exceptions: [
-              "Shelley's Case and Worthier Title are abolished in nearly every state: the stem will say if either still applies",
-              "Merger of a life estate with a vested remainder still operates in every state when both come into one person's hands",
+              "Shelley's Case is abolished in nearly every state; Worthier Title is abolished or kept only as a rule of construction in most. The stem will say if either applies",
+              "Merger of a life estate with the next vested estate still generally operates when both come into one person's hands",
             ],
             cite: "NCBE MBE Subject Matter Outline (Real Property I.A)", citeAsk: "Which part of the NCBE outline covers the rules affecting present and future interests?",
             ex: [
@@ -543,11 +587,11 @@
               { t: "mcq", q: "In a state that still follows the Rule in Shelley's Case, 'to Ann for life, then to Ann's heirs' gives Ann…", options: ["A fee simple", "A life estate only, with a remainder in her unborn heirs", "A life estate, with a reversion in the grantor"], a: "A fee simple", why: "The life estate and the remainder to the life tenant's own heirs merge in her." },
               { t: "tf", q: "Under the Doctrine of Worthier Title, a remainder to the grantor's own heirs is a reversion in the grantor.", a: true, why: "The grantor cannot give a remainder to his own heirs: he keeps the interest himself." },
             ],
-            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.A (rules affecting future interests); property.md Module 2; research/CURRICULUM.md u10 brief",
+            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.A (rules affecting future interests); property.md Module 2; research/CURRICULUM.md u10 brief; verification pass 2026-11-02: Worthier Title and merger scope no longer overstated",
           },
           {
             id: "u10-h-merger", kind: "hypo", cat: "I.A", callType: "status", rule: "u10-r-merger", issue: "merger of life estate and remainder",
-            stem: "A landowner conveyed a farm 'to my uncle for life, then to my cousin and her heirs.' Both interests were vested when created, and the landowner kept nothing. Several years later the uncle, who needed money, signed and delivered a deed purporting to convey to the cousin 'all of my interest in the farm' in exchange for $30,000. The deed was properly executed and recorded. The uncle is still living, and no one else has an interest in the farm. The jurisdiction applies the common-law doctrine of merger.",
+            stem: "A landowner conveyed a farm 'to my uncle for life, then to my cousin and her heirs.' Several years later the uncle, who needed money, signed and delivered a deed purporting to convey to the cousin 'all of my interest in the farm' in exchange for $30,000. The deed was properly executed and recorded. The uncle is still living, and no one else has an interest in the farm.",
             call: "What estate does the cousin now hold in the farm?",
             options: [
               { text: "A fee simple absolute, because the life estate merged into the next vested estate when both came into her hands.", why: "Merger combines a present estate with the next vested estate when one person holds both and no one holds a vested estate between them. The smaller estate is absorbed." },
@@ -556,9 +600,9 @@
               { text: "A fee simple subject to a reversion in the landowner, because a conveyance of a life estate always revives the grantor's reversion.", why: "The landowner kept nothing: the cousin's remainder was in fee simple, so there is no reversion to revive.", trap: 7 },
             ],
             answer: 0,
-            facts: ["Both interests were vested when created", "applies the common-law doctrine of merger"],
+            facts: ["all of my interest in the farm"],
             say: "A life estate and the next vested estate in one person's hands merge into the larger one.",
-            status: "general", src: "property.md Module 2 (merger); research/CURRICULUM.md u10 brief",
+            status: "general", src: "property.md Module 2 (merger); research/CURRICULUM.md u10 brief; verification pass 2026-11-02: stem no longer states the holding",
           },
         ],
       },
@@ -581,12 +625,12 @@
             distractorElements: ["Wait and see what actually happens", "Strike the whole conveyance"],
             exceptions: [
               "It reaches contingent remainders, executory interests, vested remainders subject to open, and options in gross; most courts also apply it to rights of first refusal",
-              "It does not reach reversions, possibilities of reverter, rights of entry (majority), indefeasibly vested remainders, or a gift over from one charity to another",
+              "It does not reach reversions, possibilities of reverter, rights of entry, indefeasibly vested remainders, or a gift over from one charity to another",
               "An option in a lease, exercisable during the lease term, is not subject to it",
-              "An administrative contingency ('when my estate is settled') is usually read as a reasonable time, so most courts save it",
+              "An administrative contingency ('to my issue living when my estate is distributed') is void under the classic common-law rule, because administration could run past the period. Some courts save it by reading in a reasonable time",
             ],
             numbers: [{ label: "Years after the validating life", value: "21" }],
-            cite: "NCBE MBE Subject Matter Outline (Real Property I.D.1)", citeAsk: "Which part of the NCBE outline lists the Rule Against Perpetuities and its statutory reforms?",
+            cite: "NCBE MBE Subject Matter Outline (Real Property: Rule Against Perpetuities)",
             ex: [
               { facts: "'To Ann for life, then to such of Ann's children as survive her.'", result: "Valid: vesting is certain, if at all, at Ann's death." },
               { facts: "'To Ann for life, then to Ann's children who reach 25.'", result: "Void: a child born at Ann's death reaches 25 more than 21 years later." },
@@ -595,10 +639,10 @@
             hook: "Test it at birth, not later: what might happen counts, not what did.",
             quiz: [
               { t: "tf", q: "Under the common-law rule, a contingent remainder is valid if it actually vests within 21 years, even if it might not have.", a: false, why: "The test is made at creation: any possible chain of events that vests the interest too late voids it. Looking at what happens is a reform." },
-              { t: "mcq", q: "Which interest is NOT subject to the common-law Rule Against Perpetuities?", options: ["A possibility of reverter", "A contingent remainder", "An executory interest"], a: "A possibility of reverter", why: "Interests retained by the grantor (reversion, possibility of reverter, right of entry) are vested and are generally outside the rule." },
+              { t: "mcq", q: "Which interest is NOT subject to the common-law Rule Against Perpetuities?", options: ["A possibility of reverter", "A contingent remainder", "An executory interest"], a: "A possibility of reverter", why: "Interests retained by the grantor (reversion, possibility of reverter, right of entry) are treated as vested and are outside the rule." },
               { t: "tf", q: "When one interest violates the rule, the whole conveyance is void.", a: false, why: "Only the offending interest is struck. The prior estates stand as written." },
             ],
-            status: "general", src: "Standard formulation (Gray); NCBE MBE Subject Matter Outline, Real Property I.D.1 (heading); property.md Module 3",
+            status: "general", src: "Standard formulation (Gray); NCBE MBE Subject Matter Outline, Real Property I.D.1 (heading); property.md Module 3; verification pass 2026-11-02: slothful executor corrected to void; right of entry exempt without a majority label; outline-number cite game removed",
           },
           {
             id: "u10-r-rap-reforms", kind: "rule", cat: "I.D.1", exam: ["mbe"], title: "Reforms: wait-and-see, USRAP and cy pres",
@@ -644,13 +688,13 @@
               { text: "An option to buy land, held in gross and not part of a lease", bucket: "Subject to the rule", why: "An option in gross is a nonvested interest in land." },
               { text: "A reversion", bucket: "Not subject to the rule", why: "Retained by the grantor and vested." },
               { text: "A possibility of reverter", bucket: "Not subject to the rule", why: "Retained by the grantor: generally outside the rule." },
-              { text: "A right of entry (majority view)", bucket: "Not subject to the rule", why: "Retained by the grantor: most courts exempt it." },
+              { text: "A right of entry", bucket: "Not subject to the rule", why: "Retained by the grantor: outside the common-law rule (a statute may cap its duration)." },
               { text: "An indefeasibly vested remainder", bucket: "Not subject to the rule", why: "Already vested, so there is nothing to test." },
               { text: "A gift over from one charity to another charity", bucket: "Not subject to the rule", why: "Charity-to-charity gifts are exempt." },
               { text: "An option to buy contained in a lease and exercisable only during the lease term", bucket: "Not subject to the rule", why: "An option in a lease, exercisable within the lease term, is exempt." },
             ],
             say: "The rule tests interests held by transferees that might vest late; the grantor's interests stay outside.",
-            status: "general", src: "property.md Module 3 (options and rights of first refusal flagged; ROFR left out of this sort)",
+            status: "general", src: "property.md Module 3 (options and rights of first refusal flagged; ROFR left out of this sort); verification pass 2026-11-02: right-of-entry row no longer labelled majority",
           },
           {
             id: "u10-so-rap-void", kind: "sort", cat: "I.D.1", exam: ["mbe"], mode: "yesno", q: "Valid or void under the common-law Rule Against Perpetuities?",
@@ -664,10 +708,10 @@
               { text: "To a library so long as the land is used for books, then to my nephew and his heirs", bucket: "Void", why: "A gift over from a charity to a private person may occur at any distant time. The nephew's interest is struck." },
               { text: "To a library so long as the land is used for books, then to a school", bucket: "Valid", why: "A gift over from one charity to another is exempt." },
               { text: "To my daughter for life, then to her children", bucket: "Valid", why: "Each child's interest vests at birth, and the class closes at the daughter's death." },
-              { text: "To my grandson when my estate has been fully administered and settled", bucket: "Valid", why: "The slothful executor: most courts read an administrative contingency as a reasonable time, which cannot outlast lives in being plus 21." },
+              { text: "To my issue living when my estate is distributed", bucket: "Void", why: "The slothful executor: administration could take more than 21 years, and issue born later could take. Some courts save it by reading in a reasonable time." },
             ],
             say: "Ask the worst case: could someone not yet born make it vest after the lives in being plus 21 years?",
-            status: "general", src: "property.md Module 3; standard classic examples",
+            status: "general", src: "property.md Module 3; standard classic examples; verification pass 2026-11-02: slothful-executor row rebuilt with unborn takers and moved to Void",
           },
           {
             id: "u10-h-rap-age25", kind: "hypo", cat: "I.D.1", exam: ["mbe"], callType: "status", rule: "u10-r-rap", issue: "age contingency over 21", grid: true,
@@ -701,7 +745,7 @@
           },
           {
             id: "u10-h-rap-octogenarian", kind: "hypo", cat: "I.D.1", exam: ["mbe"], callType: "status", rule: "u10-r-rap", issue: "the fertile octogenarian",
-            stem: "A landowner conveyed a vacation house 'to my aunt for life, then to the grandchildren of my aunt.' When the deed was delivered, the aunt was 82 years old, a widow, with no children and no grandchildren. A physician testified that the aunt could not in fact have another child. The jurisdiction applies the common-law Rule Against Perpetuities unmodified, including the conclusive presumption that a person can have children at any age. The landowner's executor questions the validity of the remainder.",
+            stem: "A landowner conveyed a vacation house 'to my aunt for life, then to the grandchildren of my aunt.' When the deed was delivered, the aunt was 82 years old, a widow, with no children and no grandchildren. A physician testified that the aunt could not in fact have another child. The jurisdiction applies the common-law Rule Against Perpetuities unmodified. The landowner's executor questions the validity of the remainder.",
             call: "Is the remainder in the aunt's grandchildren valid?",
             options: [
               { text: "No, because the aunt is presumed able to have a child after the conveyance, whose own child could be born too late.", why: "The law presumes fertility at any age, whatever the evidence. A child born after creation is not a life in being, and that child's children could arrive more than 21 years after every life in being." },
@@ -710,10 +754,10 @@
               { text: "No, because a gift to the grandchildren of a living person is a gift to unborn persons, which the rule forbids.", why: "A gift to unborn persons may be valid if every member must be ascertained within the period.", trap: 7 },
             ],
             answer: 0,
-            facts: ["82 years old", "conclusive presumption that a person can have children at any age"],
+            facts: ["82 years old", "could not in fact have another child"],
             hook: "Test it at creation, by what MIGHT happen: even an 82-year-old is presumed able to have a child.",
             say: "The law presumes anyone can have a child at any age, so a gift to her grandchildren can vest too late.",
-            status: "general", src: "property.md Module 3 (fertile octogenarian); hooks.jsonl (RAP killers)",
+            status: "general", src: "property.md Module 3 (fertile octogenarian); hooks.jsonl (RAP killers); verification pass 2026-11-02: presumption no longer stated in the stem",
           },
           {
             id: "u10-h-rap-widow", kind: "hypo", cat: "I.D.1", exam: ["mbe"], callType: "status", rule: "u10-r-rap", issue: "the unborn widow",
@@ -760,6 +804,21 @@
             facts: ["exercisable at any time during the term of this lease"],
             say: "An option tied to the lease term cannot outrun it, so the perpetuities rule does not touch it.",
             status: "general", src: "property.md Module 3 (options in leases are exempt)",
+          },
+          {
+            id: "u10-h-rap-rofr", kind: "hypo", cat: "I.D.1", exam: ["mbe"], callType: "prevail", rule: "u10-r-rap", issue: "right of first refusal and perpetuities",
+            stem: "A landowner sold a lot to a buyer and, in the same deed, kept for herself and her heirs and assigns forever a right of first refusal: if the buyer or any later owner decides to sell, the lot must first be offered to the holder at the price a bona fide purchaser has offered. No time limit is stated. Forty years later the buyer's successor contracted to sell the lot to a stranger without first offering it to the landowner's heir, who now holds the right. The heir sues for specific performance. The jurisdiction applies the common-law Rule Against Perpetuities unmodified, to options and rights of first refusal alike.",
+            call: "Will the heir prevail?",
+            options: [
+              { text: "No, because the right could be exercised more than 21 years after every life in being, so it was void from the start.", why: "A preemptive right with no time limit, held by the grantor's heirs and assigns, may vest too late. Where the rule reaches rights of first refusal, it fails at creation." },
+              { text: "Yes, because the price is what a bona fide purchaser offers, so the right is a reasonable partial restraint on alienation.", why: "Reasonableness settles the restraint question, not the perpetuities question, and the right fails the common-law rule.", trap: 6 },
+              { text: "Yes, because the heir in fact asserted the right within a reasonable time after the successor decided to sell.", why: "Actual events do not matter under the common-law rule, which tests the interest at creation.", trap: 4 },
+              { text: "Yes, because a right the grantor keeps in her own deed is a retained interest, which the rule does not reach.", why: "Reversions, possibilities of reverter and rights of entry are exempt. A right of first refusal is option-like, and the stem says the rule reaches it.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["heirs and assigns forever", "No time limit is stated"],
+            say: "A first-refusal right with no time limit, where the rule reaches it, is void like an option in gross.",
+            status: "general", src: "property.md Module 3 and Module 18 (rights of first refusal: majority view, a split; the stem states the rule); verification pass 2026-11-02: new item",
           },
           {
             id: "u10-h-rap-charity-private", kind: "hypo", cat: "I.D.1", exam: ["mbe"], callType: "title", rule: "u10-r-rap", issue: "effect of striking a void interest",
@@ -852,9 +911,9 @@
             quiz: [
               { t: "tf", q: "A deed restriction limiting land to single-family residential use is a restraint on alienation.", a: false, why: "It limits use, not transfer. Use restrictions are tested as conditions or covenants." },
               { t: "tf", q: "A total restraint on the sale of a fee simple is void even when it is drafted as a forfeiture of the estate.", a: true, why: "Disabling, forfeiture and promissory restraints are all void when they are total restraints on a fee simple." },
-              { t: "bucket", q: "Valid or void restraint on a fee simple?", buckets: ["Void", "Valid"], items: [{ text: "The grantee may never sell the land to anyone", bucket: "Void" }, { text: "The land reverts to the grantor if the grantee ever sells it", bucket: "Void" }, { text: "The grantor may buy first on the terms a bona fide buyer offers", bucket: "Valid" }, { text: "Sale only to a buyer the grantor approves, approval not to be unreasonably withheld", bucket: "Valid" }] },
+              { t: "bucket", q: "Valid or void restraint on a fee simple?", buckets: ["Void", "Valid"], items: [{ text: "The grantee may never sell the land to anyone", bucket: "Void" }, { text: "The land reverts to the grantor if the grantee ever sells it", bucket: "Void" }, { text: "The grantor may buy first on the terms a bona fide buyer offers", bucket: "Valid" }] },
             ],
-            status: "general", src: "property.md Module 6 (life-estate restraints flagged uncertain); NCBE MBE Subject Matter Outline, Real Property I.D.2",
+            status: "general", src: "property.md Module 6 (life-estate restraints flagged uncertain); NCBE MBE Subject Matter Outline, Real Property I.D.2; verification pass 2026-11-02: consent-clause bucket row removed (validity of a consent restraint on a fee is unsettled)",
           },
           {
             id: "u10-h-total-restraint", kind: "hypo", cat: "I.D", callType: "title", rule: "u10-r-restraints", issue: "total restraint on a fee simple",
@@ -900,9 +959,9 @@
             distractorElements: ["A vested remainder lapses if its holder dies before the life tenant", "Only the grantor may transfer a future interest"],
             exceptions: [
               "A vested remainder in a named person passes to the holder's heirs or devisees even if the holder dies before the life tenant",
-              "Traditionally a right of entry could not be sold during life, but it could pass at death. Most states now allow transfer, or a statute does: the stem will say",
+              "Traditionally a right of entry could not be sold during life, but it could pass at death. Many states now allow transfer, by statute or case law: the stem will say",
             ],
-            cite: "NCBE MBE Subject Matter Outline (Real Property I.D.2)", citeAsk: "Which part of the NCBE outline covers alienability, descendibility and devisability of present and future interests?",
+            cite: "NCBE MBE Subject Matter Outline (Real Property: alienability, descendibility and devisability)",
             ex: [
               { facts: "'To Ann for life, then to Ben and his heirs.' Ben dies before Ann, leaving a will that devises everything to his friend.", result: "The friend takes Ben's vested remainder, and possession when Ann dies." },
               { facts: "'To Ann for life, then to Ben if Ben survives Ann.' Ben dies before Ann.", result: "Nothing passes under Ben's will: the interest ended when he died first." },
@@ -913,7 +972,7 @@
               { t: "mcq", q: "'To Ann for life, then to Ben if Ben survives Ann.' Ben dies before Ann, leaving a will that devises all of his property to a friend. Who takes Ben's interest?", options: ["No one: it ended at his death", "The friend", "Ben's heirs"], a: "No one: it ended at his death", why: "Survival is a condition precedent, so nothing passes by will or intestacy if Ben dies first." },
               { t: "tf", q: "A reversion may be sold during the life estate.", a: true, why: "A reversion is a vested, alienable interest of the grantor." },
             ],
-            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.D.2; property.md Module 2 and Module 6 (right of entry transfer flagged uncertain)",
+            status: "general", src: "NCBE MBE Subject Matter Outline, Real Property I.D.2; property.md Module 2 and Module 6 (right of entry transfer flagged uncertain); verification pass 2026-11-02: outline-number cite game removed; right-of-entry transfer count softened",
           },
           {
             id: "u10-h-devise-remainder", kind: "hypo", cat: "I.D.2", callType: "title", rule: "u10-r-alienability", issue: "vested remainder passes by will",
@@ -1036,7 +1095,7 @@
             ordered: false,
             distractorElements: ["Either spouse may convey a half", "Survivorship can be defeated by a will"],
             exceptions: [
-              "Only about two dozen states recognize the tenancy by the entirety: the stem will say",
+              "Many states do not recognize the tenancy by the entirety: the stem will say",
               "Tenants in common have no survivorship: a deceased tenant's share passes by will or intestacy",
             ],
             cite: "NCBE MBE Subject Matter Outline (Real Property I.B)", citeAsk: "Which part of the NCBE outline covers cotenancy?",
@@ -1049,7 +1108,7 @@
               { t: "tf", q: "A creditor with a judgment against one spouse alone may force a sale of the couple's tenancy by the entirety.", a: false, why: "Entireties property is held by the marital unit: a creditor of only one spouse cannot reach it." },
               { t: "mcq", q: "In most states, spouses who hold as tenants by the entirety divorce. How do they hold afterward?", options: ["As tenants in common", "As joint tenants", "As tenants by the entirety"], a: "As tenants in common", why: "The marriage unity ends, so the entirety converts to a tenancy in common." },
             ],
-            status: "general", src: "property.md Module 4 (count of entireties states flagged: 'about two dozen'); tenancy by the entirety is named in the NextGen outline, not in the MBE outline, which lists only tenancy in common and joint tenancy; United States v. Craft, 535 U.S. 274 (2002) (federal tax lien reaches an entireties interest)",
+            status: "general", src: "property.md Module 4 (count of entireties states flagged, so no count is given); tenancy by the entirety is named in the NextGen outline, not in the MBE outline, which lists only tenancy in common and joint tenancy; United States v. Craft, 535 U.S. 274 (2002) (federal tax lien reaches an entireties interest); verification pass 2026-11-02: state count removed",
           },
           {
             id: "u10-r-severance", kind: "rule", cat: "I.B", title: "What severs a joint tenancy",
@@ -1065,7 +1124,7 @@
             distractorElements: ["A will leaving the share to a friend", "The death of a joint tenant"],
             exceptions: [
               "Severance leaves a tenancy in common as to the severed share; the other joint tenants stay joint among themselves",
-              "A joint tenant's lease generally does not sever: it ends when the lessor dies (majority view)",
+              "Courts split on whether a joint tenant's lease severs. Where it does not, the lease ends when the lessor dies: the stem will say",
               "A judgment lien alone generally does not sever, though courts differ",
               "Whether a contract to sell severs, by equitable conversion, differs among courts",
             ],
@@ -1087,7 +1146,7 @@
               { t: "tf", q: "A joint tenant's will can sever the joint tenancy.", a: false, why: "Survivorship takes effect at death, before a will operates, so a will cannot sever." },
               { t: "tf", q: "A sheriff's execution sale of one joint tenant's interest, held before she dies, severs the joint tenancy as to her share.", a: true, why: "The buyer takes her share as a tenant in common, so no survivorship applies to it." },
             ],
-            status: "general", src: "property.md Module 4 (lease, judgment lien and contract to sell are flagged splits); hooks.jsonl (G-SAM)",
+            status: "general", src: "property.md Module 4 (lease, judgment lien and contract to sell are flagged splits); hooks.jsonl (G-SAM); verification pass 2026-11-02: lease severance stated as a split",
           },
           {
             id: "u10-h-sever-convey", kind: "hypo", cat: "I.B", callType: "title", rule: "u10-r-severance", issue: "severance by conveyance",
@@ -1136,7 +1195,7 @@
           },
           {
             id: "u10-h-execution-sale", kind: "hypo", cat: "I.B", callType: "title", rule: "u10-r-severance", issue: "execution sale severs a joint tenancy",
-            stem: "Two friends bought a lot and took title 'as joint tenants with right of survivorship.' A creditor obtained a money judgment against one of them, levied on that friend's interest, and the sheriff sold the interest at an execution sale to a purchaser for $20,000. The sale was confirmed by the court. A year later the judgment debtor died with no will. The other friend is living, and the purchaser holds the sheriff's deed. The jurisdiction treats an execution sale of one joint tenant's interest before death as a severance.",
+            stem: "Two friends bought a lot and took title 'as joint tenants with right of survivorship.' A creditor obtained a money judgment against one of them, levied on that friend's interest, and the sheriff sold the interest at an execution sale to a purchaser for $20,000. The sale was confirmed by the court. A year later the judgment debtor died with no will. The other friend is living, and the purchaser holds the sheriff's deed.",
             call: "Who owns the lot?",
             options: [
               { text: "The surviving friend and the purchaser, each as a tenant in common of an undivided one-half interest.", why: "The sale before death conveyed the debtor's share and severed the joint tenancy as to it, so no survivorship applies." },
@@ -1145,24 +1204,24 @@
               { text: "The debtor's heirs and the surviving friend as joint tenants, because a creditor's sale cannot change the form of ownership.", why: "A conveyance of one share, by sale, severs it into a tenancy in common.", trap: 10 },
             ],
             answer: 0,
-            facts: ["sold the interest at an execution sale", "before death as a severance"],
+            facts: ["sold the interest at an execution sale", "A year later the judgment debtor died"],
             say: "A sale of her share before death severs the joint tenancy: the buyer is a tenant in common.",
-            status: "general", src: "hooks.jsonl (G-SAM: Actual foreclosure or judicial sale); property.md Module 4",
+            status: "general", src: "hooks.jsonl (G-SAM: Actual foreclosure or judicial sale); property.md Module 4; verification pass 2026-11-02: stem no longer states the holding",
           },
           {
             id: "u10-h-jt-lease", kind: "hypo", cat: "I.B", callType: "title", rule: "u10-r-severance", issue: "lease by a joint tenant",
-            stem: "Two sisters owned a store building as joint tenants with right of survivorship. One sister, without telling the other, leased the entire building to a tenant for a five-year term. After two years, the lessor sister died. The tenant remained in possession and offered rent to the surviving sister, who refused it and demanded possession. The jurisdiction follows the majority view that a lease granted by one joint tenant does not sever the joint tenancy and ends when the lessor dies.",
+            stem: "Two sisters owned a store building as joint tenants with right of survivorship. One sister, without telling the other, leased the entire building to a tenant for a five-year term. After two years, the lessor sister died. The tenant remained in possession and offered rent to the surviving sister, who refused it and demanded possession. The jurisdiction holds that a lease granted by one joint tenant does not sever the joint tenancy and ends when the lessor dies.",
             call: "Who is entitled to possession of the building?",
             options: [
               { text: "The surviving sister, because the lease did not sever the joint tenancy and ended with the lessor's death, leaving her the whole.", why: "The joint tenancy continued, so the survivor took the whole by survivorship, free of the lease granted by the other." },
-              { text: "The tenant, until the end of the five-year term, because a lease signed by a joint tenant is binding on the cotenant's survivor.", why: "On the majority view the lease terminated when the lessor died.", trap: 4 },
-              { text: "The lessor sister's estate, because the lease severed the joint tenancy as to her half and her half passed to her heirs.", why: "On the majority view a lease does not sever.", trap: 4 },
+              { text: "The tenant, until the end of the five-year term, because a lease signed by a joint tenant is binding on the cotenant's survivor.", why: "In this jurisdiction the lease ended when the lessor died.", trap: 4 },
+              { text: "The lessor sister's estate, because the lease severed the joint tenancy as to her half and her half passed to her heirs.", why: "In this jurisdiction a lease does not sever.", trap: 4 },
               { text: "The tenant and the surviving sister jointly, because the surviving sister consented by accepting a share of the rent.", why: "The stem says the surviving sister refused the rent and made no agreement.", trap: 3 },
             ],
             answer: 0,
-            facts: ["does not sever the joint tenancy and ends when the lessor dies"],
-            say: "On the majority view a joint tenant's lease does not sever, and it dies with her.",
-            status: "general", src: "property.md Module 4 (lease by a joint tenant, flagged split; the stem states the rule)",
+            facts: ["leased the entire building to a tenant", "the lessor sister died"],
+            say: "Where a joint tenant's lease does not sever, it ends at her death and the survivor takes free of it.",
+            status: "general", src: "property.md Module 4 (lease by a joint tenant, flagged split; the stem states the rule); verification pass 2026-11-02: no majority label; the stem states the jurisdiction's rule",
           },
           {
             id: "u10-h-contract-sale", kind: "hypo", cat: "I.B", callType: "accurate", rule: "u10-r-severance", issue: "contract to sell and severance",
@@ -1240,7 +1299,7 @@
               { t: "mcq", q: "A cotenant pays $9,000 to replace a failing furnace and $15,000 to add a sunroom. The other cotenant owns half. On an accounting, what may she recover?", options: ["$4,500", "$12,000", "$0"], a: "$4,500", why: "Necessary repairs support contribution. Improvements do not, although a partition court may credit the value added." },
               { t: "tf", q: "A cotenant who excludes the other from the property owes fair rental value.", a: true, why: "Ouster ends the rule that a cotenant in possession owes no rent." },
             ],
-            status: "general", src: "property.md Module 4 (UPHPA count: 'about two dozen states')",
+            status: "general", src: "property.md Module 4 (UPHPA: one-line note only, no state count); verification pass 2026-11-02: UPHPA kept as a note; its hypo removed",
           },
           {
             id: "u10-h-rent-ouster", kind: "hypo", cat: "I.B", callType: "liable", rule: "u10-r-cotenant-rights", issue: "no rent without ouster", grid: true,
@@ -1333,21 +1392,6 @@
             status: "general", src: "property.md Module 4 (partition); NCBE MBE Subject Matter Outline, Real Property I.B (partition)",
           },
           {
-            id: "u10-h-heirs-property", kind: "hypo", cat: "I.B", callType: "remedy", rule: "u10-r-cotenant-rights", issue: "heirs property buyout",
-            stem: "Four relatives inherited a family farm from a grandparent who died without a will, and they hold it as tenants in common. The farm has been in the family for generations, and three of the cousins live on it. A fourth cousin, who owns a ten percent interest, has asked a court to partition the farm by sale. The jurisdiction has adopted the Uniform Partition of Heirs Property Act, and all of the statute's requirements for 'heirs property' are met. No cotenant has offered to purchase another's interest.",
-            call: "What may the three cousins who want to keep the farm do?",
-            options: [
-              { text: "Elect to buy the requesting cousin's interest at a court-determined appraised value, which stops a sale.", why: "Under the Act, after an appraisal the non-requesting cotenants may buy out the cotenant who asked for partition, before any sale is ordered." },
-              { text: "Nothing, because partition by sale cannot be stopped once any cotenant has asked a court to order it.", why: "The Act gives the other heirs a buyout right before a court may order a sale of heirs property.", trap: 11 },
-              { text: "Require partition in kind, because the Act forbids a sale of land that has been in a family for generations.", why: "The Act does not ban sales. It gives a buyout right and requires a court to weigh factors before ordering a sale.", trap: 5 },
-              { text: "Buy the interest only at the price that the requesting cousin names, since the Act sets no valuation method.", why: "The court determines fair market value, usually by appraisal.", trap: 3 },
-            ],
-            answer: 0,
-            facts: ["adopted the Uniform Partition of Heirs Property Act"],
-            say: "Heirs property gets a buyout before a forced sale: the others may purchase the requester's share at appraised value.",
-            status: "general", src: "property.md Module 4 (UPHPA; adoption count flagged); NCBE MBE Subject Matter Outline, Real Property I.B",
-          },
-          {
             id: "u10-h-tbe-creditor", kind: "hypo", cat: "I.B", callType: "prevail", rule: "u10-r-tic-tbe", issue: "creditor of one spouse and the entirety", grid: true,
             stem: "A husband and wife hold a house as tenants by the entirety in a state that recognizes that form of ownership. A creditor obtains a money judgment against the husband alone, for a debt unrelated to the marriage, and seeks to force a sale of the house to satisfy it. The wife was not a party to the debt.",
             call: "Will the creditor succeed in forcing a sale?",
@@ -1423,17 +1467,17 @@
           {
             id: "u10-h-holdover", kind: "hypo", cat: "I.C", callType: "status", rule: "u10-r-tenancies", issue: "holdover and acceptance of rent", grid: true,
             stem: "A tenant's one-year lease expired on June 30. The tenant stayed, and on July 5 mailed the landlord a check for one month's rent at the old rate. The landlord cashed the check and said nothing. The lease did not mention holdovers. On July 20, the landlord served a notice to quit effective immediately, asserting that the tenant is a trespasser.",
-            call: "Is the landlord entitled to evict the tenant immediately?",
+            call: "Is the tenant a trespasser whom the landlord may treat as having no right to remain?",
             options: [
               { text: "No, because by accepting rent after the term ended the landlord elected to treat the tenant as a periodic tenant.", why: "A holdover may be treated as a trespasser or as a periodic tenant at the landlord's election, and accepting rent is the election." },
-              { text: "No, because a holdover tenant must be removed through the courts, whatever the landlord has done.", why: "The result is right, but the reason is not: the landlord is barred by its own election, not by a flat rule about court orders.", trap: 1 },
+              { text: "No, because a tenant who holds over for less than one month cannot be treated as a trespasser.", why: "There is no grace period: a holdover may be treated as a trespasser from the first day, unless the landlord elects otherwise, as this one did by taking rent.", trap: 1 },
               { text: "Yes, because a tenant who remains after the term ends is a trespasser, and the landlord's acceptance of rent changes nothing.", why: "The landlord may elect to treat the holdover as a tenant, and here it did.", trap: 5 },
               { text: "Yes, because the lease expired and the landlord's silence did not change the tenant's status.", why: "Cashing the rent check was more than silence: acceptance of rent after the term is an election.", trap: 2 },
             ],
             answer: 0,
             facts: ["cashed the check and said nothing", "mailed the landlord a check for one month's rent"],
-            say: "Take rent after the term and you have chosen a periodic tenancy; you cannot evict at once.",
-            status: "general", src: "property.md Module 5 (P5-2 rewritten)",
+            say: "Take rent after the term and you have chosen a periodic tenancy: the holdover is no longer a trespasser.",
+            status: "general", src: "property.md Module 5 (P5-2 rewritten); verification pass 2026-11-02: call and one distractor rewritten so the no-self-help default does not make a second key",
           },
           {
             id: "u10-h-delivery", kind: "hypo", cat: "I.C", callType: "status", rule: "u10-r-tenancies", issue: "English rule on delivery of possession",
@@ -1449,6 +1493,20 @@
             facts: ["English rule on delivery of possession", "refused to leave"],
             say: "English rule (US majority): the landlord must hand over actual possession, not just the right to it.",
             status: "general", src: "property.md Module 5 (P5-3 rewritten)",
+          },
+          {
+            id: "u10-so-tenancies", kind: "sort", cat: "I.C", mode: "category", q: "Which tenancy is it?",
+            buckets: ["Term of years", "Periodic", "At will", "At sufferance"],
+            items: [
+              { text: "A lease from March 1 of this year to the last day of February next year", bucket: "Term of years", why: "Fixed beginning and end dates make a term of years, however short." },
+              { text: "A lease from month to month at $900 a month", bucket: "Periodic", why: "It renews each month until a full period's notice ends it." },
+              { text: "Occupancy for as long as both parties wish, with no term and no rent period", bucket: "At will", why: "Either side may end it, and it ends on either party's death or an attempted transfer." },
+              { text: "A tenant stays after a one-year lease ends, and the landlord has neither taken rent nor objected yet", bucket: "At sufferance", why: "A holdover before the landlord elects is a tenant at sufferance." },
+              { text: "An oral three-year lease, unenforceable under the statute of frauds, with rent paid each month", bucket: "Periodic", why: "Possession plus monthly rent usually creates a month-to-month tenancy." },
+              { text: "A holdover whose rent the landlord accepted after the term ended", bucket: "Periodic", why: "Accepting rent is the landlord's election to treat the holdover as a periodic tenant." },
+            ],
+            say: "Fixed dates: term of years. Renews by the period: periodic. No term: at will. Stays without right: at sufferance.",
+            status: "general", src: "property.md Module 5 (types of tenancies; holdover); NCBE MBE Subject Matter Outline, Real Property I.C; verification pass 2026-11-02: new item",
           },
           {
             id: "u10-r-constructive-eviction", kind: "rule", cat: "I.C", title: "Quiet enjoyment and constructive eviction",
@@ -1492,6 +1550,21 @@
             facts: ["did nothing for two months", "then moved out and stopped paying rent"],
             say: "Notice, no cure, and the tenant leaves: constructive eviction ends the rent.",
             status: "general", src: "property.md Module 5 (constructive eviction; fresh facts)",
+          },
+          {
+            id: "u10-h-suitability", kind: "hypo", cat: "I.C", callType: "liable", rule: "u10-r-habitability", issue: "commercial warranty of suitability", grid: true,
+            stem: "A dentist leased office space in a commercial building for five years, to be used only as a dental office. Hidden in the walls was a defect in the building's wiring, unknown to the dentist and not discoverable by a reasonable inspection, that caused repeated power failures whenever dental equipment ran. The dentist gave notice, and the landlord failed to fix the defect within a reasonable time. The dentist then moved out and stopped paying rent. The jurisdiction implies in commercial leases a warranty that facilities vital to the leased use are free of latent defects. The landlord sues for the rent for the rest of the term.",
+            call: "Is the dentist liable for the rent after she moved out?",
+            options: [
+              { text: "No, because the landlord breached the implied warranty of suitability, which lets the tenant end the lease and stop paying rent.", why: "Where the jurisdiction implies a warranty of suitability, a latent defect vital to the leased use, uncured after notice, excuses further rent." },
+              { text: "Yes, because a commercial tenant takes the premises as they are, and the landlord made no express promise about the wiring.", why: "That is the traditional rule. The stem says this jurisdiction implies a warranty of suitability.", trap: 4 },
+              { text: "No, because the landlord breached the implied warranty of habitability, which protects every tenant who pays rent.", why: "The warranty of habitability protects residential tenants. A commercial tenant relies on the warranty of suitability.", trap: 9 },
+              { text: "Yes, because a tenant who moves out may claim relief only after first suing the landlord to compel the repair.", why: "Notice and a reasonable time to cure are enough. No suit for repair comes first.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["not discoverable by a reasonable inspection", "only as a dental office"],
+            say: "Commercial leases are traditionally as is, but where suitability is implied, a hidden defect vital to the use frees the tenant.",
+            status: "general", src: "property.md Module 5 (commercial suitability: Davidow v. Inwood North Professional Group, 747 S.W.2d 373 (Tex. 1988), a minority line, from the research notes, not re-read; the stem states the rule); verification pass 2026-11-02: new item",
           },
           {
             id: "u10-r-habitability", kind: "rule", cat: "I.C", title: "Habitability, repair and retaliation",
@@ -1610,6 +1683,35 @@
             say: "A hidden danger the landlord knows about, and conceals, makes the landlord liable to the tenant's guests.",
             status: "general", src: "property.md Module 5 (landlord tort liability exceptions)",
           },
+          {
+            id: "u10-h-negligent-repair", kind: "hypo", cat: "I.C", callType: "liable", rule: "u10-r-landlord-tort", issue: "landlord's negligent repair", grid: true,
+            stem: "A tenant rented a house under a lease that put all repairs on the tenant. When a back-porch step cracked, the landlord offered to fix it as a favor and nailed a thin board over the crack. The board looked sound but could not bear an adult's weight. A week later a visitor of the tenant stepped on it, the board broke, and the visitor was injured. The visitor sues the landlord.",
+            call: "Is the landlord liable to the visitor?",
+            options: [
+              { text: "Yes, because a landlord who undertakes a repair must make it with reasonable care, whether or not the lease required it.", why: "With no duty to repair, a landlord who chooses to repair and does it carelessly is still liable for the injury the bad repair causes." },
+              { text: "No, because the lease put the duty to repair on the tenant, so the landlord owed no duty to anyone about the step.", why: "The lease allocated the duty to repair, but a voluntary repair carries its own duty of care.", trap: 9 },
+              { text: "No, because the visitor was the tenant's guest, and a landlord owes no duty to the guests of a tenant.", why: "The landlord's duties under the exceptions run to people lawfully on the premises, guests included.", trap: 5 },
+              { text: "Yes, because a landlord is strictly liable for every defect in leased residential premises.", why: "Liability rests on negligence in making the repair, not on strict liability.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["offered to fix it as a favor", "could not bear an adult's weight"],
+            say: "No duty to repair, but repair it anyway and you must do it with care.",
+            status: "general", src: "Restatement (Second) of Torts §362 (negligent repairs; section recalled, not re-read); property.md Module 5 (landlord tort liability); verification pass 2026-11-02: new item",
+          },
+          {
+            id: "u10-so-landlord-tort", kind: "sort", cat: "I.C", mode: "yesno", q: "Is the landlord liable for the injury?",
+            buckets: ["Landlord liable", "Landlord not liable"],
+            items: [
+              { text: "A guest trips on a broken step in the shared stairway, which the landlord controls and has left unfixed for months", bucket: "Landlord liable", why: "Common areas stay in the landlord's control: reasonable care is owed." },
+              { text: "The landlord carelessly fixes a tenant's loose railing as a favor, and the railing gives way", bucket: "Landlord liable", why: "A landlord who undertakes a repair must use reasonable care." },
+              { text: "The landlord knew of a rotten joist hidden under the carpet, said nothing, and the tenant falls through", bucket: "Landlord liable", why: "A known latent defect must be disclosed." },
+              { text: "A hall leased for public concerts had a weak balcony at the lease that the landlord should have found, and a concertgoer is hurt", bucket: "Landlord liable", why: "Premises leased for public admission: the landlord must inspect and repair defects that exist at the lease." },
+              { text: "A guest slips on cooking oil the tenant spilled on the kitchen floor of the tenant's own unit", bucket: "Landlord not liable", why: "A condition the tenant created in the leased premises is the tenant's risk." },
+              { text: "A kitchen tile in the tenant's unit works loose during the lease, and the landlord neither knew nor promised to repair", bucket: "Landlord not liable", why: "Outside the exceptions, the tenant in possession bears the risk of conditions on the leased premises." },
+            ],
+            say: "Common areas, known hidden defects, careless repairs and public premises; otherwise the tenant in possession bears the risk.",
+            status: "general", src: "Restatement (Second) of Torts §§356-362 (recalled, not re-read); property.md Module 5 (landlord tort liability); verification pass 2026-11-02: new item",
+          },
         ],
       },
       // ------------------------------------------------------------------------------------------------------------------
@@ -1653,33 +1755,33 @@
           },
           {
             id: "u10-h-mitigation", kind: "hypo", cat: "I.C", callType: "remedy", rule: "u10-r-ending-lease", issue: "mitigation after abandonment",
-            stem: "In a jurisdiction that follows the majority rule on a landlord's duty after abandonment, a tenant signed a twelve-month residential lease at $1,000 per month. After six months the tenant moved out without notice and stopped paying. The landlord made no effort to re-let the apartment, which could have been re-let at $1,000 per month within one month, and sued at the end of the term for the remaining $6,000.",
+            stem: "In a jurisdiction that requires a landlord to mitigate after a tenant abandons, a tenant signed a twelve-month residential lease at $1,000 per month. After six months the tenant moved out without notice and stopped paying. The landlord made no effort to re-let the apartment, which could have been re-let at $1,000 per month within one month, and sued at the end of the term for the remaining $6,000.",
             call: "How much may the landlord recover?",
             options: [
-              { text: "$1,000, because the landlord had to make reasonable efforts to re-let and could have avoided all but one month's loss.", why: "The modern majority rule requires reasonable efforts to re-let and credits what they would have produced." },
-              { text: "$6,000, because the lease obligated the tenant to pay rent for the full term.", why: "That is the traditional rule. The stem names the majority rule, which requires mitigation.", trap: 4 },
+              { text: "$1,000, because the landlord had to make reasonable efforts to re-let and could have avoided all but one month's loss.", why: "This jurisdiction requires reasonable efforts to re-let, and the landlord's recovery is reduced by what those efforts would have produced." },
+              { text: "$6,000, because the lease obligated the tenant to pay rent for the full term.", why: "That is the traditional no-mitigation rule. This jurisdiction requires mitigation.", trap: 4 },
               { text: "Nothing, because abandoning the premises was a surrender that ended the lease.", why: "A surrender requires the landlord's acceptance, express or by conduct. Silence and inaction are not acceptance.", trap: 5 },
               { text: "The security deposit alone, because a landlord who fails to mitigate may recover no more than the deposit.", why: "A landlord that fails to mitigate loses only what reasonable efforts would have saved.", trap: 5 },
             ],
             answer: 0,
-            facts: ["majority rule on a landlord's duty after abandonment", "could have been re-let at $1,000 per month within one month"],
-            say: "Modern majority: the landlord must try to re-let, and loses only what trying would have saved.",
-            status: "general", src: "property.md Module 5 (P5-7 rewritten)",
+            facts: ["could have been re-let at $1,000 per month within one month", "made no effort to re-let"],
+            say: "Where mitigation is required, the landlord must try to re-let, and loses only what trying would have saved.",
+            status: "general", src: "property.md Module 5 (P5-7 rewritten); verification pass 2026-11-02: stem states the jurisdiction's rule instead of a majority label",
           },
           {
             id: "u10-h-self-help", kind: "hypo", cat: "I.C", callType: "liable", rule: "u10-r-ending-lease", issue: "self-help eviction", grid: true,
-            stem: "A tenant in a month-to-month tenancy was two months behind in rent. While the tenant was at work, the landlord changed the locks and put the tenant's belongings on the sidewalk. The tenant sues the landlord. The lease allows the landlord to terminate for nonpayment after written notice, which the landlord had not given, and the landlord had told the tenant by phone the week before that the locks would be changed. The jurisdiction follows the majority rule on self-help.",
+            stem: "A tenant in a month-to-month tenancy was two months behind in rent. While the tenant was at work, the landlord changed the locks and put the tenant's belongings on the sidewalk. The tenant sues the landlord. The lease allows the landlord to terminate for nonpayment after written notice, which the landlord had not given, and the landlord had told the tenant by phone the week before that the locks would be changed.",
             call: "Is the landlord liable to the tenant for the lockout?",
             options: [
               { text: "Yes, because the landlord must use judicial process to recover possession, even from a tenant in default.", why: "The majority rule bars self-help, even peaceable self-help, against a defaulting tenant." },
               { text: "Yes, provided that the tenant owes no rent.", why: "The tenant's default does not authorize self-help, so the tenant's debt does not decide the question.", trap: 5 },
-              { text: "No, because the tenant's rent covenant was independent of the landlord's right to possession and the lockout was peaceable.", why: "That is the old minority view. The stem names the majority rule.", trap: 11 },
+              { text: "No, because the tenant's rent covenant was independent of the landlord's right to possession and the lockout was peaceable.", why: "Peaceable self-help is the older view. Modern law, this unit's default, requires judicial process.", trap: 11 },
               { text: "No, because a tenant in default has no right to possession.", why: "A tenant in default still holds possession until a court orders otherwise.", trap: 5 },
             ],
             answer: 0,
-            facts: ["follows the majority rule on self-help"],
+            facts: ["changed the locks and put the tenant's belongings on the sidewalk"],
             say: "Locks changed over unpaid rent? Unlawful: the landlord must go to court.",
-            status: "general", src: "property.md Module 5 (P5-9 rewritten; Berg v. Wiley is the leading case)",
+            status: "general", src: "property.md Module 5 (P5-9 rewritten; Berg v. Wiley is the leading case); verification pass 2026-11-02: rule sentence removed (no self-help is the stated default)",
           },
           {
             id: "u10-c-sommer", kind: "case", subject: "property", name: "Sommer v. Kridel", year: 1977,
@@ -1714,7 +1816,7 @@
             exceptions: [
               "Consent clauses are strictly construed against the landlord: a ban on assignment does not bar a sublease",
               "Accepting rent from an assignee with knowledge of the breach waives the right to terminate for it",
-              "Consent to one assignment does not waive the clause for later ones (Dumpor's Case is rejected)",
+              "Rule in Dumpor's Case (traditional): consent to one assignment waives the clause for later transfers unless the landlord expressly reserves the right. Many modern courts and the Restatement (Second) of Property reject it, so the stem will say",
             ],
             cite: "NCBE MBE Subject Matter Outline (Real Property I.C)", citeAsk: "Which part of the NCBE outline covers transfers by landlord or tenant?",
             ex: [
@@ -1728,7 +1830,7 @@
               { t: "mcq", q: "A tenant subleases part of the term and the subtenant stops paying. The landlord's claim for rent under the head lease lies against…", options: ["The original tenant", "The subtenant", "Neither, since the landlord consented"], a: "The original tenant", why: "The subtenant is in privity only with the sublessor, so the landlord looks to the original tenant." },
               { t: "tf", q: "A lease clause forbidding assignment also forbids subletting.", a: false, why: "Consent clauses are strictly construed against the landlord." },
             ],
-            status: "general", src: "property.md Module 5 (Kendall v. Ernest Pestana, Inc., 40 Cal.3d 488 (1985) and Dumpor's Case: general; counts flagged)",
+            status: "general", src: "property.md Module 5 (Kendall v. Ernest Pestana, Inc., 40 Cal.3d 488 (1985) and Dumpor's Case: general; counts flagged); verification pass 2026-11-02: Dumpor's Case stated as the traditional rule with the modern rejection, a split",
           },
           {
             id: "u10-so-assign-sublease", kind: "sort", cat: "I.C", mode: "category", q: "Assignment or sublease?",
@@ -1788,6 +1890,36 @@
             status: "general", src: "property.md Module 5 (reassignment: states differ on contract liability, so the stem states no promise was made)",
           },
           {
+            id: "u10-h-sublessee", kind: "hypo", cat: "I.C", callType: "prevail", rule: "u10-r-assignment", issue: "landlord cannot sue a sublessee", grid: true,
+            stem: "A landlord leased a store to a tenant for ten years at $5,000 a month. In year four the tenant, with the landlord's consent, transferred the store to a subtenant for three years, keeping the last three years of the term for herself. The subtenant agreed with the tenant to pay $5,500 a month but made no promise to the landlord. The subtenant has paid nothing for four months, and the tenant has also stopped paying the landlord. The landlord sues the subtenant for the unpaid rent.",
+            call: "Will the landlord prevail against the subtenant?",
+            options: [
+              { text: "No, because a sublessee is in neither privity of estate nor privity of contract with the landlord.", why: "The tenant kept a reversion, so this is a sublease. The landlord's claim lies against the original tenant, who may in turn sue the subtenant." },
+              { text: "Yes, because the subtenant is in possession, and anyone in possession is bound by the covenants of the head lease.", why: "Only an assignee, who takes the whole remaining term, is in privity of estate with the landlord.", trap: 5 },
+              { text: "Yes, because the landlord consented to the transfer, which made the subtenant directly liable to the landlord.", why: "Consent to a sublease creates no privity between the landlord and the subtenant.", trap: 5 },
+              { text: "No, because the landlord may recover rent only from the original tenant, and only after terminating the lease.", why: "The landlord may sue the tenant without terminating. The subtenant is simply not liable to the landlord.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["keeping the last three years of the term for herself", "made no promise to the landlord"],
+            say: "Keep any part of the term and it is a sublease: the landlord cannot sue the subtenant for rent.",
+            status: "general", src: "property.md Module 5 (sublessee: no privity with the landlord); verification pass 2026-11-02: new item",
+          },
+          {
+            id: "u10-h-consent-traditional", kind: "hypo", cat: "I.C", callType: "prevail", rule: "u10-r-assignment", issue: "traditional rule on consent to assign", grid: true,
+            stem: "A commercial lease of a restaurant space provides that the tenant may not assign the lease without the landlord's prior written consent, and it says nothing about reasons. The tenant found a well-financed assignee with years of restaurant experience. The landlord refused consent, saying only that he wanted to raise the rent for any new occupant. The tenant sues for a declaration that the refusal was wrongful. The jurisdiction follows the traditional rule on consent to assignment and has adopted no reasonableness requirement.",
+            call: "Will the tenant prevail?",
+            options: [
+              { text: "No, because under the traditional rule a landlord may refuse consent for any reason when the lease does not limit that right.", why: "The lease is silent on reasons, so the traditional rule lets the landlord refuse even on a commercially unreasonable ground." },
+              { text: "Yes, because a landlord may refuse consent to a commercial assignment only on a commercially reasonable ground.", why: "That is the minority rule of Kendall v. Ernest Pestana. This jurisdiction follows the traditional rule.", trap: 4 },
+              { text: "Yes, because clauses restricting assignment are strictly construed against the landlord, which makes them void.", why: "Strict construction narrows what a clause covers. It does not void a clause that plainly bars assignment.", trap: 5 },
+              { text: "No, because a commercial tenant may never assign a lease without the landlord's consent, whatever the lease says.", why: "Without a restricting clause, a tenant may freely assign.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["says nothing about reasons", "wanted to raise the rent for any new occupant"],
+            say: "Traditional rule: a silent consent clause lets the landlord refuse for any reason. Kendall is the minority.",
+            status: "general", src: "property.md Module 5 (consent clauses: traditional rule versus Kendall v. Ernest Pestana, Inc., 40 Cal.3d 488 (1985); the stem states the rule); verification pass 2026-11-02: new item",
+          },
+          {
             id: "u10-c-kendall", kind: "case", subject: "property", name: "Kendall v. Ernest Pestana, Inc.", year: 1985,
             holding: "When a commercial lease requires the landlord's consent to assignment and is silent on reasonableness, the landlord may withhold consent only on a commercially reasonable ground.",
             facts: "A landlord refused to consent to an assignment of a commercial lease without stating a reasonable objection.",
@@ -1807,6 +1939,11 @@
             ],
             ordered: false,
             distractorElements: ["Casualty ends the lease at common law", "The buyer of the reversion takes free of every covenant in the lease"],
+            split: {
+              traditional: "Casualty without the tenant's fault: the lease and the rent continue.",
+              modern: "Many states, by statute or case law, let the tenant terminate or abate rent when the premises are destroyed.",
+            },
+            splitNote: "The stem names the rule on destruction of the premises.",
             exceptions: [
               "Security deposits are governed by statute: the stem states the deadlines and penalties",
               "The lease may allocate the risk of casualty: a clause that expressly covers damage controls",
@@ -1822,11 +1959,11 @@
               { t: "tf", q: "A total condemnation of the leased premises ends the lease and the tenant's duty to pay rent.", a: true, why: "The estate is taken, so the rent obligation ends." },
               { t: "mcq", q: "A landlord who sold the building promised in the lease to repair the roof. Who may be sued on that covenant after the sale?", options: ["The buyer, because the covenant runs with the reversion", "Only the original landlord", "No one, because the buyer never promised the tenant"], a: "The buyer, because the covenant runs with the reversion", why: "A covenant that touches and concerns the land passes with the reversion to the landlord's buyer." },
             ],
-            status: "general", src: "property.md Module 5 (destruction, condemnation: low frequency; Spencer's Case); NCBE MBE Subject Matter Outline, Real Property I.C",
+            status: "general", src: "property.md Module 5 (destruction, condemnation: low frequency; Spencer's Case); NCBE MBE Subject Matter Outline, Real Property I.C; verification pass 2026-11-02: casualty split added",
           },
           {
             id: "u10-h-casualty", kind: "hypo", cat: "I.C", callType: "liable", rule: "u10-r-lease-events", issue: "rent after casualty",
-            stem: "A tenant leased a house for a term of three years under a written lease that said nothing about fire or other damage. Eight months into the term, lightning struck the house and a fire destroyed it. Neither the landlord nor the tenant was at fault, and the landlord has no obligation under the lease to rebuild and has not done so. The tenant moved out and stopped paying rent. The jurisdiction has no statute on destruction of leased premises. The landlord sues for the rent due for the next four months.",
+            stem: "A tenant leased a house for a term of three years under a written lease that said nothing about fire or other damage. Eight months into the term, lightning struck the house and a fire destroyed it. Neither the landlord nor the tenant was at fault, and the landlord has no obligation under the lease to rebuild and has not done so. The tenant moved out and stopped paying rent. The jurisdiction follows the common-law rule on destruction of leased premises and has no statute on the subject. The landlord sues for the rent due for the next four months.",
             call: "Is the tenant liable for the rent?",
             options: [
               { text: "Yes, because at common law the tenant holds an estate in the land, and the loss of the building does not end the duty to pay rent.", why: "Absent a statute or a lease clause, a casualty without the tenant's fault does not end the lease." },
@@ -1835,9 +1972,9 @@
               { text: "Yes, but until the landlord decides to rebuild, since the duty to pay rent stops when reconstruction begins.", why: "Nothing in the stem or the common-law rule ties rent to reconstruction.", trap: 3 },
             ],
             answer: 0,
-            facts: ["said nothing about fire or other damage", "no statute on destruction of leased premises"],
+            facts: ["said nothing about fire or other damage", "Neither the landlord nor the tenant was at fault"],
             say: "At common law the tenant has the land, so rent continues after a fire unless a statute or the lease says otherwise.",
-            status: "general", src: "property.md Module 5 (destruction of premises)",
+            status: "general", src: "property.md Module 5 (destruction of premises); verification pass 2026-11-02: stem now names the common-law rule",
           },
           {
             id: "u10-h-reversion-sale", kind: "hypo", cat: "I.C", callType: "prevail", rule: "u10-r-lease-events", issue: "covenant runs with the reversion",
@@ -1893,7 +2030,7 @@
               "An owner who uses a broker or agent loses the single-family exemption",
               "Refusing to waive a no-pets rule for a trained assistance animal can violate the duty to make reasonable accommodations",
             ],
-            cite: "NCBE MBE Subject Matter Outline (Real Property I.D.3)", citeAsk: "Which part of the NCBE outline covers fair housing and discrimination?",
+            cite: "NCBE MBE Subject Matter Outline (Real Property: fair housing and discrimination)",
             ex: [
               { facts: "An owner occupies one unit of a three-unit building and refuses to rent another unit because of the applicant's race.", result: "Exempt from §3604(a) as an owner-occupant, but liable under 42 U.S.C. §1982." },
               { facts: "A homeowner sells a single house without a broker but advertises 'no children'.", result: "The exemption does not cover the ad: §3604(c) applies." },
@@ -1904,7 +2041,7 @@
               { t: "mcq", q: "An owner-occupant of a four-unit building refuses to rent a unit because of the applicant's race. Which federal statute reaches this?", options: ["42 U.S.C. §1982", "The Fair Housing Act's §3604(a)", "Neither statute"], a: "42 U.S.C. §1982", why: "The owner-occupied exemption removes §3604(a), but §1982 bars racial discrimination in all property transactions." },
               { t: "tf", q: "A landlord's refusal to waive a no-pets rule for a tenant's trained assistance animal can violate the Fair Housing Act.", a: true, why: "The Act requires reasonable accommodations in rules, policies and practices when necessary for equal use and enjoyment." },
             ],
-            status: "book", src: "42 U.S.C. §§3603(b), 3604(c), 3604(f)(3), 1982 (LII)",
+            status: "book", src: "42 U.S.C. §§3603(b), 3604(c), 3604(f)(3), 1982 (LII); verification pass 2026-11-02: outline-number cite game removed",
           },
           {
             id: "u10-c-jones", kind: "case", subject: "property", name: "Jones v. Alfred H. Mayer Co.", year: 1968,
@@ -1987,7 +2124,7 @@
             ordered: false,
             distractorElements: ["An owner who rents only to relatives is subject to the Act", "A reasonable occupancy limit violates familial-status protection"],
             exceptions: [
-              "Housing for older persons includes housing for persons 62 or older, and housing for persons 55 or older where at least 80 percent of the units have an occupant 55 or older and the community follows policies showing that intent",
+              "Housing for older persons includes housing for persons 62 or older, and housing for persons 55 or older where at least 80 percent of the occupied units have at least one occupant 55 or older and the community follows policies showing that intent",
               "A disparate-impact claim needs a robust causal link between the policy and the disparity",
             ],
             cite: "Texas Department of Housing and Community Affairs v. Inclusive Communities Project",
@@ -2001,7 +2138,7 @@
               { t: "mcq", q: "An agent warns homeowners that a family of a particular race is moving in and urges them to list their homes with the agent. This is…", options: ["Blockbusting", "A lawful sales solicitation", "Conduct covered only by 42 U.S.C. §1982"], a: "Blockbusting", why: "Section 3604(e) bars inducing sales for profit by representations about the entry of protected persons into a neighborhood." },
               { t: "tf", q: "Under the Fair Housing Act, a practice with an unjustified discriminatory effect can be unlawful even without proof of intent.", a: true, why: "The Supreme Court recognized disparate-impact claims under the Act in Inclusive Communities (2015)." },
             ],
-            status: "general", src: "42 U.S.C. §§3604(e), 3607(a), (b), 3617 (LII; section text not re-read in this session); Texas Dept. of Housing & Community Affairs v. Inclusive Communities Project, Inc., 576 U.S. 519 (2015)",
+            status: "general", src: "42 U.S.C. §§3604(e), 3607(a), (b), 3617 (LII; section text not re-read in this session); Texas Dept. of Housing & Community Affairs v. Inclusive Communities Project, Inc., 576 U.S. 519 (2015); verification pass 2026-11-02: 55-or-older test counts occupied units",
           },
           {
             id: "u10-c-inclusive", kind: "case", subject: "property", name: "Texas Department of Housing and Community Affairs v. Inclusive Communities Project, Inc.", year: 2015,
@@ -2037,8 +2174,8 @@
             ],
             answer: 0,
             facts: ["list with me now before it is too late", "earned commissions on both sales"],
-            say: "Scaring owners into selling by pointing to who is moving in is blockbusting, whatever the agent's own goal.",
-            status: "general", src: "42 U.S.C. §3604(e) (LII; text not re-read in this session); property.md Module 7",
+            say: "Scaring owners into selling, for profit, by pointing to who is moving in is blockbusting under §3604(e).",
+            status: "general", src: "42 U.S.C. §3604(e) (LII; text not re-read in this session); property.md Module 7; verification pass 2026-11-02: say now includes the profit element",
           },
           {
             id: "u10-h-fha-occupancy", kind: "hypo", cat: "I.D.3", callType: "accurate", rule: "u10-r-fha-claims", issue: "reasonable occupancy limits",
@@ -2256,14 +2393,14 @@
             call: "Will the owner prevail?",
             options: [
               { text: "No, because an implied reservation requires strict necessity, and the owner's retained lot has road frontage.", why: "Under the traditional rule a seller who reserves a use over the land sold must show strict necessity, and the front lot has access to a public road." },
-              { text: "Yes, because the path was apparent and in continuous use before the sale.", why: "Apparent, continuous prior use suffices for an implied grant, not for an implied reservation under the traditional rule.", trap: 4 },
+              { text: "Yes, because the path was apparent and in continuous use before the sale.", why: "Apparent, continuous prior use plus reasonable necessity suffices for an implied grant, but not for an implied reservation under the traditional rule.", trap: 4 },
               { text: "Yes, because the owner's regular use of the path created a prescriptive easement before the sale.", why: "An owner cannot gain a prescriptive easement over land the owner holds.", trap: 10 },
               { text: "No, because an easement in gross cannot be reserved in a deed.", why: "The easement is appurtenant to the front lot, and reservations are possible.", trap: 5 },
             ],
             answer: 0,
             facts: ["traditional rule to implied easements"],
             say: "Reserving a path for yourself is harder than receiving one: strict necessity, and the front lot has a road.",
-            status: "general", src: "property.md Module 9 (P9-3 rewritten; implied reservation split)",
+            status: "general", src: "property.md Module 9 (P9-3 rewritten; implied reservation split); verification pass 2026-11-02: distractor explanation now names reasonable necessity",
           },
           {
             id: "u10-h-plat-easement", kind: "hypo", cat: "II.B", callType: "prevail", rule: "u10-r-implied-easements", issue: "easement implied from a recorded plat",
@@ -2311,8 +2448,23 @@
             status: "general", src: "property.md Module 9 (P9-7 rewritten)",
           },
           {
+            id: "u10-h-license-interest", kind: "hypo", cat: "II.B", callType: "prevail", rule: "u10-r-easement-types", issue: "license coupled with an interest", grid: true,
+            stem: "A farmer sold a buyer 300 bales of hay stacked in the farmer's barn, for $4,500 paid in full. The signed bill of sale gave the buyer the right to enter the farm during the next sixty days to load and haul the hay away. After the buyer had removed half the bales, the farmer, angry over an unrelated dispute, told the buyer he could no longer come onto the farm and locked the gate. The sixty days have not run. The buyer sues for the right to enter and remove the rest of the hay.",
+            call: "Will the buyer prevail?",
+            options: [
+              { text: "Yes, because a license coupled with an interest, here ownership of the hay, cannot be revoked while the interest lasts.", why: "A license to enter and remove goods the licensee owns is coupled with an interest and is irrevocable for the agreed or a reasonable time." },
+              { text: "No, because a license is permission to enter, which the landowner may revoke at will, leaving the buyer a claim for the hay.", why: "That is the general rule, but a license coupled with an interest is irrevocable.", trap: 9 },
+              { text: "Yes, because the buyer relied on the permission by spending substantial money improving the farmer's land.", why: "The buyer improved nothing: paying for hay is not reliance on the license. The interest in the hay is what makes it irrevocable.", trap: 3 },
+              { text: "No, because the bill of sale granted no easement, and only an easement gives a right to enter another's land.", why: "A license coupled with an interest also gives a right to enter, and the landowner cannot revoke it.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["sold a buyer 300 bales of hay", "The sixty days have not run"],
+            say: "Permission to enter and fetch what you own is a license coupled with an interest: the owner cannot pull it.",
+            status: "general", src: "property.md Module 9 (license coupled with an interest); verification pass 2026-11-02: new item",
+          },
+          {
             id: "u10-h-gross-assign", kind: "hypo", cat: "II.B", callType: "prevail", rule: "u10-r-easement-types", issue: "assigning a commercial easement in gross",
-            stem: "A landowner granted a pipeline company, by a recorded deed, 'a permanent easement to lay, operate and maintain a pipeline across the northern edge of my farm.' The easement benefits no particular parcel of land owned by the company. Several years later the company sold its entire pipeline system and assigned the easement to a second company. The landowner, whose farm is now owned by a buyer, objects to the second company's entry. The jurisdiction applies the traditional rule on assignment of easements in gross.",
+            stem: "A landowner granted a pipeline company, by a recorded deed, 'a permanent easement to lay, operate and maintain a pipeline across the northern edge of my farm.' The easement benefits no particular parcel of land owned by the company. Several years later the company sold its entire pipeline system and assigned the easement to a second company. The landowner later sold the farm to a buyer, who objects to the second company's entry and sues to bar it. The jurisdiction applies the traditional rule on assignment of easements in gross.",
             call: "Will the buyer prevail in barring the second company?",
             options: [
               { text: "No, because a commercial easement in gross is assignable, and the second company took the easement.", why: "Traditionally a commercial easement in gross, like a pipeline or utility line, may be assigned. A personal easement in gross may not." },
@@ -2323,7 +2475,7 @@
             answer: 0,
             facts: ["benefits no particular parcel of land owned by the company", "traditional rule on assignment of easements in gross"],
             say: "A commercial easement in gross, like a pipeline, can be sold; a purely personal one traditionally cannot.",
-            status: "general", src: "property.md Module 9 (transfer of easements in gross); NCBE MBE Subject Matter Outline, Real Property II.B (transfer)",
+            status: "general", src: "property.md Module 9 (transfer of easements in gross); NCBE MBE Subject Matter Outline, Real Property II.B (transfer); verification pass 2026-11-02: parties clarified",
           },
           {
             id: "u10-p-penie", kind: "pairs", set: "Facts and the way the easement arose", mode: "concept",
@@ -2343,9 +2495,9 @@
             literal: "profit to take",
             meaning: "A right to enter another's land and take something from it, such as timber, minerals or game. It is created and ended like an easement.",
             use: "Property: easements, profits and licenses are tested together.",
-            hook: "Background, not tested: Pierson v. Post says a wild animal belongs to no one until captured. That is why a hunter needs a profit à prendre, a right to enter and take game, from the landowner.",
+            hook: "Background, not tested: wild animals belong to no one until captured (Pierson v. Post), but a landowner can still keep hunters off the land, so a hunter needs a profit à prendre to enter and take game.",
             say: "A profit lets you take something from the land, not just cross it.",
-            status: "general", src: "hooks.jsonl (Pierson v. Post, res nullius); property.md Module 9",
+            status: "general", src: "hooks.jsonl (Pierson v. Post, res nullius); property.md Module 9; verification pass 2026-11-02: hook no longer says Pierson is why a profit is needed",
           },
         ],
       },
@@ -2371,7 +2523,7 @@
             },
             splitNote: "The stem names the rule on relocation. The majority rule is this unit's default.",
             exceptions: [
-              "On subdivision of the dominant estate, each new lot may use the easement unless the burden grows",
+              "On subdivision of the dominant estate, each new lot may use an appurtenant easement unless the added use unreasonably increases the burden on the servient land",
                           ],
             cite: "NCBE MBE Subject Matter Outline (Real Property II.B)", citeAsk: "Which part of the NCBE outline covers scope and apportionment of easements?",
             ex: [
@@ -2382,7 +2534,7 @@
               { t: "tf", q: "Using an appurtenant easement to reach an added, non-dominant lot terminates the easement.", a: false, why: "Misuse is enjoined; it does not terminate the easement." },
               { t: "mcq", q: "Absent an agreement, who must repair a driveway easement across the servient owner's land?", options: ["The easement holder", "The servient owner", "Both, equally"], a: "The easement holder", why: "The holder must keep the way usable. The servient owner has no duty to maintain absent an agreement." },
             ],
-            status: "general", src: "property.md Module 9",
+            status: "general", src: "property.md Module 9; verification pass 2026-11-02: subdivision line now bars only an unreasonable increase",
           },
           {
             id: "u10-r-easement-termination", kind: "rule", cat: "II.B", title: "How easements end",
@@ -2428,6 +2580,21 @@
             facts: ["to reach the third lot as well"],
             say: "Overuse is enjoined, never a forfeiture: the easement still serves the lot it was granted for.",
             status: "general", src: "property.md Module 9 (P9-5 rewritten)",
+          },
+          {
+            id: "u10-h-profit-scope", kind: "hypo", cat: "II.B", callType: "remedy", rule: "u10-r-easement-scope", issue: "scope of a profit",
+            stem: "A landowner granted her neighbor, by a signed and recorded deed, the right to enter her woodlot and cut firewood for use in the neighbor's farmhouse, for the benefit of the neighbor's adjoining farm. For years the neighbor cut a few cords each winter. Last fall the neighbor began cutting trees in quantity and selling the firewood to customers in town. The landowner sues.",
+            call: "Which relief is the landowner most likely entitled to?",
+            options: [
+              { text: "An injunction against cutting beyond the farmhouse's needs, while the neighbor keeps the right to cut firewood for it.", why: "A profit is limited by its grant, like an easement. Use beyond that scope is enjoined, and the profit itself continues." },
+              { text: "A declaration that the profit has ended, because the neighbor used it beyond the purpose of the grant.", why: "Excessive use is enjoined. It does not forfeit the profit.", trap: 5 },
+              { text: "No relief, because a profit à prendre lets its holder take as much of the resource as the holder chooses.", why: "A profit is measured by its grant. This one is limited to firewood for the farmhouse.", trap: 5 },
+              { text: "Revocation of the neighbor's right, because a right to take wood from another's land is a license revocable at will.", why: "A signed, recorded right to enter and take wood is a profit, an interest in land, not a license.", trap: 10 },
+            ],
+            answer: 0,
+            facts: ["for use in the neighbor's farmhouse", "selling the firewood to customers in town"],
+            say: "A profit is limited by its grant like an easement: overuse is enjoined, and the profit survives.",
+            status: "general", src: "property.md Module 9 (profits are created, limited and ended like easements; misuse is enjoined); verification pass 2026-11-02: new item",
           },
           {
             id: "u10-h-easement-repair", kind: "hypo", cat: "II.B", callType: "remedy", rule: "u10-r-easement-scope", issue: "duty to repair an easement",
@@ -2488,6 +2655,21 @@
             facts: ["giving it direct access", "never released in writing"],
             say: "Necessity creates the easement and necessity ends it, with no release needed.",
             status: "general", src: "property.md Module 9 (termination); NCBE MBE Subject Matter Outline, Real Property II.B",
+          },
+          {
+            id: "u10-h-bfp-easement", kind: "hypo", cat: "II.B", callType: "prevail", rule: "u10-r-easement-termination", issue: "recording act ends an unrecorded easement", grid: true,
+            stem: "An owner granted a neighbor an express easement for a footpath across the owner's back field to a lake, by a signed deed that the neighbor never recorded. The neighbor never cleared or marked a path, and nothing on the field showed any use. The owner then sold the field to a buyer for full value. The buyer did not know of the easement, and nothing in the records or on the land would have revealed it. The jurisdiction has a notice recording statute. When the neighbor began clearing a path, the buyer sued to stop him.",
+            call: "Will the buyer prevail?",
+            options: [
+              { text: "Yes, because a buyer for value without notice of an unrecorded easement takes free of it under the recording act.", why: "The recording act protects a later purchaser for value who has no actual, record or inquiry notice, and nothing put this buyer on notice." },
+              { text: "No, because an express easement granted in a signed deed binds every later owner of the servient land.", why: "A signed deed binds the parties, but an unrecorded one does not bind a later purchaser for value without notice.", trap: 5 },
+              { text: "No, because the neighbor has not abandoned the easement, and only abandonment, release or merger ends one.", why: "Losing it to a protected purchaser under the recording act is another way an easement ends.", trap: 7 },
+              { text: "Yes, because the neighbor never used the easement, which shows that he abandoned it.", why: "Nonuse alone is not abandonment. The buyer wins under the recording act.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["never recorded", "nothing in the records or on the land would have revealed it"],
+            say: "An unrecorded easement with nothing visible on the land is lost to a buyer for value without notice.",
+            status: "general", src: "property.md Module 9 (termination by the recording act; recording acts are taught in Real Property II); verification pass 2026-11-02: new item",
           },
           {
             id: "u10-so-easement-ends", kind: "sort", cat: "II.B", mode: "yesno", q: "Does it terminate the easement?",
@@ -2753,18 +2935,18 @@
           },
           {
             id: "u10-h-covenant-estoppel", kind: "hypo", cat: "II.A", callType: "prevail", rule: "u10-r-covenant-defenses", issue: "estoppel and laches bar an injunction",
-            stem: "A residential subdivision is subject to a recorded restriction limiting each lot to a single story. An owner began building a second story on her house in March. A neighbor who owns a restricted lot watched the framing go up each week and said nothing to the owner, though he knew of the restriction. The owner spent $180,000 on the addition, which was completed fourteen months later. Only then did the neighbor sue to enjoin the second story and force its removal. The owner pleads estoppel and laches.",
+            stem: "A residential subdivision is subject to a recorded restriction limiting each lot to a single story. An owner began building a second story on her house in March. When the framing began, a neighbor who owns a restricted lot, and who knew of the restriction, told the owner that he had no objection to the addition. Relying on that statement, the owner spent $180,000 on the addition, which was completed fourteen months later. Only then did the neighbor sue to enjoin the second story and force its removal. The owner pleads estoppel and laches.",
             call: "Will the neighbor obtain the injunction?",
             options: [
-              { text: "No, because the neighbor's long silence while the owner spent heavily bars equitable enforcement by estoppel or laches.", why: "Equitable relief is barred when the plaintiff knowingly stood by while the defendant relied to her detriment." },
+              { text: "No, because the neighbor's assurance and long delay while the owner spent heavily bar equitable enforcement by estoppel or laches.", why: "Equity will not enforce a restriction for a plaintiff who said he did not object and then waited while the defendant relied on that to her cost." },
               { text: "Yes, because a recorded restriction can be ended only by a release signed by the benefited owners.", why: "A release is one way to end a restriction, but estoppel and laches are others.", trap: 5 },
-              { text: "Yes, because the owner had record notice of the restriction when she began to build.", why: "Notice shows the owner's knowledge. It does not answer the neighbor's delay.", trap: 6 },
+              { text: "Yes, because the owner had record notice of the restriction when she began to build.", why: "Record notice can defeat a plea based on silence alone, but not one built on the neighbor's own assurance and her reliance on it.", trap: 6 },
               { text: "No, because a restriction against building a second story is an unreasonable restraint on the use of land.", why: "The stem does not suggest the restriction is invalid.", trap: 3 },
             ],
             answer: 0,
-            facts: ["said nothing to the owner", "fourteen months later"],
-            say: "Stand by while she builds, then sue: laches and estoppel close the courthouse door.",
-            status: "general", src: "property.md Module 10 (defenses: estoppel, laches, unclean hands)",
+            facts: ["told the owner that he had no objection to the addition", "Relying on that statement"],
+            say: "Tell her you do not object, watch her build, then sue: estoppel and laches close the courthouse door.",
+            status: "general", src: "property.md Module 10 (defenses: estoppel, laches, unclean hands); verification pass 2026-11-02: stem now has an assurance and reliance, so record notice does not make a second key",
           },
           {
             id: "u10-tr-edge-of-subdivision", kind: "trap", cat: "5", subject: "property",
@@ -2800,6 +2982,21 @@
               { t: "mcq", q: "A buyer takes a lot in a planned community whose recorded declaration requires assessments for roads and common areas. The buyer refuses to pay. The association sues. The likely result is…", options: ["The association prevails: the covenant runs with the land", "The buyer prevails: affirmative covenants never run", "The association prevails only if the buyer personally signed the declaration"], a: "The association prevails: the covenant runs with the land", why: "A recorded assessment covenant binds a buyer with notice, and the association may enforce it." },
             ],
             status: "general", src: "property.md Module 10 (Nahrstedt v. Lakeside Village Condominium Ass'n, 8 Cal.4th 361 (1994), presumption of validity for recorded restrictions; board rules reviewed for reasonableness; Neponsit Property Owners' Ass'n v. Emigrant Industrial Savings Bank, 278 N.Y. 248 (1938) (association may enforce assessments); not re-read)",
+          },
+          {
+            id: "u10-h-touch-concern", kind: "hypo", cat: "II.A", callType: "prevail", rule: "u10-r-real-covenant", issue: "touch and concern", grid: true,
+            stem: "A seller owned two adjoining lots and sold one to a buyer. In the signed and recorded deed, the buyer promised, for himself and his heirs and assigns, to pay the seller $1,200 a year for the rest of the seller's life, to help with the seller's medical bills. The promise was not tied to any use, upkeep or service of either lot. The buyer later sold the lot to a successor who knew of the promise. The successor refuses to pay, and the seller sues the successor for damages. The jurisdiction applies the traditional rule for real covenants.",
+            call: "Will the seller prevail?",
+            options: [
+              { text: "No, because a promise to pay money for the seller's personal needs does not touch and concern the land, so its burden does not run.", why: "A burden runs only if the promise affects the use or value of the land itself. A personal money promise does not, whatever the deed says." },
+              { text: "Yes, because the deed shows intent to bind successors, the parties were in privity, and the successor had notice.", why: "Those elements are present, but the promise does not touch and concern the land.", trap: 2 },
+              { text: "No, because an affirmative promise to pay money can never run with the land to a successor.", why: "Affirmative covenants, such as association assessments, run when they touch and concern the land.", trap: 7 },
+              { text: "Yes, because the successor took the buyer's entire estate and so assumed every promise in the buyer's deed.", why: "Vertical privity carries only covenants that run. It is not a personal assumption of the buyer's promises.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["to help with the seller's medical bills", "not tied to any use, upkeep or service of either lot"],
+            say: "Privity, notice and intent are not enough: a personal promise that does not touch the land never runs.",
+            status: "general", src: "property.md Module 10 (touch and concern; personal promises do not run); verification pass 2026-11-02: new item",
           },
           {
             id: "u10-h-hoa-assessments", kind: "hypo", cat: "II.A", callType: "liable", rule: "u10-r-hoa", issue: "association assessments run with the land", grid: true,
@@ -2889,7 +3086,7 @@
               "Annexation: how firmly attached, and the harm from removal",
               "Adaptation: customized to the use of the land",
               "Intent of the annexor, judged objectively (the most important factor)",
-              "Relationship of the parties: doubts favor a tenant against a landlord, and a buyer or lender against a seller",
+              "Relationship: doubts favor tenant over landlord, buyer over seller, mortgagee over mortgagor",
               "A fixture passes with a sale of the land, unless excluded",
               "A tenant's trade fixtures may be removed before the term ends, with the damage repaired",
             ],
@@ -2897,7 +3094,7 @@
             exceptions: [
               "A tenant who leaves without removing trade fixtures within the term, or a reasonable time after, forfeits them",
               "A mortgage covers fixtures at execution and those added later",
-              "Priority between a fixture security interest and a real-property mortgage is governed by UCC Article 9",
+              "UCC Article 9: a purchase-money security interest perfected by a fixture filing before the goods become fixtures, or within 20 days after, beats an earlier recorded mortgage (UCC 9-334(d)); a construction mortgage is an exception",
             ],
             cite: "NCBE MBE Subject Matter Outline (Real Property II.C)", citeAsk: "Which part of the NCBE outline covers fixtures?",
             ex: [
@@ -2908,8 +3105,10 @@
             quiz: [
               { t: "tf", q: "The intent of the person who annexed the item, judged objectively, is the most important fixture factor.", a: true, why: "Annexation and adaptation are evidence of intent." },
               { t: "bucket", q: "Fixture or personal property?", buckets: ["Fixture", "Personal property"], items: [{ text: "A hard-wired chandelier", bucket: "Fixture" }, { text: "A free-standing sofa", bucket: "Personal property" }, { text: "Custom-fitted built-in bookcases", bucket: "Fixture" }, { text: "A free-standing refrigerator that plugs into a wall outlet", bucket: "Personal property" }] },
+              { t: "mcq", q: "When must a tenant remove a trade fixture?", options: ["Before the term ends, or within a reasonable time after, repairing any damage", "Only after obtaining the landlord's written consent", "At any time, even years after the lease ends"], a: "Before the term ends, or within a reasonable time after, repairing any damage", why: "A trade fixture left behind past that time is forfeited to the landlord." },
+              { t: "tf", q: "A purchase-money security interest in goods that become fixtures, perfected by a fixture filing within 20 days after they are installed, has priority over an earlier recorded mortgage on the land.", a: true, why: "UCC 9-334(d) gives a timely purchase-money fixture filing priority over an earlier real-property interest, except a construction mortgage." },
             ],
-            status: "general", src: "property.md Module 11; NCBE MBE Subject Matter Outline, Real Property II.C",
+            status: "general", src: "property.md Module 11; NCBE MBE Subject Matter Outline, Real Property II.C; verification pass 2026-11-02: relationship pairs corrected; UCC 9-334(d) priority stated (section recalled, not re-read)",
           },
           {
             id: "u10-h-fixture-sale", kind: "hypo", cat: "II.C", exam: ["mbe"], callType: "liable", rule: "u10-r-fixtures", issue: "fixtures pass with a sale of land", grid: true,
@@ -2970,6 +3169,21 @@
             facts: ["fastened to the walls with screws", "connected to the plumbing and the wiring"],
             say: "A mortgage covers fixtures, so a defaulting owner cannot strip them out and sell them.",
             status: "general", src: "property.md Module 11 (relationship of the parties; fixtures and mortgages; UCC Article 9 priority not taught here)",
+          },
+          {
+            id: "u10-h-fixture-pmsi", kind: "hypo", cat: "II.C", exam: ["mbe"], callType: "title", rule: "u10-r-fixtures", issue: "purchase-money fixture filing priority", grid: true,
+            stem: "The owner of an office building gave a bank a mortgage on the building, which the bank promptly recorded. Five years later the owner bought a passenger elevator on credit from a manufacturer, which kept a purchase-money security interest in the elevator to secure the price. The elevator was installed in the building, and eight days after installation the manufacturer made a fixture filing in the office where mortgages on real property are recorded. The owner then defaulted on both debts. The bank's mortgage is not a construction mortgage, and the bank claims the elevator as part of its collateral.",
+            call: "Whose interest in the elevator has priority?",
+            options: [
+              { text: "The manufacturer's, because a purchase-money interest perfected by a fixture filing within 20 days after installation beats an earlier recorded mortgage.", why: "UCC 9-334(d) gives a purchase-money fixture interest priority over an earlier real-property interest if the fixture filing comes before the goods become fixtures or within 20 days after." },
+              { text: "The bank's, because its mortgage was recorded first, and the first interest of record has priority in fixtures.", why: "First in time is the general rule, but Article 9 gives a timely purchase-money fixture filing priority over the earlier mortgage.", trap: 9 },
+              { text: "The bank's, because a mortgage covers fixtures added after it was given, whatever other interests exist.", why: "A mortgage does reach later fixtures, but it yields to a timely purchase-money fixture filing.", trap: 7 },
+              { text: "The manufacturer's, because a seller of goods keeps title to them until the buyer pays the price in full.", why: "A seller's retained title is only a security interest under Article 9. Priority comes from the timely fixture filing.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["eight days after installation", "purchase-money security interest"],
+            say: "A purchase-money fixture filing within 20 days of installation beats the earlier mortgage on the building.",
+            status: "general", src: "UCC §9-334(d) (recalled, not re-read on LII); property.md Module 11 (fixtures and secured creditors); NCBE MBE Subject Matter Outline, Real Property II.C (UCC Article 9 named); verification pass 2026-11-02: new item",
           },
         ],
       },

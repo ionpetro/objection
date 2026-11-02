@@ -4,28 +4,34 @@
 // or federalism), then apply. The trap is a true rule from the wrong test: the Tenth Amendment where the issue is preemption,
 // the Eleventh Amendment where the defendant is a county, Humphrey's Executor where the law has moved on.
 //
-// Size: 17 lessons, 150 items (items per lesson: 8, 9, 9, 8, 8, 7, 8, 9, 10, 7, 9, 11, 7, 9, 14, 10, 7). Lessons are served in sittings of about 12 graded steps.
+// Size: 18 lessons, 162 items: 17 topic lessons plus u4l18, an extension lesson ("Going further") holding the 2024-26 cases and
+// low-yield points (Texas v. White, Ames concurrent original jurisdiction, Boumediene). conlaw.md §1: NCBE's drafting lag
+// makes 2025-26 decisions unlikely to be scored in 2027, so they stay off the core path. The unit's roundup ("Closing argument")
+// is built by the engine (Engine.buildRoundup), not authored here.
 // Option order is shuffled by the engine at play time, so the key's position in this file does not matter.
 //
-// Provenance: constitutional text and the 2025-26 decisions (Trump v. Slaughter, Learning Resources v. Trump, Bost,
-// FCC v. Consumers' Research, Trump v. Cook) were read on LII on 2026-11-02 (status "book"). Slaughter: Roberts, 6-3, "all that is
-// left" of Humphrey's is its point about agencies exercising no part of the executive power, "If anything more is left of
-// Humphrey's, we overrule it"; the Federal Reserve and inferior officers are left open. Bost: Roberts for five Justices, with
-// Barrett and Kagan concurring only in the judgment. Older case holdings are well-known black letter and carry status "general"
+// Provenance: constitutional text and these 2025-26 decisions were read on LII (status "book"); re-read on 2026-11-02 for the
+// deep verification pass: Trump v. Slaughter (June 29, 2026; Roberts, 6-3; "If anything more is left of Humphrey's, we overrule
+// it"; the Federal Reserve and inferior officers are left open); Bost (Jan. 14, 2026; Roberts for five, Barrett and Kagan
+// concurring in the judgment, Jackson and Sotomayor dissenting); Learning Resources (Feb. 20, 2026; Roberts; Parts II-A-2 and III,
+// the major-questions part, joined only by Gorsuch and Barrett; No. 24-1287 vacated for lack of jurisdiction because the Court of
+// International Trade has exclusive jurisdiction, the merits ruling affirmed in No. 25-250, Trump v. V.O.S. Selections); Watson
+// v. RNC (June 29, 2026; Barrett, 5-4; statutory preemption only). Trump v. Cook (2026) is an interim stay ruling, mentioned only
+// as "not a merits ruling"; no item teaches a holding from it. Older case holdings are black letter and carry status "general"
 // with the case named in `src`. No item is marked `unsure`.
 //
-// Reviewer checklist (checked from memory, not re-read in the opinion; confirm before treating as final):
-//  - Whole Woman's Health v. Jackson (2021): the Ex parte Young card says the officer needs "some enforcement connection".
-//  - Dawson v. Steager (2019) and United States v. Washington (2022): "discrimination" wording on the intergovernmental-immunity card.
-//  - Biden v. Nebraska (2023) and United States v. Texas (2023): one-line standing summaries on the "who may sue" card.
-//  - Plurality or divided opinions are labelled as such on the card: Hein (plurality), Coleman (plurality, 5-4 judgment),
-//    Hamdi (plurality), Goldwater v. Carter (plurality).
-//  - Galette v. NJ Transit (2026) is taken from the research table (secondary report), not re-read in the opinion.
-//  - Trump v. Cook (2026) is an interim stay ruling, mentioned only as "not a merits ruling".
+// Reviewer checklist (checked from memory or secondary sources, not re-read in the opinion; confirm before treating as final):
+//  - Galette v. NJ Transit (Mar. 4, 2026): unanimous, Sotomayor, per several secondary reports re-checked 2026-11-02.
+//  - Biden v. Nebraska (2023) and United States v. Texas (2023): one-line standing summaries.
+//  - Plurality or divided opinions are labelled as such: Hein, Coleman (5-4 judgment), Hamdi, Goldwater v. Carter, Reid v. Covert,
+//    South-Central Timber Part IV (downstream), and the major-questions part of Learning Resources.
 //  - Reporter volume numbers in `src` were written from memory except those confirmed in the LII texts read.
-// Recent law (recent: true, never the only route to a skill): Slaughter, Bost, Learning Resources, FCC v. Consumers' Research,
-// Trump v. United States, SEC v. Jarkesy, FDA v. Alliance for Hippocratic Medicine, Murthy v. Missouri, Trump v. CASA, Galette.
-// Humphrey's Executor -> Slaughter is drilled through the Slaughter case card and the stale-rule trap, not through the overruled pairs.
+// Recent law (recent: true, never the only route to a skill): Slaughter and the Humphrey's stale-rule trap stay in the removal
+// lesson because they state today's removal rule; everything else recent (Bost, Learning Resources, Watson, FCC v. Consumers'
+// Research, Trump v. United States, SEC v. Jarkesy, FDA v. Alliance for Hippocratic Medicine, Murthy v. Missouri, Trump v. CASA,
+// Galette) is in u4l18. Humphrey's Executor -> Slaughter is drilled through the Slaughter card and the stale-rule trap.
+// Transfer hypos ("new facts, same rule") use fresh facts; the first grid hypo on a rule may keep the landmark case's facts.
+// Coleman keeps its statute because the holding is specific to the FMLA's self-care provision.
 // NextGen: items outside the NextGen Constitutional Law scope (Aug 2025) are marked exam ["mbe"]: political question, adequate and
 // independent state ground, treaty power, necessary and proper and the other powers, foreign affairs and recognition, presentment and
 // veto, pardon, impeachment and oversight, the executive, legislative and judicial immunities (Speech or Debate, presidential
@@ -48,27 +54,6 @@
         title: "Can this plaintiff sue? Standing",
         items: [
           {
-            id: "u4-r-justiciability", kind: "rule", title: "Article III: cases and controversies", cat: "I.C.1",
-            say: "Federal courts decide real disputes only: no advisory opinions, and the claim must pass standing, ripeness and mootness.",
-            elements: ["An actual, adverse dispute between real parties (no advisory opinion)", "A plaintiff with standing", "A claim ripe for decision now", "A controversy that is not moot", "No political question"],
-            ordered: false,
-            distractorElements: ["A statute that creates a private right of action", "A claim for money damages"],
-            exceptions: ["A declaratory judgment is not advisory when the dispute is real and the parties are adverse", "The Court has declined to give advisory opinions since 1793, even when a President asked (the Jay letter)"],
-            cite: "U.S. Const. art. III", citeAsk: "Which Article of the Constitution limits the federal courts to 'cases' and 'controversies'?",
-            hook: "A court is not a legal hotline: it answers live fights between real opponents, not what-if questions.",
-            ex: [
-              { facts: "A legislature asks a court whether a bill it is considering would be constitutional if enacted.", result: "Advisory opinion: no case or controversy." },
-              { facts: "A company asks for a declaration of its rights under a statute the government says it will enforce against the company.", result: "Not advisory: a real, adverse dispute can be resolved by declaratory judgment." },
-            ],
-            terms: ["advisory opinion", "justiciability", "case or controversy"],
-            quiz: [
-              { t: "tf", q: "A federal court may issue an advisory opinion if the President asks for one.", a: false, why: "Article III limits the courts to cases and controversies; the Justices declined President Washington's request for advice in 1793, and the Court has refused advisory opinions ever since." },
-              { t: "mcq", q: "Which doctrine asks whether this plaintiff, rather than someone else, is the right person to bring the claim?", options: ["Standing", "Ripeness", "Mootness"], a: "Standing", why: "Standing asks who may sue: the plaintiff must have a personal stake. Ripeness asks whether it is too early; mootness asks whether it is too late." },
-              { t: "bucket", q: "Which gate is the problem?", buckets: ["Standing", "Ripeness", "Mootness"], items: [{ text: "The plaintiff cannot point to any personal injury", bucket: "Standing" }, { text: "The harm may never happen and the facts are undeveloped", bucket: "Ripeness" }, { text: "The dispute ended after the suit was filed", bucket: "Mootness" }, { text: "The plaintiff's only complaint is that the law is not being obeyed", bucket: "Standing" }] },
-            ],
-            status: "general", src: "U.S. Const. art. III, §2; Hayburn's Case (1792); Muskrat v. United States (1911); conlaw.md §5.3",
-          },
-          {
             id: "u4-r-standing", kind: "rule", title: "Standing: injury, traceability, redressability", cat: "I.C.1",
             say: "To sue, a plaintiff needs a concrete, particularized injury that is actual or imminent, traceable to the defendant and redressable by the court.",
             elements: ["Injury in fact: concrete and particularized, and actual or imminent", "Causation: the injury is fairly traceable to the defendant's challenged conduct", "Redressability: a favorable decision is likely to remedy the injury"],
@@ -88,6 +73,21 @@
               { t: "bucket", q: "Which element is missing?", buckets: ["Injury in fact", "Traceability", "Redressability"], items: [{ text: "The plaintiff fears a harm that may never happen", bucket: "Injury in fact" }, { text: "The harm came from a third party's independent choice, not the defendant", bucket: "Traceability" }, { text: "No order the court could enter would remedy the harm", bucket: "Redressability" }] },
             ],
             status: "general", src: "Lujan v. Defenders of Wildlife, 504 U.S. 555 (1992); TransUnion LLC v. Ramirez, 594 U.S. 413 (2021); Clapper v. Amnesty International (2013); conlaw.md §5.3",
+          },
+          {
+            id: "u4-h-citizen-suit", kind: "hypo", cat: "I.C.1", callType: "motion", rule: "u4-r-standing", issue: "citizen-suit statute and standing", grid: true,
+            stem: "Congress enacts a statute requiring each federal agency to consult the Secretary of the Interior before funding any project in a foreign country that may harm an endangered species. The statute provides that any person may sue in federal court to enforce its requirements. An environmental group sues the head of one funding agency, alleging only that the agency funded an overseas power-plant project without the consultation. None of its members has visited the project area or has plans to do so. The agency head moves to dismiss for lack of standing.",
+            call: "Should the court grant the motion?",
+            options: [
+              { text: "No, because Congress authorized any person to sue, and a statutory right to sue satisfies the case-or-controversy requirement of Article III.", why: "Congress may create a cause of action, but it cannot dispense with the requirement that the plaintiff suffered a concrete, particularized injury (Lujan).", trap: 5 },
+              { text: "Yes, because a citizen-suit provision cannot supply an injury in fact, and the group has alleged no concrete, particularized injury to itself or its members.", why: "Lujan: an interest in seeing the law obeyed is a generalized grievance; Congress cannot convert it into an Article III injury." },
+              { text: "No, because the agency violated a procedural requirement, and anyone entitled to the procedure may demand it without showing a concrete interest in the outcome.", why: "A procedural right can be enforced only by a plaintiff whose own concrete interest is threatened by the failure to follow the procedure.", trap: 9 },
+              { text: "Yes, because Congress may not authorize suits against federal agencies to enforce their duties under a statute.", why: "Congress may authorize such suits for plaintiffs who have standing; the defect is this plaintiff's lack of injury.", trap: 5 },
+            ],
+            answer: 1,
+            facts: ["None of its members has visited the project area"],
+            say: "A citizen-suit clause gives a cause of action, not an injury: the plaintiff still needs a concrete, particularized stake of its own.",
+            status: "general", src: "Lujan v. Defenders of Wildlife, 504 U.S. 555 (1992); United States v. Richardson (1974)",
           },
           {
             id: "u4-h-lyons", kind: "hypo", cat: "I.C.1", callType: "motion", rule: "u4-r-standing", issue: "standing for future injunction", grid: true,
@@ -123,34 +123,19 @@
             status: "general", src: "Susan B. Anthony List v. Driehaus, 573 U.S. 149 (2014); Steffel v. Thompson (1974); conlaw.md §5.3",
           },
           {
-            id: "u4-h-citizen-suit", kind: "hypo", cat: "I.C.1", callType: "motion", rule: "u4-r-standing", issue: "citizen-suit statute and standing", grid: true,
-            stem: "Congress enacts a statute requiring each federal agency to consult the Secretary of the Interior before funding any project in a foreign country that may harm an endangered species. The statute provides that any person may sue in federal court to enforce its requirements. An environmental group sues the head of one funding agency, alleging only that the agency funded an overseas power-plant project without the consultation. None of its members has visited the project area or has plans to do so. The agency head moves to dismiss for lack of standing.",
-            call: "Should the court grant the motion?",
-            options: [
-              { text: "No, because Congress authorized any person to sue, and a statutory right to sue satisfies the case-or-controversy requirement of Article III.", why: "Congress may create a cause of action, but it cannot dispense with the requirement that the plaintiff suffered a concrete, particularized injury (Lujan).", trap: 5 },
-              { text: "Yes, because a citizen-suit provision cannot supply an injury in fact, and the group has alleged no concrete, particularized injury to itself or its members.", why: "Lujan: an interest in seeing the law obeyed is a generalized grievance; Congress cannot convert it into an Article III injury." },
-              { text: "No, because the agency violated a procedural requirement, and anyone entitled to the procedure may demand it without showing a concrete interest in the outcome.", why: "A procedural right can be enforced only by a plaintiff whose own concrete interest is threatened by the failure to follow the procedure.", trap: 9 },
-              { text: "Yes, because Congress may not authorize suits against federal agencies to enforce their duties under a statute.", why: "Congress may authorize such suits for plaintiffs who have standing; the defect is this plaintiff's lack of injury.", trap: 5 },
-            ],
-            answer: 1,
-            facts: ["None of its members has visited the project area"],
-            say: "A citizen-suit clause gives a cause of action, not an injury: the plaintiff still needs a concrete, particularized stake of its own.",
-            status: "general", src: "Lujan v. Defenders of Wildlife, 504 U.S. 555 (1992); United States v. Richardson (1974)",
-          },
-          {
             id: "u4-h-traceability", kind: "hypo", cat: "I.C.1", callType: "motion", rule: "u4-r-standing", issue: "injury through third parties' choices", transfer: true,
-            stem: "A federal agency adopts a rule that relaxes the conditions under which pharmacies may dispense a prescription medication. A physician who does not prescribe the medication sues the agency in federal court for an order vacating the rule. She alleges that some patients who obtain the medication under the relaxed rule might suffer complications, that a few of them might come to the emergency department where she works, and that she might then be required to treat them over her professional objection. Her hospital has a long-standing practice of excusing physicians from treatment that violates their conscience. The agency moves to dismiss for lack of standing.",
+            stem: "A federal agency relaxes the training that private security guards must complete to be licensed under a federal program. A shopkeeper sues the agency in federal court for an order vacating the rule. She alleges that businesses near her shop might hire guards trained under the relaxed rule, that some of those guards might mishandle disputes with the public, and that customers might then avoid her street. No business near her shop has hired, or announced plans to hire, a guard licensed under the federal program. The agency moves to dismiss for lack of standing.",
             call: "Should the court grant the motion?",
             options: [
-              { text: "No, because a physician who may be required to treat the complications of a federally regulated product has a sufficiently concrete professional stake in the rule.", why: "The stem says her hospital excuses conscience objectors, so the burden is not shown, and the chain of events is speculative.", trap: 3 },
-              { text: "No, because the agency's rule is the first link in a chain of events, so any later injury to a physician who works with the affected patients is fairly traceable to the agency.", why: "Traceability fails when the injury depends on a series of speculative events and the independent choices of third parties.", trap: 5 },
-              { text: "Yes, because her feared injury depends on speculative events and independent choices by patients and her hospital, so it is neither certainly impending nor fairly traceable to the agency.", why: "Injury must be actual or imminent and fairly traceable to the defendant; this chain depends on independent decisions and on events that may never happen (Clapper; Allen v. Wright)." },
-              { text: "Yes, because a physician who does not prescribe a particular medication may never challenge the regulation of that medication, whatever the effect on her own work.", why: "A doctor who is actually injured by a regulation may sue; she fails because her injury is speculative and untraceable, not because of her profession.", trap: 7 },
+              { text: "No, because a shopkeeper whose customers may be deterred by poorly trained guards has a sufficiently concrete economic stake in the rule.", why: "The stem says no nearby business has hired or plans to hire such a guard, so the feared loss is speculative.", trap: 3 },
+              { text: "No, because the agency's rule is the first link in a chain of events, so any later loss to a business near the guards' posts is fairly traceable to the agency.", why: "Traceability fails when the injury depends on a series of speculative events and the independent choices of third parties.", trap: 5 },
+              { text: "Yes, because her feared injury depends on speculative events and on independent choices by other businesses, guards and customers, so it is neither imminent nor fairly traceable.", why: "Injury must be actual or imminent and fairly traceable to the defendant; this chain depends on independent decisions and on events that may never happen (Clapper; FDA v. Alliance)." },
+              { text: "Yes, because a business that is not itself regulated by a federal rule may never challenge that rule, whatever the effect on its own trade.", why: "An unregulated party who is actually injured may sue; standing is harder to show, not barred.", trap: 7 },
             ],
             answer: 2,
-            facts: ["excusing physicians from treatment"],
+            facts: ["No business near her shop has hired"],
             say: "Injury that needs a string of speculative events and other people's independent choices is neither imminent nor traceable to the defendant.",
-            status: "general", src: "Clapper v. Amnesty International USA, 568 U.S. 398 (2013); Allen v. Wright, 468 U.S. 737 (1984); Simon v. Eastern Kentucky Welfare Rights Organization (1976)",
+            status: "general", src: "Clapper v. Amnesty International USA, 568 U.S. 398 (2013); FDA v. Alliance for Hippocratic Medicine, 602 U.S. 367 (2024); Allen v. Wright, 468 U.S. 737 (1984); Simon v. Eastern Kentucky Welfare Rights Organization (1976)",
           },
           {
             id: "u4-tr-citizen-suit", kind: "trap", cat: "5", subject: "conlaw",
@@ -170,16 +155,18 @@
               { l: "TransUnion LLC v. Ramirez", r: "A statutory violation without concrete harm is not an injury in fact" },
               { l: "Uzuegbunam v. Preczewski", r: "A claim for nominal damages redresses a completed violation" },
               { l: "United States v. Texas (2023)", r: "A State lacks standing to challenge federal non-enforcement against others" },
+              { l: "Massachusetts v. EPA", r: "A State with a concrete stake and a procedural right gets special solicitude in standing" },
+              { l: "Biden v. Nebraska", r: "A loss to a public corporation that a State created and controls is the State's own injury" },
             ],
             spare: ["A federal taxpayer may challenge any federal spending"],
-            say: "Lyons, Clapper, SBA List, TransUnion: the future harm must be real, and the present harm concrete.",
-            status: "general", src: "City of Los Angeles v. Lyons (1983); Clapper v. Amnesty International USA (2013); Susan B. Anthony List v. Driehaus (2014); TransUnion v. Ramirez (2021); Uzuegbunam v. Preczewski (2021); United States v. Texas (2023)",
+            say: "Lyons, Clapper, SBA List, TransUnion: the future harm must be real, and the present harm concrete. States need their own injury too.",
+            status: "general", src: "City of Los Angeles v. Lyons (1983); Clapper v. Amnesty International USA (2013); Susan B. Anthony List v. Driehaus (2014); TransUnion v. Ramirez (2021); Uzuegbunam v. Preczewski (2021); United States v. Texas (2023); Massachusetts v. EPA, 549 U.S. 497 (2007); Biden v. Nebraska, 600 U.S. 477 (2023)",
           },
         ],
       },
       {
         id: "u4l2",
-        title: "Special plaintiffs and recent standing cases",
+        title: "Special plaintiffs: taxpayers, third parties, associations, States",
         items: [
           {
             id: "u4-r-standing-plus", kind: "rule", title: "Who may sue: taxpayers, third parties, associations, States", cat: "I.C.1",
@@ -219,13 +206,13 @@
           },
           {
             id: "u4-h-hein", kind: "hypo", cat: "I.C.1", callType: "jurisdiction", rule: "u4-r-standing-plus", issue: "taxpayer standing, discretionary spending", transfer: true,
-            stem: "Congress appropriates a lump sum to a federal agency for general administration. Using its discretion under that appropriation, and without any statute directing it to do so, the agency's officials spend part of the money on conferences that promote partnerships with religious charities and at which speakers deliver religious messages. A group of federal taxpayers sues the agency head in federal court, alleging that the conferences violate the Establishment Clause. Their only claimed injury is that their tax dollars fund the conferences.",
+            stem: "Congress appropriates a lump sum to a federal department for 'general operating expenses.' Using its discretion under that appropriation, and without any statute directing it to do so, the department pays members of the clergy to lead prayer services at its staff training retreats. A group of federal taxpayers sues the department head in federal court, alleging that the payments violate the Establishment Clause. Their only claimed injury is that their tax dollars fund the prayer services.",
             call: "Does the court have jurisdiction to decide the Establishment Clause claim?",
             options: [
-              { text: "No, because the taxpayers challenge discretionary executive spending, not an exercise of Congress's taxing and spending power, and so lack standing.", why: "Flast reaches only challenges to a congressional enactment under the taxing and spending power; discretionary executive spending is outside it." },
+              { text: "No, because the taxpayers challenge discretionary executive spending, not an exercise of Congress's taxing and spending power, and so lack standing.", why: "Flast reaches only challenges to a congressional enactment under the taxing and spending power; discretionary executive spending is outside it (Hein, plurality)." },
               { text: "No, because the Establishment Clause cannot be enforced by a lawsuit against the executive branch.", why: "The clause binds the executive branch. The problem is who may sue, not whether the clause applies.", trap: 5 },
               { text: "Yes, because Flast permits any federal taxpayer to challenge any spending that allegedly violates the Establishment Clause.", why: "Flast is limited to challenges to the exercise of Congress's taxing and spending power.", trap: 5 },
-              { text: "Yes, because the money originates in a congressional appropriation, which satisfies the Flast link to the taxing and spending power.", why: "The right test, but a general appropriation spent at the agency's discretion is not a congressional spending measure aimed at the challenged use.", trap: 2 },
+              { text: "Yes, because the money originates in a congressional appropriation, which satisfies the Flast link to the taxing and spending power.", why: "The right test, but a general appropriation spent at the department's discretion is not a congressional spending measure aimed at the challenged use.", trap: 2 },
             ],
             answer: 0,
             say: "Flast needs a congressional spending law; discretionary executive spending is outside the door (Hein, plurality).",
@@ -247,6 +234,36 @@
             status: "general", src: "United States v. Texas, 599 U.S. 670 (2023); Linda R.S. v. Richard D. (1973); Massachusetts v. Mellon (1923)",
           },
           {
+            id: "u4-h-third-party", kind: "hypo", cat: "I.C.1", callType: "jurisdiction", rule: "u4-r-standing-plus", issue: "third-party standing of a vendor", grid: true,
+            stem: "A State law forbids tattoo studios to tattoo men under 21 but lets them tattoo women who are 18 or older. A studio that violates the law loses its license. A studio owner who has turned away dozens of male customers aged 18 to 20 sues the State's licensing director in federal court, claiming that the law denies those customers equal protection. Few of the customers are likely to sue: each is barred only until his twenty-first birthday, and a lawsuit would cost far more than a tattoo. The director moves to dismiss, arguing that the owner may not assert the rights of others.",
+            call: "Does the studio owner have standing to assert the customers' equal-protection rights?",
+            options: [
+              { text: "Yes, because the owner suffers his own injury from the law, has a close relationship with his customers, and the customers face practical obstacles to suing.", why: "Third-party standing: the litigant's own injury, a close relationship (vendor and customer), and a hindrance to the right-holders' suing (Craig v. Boren; Kowalski v. Tesmer)." },
+              { text: "Yes, because any business may assert any constitutional claim that would benefit its customers, whatever its own stake in the outcome.", why: "The litigant needs an injury of its own, plus a close relationship and a hindrance; 'any' overstates the rule.", trap: 7 },
+              { text: "No, because a litigant may assert only his own constitutional rights, never the rights of persons who are not parties to the suit.", why: "Third-party standing is an established exception when the litigant is injured, the relationship is close and the right-holders are hindered.", trap: 5 },
+              { text: "No, because the law regulates the customers' conduct rather than the studio's, so the owner has suffered no injury in fact.", why: "The stem says a studio that violates the law loses its license, and the owner is losing business: that is his own injury.", trap: 3 },
+            ],
+            answer: 0,
+            facts: ["Few of the customers are likely to sue"],
+            say: "Assert another's rights only with your own injury, a close relationship, and a real obstacle to the right-holder suing.",
+            status: "general", src: "Craig v. Boren, 429 U.S. 190 (1976); Kowalski v. Tesmer, 543 U.S. 125 (2004); Powers v. Ohio, 499 U.S. 400 (1991)",
+          },
+          {
+            id: "u4-h-hunt", kind: "hypo", cat: "I.C.1", callType: "motion", rule: "u4-r-standing-plus", issue: "associational standing", grid: true,
+            stem: "An association of commercial beekeepers, formed to protect the business interests of its members, sues a federal agency in federal court to set aside a rule that allows a pesticide to be sprayed on crops while they are in bloom. Several of its members keep hives on farms next to fields where the spraying will occur, and their hives died in large numbers during earlier spraying seasons. The association seeks only a declaration and an injunction. The agency moves to dismiss, arguing that the association itself has suffered no injury.",
+            call: "Should the court grant the motion?",
+            options: [
+              { text: "No, because its members would have standing, the interests are germane to its purpose, and the relief sought does not require individual members to participate.", why: "Hunt v. Washington State Apple Advertising Commission: an association may sue for its members on those three conditions; its own injury is not required." },
+              { text: "No, because an association may sue whenever the subject of the suit falls within the purpose stated in its charter.", why: "Germaneness is only one condition; members must also have standing, and the relief must not require their individual participation.", trap: 2 },
+              { text: "Yes, because an association may sue only for an injury to itself, such as money it has spent opposing the rule.", why: "An association may sue for injured members (Hunt), and spending money to oppose a policy does not by itself create standing (FDA v. Alliance).", trap: 5 },
+              { text: "Yes, because each injured beekeeper must be joined as a party before the court may consider the members' injuries.", why: "Declaratory and injunctive relief do not require the participation of individual members.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["Several of its members keep hives on farms next to fields"],
+            say: "An association sues for members who could sue themselves, on germane interests, for relief that needs no member in court.",
+            status: "general", src: "Hunt v. Washington State Apple Advertising Comm'n, 432 U.S. 333 (1977); Summers v. Earth Island Institute, 555 U.S. 488 (2009); FDA v. Alliance for Hippocratic Medicine (2024)",
+          },
+          {
             id: "u4-t-parens-patriae", kind: "term", subject: "conlaw", term: "parens patriae", lang: "latin", cat: "I.C.1",
             literal: "parent of the country",
             meaning: "A State suing to protect the welfare of its citizens as a whole, rather than its own proprietary interest.",
@@ -263,25 +280,11 @@
             status: "general", src: "Haaland v. Brackeen, 599 U.S. 255 (2023)",
           },
           {
-            id: "u4-c-bost", kind: "case", subject: "conlaw", name: "Bost v. Illinois State Board of Elections", year: 2026, recent: true, cat: "I.C.1",
-            holding: "A candidate has standing to challenge the rules for counting votes in his own election; he need not show a substantial risk of losing.",
-            facts: "A congressman challenged an Illinois rule that counts mail ballots received after election day.",
-            say: "Candidates have their own stake in a lawful count (opinion for five Justices; two concurred only in the judgment).",
-            status: "book", src: "Bost v. Illinois State Bd. of Elections, No. 24-568 (Jan. 14, 2026), opinion read on LII; Roberts, C.J., for five Justices, with Barrett and Kagan concurring in the judgment only",
-          },
-          {
-            id: "u4-c-fda-alliance", kind: "case", subject: "conlaw", name: "FDA v. Alliance for Hippocratic Medicine", year: 2024, recent: true, cat: "I.C.1",
-            holding: "Doctors and medical groups lacked standing to challenge the FDA's regulation of a drug they do not prescribe; an organization cannot spend its way into standing by opposing a policy.",
-            facts: "Doctors and medical associations challenged the FDA's relaxed rules for prescribing and dispensing a drug used in abortions.",
-            say: "No stake, no suit: speculative chains through third parties, or money spent opposing a policy, do not create standing.",
-            status: "general", src: "FDA v. Alliance for Hippocratic Medicine, 602 U.S. 367 (2024)",
-          },
-          {
-            id: "u4-c-murthy", kind: "case", subject: "conlaw", name: "Murthy v. Missouri", year: 2024, recent: true, cat: "I.C.1",
-            holding: "Plaintiffs lacked standing to enjoin federal officials' contacts with social-media platforms: they showed no substantial risk of future injury traceable to the government rather than to the platforms' own choices.",
-            facts: "Users and States alleged that officials pressured platforms to remove disfavored posts.",
-            say: "Traceability: when a third party's independent choice causes the harm, the plaintiff must tie it to the defendant.",
-            status: "general", src: "Murthy v. Missouri, 603 U.S. 43 (2024)",
+            id: "u4-c-biden-nebraska", kind: "case", subject: "conlaw", name: "Biden v. Nebraska", year: 2023, cat: "I.C.1",
+            holding: "Missouri had standing because a loss to the loan servicer it created and controls is the State's own injury; the power to 'waive or modify' did not authorize mass cancellation of student loans.",
+            facts: "Six States challenged the Education Secretary's plan to cancel large amounts of federal student-loan debt.",
+            say: "A State can sue through its own instrumentality's loss, and a power to 'modify' a program is not a power to rewrite it.",
+            status: "general", src: "Biden v. Nebraska, 600 U.S. 477 (2023)",
           },
         ],
       },
@@ -289,6 +292,27 @@
         id: "u4l3",
         title: "Ripeness, mootness and political questions",
         items: [
+          {
+            id: "u4-r-justiciability", kind: "rule", title: "Article III: cases and controversies", cat: "I.C.1",
+            say: "Federal courts decide real disputes only: no advisory opinions, and the claim must pass standing, ripeness and mootness.",
+            elements: ["An actual, adverse dispute between real parties (no advisory opinion)", "A plaintiff with standing", "A claim ripe for decision now", "A controversy that is not moot", "No political question"],
+            ordered: false,
+            distractorElements: ["A statute that creates a private right of action", "A claim for money damages"],
+            exceptions: ["A declaratory judgment is not advisory when the dispute is real and the parties are adverse", "The Court has declined to give advisory opinions since 1793, even when a President asked (the Jay letter)"],
+            cite: "U.S. Const. art. III", citeAsk: "Which Article of the Constitution limits the federal courts to 'cases' and 'controversies'?",
+            hook: "A court is not a legal hotline: it answers live fights between real opponents, not what-if questions.",
+            ex: [
+              { facts: "A legislature asks a court whether a bill it is considering would be constitutional if enacted.", result: "Advisory opinion: no case or controversy." },
+              { facts: "A company asks for a declaration of its rights under a statute the government says it will enforce against the company.", result: "Not advisory: a real, adverse dispute can be resolved by declaratory judgment." },
+            ],
+            terms: ["advisory opinion", "justiciability", "case or controversy"],
+            quiz: [
+              { t: "tf", q: "A federal court may issue an advisory opinion if the President asks for one.", a: false, why: "Article III limits the courts to cases and controversies; the Justices declined President Washington's request for advice in 1793, and the Court has refused advisory opinions ever since." },
+              { t: "mcq", q: "Which doctrine asks whether this plaintiff, rather than someone else, is the right person to bring the claim?", options: ["Standing", "Ripeness", "Mootness"], a: "Standing", why: "Standing asks who may sue: the plaintiff must have a personal stake. Ripeness asks whether it is too early; mootness asks whether it is too late." },
+              { t: "bucket", q: "Which gate is the problem?", buckets: ["Standing", "Ripeness", "Mootness"], items: [{ text: "The plaintiff cannot point to any personal injury", bucket: "Standing" }, { text: "The harm may never happen and the facts are undeveloped", bucket: "Ripeness" }, { text: "The dispute ended after the suit was filed", bucket: "Mootness" }, { text: "The plaintiff's only complaint is that the law is not being obeyed", bucket: "Standing" }] },
+            ],
+            status: "general", src: "U.S. Const. art. III, §2; Hayburn's Case (1792); Muskrat v. United States (1911); conlaw.md §5.3",
+          },
           {
             id: "u4-r-ripeness", kind: "rule", title: "Ripeness: fitness and hardship", cat: "I.C.1",
             say: "A claim is ripe when the issues are fit for decision now and withholding review would cause real hardship.",
@@ -341,9 +365,9 @@
             quiz: [
               { t: "tf", q: "If a defendant stops the challenged conduct after being sued, the case is moot.", a: false, why: "Voluntary cessation moots a case only if the defendant shows it is absolutely clear that the conduct cannot reasonably be expected to recur." },
               { t: "mcq", q: "Which exception requires that the same plaintiff is likely to face the same action again?", options: ["Capable of repetition yet evading review", "Voluntary cessation", "Class certification"], a: "Capable of repetition yet evading review", why: "That exception needs a reasonable expectation that the same party will face the same action, and a challenged action too short in duration to litigate fully." },
-              { t: "bucket", q: "Moot or not moot?", buckets: ["Moot", "Not moot"], items: [{ text: "An ordinance repealed and replaced by a charter amendment that bars the city from ever enacting a similar one", bucket: "Moot" }, { text: "A repealed ordinance that the city says it has no present intention of reviving", bucket: "Not moot" }, { text: "A convicted defendant who has served his sentence but still loses the right to vote and sit on a jury", bucket: "Not moot" }, { text: "Two days after suit, the defendant halts its practice but says it may resume", bucket: "Not moot" }] },
+              { t: "bucket", q: "Moot or not moot?", buckets: ["Moot", "Not moot"], items: [{ text: "An ordinance repealed and replaced by a charter amendment that bars the city from ever enacting a similar one", bucket: "Moot" }, { text: "A repealed ordinance that the city council says it will re-enact once the suit is dismissed", bucket: "Not moot" }, { text: "A convicted defendant who has served his sentence but still loses the right to vote and sit on a jury", bucket: "Not moot" }, { text: "Two days after suit, the defendant halts its practice but says it may resume", bucket: "Not moot" }] },
             ],
-            status: "general", src: "Friends of the Earth v. Laidlaw (2000); FBI v. Fikre (2024); Sibron v. New York (1968); Spencer v. Kemna (1998); Sosna v. Iowa (1975); conlaw.md §5.3",
+            status: "general", src: "Friends of the Earth v. Laidlaw (2000); FBI v. Fikre (2024); City of Mesquite v. Aladdin's Castle, 455 U.S. 283 (1982); Sibron v. New York (1968); Spencer v. Kemna (1998); Sosna v. Iowa (1975); conlaw.md §5.3",
           },
           {
             id: "u4-h-cessation", kind: "hypo", cat: "I.C.1", callType: "motion", rule: "u4-r-mootness", issue: "voluntary cessation and mootness", grid: true,
@@ -415,16 +439,16 @@
           },
           {
             id: "u4-h-powell", kind: "hypo", cat: "I.C.3", exam: ["mbe"], callType: "jurisdiction", rule: "u4-r-political-question", issue: "exclusion of a qualified member", transfer: true,
-            stem: "A candidate who won a congressional election presented herself to be sworn in. She is thirty-six years old, has been a citizen for fifteen years, and lives in the State that elected her. By a majority vote, the House of Representatives refused to seat her because it found that she had misused campaign funds in the past. She sued the Clerk of the House in federal court for a declaration that the exclusion violated the Constitution.",
+            stem: "A candidate won an election to the House of Representatives and presented herself to be sworn in. She meets the Constitution's requirements of age, citizenship and residence. By a majority vote, the House refused to seat her because two businesses she had owned went bankrupt in the years before the election, which a majority of the members considered disqualifying. She sued the Clerk of the House in federal court for a declaration that the exclusion violated the Constitution.",
             call: "May the court decide whether the House acted constitutionally?",
             options: [
-              { text: "Yes, because the Constitution fixes the qualifications for a Representative, and the House may not exclude a member-elect who meets them.", why: "Powell v. McCormack: the House may judge whether a member meets the constitutional qualifications but may not add others. Expulsion of a seated member takes two thirds; exclusion on other grounds is barred." },
+              { text: "Yes, because the Constitution fixes the qualifications for a Representative, and the House may not exclude a member-elect who meets them.", why: "Powell v. McCormack: the House may judge whether a member meets the constitutional qualifications but may not add others. Expelling a seated member takes two thirds." },
               { text: "Yes, because courts may review any act of Congress or of either House that injures an individual, however internal the matter.", why: "Some internal decisions are nonjusticiable, such as the Senate's impeachment trial procedure; 'any' overstates the rule.", trap: 7 },
               { text: "No, because each House is the sole judge of the qualifications of its own members, so the dispute is committed to the House and is a political question.", why: "The textual commitment covers whether a member meets the qualifications the Constitution lists, not a power to add qualifications.", trap: 10 },
               { text: "No, because a member-elect who has not been seated lacks standing to sue the House for exclusion from the chamber.", why: "Losing a seat to which she was elected is a concrete injury, traceable to the House and redressable.", trap: 5 },
             ],
             answer: 0,
-            facts: ["lives in the State that elected her"],
+            facts: ["meets the Constitution's requirements of age, citizenship and residence"],
             say: "The House may judge qualifications but cannot add to the Constitution's list, and a court can say so.",
             status: "general", src: "Powell v. McCormack, 395 U.S. 486 (1969); U.S. Const. art. I, §§2, 5",
           },
@@ -498,17 +522,18 @@
           },
           {
             id: "u4-h-aisg-long", kind: "hypo", cat: "I.C.2", exam: ["mbe"], callType: "jurisdiction", rule: "u4-r-aisg", issue: "Michigan v. Long presumption", transfer: true,
-            stem: "A state supreme court held that a police search of a car's passenger compartment violated the Fourth Amendment, relying throughout its opinion on decisions of the United States Supreme Court. The opinion mentioned the state constitution once, in a footnote, as also supporting the result. It did not state that its holding rested on state law independently of federal law. The State petitioned for a writ of certiorari.",
+            stem: "A state supreme court reversed a robbery conviction, holding that the defendant's confession was obtained in violation of the Fifth Amendment privilege against self-incrimination. The opinion analyzed only decisions of the United States Supreme Court, and in one sentence added that the result was 'also consistent with' the state constitution. It did not state that its holding rested on state law independently of federal law. The State petitioned for a writ of certiorari.",
             call: "Does the Supreme Court have jurisdiction to review the state court's decision?",
             options: [
               { text: "Yes, because the decision rests on federal law, and the state court gave no plain statement that an independent state ground supports it.", why: "Michigan v. Long: when a decision rests on or is interwoven with federal law and the adequacy and independence of any state ground is unclear, the Court presumes jurisdiction." },
-              { text: "Yes, because the Supreme Court may review any state-court decision that concerns a police search of an automobile.", why: "Review depends on a federal question and no independent state ground, not on the subject matter, and 'any' overstates it.", trap: 7 },
-              { text: "No, because the reference to the state constitution in a footnote supplies an independent state ground that supports the judgment.", why: "A passing reference does not satisfy Long: the state court must clearly and expressly say that the state ground is independent.", trap: 2 },
-              { text: "No, because the state court merely used federal cases for guidance, and searches of vehicles are governed by state law.", why: "Reliance on federal decisions for guidance does not make a ground independent, and searches raise a Fourth Amendment question.", trap: 5 },
+              { text: "Yes, because the Supreme Court may review any state-court decision that excludes a criminal defendant's confession.", why: "Review depends on a federal question and no independent state ground, not on the subject matter, and 'any' overstates it.", trap: 7 },
+              { text: "No, because the one-sentence reference to the state constitution supplies an independent state ground that supports the judgment.", why: "A passing reference does not satisfy Long: the state court must clearly and expressly say that the state ground is independent.", trap: 2 },
+              { text: "No, because the state court merely used federal cases for guidance, and confessions in state prosecutions are governed by state law.", why: "Reliance on federal decisions for guidance does not make a ground independent, and the ruling decided a Fifth Amendment question.", trap: 5 },
             ],
             answer: 0,
+            facts: ["'also consistent with' the state constitution"],
             say: "No plain statement of an independent state ground? The Court presumes the decision rests on federal law and takes the case.",
-            status: "general", src: "Michigan v. Long, 463 U.S. 1032 (1983); conlaw.md §5.4 JR-8 (rewritten)",
+            status: "general", src: "Michigan v. Long, 463 U.S. 1032 (1983); conlaw.md §5.4 JR-8 (rewritten with new facts)",
           },
           {
             id: "u4-p-state-fed-courts", kind: "pairs", set: "State and federal courts: who has the last word", mode: "case-holding",
@@ -517,36 +542,11 @@
               { l: "Cohens v. Virginia", r: "The Supreme Court may review a state criminal judgment that raises a federal question" },
               { l: "Cooper v. Aaron", r: "The Court's constitutional rulings bind state officials, who must obey them" },
               { l: "Testa v. Katt", r: "State courts may not refuse a federal claim that they would hear if it arose under state law" },
-              { l: "Ableman v. Booth", r: "State courts may not interfere with federal court judgments by habeas corpus" },
+              { l: "Ableman v. Booth", r: "A state court may not use habeas corpus to free a prisoner held under federal authority" },
             ],
             spare: ["State courts may refuse to hear any federal claim that they consider unwise"],
             say: "Martin and Cohens: the Court reviews state judgments. Cooper: its rulings bind state officers. Testa: state courts must hear federal claims.",
             status: "general", src: "Martin v. Hunter's Lessee (1816); Cohens v. Virginia (1821); Ableman v. Booth (1859); Cooper v. Aaron (1958); Testa v. Katt (1947)",
-          },
-          {
-            id: "u4-c-marbury", kind: "case", subject: "conlaw", name: "Marbury v. Madison", year: 1803, cat: "I.A",
-            holding: "Courts may review acts of Congress and decline to enforce those that violate the Constitution; Congress cannot enlarge the Supreme Court's original jurisdiction.",
-            facts: "An outgoing President's justice-of-the-peace commission was never delivered; Marbury asked the Court directly for a writ of mandamus.",
-            hook: "A forgotten commission, a refused delivery, and a Court that says: you are right, but we cannot help you.",
-            say: "Judicial review's birth certificate: it is for the courts to say what the law is, but not to hear what Article III withholds.",
-            status: "general", src: "Marbury v. Madison, 5 U.S. (1 Cranch) 137 (1803); hooks.jsonl (Wikipedia)",
-          },
-          {
-            id: "u4-c-texas-v-white", kind: "case", subject: "conlaw", name: "Texas v. White", year: 1869, cat: "I.B.1",
-            holding: "Texas never left the Union and remained a State, so it could sue in the Supreme Court's original jurisdiction: an indestructible Union of indestructible States.",
-            facts: "Texas sued in the Supreme Court over bonds that the secessionist government had disposed of.",
-            hook: "Texas v. White: a Texas lawsuit that settled whether Texas ever left.",
-            say: "A State can sue in the Supreme Court's original jurisdiction, and Texas never left the Union: 'indestructible'.",
-            status: "general", src: "Texas v. White, 74 U.S. 700 (1869); hooks.jsonl (Wikipedia)",
-          },
-          {
-            id: "u4-t-mandamus", kind: "term", subject: "conlaw", term: "mandamus", lang: "latin", cat: "I.B.1",
-            literal: "we command",
-            meaning: "A court order compelling an official to perform a clear, nondiscretionary duty.",
-            use: "Marbury sought mandamus against the Secretary of State and lost on jurisdiction, not on the merits of his right.",
-            hook: "'We command': Marbury asked for it, and the Court told him he had a right but the wrong court.",
-            say: "Mandamus commands an official to do a clear, nondiscretionary duty: Marbury's lost writ.",
-            status: "general", src: "hooks.jsonl (List of Latin legal terms; Marbury v. Madison)",
           },
         ],
       },
@@ -560,7 +560,7 @@
             elements: ["Congress creates the lower federal courts and defines their jurisdiction", "Congress may make exceptions to the Supreme Court's appellate jurisdiction (McCardle)", "Congress may change the law for pending cases, but not dictate a result under unchanged law (Klein)", "Congress may not reopen a final judgment (Plaut)", "Congress may not add to the Supreme Court's original jurisdiction (Marbury)"],
             ordered: false,
             distractorElements: ["Congress may reverse a constitutional ruling by ordinary statute", "Congress may strip jurisdiction in order to violate a constitutional right"],
-            exceptions: ["Original jurisdiction covers ambassadors, other public ministers and consuls, and cases in which a State is a party (Art. III)", "Congress may assign public-rights matters to non-Article III adjudicators, but may not give them final authority over core private-rights claims unless the parties consent or Article III review is preserved (Stern; Wellness International v. Sharif, 2015)", "Congress may not use its control over jurisdiction to violate another constitutional provision", "Congress may let the lower federal courts share the Supreme Court's original jurisdiction (Ames v. Kansas); by statute, only suits between two States are exclusive (28 U.S.C. §1251(a))", "A limit on review by certiorari does not violate the Exceptions Clause while the Court keeps other routes, such as original habeas jurisdiction (Felker v. Turpin)"],
+            exceptions: ["Original jurisdiction covers ambassadors, other public ministers and consuls, and cases in which a State is a party (Art. III)", "Congress may assign public-rights matters to non-Article III adjudicators, but a core private-rights claim must be finally decided by an Article III court unless the parties knowingly and voluntarily consent (Stern v. Marshall; Wellness International v. Sharif, 2015); otherwise a non-Article III judge may only propose findings for de novo review (Executive Benefits v. Arkison, 2014), and ordinary appellate review does not cure the defect (Stern)", "Congress may not use its control over jurisdiction to violate another constitutional provision", "Congress may let the lower federal courts share the Supreme Court's original jurisdiction (Ames v. Kansas); by statute, only suits between two States are exclusive (28 U.S.C. §1251(a))", "A limit on review by certiorari does not violate the Exceptions Clause while the Court keeps other routes, such as original habeas jurisdiction (Felker v. Turpin)"],
             cite: "U.S. Const. art. III", citeAsk: "Which Article of the Constitution defines the Supreme Court's original and appellate jurisdiction?",
             hook: "McCardle: Congress holds the Supreme Court's appellate keys. Marbury: it cannot cut new original doors.",
             ex: [
@@ -574,7 +574,7 @@
               { t: "tf", q: "Congress violates Article III whenever it changes the law that applies to a case already pending in a federal court.", a: false, why: "Congress may amend the law for pending cases (Robertson v. Seattle Audubon; Bank Markazi v. Peterson); it may not dictate findings or a result under unchanged law (Klein)." },
               { t: "bucket", q: "Within Congress's power over the courts?", buckets: ["Valid", "Invalid"], items: [{ text: "Removing the Supreme Court's appellate jurisdiction over a class of cases", bucket: "Valid" }, { text: "Directing courts to reopen final judgments", bucket: "Invalid" }, { text: "Giving the Supreme Court original jurisdiction over suits against federal officers", bucket: "Invalid" }, { text: "Creating a lower federal court and setting its jurisdiction", bucket: "Valid" }] },
             ],
-            status: "general", src: "U.S. Const. art. III, §§1-2 (read on LII); Marbury v. Madison (1803); Ex parte McCardle (1869); United States v. Klein (1872); Plaut v. Spendthrift Farm (1995); Stern v. Marshall (2011); Wellness International Network v. Sharif (2015); Bank Markazi v. Peterson (2016); Ames v. Kansas ex rel. Johnston (1884); Felker v. Turpin (1996); 28 U.S.C. §1251; conlaw.md §5.1",
+            status: "general", src: "U.S. Const. art. III, §§1-2 (read on LII); Marbury v. Madison (1803); Ex parte McCardle (1869); United States v. Klein (1872); Plaut v. Spendthrift Farm (1995); Stern v. Marshall, 564 U.S. 462 (2011); Executive Benefits Insurance Agency v. Arkison, 573 U.S. 25 (2014); Wellness International Network v. Sharif, 575 U.S. 665 (2015); Bank Markazi v. Peterson (2016); Ames v. Kansas ex rel. Johnston (1884); Felker v. Turpin (1996); 28 U.S.C. §1251; conlaw.md §5.1",
           },
           {
             id: "u4-h-plaut", kind: "hypo", cat: "I.B.1", callType: "constitutional", rule: "u4-r-congress-courts", issue: "reopening final judgments", grid: true,
@@ -593,36 +593,22 @@
             status: "general", src: "Plaut v. Spendthrift Farm, Inc., 514 U.S. 211 (1995)",
           },
           {
-            id: "u4-h-original-jurisdiction", kind: "hypo", cat: "I.B.1", callType: "jurisdiction", rule: "u4-r-congress-courts", issue: "original jurisdiction fixed by Article III", grid: true,
-            stem: "Congress enacts a statute providing that any federal employee who has been dismissed from federal service without a hearing may file a petition directly in the United States Supreme Court seeking reinstatement, and that the Supreme Court shall hear the petition in the first instance. The employee was dismissed after twelve years of service, and a federal district court is available to hear his claim. A dismissed employee files such a petition in the Supreme Court. The government moves to dismiss for lack of jurisdiction.",
-            call: "How should the Supreme Court rule on the motion?",
-            options: [
-              { text: "Grant it, because Congress may not add to the Supreme Court's original jurisdiction, which Article III fixes.", why: "Article III gives original jurisdiction in cases affecting ambassadors, public ministers and consuls, and cases in which a State is a party; Marbury held that Congress cannot add to it." },
-              { text: "Grant it, because Congress may not give the federal courts jurisdiction over suits against federal officers.", why: "Congress can give lower courts, and appellate jurisdiction, over such suits. The defect is the attempt to enlarge original jurisdiction.", trap: 9 },
-              { text: "Deny it, because Article III lets Congress make exceptions and regulations concerning the Supreme Court's jurisdiction.", why: "That clause concerns the Court's appellate jurisdiction, not its original jurisdiction.", trap: 10 },
-              { text: "Deny it, because the employee has no other forum in which to seek reinstatement.", why: "The absence of another forum does not give the Court jurisdiction that Article III withholds.", trap: 8 },
-            ],
-            answer: 0,
-            hook: "Marbury: a right, a remedy, and a statute that offered the Court more original jurisdiction than Article III allows.",
-            say: "Original jurisdiction is fixed by Article III: ambassadors and State parties. Congress can narrow appellate review but cannot widen the original docket.",
-            status: "general", src: "Marbury v. Madison, 5 U.S. (1 Cranch) 137 (1803); U.S. Const. art. III, §2 (read on LII)",
-          },
-          {
-            id: "u4-h-ames", kind: "hypo", cat: "I.B.1", callType: "jurisdiction", rule: "u4-r-congress-courts", issue: "concurrent original jurisdiction", grid: true,
-            stem: "Article III gives the Supreme Court original jurisdiction in cases in which a State is a party. Congress enacts a statute giving the federal district courts jurisdiction, concurrent with the Supreme Court, over civil actions brought by a State against citizens of another State. A State sues a corporation that is a citizen of another State in a federal district court, alleging that the corporation breached a contract with the State. The corporation, which has done business in the State for years, moves to dismiss for lack of subject-matter jurisdiction, arguing that only the Supreme Court may hear such a case.",
+            id: "u4-h-klein", kind: "hypo", cat: "I.B.1", callType: "motion", rule: "u4-r-congress-courts", issue: "dictating the result of a pending case", grid: true,
+            stem: "A landowner sued a federal agency in a federal district court, claiming that the agency approved a dam project without the environmental review that a federal statute requires. While the suit was pending, Congress enacted a statute that does not amend the environmental statute or change any rule of decision, but provides that in the landowner's case, identified by its docket number, the court 'shall enter judgment for the agency.' The agency moves for judgment under the new statute.",
             call: "Should the court grant the motion?",
             options: [
-              { text: "Yes, because the Supreme Court's original jurisdiction under Article III is exclusive whenever a State is a party to the case, and Congress may not alter that.", why: "Congress may let lower federal courts share the Court's original jurisdiction in such cases (Ames v. Kansas); the statute does so here.", trap: 5 },
-              { text: "Yes, because Congress may not give a lower federal court jurisdiction over any case that the Supreme Court could hear in the first instance.", why: "Congress may give lower courts concurrent jurisdiction; 'any' overstates the limit, which is that Congress cannot enlarge the Court's original jurisdiction.", trap: 7 },
-              { text: "No, because Congress may let the lower federal courts share the Supreme Court's original jurisdiction in a case that Article III extends to.", why: "Ames v. Kansas: Congress cannot enlarge the Supreme Court's original jurisdiction, but it may let the lower courts share it; a suit by a State against citizens of another State is within Article III." },
-              { text: "No, because the corporation, which has done business in the State for years, consented to the jurisdiction of the federal district court.", why: "Parties cannot confer subject-matter jurisdiction by consent; the statute supplies it.", trap: 3 },
+              { text: "No, because Congress may not direct a court to decide a pending case for one party without changing the law that governs the case.", why: "United States v. Klein; Bank Markazi: Congress may amend the law for pending cases, but a statute that says, in effect, 'in this case, the agency wins' usurps the judicial power." },
+              { text: "No, because Congress may never enact a statute that affects the outcome of a case already pending in a federal court.", why: "Congress may change the law that applies to pending cases, even when the change decides them (Robertson; Bank Markazi); 'never' overstates.", trap: 7 },
+              { text: "Yes, because Congress may change the law that applies to cases pending in the federal courts.", why: "True, but this statute changes no law; it simply dictates the result.", trap: 6 },
+              { text: "Yes, because Congress controls the jurisdiction of the lower federal courts and the remedies they may award.", why: "Control over jurisdiction does not include a power to dictate how a court decides a case it hears.", trap: 10 },
             ],
-            answer: 2,
-            say: "Congress cannot enlarge the Supreme Court's original jurisdiction, but it may let lower federal courts share it.",
-            status: "general", src: "Ames v. Kansas ex rel. Johnston, 111 U.S. 449 (1884); 28 U.S.C. §1251(b); U.S. Const. art. III, §2",
+            answer: 0,
+            facts: ["does not amend the environmental statute or change any rule of decision"],
+            say: "Congress may change the law for pending cases, but it may not simply order a court to rule for one side.",
+            status: "general", src: "United States v. Klein, 80 U.S. (13 Wall.) 128 (1872); Bank Markazi v. Peterson, 578 U.S. 212 (2016); Robertson v. Seattle Audubon Society, 503 U.S. 429 (1992)",
           },
           {
-            id: "u4-h-felker", kind: "hypo", cat: "I.B.1", callType: "constitutional", rule: "u4-r-congress-courts", issue: "Exceptions Clause limits", transfer: true,
+            id: "u4-h-felker", kind: "hypo", cat: "I.B.1", callType: "constitutional", rule: "u4-r-congress-courts", issue: "Exceptions Clause limits",
             stem: "Congress enacts a statute providing that a state prisoner who wishes to file a second petition for a writ of habeas corpus in a federal district court must first obtain authorization from the court of appeals, and that the court of appeals' decision on the request is not subject to review by petition for a writ of certiorari. The statute does not change the Supreme Court's authority to entertain an original petition for a writ of habeas corpus. A prisoner whose request was denied argues that the statute violates Article III by restricting the Supreme Court's appellate jurisdiction.",
             call: "Is the statute constitutional?",
             options: [
@@ -634,6 +620,38 @@
             answer: 1,
             say: "Congress may make exceptions to the Court's appellate jurisdiction, but may not dictate results; here its original habeas power remains.",
             status: "general", src: "Felker v. Turpin, 518 U.S. 651 (1996); Ex parte McCardle (1869); United States v. Klein (1872)",
+          },
+          {
+            id: "u4-h-original-jurisdiction", kind: "hypo", cat: "I.B.1", callType: "jurisdiction", rule: "u4-r-congress-courts", issue: "original jurisdiction fixed by Article III", grid: true,
+            stem: "Congress enacts a statute providing that any federal employee who has been dismissed from federal service without a hearing may file a petition directly in the United States Supreme Court seeking reinstatement, and that the Supreme Court shall hear the petition in the first instance. The employee was dismissed after twelve years of service, and a federal district court is available to hear his claim. A dismissed employee files such a petition in the Supreme Court. The government moves to dismiss for lack of jurisdiction.",
+            call: "How should the Supreme Court rule on the motion?",
+            options: [
+              { text: "Grant it, because Congress may not add to the Supreme Court's original jurisdiction, which Article III fixes.", why: "Article III gives original jurisdiction in cases affecting ambassadors, public ministers and consuls, and cases in which a State is a party; Marbury held that Congress cannot add to it." },
+              { text: "Grant it, because Congress may not give the federal courts jurisdiction over suits against federal officers.", why: "Congress may give the lower federal courts jurisdiction over suits against federal officers; the defect is enlarging the Supreme Court's original jurisdiction.", trap: 1 },
+              { text: "Deny it, because Article III lets Congress make exceptions and regulations concerning the Supreme Court's jurisdiction.", why: "That clause concerns the Court's appellate jurisdiction, not its original jurisdiction.", trap: 10 },
+              { text: "Deny it, because the employee has no other forum in which to seek reinstatement.", why: "The stem says a district court is available, and the absence of another forum would not enlarge Article III's original jurisdiction anyway.", trap: 3 },
+            ],
+            answer: 0,
+            hook: "Marbury: a right, a remedy, and a statute that offered the Court more original jurisdiction than Article III allows.",
+            say: "Original jurisdiction is fixed by Article III: ambassadors and State parties. Congress can narrow appellate review but cannot widen the original docket.",
+            status: "general", src: "Marbury v. Madison, 5 U.S. (1 Cranch) 137 (1803); U.S. Const. art. III, §2 (read on LII)",
+          },
+          {
+            id: "u4-c-marbury", kind: "case", subject: "conlaw", name: "Marbury v. Madison", year: 1803, cat: "I.A",
+            holding: "Courts may review acts of Congress and decline to enforce those that violate the Constitution; Congress cannot enlarge the Supreme Court's original jurisdiction.",
+            facts: "An outgoing President's justice-of-the-peace commission was never delivered; Marbury asked the Court directly for a writ of mandamus.",
+            hook: "A forgotten commission, a refused delivery, and a Court that says: you are right, but we cannot help you.",
+            say: "Judicial review's birth certificate: it is for the courts to say what the law is, but not to hear what Article III withholds.",
+            status: "general", src: "Marbury v. Madison, 5 U.S. (1 Cranch) 137 (1803); hooks.jsonl (Wikipedia)",
+          },
+          {
+            id: "u4-t-mandamus", kind: "term", subject: "conlaw", term: "mandamus", lang: "latin", cat: "I.B.1",
+            literal: "we command",
+            meaning: "A court order compelling an official to perform a clear, nondiscretionary duty.",
+            use: "Marbury sought mandamus against the Secretary of State and lost on jurisdiction, not on the merits of his right.",
+            hook: "'We command': Marbury asked for it, and the Court told him he had a right but the wrong court.",
+            say: "Mandamus commands an official to do a clear, nondiscretionary duty: Marbury's lost writ.",
+            status: "general", src: "hooks.jsonl (List of Latin legal terms; Marbury v. Madison)",
           },
           {
             id: "u4-p-congress-courts", kind: "pairs", set: "Congress, the courts and justiciability: who decided what", mode: "case-holding",
@@ -650,20 +668,6 @@
             say: "Marbury, McCardle, Klein, Plaut: who controls which door of the courthouse.",
             status: "general", src: "Marbury v. Madison (1803); Ex parte McCardle (1869); United States v. Klein (1872); Plaut v. Spendthrift Farm (1995); Stern v. Marshall (2011); Powell v. McCormack (1969); Michigan v. Long (1983); Wellness International Network v. Sharif (2015)",
           },
-          {
-            id: "u4-c-jarkesy", kind: "case", subject: "conlaw", name: "SEC v. Jarkesy", year: 2024, recent: true, cat: "I.B.1",
-            holding: "When the SEC seeks civil penalties for securities fraud, the Seventh Amendment entitles the defendant to a jury trial in an Article III court; the public-rights exception does not apply.",
-            facts: "An investment adviser was fined by the SEC in an in-house proceeding.",
-            say: "Fraud penalties look like common-law claims, so they need a jury and a federal court; 'public rights' is a narrow door.",
-            status: "general", src: "SEC v. Jarkesy, 603 U.S. 109 (2024); conlaw.md §5.1",
-          },
-          {
-            id: "u4-c-casa", kind: "case", subject: "conlaw", name: "Trump v. CASA, Inc.", year: 2025, recent: true, cat: "I.B.1",
-            holding: "Federal courts likely lack equitable authority to issue universal injunctions that protect nonparties; relief is limited to what is needed to give the plaintiffs complete relief.",
-            facts: "Challengers to an executive order on birthright citizenship won injunctions that blocked it nationwide.",
-            say: "A court's remedy follows its judicial power: complete relief for the parties before it, not a universal injunction.",
-            status: "general", src: "Trump v. CASA, Inc., No. 24A884 (June 27, 2025); conlaw.md §1",
-          },
         ],
       },
       {
@@ -677,7 +681,7 @@
             ordered: false,
             distractorElements: ["The defendant is a county or a city", "The plaintiff is the United States or another State"],
             exceptions: ["The immunity applies in federal court (Hans), in the State's own courts (Alden) and before federal agency adjudicators (FMC v. South Carolina Ports Authority)", "Not protected: counties, cities and school districts", "Not barred: suits by the United States or by another State, and personal-capacity damages against an officer (Hafer)", "A State is not a 'person' under 42 U.S.C. §1983 (Will): a statutory rule, not the Eleventh Amendment", "A waiver must be unequivocally expressed in the statute's text: receiving federal funds or doing business is not enough without a clear statement (Atascadero; College Savings Bank; Sossamon)", "A State is also immune from private suits in the courts of other States (Franchise Tax Board v. Hyatt III, 2019)"],
-            cite: "U.S. Const. amend. XI", citeAsk: "Which Amendment is the textual home of state sovereign immunity in federal court?",
+            cite: "Hans v. Louisiana", citeAsk: "Which case held that a State is immune from suit by its own citizens in federal court?",
             hook: "C-A-Y: Consent, Abrogation, Young. Those are the three ways in.",
             ex: [
               { facts: "A citizen sues his own State's university, an arm of the State, in federal court for damages.", result: "Barred: the immunity protects a State from suit by its own citizen too (Hans)." },
@@ -732,17 +736,32 @@
           },
           {
             id: "u4-h-lapides", kind: "hypo", cat: "I.B.2", callType: "motion", rule: "u4-r-state-immunity", issue: "waiver by removal", transfer: true,
-            stem: "A State statute waives the State's immunity from suit in its own courts for damages claims arising from the negligent operation of state-owned vehicles. A plaintiff injured in a collision with a state-owned truck sued a State agency in state court for negligence under that statute. The State removed the case to federal court and then moved to dismiss, asserting Eleventh Amendment immunity from suit in a federal forum. The plaintiff's only claim arises under State law.",
+            stem: "A State statute waives the State's immunity from suit in its own courts for damages claims arising from the negligent operation of state-owned vehicles. A plaintiff injured in a collision with a state-owned truck sued a State agency in state court, asserting a negligence claim under that statute and a claim under 42 U.S.C. §1983. The State removed the case to federal court on the basis of the federal claim. After the federal claim was dismissed, the State moved to dismiss the remaining state-law claim, asserting Eleventh Amendment immunity from suit in a federal forum. The only remaining claim arises under State law.",
             call: "Should the federal court grant the motion to dismiss?",
             options: [
               { text: "No, because by removing the case the State waived its immunity from suit in federal court on a claim it had agreed to defend in its own courts.", why: "Lapides v. Board of Regents: a State that removes a case invokes federal jurisdiction and cannot then claim immunity from the federal forum." },
-              { text: "No, because the Eleventh Amendment protects a State only from claims that arise under federal law, and this plaintiff's only claim arises under State law.", why: "Pennhurst: the Eleventh Amendment does bar state-law claims against a State in federal court absent consent; here the removal supplies the consent.", trap: 5 },
+              { text: "No, because the Eleventh Amendment protects a State only from claims that arise under federal law, and the remaining claim arises under State law.", why: "Pennhurst: the Eleventh Amendment does bar state-law claims against a State in federal court absent consent; here the removal supplies the consent.", trap: 5 },
               { text: "Yes, because a State's waiver of immunity in its own courts does not by itself waive its immunity from suit in federal court, and removal does not change that rule.", why: "True as a default, but the State's removal is a voluntary invocation of federal jurisdiction that waives it.", trap: 2 },
               { text: "Yes, because the Eleventh Amendment bars federal-court suits for damages against a State unless Congress has abrogated its immunity.", why: "That omits consent: a State can waive immunity, and removal does so for these claims.", trap: 9 },
             ],
             answer: 0,
             say: "Remove a case to federal court and the State has chosen the forum: immunity from the federal forum is waived (Lapides).",
-            status: "general", src: "Lapides v. Board of Regents of the University System of Georgia, 535 U.S. 613 (2002); Pennhurst (1984)",
+            status: "general", src: "Lapides v. Board of Regents of the University System of Georgia, 535 U.S. 613 (2002); Pennhurst (1984); Moor v. County of Alameda (1973) (a State is not a citizen for diversity, so removal needs a federal claim)",
+          },
+          {
+            id: "u4-h-will", kind: "hypo", cat: "I.B.2", callType: "motion", rule: "u4-r-state-immunity", issue: "a State is not a §1983 person", grid: true,
+            stem: "A State statute waives the State's immunity from suit in its own courts for every claim for money damages. An employee of a State agency, dismissed after she criticized the agency's director in a newspaper, sues the agency in state court under 42 U.S.C. §1983, seeking damages for a violation of her First Amendment rights. The agency moves to dismiss.",
+            call: "Should the state court grant the motion?",
+            options: [
+              { text: "Yes, because a State and its agencies are not 'persons' who may be sued for damages under 42 U.S.C. §1983.", why: "Will v. Michigan Department of State Police: Congress did not make States or their arms 'persons' under §1983, in state court or in federal court." },
+              { text: "Yes, because the Eleventh Amendment bars suits for damages against a State and its agencies.", why: "The Eleventh Amendment limits federal courts, and this State waived its immunity in its own courts; the claim fails because a State is not a §1983 'person'.", trap: 1 },
+              { text: "No, because the State has waived its immunity from damages suits in its own courts.", why: "True, but a waiver of immunity does not create a cause of action: §1983 does not reach the State.", trap: 6 },
+              { text: "No, because §1983 abrogates the immunity of every governmental body that violates the Constitution.", why: "Section 1983 does not abrogate state immunity (Quern v. Jordan), and it does not make a State a 'person' (Will).", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["sues the agency in state court"],
+            say: "A State is not a §1983 'person': a statutory rule that applies even where the Eleventh Amendment does not.",
+            status: "general", src: "Will v. Michigan Department of State Police, 491 U.S. 58 (1989); Quern v. Jordan, 440 U.S. 332 (1979); Alden v. Maine (1999)",
           },
           {
             id: "u4-tr-county", kind: "trap", cat: "10", subject: "conlaw",
@@ -779,7 +798,7 @@
         items: [
           {
             id: "u4-r-abrogation", kind: "rule", title: "Abrogation: only through Section 5, with congruence and proportionality", cat: "I.B.2",
-            say: "Congress can lift a State's immunity only under Section 5, with a congruent and proportional remedy; never under the Commerce Clause.",
+            say: "Abrogation works only under Section 5 with a congruent, proportional remedy, never under Commerce; bankruptcy, eminent domain and war are Convention waivers.",
             elements: ["Congress unequivocally expresses its intent to abrogate", "It acts under Section 5 of the Fourteenth Amendment, not the Commerce Clause", "The remedy is congruent and proportional to the constitutional violation it targets"],
             ordered: true,
             distractorElements: ["It acts under any enumerated power, including the Commerce Clause", "The State has received federal funds"],
@@ -850,7 +869,7 @@
             elements: ["The suit is against a state officer in his official capacity", "The plaintiff alleges an ongoing violation of federal law", "The relief sought is prospective only"],
             ordered: false,
             distractorElements: ["The relief sought is retroactive money from the state treasury", "The claim is that the officer violated state law"],
-            exceptions: ["No retroactive payment from the state treasury (Edelman v. Jordan)", "No injunction to make state officials follow state law (Pennhurst State School v. Halderman)", "The officer must have some enforcement connection to the challenged law (Whole Woman's Health v. Jackson, 2021)"],
+            exceptions: ["No retroactive payment from the state treasury (Edelman v. Jordan)", "No injunction to make state officials follow state law (Pennhurst State School v. Halderman)", "The officer must have some connection with the enforcement of the challenged law (Ex parte Young; Whole Woman's Health v. Jackson, 2021)"],
             cite: "U.S. Const. amend. XI", citeAsk: "Which Amendment's immunity does Ex parte Young work around?",
             hook: "Young is a legal fiction that works: sue the officer, not the State, and ask for the future, not the past.",
             ex: [
@@ -891,13 +910,6 @@
             answer: 2,
             say: "Sue the officer, ask for the future: Ex parte Young lets a federal court end an ongoing violation of federal law.",
             status: "general", src: "Ex parte Young, 209 U.S. 123 (1908); Edelman v. Jordan (1974); Atascadero State Hospital v. Scanlon (1985)",
-          },
-          {
-            id: "u4-c-galette", kind: "case", subject: "conlaw", name: "Galette v. New Jersey Transit Corp.", year: 2026, recent: true, cat: "I.B.2",
-            holding: "NJ Transit is not an arm of New Jersey, so it cannot claim the State's immunity from suit in other States' courts; the inquiry looks at its legal separateness and who answers for its judgments.",
-            facts: "Travelers injured in other States sued the state-created transit agency in those States' courts.",
-            say: "Arm of the State? Ask whether the entity is legally separate and answers for its own judgments (a 2026 decision about other States' courts).",
-            status: "general", src: "Galette v. New Jersey Transit Corp. (Mar. 2026), 9-0 (Sotomayor), per secondary reports; conlaw.md §1",
           },
         ],
       },
@@ -1034,6 +1046,13 @@
             status: "general", src: "United States v. Lopez (1995); United States v. Morrison (2000); Gonzales v. Raich (2005); NFIB v. Sebelius (2012); Wickard v. Filburn (1942); Heart of Atlanta Motel v. United States (1964)",
           },
           {
+            id: "u4-c-gibbons", kind: "case", subject: "conlaw", name: "Gibbons v. Ogden", year: 1824, cat: "II.A.1",
+            holding: "Commerce includes navigation and all commercial intercourse among the States; Congress's power over it is complete, so a federal coasting license overrode a State steamboat monopoly.",
+            facts: "New York granted a steamboat monopoly; a rival ran boats between New Jersey and New York under a federal license.",
+            say: "Commerce is intercourse, not just trade, and Congress's power over interstate commerce is plenary: federal law beats a state monopoly.",
+            status: "general", src: "Gibbons v. Ogden, 22 U.S. (9 Wheat.) 1 (1824)",
+          },
+          {
             id: "u4-c-lopez", kind: "case", subject: "conlaw", name: "United States v. Lopez", year: 1995, cat: "II.A.1",
             holding: "Possession of a gun near a school is not economic activity that substantially affects interstate commerce, and the statute had no jurisdictional element.",
             facts: "A San Antonio high-school student carried a concealed .38 handgun into school.",
@@ -1097,7 +1116,7 @@
             terms: ["spending power", "coercion", "unambiguous condition"],
             quiz: [
               { t: "tf", q: "A spending condition is valid only if Congress could regulate the conditioned subject directly under an enumerated power.", a: false, why: "Dole upheld a condition that Congress could not have imposed directly; the independent-bar limit forbids only conditions that are themselves unconstitutional." },
-              { t: "mcq", q: "In Dole, the Twenty-first Amendment did not defeat the drinking-age condition because…", options: ["The condition was not itself an independent constitutional bar, and it was not coercive", "Congress has plenary power over alcohol", "Every State had agreed to it"], a: "The condition was not itself an independent constitutional bar, and it was not coercive", why: "The independent-bar limit asks whether the condition would itself require unconstitutional action; it did not, and five percent was not coercion." },
+              { t: "mcq", q: "In Dole, the Twenty-first Amendment did not defeat the drinking-age condition because…", options: ["The condition did not require the State to do anything unconstitutional, and losing five percent of highway funds was not coercive", "Congress has plenary power over alcohol", "Every State had agreed to it"], a: "The condition did not require the State to do anything unconstitutional, and losing five percent of highway funds was not coercive", why: "The independent-bar limit asks whether the condition would itself require unconstitutional action; it did not, and five percent was not coercion." },
               { t: "tf", q: "Congress may threaten to cut off all of a State's existing Medicaid funds to induce it to adopt a major new program.", a: false, why: "NFIB v. Sebelius held that this left States no real choice: coercion." },
             ],
             status: "general", src: "South Dakota v. Dole, 483 U.S. 203 (1987); NFIB v. Sebelius, 567 U.S. 519 (2012); United States v. Butler (1936); conlaw.md §6.1",
@@ -1142,26 +1161,36 @@
             ],
             answer: 3,
             say: "Congress cannot buy what the Constitution forbids: a grant condition may not require a recipient to violate an independent constitutional provision.",
-            status: "general", src: "South Dakota v. Dole, 483 U.S. 203 (1987); Board of Education v. Pico (1982)",
+            status: "general", src: "South Dakota v. Dole, 483 U.S. 203 (1987); Tinker v. Des Moines Independent Community School District, 393 U.S. 503 (1969)",
           },
           {
             id: "u4-h-medicaid", kind: "hypo", cat: "II.A.1", callType: "constitutional", rule: "u4-r-spending", issue: "coercive spending conditions", transfer: true,
-            stem: "Congress has for decades paid a share of the cost of a State-run program of medical aid for the poor, which now makes up a large part of each State's budget. Congress amends the statute to require each State to extend coverage to a much larger group at State expense, and provides that any State that refuses will lose all of its federal funds for the existing program. A State that wants to keep its existing program without expansion sues, challenging the new condition.",
+            stem: "For decades Congress has paid most of the cost of each State's program of long-term nursing care for the elderly poor, and those federal funds now make up a large share of every State's budget. Congress amends the statute to require each State to create a new program of in-home care for all disabled adults, at State expense, and provides that a State that refuses will lose all of its federal funds for the existing nursing-care program. A State that wants to keep its existing program without creating the new one sues, challenging the condition.",
             call: "Is the new condition constitutional?",
             options: [
-              { text: "No, because the threat to withdraw all funds for the existing program is coercion: pressure that has turned into compulsion.", why: "NFIB: the new requirement was a new program, and the loss of all existing funds left States no real choice." },
+              { text: "No, because the threat to withdraw all funds for a large existing program to force the State into a new one is coercion: pressure that has turned into compulsion.", why: "NFIB v. Sebelius: threatening all existing funds of a large program to induce a new one leaves States no real choice." },
               { text: "No, because Congress may never attach conditions that expand an existing program, since a State's participation must remain entirely voluntary.", why: "Conditions that expand a program are valid if they satisfy Dole, including non-coercion; 'never' is wrong.", trap: 7 },
               { text: "Yes, because the State remains free to refuse the funds, so it has not been compelled to adopt the new program.", why: "Freedom to refuse is not enough if the loss is so great that the choice is illusory.", trap: 2 },
-              { text: "Yes, because Congress's power to spend for the general welfare is broader than its power to regulate directly, so no limit applies.", why: "True, but the spending power is still limited by non-coercion.", trap: 6 },
+              { text: "Yes, because Congress's power to spend for the general welfare is broader than its power to regulate directly, so no limit applies.", why: "True that the spending power is broad, but it is still limited by non-coercion.", trap: 6 },
             ],
             answer: 0,
-            say: "Cut off every dollar of an existing program to force a new one, and the offer becomes a gun to the head.",
+            facts: ["lose all of its federal funds for the existing nursing-care program"],
+            say: "Cut off every dollar of a large existing program to force a new one, and the offer becomes a gun to the head.",
             status: "general", src: "NFIB v. Sebelius, 567 U.S. 519 (2012); South Dakota v. Dole (1987)",
           },
           {
-            id: "u4-n-dole-percent", kind: "num", cat: "II.A.1", ask: "The percent of federal highway funds South Dakota would lose in Dole for not raising its drinking age to 21", answer: "5 percent", alt: ["5", "5%", "five percent", "five"],
-            say: "Five percent of highway funds: mild enough to count as encouragement, not coercion.",
-            status: "general", src: "South Dakota v. Dole, 483 U.S. 203 (1987)",
+            id: "u4-so-spending-coercion", kind: "sort", cat: "II.A.1", mode: "category", q: "Encouragement or coercion?",
+            buckets: ["Encouragement", "Coercion"],
+            items: [
+              { text: "A State loses five percent of one highway grant unless it raises its drinking age", bucket: "Encouragement", why: "Mild pressure on a small share of one program (Dole)." },
+              { text: "A State loses all of its existing Medicaid funds unless it adopts a major new expansion", bucket: "Coercion", why: "A gun to the head: all funds of a large, long-standing program, used to force a new one (NFIB)." },
+              { text: "A State may take a new grant for school libraries only if it adopts a reading standard; its other funds are untouched", bucket: "Encouragement", why: "Declining new money costs the State nothing it already has." },
+              { text: "A State loses every dollar of a decades-old program that makes up a large share of its budget unless it takes on a new program", bucket: "Coercion", why: "Threatening a large existing program to force a new one leaves no real choice (NFIB)." },
+              { text: "A State loses a small part of a federal prison grant unless it reports how the grant money is spent", bucket: "Encouragement", why: "A small, related condition on the funded program is ordinary encouragement." },
+              { text: "A State loses all existing federal education funds, a large share of its budget, unless it adopts a new federal program at its own cost", bucket: "Coercion", why: "The NFIB shape: all existing funds of a large program held hostage to a new one." },
+            ],
+            say: "Losing a small slice of one grant is a nudge; losing all of a large, existing program to force a new one is a gun to the head.",
+            status: "general", src: "South Dakota v. Dole, 483 U.S. 203 (1987); NFIB v. Sebelius, 567 U.S. 519 (2012)",
           },
           {
             id: "u4-so-which-power", kind: "sort", cat: "II.A.1", mode: "category", q: "Which power supports the statute?",
@@ -1173,7 +1202,7 @@
               { text: "A remedy against a State agency's own discrimination, tailored to a record of state violations", bucket: "Enforcing the Reconstruction Amendments", why: "Section 5 of the Fourteenth Amendment, congruent and proportional (Boerne; Hibbs)." },
               { text: "A federal rule on the safety of trucks and aircraft used in interstate transport", bucket: "Commerce power", why: "Instrumentalities of interstate commerce." },
               { text: "A federal excise tax on gun sales that raises revenue and also discourages sales", bucket: "Taxing power", why: "A regulatory motive does not defeat a tax (Sonzinsky)." },
-              { text: "A ban on a private seller's refusal to sell a home because of the buyer's race", bucket: "Enforcing the Reconstruction Amendments", why: "Thirteenth Amendment, Section 2: badges and incidents of slavery (Jones)." },
+              { text: "A statute enacted under the Thirteenth Amendment, with no commerce findings or element, giving every citizen the same right as white citizens to buy property, applied to a private homeowner", bucket: "Enforcing the Reconstruction Amendments", why: "Thirteenth Amendment, Section 2: badges and incidents of slavery, even in private conduct (Jones v. Alfred H. Mayer)." },
               { text: "A grant to States for school lunches on the condition that no school discriminates by race", bucket: "Spending power", why: "General welfare, clear, related and not coercive (Dole)." },
             ],
             say: "Name the power first: commerce, taxing, spending or Reconstruction enforcement. Each has its own limits.",
@@ -1197,7 +1226,7 @@
           {
             id: "u4-r-npc-treaty", kind: "rule", title: "Necessary and Proper, treaties and foreign affairs", cat: "II.A.2", exam: ["mbe"],
             say: "Congress may use any rational means to carry out an enumerated power; a valid treaty can reach subjects otherwise left to the States.",
-            elements: ["Necessary and Proper: a means rationally related to carrying out an enumerated power (McCulloch; Comstock)", "Treaties: made by the President with two thirds of the Senators present concurring", "A valid treaty is supreme law and may reach matters otherwise left to the States (Missouri v. Holland)", "A treaty cannot violate the Constitution (Reid v. Covert)", "Congress has no general police power"],
+            elements: ["Necessary and Proper: a means rationally related to carrying out an enumerated power (McCulloch; Comstock)", "Treaties: made by the President with two thirds of the Senators present concurring", "A valid treaty is supreme law and may reach matters otherwise left to the States (Missouri v. Holland)", "A treaty cannot violate the Constitution (Reid v. Covert, plurality opinion)", "Congress has no general police power"],
             ordered: false,
             distractorElements: ["A treaty requires approval by both Houses", "A treaty is limited by the Tenth Amendment"],
             exceptions: ["A self-executing treaty operates as domestic law; a non-self-executing treaty needs legislation (Medellin v. Texas)", "Between a statute and a treaty that conflict, the later in time controls", "Congress also has foreign commerce, naturalization, immigration, territory and property powers", "Congress legislates for federal property and the territories (Art. IV, §3) and has exclusive legislative power over the District of Columbia (Art. I, §8, cl. 17)"],
@@ -1205,7 +1234,7 @@
             hook: "A treaty needs the President and two thirds of the Senators present. The House sits this one out.",
             ex: [
               { facts: "A treaty protects birds that migrate across the border, and Congress passes a statute to carry it out.", result: "Valid: the treaty and implementing law may reach what Congress alone could not (Missouri v. Holland)." },
-              { facts: "A treaty would let the government punish speech that the First Amendment protects.", result: "Invalid: a treaty cannot override the Constitution (Reid v. Covert)." },
+              { facts: "A treaty would let the government punish speech that the First Amendment protects.", result: "Invalid: a treaty cannot override the Constitution (Reid v. Covert, plurality opinion)." },
             ],
             terms: ["Necessary and Proper Clause", "self-executing treaty", "police power"],
             quiz: [
@@ -1213,7 +1242,7 @@
               { t: "tf", q: "Congress has exclusive power to legislate for the District of Columbia.", a: true, why: "Article I, §8, cl. 17 gives Congress exclusive legislative power over the seat of government." },
               { t: "mcq", q: "Under the Necessary and Proper Clause, a federal statute is valid if it is…", options: ["A rational means of carrying out an enumerated power", "Absolutely indispensable to an enumerated power", "Within the States' traditional police power"], a: "A rational means of carrying out an enumerated power", why: "McCulloch and Comstock: the clause grants the means that are rationally related to an enumerated power; 'necessary' does not mean indispensable." },
             ],
-            status: "general", src: "U.S. Const. art. I, §8, cl. 18 and art. II, §2, cl. 2 (read on LII); McCulloch v. Maryland (1819); United States v. Comstock (2010); Missouri v. Holland, 252 U.S. 416 (1920); Reid v. Covert (1957); conlaw.md §6.1",
+            status: "general", src: "U.S. Const. art. I, §8, cl. 18 and art. II, §2, cl. 2 (read on LII); McCulloch v. Maryland (1819); United States v. Comstock (2010); Missouri v. Holland, 252 U.S. 416 (1920); Reid v. Covert, 354 U.S. 1 (1957) (plurality opinion); conlaw.md §6.1",
           },
           {
             id: "u4-h-comstock", kind: "hypo", cat: "II.A.4", exam: ["mbe"], callType: "constitutional", rule: "u4-r-npc-treaty", issue: "Necessary and Proper Clause", grid: true,
@@ -1260,7 +1289,7 @@
             quiz: [
               { t: "tf", q: "Section 5 of the Fourteenth Amendment lets Congress prohibit purely private racial discrimination.", a: false, why: "Section 5 enforces the Fourteenth Amendment, which restrains only state action (Civil Rights Cases; United States v. Morrison)." },
               { t: "mcq", q: "Which case invalidated the Religious Freedom Restoration Act as applied to the States?", options: ["City of Boerne v. Flores", "Jones v. Alfred H. Mayer Co.", "Shelby County v. Holder"], a: "City of Boerne v. Flores", why: "Boerne held that RFRA was not congruent and proportional: it changed rather than enforced the Free Exercise right." },
-              { t: "bucket", q: "Which enforcement power supports the statute?", buckets: ["Thirteenth Amendment", "Fourteenth Amendment Section 5"], items: [{ text: "A ban on a private seller's refusal to sell a home on the basis of race", bucket: "Thirteenth Amendment" }, { text: "A remedy against a State's own discrimination, with a record of state violations", bucket: "Fourteenth Amendment Section 5" }, { text: "A remedy against discrimination by a State's own agencies, tailored to a record of state violations", bucket: "Fourteenth Amendment Section 5" }] },
+              { t: "bucket", q: "Which enforcement power supports the statute?", buckets: ["Thirteenth Amendment", "Fourteenth Amendment Section 5", "Neither"], items: [{ text: "A ban on a private seller's refusal to sell a home on the basis of race", bucket: "Thirteenth Amendment" }, { text: "A remedy against a State's own discrimination, with a record of state violations", bucket: "Fourteenth Amendment Section 5" }, { text: "A federal civil remedy against private persons who commit gender-motivated violence", bucket: "Neither" }] },
             ],
             status: "general", src: "U.S. Const. amends. XIII-XV, §§2, 5 (read on LII); Jones v. Alfred H. Mayer Co. (1968); City of Boerne v. Flores, 521 U.S. 507 (1997); South Carolina v. Katzenbach (1966); United States v. Morrison (2000); Shelby County v. Holder (2013); conlaw.md §6.1",
           },
@@ -1355,11 +1384,10 @@
           {
             id: "u4-r-war-powers", kind: "rule", title: "War powers: Congress and the Commander in Chief", cat: "II.B.2",
             say: "Congress declares war and funds the military; the President commands it and may repel attacks, but cannot make domestic law or ignore due process.",
-            elements: ["Congress declares war, raises and funds the armed forces, and makes rules for them", "The President is Commander in Chief and directs the forces that Congress provides", "War Powers Resolution: report within 48 hours; withdraw after 60 days (plus 30) without authorization", "The Commander in Chief power does not make the President a lawmaker at home (Youngstown)", "Detainees get due process (Hamdi) and habeas review (Boumediene)"],
+            elements: ["Congress declares war, raises and funds the armed forces, and makes rules for them", "The President is Commander in Chief and directs the forces that Congress provides", "Congress checks the use of force through the declaration, the purse and statutes", "The Commander in Chief power does not make the President a lawmaker at home (Youngstown)", "A citizen held as an enemy combatant gets notice and a fair chance to rebut (Hamdi, plurality)", "Noncitizens held where the United States has complete control may seek habeas (Boumediene)"],
             ordered: false,
             distractorElements: ["A declaration of war is required before the President may use any force", "The Commander in Chief power is beyond judicial review"],
-            exceptions: ["The President may act to repel a sudden attack without waiting for Congress (the Prize Cases)", "Congress's checks on the use of force are mostly funding and the War Powers Resolution, whose validity the Court has never decided", "Military commissions must comply with the statutes that Congress has enacted (Hamdan v. Rumsfeld)"],
-            numbers: [{ label: "Hours within which the President must report to Congress after introducing armed forces into hostilities", value: "48 hours" }, { label: "Days after the report within which forces must be withdrawn unless Congress authorizes continued use (extendable by 30 days)", value: "60 days" }],
+            exceptions: ["The President may act to repel a sudden attack without waiting for Congress (the Prize Cases)", "Military commissions must comply with the statutes that Congress has enacted (Hamdan v. Rumsfeld)", "Background, not a tested rule: the War Powers Resolution asks for a report within 48 hours and withdrawal after 60 days (plus 30) without authorization; the Court has never decided whether it is valid"],
             cite: "U.S. Const. art. I, §8", citeAsk: "Which provision of the Constitution lists Congress's powers to declare war, raise armies and maintain a navy?",
             hook: "Congress holds the declaration and the purse; the President holds the sword. Neither holds both.",
             ex: [
@@ -1368,16 +1396,11 @@
             ],
             terms: ["Commander in Chief", "enemy combatant", "War Powers Resolution"],
             quiz: [
-              { t: "tf", q: "The President may use military force abroad only after Congress has formally declared war.", a: false, why: "The President may respond to attacks (Prize Cases), and Congress's usual checks are its funding power and the War Powers Resolution." },
+              { t: "tf", q: "The President may use military force abroad only after Congress has formally declared war.", a: false, why: "The President may respond to attacks (Prize Cases), and Congress's usual checks are the declaration, the purse and statutes authorizing or limiting force." },
               { t: "mcq", q: "A citizen is held in the United States as an enemy combatant. Due process requires at least…", options: ["Notice of the factual basis for the detention and a fair chance to rebut it before a neutral decisionmaker", "A jury trial in a civilian court", "Nothing, because the President is Commander in Chief"], a: "Notice of the factual basis for the detention and a fair chance to rebut it before a neutral decisionmaker", why: "Hamdi v. Rumsfeld (plurality): a war does not give the President a blank check over a citizen's liberty." },
               { t: "bucket", q: "Congress or the President?", buckets: ["Congress", "President"], items: [{ text: "Declaring war", bucket: "Congress" }, { text: "Directing troop movements in an authorized conflict", bucket: "President" }, { text: "Funding and making rules for the armed forces", bucket: "Congress" }, { text: "Repelling a sudden attack on the country", bucket: "President" }] },
             ],
             status: "general", src: "U.S. Const. art. I, §8, cls. 11-14 and art. II, §2, cl. 1; Prize Cases (1863); Youngstown (1952); Hamdi v. Rumsfeld, 542 U.S. 507 (2004); Hamdan v. Rumsfeld (2006); Boumediene v. Bush, 553 U.S. 723 (2008); War Powers Resolution, 50 U.S.C. §§1541-1548",
-          },
-          {
-            id: "u4-n-wpr-days", kind: "num", cat: "II.A.2", ask: "Days after the President's report within which armed forces must be withdrawn unless Congress authorizes their continued use (War Powers Resolution; extendable by 30 days)", answer: "60 days", alt: ["60", "sixty days", "sixty"],
-            say: "Sixty days after the report, plus up to thirty to withdraw, unless Congress declares war or authorizes the use of force.",
-            status: "general", src: "War Powers Resolution, 50 U.S.C. §1544(b)",
           },
           {
             id: "u4-a-hamdi", kind: "argue", cat: "II.B.2", rule: "u4-r-war-powers", issue: "detention of a citizen as an enemy combatant",
@@ -1392,21 +1415,6 @@
             answer: 2,
             say: "A war does not suspend due process: a citizen held as an enemy combatant gets notice and a fair chance to rebut before a neutral decisionmaker.",
             status: "general", src: "Hamdi v. Rumsfeld, 542 U.S. 507 (2004) (plurality opinion)",
-          },
-          {
-            id: "u4-h-boumediene", kind: "hypo", cat: "II.B.2", callType: "motion", rule: "u4-r-war-powers", issue: "habeas corpus for detainees abroad", transfer: true,
-            stem: "After a military conflict abroad, the United States holds several foreign nationals, captured abroad, at a military base on territory that the United States controls completely but over which another country retains formal sovereignty. The military has classified them as enemy combatants. Congress enacts a statute that removes the federal courts' jurisdiction to hear habeas corpus petitions from such detainees and provides a limited military review process in which a detainee may not present evidence to rebut the government's case. The United States has used the base under a lease for more than a century. A detainee files a petition for a writ of habeas corpus in a federal district court, and the government moves to dismiss under the statute.",
-            call: "Should the court grant the motion to dismiss?",
-            options: [
-              { text: "Yes, because the Suspension Clause does not apply to noncitizens held outside the formal sovereign territory of the United States.", why: "Boumediene: the Clause's reach turns on practical factors such as the nature of the site and the control the United States exercises, not on formal sovereignty.", trap: 5 },
-              { text: "No, because the Suspension Clause reaches this base, and the limited review that the statute provides is not an adequate substitute for habeas corpus.", why: "Boumediene v. Bush: the detainees may invoke the privilege of habeas corpus, and the statute is an unconstitutional suspension without an adequate substitute." },
-              { text: "Yes, because Congress may strip the federal courts of jurisdiction in any case that involves enemy combatants.", why: "Congress may not suspend habeas corpus outside the conditions of the Suspension Clause; 'any' overstates its power.", trap: 7 },
-              { text: "No, because the detainees are entitled to the protection of every provision of the Bill of Rights.", why: "The Court held that the Suspension Clause applies; it did not extend every constitutional provision to the base.", trap: 7 },
-            ],
-            answer: 1,
-            facts: ["controls completely"],
-            say: "Habeas reaches where the United States holds complete control: Congress cannot strip it without an adequate substitute.",
-            status: "general", src: "Boumediene v. Bush, 553 U.S. 723 (2008)",
           },
           {
             id: "u4-r-foreign-affairs", kind: "rule", title: "Foreign affairs: recognition and executive agreements", cat: "II.B.3", exam: ["mbe"],
@@ -1547,8 +1555,24 @@
             status: "general", src: "Seila Law LLC v. CFPB, 591 U.S. 197 (2020); Myers v. United States (1926)",
           },
           {
+            id: "u4-h-free-enterprise", kind: "hypo", cat: "II.B.4", callType: "constitutional", rule: "u4-r-removal", issue: "two layers of for-cause protection", transfer: true,
+            assume: "The parties do not dispute the limit on removing the commission's own members.",
+            stem: "Congress creates a board within a federal commission to license and discipline the private inspectors who certify the safety of nuclear power plants. The board makes rules, investigates violations and imposes sanctions. Board members are appointed by the commission and may be removed by it only for willful violations of law. The commission's own members may be removed by the President only for inefficiency, neglect of duty or malfeasance. An inspector disciplined by the board challenges the limit on removing board members.",
+            call: "Is the limit on removing board members constitutional?",
+            options: [
+              { text: "No, because two layers of for-cause protection leave the President unable to hold the board accountable for how it executes the law.", why: "Free Enterprise Fund v. PCAOB: officers removable only for cause by superiors who are themselves removable only for cause are beyond the President's control." },
+              { text: "Yes, because the board members are inferior officers, and Congress may protect inferior officers from removal at will.", why: "Morrison involved one layer of protection under an officer the President could remove at will; two layers are the defect here.", trap: 9 },
+              { text: "Yes, because the commission, not the President, appoints the board members, so only the commission's power to remove them matters.", why: "The commission may appoint them, but Article II still requires that the President be able to oversee those who execute the law.", trap: 2 },
+              { text: "No, because the President must be able to remove every officer of the United States personally and at will.", why: "Free Enterprise Fund did not require personal removal of every officer; the board became removable at will by the commission.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["only for willful violations of law"],
+            say: "For-cause on top of for-cause is one layer too many: the President must be able to reach officers who execute the law.",
+            status: "general", src: "Free Enterprise Fund v. Public Company Accounting Oversight Board, 561 U.S. 477 (2010); Morrison v. Olson (1988); Seila Law LLC v. CFPB (2020)",
+          },
+          {
             id: "u4-h-morrison", kind: "hypo", cat: "II.B.4", callType: "constitutional", rule: "u4-r-removal", issue: "for-cause protection of an inferior officer", grid: true,
-            assume: "Morrison v. Olson, as limited by Seila Law, remains good law for inferior officers.",
+            assume: "Treat the Supreme Court's pre-2026 decisions on inferior officers as still controlling.",
             stem: "Congress creates a temporary office of special prosecutor, to be filled by a court of law, for the sole purpose of investigating and prosecuting a specified set of alleged crimes by senior executive officials. The statute provides that the Attorney General may remove the special prosecutor only for good cause or for physical or mental disability, and that the office ends when the investigation is complete. The special prosecutor has no policymaking or administrative duties. A person indicted by the special prosecutor argues that the removal restriction violates the separation of powers.",
             call: "Is the removal restriction constitutional?",
             options: [
@@ -1635,17 +1659,31 @@
             status: "general", src: "INS v. Chadha, 462 U.S. 919 (1983); conlaw.md §6.4 SP-11 (rewritten)",
           },
           {
+            id: "u4-h-line-item", kind: "hypo", cat: "II.C.2", exam: ["mbe"], callType: "constitutional", rule: "u4-r-presentment", issue: "cancelling parts of a signed law", transfer: true,
+            stem: "Congress enacts a statute authorizing the President, within five days after signing any appropriations act, to cancel any individual item of new discretionary spending in it by sending a notice to Congress. A cancelled item has no legal force unless Congress passes a bill disapproving the cancellation. The President signs an appropriations act and then cancels a grant in it to a regional port authority. The port authority sues, claiming that the cancellation is invalid.",
+            call: "Is the cancellation valid?",
+            options: [
+              { text: "No, because the cancellation repeals part of an enacted law without passage by both Houses and presentment, which only the lawmaking process can do.", why: "Clinton v. City of New York: cancelling items after signing amends a statute outside Article I, §7; the President must approve or veto the whole bill." },
+              { text: "No, because the President may never decline to spend money that Congress has appropriated, whatever the statute says.", why: "The defect is the cancellation's effect on an enacted law; 'never' overstates any rule about spending.", trap: 7 },
+              { text: "Yes, because Congress gave the President an intelligible principle for deciding which items to cancel, so the delegation is valid.", why: "The issue is presentment, not delegation: the President cannot amend a law by cancelling parts of it.", trap: 10 },
+              { text: "Yes, because Congress can restore any cancelled item by passing a disapproval bill, so the legislative process is preserved.", why: "True that Congress can try to undo it, but that does not make the President's partial repeal lawful.", trap: 6 },
+            ],
+            answer: 0,
+            say: "Sign it all or veto it all: cancelling items after signing is a line-item veto the Presentment Clause forbids.",
+            status: "general", src: "Clinton v. City of New York, 524 U.S. 417 (1998); U.S. Const. art. I, §7 (read on LII)",
+          },
+          {
             id: "u4-n-veto-days", kind: "num", cat: "II.C.2", exam: ["mbe"], ask: "Days (Sundays excepted) the President has to sign or veto a presented bill before it becomes law without his signature, while Congress is in session", answer: "10 days", alt: ["10", "ten days", "ten"],
             say: "Ten days, Sundays excepted; silence while Congress is in session means the bill becomes law.",
             status: "book", src: "U.S. Const. art. I, §7, cl. 2 (read on LII)",
           },
           {
             id: "u4-r-nondelegation", kind: "rule", title: "Nondelegation and the major questions doctrine", cat: "II.C.3",
-            say: "Congress may delegate if it states the general policy and the boundaries of the authority; only two delegations have ever failed, both in 1935.",
+            say: "Congress may delegate if it states the policy and its bounds; the Court has found an intelligible principle lacking only twice, both in 1935.",
             elements: ["Congress states the general policy the agency must pursue", "Congress states the boundaries of the authority delegated"],
             ordered: false,
             distractorElements: ["Congress sets a numeric cap on any money the agency may raise", "The agency's helper is a private party free of agency control"],
-            exceptions: ["Only two statutes have been struck on this ground, both in 1935 (Panama Refining; Schechter Poultry)", "Congress may leave an agency to fill in the details under broad general directives (Mistretta)", "Major questions doctrine: decisions of vast economic and political significance need clear congressional authorization (West Virginia v. EPA, 2022; Biden v. Nebraska, 2023)"],
+            exceptions: ["The Court has found an intelligible principle lacking only twice, both in 1935 (Panama Refining; Schechter Poultry); a 1936 case struck a delegation to private parties on a different ground (Carter v. Carter Coal)", "Congress may leave an agency to fill in the details under broad general directives (Mistretta)", "Major questions doctrine: decisions of vast economic and political significance need clear congressional authorization (West Virginia v. EPA, 2022; Biden v. Nebraska, 2023)"],
             cite: "J.W. Hampton v. United States", citeAsk: "Which case announced the intelligible-principle test?",
             hook: "General policy plus boundaries: that is all an 'intelligible principle' asks.",
             ex: [
@@ -1657,7 +1695,7 @@
               { t: "tf", q: "Congress violates the nondelegation doctrine whenever it leaves an agency broad discretion to fill in the details of a statute.", a: false, why: "Only a delegation with no intelligible principle fails; Congress may leave the details to the agency under broad general directives (Mistretta; Whitman)." },
               { t: "mcq", q: "The intelligible-principle test asks whether Congress has made clear…", options: ["The general policy and the boundaries of the delegated authority", "The exact amount of money the agency may spend", "The identity of the agency head"], a: "The general policy and the boundaries of the delegated authority", why: "J.W. Hampton and its successors, such as American Power & Light and Whitman v. American Trucking." },
             ],
-            status: "general", src: "J.W. Hampton v. United States, 276 U.S. 394 (1928); Mistretta v. United States (1989); Whitman v. American Trucking (2001); West Virginia v. EPA, 597 U.S. 697 (2022); Biden v. Nebraska, 600 U.S. 477 (2023)",
+            status: "general", src: "J.W. Hampton v. United States, 276 U.S. 394 (1928); Panama Refining Co. v. Ryan (1935); A.L.A. Schechter Poultry Corp. v. United States (1935); Carter v. Carter Coal Co. (1936); Mistretta v. United States (1989); Whitman v. American Trucking, 531 U.S. 457 (2001); West Virginia v. EPA, 597 U.S. 697 (2022); Biden v. Nebraska, 600 U.S. 477 (2023)",
           },
           {
             id: "u4-h-nondelegation", kind: "hypo", cat: "II.C.3", callType: "constitutional", rule: "u4-r-nondelegation", issue: "intelligible principle", grid: true,
@@ -1670,22 +1708,15 @@
               { text: "No, because the statute does not require the agency to weigh the costs of compliance.", why: "The Constitution does not require a delegation to mention costs; the test is an intelligible principle.", trap: 4 },
             ],
             answer: 0,
-            say: "Policy plus boundaries equals an intelligible principle; only two delegations have ever failed, both in 1935.",
+            say: "Policy plus boundaries is an intelligible principle; the Court has found one lacking only twice, both in 1935.",
             status: "general", src: "Whitman v. American Trucking Associations (2001); conlaw.md §6.4 SP-15 (rewritten)",
           },
           {
-            id: "u4-c-consumers-research", kind: "case", subject: "conlaw", name: "FCC v. Consumers' Research", year: 2025, recent: true, cat: "II.C.3",
-            holding: "A delegation to the FCC to set universal-service contributions satisfies the intelligible-principle test; the Court rejected a special numeric-limit rule for delegations that raise money.",
-            facts: "Challengers attacked a fund financed by fees that the FCC set with help from a private administrator.",
-            say: "The ordinary test applies even when an agency raises money: general policy plus boundaries, with no numeric cap required.",
-            status: "book", src: "FCC v. Consumers' Research, No. 24-354 (June 27, 2025), syllabus read on LII",
-          },
-          {
-            id: "u4-c-learning-resources", kind: "case", subject: "conlaw", name: "Learning Resources, Inc. v. Trump", year: 2026, recent: true, cat: "II.C.3",
-            holding: "IEEPA does not authorize tariffs: the power to 'regulate importation' does not include the taxing power. Only a three-Justice plurality relied on the major questions doctrine.",
-            facts: "The President imposed tariffs on most imports under an emergency-powers statute.",
-            say: "Tariffs are taxes, and taxes belong to Congress: 'regulate importation' does not reach them. Major questions drew only three votes.",
-            status: "book", src: "Learning Resources, Inc. v. Trump, Nos. 24-1287, 25-250 (Feb. 20, 2026), 6-3 (Roberts), syllabus read on LII",
+            id: "u4-c-west-virginia", kind: "case", subject: "conlaw", name: "West Virginia v. EPA", year: 2022, cat: "II.C.3",
+            holding: "An agency needs clear congressional authorization to decide a question of vast economic and political significance; the EPA could not use an obscure provision to restructure the nation's power generation.",
+            facts: "The EPA set emission limits meant to shift electricity generation from coal to other sources across the country.",
+            say: "Major questions need a clear statement from Congress: a modest provision does not hide an elephant.",
+            status: "general", src: "West Virginia v. EPA, 597 U.S. 697 (2022); Biden v. Nebraska (2023)",
           },
         ],
       },
@@ -1732,10 +1763,10 @@
           {
             id: "u4-r-immunities", kind: "rule", title: "Immunities of the President and of legislators", cat: "II.C.4", exam: ["mbe"],
             say: "Presidents have civil immunity for official acts only; legislators are protected for legislative acts, not press releases.",
-            elements: ["President: absolute immunity from civil damages for official acts (Nixon v. Fitzgerald)", "President: no immunity from civil suit over unofficial acts, even while in office (Clinton v. Jones)", "Executive privilege is qualified and yields to a criminal subpoena (United States v. Nixon)", "Speech or Debate: a legislator's legislative acts cannot be questioned elsewhere", "Press releases and newsletters are not legislative acts (Hutchinson v. Proxmire)"],
+            elements: ["President: absolute immunity from civil damages for official acts (Nixon v. Fitzgerald)", "President: no immunity from civil suit over unofficial acts, even while in office (Clinton v. Jones)", "Executive privilege is qualified: a generalized claim yields to a criminal trial's need for evidence (United States v. Nixon)", "Speech or Debate: a legislator's legislative acts cannot be questioned elsewhere", "Press releases and newsletters are not legislative acts (Hutchinson v. Proxmire)"],
             ordered: false,
             distractorElements: ["Speech or Debate also protects accepting a bribe", "The President has absolute immunity from every civil suit"],
-            exceptions: ["Speech or Debate does not protect taking a bribe (Brewster)", "Judges have absolute immunity for judicial acts (Stump v. Sparkman); presidential aides have qualified immunity (Harlow)", "A state grand-jury subpoena to a sitting President is not barred by Article II or the Supremacy Clause (Trump v. Vance, 2020)", "Trump v. United States (2024): criminal immunity is absolute for core constitutional powers, presumptive for other official acts, and none for unofficial acts"],
+            exceptions: ["Speech or Debate does not protect taking a bribe (Brewster)", "Judges have absolute immunity for judicial acts (Stump v. Sparkman); presidential aides have qualified immunity (Harlow)", "A state grand-jury subpoena to a sitting President is not barred by Article II or the Supremacy Clause (Trump v. Vance, 2020)", "Trump v. United States (2024): criminal immunity is absolute for core constitutional powers, at least presumptive for other official acts (the Court left open whether it is absolute), and none for unofficial acts"],
             cite: "Nixon v. Fitzgerald", citeAsk: "Which case gave the President absolute civil immunity for official acts?",
             hook: "Floor: protected. Press release: not.",
             ex: [
@@ -1794,13 +1825,6 @@
             status: "general", src: "United States v. Nixon, 418 U.S. 683 (1974); Trump v. Vance, 591 U.S. 786 (2020)",
           },
           {
-            id: "u4-c-trump-v-us", kind: "case", subject: "conlaw", name: "Trump v. United States", year: 2024, recent: true, cat: "II.C.4", exam: ["mbe"],
-            holding: "A former President has absolute immunity from criminal prosecution for acts within his core constitutional powers, presumptive immunity for other official acts, and none for unofficial acts.",
-            facts: "A former President claimed immunity from a federal indictment concerning his conduct after an election.",
-            say: "Core powers: absolute. Other official acts: presumptive. Unofficial acts: none. A rule about criminal prosecution, not civil suits.",
-            status: "general", src: "Trump v. United States, 603 U.S. 593 (2024); conlaw.md §6.2",
-          },
-          {
             id: "u4-c-us-v-nixon", kind: "case", subject: "conlaw", name: "United States v. Nixon", year: 1974, cat: "II.C.4", exam: ["mbe"],
             holding: "Executive privilege is qualified: a generalized interest in confidentiality cannot prevail over a criminal trial's demonstrated need for relevant evidence, and the courts decide the claim.",
             facts: "A special prosecutor subpoenaed White House tape recordings for the trial of the President's aides.",
@@ -1833,7 +1857,7 @@
             elements: ["A State may not tax or regulate the federal government directly", "A State may not discriminate against the federal government, its employees or its contractors", "A State may apply nondiscriminatory taxes and rules to private parties who deal with the federal government", "Federal officers doing what federal law authorizes are immune from state prosecution (Neagle)"],
             ordered: false,
             distractorElements: ["A State may tax a federal agency if the tax is small", "Federal contractors are exempt from all state taxes"],
-            exceptions: ["Discrimination means treating those who deal with the federal government worse than comparable private parties (Dawson v. Steager; United States v. Washington, 2022)", "Congress may consent to state taxation or regulation of federal property"],
+            exceptions: ["Discrimination means treating the federal government, or those who deal with it, worse than the State treats itself or similarly situated others (Dawson v. Steager: state retirees exempt, federal retirees taxed; United States v. Washington, 2022)", "Congress may consent to state taxation or regulation of federal property"],
             cite: "McCulloch v. Maryland", citeAsk: "Which case held that a State may not tax the national bank?",
             hook: "'The power to tax involves the power to destroy' (Marshall): Maryland could not tax the national bank.",
             ex: [
@@ -1842,11 +1866,11 @@
             ],
             terms: ["intergovernmental immunity", "discrimination", "Supremacy Clause immunity"],
             quiz: [
-              { t: "tf", q: "A State may impose a nondiscriminatory tax on a private firm that contracts with the federal government.", a: true, why: "Nondiscriminatory taxes on private parties who deal with the federal government are valid (North Dakota v. United States; Graves)." },
+              { t: "tf", q: "A State may impose a nondiscriminatory tax on a private firm that contracts with the federal government.", a: true, why: "Nondiscriminatory taxes on private parties who deal with the federal government are valid (United States v. New Mexico, 1982; Graves v. New York ex rel. O'Keefe, 1939)." },
               { t: "mcq", q: "A State workers' compensation rule that applies only to employees at federal sites is…", options: ["Invalid: it discriminates against the federal government", "Valid: States regulate workers' compensation", "Valid unless Congress has legislated on the subject"], a: "Invalid: it discriminates against the federal government", why: "United States v. Washington (2022): intergovernmental immunity forbids discrimination, with or without federal legislation." },
               { t: "bucket", q: "Valid state action?", buckets: ["Valid", "Invalid"], items: [{ text: "A tax imposed directly on the federal government's property used for federal purposes", bucket: "Invalid" }, { text: "A general sales tax paid by a contractor on its purchases", bucket: "Valid" }, { text: "A tax that applies only to federal employees' pay", bucket: "Invalid" }] },
             ],
-            status: "general", src: "McCulloch v. Maryland (1819); Dawson v. Steager (2019); United States v. Washington (2022); North Dakota v. United States (1990); In re Neagle (1890); conlaw.md §7.1",
+            status: "general", src: "McCulloch v. Maryland (1819); Dawson v. Steager, 586 U.S. 171 (2019); United States v. Washington, 596 U.S. 832 (2022); United States v. New Mexico, 455 U.S. 720 (1982); Graves v. New York ex rel. O'Keefe (1939); North Dakota v. United States (1990); In re Neagle (1890); conlaw.md §7.1",
           },
           {
             id: "u4-h-discrimination", kind: "hypo", cat: "III.A.1", callType: "constitutional", rule: "u4-r-fed-immunity", issue: "discrimination against federal contractors", grid: true,
@@ -1914,17 +1938,18 @@
           },
           {
             id: "u4-h-condon", kind: "hypo", cat: "III.A.2", callType: "constitutional", rule: "u4-r-anticommandeering", issue: "generally applicable federal regulation", transfer: true,
-            stem: "Congress enacts a statute that forbids both state motor-vehicle agencies and private resellers from disclosing, without drivers' consent, personal information contained in motor-vehicle records and from selling that information. The State agency collects the information when it issues licenses and charges a fee for each license. A State argues that the statute violates the Tenth Amendment because it regulates the State's motor-vehicle agency. The State agrees that the sale of this information is economic activity in interstate commerce.",
+            stem: "Congress enacts a statute that forbids every operator of a toll road, whether a State agency or a private company, to sell drivers' toll-transaction records without the drivers' consent. A State agency that operates toll roads collects these records when drivers use its roads and has sold them to marketing firms. The State argues that the statute violates the Tenth Amendment because it regulates the State's own agency. The State agrees that the sale of this information is economic activity in interstate commerce.",
             call: "Is the statute constitutional as applied to the State?",
             options: [
-              { text: "Yes, because the statute applies to States and private parties alike and does not require the State to enact or enforce any federal program.", why: "Reno v. Condon: a generally applicable law that applies to States and private parties alike is not commandeering." },
+              { text: "Yes, because the statute applies to States and private operators alike and does not require the State to enact or enforce any federal program.", why: "Reno v. Condon: a generally applicable law that binds States and private parties alike is not commandeering." },
               { text: "Yes, because the Tenth Amendment places no limit on Congress's power to regulate interstate commerce, even when the regulation is aimed at a State.", why: "The Tenth Amendment limits the commerce power by forbidding commandeering; it simply is not violated here.", trap: 5 },
               { text: "No, because Congress may not regulate the activities of state agencies, which are protected from federal regulation by the Tenth Amendment.", why: "Congress may apply generally applicable laws to States; 'may not' is too broad.", trap: 7 },
-              { text: "No, because the statute forbids the State to sell information that it lawfully holds, and so dictates how the State uses its own records.", why: "The anticommandeering rule bars orders to enact or administer federal policy; a rule that applies to everyone alike does not.", trap: 2 },
+              { text: "No, because the statute forbids the State to sell records that it lawfully holds, and so dictates how the State uses its own property.", why: "The anticommandeering rule bars orders to enact or administer federal policy; a rule that applies to everyone alike does not.", trap: 2 },
             ],
             answer: 0,
+            facts: ["whether a State agency or a private company"],
             say: "A federal law that binds States and private parties alike is not commandeering.",
-            status: "general", src: "Reno v. Condon, 528 U.S. 141 (2000); Garcia v. SAMTA (1985); conlaw.md §7.3 FED-3 (rewritten)",
+            status: "general", src: "Reno v. Condon, 528 U.S. 141 (2000); Garcia v. SAMTA (1985); conlaw.md §7.3 FED-3 (rewritten with new facts)",
           },
           {
             id: "u4-p-federalism-cases", kind: "pairs", set: "Federalism cases and what they hold", mode: "case-holding",
@@ -1971,31 +1996,32 @@
           },
           {
             id: "u4-h-wyeth", kind: "hypo", cat: "III.B.2", callType: "constitutional", rule: "u4-r-preemption", issue: "preemption of brand-name drug claims", grid: true,
-            stem: "A federal regulation permits the manufacturer of an FDA-approved brand-name drug to strengthen its label's warning, without waiting for prior FDA approval, when it learns of a new risk. The patient had used the drug for eight years and had been warned of other side effects by her physician. A patient injured by the drug sued the manufacturer in state court under a state tort law of negligent failure to warn, claiming that the label should have warned of the risk. The manufacturer argues that federal law preempts the claim because the FDA approved the label. Congress has not enacted a provision that expressly preempts such claims.",
+            stem: "A federal regulation permits the manufacturer of an FDA-approved brand-name drug to strengthen its label's warning, without waiting for prior FDA approval, when it learns of a new risk. A patient injured by the drug sued the manufacturer in state court under a state tort law of negligent failure to warn, claiming that the label should have warned of the risk. The patient had used the drug for eight years and had been warned of other side effects by her physician. The manufacturer argues that federal law preempts the claim because the FDA approved the label. Congress has not enacted a provision that expressly preempts such claims.",
             call: "Is the patient's claim preempted?",
             options: [
               { text: "No, because the manufacturer could have strengthened the warning under federal law, and a presumption applies against preempting state tort remedies.", why: "Wyeth v. Levine: compliance with both was possible, and nothing shows that the claim obstructs federal purposes." },
-              { text: "No, because FDA approval of a drug's label can never be considered by a court in a state tort claim about that label.", why: "FDA approval is relevant evidence, but 'no effect' overstates the case; the claim survives for other reasons.", trap: 7 },
+              { text: "No, because FDA approval of a drug's label can never be considered by a court in a state tort claim about that label.", why: "FDA approval can matter (for example, clear evidence that the FDA would have rejected the warning, Merck v. Albrecht); 'never' overstates it. The claim survives because the maker could strengthen the label.", trap: 7 },
               { text: "Yes, because FDA approval of the label establishes the exclusive federal standard for warnings on that drug, so a state jury may not second-guess it.", why: "The regulation lets the manufacturer strengthen the label, so approval does not set an exclusive standard.", trap: 5 },
               { text: "Yes, because the regulation of drug labeling is a field that federal law occupies so pervasively that it leaves no room for state tort law.", why: "There is a presumption against field preemption in the traditional state domain of health and safety.", trap: 5 },
             ],
             answer: 0,
             say: "Brand-name makers can strengthen their own warnings, so state failure-to-warn claims survive: Wyeth.",
-            status: "general", src: "Wyeth v. Levine, 555 U.S. 555 (2009); conlaw.md §7.3 FED-10 (rewritten)",
+            status: "general", src: "Wyeth v. Levine, 555 U.S. 555 (2009); Merck Sharp & Dohme Corp. v. Albrecht, 587 U.S. 299 (2019); conlaw.md §7.3 FED-10 (rewritten)",
           },
           {
-            id: "u4-h-mensing", kind: "hypo", cat: "III.B.2", callType: "constitutional", rule: "u4-r-preemption", issue: "preemption of generic drug claims", transfer: true,
-            stem: "Federal law requires the manufacturer of a generic drug to use a label that is identical to the label of the brand-name drug it copies, and it forbids the generic manufacturer from changing the label unilaterally. A patient injured by a generic drug sued its manufacturer in state court under a state tort law of failure to warn, claiming that the generic's label should have contained a stronger warning than the brand-name label does. The manufacturer argues that federal law preempts the claim.",
-            call: "Is the patient's claim preempted?",
+            id: "u4-h-mensing", kind: "hypo", cat: "III.B.2", callType: "constitutional", rule: "u4-r-preemption", issue: "impossibility preemption, copied label", transfer: true,
+            stem: "A federal statute requires every maker of a 'follow-on' version of an approved farm chemical to use a label identical to the approved label of the original product, and forbids the follow-on maker to change its label without the agency's prior approval. The statute has no express preemption clause. A farmworker injured by a follow-on product sued its maker in state court under a state tort law of failure to warn, claiming that the label should have carried a stronger warning than the original product's label does. The maker argues that federal law preempts the claim.",
+            call: "Is the farmworker's claim preempted?",
             options: [
-              { text: "Yes, because the manufacturer could not comply with both the federal duty of sameness and a state-law duty to provide a stronger warning.", why: "PLIVA v. Mensing: a state duty that the manufacturer cannot satisfy without violating federal law is preempted." },
-              { text: "Yes, because federal regulation of drugs preempts every state tort claim against a drug manufacturer, whether the drug is generic or brand-name.", why: "Brand-name failure-to-warn claims survive (Wyeth); 'all' overstates the rule.", trap: 7 },
-              { text: "No, because the Court held, in a case involving a brand-name drug, that state failure-to-warn claims are not preempted by the FDA's approval of the label.", why: "A holding about brand-name drugs rests on the power to change the label, which a generic maker lacks.", trap: 10 },
-              { text: "No, because the generic manufacturer could have asked the FDA to strengthen the label, and so could have complied with both federal and state duties.", why: "The Court rejected this: the manufacturer must be able to act independently of the FDA and the brand manufacturer.", trap: 5 },
+              { text: "Yes, because the maker could not comply with both the federal duty to keep its label identical and a state-law duty to give a stronger warning.", why: "Impossibility: a state duty that the maker cannot meet without violating federal law is preempted (PLIVA v. Mensing)." },
+              { text: "Yes, because federal regulation of a product preempts every state tort claim against its maker, whether or not the maker could change its own label.", why: "When the maker can strengthen its own label, failure-to-warn claims survive (Wyeth); 'every' overstates the rule.", trap: 7 },
+              { text: "No, because state failure-to-warn claims survive when a federal agency has approved a product's label, as they do against makers of brand-name drugs.", why: "The brand-name rule rests on the maker's power to change its own label, which this maker lacks.", trap: 10 },
+              { text: "No, because the maker could have asked the agency to approve a stronger label, and so could have complied with both federal and state duties.", why: "Mensing rejected this: the question is whether the maker could independently do what state law requires.", trap: 5 },
             ],
             answer: 0,
-            say: "Generic labels must match the brand's, so a stronger-warning duty is impossible to obey: preempted (Mensing).",
-            status: "general", src: "PLIVA, Inc. v. Mensing, 564 U.S. 604 (2011); Mutual Pharmaceutical Co. v. Bartlett (2013); conlaw.md §7.2",
+            facts: ["forbids the follow-on maker to change its label"],
+            say: "A maker that must copy another product's label cannot obey a state duty to warn more: impossibility preemption (Mensing).",
+            status: "general", src: "PLIVA, Inc. v. Mensing, 564 U.S. 604 (2011); Mutual Pharmaceutical Co. v. Bartlett (2013); Wyeth v. Levine (2009); conlaw.md §7.2",
           },
           {
             id: "u4-h-arizona", kind: "hypo", cat: "III.B.2", callType: "constitutional", rule: "u4-r-preemption", issue: "obstacle preemption of state crimes", grid: true,
@@ -2066,7 +2092,7 @@
           },
           {
             id: "u4-h-waste", kind: "hypo", cat: "III.B.1", callType: "constitutional", rule: "u4-r-dcc-discrimination", issue: "discrimination against out-of-state waste", grid: true,
-            stem: "A State, citing concern for the limited capacity of its landfills, enacts a statute prohibiting the importation of solid waste from other States for disposal in the State's landfills. The statute does not restrict waste generated within the State, and Congress has not legislated on the subject. The operator is a private company that has run the landfill for twelve years under a State permit, and the State's population has grown by ten percent during that time. The operator of a landfill that had accepted out-of-state waste sues to invalidate the statute.",
+            stem: "A State, citing concern for the limited capacity of its landfills, enacts a statute prohibiting the importation of solid waste from other States for disposal in the State's landfills. The statute does not restrict waste generated within the State, and Congress has not legislated on the subject. The operator of a landfill that had accepted out-of-state waste sues to invalidate the statute. The plaintiff operator is a private company that has run the landfill for twelve years under a State permit, and the State's population has grown by ten percent during that time.",
             call: "Is the statute constitutional?",
             options: [
               { text: "No, because the statute discriminates against interstate commerce, and the State has not shown that no nondiscriminatory alternative could serve its purpose.", why: "Philadelphia v. New Jersey: facially discriminatory laws are virtually per se invalid, and the State could limit all waste alike." },
@@ -2092,6 +2118,21 @@
             answer: 2,
             say: "A State may regulate alcohol but may not favor its own producers: the Twenty-first Amendment does not repeal the dormant Commerce Clause.",
             status: "general", src: "Granholm v. Heald, 544 U.S. 460 (2005); Tennessee Wine & Spirits Retailers Ass'n v. Thomas (2019)",
+          },
+          {
+            id: "u4-h-tennessee-wine", kind: "hypo", cat: "III.B.1", callType: "constitutional", rule: "u4-r-dcc-discrimination", issue: "durational residency for liquor licenses", transfer: true,
+            stem: "A State grants a license to operate a retail liquor store only to an applicant who has lived in the State for the previous five years; a corporate applicant qualifies only if all of its owners meet that requirement. A couple who moved to the State last year formed a corporation to buy an existing liquor store, and the corporation was denied a license. The State offers no evidence that the requirement protects public health or safety, and its legislative record speaks of protecting established local retailers. The corporation sues, claiming that the requirement violates the Commerce Clause.",
+            call: "Is the residency requirement constitutional?",
+            options: [
+              { text: "No, because it discriminates against newcomers from other States, and without a public-health or safety justification the Twenty-first Amendment does not save it.", why: "Tennessee Wine & Spirits Retailers Ass'n v. Thomas: a protectionist durational-residency rule for liquor retailers violates the Commerce Clause." },
+              { text: "Yes, because the Twenty-first Amendment gives each State virtually complete control over the retail sale of alcohol within its borders.", why: "States may regulate alcohol, but not discriminate for protectionist ends without a public-health or safety justification.", trap: 5 },
+              { text: "Yes, because the dormant Commerce Clause protects out-of-state producers of goods, not persons who wish to open stores within the State.", why: "The Court applies the Clause to discrimination against out-of-state retailers and would-be retailers too.", trap: 5 },
+              { text: "No, because the Commerce Clause forbids a State to regulate the retail sale of alcohol in any way that affects interstate commerce.", why: "States may regulate alcohol sales; what they may not do is discriminate for protectionist reasons.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["speaks of protecting established local retailers"],
+            say: "A residency test for liquor retailers is protectionism; without health or safety evidence, the Twenty-first Amendment does not save it.",
+            status: "general", src: "Tennessee Wine & Spirits Retailers Ass'n v. Thomas, 588 U.S. 504 (2019); Granholm v. Heald (2005)",
           },
           {
             id: "u4-r-pike", kind: "rule", title: "Pike balancing: neutral laws", cat: "III.B.1",
@@ -2130,22 +2171,22 @@
           {
             id: "u4-r-dcc-exceptions", kind: "rule", title: "Escape routes: market participant and congressional approval", cat: "III.B.3",
             say: "A State that buys or sells may favor its own citizens, and Congress may authorize otherwise-invalid state laws if its intent is unmistakably clear.",
-            elements: ["Market participant: a State buying or selling in the market may favor its own citizens (Reeves)", "The preference may not reach downstream beyond the State's own market participation (South-Central Timber)", "Congressional authorization: Congress may authorize state laws that would otherwise burden commerce, if its intent is unmistakably clear"],
+            elements: ["Market participant: a State buying or selling in the market may favor its own citizens (Reeves)", "The preference may not reach downstream beyond the State's own market participation (South-Central Timber, plurality on this point)", "Congressional authorization: Congress may authorize state laws that would otherwise burden commerce, if its intent is unmistakably clear"],
             ordered: false,
             distractorElements: ["A State acting as regulator may favor its own citizens if the purpose is health", "Congressional silence authorizes state discrimination"],
-            exceptions: ["Congress cannot authorize a State to violate individual-rights provisions such as Equal Protection", "The authorization must be unmistakably clear: Congress's silence, or its deference to state law in a field, is not enough (South-Central Timber; Sporhase), but express text can do it (Western & Southern)", "The market-participant exception is a dormant Commerce Clause doctrine only (South-Central Timber)", "The Article IV Privileges and Immunities Clause is not displaced by the market-participant exception (Camden)"],
+            exceptions: ["Congress cannot authorize a State to violate individual-rights provisions: an authorized discriminatory insurance tax still failed Equal Protection (Metropolitan Life v. Ward, 1985)", "The authorization must be unmistakably clear: Congress's silence, or its deference to state law in a field, is not enough (South-Central Timber; Sporhase), but express text can do it (Prudential v. Benjamin)", "The market-participant exception is a dormant Commerce Clause doctrine only: it does not displace the Article IV Privileges and Immunities Clause (United Building & Construction Trades Council v. Camden, 1984)"],
             cite: "Reeves v. Stake", citeAsk: "Which case upheld a State's preference for its own residents in selling cement?",
             hook: "A State in business may pick its customers; a State in government may not.",
             ex: [
               { facts: "A State runs a cement plant and sells only to State residents during a shortage.", result: "Valid: market participant (Reeves)." },
-              { facts: "A State sells its timber but requires buyers to process it in-State before shipping out.", result: "Invalid: the condition reaches the downstream market (South-Central Timber)." },
+              { facts: "A State sells its timber but requires buyers to process it in-State before shipping out.", result: "Invalid: the condition reaches the downstream market (South-Central Timber, plurality on this point)." },
             ],
             terms: ["market participant", "congressional authorization", "downstream"],
             quiz: [
               { t: "tf", q: "A State that sells cement from a state-owned plant may limit its sales to State residents without violating the Dormant Commerce Clause.", a: true, why: "Reeves v. Stake: a State acting as a market participant may prefer its own citizens." },
-              { t: "mcq", q: "A State sells state-owned timber but requires buyers to process it in the State. The condition is…", options: ["Not protected: it reaches downstream beyond the market the State participates in", "Protected: the State owns the timber", "Protected: processing is a local matter"], a: "Not protected: it reaches downstream beyond the market the State participates in", why: "South-Central Timber v. Wunnicke." },
+              { t: "mcq", q: "A State sells state-owned timber but requires buyers to process it in the State. The condition is…", options: ["Not protected: it reaches downstream beyond the market the State participates in", "Protected: the State owns the timber", "Protected: processing is a local matter"], a: "Not protected: it reaches downstream beyond the market the State participates in", why: "South-Central Timber v. Wunnicke (plurality on this point)." },
             ],
-            status: "general", src: "Reeves, Inc. v. Stake (1980); White v. Massachusetts Council of Construction Employers (1983); South-Central Timber Development v. Wunnicke (1984); Camden v. United Building & Construction Trades Council (1984); Western & Southern Life Insurance Co. v. State Board of Equalization (1981); Sporhase v. Nebraska (1982); conlaw.md §7.2",
+            status: "general", src: "Reeves, Inc. v. Stake (1980); White v. Massachusetts Council of Construction Employers (1983); South-Central Timber Development v. Wunnicke, 467 U.S. 82 (1984) (Part IV, downstream, plurality opinion); United Building & Construction Trades Council v. Mayor and Council of Camden, 465 U.S. 208 (1984); Prudential Insurance Co. v. Benjamin (1946); Metropolitan Life Insurance Co. v. Ward (1985); Western & Southern Life Insurance Co. v. State Board of Equalization (1981); Sporhase v. Nebraska (1982); conlaw.md §7.2",
           },
           {
             id: "u4-h-market-participant", kind: "hypo", cat: "III.B.3", callType: "constitutional", rule: "u4-r-dcc-exceptions", issue: "market participant exception", grid: true,
@@ -2163,31 +2204,32 @@
           },
           {
             id: "u4-h-timber", kind: "hypo", cat: "III.B.3", callType: "constitutional", rule: "u4-r-dcc-exceptions", issue: "downstream reach of the exception", transfer: true,
-            stem: "A State owns timber on State land and sells it to bidders. The State requires every buyer to process the timber into finished lumber or pulp within the State before shipping it out of State. An out-of-state mill that had bought State timber to process in a neighboring State sues, claiming that the processing condition violates the Commerce Clause. Congress has not authorized the condition.",
+            stem: "A State raises salmon in State-owned hatcheries and sells the fish to commercial buyers. Every contract of sale requires the buyer to can or smoke the fish at a plant within the State before shipping it out of the State. A cannery in a neighboring State that had bought State fish to process at its own plant sues, claiming that the processing condition violates the Commerce Clause. Congress has not authorized the condition.",
             call: "Is the processing condition constitutional?",
             options: [
-              { text: "No, because the market-participant exception does not reach conditions that extend beyond the State's sale of timber into the downstream processing market.", why: "South-Central Timber v. Wunnicke: the State is a participant in the timber market, not the processing market." },
+              { text: "No, because the market-participant exception does not reach conditions that extend beyond the State's sale of fish into the downstream processing market.", why: "South-Central Timber v. Wunnicke (plurality on this point): the State participates in the market for the fish it sells, not in the processing market." },
               { text: "No, because a State that sells its own goods may never favor its own residents, whatever the market in which it participates.", why: "Under Reeves a State may favor its residents in the market it participates in; 'never' is wrong.", trap: 7 },
               { text: "Yes, because a State that owns property may set whatever conditions it chooses on the sale of that property, including conditions on later processing.", why: "The rule is incomplete: conditions that reach downstream beyond the State's own market are not protected.", trap: 9 },
-              { text: "Yes, because processing the timber within the State promotes local employment, which is a legitimate state interest that Congress has not forbidden.", why: "A legitimate interest does not save a discriminatory condition outside the exception.", trap: 10 },
+              { text: "Yes, because processing the fish within the State promotes local employment, which is a legitimate state interest that Congress has not forbidden.", why: "A legitimate interest does not save a discriminatory condition outside the exception.", trap: 10 },
             ],
             answer: 0,
+            facts: ["can or smoke the fish at a plant within the State"],
             say: "The market-participant exception covers the State's own market, not conditions that reach downstream.",
-            status: "general", src: "South-Central Timber Development, Inc. v. Wunnicke, 467 U.S. 82 (1984)",
+            status: "general", src: "South-Central Timber Development, Inc. v. Wunnicke, 467 U.S. 82 (1984) (Part IV, plurality opinion); Reeves, Inc. v. Stake (1980)",
           },
           {
             id: "u4-h-authorization", kind: "hypo", cat: "III.B.3", callType: "constitutional", rule: "u4-r-dcc-exceptions", issue: "congressional authorization of a state tax", grid: true,
             stem: "Congress enacts a statute providing that a State may impose on insurers organized in other States a premium tax at a higher rate than the rate imposed on insurers organized in the State, and expressly declaring that no state law imposing such a tax shall be invalid under the Commerce Clause. A State imposes such a higher tax on out-of-state insurers. An out-of-state insurer that has agents in the State and sells policies there challenges the tax under the dormant Commerce Clause, arguing that the tax discriminates against interstate commerce.",
             call: "Is the State's tax constitutional under the Commerce Clause?",
             options: [
-              { text: "Yes, because Congress has expressly authorized the State to impose a tax that would otherwise discriminate against interstate commerce.", why: "Congress may authorize otherwise-invalid state action under the Commerce Clause when its intent is unmistakably clear (Western & Southern)." },
+              { text: "Yes, because Congress has expressly authorized the State to impose a tax that would otherwise discriminate against interstate commerce.", why: "Congress may lift the Commerce Clause limit when its intent is unmistakably clear (Prudential v. Benjamin). That answers only the Commerce Clause: such a tax can still fail Equal Protection (Metropolitan Life v. Ward)." },
               { text: "Yes, because a State may always tax out-of-state businesses at a higher rate when they sell their products within the State.", why: "Without congressional authorization, a discriminatory tax is virtually per se invalid; 'always' overstates the rule.", trap: 7 },
               { text: "No, because discrimination against interstate commerce is virtually per se invalid, and a State may not discriminate even if Congress approves.", why: "The dormant Commerce Clause restrains States only while Congress is silent; Congress may authorize what the Clause would otherwise forbid.", trap: 5 },
               { text: "No, because Congress may not delegate its power over interstate commerce to the States.", why: "Congress may authorize state laws that burden commerce when its intent is unmistakably clear; that is not an unconstitutional delegation.", trap: 10 },
             ],
             answer: 0,
             say: "Congress can approve what the dormant Commerce Clause would forbid, if the authorization is unmistakably clear.",
-            status: "general", src: "Western & Southern Life Insurance Co. v. State Board of Equalization, 451 U.S. 648 (1981); South-Central Timber v. Wunnicke (1984)",
+            status: "general", src: "Prudential Insurance Co. v. Benjamin, 328 U.S. 408 (1946); Metropolitan Life Insurance Co. v. Ward, 470 U.S. 869 (1985); Western & Southern Life Insurance Co. v. State Board of Equalization, 451 U.S. 648 (1981); South-Central Timber v. Wunnicke (1984)",
           },
           {
             id: "u4-c-ross", kind: "case", subject: "conlaw", name: "National Pork Producers Council v. Ross", year: 2023, cat: "III.B.1",
@@ -2208,7 +2250,7 @@
             elements: ["The plaintiff is a natural person who is a citizen of another State, not a corporation or alien", "The State discriminates against nonresidents on a fundamental right or important economic interest, such as livelihood", "The State has no substantial reason, or the discrimination is not substantially related to its objective"],
             ordered: true,
             distractorElements: ["The nonresident is a corporation doing business in the State", "The classification is based on a suspect class"],
-            exceptions: ["Not fundamental: recreational elk hunting (Baldwin v. Fish and Game Commission)", "The Fourteenth Amendment Privileges or Immunities Clause protects only the rights of national citizenship; Saenz applies it to a new resident's right to the same benefits as longer-term residents", "A nonresident corporation challenges discrimination under the Dormant Commerce Clause instead"],
+            exceptions: ["Not fundamental: recreational elk hunting (Baldwin v. Fish and Game Commission)", "A city's residency preference is covered too, and being a market participant is no defense under Article IV (United Building & Construction Trades Council v. Camden)", "The Fourteenth Amendment Privileges or Immunities Clause protects only the rights of national citizenship; Saenz applies it to a new resident's right to the same benefits as longer-term residents", "A nonresident corporation challenges discrimination under the Dormant Commerce Clause instead"],
             cite: "Supreme Court of New Hampshire v. Piper", citeAsk: "Which case struck down a state-residency requirement for bar admission?",
             hook: "Piper: a Vermont resident who lived near the line was refused admission to the New Hampshire bar.",
             ex: [
@@ -2221,7 +2263,7 @@
               { t: "mcq", q: "A State limits bar admission to its residents. The best challenge is under…", options: ["Article IV Privileges and Immunities (Piper)", "Equal Protection, because residence is a suspect class", "The commerce power"], a: "Article IV Privileges and Immunities (Piper)", why: "Residence is not a suspect classification; Piper rests on the clause." },
               { t: "bucket", q: "Protected by the Article IV clause?", buckets: ["Protected", "Not protected"], items: [{ text: "A nonresident lawyer who seeks to practice in the State", bucket: "Protected" }, { text: "A nonresident commercial shrimper charged a far higher license fee", bucket: "Protected" }, { text: "A nonresident corporation challenging discriminatory taxes", bucket: "Not protected" }, { text: "A nonresident hunter who pays more for a recreational elk license", bucket: "Not protected" }] },
             ],
-            status: "general", src: "U.S. Const. art. IV, §2 (read on LII); Supreme Court of New Hampshire v. Piper (1985); Toomer v. Witsell (1948); Baldwin v. Fish & Game Commission (1978); Saenz v. Roe (1999); conlaw.md §7.2",
+            status: "general", src: "U.S. Const. art. IV, §2 (read on LII); Supreme Court of New Hampshire v. Piper (1985); Toomer v. Witsell (1948); Baldwin v. Fish & Game Commission (1978); United Building & Construction Trades Council v. Camden (1984); Saenz v. Roe (1999); conlaw.md §7.2",
           },
           {
             id: "u4-h-piper", kind: "hypo", cat: "IV.E", exam: ["mbe"], callType: "constitutional", rule: "u4-r-art4-pi", issue: "nonresident livelihood discrimination", grid: true,
@@ -2239,7 +2281,7 @@
           },
           {
             id: "u4-h-art4-corp", kind: "hypo", cat: "IV.E", exam: ["mbe"], callType: "motion", rule: "u4-r-art4-pi", issue: "corporations and Article IV", transfer: true,
-            stem: "A State imposes a license fee on out-of-state corporations that do business in the State, ten times the fee charged to corporations incorporated in the State. The corporation has operated in the State for twenty years, employs about 300 residents, and paid the fee without complaint until this year. A corporation incorporated and headquartered in another State sues in federal court, claiming only that the fee violates the Privileges and Immunities Clause of Article IV. The State moves to dismiss the claim.",
+            stem: "A State imposes a license fee on out-of-state corporations that do business in the State, ten times the fee charged to corporations incorporated in the State. A corporation incorporated and headquartered in another State sues in federal court, claiming only that the fee violates the Privileges and Immunities Clause of Article IV. The corporation has operated in the State for twenty years, employs about 300 residents, and paid the fee without complaint until this year. The State moves to dismiss the claim.",
             call: "Should the court grant the motion to dismiss the Privileges and Immunities claim?",
             options: [
               { text: "Yes, because the clause protects only natural persons who are citizens of other States, not corporations.", why: "A corporation is not a citizen for purposes of the clause; it would challenge the fee under the Dormant Commerce Clause instead." },
@@ -2250,6 +2292,21 @@
             answer: 0,
             say: "Article IV's clause protects people, not corporations: a nonresident company challenges the fee under the Dormant Commerce Clause instead.",
             status: "general", src: "Paul v. Virginia (1869); Supreme Court of New Hampshire v. Piper (1985); U.S. Const. art. IV, §2 (read on LII)",
+          },
+          {
+            id: "u4-h-camden", kind: "hypo", cat: "IV.E", exam: ["mbe"], callType: "motion", rule: "u4-r-art4-pi", issue: "municipal residency hiring preference", transfer: true,
+            stem: "A city ordinance requires every contractor on a city-funded construction project to fill at least half of its jobs with city residents. An electrician who is a citizen of a neighboring State, and who lost a job on a city project because of the ordinance, sues the city in federal court under the Privileges and Immunities Clause of Article IV. The city moves to dismiss, arguing that the clause does not apply because the ordinance also disadvantages State residents who live outside the city, and because the city is spending its own money as a market participant.",
+            call: "Should the court grant the motion to dismiss?",
+            options: [
+              { text: "No, because the clause reaches a city's residency preference even though it also burdens some State residents, and market participation is no defense under it.", why: "United Building & Construction Trades Council v. Camden: the claim proceeds, and the city must show a substantial reason closely related to the preference." },
+              { text: "Yes, because a city spending its own funds is a market participant and may prefer its own residents.", why: "The market-participant exception belongs to the dormant Commerce Clause; it does not apply to Article IV.", trap: 4 },
+              { text: "Yes, because the ordinance disadvantages State residents who live outside the city as much as it disadvantages citizens of other States.", why: "Camden rejected this: out-of-state citizens have no voice in the State's or the city's politics, so the clause still applies.", trap: 5 },
+              { text: "No, because a residency preference for public-works jobs is always invalid under the clause, whatever the city's reasons.", why: "The city may still justify the preference with a substantial reason closely related to it; 'always' overstates.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["also disadvantages State residents who live outside the city"],
+            say: "Article IV reaches a city's residency preference, and the market-participant defense does not apply to it; the city must show a substantial reason.",
+            status: "general", src: "United Building & Construction Trades Council v. Mayor and Council of Camden, 465 U.S. 208 (1984); Supreme Court of New Hampshire v. Piper (1985)",
           },
           {
             id: "u4-so-which-clause", kind: "sort", cat: "III.B.1", mode: "category", q: "Which clause does the work?",
@@ -2287,6 +2344,21 @@
             status: "general", src: "Complete Auto Transit, Inc. v. Brady, 430 U.S. 274 (1977); South Dakota v. Wayfair, Inc., 585 U.S. 162 (2018); conlaw.md §7.2",
           },
           {
+            id: "u4-h-complete-auto", kind: "hypo", cat: "III.B.1", exam: ["mbe"], callType: "constitutional", rule: "u4-r-complete-auto", issue: "fair apportionment of a state tax", grid: true,
+            stem: "A State imposes an annual tax on every manufacturer that has a plant in the State, measured by the manufacturer's gross receipts from all of its sales everywhere in the country, including sales of goods made at plants in other States and delivered to buyers in other States. The rate is the same for manufacturers based in the State and those based elsewhere. A manufacturer based in another State, which has one plant in the State and five plants elsewhere, challenges the tax under the Commerce Clause.",
+            call: "Is the tax constitutional as applied to the manufacturer?",
+            options: [
+              { text: "No, because the tax is not fairly apportioned: it reaches receipts from activity carried on wholly in other States.", why: "Complete Auto requires fair apportionment; taxing every dollar of receipts from out-of-state plants and sales taxes activity the State has no claim to." },
+              { text: "No, because a State may not tax a company for the privilege of doing business in interstate commerce.", why: "That was the rule of Spector Motor Service, which Complete Auto overruled; such a tax is valid if it meets the four-part test.", trap: 11 },
+              { text: "Yes, because the manufacturer has a plant in the State, which gives the State a substantial nexus with the manufacturer.", why: "Nexus is only one of four requirements; the tax must also be fairly apportioned.", trap: 2 },
+              { text: "Yes, because the same rate applies to in-state and out-of-state manufacturers, so the tax does not discriminate against interstate commerce.", why: "Nondiscrimination is required but not enough: the tax must also be fairly apportioned.", trap: 9 },
+            ],
+            answer: 0,
+            facts: ["including sales of goods made at plants in other States"],
+            say: "A state tax must pass all four Complete Auto tests; one that reaches out-of-state activity fails fair apportionment.",
+            status: "general", src: "Complete Auto Transit, Inc. v. Brady, 430 U.S. 274 (1977); Oklahoma Tax Comm'n v. Jefferson Lines, 514 U.S. 175 (1995); J.D. Adams Mfg. Co. v. Storen, 304 U.S. 307 (1938)",
+          },
+          {
             id: "u4-c-wayfair", kind: "case", subject: "conlaw", name: "South Dakota v. Wayfair", year: 2018, cat: "III.B.1", exam: ["mbe"],
             holding: "A State may require remote sellers with a substantial economic presence to collect sales tax; physical presence is not required for substantial nexus.",
             facts: "South Dakota required large out-of-state online sellers to collect its sales tax.",
@@ -2306,6 +2378,119 @@
             spare: ["Morrison v. Olson (1988)"],
             say: "Old tests make good distractors: Union Gas, National League of Cities, Hammer, Quill and Spector are all gone. Humphrey's is on the Slaughter card.",
             status: "general", src: "Seminole Tribe v. Florida (1996); Garcia v. SAMTA (1985); United States v. Darby (1941); South Dakota v. Wayfair (2018); Complete Auto Transit v. Brady (1977)",
+          },
+        ],
+      },
+      {
+        id: "u4l18",
+        title: "Going further: recent cases and rare points",
+        items: [
+          {
+            id: "u4-c-bost", kind: "case", subject: "conlaw", name: "Bost v. Illinois State Board of Elections", year: 2026, recent: true, cat: "I.C.1",
+            holding: "A candidate has standing to challenge the rules for counting votes in his own election; he need not show a substantial risk of losing.",
+            facts: "A congressman challenged an Illinois rule that counts mail ballots received after election day.",
+            say: "Candidates have their own stake in a lawful count (opinion for five Justices; two concurred only in the judgment).",
+            status: "book", src: "Bost v. Illinois State Bd. of Elections, No. 24-568 (Jan. 14, 2026), opinion read on LII; Roberts, C.J., for five Justices, with Barrett and Kagan concurring in the judgment only",
+          },
+          {
+            id: "u4-c-fda-alliance", kind: "case", subject: "conlaw", name: "FDA v. Alliance for Hippocratic Medicine", year: 2024, recent: true, cat: "I.C.1",
+            holding: "Doctors and medical groups lacked standing to challenge the FDA's regulation of a drug they do not prescribe; an organization cannot spend its way into standing by opposing a policy.",
+            facts: "Doctors and medical associations challenged the FDA's relaxed rules for prescribing and dispensing a drug used in abortions.",
+            say: "No stake, no suit: speculative chains through third parties, or money spent opposing a policy, do not create standing.",
+            status: "general", src: "FDA v. Alliance for Hippocratic Medicine, 602 U.S. 367 (2024)",
+          },
+          {
+            id: "u4-c-murthy", kind: "case", subject: "conlaw", name: "Murthy v. Missouri", year: 2024, recent: true, cat: "I.C.1",
+            holding: "Plaintiffs lacked standing to enjoin federal officials' contacts with social-media platforms: they showed no substantial risk of future injury traceable to the government rather than to the platforms' own choices.",
+            facts: "Users and States alleged that officials pressured platforms to remove disfavored posts.",
+            say: "Traceability: when a third party's independent choice causes the harm, the plaintiff must tie it to the defendant.",
+            status: "general", src: "Murthy v. Missouri, 603 U.S. 43 (2024)",
+          },
+          {
+            id: "u4-c-jarkesy", kind: "case", subject: "conlaw", name: "SEC v. Jarkesy", year: 2024, recent: true, cat: "I.B.1",
+            holding: "When the SEC seeks civil penalties for securities fraud, the Seventh Amendment entitles the defendant to a jury trial in an Article III court; the public-rights exception does not apply.",
+            facts: "An investment adviser was fined by the SEC in an in-house proceeding.",
+            say: "Fraud penalties look like common-law claims, so they need a jury and a federal court; 'public rights' is a narrow door.",
+            status: "general", src: "SEC v. Jarkesy, 603 U.S. 109 (2024); conlaw.md §5.1",
+          },
+          {
+            id: "u4-c-casa", kind: "case", subject: "conlaw", name: "Trump v. CASA, Inc.", year: 2025, recent: true, cat: "I.B.1",
+            holding: "Universal injunctions likely exceed the equitable authority Congress gave federal courts in the Judiciary Act of 1789; relief is limited to what is needed to give the plaintiffs complete relief.",
+            facts: "Challengers to an executive order on birthright citizenship won injunctions that blocked it nationwide.",
+            say: "Federal courts' equitable power comes from the Judiciary Act of 1789: complete relief for the parties, not a universal injunction.",
+            status: "general", src: "Trump v. CASA, Inc., No. 24A884 (June 27, 2025) (statutory equity under the Judiciary Act of 1789; the Article III question was not decided); conlaw.md §1",
+          },
+          {
+            id: "u4-c-galette", kind: "case", subject: "conlaw", name: "Galette v. New Jersey Transit Corp.", year: 2026, recent: true, cat: "I.B.2",
+            holding: "NJ Transit is not an arm of New Jersey, so it cannot claim the State's immunity from suit in other States' courts; the inquiry looks at its legal separateness and who answers for its judgments.",
+            facts: "Travelers injured in other States sued the state-created transit agency in those States' courts.",
+            say: "Arm of the State? Ask whether the entity is legally separate and answers for its own judgments (a 2026 decision about other States' courts).",
+            status: "general", src: "Galette v. New Jersey Transit Corp., No. 24-1021 (Mar. 4, 2026), unanimous (Sotomayor), per secondary reports re-checked 2026-11-02, opinion not re-read; conlaw.md §1",
+          },
+          {
+            id: "u4-c-consumers-research", kind: "case", subject: "conlaw", name: "FCC v. Consumers' Research", year: 2025, recent: true, cat: "II.C.3",
+            holding: "A delegation to the FCC to set universal-service contributions satisfies the intelligible-principle test; the Court rejected a special numeric-limit rule for delegations that raise money.",
+            facts: "Challengers attacked a fund financed by fees that the FCC set with help from a private administrator.",
+            say: "The ordinary test applies even when an agency raises money: general policy plus boundaries, with no numeric cap required.",
+            status: "book", src: "FCC v. Consumers' Research, No. 24-354 (June 27, 2025), syllabus read on LII",
+          },
+          {
+            id: "u4-c-learning-resources", kind: "case", subject: "conlaw", name: "Learning Resources, Inc. v. Trump", year: 2026, recent: true, cat: "II.C.3",
+            holding: "IEEPA does not authorize tariffs: the power to 'regulate importation' does not include the taxing power. Only a three-Justice plurality relied on the major questions doctrine.",
+            facts: "The President imposed tariffs on most imports under an emergency-powers statute. Decided with Trump v. V.O.S. Selections, where the merits ruling was affirmed; the Learning Resources judgment itself was vacated because the Court of International Trade has exclusive jurisdiction.",
+            say: "Tariffs are taxes, and taxes belong to Congress: 'regulate importation' does not reach them. Major questions drew only three votes.",
+            status: "book", src: "Learning Resources, Inc. v. Trump, No. 24-1287, decided with Trump v. V.O.S. Selections, No. 25-250 (Feb. 20, 2026), Roberts, C.J.; Parts II-A-2 and III joined only by Gorsuch and Barrett; No. 24-1287 vacated and remanded with instructions to dismiss for lack of jurisdiction (Court of International Trade exclusive, 28 U.S.C. §1581(i)), No. 25-250 affirmed; opinion re-read on LII 2026-11-02",
+          },
+          {
+            id: "u4-c-trump-v-us", kind: "case", subject: "conlaw", name: "Trump v. United States", year: 2024, recent: true, cat: "II.C.4", exam: ["mbe"],
+            holding: "A former President has absolute immunity from prosecution for acts within his conclusive and preclusive constitutional authority, at least presumptive immunity for other official acts, and none for unofficial acts.",
+            facts: "A former President claimed immunity from a federal indictment concerning his conduct after an election.",
+            say: "Core powers: absolute. Other official acts: at least presumptive. Unofficial acts: none. A rule about criminal prosecution, not civil suits.",
+            status: "general", src: "Trump v. United States, 603 U.S. 593 (2024); conlaw.md §6.2",
+          },
+          {
+            id: "u4-c-watson", kind: "case", subject: "conlaw", name: "Watson v. Republican National Committee", year: 2026, recent: true, cat: "III.B.2",
+            holding: "Nothing in the federal Election Day statutes requires mail ballots to be received by Election Day, so they do not preempt a State law counting ballots postmarked by that day and received later.",
+            facts: "A State counted absentee ballots that arrived within a few days after Election Day if they were postmarked by it.",
+            say: "The federal statutes set Election Day but no receipt deadline, so a State may count ballots postmarked by that day: no conflict, no preemption.",
+            status: "book", src: "Watson v. Republican National Committee, No. 24-1260 (June 29, 2026), 5-4 (Barrett, J.; Alito, J., dissenting), syllabus read on LII 2026-11-02; the Court decided only the statutory question, not the reach of the Elections Clause (art. I, §4)",
+          },
+          {
+            id: "u4-c-texas-v-white", kind: "case", subject: "conlaw", name: "Texas v. White", year: 1869, cat: "I.B.1",
+            holding: "Texas never left the Union and remained a State, so it could sue in the Supreme Court's original jurisdiction: an indestructible Union of indestructible States.",
+            facts: "Texas sued in the Supreme Court over bonds that the secessionist government had disposed of.",
+            hook: "Texas v. White: a Texas lawsuit that settled whether Texas ever left.",
+            say: "A State can sue in the Supreme Court's original jurisdiction, and Texas never left the Union: 'indestructible'.",
+            status: "general", src: "Texas v. White, 74 U.S. 700 (1869); hooks.jsonl (Wikipedia)",
+          },
+          {
+            id: "u4-h-ames", kind: "hypo", cat: "I.B.1", callType: "jurisdiction", rule: "u4-r-congress-courts", issue: "concurrent original jurisdiction", grid: true,
+            stem: "Congress enacts a statute giving the federal district courts jurisdiction, concurrent with the Supreme Court, over civil actions brought by a State against citizens of another State. A State sues a corporation that is a citizen of another State in a federal district court, alleging that the corporation breached a contract with the State. The corporation, which has done business in the State for years, moves to dismiss for lack of subject-matter jurisdiction, arguing that only the Supreme Court may hear such a case.",
+            call: "Should the court grant the motion?",
+            options: [
+              { text: "Yes, because the Supreme Court's original jurisdiction under Article III is exclusive whenever a State is a party to the case, and Congress may not alter that.", why: "Congress may let lower federal courts share the Court's original jurisdiction in such cases (Ames v. Kansas); the statute does so here.", trap: 5 },
+              { text: "Yes, because Congress may not give a lower federal court jurisdiction over any case that the Supreme Court could hear in the first instance.", why: "Congress may give lower courts concurrent jurisdiction; 'any' overstates the limit, which is that Congress cannot enlarge the Court's original jurisdiction.", trap: 7 },
+              { text: "No, because Congress may let the lower federal courts share the Supreme Court's original jurisdiction in a case that Article III extends to.", why: "Ames v. Kansas: Congress cannot enlarge the Supreme Court's original jurisdiction, but it may let the lower courts share it; a suit by a State against citizens of another State is within Article III." },
+              { text: "No, because the corporation, which has done business in the State for years, consented to the jurisdiction of the federal district court.", why: "Parties cannot confer subject-matter jurisdiction by consent; the statute supplies it.", trap: 5 },
+            ],
+            answer: 2,
+            say: "Congress cannot enlarge the Supreme Court's original jurisdiction, but it may let lower federal courts share it.",
+            status: "general", src: "Ames v. Kansas ex rel. Johnston, 111 U.S. 449 (1884); 28 U.S.C. §1251(b); U.S. Const. art. III, §2",
+          },
+          {
+            id: "u4-h-boumediene", kind: "hypo", cat: "II.B.2", callType: "motion", rule: "u4-r-war-powers", issue: "habeas corpus for detainees abroad",
+            stem: "After a military conflict abroad, the United States holds several foreign nationals, captured abroad, at a military base on territory that the United States controls completely but over which another country retains formal sovereignty. The military has classified them as enemy combatants. Congress enacts a statute that removes the federal courts' jurisdiction to hear habeas corpus petitions from such detainees and provides a limited military review process in which a detainee may not present evidence to rebut the government's case. The United States has used the base under a lease for more than a century. A detainee files a petition for a writ of habeas corpus in a federal district court, and the government moves to dismiss under the statute.",
+            call: "Should the court grant the motion to dismiss?",
+            options: [
+              { text: "Yes, because the Suspension Clause does not apply to noncitizens held outside the formal sovereign territory of the United States.", why: "Boumediene: the Clause's reach turns on practical factors such as the nature of the site and the control the United States exercises, not on formal sovereignty.", trap: 5 },
+              { text: "No, because the Suspension Clause reaches this base, and the limited review that the statute provides is not an adequate substitute for habeas corpus.", why: "Boumediene v. Bush: the detainees may invoke the privilege of habeas corpus, and the statute is an unconstitutional suspension without an adequate substitute." },
+              { text: "Yes, because Congress may strip the federal courts of jurisdiction in any case that involves enemy combatants.", why: "Congress may not suspend habeas corpus outside the conditions of the Suspension Clause; 'any' overstates its power.", trap: 7 },
+              { text: "No, because the detainees are entitled to the protection of every provision of the Bill of Rights.", why: "The Court held that the Suspension Clause applies; it did not extend every constitutional provision to the base.", trap: 7 },
+            ],
+            answer: 1,
+            facts: ["controls completely"],
+            say: "Habeas reaches where the United States holds complete control: Congress cannot strip it without an adequate substitute.",
+            status: "general", src: "Boumediene v. Bush, 553 U.S. 723 (2008)",
           },
         ],
       },

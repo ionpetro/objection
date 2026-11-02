@@ -5,35 +5,47 @@
 // copied from NCBE or a commercial outline. The Confrontation Clause is taught in the Evidence unit; Samia and Smith v.
 // Arizona appear here only as cross-link case cards.
 //
-// Revised after two independent checks (Nov 2, 2026). Contents: 155 items = 42 rule cards, 72 hypos, 2 argue, 19 case cards,
-// 6 sorts, 4 steps, 4 pairs, 3 numbers, 2 traps, 1 term. In the 74 four-option items (hypo and argue) the key is the longest
-// option in 18 and the shortest in 16, and the key is within about 15% of the other options in length: do not "tidy" options
-// back into rule-plus-application keys with one-clause distractors, because learners pick the longest.
+// Revised after two independent checks (Nov 2, 2026), then a deep verification pass the same day. Contents: 176 items =
+// 42 rule cards, 91 hypos, 2 argue, 21 case cards, 6 sorts, 4 steps, 4 pairs, 3 numbers, 2 traps, 1 term, in 10 lessons
+// (the old lesson 3 and lesson 7 were each split in two, so lesson ids from u8l4 on moved up). In the 93 four-option items
+// the key is the longest option in 22 and the shortest in 17: do not "tidy" options back into rule-plus-application keys
+// with one-clause distractors, because learners pick the longest. A transfer hypo must not also be a grid hypo (the engine
+// may then serve it as a grid question, and the content test fails).
 //
-// UNDER REVIEW (status "unsure", all `recent: true`, never drawn by the Question of the Day or the mocks). A reviewer must
-// read the opinion on supremecourt.gov or law.cornell.edu before any of these becomes "general":
-//   u8-c-chatrie     Chatrie v. United States (June 29, 2026): the syllabus on LII gives the holding (geofence acquisition is a search;
-//                    validity of the warrant remanded; good faith not decided). Still to check: the vote line-up and concurrences
-//                    (secondary sources differ: reported 6-3, Kagan; Jackson and Gorsuch concurring; Alito and Barrett dissenting).
-//   u8-c-hunter      Hunter v. United States (June 18, 2026): holding confirmed by the LII listing and secondary summaries; the
-//                    reported 8-1 vote and the breadth of the "miscarriage of justice" exception (the Court listed no cases) are unread.
-//   u8-c-ellingburg  Ellingburg v. United States (Jan. 20, 2026): reported unanimous (Kavanaugh; Thomas writing separately);
-//                    holding matches secondary summaries (MVRA restitution is criminal punishment for Ex Post Facto purposes); opinion unread.
-// Read on law.cornell.edu (syllabus) and promoted to "general" in this revision:
+// UNDER REVIEW: none. Promoted to "book" on Nov 2, 2026 after reading the syllabus and opinion on law.cornell.edu:
+//   u8-c-chatrie     Chatrie v. United States, No. 25-112 (June 29, 2026): 6-3, Kagan for the Court (Roberts, Sotomayor,
+//                    Kavanaugh, Jackson); Jackson concurring (with Sotomayor); Gorsuch concurring in the judgment; Alito
+//                    dissenting, joined by Thomas as to Part I and by Barrett as to Parts II-B, II-C-1 and II-C-2; Barrett
+//                    dissenting. Acquiring the Location History is a search; warrant validity remanded; good faith not reached (fn. 5).
+//   u8-c-hunter      Hunter v. United States, No. 24-1063 (June 18, 2026): 8-1, Kagan; Thomas dissenting; vacated and remanded.
+//                    The miscarriage-of-justice limit is illustrated, not defined ("not intended to be exclusive").
+//   u8-c-ellingburg  Ellingburg v. United States, No. 24-482 (Jan. 20, 2026): 9-0, Kavanaugh; Thomas, joined by Gorsuch,
+//                    concurring; reversed and remanded. MVRA restitution is "plainly criminal punishment" for Ex Post Facto purposes.
+// Read on law.cornell.edu (syllabus) earlier and kept "general":
 //   Villarreal (Feb. 25, 2026: qualified recess order upheld; Jackson for seven Justices, Alito concurring, Thomas and Gorsuch
 //   concurring in the judgment), Pitchford (May 28, 2026, 5-4, Kavanaugh; Gorsuch dissenting with Thomas, Alito, Barrett;
-//   federal habeas under AEDPA, no new Batson rule), Barrett (Jan. 14, 2026: a statutory holding applying the Blockburger
-//   presumption; Gorsuch joins all but Part IV-C and concurs in part).
+//   federal habeas under AEDPA, no new Batson rule), Barrett (Jan. 14, 2026, 607 U.S. 128: a statutory holding applying the
+//   Blockburger presumption; fn. 10 leaves the constitutional question open).
 // Also worth a second read (recent but marked "general" because the research read the opinion or syllabus): Case v. Montana
-// (Jan. 14, 2026, 9-0, the "without further gloss" language), Barnes v. Felix (May 15, 2025, 605 U.S. 73).
+// (Jan. 14, 2026, 9-0, the "without further gloss" language), Barnes v. Felix (May 15, 2025, 605 U.S. 73), Erlinger
+// (June 21, 2024, 602 U.S. 821, 6-3, Gorsuch; card added in this pass).
 // Plurality or split holdings stated as such: Salinas (plurality), Seibert (deliberate two-step), Mitchell (plurality), Kirby
 // (plurality), Harmelin (Kennedy concurring: the proportionality rule), Ewing (plurality; Scalia and Thomas concurred only in the judgment).
 // Not taught because unresolved or off-outline: border searches of phones, Hamm v. Smith (dismissed), Hemani, Wolford.
-// Added in the revision to fill the brief: search-analysis steps, Gant and protective-search and special-needs cards, competency,
-// right-to-present-a-defense and bail cards, and hypos for Carpenter, Birchfield, Buie, inventory, checkpoints, binding precedent
-// (Davis), station-house custody, Thompkins waiver, Vega, Connelly, Brewer, Strickland, Batson, Barker, Napue, Bordenkircher,
-// Class (plea), Ashe and Chatrie's neighbours. Still thin (taught in rule text or sorts only): Heien, Glover, Navarette, Wardlow,
-// Lange, J.D.B., Howes, Perkins, Mosley, act of production, Kastigar, Moulton, Cronic and conflicts, Duren/Taylor, jury size.
+// Verification pass (Nov 2, 2026) corrected: Grants Pass say (the clause limits how, not what, the state punishes); Faretta
+// competence element (Dusky/Godinez; Indiana v. Edwards permits, not requires, a higher bar); Strickland say (presumed prejudice
+// also for conflicts); Pearce exception (Wasman, McCullough, Alabama v. Smith); Knights (sufficient, not required); Salerno
+// (the clear-and-convincing standard is the Bail Reform Act's); search-analysis steps (standing is step two, Rakas); taint hook
+// (good faith is not a taint cleaner); trap types on Davis D, Quarles C, Cobb D (right result, false reason) and Ashe A;
+// Batson call (remedy for a skipped step three is unsettled, so the call asks whether the judge erred); stems that stated
+// their own conclusions (Leon, Ashe, the suppression argue item) or had a muddy posture (Class, Boykin); Buie (the rifle's
+// incriminating character now apparent at seizure). Fresh facts for Hicks, Quarles, Brewer and Ewing.
+// Added: Riley and Erlinger case cards; Dunn, Ciraolo, Jacobsen, Waller v. Florida and plea withdrawal; hypos for Payton,
+// Wardlow, Riley, Michigan v. Long, Collins, apparent authority, a bare-bones affidavit, Harris, Howes, Shelton, a conflict of
+// interest, Ash, Santobello, a hung jury, Burks, Kennedy v. Louisiana, Robinson, Sandstrom and Pearce.
+// Still thin (taught in rule text or sorts only): Heien, Glover, Navarette, Lange, J.D.B., Perkins, Mosley, act of production,
+// Kastigar, Moulton, Cronic, Duren/Taylor, jury size, Atkins, Timbs, Leland, plain error. Trap type 7 still appears in many
+// hypos (56 of 91); thin it further when stems are next revised.
 /* eslint-disable max-len */
 (function () {
   const unit = {
@@ -54,7 +66,7 @@
             elements: ["Government action: a purely private search is outside the amendment", "A reasonable expectation of privacy is invaded (Katz)", "Or a physical trespass on persons, houses, papers or effects to gather information (Jones; Jardines)"],
             ordered: false,
             distractorElements: ["Probable cause that the place holds evidence", "The item taken turns out to be contraband"],
-            exceptions: ["Thermal imaging of a home is a search (Kyllo)", "The digital contents of a phone are a search and need a warrant (Riley)", "Seven days of historical cell-site location data is a search (Carpenter)", "A drug dog on the front porch is a search (Jardines); a sniff of luggage or of a car during a lawful stop is not (Place; Caballes)"],
+            exceptions: ["Thermal imaging of a home is a search (Kyllo)", "The digital contents of a phone are a search and need a warrant (Riley)", "Seven days of historical cell-site location data is a search (Carpenter)", "A drug dog on the front porch is a search (Jardines); a sniff of luggage or of a car during a lawful stop is not (Place; Caballes)", "Curtilage is protected like the home, judged by proximity, enclosure, use and steps taken to block the view (Dunn); open fields are not (Oliver)", "Not a search: what is visible from public airspace (Ciraolo), or a private party's search that the police repeat without exceeding it (Jacobsen)"],
             cite: "Katz v. United States",
             ex: [
               { facts: "Officers attach a GPS tracker to a suspect's car and follow it for a month.", result: "A search: a physical intrusion on an effect to gather information (Jones)." },
@@ -66,7 +78,7 @@
               { t: "mcq", q: "Police obtain seven days of a suspect's historical cell-site location records from his carrier, with no warrant. That is...", options: ["A search, because the records reveal the privacies of life", "Not a search, because the carrier owns the records", "Not a search, because the suspect was only in public places"], a: "A search, because the records reveal the privacies of life", why: "Carpenter: the third-party doctrine does not stretch to this much location history." },
             ],
             hook: "The booth that rewrote the test: the amendment protects people, not places.",
-            status: "general", src: "Katz v. United States, 389 U.S. 347 (1967); United States v. Jones (2012); Florida v. Jardines (2013); Kyllo v. United States (2001); Riley v. California (2014); Carpenter v. United States (2018); crim.md §7.1",
+            status: "general", src: "Katz v. United States, 389 U.S. 347 (1967); United States v. Jones (2012); Florida v. Jardines (2013); Kyllo v. United States (2001); Riley v. California (2014); Carpenter v. United States (2018); United States v. Dunn, 480 U.S. 294 (1987); California v. Ciraolo, 476 U.S. 207 (1986); United States v. Jacobsen, 466 U.S. 109 (1984); crim.md §7.1; revised Nov 2, 2026",
           },
           {
             id: "u8-so-search", kind: "sort", cat: "V.A", mode: "yesno", q: "Search, or not a search?",
@@ -82,11 +94,12 @@
               { text: "A dog sniffing the outside of a car during a lawful traffic stop", bucket: "Not a search", why: "Caballes: a sniff that detects only contraband reveals no legitimate privacy interest." },
               { text: "Getting a suspect's bank records from the bank", bucket: "Not a search", why: "Miller: information given to a third party is not protected." },
               { text: "An officer on a public sidewalk sees contraband lying on a car seat", bucket: "Not a search", why: "Plain view from a lawful vantage point is no search (Texas v. Brown)." },
-              { text: "Recording the numbers a person dials with a pen register", bucket: "Not a search", why: "Smith v. Maryland: no reasonable expectation of privacy in numbers voluntarily conveyed to the phone company." },
+              { text: "Viewing a fenced backyard from a plane in public navigable airspace", bucket: "Not a search", why: "Ciraolo: what is visible from public airspace is knowingly exposed." },
+              { text: "Police look only at what a carrier employee already saw after opening a damaged package", bucket: "Not a search", why: "Jacobsen: a private search followed, not exceeded, by police." },
             ],
             hook: "Phone equals warrant: the one-line rule from Riley.",
             say: "Search means privacy or trespass. Phones, homes, long location trails and porch dogs: yes. Trash, open fields, third-party records, private searches: no.",
-            status: "general", src: "Kyllo v. United States (2001); Riley v. California (2014); United States v. Jones (2012); Florida v. Jardines (2013); Carpenter v. United States (2018); California v. Greenwood (1988); Oliver v. United States (1984); Illinois v. Caballes (2005); United States v. Miller (1976); Texas v. Brown (1983); Smith v. Maryland (1979)",
+            status: "general", src: "Kyllo v. United States (2001); Riley v. California (2014); United States v. Jones (2012); Florida v. Jardines (2013); Carpenter v. United States (2018); California v. Greenwood (1988); Oliver v. United States (1984); Illinois v. Caballes (2005); United States v. Miller (1976); Texas v. Brown (1983); California v. Ciraolo (1986); United States v. Jacobsen (1984)",
           },
           {
             id: "u8-h-garbage", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-search", issue: "curbside trash as a search", grid: true,
@@ -110,12 +123,12 @@
             options: [
               { text: "No, because a dog sniff is never a search, so the officer needed no warrant or suspicion to bring the dog to the door.", why: "A sniff of luggage or of a car during a lawful stop is not a search, but a sniff at the door of a home is.", trap: 7 },
               { text: "No, because the officer stood only on a walkway that any visitor may use, and the dog's alert was reliable enough for probable cause.", why: "The implied license invites a visitor to knock, not to bring a dog to detect hidden evidence.", trap: 2 },
-              { text: "Yes, because a dog's alert can never supply probable cause for a warrant, however well trained the dog is.", why: "A reliable alert can supply probable cause; the defect is how the alert was obtained.", trap: 7 },
+              { text: "Yes, because the tip was unverified, so the officer lacked reasonable suspicion to bring the dog onto the walkway.", why: "No level of suspicion licenses a drug dog at the door: bringing it there was itself a search of the curtilage, which needed a warrant.", trap: 4 },
               { text: "Yes, because bringing a trained drug dog to the front door was a search of the curtilage, and the warrant rested on it.", why: "Jardines: the implied license to approach the door does not cover a trained dog sent to gather evidence, so the warrant rested on the fruit of a search." },
             ],
             answer: 3,
             say: "A dog at the front door is a search; a dog at a car during a lawful stop is not. Same dog, different place.",
-            status: "general", src: "Florida v. Jardines, 569 U.S. 1 (2013); Illinois v. Caballes (2005)",
+            status: "general", src: "Florida v. Jardines, 569 U.S. 1 (2013); Illinois v. Caballes (2005); revised Nov 2, 2026",
           },
           {
             id: "u8-r-standing", kind: "rule", title: "Standing: who can complain", cat: "V.A",
@@ -147,9 +160,9 @@
               { text: "Yes, because a defendant charged with possessing the seized item automatically has standing to challenge the search that found it.", why: "Automatic standing was abolished (Salvucci); he must show a violation of his own rights, here his seizure.", trap: 11 },
             ],
             answer: 0,
-            facts: ["no articulable reason", "no ownership of the car"],
+            facts: ["no articulable reason", "ordered the driver and the passenger out"],
             say: "A passenger cannot fight the car search, but he can fight the stop, because he was seized too.",
-            status: "general", src: "Brendlin v. California, 551 U.S. 249 (2007); Rakas v. Illinois (1978); United States v. Salvucci (1980)",
+            status: "general", src: "Brendlin v. California, 551 U.S. 249 (2007); Rakas v. Illinois (1978); United States v. Salvucci (1980); revised Nov 2, 2026",
           },
           {
             id: "u8-h-overnight-guest", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-standing", issue: "overnight guest standing", grid: true,
@@ -157,13 +170,13 @@
             call: "Should the court grant the motion to suppress?",
             options: [
               { text: "No, because a guest has no expectation of privacy in another person's home, whatever the length of his stay.", why: "An overnight guest does; the rule that denies standing covers short commercial visitors, not houseguests.", trap: 5 },
-              { text: "Yes, because the officers lacked reasonable suspicion that a crime was occurring, and a home entry needs at least that much.", why: "A home entry needs a warrant or an exception, not merely suspicion; the wrong standard is applied.", trap: 4 },
+              { text: "Yes, because a warrantless home entry is lawful only if officers have reasonable suspicion that a crime is occurring inside.", why: "Reasonable suspicion never justifies a warrantless home entry; it takes a warrant or an exception such as consent or exigency.", trap: 4 },
               { text: "Yes, because an overnight guest has a reasonable expectation of privacy in the host's home, and no exception excused the warrant.", why: "Olson: society recognizes an overnight guest's expectation of privacy, and a warrantless home entry needs an exception." },
               { text: "No, because the officers had probable cause to believe that the duffel bag held a gun, which permits a warrantless entry of a home.", why: "Nothing in the stem says so, and probable cause alone does not excuse a warrant for a home entry.", trap: 3 },
             ],
             answer: 2,
             say: "Sleep there and you have standing; stop by for a transaction and you do not.",
-            status: "general", src: "Minnesota v. Olson, 495 U.S. 91 (1990); crim.md §7.2 SEARCH-5",
+            status: "general", src: "Minnesota v. Olson, 495 U.S. 91 (1990); crim.md §7.2 SEARCH-5; revised Nov 2, 2026",
           },
           {
             id: "u8-h-visitor", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-standing", issue: "short commercial visitor", transfer: true,
@@ -249,7 +262,8 @@
             src: "Carpenter v. United States, 585 U.S. 296 (2018); 18 U.S.C. §2703(d)",
           },
           { id: "u8-c-katz", kind: "case", subject: "crim", cat: "V.A", name: "Katz v. United States", year: 1967, holding: "A search occurs when the government invades an expectation of privacy that the person actually holds and society accepts as reasonable: the amendment protects people, not places.", facts: "The FBI taped a man's calls from a public phone booth without a warrant.", say: "The amendment protects people, not places: the booth was private because he shut the door.", hook: "The FBI bugged a public phone booth, and the old trespass test lost its monopoly.", status: "general", src: "Katz v. United States, 389 U.S. 347 (1967)" },
-          { id: "u8-c-chatrie", kind: "case", subject: "crim", cat: "V.A", name: "Chatrie v. United States", year: 2026, recent: true, holding: "Obtaining a person's stored Location History from a tech company through a geofence warrant is a Fourth Amendment search; the warrant's validity went back on remand and good faith was not decided.", facts: "Police asked a tech company for every phone near a bank robbery, using a short time window.", say: "Geofence data is a search despite the third party and the short window; whether the warrant itself passed went back to the Fourth Circuit.", status: "unsure", src: "Chatrie v. United States, No. 25-112 (June 29, 2026), syllabus read on law.cornell.edu; vote line-up and concurrences not checked against the slip opinion; crim.md §14" },
+          { id: "u8-c-riley", kind: "case", subject: "crim", cat: "V.A", name: "Riley v. California", year: 2014, holding: "Police generally need a warrant to search the digital contents of a cell phone seized from an arrestee; search incident to arrest does not cover the data, though a case-specific exigency may.", facts: "Officers scrolled through an arrestee's smartphone after a traffic stop and found gang photographs.", say: "Get a warrant: a phone holds the privacies of life, so arrest lets police seize it, not read it.", hook: "Phone equals warrant: the Court's answer was two words, 'get a warrant'.", status: "general", src: "Riley v. California, 573 U.S. 373 (2014)" },
+          { id: "u8-c-chatrie", kind: "case", subject: "crim", cat: "V.A", name: "Chatrie v. United States", year: 2026, recent: true, holding: "Obtaining a person's stored Location History from a tech company through a geofence warrant is a Fourth Amendment search; the warrant's validity went back on remand and good faith was not decided.", facts: "Police asked a tech company for every phone near a bank robbery, using a short time window.", say: "Geofence data is a search despite the third party and the short window; whether the warrant itself passed went back to the Fourth Circuit.", status: "book", src: "Chatrie v. United States, No. 25-112 (June 29, 2026), syllabus and opinion (fn. 5 on good faith) read on law.cornell.edu, Nov 2, 2026; crim.md §14" },
         ],
       },
       {
@@ -294,12 +308,12 @@
               { text: "No, because the tip accurately described the man and where he would be, which showed the caller had reliable knowledge.", why: "A tip must be reliable in its assertion of illegality, not merely in identifying the person; any caller can describe who is standing there.", trap: 2 },
               { text: "Yes, because an anonymous tip showing no reliability, with nothing else suspicious, did not justify a frisk.", why: "J.L.: a tip that only describes a person, without predicting anything or showing inside knowledge of illegality, does not supply reasonable suspicion." },
               { text: "No, because a reported gun in a waistband is dangerous enough that officers may frisk anyone said to be armed, without more.", why: "J.L. rejected a firearm exception to the reliability requirement for anonymous tips.", trap: 7 },
-              { text: "Yes, because a frisk may never rest on information from an anonymous source, however reliable the information proves to be.", why: "An anonymous tip can suffice if it shows reliability, for example through predictive details; this one shows none.", trap: 7 },
+              { text: "Yes, because a frisk is permitted only after an arrest supported by probable cause.", why: "A frisk needs only reasonable suspicion that the person is armed and dangerous (Terry); the defect here is that an unreliable tip supplied none.", trap: 4 },
             ],
             answer: 1,
             facts: ["anonymous caller", "standing quietly"],
             say: "An anonymous 'he has a gun' plus a matching coat is a description, not reliability: no stop, no frisk.",
-            status: "general", src: "Florida v. J.L., 529 U.S. 266 (2000); crim.md §7.2 SEIZ-2",
+            status: "general", src: "Florida v. J.L., 529 U.S. 266 (2000); crim.md §7.2 SEIZ-2; revised Nov 2, 2026",
           },
           {
             id: "u8-h-plain-feel", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-terry", issue: "plain feel and frisk scope", grid: true,
@@ -322,7 +336,7 @@
             elements: ["Valid start: a traffic violation observed; the officer's motive is irrelevant (Whren)", "Driver and passengers may be ordered out of the car (Mimms; Wilson)", "A frisk of driver or passenger needs reasonable suspicion of armed and dangerous (Johnson)", "No prolonging beyond the traffic mission for a dog sniff without reasonable suspicion (Rodriguez)"],
             ordered: false,
             distractorElements: ["Probable cause of a drug crime", "A warrant for the vehicle"],
-            exceptions: ["A dog sniff of the car's exterior during a lawful, unprolonged stop is not a search (Caballes)", "A routine traffic stop is not custody for Miranda (Berkemer), covered in lesson 5"],
+            exceptions: ["A dog sniff of the car's exterior during a lawful, unprolonged stop is not a search (Caballes)", "A routine traffic stop is not custody for Miranda (Berkemer), covered in the Miranda lesson"],
             cite: "Whren v. United States",
             ex: [
               { facts: "An officer who suspects drug dealing stops a driver for failing to signal a lane change.", result: "Valid: probable cause of the violation is enough, whatever the officer hoped to find (Whren)." },
@@ -340,7 +354,7 @@
             stem: "An officer stopped a driver for a broken taillight. The officer checked the driver's license and registration, found no warrants, and wrote a warning. He then told the driver to wait beside the car for a drug-detection dog, which arrived eight minutes later and alerted at the trunk. The officer searched the trunk and found drugs. The officer had no suspicion of any other offense. The driver moves to suppress the drugs.",
             call: "Should the court grant the motion to suppress?",
             options: [
-              { text: "No, because a dog sniff of the outside of a car is not a search, so waiting for the dog needed no justification.", why: "True of the sniff itself, but it does not answer the call: the sniff came from an unlawful extension of the stop.", trap: 6 },
+              { text: "No, because a dog sniff of the outside of a car is not a search, so waiting for the dog needed no justification.", why: "The sniff itself is no search, but it came from an unlawful extension of the stop.", trap: 6 },
               { text: "No, because an eight-minute delay is too short to be unreasonable, and brief extensions for a sniff are permitted.", why: "Rodriguez rejected a de minimis exception for extensions made to conduct unrelated investigations.", trap: 5 },
               { text: "Yes, because the officer prolonged the stop past the traffic mission without reasonable suspicion of another crime.", why: "Rodriguez: authority for the stop ends when the traffic tasks are, or reasonably should have been, completed; no de minimis extension for a dog sniff." },
               { text: "Yes, because the officer had no probable cause to search the trunk at the time he held the driver for the dog's arrival.", why: "The alert supplied probable cause; the flaw is that the dog was obtained by unlawfully extending the stop.", trap: 1 },
@@ -348,7 +362,7 @@
             answer: 2,
             facts: ["wrote a warning", "no suspicion of any other offense"],
             say: "The traffic ticket sets the clock. Hold the driver past it for a dog and the sniff comes too late.",
-            status: "general", src: "Rodriguez v. United States, 575 U.S. 348 (2015); crim.md §7.2 SEIZ-3",
+            status: "general", src: "Rodriguez v. United States, 575 U.S. 348 (2015); crim.md §7.2 SEIZ-3; revised Nov 2, 2026",
           },
           {
             id: "u8-r-arrest", kind: "rule", title: "Arrests and the home", cat: "V.A",
@@ -385,6 +399,36 @@
             status: "general", src: "Steagald v. United States, 451 U.S. 204 (1981); crim.md §7.2 WARR-4",
           },
           {
+            id: "u8-h-payton", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-arrest", issue: "warrantless arrest inside the home", grid: true,
+            stem: "Detectives developed probable cause that a man had stolen power tools from a construction site. Without obtaining any warrant, they went to his house at midday. When his teenage daughter answered their knock, they walked past her without asking permission, found the man in the kitchen, and arrested him. Nothing suggested that he was about to flee or destroy evidence. A stolen drill lay on the kitchen counter, and the detectives seized it. The man moves to suppress the drill.",
+            call: "Should the court grant the motion to suppress?",
+            options: [
+              { text: "Yes, because absent consent or an emergency, entering a suspect's home to arrest him requires an arrest warrant.", why: "Payton: probable cause allows a warrantless arrest in public, but crossing the threshold of the home to arrest needs a warrant; the drill was seen only because of the unlawful entry." },
+              { text: "No, because the detectives had probable cause that he committed a felony, and a felony arrest on probable cause needs no warrant.", why: "That is the rule for an arrest in a public place (Watson); entering the home to make the arrest is different.", trap: 9 },
+              { text: "No, because the daughter answered the door, which gave the detectives consent to come into the house.", why: "Answering a knock is not consent to enter, and the stem says they walked past her without asking.", trap: 3 },
+              { text: "Yes, because the detectives needed a search warrant, not only an arrest warrant, to enter the suspect's own home.", why: "For the suspect's own home an arrest warrant is enough (Payton); a search warrant is needed for a third party's home (Steagald).", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["Without obtaining any warrant", "without asking permission"],
+            say: "Probable cause arrests on the sidewalk; at his front door it needs an arrest warrant, consent or an emergency.",
+            status: "general", src: "Payton v. New York, 445 U.S. 573 (1980); United States v. Watson (1976); Steagald v. United States (1981)",
+          },
+          {
+            id: "u8-h-wardlow", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-terry", issue: "flight in a high-crime area", transfer: true,
+            stem: "Uniformed officers in a marked car were patrolling a block known for frequent open-air drug sales. A man standing on the corner with a backpack looked straight at the patrol car and immediately sprinted down an alley. The officers caught him a block later. Because the officers knew that sellers on that block often carried guns, one officer patted down his outer clothing, felt a hard object shaped like a handgun, and removed a revolver. The man moves to suppress the revolver, arguing that the officers had no reasonable suspicion to stop him.",
+            call: "Should the court grant the motion to suppress?",
+            options: [
+              { text: "Yes, because running from the police is a lawful choice that can never contribute to reasonable suspicion.", why: "Unprovoked, headlong flight is not proof of guilt, but it is a pertinent factor in deciding whether suspicion is reasonable (Wardlow).", trap: 7 },
+              { text: "No, because headlong flight from the police in a heavy drug-dealing area gave reasonable suspicion for a stop.", why: "Illinois v. Wardlow: presence in a high-crime area alone is not enough, but headlong flight on noticing the police adds the needed suspicion." },
+              { text: "Yes, because a person's presence in a high-crime area cannot by itself justify a stop of that person.", why: "Presence alone would not do, but this man also fled on seeing the officers, which supplies what location alone lacks.", trap: 9 },
+              { text: "No, because officers may stop and frisk anyone found in a high-crime area to protect their own safety.", why: "Location alone supplies no reasonable suspicion, and a frisk needs its own reason to think the person is armed and dangerous.", trap: 5 },
+            ],
+            answer: 1,
+            facts: ["immediately sprinted down an alley", "known for frequent open-air drug sales"],
+            say: "A bad neighborhood alone is not suspicion; bolting the moment the police appear, there, is.",
+            status: "general", src: "Illinois v. Wardlow, 528 U.S. 119 (2000); Terry v. Ohio (1968); Brown v. Texas (1979)",
+          },
+          {
             id: "u8-r-warrant", kind: "rule", title: "A valid search warrant", cat: "V.A",
             say: "Probable cause, oath, a neutral magistrate, particular description. A knowing falsehood voids it; a knock-and-announce lapse does not suppress.",
             elements: ["Probable cause on the totality of the circumstances (Gates)", "Supported by oath or affirmation", "Issued by a neutral and detached magistrate", "Particularly describes the place to be searched and the things to be seized"],
@@ -408,14 +452,14 @@
             call: "Should the court grant the motion to suppress?",
             options: [
               { text: "No, because a neutral magistrate found probable cause, and reviewing courts must defer to that finding in every case.", why: "Deference is limited: a magistrate cannot cure a lie that misled him about the facts.", trap: 10 },
-              { text: "No, because the officers found the electronics that the warrant described, which confirms the warrant's accuracy.", why: "True, but it does not answer the call; a search's success does not validate a warrant obtained by fraud.", trap: 6 },
+              { text: "No, because the officers found the electronics that the warrant described, which confirms the warrant's accuracy.", why: "A search's success does not validate a warrant obtained by fraud.", trap: 6 },
               { text: "Yes, because the affidavit did not disclose the informant's name, and a warrant must identify its sources.", why: "Informants need not be named; the defect is the invented statement.", trap: 5 },
               { text: "Yes, because a deliberately false statement necessary to the finding of probable cause voids the warrant.", why: "Franks: once the defendant proves a knowing or reckless falsehood, the false statement is set aside, and if the rest lacks probable cause the warrant is void." },
             ],
             answer: 3,
             facts: ["invented the statement", "reliable informant"],
             say: "The magistrate's stamp does not launder a lie: knowing or reckless falsehood, necessary to probable cause, voids the warrant.",
-            status: "general", src: "Franks v. Delaware, 438 U.S. 154 (1978); crim.md §7.2 WARR-1",
+            status: "general", src: "Franks v. Delaware, 438 U.S. 154 (1978); crim.md §7.2 WARR-1; revised Nov 2, 2026",
           },
           {
             id: "u8-h-knock", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-warrant", issue: "knock-and-announce remedy", grid: true,
@@ -453,39 +497,39 @@
       },
       {
         id: "u8l3",
-        title: "Warrantless searches: the exceptions",
+        title: "Warrantless searches I: arrests, cars and plain view",
         items: [
           {
             id: "u8-st-search",
             kind: "steps",
             cat: "V.A",
             title: "The search analysis, in order",
-            steps: ["Is there a government search or seizure (privacy invaded or property trespassed on)?", "Is there a valid warrant?", "If not, does an exception apply: arrest, car, plain view, consent, exigency, inventory?", "Is the movant the person whose own rights were violated (standing)?", "Does an exception to exclusion apply: independent source, inevitable discovery, attenuation, good faith?"],
+            steps: ["Is there government action that searches or seizes (privacy invaded or property trespassed on)?", "Was the movant's own privacy or property interest invaded (standing)?", "Is there a valid warrant?", "If not, does an exception apply: arrest, car, plain view, consent, exigency, inventory?", "Does an exception to exclusion apply: independent source, inevitable discovery, attenuation, good faith?"],
             distractors: ["Was the officer's motive pure?", "Did the defendant own the item seized?", "Was the evidence reliable?"],
-            applyTo: { facts: "Officers without a warrant open a duffel bag that a stranger left in a bus-station locker the defendant never used, and find drugs. The defendant moves to suppress.", stop: "Is the movant the person whose own rights were violated (standing)?", why: "A search occurred and no warrant or exception applies, but the defendant has no privacy interest in the bag, so the analysis ends at standing (Rakas)." },
-            say: "Search? Warrant? Exception? Standing? Exclusion exception? Take the questions in order and most suppression problems unfold themselves.",
+            applyTo: { facts: "Officers without a warrant open a duffel bag that a stranger left in a bus-station locker the defendant never used, and find drugs. The defendant moves to suppress.", stop: "Was the movant's own privacy or property interest invaded (standing)?", why: "The analysis stops at step two: the defendant has no privacy interest in a stranger's bag (Rakas)." },
+            say: "Government search? His own privacy or property? Warrant? Exception? Exclusion exception? Take them in order and most suppression problems unfold.",
             status: "general",
-            src: "Katz v. United States (1967); Rakas v. Illinois (1978); Wong Sun v. United States (1963); United States v. Leon (1984); crim.md §7.1",
+            src: "Katz v. United States (1967); Rakas v. Illinois (1978); Wong Sun v. United States (1963); United States v. Leon (1984); crim.md §7.1; order revised Nov 2, 2026 (Rakas folds standing into the threshold question)",
           },
           {
             id: "u8-r-sita", kind: "rule", title: "Search incident to arrest, and its car rule", cat: "V.A",
             say: "An arrest allows a search of the person and the grab area; a car only if the arrestee can reach it or evidence of the arrest offense may be inside.",
-            elements: ["A lawful custodial arrest", "The person and the area within his immediate control (Chimel; Robinson)", "Car: arrestee unsecured and within reaching distance of the passenger compartment", "Or: reasonable to believe evidence of the offense of arrest is in the car (Gant)"],
+            elements: ["A lawful custodial arrest", "The person and the area within his immediate control (Chimel; Robinson)", "A car's passenger compartment: only on one of Gant's two prongs"],
             ordered: false,
             distractorElements: ["Probable cause that the car holds contraband", "The trunk, whenever the passenger compartment may be searched"],
             exceptions: ["A phone's digital contents need a warrant (Riley)", "A citation alone does not allow it (Knowles)", "A protective sweep of spaces adjoining the arrest site needs no suspicion; a wider sweep needs reasonable suspicion of danger (Buie)", "A breath test may be taken incident to a drunk-driving arrest, a blood test may not (Birchfield)"],
             cite: "Arizona v. Gant",
             ex: [
-              { facts: "A driver arrested for a suspended license sits handcuffed in the patrol car, and an officer searches the cabin and the trunk.", result: "Invalid: he is secured, no evidence of a license offense is expected, and the trunk is never covered (Gant)." },
+              { facts: "Officers arrest a man in his living room and then search a closed desk drawer in a bedroom down the hall.", result: "Invalid: the drawer is beyond the area within his immediate control (Chimel)." },
               { facts: "An officer who arrests a man for selling drugs searches his pockets.", result: "Valid: a full search of the person incident to a custodial arrest (Robinson)." },
             ],
             terms: ["search incident to arrest", "immediate control", "protective sweep"],
             quiz: [
               { t: "tf", q: "Officers may search the contents of an arrestee's phone as a search incident to arrest.", a: false, why: "Riley: the digital contents need a warrant, absent a case-specific exigency." },
-              { t: "mcq", q: "A driver arrested for drug possession is handcuffed in a patrol car. When may officers search the car's passenger compartment incident to the arrest?", options: ["If it is reasonable to believe evidence of drug possession is in the car", "Always, because the arrest was lawful", "Never, because he is secured"], a: "If it is reasonable to believe evidence of drug possession is in the car", why: "Gant's second prong: reason to believe evidence of the offense of arrest is in the vehicle." },
+              { t: "mcq", q: "Officers arrest a man at his front door on a warrant and then search the upstairs bedrooms incident to the arrest. The bedroom search is...", options: ["Invalid: it reaches beyond the area within his immediate control", "Valid: an arrest at home lets officers search the whole house", "Valid if the officers suspected evidence was upstairs"], a: "Invalid: it reaches beyond the area within his immediate control", why: "Chimel: a search incident to arrest covers the person and the grab area; the rest of the house needs a warrant or another exception." },
             ],
             hook: "Before 2009 the old rule of thumb was to search the whole cabin after any arrest. Gant ended that.",
-            status: "general", src: "Chimel v. California (1969); United States v. Robinson (1973); Arizona v. Gant, 556 U.S. 332 (2009); Riley v. California (2014); Maryland v. Buie (1990); Birchfield v. North Dakota (2016); crim.md §7.1",
+            status: "general", src: "Chimel v. California (1969); United States v. Robinson (1973); Arizona v. Gant, 556 U.S. 332 (2009); Riley v. California (2014); Maryland v. Buie (1990); Birchfield v. North Dakota (2016); crim.md §7.1; revised Nov 2, 2026",
           },
           {
             id: "u8-r-gant",
@@ -505,10 +549,10 @@
             ],
             terms: ["reaching distance", "offense of arrest"],
             quiz: [
-              { t: "tf", q: "An officer who arrests a driver for a suspended license may search the car's passenger compartment after securing him.", a: false, why: "Neither prong applies: he is secured, and a license offense leaves no evidence to find (Gant)." },
+              { t: "tf", q: "An officer arrests a driver for reckless driving while he stands unhandcuffed beside the open driver's door during the search; the officer may search the cabin incident to the arrest.", a: true, why: "Gant's first prong: an unsecured arrestee within reaching distance of the passenger compartment at the time of the search." },
               { t: "mcq", q: "Which fact makes a car search incident to arrest lawful under Gant?", options: ["The arrestee is unsecured and could reach the cabin", "The arrest was lawful and the car belonged to the arrestee", "The officer suspects the trunk holds contraband"], a: "The arrestee is unsecured and could reach the cabin", why: "Prong one is reaching distance; the other two facts satisfy neither prong." },
             ],
-            src: "Arizona v. Gant, 556 U.S. 332 (2009); Chimel v. California (1969); crim.md §7.1",
+            src: "Arizona v. Gant, 556 U.S. 332 (2009); Chimel v. California (1969); crim.md §7.1; revised Nov 2, 2026",
           },
           {
             id: "u8-h-gant", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-sita", issue: "car search incident to arrest", grid: true,
@@ -548,6 +592,15 @@
             src: "Arizona v. Gant, 556 U.S. 332 (2009); crim.md §7.2 EXC-1",
           },
           {
+            id: "u8-tr-trunk-sita", kind: "trap", cat: "11", subject: "crim",
+            stem: "Officers arrest a driver for a minor offense, handcuff him in their cruiser, and then search the passenger compartment, the glove box and the trunk 'incident to arrest'.",
+            wrong: "Any lawful arrest lets police search the whole car, trunk included, as a search incident to arrest.",
+            right: "A car search incident to arrest needs an unsecured arrestee within reach or reason to believe evidence of the arrest offense is inside (Gant); the trunk needs the automobile exception and probable cause.",
+            why: "The old 'search the whole cabin after every arrest' guides pre-date Gant (2009), and the trunk was never covered by a search incident to arrest.",
+            say: "Trunk and search incident to arrest never go together; Gant narrowed the cabin, too.",
+            status: "general", src: "Arizona v. Gant (2009); New York v. Belton (1981); revised Nov 2, 2026",
+          },
+          {
             id: "u8-h-birchfield",
             kind: "hypo",
             status: "general",
@@ -568,6 +621,21 @@
             facts: ["without a warrant", "a judge was available by telephone"],
             say: "Breath yes, blood no: a breath test fits a search incident to a drunk-driving arrest, but a blood draw needs a warrant, consent or exigency.",
             src: "Birchfield v. North Dakota, 579 U.S. 438 (2016); Missouri v. McNeely, 569 U.S. 141 (2013); Mitchell v. Wisconsin (2019)",
+          },
+          {
+            id: "u8-h-riley", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-sita", issue: "phone data after an arrest", grid: true,
+            stem: "Officers arrested a woman for shoplifting and, in a search incident to the arrest, took a smartphone from her pocket. At the station, an officer opened the phone with a passcode that she had written on a slip of paper in her wallet, scrolled through her text messages, and found messages arranging the resale of stolen merchandise. No warrant was sought, and nothing suggested that the data would be lost or that anyone was in danger. The woman moves to suppress the messages.",
+            call: "Should the court grant the motion to suppress?",
+            options: [
+              { text: "Yes, because reading the data on an arrestee's phone generally requires a warrant, even after a lawful arrest.", why: "Riley: officers may seize the phone and examine it physically, but reading its digital contents needs a warrant absent a case-specific exigency." },
+              { text: "No, because officers may search any item found on an arrestee's person in a search incident to a lawful arrest.", why: "That is the rule for physical items (Robinson); Riley declined to extend it to the data on a phone.", trap: 9 },
+              { text: "No, because she wrote down her own passcode, so she kept no reasonable expectation of privacy in the phone.", why: "Writing a passcode down does not give up privacy in the phone's contents; reading them still needed a warrant.", trap: 5 },
+              { text: "Yes, because the officers had no right to take the phone from her pocket during the search incident to arrest.", why: "Taking the phone was lawful; the defect is reading its data without a warrant.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["scrolled through her text messages", "No warrant was sought"],
+            say: "Arrest lets police take the phone, not read it: get a warrant, unless a real emergency cannot wait.",
+            status: "general", src: "Riley v. California, 573 U.S. 373 (2014); United States v. Robinson (1973)",
           },
           {
             id: "u8-r-protective",
@@ -601,18 +669,33 @@
             rule: "u8-r-protective",
             issue: "protective sweep of an adjoining space",
             transfer: true,
-            stem: "Officers with an arrest warrant went to a man's house to arrest him for armed robbery. They found him in the kitchen and handcuffed him. One officer then opened the door of a closet beside the kitchen, large enough to hold a person, and saw a rifle on the closet floor. The officer had no particular reason to think that anyone was in the closet. The rifle was later linked to the robbery. The man moves to suppress it.",
+            stem: "Officers with an arrest warrant went to a man's house to arrest him for armed robbery. They found him in the kitchen and handcuffed him. One officer then opened the door of a closet beside the kitchen, large enough to hold a person, and saw on the closet floor a rifle matching the victims' description of the weapon used in the robbery. The officer had no particular reason to think that anyone was in the closet. The man moves to suppress the rifle.",
             call: "Should the court grant the motion to suppress?",
             options: [
               { text: "Yes, because officers must have probable cause to believe that a person is hiding in a space before they may look inside it.", why: "Probable cause is not required; spaces immediately adjoining the arrest may be checked without any suspicion.", trap: 4 },
-              { text: "No, because adjoining spaces may be checked for attackers without suspicion, and the rifle was then in plain view.", why: "Buie: a protective sweep of adjoining spaces needs no suspicion, and the rifle was then seized in plain view." },
+              { text: "No, because adjoining spaces may be checked for attackers without suspicion, and the rifle was then in plain view.", why: "Buie: a protective sweep of adjoining spaces needs no suspicion; a rifle matching the robbery weapon was plainly incriminating, so plain view allowed the seizure." },
               { text: "Yes, because the man was already handcuffed, so no danger remained that could justify looking inside the closet.", why: "The danger comes from others who might be hiding; handcuffing the arrestee does not remove it.", trap: 5 },
               { text: "No, because an arrest inside a home lets officers search the entire house for evidence of the crime charged.", why: "Chimel: a search incident to arrest reaches only the arrestee's person and immediate control area.", trap: 5 },
             ],
             answer: 1,
             facts: ["a closet beside the kitchen", "no particular reason to think that anyone was in the closet"],
             say: "Look next door for attackers and no suspicion is needed; go further and you need reasons to fear danger.",
-            src: "Maryland v. Buie, 494 U.S. 325 (1990); Chimel v. California (1969)",
+            src: "Maryland v. Buie, 494 U.S. 325 (1990); Chimel v. California (1969); Horton v. California (1990); stem revised Nov 2, 2026 so the rifle's incriminating character is apparent at seizure",
+          },
+          {
+            id: "u8-h-long", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-protective", issue: "protective search of a car", grid: true,
+            stem: "An officer stopped a pickup truck for running a red light late at night. The driver got out, was agitated, and twice reached back into the cab despite orders to keep his hands visible. Through the window the officer saw an empty pistol holster on the seat. Intending to let the driver get back into the truck to finish the stop, the officer first checked under the driver's seat, where a weapon could be reached, and found a bag of cocaine. The driver moves to suppress the cocaine.",
+            call: "Should the court grant the motion to suppress?",
+            options: [
+              { text: "No, because suspicion that the driver was dangerous and could reach a weapon allowed a protective search there.", why: "Michigan v. Long: the frisk rule extends to places in the passenger compartment where a weapon could be hidden, and contraband found there may be seized." },
+              { text: "Yes, because the officer had no probable cause to search the truck, and a vehicle search requires probable cause.", why: "Probable cause is the price of the automobile exception; a protective search for weapons needs only reasonable suspicion of danger.", trap: 4 },
+              { text: "Yes, because the driver had not been arrested, so no search of the truck incident to an arrest was possible.", why: "The officer made no search incident to arrest; a protective search during a stop needs no arrest.", trap: 10 },
+              { text: "No, because a lawful traffic stop by itself permits officers to search any part of the vehicle for weapons.", why: "A stop alone allows no search; the protective search rests on suspicion of danger and reaches only where a weapon could be.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["empty pistol holster", "twice reached back into the cab"],
+            say: "A dangerous driver who may climb back in: check where a weapon could be within reach, and what turns up there comes in.",
+            status: "general", src: "Michigan v. Long, 463 U.S. 1032 (1983); Terry v. Ohio (1968)",
           },
           {
             id: "u8-r-auto", kind: "rule", title: "The automobile exception", cat: "V.A",
@@ -648,6 +731,21 @@
             status: "general", src: "United States v. Ross (1982); California v. Acevedo (1991); crim.md §7.2 EXC-2",
           },
           {
+            id: "u8-h-collins", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-auto", issue: "automobile exception and curtilage", grid: true,
+            stem: "Officers had probable cause to believe that a pickup truck parked in a man's side yard, right beside his house and behind a closed wooden gate, held stolen copper wire. Without a warrant, an officer opened the gate, walked to the truck, and searched its bed and cab, finding the wire. Nothing suggested that anyone would move the truck or destroy evidence before a warrant could be obtained. The man moves to suppress the wire.",
+            call: "Should the court grant the motion to suppress?",
+            options: [
+              { text: "No, because officers with probable cause that a vehicle holds evidence may search it without a warrant wherever it is.", why: "The automobile exception covers the vehicle; it does not license entering a home's curtilage to reach it (Collins).", trap: 2 },
+              { text: "Yes, because the automobile exception does not let officers enter a home's curtilage without a warrant.", why: "Collins v. Virginia: a yard right beside the house behind a closed gate is curtilage, and the automobile exception does not justify entering it." },
+              { text: "No, because a vehicle parked outside a house sits in an open field, which receives no Fourth Amendment protection.", why: "An enclosed yard beside the house is curtilage, judged by proximity, enclosure and use (Dunn), not an open field.", trap: 5 },
+              { text: "Yes, because the officers lacked probable cause until they actually saw the copper wire inside the truck.", why: "The stem gives probable cause beforehand; the defect is the warrantless entry onto the curtilage.", trap: 3 },
+            ],
+            answer: 1,
+            facts: ["behind a closed wooden gate", "right beside his house"],
+            say: "The car exception travels with the car, but not through the garden gate: curtilage still needs a warrant.",
+            status: "general", src: "Collins v. Virginia, 584 U.S. 586 (2018); United States v. Dunn (1987)",
+          },
+          {
             id: "u8-r-plain", kind: "rule", title: "Plain view", cat: "V.A",
             say: "Plain view needs a lawful vantage, lawful access, and probable cause that the item is incriminating, apparent at once. Moving things to look is a search.",
             elements: ["The officer is lawfully at the vantage point", "The officer has a lawful right of access to the object", "Its incriminating character is immediately apparent: probable cause"],
@@ -668,19 +766,25 @@
           },
           {
             id: "u8-h-hicks", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-plain", issue: "moving an object in plain view",
-            stem: "Officers lawfully entered an apartment to investigate a shot fired through its floor into the apartment below. Inside, they noticed two expensive turntables that seemed out of place in a sparsely furnished room. Suspecting that they were stolen but without probable cause, one officer tilted a turntable to read the serial number on its underside, called it in, and learned that it had been stolen. The officers seized it. The resident moves to suppress the turntable.",
+            stem: "After a neighbor reported screams, officers lawfully entered a house to look for an injured person. They found no one hurt, but in the living room they noticed four new laptop computers still in their packaging, stacked in an otherwise bare room. Suspecting that the laptops were stolen but without probable cause, one officer turned a laptop over to read the serial number on its base, radioed it in, and learned that it had been stolen from a store. The officers seized the laptops. The resident moves to suppress them.",
             call: "Should the court grant the motion to suppress?",
             options: [
-              { text: "Yes, because moving the turntable to read its serial number was a new search, and the officers lacked probable cause.", why: "Hicks: the officers were lawfully present, but tilting the turntable exposed something that was not in plain view, a new search needing probable cause." },
+              { text: "Yes, because turning the laptop over to read its serial number was a new search, and the officers lacked probable cause.", why: "Hicks: the officers were lawfully present, but turning the laptop over exposed something that was not in plain view, a new search needing probable cause." },
               { text: "No, because the officers were lawfully inside the apartment, and they may seize anything they notice while there.", why: "Plain view also requires that the item's incriminating character be immediately apparent, which it was not.", trap: 7 },
               { text: "No, because reading a serial number is so slight an intrusion that it is not a search at all, whatever the suspicion.", why: "Hicks rejected a de minimis exception: a cursory inspection unrelated to the reason for entry is still a search.", trap: 5 },
               { text: "Yes, because plain view applies only when the officers discover the item inadvertently, and these officers suspected theft.", why: "Inadvertence was a requirement in a plurality opinion that Horton rejected.", trap: 11 },
             ],
             answer: 0,
-            facts: ["without probable cause", "tilted a turntable"],
+            facts: ["without probable cause", "turned a laptop over"],
             say: "If you have to move it to know, it was not in plain view.",
-            status: "general", src: "Arizona v. Hicks, 480 U.S. 321 (1987); Horton v. California (1990); crim.md §7.2 EXC-4",
+            status: "general", src: "Arizona v. Hicks, 480 U.S. 321 (1987); Horton v. California (1990); crim.md §7.2 EXC-4; stem rewritten with fresh facts Nov 2, 2026",
           },
+        ],
+      },
+      {
+        id: "u8l4",
+        title: "Warrantless searches II: consent, emergencies, inventories and special needs",
+        items: [
           {
             id: "u8-r-consent", kind: "rule", title: "Consent searches", cat: "V.A",
             say: "Consent must be voluntary, from someone with actual or apparent authority, and within its scope; a present co-occupant's refusal beats another's consent.",
@@ -729,6 +833,21 @@
             status: "general", src: "Fernandez v. California, 571 U.S. 292 (2014); Georgia v. Randolph (2006)",
           },
           {
+            id: "u8-h-apparent-authority", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-consent", issue: "apparent authority to consent", grid: true,
+            stem: "Officers investigating a burglary knocked at a small house where they believed the suspect lived. A woman answered, said that she lived there with her brother, the suspect, and told them they could come in and look around. Mail addressed to her at that house lay on a side table, and her coat hung by the door. In the living room the officers saw a television matching one taken in the burglary. In fact, the woman had moved out two months earlier and was only visiting that afternoon. The brother moves to suppress the television.",
+            call: "Should the court grant the motion to suppress?",
+            options: [
+              { text: "Yes, because she no longer lived in the house, so she had no actual authority to consent to the officers' entry.", why: "Actual authority is not required: consent is valid if the officers reasonably believed she had authority (Illinois v. Rodriguez).", trap: 9 },
+              { text: "No, because the officers reasonably believed, from what they heard and saw, that she lived there.", why: "Illinois v. Rodriguez: an entry on the consent of someone the police reasonably, though wrongly, believe shares authority over the home is valid." },
+              { text: "Yes, because only the suspect himself can consent to a search of the home in which he lives.", why: "A co-occupant with common authority may consent (Matlock), and so may one who reasonably appears to have it.", trap: 5 },
+              { text: "No, because the brother was not present to object, so he cannot challenge an entry into the house.", why: "He still has standing in his own home; the entry stands because of apparent authority, not because he was away.", trap: 1 },
+            ],
+            answer: 1,
+            facts: ["said that she lived there", "Mail addressed to her at that house"],
+            say: "Consent from someone who reasonably seems to live there works, even if she moved out: police are judged on what they could see.",
+            status: "general", src: "Illinois v. Rodriguez, 497 U.S. 177 (1990); United States v. Matlock (1974)",
+          },
+          {
             id: "u8-r-exigency", kind: "rule", title: "Exigent circumstances", cat: "V.A",
             say: "Hot pursuit of a felon, evidence about to be destroyed, or an occupant needing emergency aid each excuses the warrant; the aid test is objective reasonableness.",
             elements: ["Hot pursuit of a fleeing felon (Hayden)", "Imminent destruction of evidence, not created by a police violation (King)", "Emergency aid: objectively reasonable basis that an occupant needs help (Brigham City)", "A fleeing misdemeanant: no automatic entry, decided case by case (Lange)"],
@@ -773,8 +892,8 @@
             ],
             answer: 2,
             facts: ["a loud thud and a groan"],
-            say: "A groan behind a locked door: objective reasonableness lets them in, and what they see on the floor is in plain view.",
-            status: "general", src: "Brigham City v. Stuart, 547 U.S. 398 (2006); Case v. Montana (2026); crim.md §7.2 EXC-9",
+            say: "A thud and a groan inside: objective reasonableness lets them in, and what they see on the floor is in plain view.",
+            status: "general", src: "Brigham City v. Stuart, 547 U.S. 398 (2006); Case v. Montana (2026); crim.md §7.2 EXC-9; revised Nov 2, 2026",
           },
           {
             id: "u8-r-inventory", kind: "rule", title: "Inventory searches and the car-and-home limits", cat: "V.A",
@@ -841,7 +960,7 @@
             title: "Special needs: checkpoints, schools, borders and probationers",
             cat: "V.A",
             say: "Suspicionless searches pass only for a special need beyond ordinary crime control: sobriety, border, school and supervision settings.",
-            elements: ["A checkpoint needs a primary purpose other than general crime control (Edmond)", "Valid checkpoints: sobriety (Sitz), immigration near the border (Martinez-Fuerte), crash information (Lidster)", "Schools: a student search needs reasonable suspicion (T.L.O.); athlete and club drug tests pass (Vernonia; Earls)", "Border: routine searches need no suspicion; highly intrusive ones need reasonable suspicion (Montoya de Hernandez)", "Supervision: probationer needs a search condition plus reasonable suspicion (Knights); a parolee needs none (Samson)"],
+            elements: ["A checkpoint needs a primary purpose other than general crime control (Edmond)", "Valid checkpoints: sobriety (Sitz), immigration near the border (Martinez-Fuerte), crash information (Lidster)", "Schools: a student search needs reasonable suspicion (T.L.O.); athlete and club drug tests pass (Vernonia; Earls)", "Border: routine searches need no suspicion; highly intrusive ones need reasonable suspicion (Montoya de Hernandez)", "Probation search condition plus reasonable suspicion suffices (Knights); parolee with one: none (Samson)"],
             distractorElements: ["Probable cause for each person or vehicle searched", "A warrant from a magistrate for every checkpoint"],
             exceptions: ["Border searches of phones and other digital devices are unsettled and are not tested here", "A DNA cheek swab at booking after arrest for a serious offense is permitted (Maryland v. King)"],
             cite: "City of Indianapolis v. Edmond",
@@ -854,7 +973,7 @@
               { t: "tf", q: "A checkpoint set up mainly to detect ordinary drug crime is valid if every car is stopped for under a minute.", a: false, why: "Edmond: a primary purpose of general crime control makes the checkpoint invalid however brief the stop." },
               { t: "mcq", q: "Officers search a probationer's home without a warrant, on reasonable suspicion of a crime, under a probation condition that authorizes searches. The search is...", options: ["Valid: a search condition plus reasonable suspicion is enough (Knights)", "Invalid: probable cause and a warrant are required", "Invalid: probationers may never be searched without a warrant"], a: "Valid: a search condition plus reasonable suspicion is enough (Knights)", why: "United States v. Knights; contrast the parolee, who may be searched with no suspicion (Samson)." },
             ],
-            src: "City of Indianapolis v. Edmond, 531 U.S. 32 (2000); Michigan Department of State Police v. Sitz (1990); United States v. Montoya de Hernandez (1985); United States v. Flores-Montano (2004); United States v. Knights (2001); Samson v. California (2006); New Jersey v. T.L.O. (1985); crim.md §7.1",
+            src: "City of Indianapolis v. Edmond, 531 U.S. 32 (2000); Michigan Department of State Police v. Sitz (1990); United States v. Montoya de Hernandez (1985); United States v. Flores-Montano (2004); United States v. Knights (2001); Samson v. California (2006); New Jersey v. T.L.O. (1985); crim.md §7.1; Knights element reworded Nov 2, 2026 (sufficient, not required)",
           },
           {
             id: "u8-h-checkpoint",
@@ -868,7 +987,7 @@
             stem: "A city set up a roadblock on a main road and stopped every fifth car for about a minute. Officers asked each driver for a license and registration while a trained narcotics dog walked around the outside of the car. The city said that the purpose of the roadblock was to find illegal drugs. A driver whose car was stopped, and who was then found with cocaine after the dog alerted, moves to suppress the cocaine.",
             call: "Should the court grant the motion to suppress?",
             options: [
-              { text: "No, because a dog sniff of the outside of a car is not a search, so the dog's alert supplied probable cause to search.", why: "True of a sniff, but it does not answer the call: stopping cars for a drug program was itself an unreasonable seizure.", trap: 6 },
+              { text: "No, because a dog sniff of the outside of a car is not a search, so the dog's alert supplied probable cause to search.", why: "A sniff alone is no search, but stopping cars for a drug program was itself an unreasonable seizure.", trap: 6 },
               { text: "No, because brief roadblocks are valid, as sobriety checkpoints are, if each car is stopped for only about a minute.", why: "A sobriety checkpoint is valid because of its purpose; a drug-detection purpose is general crime control (Edmond).", trap: 10 },
               { text: "Yes, because a checkpoint with a primary purpose of general crime control is an unreasonable seizure without suspicion.", why: "Edmond: a roadblock to detect ordinary criminal wrongdoing fails, however brief the stops." },
               { text: "Yes, because stopping cars at a checkpoint without individualized suspicion, for any purpose, violates the Fourth Amendment.", why: "Sobriety, border and information-seeking checkpoints are valid.", trap: 7 },
@@ -876,10 +995,10 @@
             answer: 2,
             facts: ["stopped every fifth car", "to find illegal drugs"],
             say: "A roadblock for drugs is crime control, not a special need: the stops fall, and so does what the dog found.",
-            src: "City of Indianapolis v. Edmond, 531 U.S. 32 (2000); Illinois v. Caballes (2005)",
+            src: "City of Indianapolis v. Edmond, 531 U.S. 32 (2000); Illinois v. Caballes (2005); revised Nov 2, 2026",
           },
           {
-            id: "u8-so-special", kind: "sort", cat: "V.A", mode: "yesno", q: "Permitted without individual suspicion, or not?",
+            id: "u8-so-special", kind: "sort", cat: "V.A", mode: "yesno", q: "Permitted without a warrant or probable cause, or not?",
             buckets: ["Permitted", "Not permitted"],
             items: [
               { text: "A checkpoint stopping every car to check drivers for impairment", bucket: "Permitted", why: "Sitz: a brief sobriety checkpoint serves a strong state interest." },
@@ -895,23 +1014,14 @@
               { text: "A school official searching a student's bag for no reason at all", bucket: "Not permitted", why: "T.L.O. requires reasonable suspicion for a search of a student." },
             ],
             say: "Programs with a special need pass: sobriety, border, schools, information-seeking. General crime control never does.",
-            status: "general", src: "Michigan Department of State Police v. Sitz (1990); United States v. Martinez-Fuerte (1976); City of Indianapolis v. Edmond (2000); Illinois v. Lidster (2004); Vernonia School District v. Acton (1995); Board of Education v. Earls (2002); Samson v. California (2006); Maryland v. King (2013); New Jersey v. T.L.O. (1985); United States v. Knights (2001); United States v. Montoya de Hernandez (1985); United States v. Flores-Montano (2004)",
-          },
-          {
-            id: "u8-tr-trunk-sita", kind: "trap", cat: "11", subject: "crim",
-            stem: "Officers arrest a driver for a minor offense, handcuff him in their cruiser, and then search the passenger compartment, the glove box and the trunk 'incident to arrest'.",
-            wrong: "Any lawful arrest lets police search the whole car, trunk included, as a search incident to arrest.",
-            right: "A car search incident to arrest needs an unsecured arrestee within reach or reason to believe evidence of the arrest offense is inside (Gant); the trunk needs the automobile exception and probable cause.",
-            why: "Stale rule: the old 'search the whole cabin after every arrest' guides pre-date Gant (2009), and the trunk was never covered by a search incident to arrest.",
-            say: "Trunk and search incident to arrest never go together; Gant narrowed the cabin, too.",
-            status: "general", src: "Arizona v. Gant (2009); New York v. Belton (1981)",
+            status: "general", src: "Michigan Department of State Police v. Sitz (1990); United States v. Martinez-Fuerte (1976); City of Indianapolis v. Edmond (2000); Illinois v. Lidster (2004); Vernonia School District v. Acton (1995); Board of Education v. Earls (2002); Samson v. California (2006); Maryland v. King (2013); New Jersey v. T.L.O. (1985); United States v. Knights (2001); United States v. Montoya de Hernandez (1985); United States v. Flores-Montano (2004); revised Nov 2, 2026",
           },
           { id: "u8-c-case-montana", kind: "case", subject: "crim", cat: "V.A", name: "Case v. Montana", year: 2026, recent: true, holding: "Officers may enter a home without a warrant to give emergency aid on an objectively reasonable basis to believe an occupant needs help; probable cause is not required.", facts: "Officers entered a home after a report that a man might harm himself with a gun.", say: "Emergency aid: objective reasonableness, 'without further gloss', and no probable cause of a crime.", status: "general", src: "Case v. Montana, No. 24-624 (Jan. 14, 2026); Brigham City v. Stuart (2006); crim.md §7.1, §14" },
           { id: "u8-c-caniglia", kind: "case", subject: "crim", cat: "V.A", name: "Caniglia v. Strom", year: 2021, holding: "The community-caretaking exception for vehicles does not authorize a warrantless entry into a home to seize firearms.", facts: "Officers went into a man's house and took his guns after a welfare scare, with no emergency.", say: "Caretaking is for cars, not homes; a real emergency still has its own exception.", status: "general", src: "Caniglia v. Strom, 593 U.S. 194 (2021); Cady v. Dombrowski (1973)" },
         ],
       },
       {
-        id: "u8l4",
+        id: "u8l5",
         title: "The exclusionary rule",
         items: [
           {
@@ -939,7 +1049,7 @@
             say: "Independent source, inevitable discovery, attenuation: each lets the prosecution use evidence that the illegality might otherwise taint.",
             elements: ["Independent source: the evidence was also obtained lawfully, untouched by the illegality (Murray)", "Inevitable discovery: lawful discovery was inevitable, shown by a preponderance (Nix)", "Attenuation: the link to the illegality is too weak (Brown factors; Strieff)"],
             ordered: false,
-            distractorElements: ["Good faith: the officer thought the search was lawful", "Standing: the defendant owned the evidence"],
+            distractorElements: ["The officer subjectively believed the search was lawful", "Standing: the defendant owned the evidence"],
             numbers: [{ label: "Prosecution's burden to prove inevitable discovery", value: "Preponderance of the evidence" }],
             exceptions: ["Brown factors: time elapsed, intervening circumstances, and the purpose and flagrancy of the misconduct", "Miranda warnings alone do not attenuate an illegal arrest (Brown)", "A valid pre-existing arrest warrant found after a negligent unlawful stop attenuates the taint (Strieff)"],
             cite: "Nix v. Williams",
@@ -952,8 +1062,8 @@
               { t: "tf", q: "Giving Miranda warnings after an illegal arrest, by itself, cleans the taint of the arrest.", a: false, why: "Brown v. Illinois: warnings alone do not attenuate; time, intervening events and flagrancy matter." },
               { t: "mcq", q: "To rely on inevitable discovery, the prosecution must prove it by...", options: ["A preponderance of the evidence", "Clear and convincing evidence", "Proof beyond a reasonable doubt"], a: "A preponderance of the evidence", why: "Nix v. Williams: a preponderance, and no showing of good faith is required." },
             ],
-            hook: "IIA plus G: Independent source, Inevitable discovery, Attenuation, plus Good faith.",
-            status: "general", src: "Murray v. United States (1988); Nix v. Williams, 467 U.S. 431 (1984); Brown v. Illinois (1975); Utah v. Strieff (2016); crim.md §7.1",
+            hook: "IIA: Independent source, Inevitable discovery, Attenuation. Good faith is its own card: it denies exclusion rather than cleaning the taint.",
+            status: "general", src: "Murray v. United States (1988); Nix v. Williams, 467 U.S. 431 (1984); Brown v. Illinois (1975); Utah v. Strieff (2016); crim.md §7.1; hook and distractor tile revised Nov 2, 2026",
           },
           {
             id: "u8-so-taint", kind: "sort", cat: "V.A", mode: "category", q: "Which way does the prosecution clean the taint?",
@@ -992,11 +1102,11 @@
               { text: "No, because the warrant rested on information independent of the illegal entry, which neither prompted nor informed it.", why: "Murray: evidence first seen in an illegal entry is admissible if later obtained by a genuinely independent source." },
               { text: "Yes, because the agents saw the parts during the illegal entry before the warrant issued, so the seizure was tainted.", why: "Seeing the parts first does not taint a warrant that rests on independent information.", trap: 2 },
               { text: "Yes, because a warrant sought after an illegal entry is always tainted by it, whatever information supports the warrant.", why: "Only a warrant prompted by, or based on, the illegal entry is tainted.", trap: 7 },
-              { text: "No, because the agents did not damage or take anything during the entry, so the illegality caused no harm.", why: "True, but it does not answer the call; the entry was still unlawful and the question is the source of the later seizure.", trap: 6 },
+              { text: "No, because the agents did not damage or take anything during the entry, so the illegality caused no harm.", why: "Causing no damage does not make the entry lawful; what saves the parts is that the warrant had an independent source.", trap: 6 },
             ],
             answer: 0,
             say: "Look first, warrant later: the warrant is clean if the look neither prompted it nor fed it.",
-            status: "general", src: "Murray v. United States, 487 U.S. 533 (1988); crim.md §7.2 EXCL-2",
+            status: "general", src: "Murray v. United States, 487 U.S. 533 (1988); crim.md §7.2 EXCL-2; revised Nov 2, 2026",
           },
           {
             id: "u8-h-inevitable", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-taint", issue: "inevitable discovery", grid: true,
@@ -1049,7 +1159,7 @@
           },
           {
             id: "u8-h-leon", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-goodfaith", issue: "good-faith reliance on a warrant", grid: true,
-            stem: "Based on a detailed affidavit describing controlled drug purchases made at a house some months earlier, a magistrate issued a warrant to search it. Officers executed the warrant and found drugs. A court later held that the information was too stale to establish probable cause, so the warrant should not have issued. Nothing suggests that the affiant lied, that the magistrate acted as a rubber stamp, or that the warrant's description was deficient. The occupant moves to suppress the drugs.",
+            stem: "Based on a detailed affidavit describing controlled drug purchases made at a house some months earlier, a magistrate issued a warrant to search it. Officers executed the warrant and found drugs. A court later held that the information was too stale to establish probable cause, so the warrant should not have issued. The affidavit was detailed and truthful, and the warrant described the house and the drugs precisely. The occupant moves to suppress the drugs.",
             call: "Should the court grant the motion to suppress?",
             options: [
               { text: "Yes, because the warrant was not supported by probable cause, and evidence seized under an invalid warrant is excluded.", why: "Right that probable cause was lacking, but the good-faith exception admits the evidence anyway.", trap: 2 },
@@ -1059,7 +1169,22 @@
             ],
             answer: 1,
             say: "A good-faith warrant that later fails still keeps the evidence, unless the affiant lied or the affidavit was bare-bones.",
-            status: "general", src: "United States v. Leon, 468 U.S. 897 (1984)",
+            status: "general", src: "United States v. Leon, 468 U.S. 897 (1984); stem revised Nov 2, 2026 (no longer recites the four exceptions)",
+          },
+          {
+            id: "u8-h-bare-bones", kind: "hypo", cat: "V.A", callType: "motion", rule: "u8-r-goodfaith", issue: "good faith and a bare-bones affidavit", transfer: true,
+            stem: "A detective applied for a warrant to search an apartment for stolen jewelry. His sworn affidavit said only that he had 'received information from a confidential source and believes that stolen jewelry is being kept' at the apartment. It gave no details about the source, how the source knew, or when the jewelry was seen. A magistrate signed the warrant, and officers executing it found the jewelry. The tenant moves to suppress it, and the prosecution argues that the officers relied in good faith on the warrant.",
+            call: "Should the court grant the motion to suppress?",
+            options: [
+              { text: "No, because the officers relied on a warrant signed by a neutral magistrate, which always shows objective good faith.", why: "Leon withholds good faith where the affidavit is so lacking in indicia of probable cause that reliance on it is unreasonable.", trap: 7 },
+              { text: "Yes, because the affidavit was so bare of supporting facts that no reasonable officer could rely on it.", why: "Leon: a bare-bones affidavit, stating only a conclusion from an unexplained source, is one of the cases where good faith cannot save the warrant." },
+              { text: "No, because the jewelry the warrant described was actually found there, which confirms that probable cause existed.", why: "Probable cause is judged on what the affidavit said before the search, not on what the search turned up.", trap: 5 },
+              { text: "Yes, because the affidavit did not name the confidential source, and a warrant affidavit must identify its sources.", why: "Sources need not be named; what the affidavit lacked was any fact showing the source's reliability or basis of knowledge (Gates).", trap: 5 },
+            ],
+            answer: 1,
+            facts: ["said only that he had", "gave no details about the source"],
+            say: "Good faith needs something to rely on: a conclusion with no facts behind it is bare-bones, and the evidence goes.",
+            status: "general", src: "United States v. Leon, 468 U.S. 897, 923 (1984); Illinois v. Gates (1983); Aguilar v. Texas (1964)",
           },
           {
             id: "u8-h-binding-precedent",
@@ -1120,23 +1245,23 @@
           },
           {
             id: "u8-a-suppress", kind: "argue", cat: "V.A", rule: "u8-r-excl", issue: "best argument for suppression",
-            stem: "Officers who saw a man leave a house they suspected of drug dealing stopped him with no reasonable suspicion of crime. He was nervous and refused to answer questions. The officers arrested him although they had no probable cause that he had committed any crime, and, in a search incident to the arrest, found cocaine in his jacket. He is charged with possession and his lawyer is preparing a motion to suppress.",
+            stem: "Officers watching a house they suspected of drug dealing saw a man walk out of it, and they stopped him on the sidewalk. He was nervous and refused to answer their questions. The officers then arrested him for acting suspiciously and, in a search incident to the arrest, found cocaine in his jacket pocket. He is charged with possession, and his lawyer is preparing a motion to suppress.",
             call: "What is the defense lawyer's best argument?",
             options: [
-              { text: "The arrest lacked probable cause, so the cocaine found in the search incident to it must be suppressed.", why: "No probable cause means no lawful arrest, and a search incident to arrest needs one. The earlier stop without reasonable suspicion was independently unlawful, so the cocaine is fruit of both." },
+              { text: "The arrest lacked probable cause, so the cocaine found in the search incident to it must be suppressed.", why: "Leaving a suspected house, nervousness and refusing to answer fall short of probable cause, and a search incident to arrest needs a lawful arrest. The cocaine is fruit of the unlawful arrest." },
               { text: "A search incident to arrest is invalid unless the officers first obtain a warrant from a neutral magistrate.", why: "A search incident to a lawful arrest needs no warrant, so this misstates the rule." },
               { text: "The cocaine was inside his jacket, an area within his reasonable expectation of privacy, so the search was unreasonable.", why: "True, but his privacy is not the defect; a lawful arrest permits a search of the person." },
               { text: "The officers lacked probable cause to believe that his jacket held drugs, so they could not search it.", why: "A search of the person incident to a lawful arrest needs no separate probable cause; the defect is the missing probable cause for the arrest itself." },
             ],
             answer: 0,
-            say: "No probable cause, no lawful arrest; no lawful arrest, no search incident to it. The unlawful stop falls first, and the rest follow as fruit.",
-            status: "general", src: "Wong Sun v. United States (1963); Terry v. Ohio (1968); United States v. Robinson (1973)",
+            say: "No probable cause, no lawful arrest; no lawful arrest, no search incident to it. Nervous silence outside a suspect house is not probable cause.",
+            status: "general", src: "Wong Sun v. United States (1963); Florida v. Royer (1983); Brown v. Texas (1979); United States v. Robinson (1973); stem revised Nov 2, 2026 (no stated conclusions)",
           },
           { id: "u8-c-mapp", kind: "case", subject: "crim", cat: "V.A", name: "Mapp v. Ohio", year: 1961, holding: "Evidence obtained by an unconstitutional search is inadmissible in state as well as federal criminal trials.", facts: "Cleveland police forced their way into a home looking for a bombing suspect and found obscene materials.", overrules: "Wolf v. Colorado (1949)", say: "The exclusionary rule became national in 1961.", hook: "Dollree Mapp's door, Cleveland, 1957: the search that made every state court exclude illegal evidence.", status: "general", src: "Mapp v. Ohio, 367 U.S. 643 (1961)" },
         ],
       },
       {
-        id: "u8l5",
+        id: "u8l6",
         title: "Confessions, Miranda and the privilege",
         items: [
           {
@@ -1242,9 +1367,24 @@
               { text: "No, because Miranda warnings are required only for a suspect who has been formally charged with the offense.", why: "Formal charge is the Sixth Amendment trigger; Miranda turns on custody and interrogation.", trap: 4 },
             ],
             answer: 2,
-            facts: ["free to leave", "closed office"],
+            facts: ["drove himself there", "free to leave"],
             say: "Walk in freely and hear that you may leave: no custody, no warnings, even in a station-house interview room.",
-            src: "Oregon v. Mathiason, 429 U.S. 492 (1977); California v. Beheler, 463 U.S. 1121 (1983); Stansbury v. California (1994); Frazier v. Cupp (1969)",
+            src: "Oregon v. Mathiason, 429 U.S. 492 (1977); California v. Beheler, 463 U.S. 1121 (1983); Stansbury v. California (1994); Frazier v. Cupp (1969); facts list revised Nov 2, 2026",
+          },
+          {
+            id: "u8-h-howes", kind: "hypo", cat: "V.B", callType: "admissible", rule: "u8-r-miranda", issue: "prisoner questioned about another crime", grid: true,
+            stem: "A prison inmate serving a sentence for burglary was escorted by a guard from his cell to a meeting room, where two deputies questioned him about a car theft committed before his imprisonment. At the start, the deputies told him that he could end the interview and go back to his cell whenever he wished. He was not handcuffed, and he was offered water. He was not given Miranda warnings. After about an hour he confessed to the theft. He moves to suppress the confession.",
+            call: "Is the confession admissible?",
+            options: [
+              { text: "Yes, because an inmate questioned about an outside crime is not automatically in custody, and he was told he could leave.", why: "Howes v. Fields: imprisonment alone is not Miranda custody; told he could return to his cell, and unrestrained, he was not in custody for the interview." },
+              { text: "No, because a prison inmate is always in custody for Miranda purposes, wherever and however he is questioned.", why: "Howes rejected a categorical rule: the question is whether the interview itself imposed restraint of the kind associated with arrest.", trap: 7 },
+              { text: "No, because an hour of questioning without warnings makes any resulting confession involuntary under due process.", why: "Length alone does not make a statement involuntary; nothing here shows coercion, and the Miranda question turns on custody.", trap: 5 },
+              { text: "Yes, because Miranda applies only to questioning about the crime for which a suspect is currently being held.", why: "Miranda covers questioning about any crime; this confession comes in because the interview was not custodial.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["go back to his cell whenever he wished", "not handcuffed"],
+            say: "Prison is not automatically Miranda custody: tell the inmate he may go back to his cell and the interview can be non-custodial.",
+            status: "general", src: "Howes v. Fields, 565 U.S. 499 (2012); Maryland v. Shatzer (2010)",
           },
           {
             id: "u8-h-innis", kind: "hypo", cat: "V.B", callType: "admissible", rule: "u8-r-miranda", issue: "interrogation or volunteered statement", grid: true,
@@ -1291,12 +1431,12 @@
               { text: "No, because any mention of a lawyer, however tentative, requires officers to stop all questioning at once.", why: "Only an unambiguous request for counsel has that effect.", trap: 7 },
               { text: "Yes, because the statement was not an unambiguous request for counsel, so the detectives were not required to stop.", why: "Davis: a reasonable officer would understand only that the suspect might be invoking; that is not enough, and clarifying questions are not required." },
               { text: "No, because once he mentioned a lawyer the detectives were required to ask what he meant before continuing.", why: "Davis held that officers may, but need not, clarify an ambiguous statement.", trap: 5 },
-              { text: "Yes, because he was advised of his rights at the outset and agreed to talk, so he could not later invoke.", why: "True, but it does not answer the call: a suspect may invoke after waiving; the point is that this statement was ambiguous.", trap: 6 },
+              { text: "Yes, because he was advised of his rights at the outset and agreed to talk, so he could not later invoke.", why: "A suspect may invoke at any time after waiving; the confession comes in only because this statement was ambiguous (Davis).", trap: 1 },
             ],
             answer: 1,
             facts: ["I think I might need a lawyer for this", "continued questioning"],
             say: "'Maybe' and 'I think I might' are not invocations; say it plainly and the questions stop.",
-            status: "general", src: "Davis v. United States, 512 U.S. 452 (1994); crim.md §8.2 MIR-3",
+            status: "general", src: "Davis v. United States, 512 U.S. 452 (1994); crim.md §8.2 MIR-3; option D's trap and why corrected Nov 2, 2026",
           },
           {
             id: "u8-h-edwards", kind: "hypo", cat: "V.B", callType: "admissible", rule: "u8-r-invocation", issue: "re-approach after invoking counsel", grid: true,
@@ -1330,9 +1470,9 @@
               { text: "Yes, because a suspect who has been warned once may be questioned for any length of time without new warnings.", why: "Length bears on voluntariness; the answer is admissible because of the implied waiver, not because warnings last forever.", trap: 7 },
             ],
             answer: 2,
-            facts: ["never signed a waiver", "nearly three hours"],
+            facts: ["said that he understood them", "he answered, 'Yes.'"],
             say: "No magic words are needed to waive: warned, understood, then answered is a waiver, and silence alone is not an invocation.",
-            src: "Berghuis v. Thompkins, 560 U.S. 370 (2010); North Carolina v. Butler (1979)",
+            src: "Berghuis v. Thompkins, 560 U.S. 370 (2010); North Carolina v. Butler (1979); revised Nov 2, 2026",
           },
           {
             id: "u8-a-reinitiate", kind: "argue", cat: "V.B", rule: "u8-r-invocation", issue: "re-initiation after invoking counsel",
@@ -1353,38 +1493,38 @@
             stem: "A prison inmate was questioned about a robbery committed before his imprisonment. After warnings, he said he wanted a lawyer, and the interview ended. He then remained in the general prison population. Three years later, other detectives gave fresh warnings and again questioned him about the same robbery. He waived his rights and confessed. He moves to suppress the confession, arguing that his earlier request for counsel barred any later interrogation.",
             call: "Is the confession admissible?",
             options: [
-              { text: "No, because once a suspect invokes counsel, police may never question him about that crime without counsel present.", why: "Stale rule: that was the logical reach of Edwards before Shatzer set the 14-day break.", trap: 11 },
+              { text: "No, because once a suspect invokes counsel, police may never question him about that crime without counsel present.", why: "Before Shatzer the Edwards bar had no end date; a 14-day break in custody now ends it.", trap: 11 },
               { text: "Yes, because his return to the general prison population more than 14 days earlier ended the bar on re-approaching him.", why: "Shatzer: a break in Miranda custody of 14 days restores the suspect's freedom from the Edwards presumption." },
               { text: "No, because the inmate had not spoken with a lawyer in the meantime, so the earlier request still controlled.", why: "Consulting a lawyer is not what ends the bar; a break in custody does.", trap: 5 },
               { text: "Yes, because inmates are never in custody for Miranda purposes, so no warnings or invocation rules apply.", why: "Prison questioning is not automatically custody, but the bar here ends because of the break in custody, not a blanket rule.", trap: 7 },
             ],
             answer: 1,
             say: "The Edwards bar is not forever: fourteen days back in the yard and detectives may try again.",
-            status: "general", src: "Maryland v. Shatzer, 559 U.S. 98 (2010); crim.md §8.2 MIR-5",
+            status: "general", src: "Maryland v. Shatzer, 559 U.S. 98 (2010); crim.md §8.2 MIR-5; revised Nov 2, 2026",
           },
           {
             id: "u8-h-quarles", kind: "hypo", cat: "V.B", callType: "admissible", rule: "u8-r-miranda", issue: "public-safety exception", grid: true,
-            stem: "Officers chased an armed-robbery suspect into a supermarket and caught him as he came out of an aisle. They handcuffed him, saw an empty shoulder holster, and, before giving any warnings, asked where the gun was. He nodded toward a freezer and said it was over there. The officers recovered a loaded handgun from the freezer. The suspect moves to suppress his statement and the gun.",
+            stem: "A witness told officers that a man who had just fired a pistol in a crowded park had run into a nearby elementary school playground during recess. Officers found the man crouched behind a slide, handcuffed him, and found no gun on him. Before giving any warnings, an officer asked him where the pistol was. He said that he had dropped it into a sandbox, and the officers recovered it there. The man moves to suppress his statement and the pistol.",
             call: "Should the court grant the motion to suppress?",
             options: [
               { text: "Yes, because he was in custody and was questioned without warnings, so the answer cannot be used against him.", why: "That states the general rule and misses the exception.", trap: 2 },
-              { text: "Yes, because the gun was found only through an unwarned statement, and physical fruit of such a statement is suppressed.", why: "Physical fruits of an unwarned but voluntary statement are admissible even outside the public-safety exception (Patane).", trap: 5 },
-              { text: "No, because the officers had probable cause to arrest him, and a lawful arrest makes warnings unnecessary.", why: "True, but it does not answer the Miranda question; the public-safety exception does.", trap: 6 },
-              { text: "No, because the question was prompted by a concern for public safety, so warnings were not required before it.", why: "Quarles: a question reasonably prompted by a threat to public safety, here a loose gun in a store, falls outside Miranda." },
+              { text: "Yes, because the pistol was found only through an unwarned statement, and physical fruit of such a statement is suppressed.", why: "Physical fruits of an unwarned but voluntary statement are admissible even outside the public-safety exception (Patane).", trap: 5 },
+              { text: "No, because the officers had probable cause to arrest him, and a lawful arrest makes warnings unnecessary.", why: "An arrest puts him in custody, which is when warnings are required; only the public-safety exception excuses them here.", trap: 1 },
+              { text: "No, because the question was prompted by a concern for public safety, so warnings were not required before it.", why: "Quarles: a question reasonably prompted by a threat to public safety, here a loaded pistol loose near children, falls outside Miranda." },
             ],
             answer: 3,
-            facts: ["empty shoulder holster", "asked where the gun was"],
-            say: "A loose gun in a supermarket outranks the warnings: ask first, warn after.",
-            status: "general", src: "New York v. Quarles, 467 U.S. 649 (1984); crim.md §8.2 MIR-7",
+            facts: ["found no gun on him", "asked him where the pistol was"],
+            say: "A loose gun near a playground outranks the warnings: ask first, warn after.",
+            status: "general", src: "New York v. Quarles, 467 U.S. 649 (1984); United States v. Patane (2004); crim.md §8.2 MIR-7; stem rewritten with fresh facts and option C's trap corrected Nov 2, 2026",
           },
           {
             id: "u8-tr-miranda-arrest", kind: "trap", cat: "5", subject: "crim",
             stem: "Officers arrest a man for burglary and take him to a cell without reading him the Miranda warnings. While being booked, and with no one having questioned him, he says, 'I did it.'",
             wrong: "The statement is inadmissible because the officers arrested him and never read the Miranda warnings.",
             right: "Warnings are required only before custodial interrogation; a volunteered statement is admissible.",
-            why: "Misstated rule: television has the warnings at the handcuffs, but the law attaches them to questioning, not to arrests.",
+            why: "Television has the warnings at the handcuffs, but the law attaches them to questioning, not to arrests.",
             say: "No questioning, no Miranda problem: warnings follow interrogation, not arrests.",
-            status: "general", src: "Miranda v. Arizona (1966); Rhode Island v. Innis (1980); hooks.jsonl (cop shows)",
+            status: "general", src: "Miranda v. Arizona (1966); Rhode Island v. Innis (1980); hooks.jsonl (cop shows); revised Nov 2, 2026",
           },
           { id: "u8-c-salinas", kind: "case", subject: "crim", cat: "V.B", name: "Salinas v. Texas", year: 2013, holding: "In a voluntary, non-custodial interview, a person who simply stops answering must expressly invoke the privilege or his silence can be used against him (plurality).", facts: "A Houston man stopped answering one question in a voluntary police interview.", say: "Outside custody, silence is not an invocation: say 'I invoke' or the prosecutor may comment.", hook: "Salinas went quiet on one question and never said he was invoking the Fifth. The plurality held that was fatal.", status: "general", src: "Salinas v. Texas, 570 U.S. 178 (2013); hooks.jsonl" },
           {
@@ -1422,6 +1562,21 @@
             status: "general", src: "Missouri v. Seibert, 542 U.S. 600 (2004); Oregon v. Elstad (1985); crim.md §8.2 MIR-8",
           },
           {
+            id: "u8-h-harris", kind: "hypo", cat: "V.B", callType: "admissible", rule: "u8-r-use", issue: "unwarned statement used to impeach", grid: true,
+            stem: "After his arrest for selling stolen phones, a man was questioned at the station without Miranda warnings. Without any threats or promises, he admitted that he had bought the phones knowing that they were stolen. The court suppressed the admission from the prosecution's case-in-chief. At trial, the man testified that he had no idea the phones were stolen. On cross-examination, the prosecutor seeks to ask him about his station-house admission to show that he is lying. The defense objects.",
+            call: "May the prosecutor use the admission for that purpose?",
+            options: [
+              { text: "Yes, because a voluntary but unwarned statement may be used to impeach the defendant's contrary testimony.", why: "Harris v. New York: Miranda is not a license to testify falsely; the jury may weigh the admission on his credibility." },
+              { text: "No, because a statement taken in violation of Miranda is inadmissible at trial for any purpose at all.", why: "Only an involuntary statement is barred for every purpose (Mincey); an unwarned but voluntary one may impeach.", trap: 7 },
+              { text: "No, because an unwarned statement may impeach only testimony that the defendant gives about the interrogation itself.", why: "Harris lets the statement impeach any testimony it contradicts, not only testimony about the questioning.", trap: 5 },
+              { text: "Yes, because the statement was voluntary, so it is also admissible in the prosecution's case-in-chief.", why: "A voluntary but unwarned statement stays out of the case-in-chief; it comes in here only to impeach.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["Without any threats or promises", "testified that he had no idea"],
+            say: "Unwarned but voluntary: out of the case-in-chief, but it can still call the defendant's testimony a lie.",
+            status: "general", src: "Harris v. New York, 401 U.S. 222 (1971); Mincey v. Arizona (1978)",
+          },
+          {
             id: "u8-h-vega",
             kind: "hypo",
             status: "general",
@@ -1436,12 +1591,12 @@
               { text: "Yes, because a bare Miranda violation is not a violation of the self-incrimination clause, so no §1983 claim lies.", why: "Vega v. Tekoh: a Miranda violation is not itself a deprivation of a constitutional right for §1983 purposes." },
               { text: "No, because the Fifth Amendment is violated the moment a statement is taken from a suspect without warnings.", why: "Vega: the privilege is a trial right, and the warnings are a prophylactic rule.", trap: 5 },
               { text: "No, because Miranda is a constitutional rule, so any violation of it, however minor, gives rise to a damages claim.", why: "Miranda is constitutional (Dickerson), but a bare violation of its prophylactic rule is not a violation of the privilege (Vega).", trap: 10 },
-              { text: "Yes, because the jury acquitted him at trial, so he suffered no injury from the questioning that damages could redress.", why: "The reasoning is wrong: the claim fails because a Miranda violation alone supports no §1983 action, whatever the verdict.", trap: 1 },
+              { text: "Yes, because the jury acquitted him at trial, so he suffered no injury from the questioning that damages could redress.", why: "The claim fails because a Miranda violation alone supports no §1983 action, whatever the verdict.", trap: 1 },
             ],
             answer: 0,
             facts: ["without giving him Miranda warnings", "alleging only"],
             say: "Miranda is a rule for the trial, not a damages right: an unwarned statement used at trial gives no §1983 claim by itself.",
-            src: "Vega v. Tekoh, 597 U.S. 134 (2022); 42 U.S.C. §1983; Dickerson v. United States (2000)",
+            src: "Vega v. Tekoh, 597 U.S. 134 (2022); 42 U.S.C. §1983; Dickerson v. United States (2000); revised Nov 2, 2026",
           },
           {
             id: "u8-r-privilege", kind: "rule", title: "The privilege against self-incrimination", cat: "V.B",
@@ -1480,7 +1635,7 @@
         ],
       },
       {
-        id: "u8l6",
+        id: "u8l7",
         title: "Counsel and identification",
         items: [
           {
@@ -1526,11 +1681,11 @@
               { text: "Yes, because the right is offense-specific, the killing was uncharged, and he validly waived his Miranda rights.", why: "McNeil; Cobb: the right attaches only to charged offenses and those that are the same offense under Blockburger." },
               { text: "No, because police may not question a person who is represented by counsel on any matter without his lawyer present.", why: "That overstates the rule: counsel's presence is required only for the charged offense.", trap: 5 },
               { text: "No, because the burglary and the killing arose from the same investigation, so the charged offense covers both.", why: "The stem describes a separate incident; relatedness in the investigation does not matter, only whether it is the same offense.", trap: 3 },
-              { text: "Yes, because a defendant who is not in custody cannot invoke any right to counsel during police questioning.", why: "True of the Miranda-Edwards right, but it does not answer why the Sixth Amendment does not apply here.", trap: 6 },
+              { text: "Yes, because a defendant who is not in custody cannot invoke any right to counsel during police questioning.", why: "False: the Sixth Amendment right applies in or out of custody (Massiah). The confession comes in because the right is offense-specific and the killing was uncharged.", trap: 1 },
             ],
             answer: 0,
             say: "Counsel on the burglary does not shield the killing: the Sixth Amendment is offense-specific.",
-            status: "general", src: "Texas v. Cobb, 532 U.S. 162 (2001); McNeil v. Wisconsin (1991); crim.md §10.1",
+            status: "general", src: "Texas v. Cobb, 532 U.S. 162 (2001); McNeil v. Wisconsin (1991); crim.md §10.1; option D's trap and why corrected Nov 2, 2026",
           },
           {
             id: "u8-h-brewer",
@@ -1541,18 +1696,18 @@
             rule: "u8-r-sixth",
             issue: "deliberate elicitation without a question",
             transfer: true,
-            stem: "A man was arraigned on a charge of abducting a hiker, and a lawyer was appointed. The lawyer told the police, and the man repeated, that he would make no statement without the lawyer present. A detective then drove the man alone to another city. During the drive the detective said, without asking any question, that a snowstorm was coming and that, if it buried the trail, her family might never be able to give her a proper burial. After a long silence, the man told the detective where he had left the hiker's body. He moves to suppress his statements.",
-            call: "Are the man's statements admissible?",
+            stem: "A woman was arraigned on an arson charge for a warehouse fire that badly burned a night watchman, and a lawyer was appointed. The lawyer told the police, and the woman repeated, that she would make no statement without the lawyer present. Later, a detective driving her alone to a court hearing said, without asking any question, that the watchman's children kept asking who had hurt their father and deserved an answer. After several minutes of silence, the woman said that she had set the fire. She moves to suppress her statement.",
+            call: "Is the woman's statement admissible?",
             options: [
-              { text: "Yes, because the detective asked no question, so there was no interrogation and the statements were purely volunteered by him.", why: "Deliberate elicitation does not need a formal question; a speech designed to draw a response counts (Brewer; Fellers).", trap: 5 },
-              { text: "No, because the detective deliberately elicited the statements after counsel's right attached, without counsel or a waiver.", why: "Brewer v. Williams: after arraignment, deliberate elicitation outside counsel's presence violates the Sixth Amendment." },
-              { text: "No, because he was never given Miranda warnings, and any statement in custody without them must be suppressed.", why: "The stem does not say so; the Sixth Amendment, not Miranda, is the source of the bar.", trap: 3 },
-              { text: "Yes, because the body would inevitably have been found by lawful means, so the location evidence is admissible.", why: "Inevitable discovery could save the body, not the statements, and nothing in the stem shows a lawful search under way.", trap: 10 },
+              { text: "Yes, because the detective asked no question, so there was no interrogation and the statement was purely volunteered by her.", why: "Deliberate elicitation does not need a formal question; a speech designed to draw a response counts (Brewer; Fellers).", trap: 5 },
+              { text: "No, because the detective deliberately elicited the statement after the right to counsel attached, without counsel or a waiver.", why: "Brewer v. Williams: after arraignment, deliberate elicitation outside counsel's presence violates the Sixth Amendment." },
+              { text: "No, because she was never given Miranda warnings, and any statement in custody without them must be suppressed.", why: "The stem does not say so; the Sixth Amendment, not Miranda, is the source of the bar.", trap: 3 },
+              { text: "Yes, because she was not being questioned at a police station, so the protections against interrogation did not apply.", why: "Location is irrelevant: after charge, the Sixth Amendment bars deliberate elicitation without counsel wherever it happens.", trap: 5 },
             ],
             answer: 1,
             facts: ["without asking any question", "arraigned"],
             say: "After charge, a speech meant to draw a response is as good as a question: deliberate elicitation, no counsel, no statement.",
-            src: "Brewer v. Williams, 430 U.S. 387 (1977); Fellers v. United States (2004); Massiah v. United States (1964)",
+            src: "Brewer v. Williams, 430 U.S. 387 (1977); Fellers v. United States (2004); Massiah v. United States (1964); stem rewritten with fresh facts Nov 2, 2026",
           },
           {
             id: "u8-r-gideon", kind: "rule", title: "Appointed counsel for the indigent", cat: "V.D",
@@ -1574,8 +1729,23 @@
             status: "general", src: "Gideon v. Wainwright, 372 U.S. 335 (1963); Argersinger v. Hamlin (1972); Scott v. Illinois (1979); Alabama v. Shelton (2002); Douglas v. California (1963); Ross v. Moffitt (1974); crim.md §10.1",
           },
           {
+            id: "u8-h-shelton", kind: "hypo", cat: "V.D", callType: "constitutional", rule: "u8-r-gideon", issue: "counsel for a suspended jail term", grid: true,
+            stem: "An indigent woman was charged with a misdemeanor punishable by up to one year in jail. She asked for an appointed lawyer, and the court refused. Tried without counsel, she was convicted and sentenced to thirty days in jail, suspended, and one year of probation; a violation of probation could send her to jail for the thirty days. She appeals, arguing that refusing her a lawyer violated her constitutional right to counsel.",
+            call: "Was she entitled to appointed counsel?",
+            options: [
+              { text: "No, because she was charged only with a misdemeanor, and appointed counsel is required only in felony prosecutions.", why: "That was the line before Argersinger; any misdemeanor that ends in imprisonment now requires counsel.", trap: 11 },
+              { text: "Yes, because a suspended jail term that may be activated cannot be imposed on an indigent who was denied counsel.", why: "Alabama v. Shelton: a suspended sentence that may end in jail is a term of imprisonment, so she had a right to appointed counsel." },
+              { text: "No, because she was not actually sent to jail, and counsel is required only when the defendant serves time.", why: "Scott's actual-imprisonment line counts a suspended term that a probation violation could activate (Shelton).", trap: 9 },
+              { text: "Yes, because any offense that authorizes a jail term requires appointed counsel, whatever sentence is imposed.", why: "Authorized jail is not enough (Scott); the sentence imposed controls, and here it was a suspended jail term.", trap: 1 },
+            ],
+            answer: 1,
+            facts: ["thirty days in jail, suspended", "She asked for an appointed lawyer"],
+            say: "Jail on the table at sentencing, even suspended, means counsel; a fine alone does not.",
+            status: "general", src: "Alabama v. Shelton, 535 U.S. 654 (2002); Scott v. Illinois (1979); Argersinger v. Hamlin (1972)",
+          },
+          {
             id: "u8-r-strickland", kind: "rule", title: "Ineffective assistance of counsel", cat: "V.D",
-            say: "Both prongs must be shown: deficient performance and a reasonable probability of a different result. Prejudice is presumed only if counsel was absent.",
+            say: "Both prongs: deficient performance and a reasonable probability of a different result. Prejudice is presumed only in narrow cases, like absent counsel.",
             elements: ["Deficient performance: representation fell below an objective standard of reasonableness", "Judged from counsel's view at the time, with strategic choices after reasonable investigation presumed sound", "Prejudice: a reasonable probability that, but for the error, the result would have been different"],
             ordered: false,
             distractorElements: ["The defendant was convicted", "Counsel was inexperienced"],
@@ -1590,7 +1760,7 @@
               { t: "tf", q: "Prejudice is presumed whenever defense counsel's performance was poor.", a: false, why: "The defendant ordinarily must show a reasonable probability of a different result; prejudice is presumed only in limited cases such as total absence of counsel." },
               { t: "mcq", q: "A noncitizen's lawyer wrongly advises that a guilty plea has no immigration consequences, though deportation is clearly mandatory. This is...", options: ["Deficient performance, and prejudice if he would have gone to trial", "Not deficient, because deportation is a collateral consequence", "Deficient performance, with prejudice presumed"], a: "Deficient performance, and prejudice if he would have gone to trial", why: "Padilla v. Kentucky; Lee v. United States: the prejudice question is whether he would have rejected the plea." },
             ],
-            status: "general", src: "Strickland v. Washington, 466 U.S. 668 (1984); United States v. Cronic (1984); Cuyler v. Sullivan (1980); Holloway v. Arkansas (1978); Missouri v. Frye (2012); Lafler v. Cooper (2012); Padilla v. Kentucky (2010); Garza v. Idaho (2019); crim.md §10.1",
+            status: "general", src: "Strickland v. Washington, 466 U.S. 668 (1984); United States v. Cronic (1984); Cuyler v. Sullivan (1980); Holloway v. Arkansas (1978); Missouri v. Frye (2012); Lafler v. Cooper (2012); Padilla v. Kentucky (2010); Garza v. Idaho (2019); crim.md §10.1; say corrected Nov 2, 2026 (presumed prejudice is not limited to absent counsel)",
           },
           {
             id: "u8-h-strickland",
@@ -1620,21 +1790,37 @@
             call: "Is he entitled to relief?",
             options: [
               { text: "No, because he later received a fair trial and a jury convicted him, so counsel's lapse caused him no prejudice.", why: "A fair trial does not cure the loss of a favorable plea; Lafler rejected that reasoning.", trap: 5 },
-              { text: "No, because a defendant has no constitutional right to a plea bargain, and the state could have withdrawn this offer.", why: "True, but it does not answer the call: the claim is about counsel's failure to communicate an offer the state made.", trap: 6 },
+              { text: "No, because a defendant has no constitutional right to a plea bargain, and the state could have withdrawn this offer.", why: "The state could have withdrawn it, but the claim is about counsel's failure to communicate an offer the state made.", trap: 6 },
               { text: "Yes, because prejudice is presumed whenever counsel fails to communicate with the client about the case.", why: "Prejudice is not presumed; the defendant must show a reasonable probability of a different outcome.", trap: 4 },
               { text: "Yes, because failing to communicate a favorable offer was deficient, and it cost him a lighter sentence.", why: "Frye; Lafler: counsel must communicate formal offers; prejudice is a reasonable probability of acceptance, approval and a lower sentence." },
             ],
             answer: 3,
             facts: ["never told the man about the offer", "it lapsed"],
             say: "Sit on a good plea offer and it is both deficient and prejudicial: the trial did not fix it.",
-            status: "general", src: "Missouri v. Frye, 566 U.S. 134 (2012); Lafler v. Cooper (2012); crim.md §10.1",
+            status: "general", src: "Missouri v. Frye, 566 U.S. 134 (2012); Lafler v. Cooper (2012); crim.md §10.1; revised Nov 2, 2026",
+          },
+          {
+            id: "u8-h-conflict", kind: "hypo", cat: "V.D", callType: "remedy", rule: "u8-r-strickland", issue: "conflict of interest in joint representation", transfer: true,
+            stem: "Two codefendants charged with the same robbery were represented at their joint trial by one retained lawyer, and neither defendant nor the prosecutor objected. The evidence pointed to one of them as the gunman. The lawyer had a strong argument that the other had acted only as a lookout, but he did not make it, explaining later that pressing it would have hurt his other client. Both were convicted. The lookout now claims ineffective assistance of counsel.",
+            call: "To obtain relief, what must the lookout show?",
+            options: [
+              { text: "That his lawyer actively represented conflicting interests and that the conflict adversely affected his performance.", why: "Cuyler v. Sullivan: with no objection at trial, an actual conflict that adversely affected performance is enough, and prejudice to the outcome is then presumed." },
+              { text: "That there is a reasonable probability that, but for the lawyer's choices, the result of the trial would have been different.", why: "That is the ordinary Strickland prejudice prong; for an actual conflict with adverse effect, prejudice is presumed.", trap: 4 },
+              { text: "Nothing more, because one lawyer's representation of two codefendants is a constitutional violation in itself.", why: "Joint representation is not invalid in itself; automatic reversal applies when a court forces it over a timely objection (Holloway).", trap: 7 },
+              { text: "That the trial judge knew of the joint representation and failed to ask whether it created a conflict.", why: "A failure to inquire does not by itself entitle him to relief (Mickens); he must still show an actual conflict that adversely affected performance.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["neither defendant nor the prosecutor objected", "would have hurt his other client"],
+            say: "A lawyer split between two clients: show a real conflict that changed what he did, and prejudice is presumed.",
+            status: "general", src: "Cuyler v. Sullivan, 446 U.S. 335 (1980); Holloway v. Arkansas (1978); Mickens v. Taylor (2002); Strickland v. Washington (1984)",
           },
           {
             id: "u8-r-selfrep", kind: "rule", title: "Self-representation", cat: "V.D",
             say: "A competent defendant who knowingly waives counsel may represent himself; legal skill is irrelevant, and wrongly denying the right is structural error.",
-            elements: ["A timely and clear request to proceed without counsel", "A knowing and intelligent waiver, with eyes open to the risks (Faretta)", "Competence to conduct the trial proceedings"],
+            elements: ["A timely and clear request to proceed without counsel", "A knowing and intelligent waiver, with eyes open to the risks (Faretta)", "Competent to stand trial, the same standard that governs waiving counsel (Dusky; Godinez)"],
             ordered: false,
-            exceptions: ["Technical legal skill does not matter (Faretta)", "A defendant competent to stand trial may still be refused if unable to conduct trial proceedings himself (Indiana v. Edwards)", "The court may appoint standby counsel (McKaskle)", "No right to self-representation on appeal (Martinez)", "Counsel may not concede guilt over the defendant's express objection (McCoy)"],
+            distractorElements: ["Enough legal skill to conduct the trial well", "The judge's approval of his trial strategy"],
+            exceptions: ["Technical legal skill does not matter (Faretta)", "A state may, but need not, insist on counsel for a defendant competent to stand trial but unable to conduct trial proceedings himself (Indiana v. Edwards)", "The court may appoint standby counsel (McKaskle)", "No right to self-representation on appeal (Martinez)", "Counsel may not concede guilt over the defendant's express objection (McCoy)"],
             cite: "Faretta v. California",
             ex: [
               { facts: "A competent defendant, warned of the dangers, asks to represent himself, and the judge refuses because he has no legal training.", result: "Error: skill is irrelevant, and the denial is structural (Faretta)." },
@@ -1644,7 +1830,7 @@
               { t: "tf", q: "A court may deny a competent defendant's request for self-representation because he lacks legal training.", a: false, why: "Faretta: the right does not depend on legal skill, only on a knowing and intelligent waiver." },
               { t: "mcq", q: "A court wrongly denies a defendant's timely, valid request to represent himself. His conviction, on overwhelming evidence, is...", options: ["Reversed automatically: structural error", "Affirmed if the error was harmless beyond a reasonable doubt", "Affirmed because his appointed lawyer performed competently"], a: "Reversed automatically: structural error", why: "McKaskle v. Wiggins: denial of self-representation is not subject to harmless-error review." },
             ],
-            status: "general", src: "Faretta v. California, 422 U.S. 806 (1975); Indiana v. Edwards (2008); McKaskle v. Wiggins (1984); McCoy v. Louisiana (2018); crim.md §10.1",
+            status: "general", src: "Faretta v. California, 422 U.S. 806 (1975); Godinez v. Moran, 509 U.S. 389 (1993); Indiana v. Edwards, 554 U.S. 164 (2008); McKaskle v. Wiggins (1984); McCoy v. Louisiana (2018); crim.md §10.1; competence element corrected Nov 2, 2026 (Edwards permits, does not require, a higher bar)",
           },
           {
             id: "u8-h-faretta", kind: "hypo", cat: "V.D", callType: "reverse", rule: "u8-r-selfrep", issue: "denial of self-representation", grid: true,
@@ -1685,7 +1871,7 @@
             stem: "Three days after a man was indicted for armed robbery and appointed a lawyer, police conducted a live lineup at which the victim identified him. Police did not notify the lawyer. At trial, the prosecution offers the victim's testimony that she identified the man at the lineup. The man's lawyer objects.",
             call: "Should the court sustain the objection?",
             options: [
-              { text: "No, because a lineup is a physical procedure that does not involve the privilege against self-incrimination.", why: "True, but it does not answer the call; the right violated is the Sixth Amendment right to counsel.", trap: 6 },
+              { text: "No, because a lineup is a physical procedure that does not involve the privilege against self-incrimination.", why: "A lineup raises no self-incrimination problem, but the right violated is the Sixth Amendment right to counsel.", trap: 6 },
               { text: "Yes, because the defendant had a right to counsel at the post-indictment lineup, which was a critical stage.", why: "Wade: a post-charge lineup is a critical stage, so the lineup identification is excluded." },
               { text: "No, because the victim was certain of her identification, which makes it reliable enough to be admitted.", why: "Certainty bears on reliability under due process, not on the Sixth Amendment counsel requirement.", trap: 4 },
               { text: "Yes, because the lineup was unnecessarily suggestive and so violated the defendant's right to due process.", why: "The stem does not describe any suggestive feature of the lineup.", trap: 3 },
@@ -1693,7 +1879,22 @@
             answer: 1,
             facts: ["indicted", "did not notify the lawyer"],
             say: "Charged means counsel at the lineup. Uncharged, or a photo array, does not.",
-            status: "general", src: "United States v. Wade (1967); crim.md §9.2 ID-1",
+            status: "general", src: "United States v. Wade (1967); crim.md §9.2 ID-1; revised Nov 2, 2026",
+          },
+          {
+            id: "u8-h-ash", kind: "hypo", cat: "V.C", callType: "motion", rule: "u8-r-id", issue: "counsel at a photo array", transfer: true,
+            stem: "Two weeks after a man was indicted for bank robbery and appointed a lawyer, an agent showed a teller an array of eight photographs of men of similar age and appearance, including the man's photograph. The lawyer was not told of the display and was not present. The teller picked out the man's photograph. The defense moves to exclude evidence of the photo identification, arguing only that the man's right to counsel was violated.",
+            call: "Should the court grant the motion?",
+            options: [
+              { text: "Yes, because he had been indicted, and counsel must be present at every identification procedure after indictment.", why: "Counsel is required at post-charge lineups and showups, not at photographic displays (Ash).", trap: 7 },
+              { text: "No, because the Sixth Amendment gives no right to counsel at a photographic display, even after indictment.", why: "United States v. Ash: the accused is not present at a photo array, so it is not a trial-like confrontation; due process still polices suggestiveness." },
+              { text: "Yes, because an identification made after indictment without counsel is admissible only if the witness has an independent source.", why: "Independent source cures an uncounseled post-charge lineup; with a photo array there was no violation to cure.", trap: 10 },
+              { text: "No, because the eight photographs showed men of similar appearance, so the display was not unnecessarily suggestive.", why: "That answers a due process claim the defense did not make; the counsel claim fails because Ash gives no right to counsel at a photo display.", trap: 6 },
+            ],
+            answer: 1,
+            facts: ["an array of eight photographs", "indicted"],
+            say: "Photos never need counsel, before or after charge; a live lineup after charge does.",
+            status: "general", src: "United States v. Ash, 413 U.S. 300 (1973); United States v. Wade (1967)",
           },
           {
             id: "u8-h-biggers", kind: "hypo", cat: "V.C", callType: "admissible", rule: "u8-r-id", issue: "suggestive showup and reliability", transfer: true,
@@ -1731,8 +1932,8 @@
         ],
       },
       {
-        id: "u8l7",
-        title: "Fair trial, pleas and double jeopardy",
+        id: "u8l8",
+        title: "Fair trial: disclosure, speed, the jury and sentencing facts",
         items: [
           {
             id: "u8-r-brady", kind: "rule", title: "Brady: disclosure of favorable evidence", cat: "V.E",
@@ -1866,14 +2067,14 @@
             kind: "hypo",
             status: "general",
             cat: "V.E",
-            callType: "reverse",
+            callType: "motion",
             rule: "u8-r-jury",
             issue: "Batson step three skipped",
             transfer: true,
-            stem: "At the trial of a defendant who belongs to a racial minority, the prosecutor used four of her five peremptory strikes against the only prospective jurors of that race, and the defense objected. The prosecutor said that she struck one of those jurors because he lived near the defendant's neighborhood. The judge immediately overruled the objection, saying that the explanation was race-neutral, and did not allow the defense to respond. The defendant was convicted and argues on appeal that the strikes violated the Constitution.",
-            call: "Should the conviction be reversed?",
+            stem: "At the trial of a defendant who belongs to a racial minority, the prosecutor used four of her five peremptory strikes against the only prospective jurors of that race, and the defense objected. The prosecutor gave a reason for each strike; for one juror, she said that he lived near the defendant's neighborhood. The judge immediately overruled the objection, saying that the explanations were race-neutral, and did not allow the defense to respond. The defendant was convicted and argues on appeal that the judge mishandled the objection.",
+            call: "Did the trial judge err in overruling the defense objection?",
             options: [
-              { text: "Yes, because the judge skipped Batson's third step: he never decided pretext or let the defense respond.", why: "Batson: after a race-neutral explanation, the court must decide whether the opponent proved purposeful discrimination, after hearing the opponent." },
+              { text: "Yes, because the judge never decided whether the reasons were a pretext and never let the defense respond.", why: "Batson step three: the court must decide, after hearing the opponent, whether purposeful discrimination is proved. The remedy is a real step-three ruling (on remand) or a new trial." },
               { text: "Yes, because four strikes against the only jurors of the defendant's race prove purposeful discrimination as a matter of law.", why: "A pattern raises an inference at step one; the court must still decide purposeful discrimination at step three.", trap: 7 },
               { text: "No, because once the prosecutor stated a race-neutral reason, the inquiry into her strikes was at an end.", why: "The reason is only step two; the judge must still weigh whether it is a pretext.", trap: 2 },
               { text: "No, because a prosecutor may use peremptory strikes for any reason at all, without having to explain them.", why: "That was the pre-Batson rule; strikes may not be based on race.", trap: 11 },
@@ -1881,7 +2082,7 @@
             answer: 0,
             facts: ["did not allow the defense to respond", "four of her five peremptory strikes"],
             say: "A neutral-sounding reason is only step two; the judge must still decide pretext, after hearing the defense.",
-            src: "Batson v. Kentucky, 476 U.S. 79 (1986); Purkett v. Elem (1995); Pitchford v. Cain (2026)",
+            src: "Batson v. Kentucky, 476 U.S. 79 (1986); Purkett v. Elem (1995); Snyder v. Louisiana (2008); Pitchford v. Cain (2026); call changed Nov 2, 2026 from reversal (remedy unsettled) to whether the judge erred",
           },
           { id: "u8-c-pitchford", kind: "case", subject: "crim", cat: "V.E", name: "Pitchford v. Cain", year: 2026, recent: true, holding: "On federal habeas, a state court unreasonably found that a defendant waived his Batson pretext arguments after the judge assured counsel the objection was preserved; step three never occurred.", facts: "A capital defendant's Batson objection never reached a step-three ruling, and the state court then called his pretext arguments waived.", say: "Not a new test: Batson step three still requires a real chance to rebut, and a judge cannot skip it. A federal habeas case under AEDPA.", status: "general", src: "Pitchford v. Cain, No. 24-7351 (May 28, 2026), syllabus read on law.cornell.edu; 28 U.S.C. §2254(d); Batson v. Kentucky, 476 U.S. 79 (1986)" },
           {
@@ -1917,6 +2118,7 @@
             say: "If the fact lifts the ceiling, the jury finds it. If it only guides the judge inside the range, the judge may.",
             status: "general", src: "Apprendi v. New Jersey, 530 U.S. 466 (2000); Blakely v. Washington (2004); crim.md §13.2 SENT-1",
           },
+          { id: "u8-c-erlinger", kind: "case", subject: "crim", cat: "V.E", name: "Erlinger v. United States", year: 2024, recent: true, holding: "Whether a defendant's prior offenses were committed on different occasions, which triggers the Armed Career Criminal Act's 15-year minimum, must be found by a unanimous jury beyond a reasonable doubt or admitted.", facts: "A judge, not a jury, found that a man's burglaries years earlier were separate occasions, and the minimum sentence rose from none to fifteen years.", say: "The prior-conviction exception is narrow: the bare fact of a conviction is for the judge, but 'different occasions' is for the jury.", status: "general", src: "Erlinger v. United States, 602 U.S. 821 (2024) (Gorsuch, J., 6-3); Apprendi v. New Jersey (2000); Alleyne v. United States (2013); crim.md §11.1, §14" },
           {
             id: "u8-r-competency",
             kind: "rule",
@@ -2000,12 +2202,12 @@
               { text: "No, because a state may enforce its evidence rules as it sees fit, and the exclusion violated no constitutional right at all.", why: "Evidence rules may not be applied mechanistically to defeat the ends of justice (Chambers).", trap: 7 },
               { text: "No, because the right to present a defense covers only live witnesses, not out-of-court statements repeated by others.", why: "The right reaches reliable evidence generally, including hearsay of critical importance.", trap: 5 },
               { text: "Yes, because mechanically applying the hearsay rule to exclude reliable, critical evidence denied him a fair chance to defend.", why: "Chambers: where the statement bears persuasive assurances of trustworthiness and is critical, the hearsay rule may not defeat due process." },
-              { text: "Yes, because every hearsay statement that the defense offers must be admitted, whatever its reliability or importance.", why: "Only reliable, critical evidence is protected; reasonable rules otherwise apply.", trap: 7 },
+              { text: "Yes, because statements against penal interest are always admissible under the Federal Rules of Evidence.", why: "The Federal Rules do not govern a state trial, and even FRE 804(b)(3) needs unavailability and corroboration; the ground is due process (Chambers).", trap: 4 },
             ],
             answer: 2,
             facts: ["spontaneously", "corroborated by other evidence"],
             say: "Reliable, corroborated, critical: a rigid hearsay rule may not keep out another man's confession from the jury.",
-            src: "Chambers v. Mississippi, 410 U.S. 284 (1973); Holmes v. South Carolina, 547 U.S. 319 (2006)",
+            src: "Chambers v. Mississippi, 410 U.S. 284 (1973); Holmes v. South Carolina, 547 U.S. 319 (2006); FRE 804(b)(3); option D replaced Nov 2, 2026 (fewer absolute-word distractors)",
           },
           {
             id: "u8-r-bail",
@@ -2015,7 +2217,7 @@
             title: "Bail and preventive detention",
             cat: "V.E",
             say: "Bail may not be set above what assures appearance, but a person may be held before trial if the state proves danger after a hearing.",
-            elements: ["Bail set higher than reasonably calculated to assure the defendant's appearance is excessive (Stack v. Boyle)", "There is no absolute right to bail; dangerousness can justify pretrial detention (Salerno)", "Detention follows an adversary hearing and clear and convincing proof that no conditions will assure safety (Salerno)"],
+            elements: ["Bail set higher than reasonably calculated to assure the defendant's appearance is excessive (Stack v. Boyle)", "There is no absolute right to bail; dangerousness can justify pretrial detention (Salerno)", "Federal detention: hearing, clear and convincing proof no conditions assure safety (Bail Reform Act, upheld in Salerno)"],
             distractorElements: ["The seriousness of the charge alone fixes the amount", "Proof beyond a reasonable doubt of guilt"],
             exceptions: ["Pretrial detention under such a scheme is regulatory, not punishment (Salerno)"],
             cite: "Stack v. Boyle",
@@ -2026,17 +2228,23 @@
             terms: ["excessive bail", "preventive detention"],
             quiz: [
               { t: "tf", q: "The Constitution forbids holding an arrestee before trial without bail in every circumstance.", a: false, why: "Salerno upheld preventive detention after an adversary hearing on dangerousness." },
-              { t: "mcq", q: "Under Salerno, what must the government show to detain a person before trial as a danger?", options: ["By clear and convincing evidence, that no conditions of release will reasonably assure community safety", "Proof beyond a reasonable doubt that he is guilty", "Probable cause alone, with no hearing"], a: "By clear and convincing evidence, that no conditions of release will reasonably assure community safety", why: "United States v. Salerno upheld the Bail Reform Act's hearing and standard." },
+              { t: "mcq", q: "Under the federal Bail Reform Act, upheld in Salerno, what must the government show to detain a person before trial as a danger?", options: ["By clear and convincing evidence, that no conditions of release will reasonably assure community safety", "Proof beyond a reasonable doubt that he is guilty", "Probable cause alone, with no hearing"], a: "By clear and convincing evidence, that no conditions of release will reasonably assure community safety", why: "United States v. Salerno upheld the Bail Reform Act's hearing and standard." },
             ],
-            src: "Stack v. Boyle, 342 U.S. 1 (1951); United States v. Salerno, 481 U.S. 739 (1987); U.S. Const. amend. VIII; crim.md §11.1",
+            src: "Stack v. Boyle, 342 U.S. 1 (1951); United States v. Salerno, 481 U.S. 739 (1987); 18 U.S.C. §3142(e)-(f); U.S. Const. amend. VIII; crim.md §11.1; clear-and-convincing standard attributed to the statute Nov 2, 2026",
           },
+        ],
+      },
+      {
+        id: "u8l9",
+        title: "Pleas and double jeopardy",
+        items: [
           {
             id: "u8-r-pleas", kind: "rule", title: "A valid guilty plea", cat: "V.E",
             say: "A plea must be knowing, intelligent and voluntary, with a record showing waiver of the jury, confrontation and self-incrimination rights.",
             elements: ["Voluntary: not coerced; avoiding a harsher sentence is no coercion (Brady v. United States, 1970: the plea case)", "Knowing and intelligent: he understands the charge and its direct consequences", "The record shows waiver of the jury, confrontation and self-incrimination rights (Boykin)", "An Alford plea is valid even if he claims innocence, given a strong factual basis"],
             ordered: false,
             distractorElements: ["The defendant admits guilt in open court", "The judge warns of every collateral consequence"],
-            exceptions: ["A prosecutor may threaten more serious charges that the evidence supports if the defendant refuses to plead (Bordenkircher), but not vindictively (Blackledge)", "A broken bargain: enforce it or allow withdrawal (Santobello)", "A guilty plea waives earlier non-jurisdictional claims (Tollett), not a challenge to the statute itself (Class)", "The judge need not warn of collateral consequences, but counsel must advise on deportation (Padilla)"],
+            exceptions: ["A prosecutor may threaten more serious charges that the evidence supports if the defendant refuses to plead (Bordenkircher), but not vindictively (Blackledge)", "A broken bargain: enforce it or allow withdrawal (Santobello)", "A guilty plea waives earlier non-jurisdictional claims (Tollett), not a challenge to the statute itself (Class)", "The judge need not warn of collateral consequences, but counsel must advise on deportation (Padilla)", "Withdrawal (federal rule): before acceptance for any reason; after acceptance but before sentence, for a fair and just reason; after sentence, only on appeal or collateral attack"],
             cite: "Boykin v. Alabama",
             ex: [
               { facts: "At a plea hearing the judge asks only whether the defendant wants to plead guilty.", result: "Invalid: no record of a knowing waiver of the three rights (Boykin)." },
@@ -2047,7 +2255,7 @@
               { t: "tf", q: "A prosecutor violates due process by threatening during plea talks to seek a habitual-offender charge that the evidence supports.", a: false, why: "Bordenkircher: a prosecutor may threaten the charges he has probable cause to bring if the defendant refuses the offer." },
               { t: "mcq", q: "After pleading guilty, a defendant tries to challenge on appeal an earlier unlawful search. Generally...", options: ["The voluntary plea waived the claim", "The claim survives, because suppression rights are never waived", "The claim survives, because the search was illegal"], a: "The voluntary plea waived the claim", why: "Tollett v. Henderson: a knowing plea waives antecedent non-jurisdictional constitutional claims." },
             ],
-            status: "general", src: "Boykin v. Alabama, 395 U.S. 238 (1969); North Carolina v. Alford (1970); Brady v. United States (1970), the plea case, not the disclosure case; Bordenkircher v. Hayes (1978); Santobello v. New York (1971); Tollett v. Henderson (1973); Class v. United States (2018); Padilla v. Kentucky (2010); crim.md §11.1",
+            status: "general", src: "Boykin v. Alabama, 395 U.S. 238 (1969); North Carolina v. Alford (1970); Brady v. United States (1970), the plea case, not the disclosure case; Bordenkircher v. Hayes (1978); Santobello v. New York (1971); Tollett v. Henderson (1973); Class v. United States (2018); Padilla v. Kentucky (2010); Fed. R. Crim. P. 11(d)-(e); crim.md §11.1",
           },
           {
             id: "u8-h-bordenkircher",
@@ -2080,7 +2288,7 @@
             rule: "u8-r-pleas",
             issue: "guilty plea and a challenge to the statute",
             transfer: true,
-            stem: "A defendant pleaded guilty, without a plea agreement and without reserving any issue, to an offense under a federal statute. On appeal he argues for the first time that the statute under which he was convicted is unconstitutional on its face. The government argues that his guilty plea bars the claim.",
+            stem: "A defendant charged under a federal statute moved to dismiss the indictment on the ground that the statute is unconstitutional on its face; the motion was denied. He then pleaded guilty, without reserving any issue. On appeal he renews the claim that the statute is unconstitutional. The government argues that his guilty plea bars the claim.",
             call: "Should the court consider the defendant's claim?",
             options: [
               { text: "No, because a guilty plea waives every claim except a challenge to the voluntariness of the plea.", why: "Too broad: a valid plea does not bar a claim that the statute of conviction is unconstitutional (Class).", trap: 9 },
@@ -2091,12 +2299,12 @@
             answer: 1,
             facts: ["without reserving any issue", "on its face"],
             say: "A plea waives earlier trial-process complaints, but not the claim that the law itself cannot be enforced against anyone.",
-            src: "Class v. United States, 583 U.S. 174 (2018); Tollett v. Henderson, 411 U.S. 258 (1973)",
+            src: "Class v. United States, 583 U.S. 174 (2018); Tollett v. Henderson, 411 U.S. 258 (1973); stem revised Nov 2, 2026 (claim raised before the plea, as in Class)",
           },
-          { id: "u8-c-hunter", kind: "case", subject: "crim", cat: "V.E", name: "Hunter v. United States", year: 2026, recent: true, holding: "An appeal waiver in a plea agreement is unenforceable where enforcing it would work a miscarriage of justice; the Court did not list every qualifying case (breadth and vote under review).", say: "A 2026 limit on plea-agreement appeal waivers; check the opinion for how broad the exception is.", status: "unsure", src: "SCOTUSblog, The court's criminal law term (July 2026); crim.md §11.1, §14 (secondary source only)" },
+          { id: "u8-c-hunter", kind: "case", subject: "crim", cat: "V.E", name: "Hunter v. United States", year: 2026, recent: true, holding: "An appeal waiver in a plea agreement does not bar an appeal where enforcing it would work a miscarriage of justice, leaving an egregious error in place; the Court did not define the full category (8-1).", facts: "The court of appeals dismissed a defendant's sentencing appeal under the waiver in his plea agreement, recognizing only two exceptions.", say: "Appeal waivers bind, but not to a miscarriage of justice: examples include a sentence above the maximum, and the list is open.", status: "book", src: "Hunter v. United States, No. 24-1063 (June 18, 2026), syllabus and opinion read on law.cornell.edu, Nov 2, 2026 (Kagan, J.; Thomas, J., dissenting; vacated and remanded); crim.md §11.1, §14" },
           {
             id: "u8-h-boykin", kind: "hypo", cat: "V.E", callType: "motion", rule: "u8-r-pleas", issue: "plea colloquy and waiver", grid: true,
-            stem: "A defendant represented by counsel pleaded guilty to burglary. At the plea hearing the judge asked only whether he understood the charge and whether anyone had threatened him, and then accepted the plea. The record contains no discussion of the rights to a jury trial, to confront witnesses, or against self-incrimination. Months later the defendant moves to withdraw his plea on that ground.",
+            stem: "A defendant represented by counsel pleaded guilty to burglary. At the plea hearing the judge asked only whether he understood the charge and whether anyone had threatened him, and then accepted the plea. The record contains no discussion of the rights to a jury trial, to confront witnesses, or against self-incrimination. Before sentencing, the defendant moves to withdraw his plea on that ground.",
             call: "Should the motion be granted?",
             options: [
               { text: "No, because he was represented by counsel, who is presumed to have explained those rights to him before the plea.", why: "Boykin forbids presuming waiver from a silent record, and the stem does not say counsel explained them.", trap: 3 },
@@ -2107,7 +2315,22 @@
             answer: 3,
             facts: ["asked only whether he understood the charge", "no discussion of the rights"],
             say: "A silent record is no waiver: the judge must put the three rights on the record before accepting the plea.",
-            status: "general", src: "Boykin v. Alabama, 395 U.S. 238 (1969); crim.md §11.2 PLEA-1",
+            status: "general", src: "Boykin v. Alabama, 395 U.S. 238 (1969); Fed. R. Crim. P. 11(d)(2)(B); crim.md §11.2 PLEA-1; posture set before sentencing Nov 2, 2026",
+          },
+          {
+            id: "u8-h-santobello", kind: "hypo", cat: "V.E", callType: "remedy", rule: "u8-r-pleas", issue: "prosecutor breaks the plea bargain", grid: true,
+            stem: "In exchange for a man's guilty plea to theft, the prosecutor promised to make no sentencing recommendation. The court accepted the plea. At sentencing, a different prosecutor, unaware of the promise, asked the judge to impose the maximum term. Defense counsel objected at once, citing the promise. The judge imposed the maximum, stating that he would have done so whatever the prosecutor said. The man appeals, asking for relief because of the broken promise.",
+            call: "Is the man entitled to relief?",
+            options: [
+              { text: "No, because the judge said the recommendation did not affect the sentence, so the breach caused no harm.", why: "Santobello: the breach itself requires relief, whatever the judge says he would have done.", trap: 4 },
+              { text: "No, because the second prosecutor did not know of the promise and so did not break it knowingly or in bad faith.", why: "The promise binds the prosecutor's office; an inadvertent breach still requires relief.", trap: 8 },
+              { text: "Yes, because a broken plea promise must be remedied, by resentencing on the bargain or by withdrawal of the plea.", why: "Santobello v. New York: when a plea rests on a prosecutor's promise, the promise must be fulfilled; the remedy is resentencing on the bargain or withdrawal of the plea." },
+              { text: "Yes, because the prosecution's breach of a plea agreement requires dismissal of the charge with prejudice.", why: "The remedy is specific performance at a new sentencing or withdrawal of the plea, not dismissal.", trap: 5 },
+            ],
+            answer: 2,
+            facts: ["promised to make no sentencing recommendation", "unaware of the promise"],
+            say: "A plea bought with a promise binds the prosecutor's office: keep it at a new sentencing, or let him take the plea back.",
+            status: "general", src: "Santobello v. New York, 404 U.S. 257 (1971); Puckett v. United States (2009) (an unpreserved breach gets plain-error review, so the stem has an objection)",
           },
           {
             id: "u8-r-dj", kind: "rule", title: "Double jeopardy: when a second prosecution is barred", cat: "V.F",
@@ -2142,9 +2365,10 @@
               { text: "A state convicted him, and the United States now prosecutes the same conduct under a federal statute", bucket: "Allowed", why: "Separate sovereigns (Gamble)." },
               { text: "The judge ends the trial over the defendant's objection with no real necessity", bucket: "Barred", why: "No manifest necessity." },
               { text: "The charge was dismissed before the jury was sworn", bucket: "Allowed", why: "Jeopardy had not attached." },
+              { text: "A city convicted him under a municipal ordinance, and the state now prosecutes the same conduct", bucket: "Barred", why: "Waller v. Florida: a city and its state are one sovereign." },
             ],
             say: "An acquittal, an insufficiency reversal, a goaded mistrial or a pointless one: barred. A hung jury, trial error, your own motion, another sovereign: allowed.",
-            status: "general", src: "Oregon v. Kennedy (1982); Burks v. United States (1978); Smalis v. Pennsylvania (1986); Evans v. Michigan (2013); Richardson v. United States (1984); Arizona v. Washington (1978); Gamble v. United States (2019); crim.md §12.1",
+            status: "general", src: "Oregon v. Kennedy (1982); Burks v. United States (1978); Smalis v. Pennsylvania (1986); Evans v. Michigan (2013); Richardson v. United States (1984); Arizona v. Washington (1978); Gamble v. United States (2019); Waller v. Florida, 397 U.S. 387 (1970); crim.md §12.1",
           },
           {
             id: "u8-h-brown-ohio", kind: "hypo", cat: "V.F", callType: "motion", rule: "u8-r-dj", issue: "lesser included offense as same offense", grid: true,
@@ -2169,18 +2393,18 @@
             rule: "u8-r-dj",
             issue: "collateral estoppel after acquittal",
             transfer: true,
-            stem: "Six people were robbed at a poker game by masked men. A man was tried for robbing one of the players, and the only contested issue was whether he was one of the robbers. The jury acquitted him, and that verdict necessarily decided the issue in his favor. The state then charged him with robbing a second player at the same game, relying on the same evidence that he was one of the robbers. He moves to dismiss the second charge on double jeopardy grounds.",
+            stem: "Six people were robbed at a poker game by masked men. A man was tried for robbing one of the players, and the only contested issue was whether he was one of the robbers. The jury acquitted him. The state then charged him with robbing a second player at the same game, relying on the same evidence that he was one of the robbers. He moves to dismiss the second charge on double jeopardy grounds.",
             call: "Should the court grant the motion to dismiss?",
             options: [
-              { text: "No, because robbing each victim is a separate offense, so the second prosecution is not for the same offense.", why: "True under Blockburger, but it does not answer the call: collateral estoppel bars relitigating an issue the acquittal necessarily decided.", trap: 2 },
+              { text: "No, because robbing each victim is a separate offense, so the second prosecution is not for the same offense.", why: "Each robbery is a separate offense under Blockburger, but collateral estoppel bars relitigating an issue the acquittal necessarily decided.", trap: 6 },
               { text: "Yes, because the acquittal necessarily decided that he was not a robber, so collateral estoppel bars relitigating that issue.", why: "Ashe v. Swenson: an issue of ultimate fact decided in the defendant's favor by a valid acquittal cannot be relitigated." },
               { text: "Yes, because double jeopardy bars a second prosecution for any crime arising from the same transaction or episode.", why: "The same-transaction test was rejected; Blockburger and collateral estoppel govern.", trap: 4 },
               { text: "No, because jeopardy attaches to each separate charge only after the defendant has been convicted on that charge.", why: "Jeopardy attaches when the jury is sworn, and an acquittal ends it.", trap: 5 },
             ],
             answer: 1,
-            facts: ["the only contested issue", "necessarily decided the issue in his favor"],
+            facts: ["the only contested issue", "relying on the same evidence"],
             say: "An acquittal that necessarily decided who did it also settles the next charge: Ashe bars relitigating that fact.",
-            src: "Ashe v. Swenson, 397 U.S. 436 (1970); Blockburger v. United States (1932)",
+            src: "Ashe v. Swenson, 397 U.S. 436 (1970); Blockburger v. United States (1932); stem no longer states the holding, option A trap corrected Nov 2, 2026",
           },
           {
             id: "u8-h-gamble", kind: "hypo", cat: "V.F", callType: "motion", rule: "u8-r-dj", issue: "dual sovereignty", transfer: true,
@@ -2196,10 +2420,40 @@
             say: "Two sovereigns, two offenses: state then federal is allowed. A state and its own city count as one.",
             status: "general", src: "Gamble v. United States, 587 U.S. 678 (2019); Heath v. Alabama (1985); crim.md §12.2 DJ-5",
           },
+          {
+            id: "u8-h-hung-jury", kind: "hypo", cat: "V.F", callType: "motion", rule: "u8-r-dj", issue: "retrial after a hung jury", grid: true,
+            stem: "At a defendant's trial for arson, the jury deliberated for four days and twice reported that it was hopelessly deadlocked. After questioning the foreperson, the judge found that further deliberations would be futile and declared a mistrial over the defendant's objection. The state set the case for retrial. The defendant moves to dismiss on double jeopardy grounds.",
+            call: "Should the court grant the motion to dismiss?",
+            options: [
+              { text: "Yes, because jeopardy attached when the jury was sworn, and a mistrial over his objection bars any retrial.", why: "A mistrial over objection bars retrial only without manifest necessity; a genuinely deadlocked jury is the classic necessity.", trap: 2 },
+              { text: "No, because a genuinely deadlocked jury is a manifest necessity, so the state may retry him after the mistrial.", why: "Hung-jury mistrials have long been the classic case of manifest necessity, and retrial is allowed (Richardson; Arizona v. Washington)." },
+              { text: "Yes, because a hung jury is the same as an acquittal when the prosecution fails to persuade all twelve jurors.", why: "A hung jury is no verdict at all, not an acquittal, so jeopardy has not ended.", trap: 5 },
+              { text: "No, because the defendant may be retried after any mistrial, whatever its reason, until a jury reaches a verdict.", why: "A mistrial without manifest necessity and over objection bars retrial; this one was justified.", trap: 7 },
+            ],
+            answer: 1,
+            facts: ["hopelessly deadlocked", "further deliberations would be futile"],
+            say: "A deadlocked jury is manifest necessity: mistrial over his objection, and the state may try again.",
+            status: "general", src: "Richardson v. United States, 468 U.S. 317 (1984); Arizona v. Washington, 434 U.S. 497 (1978); United States v. Perez (1824)",
+          },
+          {
+            id: "u8-h-burks", kind: "hypo", cat: "V.F", callType: "motion", rule: "u8-r-dj", issue: "reversal for insufficient evidence", transfer: true,
+            stem: "A defendant was convicted of fraud. On appeal, the court reversed, holding that the prosecution's evidence at trial was legally insufficient to prove that he intended to deceive anyone, and that no rational jury could have found that element beyond a reasonable doubt. The prosecution has since found new witnesses on intent and seeks to retry him for the same fraud. He moves to dismiss on double jeopardy grounds.",
+            call: "Should the court grant the motion to dismiss?",
+            options: [
+              { text: "No, because a defendant who wins reversal of his conviction on appeal has waived any double jeopardy objection to a retrial.", why: "That is true of a reversal for trial error, not of a reversal for insufficient evidence (Burks).", trap: 9 },
+              { text: "No, because the prosecution has new evidence of intent that was not available at the first trial.", why: "New evidence does not matter: a reversal for insufficiency is treated as an acquittal.", trap: 8 },
+              { text: "Yes, because a reversal for legally insufficient evidence is the equivalent of an acquittal, which bars a retrial.", why: "Burks v. United States: when the appellate court finds the evidence legally insufficient, the Double Jeopardy Clause bars a second trial." },
+              { text: "Yes, because a defendant whose conviction is reversed on appeal may never be retried for the same offense.", why: "Retrial is allowed after a reversal for trial error; only an insufficiency reversal bars it.", trap: 7 },
+            ],
+            answer: 2,
+            facts: ["legally insufficient", "new witnesses on intent"],
+            say: "Reversed for trial error: try again. Reversed because the evidence could not convict: that is an acquittal, and it ends the case.",
+            status: "general", src: "Burks v. United States, 437 U.S. 1 (1978); Lockhart v. Nelson (1988)",
+          },
         ],
       },
       {
-        id: "u8l8",
+        id: "u8l10",
         title: "Eighth Amendment, burdens, error and sentencing",
         items: [
           {
@@ -2224,7 +2478,7 @@
           },
           {
             id: "u8-h-ewing", kind: "hypo", cat: "V.G", callType: "constitutional", rule: "u8-r-eighth", issue: "three strikes and proportionality", grid: true,
-            stem: "A state's three-strikes law imposes a term of twenty-five years to life on any person convicted of a felony who has two prior serious or violent felony convictions. A man with two prior burglary convictions is convicted of felony theft for shoplifting three golf clubs worth about $1,200, and is sentenced to twenty-five years to life. He argues that the sentence is cruel and unusual.",
+            stem: "A state's three-strikes law imposes a term of twenty-five years to life on any person convicted of a felony who has two prior serious or violent felony convictions. A man with two prior burglary convictions is convicted of felony theft for walking out of a hardware store with power tools worth about $1,100, and is sentenced to twenty-five years to life. He argues that the sentence is cruel and unusual.",
             call: "Is the sentence constitutional?",
             options: [
               { text: "No, because twenty-five years to life is far more severe than the value of the property that he stole.", why: "Sympathy for a small theft does not control; the sentence reflects his history and the state's interest.", trap: 8 },
@@ -2233,9 +2487,9 @@
               { text: "Yes, because recidivism statutes are never subject to Eighth Amendment review, so the challenge cannot succeed.", why: "They can be reviewed; the challenge here simply fails.", trap: 7 },
             ],
             answer: 1,
-            facts: ["two prior burglary convictions", "three golf clubs"],
-            say: "Three strikes for golf clubs sounds harsh but passes: outside death, only grossly disproportionate terms fall.",
-            status: "general", src: "Ewing v. California, 538 U.S. 11 (2003); Lockyer v. Andrade (2003); crim.md §13.2 8A-3",
+            facts: ["two prior burglary convictions", "power tools worth about $1,100"],
+            say: "Three strikes for a few power tools sounds harsh but passes: outside death, only grossly disproportionate terms fall.",
+            status: "general", src: "Ewing v. California, 538 U.S. 11 (2003); Lockyer v. Andrade (2003); crim.md §13.2 8A-3; stem given fresh facts Nov 2, 2026",
           },
           {
             id: "u8-h-miller", kind: "hypo", cat: "V.G", callType: "constitutional", rule: "u8-r-eighth", issue: "mandatory life without parole for a juvenile", grid: true,
@@ -2251,6 +2505,36 @@
             facts: ["no discretion", "fifteen"],
             say: "Mandatory life without parole for a juvenile fails; the judge must be able to weigh youth.",
             status: "general", src: "Miller v. Alabama, 567 U.S. 460 (2012); Jones v. Mississippi (2021); crim.md §13.2 8A-1",
+          },
+          {
+            id: "u8-h-kennedy", kind: "hypo", cat: "V.G", callType: "constitutional", rule: "u8-r-eighth", issue: "death penalty for a non-homicide crime", grid: true,
+            stem: "A state statute authorizes the death penalty for the rape of a child under twelve. A man is convicted of raping a ten-year-old boy, who survived, and after a separate sentencing hearing the jury finds several aggravating circumstances and returns a death sentence. The man challenges the sentence as cruel and unusual punishment.",
+            call: "Is the death sentence constitutional?",
+            options: [
+              { text: "Yes, because the jury found aggravating circumstances at a separate hearing, which is what the Eighth Amendment requires.", why: "Aggravating findings matter only where death is a permitted punishment at all; for this crime it is not.", trap: 2 },
+              { text: "Yes, because the crime is among the most heinous a person can commit, and a state may decide that it deserves death.", why: "The Court held otherwise despite the gravity of the crime (Kennedy v. Louisiana).", trap: 8 },
+              { text: "No, because the Eighth Amendment bars death for a crime against an individual in which the victim's life was not taken.", why: "Kennedy v. Louisiana: for crimes against individuals, death is limited to offenses that take the victim's life; crimes against the state were left open." },
+              { text: "No, because the Eighth Amendment bars the death penalty for every crime except intentional first-degree murder.", why: "Too broad: crimes against the state were left open, and a major participant in a felony murder who acts with reckless indifference may be executed (Tison).", trap: 7 },
+            ],
+            answer: 2,
+            facts: ["who survived", "the rape of a child under twelve"],
+            say: "No death for a crime against a person who lived, however terrible the crime.",
+            status: "general", src: "Kennedy v. Louisiana, 554 U.S. 407 (2008); Coker v. Georgia (1977); Tison v. Arizona (1987)",
+          },
+          {
+            id: "u8-h-robinson", kind: "hypo", cat: "V.G", callType: "constitutional", rule: "u8-r-eighth", issue: "punishing a status", transfer: true,
+            stem: "A state statute makes it a misdemeanor, punishable by up to ninety days in jail, 'to be a chronic alcoholic.' A woman is convicted under the statute after a doctor testifies that she has suffered from alcoholism for years. The prosecution offers no evidence that she drank, was intoxicated in public, or did any other act in the state during the charged period. She challenges the conviction as cruel and unusual punishment.",
+            call: "Is the conviction constitutional?",
+            options: [
+              { text: "No, because the statute punishes a status rather than any act, which is cruel and unusual punishment.", why: "Robinson v. California: punishing a condition such as addiction, with no conduct, violates the Eighth Amendment; punishing an act such as public drunkenness does not (Powell)." },
+              { text: "Yes, because a state may punish alcoholism to protect public health, just as it may punish public drunkenness.", why: "Public drunkenness is an act (Powell); this statute punishes the condition alone.", trap: 9 },
+              { text: "Yes, because the Eighth Amendment limits only the methods of punishment, not what a state may make a crime.", why: "Grants Pass narrowed the clause's reach but left Robinson standing: a bare status still may not be punished.", trap: 5 },
+              { text: "No, because ninety days in jail is grossly disproportionate to any misdemeanor offense.", why: "Proportionality is not the defect, and ninety days for a misdemeanor is not grossly disproportionate; punishing a pure status is.", trap: 10 },
+            ],
+            answer: 0,
+            facts: ["to be a chronic alcoholic", "no evidence that she drank"],
+            say: "Punish what a person does, never merely what a person is: status alone cannot be a crime.",
+            status: "general", src: "Robinson v. California, 370 U.S. 660 (1962); Powell v. Texas (1968); City of Grants Pass v. Johnson (2024)",
           },
           {
             id: "u8-r-burdens", kind: "rule", title: "Burdens of proof in a criminal case", cat: "V.H",
@@ -2300,6 +2584,21 @@
             answer: 2,
             say: "Defenses that excuse, rather than erase an element, may be the defendant's to prove.",
             status: "general", src: "Martin v. Ohio, 480 U.S. 228 (1987); Patterson v. New York (1977); crim.md §13.2 BURD-2",
+          },
+          {
+            id: "u8-h-sandstrom", kind: "hypo", cat: "V.H", callType: "constitutional", rule: "u8-r-burdens", issue: "mandatory presumption on intent", grid: true,
+            stem: "At a murder trial in which the only disputed issue was whether the defendant intended to kill, the judge instructed the jury that if a person strikes another with a deadly weapon, 'you must find that he intended the natural result of the blow.' The judge said nothing more about the instruction. The defendant objected, was convicted, and appeals.",
+            call: "Was the instruction constitutional?",
+            options: [
+              { text: "No, because a reasonable juror could read it as a mandatory presumption that relieved the state of proving intent.", why: "Sandstrom: an instruction a reasonable juror could take as conclusive or burden-shifting on an element violates due process (Winship)." },
+              { text: "Yes, because juries may draw reasonable inferences from conduct, and this instruction simply stated such an inference.", why: "A permissive inference is allowed (Ulster County), but 'you must find' makes this one mandatory.", trap: 9 },
+              { text: "Yes, because intent is a matter the defendant knows best, so he may fairly be required to disprove it.", why: "Intent is an element here, and the state must prove every element beyond a reasonable doubt (Winship; Mullaney).", trap: 5 },
+              { text: "No, because a judge may never mention any inference or presumption when instructing a jury in a criminal case.", why: "A rational permissive inference may be explained to the jury; only a mandatory one on an element is barred.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["you must find", "the only disputed issue"],
+            say: "'May infer' is fine; 'must find' on an element shifts the state's burden and fails.",
+            status: "general", src: "Sandstrom v. Montana, 442 U.S. 510 (1979); County Court of Ulster County v. Allen (1979); In re Winship (1970); Francis v. Franklin (1985)",
           },
           {
             id: "u8-r-error", kind: "rule", title: "Harmless, structural and plain error", cat: "V.I",
@@ -2376,7 +2675,7 @@
             elements: ["A higher sentence after reconviction needs objective reasons in the record, to rebut vindictiveness (Pearce)", "A law that retroactively increases punishment violates the Ex Post Facto Clause (Calder)", "Within the statutory range, the Guidelines are advisory (Booker)"],
             ordered: false,
             distractorElements: ["A second sentence may never exceed the first", "A judge may raise the maximum by finding facts"],
-            exceptions: ["The new sentence may be higher, if the reasons rest on events after the first sentencing and not on vindictiveness", "A jury's capital sentencing acquittal bars the death penalty on retrial (Bullington)"],
+            exceptions: ["A higher sentence is allowed on objective information in the record justifying it, including facts not known at the first sentencing (Wasman; McCullough)", "The presumption of vindictiveness applies only where vindictiveness is reasonably likely: not after a vacated guilty plea, or with a different sentencer (Alabama v. Smith; McCullough)", "A jury's capital sentencing acquittal bars the death penalty on retrial (Bullington)"],
             cite: "North Carolina v. Pearce",
             ex: [
               { facts: "After a reversal, a defendant is reconvicted and the judge imposes a longer term, giving no reasons.", result: "Presumed vindictive: reasons must appear in the record (Pearce)." },
@@ -2388,7 +2687,22 @@
               { t: "mcq", q: "A legislature increases the maximum penalty for an offense after the defendant committed it, and he is sentenced under the new law. The sentence is...", options: ["Unconstitutional: a retroactive increase in punishment", "Constitutional: sentencing occurred after the law passed", "Constitutional: the Ex Post Facto Clause applies only to civil laws"], a: "Unconstitutional: a retroactive increase in punishment", why: "Calder v. Bull: the Clause bars retroactive increases in criminal punishment." },
             ],
             hook: "Ex post facto: 'from a thing done afterward'. Banned for Congress and the states, but only for punishment, not civil regulation.",
-            status: "general", src: "North Carolina v. Pearce (1969); Calder v. Bull (1798); United States v. Booker (2005); U.S. Const. art. I, §§9-10; crim.md §13.1",
+            status: "general", src: "North Carolina v. Pearce (1969); Wasman v. United States, 468 U.S. 559 (1984); Texas v. McCullough, 475 U.S. 134 (1986); Alabama v. Smith, 490 U.S. 794 (1989); Calder v. Bull (1798); United States v. Booker (2005); U.S. Const. art. I, §§9-10; crim.md §13.1; Pearce exception updated Nov 2, 2026",
+          },
+          {
+            id: "u8-h-pearce", kind: "hypo", cat: "V.I", callType: "reverse", rule: "u8-r-sentencing", issue: "harsher sentence after retrial", grid: true,
+            stem: "A judge sentenced a defendant convicted of assault to five years in prison. The defendant won a reversal on appeal because of an evidentiary error. On retrial before the same judge, he was convicted again, and the judge sentenced him to eight years. The judge stated no reasons, and the record shows no new information about the defendant or his conduct. He appeals the longer sentence.",
+            call: "Should the eight-year sentence be vacated?",
+            options: [
+              { text: "No, because a defendant who chooses to appeal accepts the risk of any lawful sentence the court may impose on retrial.", why: "A court may not punish a successful appeal; an unexplained increase by the same judge is presumed vindictive (Pearce).", trap: 5 },
+              { text: "Yes, because an unexplained harsher sentence from the same judge after a successful appeal is presumed vindictive.", why: "North Carolina v. Pearce: the reasons for a higher sentence must appear in the record, based on objective information; none does here." },
+              { text: "No, because eight years is within the statutory range for assault, so the judge had discretion to impose it.", why: "Staying within the range does not rebut the presumption of vindictiveness, which needs reasons in the record.", trap: 6 },
+              { text: "Yes, because after a successful appeal, a new sentence may never be longer than the original sentence.", why: "A higher sentence is allowed on objective information in the record (Wasman; McCullough); none appears here.", trap: 7 },
+            ],
+            answer: 1,
+            facts: ["before the same judge", "stated no reasons"],
+            say: "Win the appeal, get more time from the same judge with no reasons given: presumed vindictive, and the increase goes.",
+            status: "general", src: "North Carolina v. Pearce, 395 U.S. 711 (1969); Texas v. McCullough (1986); Wasman v. United States (1984)",
           },
           {
             id: "u8-p-burdens-error", kind: "pairs", set: "Standards, burdens and error", mode: "concept",
@@ -2405,8 +2719,8 @@
             say: "Know the yardsticks: beyond a reasonable doubt, probable cause, reasonable suspicion, preponderance, harmless, structural, plain.",
             status: "general", src: "In re Winship (1970); Illinois v. Gates (1983); Terry v. Ohio (1968); Lego v. Twomey (1972); Chapman v. California (1967); Arizona v. Fulminante (1991)",
           },
-          { id: "u8-c-grants-pass", kind: "case", subject: "crim", cat: "V.G", name: "City of Grants Pass v. Johnson", year: 2024, holding: "Enforcing generally applicable public-camping ordinances against homeless people is not cruel and unusual punishment.", facts: "A city fined people for sleeping outside on public land, even when shelters were full.", say: "The Eighth Amendment limits what you can punish, not where homeless people can sleep: conduct, not status.", status: "general", src: "City of Grants Pass v. Johnson, 603 U.S. 520 (2024); crim.md §13.1" },
-          { id: "u8-c-ellingburg", kind: "case", subject: "crim", cat: "V.I", name: "Ellingburg v. United States", year: 2026, recent: true, holding: "Federal mandatory restitution (MVRA) is criminal punishment for purposes of the Ex Post Facto Clause (secondary summaries only; opinion text not read).", say: "A 2026 update on ex post facto: mandatory federal restitution counts as punishment. Verify the opinion.", status: "unsure", src: "SCOTUSblog, The court's criminal law term (July 2026); crim.md §13.1, §14 (secondary source only)" },
+          { id: "u8-c-grants-pass", kind: "case", subject: "crim", cat: "V.G", name: "City of Grants Pass v. Johnson", year: 2024, holding: "Enforcing generally applicable public-camping ordinances against homeless people is not cruel and unusual punishment.", facts: "A city fined people for sleeping outside on public land, even when shelters were full.", say: "The Eighth Amendment limits how you punish, not what you may make a crime: a camping ban punishes conduct, not the status of being homeless.", status: "general", src: "City of Grants Pass v. Johnson, 603 U.S. 520 (2024); crim.md §13.1; say corrected Nov 2, 2026" },
+          { id: "u8-c-ellingburg", kind: "case", subject: "crim", cat: "V.I", name: "Ellingburg v. United States", year: 2026, recent: true, holding: "Restitution under the Mandatory Victims Restitution Act is criminal punishment for Ex Post Facto purposes, so it cannot be applied retroactively to a pre-MVRA crime; remanded (9-0).", facts: "A man who robbed a bank in 1995 was ordered under the 1996 MVRA to pay restitution.", say: "Mandatory federal restitution is punishment, so the Ex Post Facto Clause applies to it.", status: "book", src: "Ellingburg v. United States, No. 24-482 (Jan. 20, 2026), syllabus and opinion read on law.cornell.edu, Nov 2, 2026 (Kavanaugh, J., for a unanimous Court; Thomas, J., joined by Gorsuch, J., concurring; reversed and remanded); crim.md §13.1, §14" },
           { id: "u8-c-barrett", kind: "case", subject: "crim", cat: "V.F", name: "Barrett v. United States", year: 2026, recent: true, holding: "Absent a clear statement, Congress is presumed not to authorize convictions under both 18 U.S.C. §924(c)(1)(A)(i) and §924(j) for one act (Blockburger presumption); one conviction must go.", facts: "A defendant was convicted under two firearm subsections for a single act.", say: "Statutory, not a new constitutional rule: no stacked §924(c) and §924(j) convictions for one act unless Congress clearly allowed it.", status: "general", src: "Barrett v. United States, No. 24-5774 (Jan. 14, 2026), syllabus read on law.cornell.edu; Blockburger v. United States (1932); 18 U.S.C. §924(c), (j)" },
           { id: "u8-t-habeas", kind: "term", subject: "crim", term: "habeas corpus", lang: "latin", literal: "you shall have the body", meaning: "A writ ordering a custodian to bring a prisoner before a court so that the lawfulness of the detention can be tested; a state prisoner seeks federal habeas after exhausting state remedies, and the federal court defers to reasonable state rulings under AEDPA.", use: "28 U.S.C. §2254(d): relief only if the state ruling unreasonably applied clearly established Supreme Court law; a fully litigated Fourth Amendment claim is barred (Stone v. Powell).", hook: "You already say it: the writ's opening command was to bring the body before the judge.", say: "Habeas asks whether confinement is lawful; for state prisoners review is deferential (AEDPA), and Fourth Amendment claims already heard are barred.", status: "general", src: "28 U.S.C. §2254(d); Stone v. Powell, 428 U.S. 465 (1976); hooks.jsonl (List of Latin legal terms)" },
         ],

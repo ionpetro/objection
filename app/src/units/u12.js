@@ -15,7 +15,8 @@
 //  - u12-h-negligent-misrepresentation (MIS-2): Rest. 2d §552 limited-group rule versus Ultramares and foreseeability states.
 //  - u12-r-other-privileges: parental discipline, citizen's arrest and recapture of chattels are standard black letter, but only secondary sources were read, and the edge cases (mistake about whether a felony occurred; goods held by a defaulting buyer) vary by state.
 //  - u12-h-recapture: forcible recapture of chattels (fresh pursuit; a buyer who defaults has possession by consent); secondary sources only, not re-read.
-//  - u12-h-trespasser-strict: Rest. 2d §520B (no strict liability to trespassers on the land); from memory and one summary, not re-read.
+//  - u12-h-trespasser-strict: Rest. 2d §520B (no strict liability to trespassers on the land); a treatise confirms §520A is ground damage from aircraft, but §520B's text was not found; re-read §§520A-520C.
+//  - u12-r-animals: Rest. 2d §504 as quoted in Williams v. Goodwin (Cal. Ct. App. 1974) covers harm to the possessor and household; the highway and fence-out limits and §511 (no strict liability to trespassers for wild animals) are from memory; re-read §§504-511.
 //
 // Damages, survival, mitigation and consortium items carry no `cat`: the NCBE outline does not file them under category II, so they must not count toward negligence's share in the mixes.
 // NextGen differences (exam: ["mbe"]): animals, last clear chance, survival and wrongful death, interference with business relations,
@@ -37,6 +38,62 @@
         title: "Intentional torts",
         items: [
           {
+            id: "u12-r-battery", kind: "rule", title: "Battery", cat: "I.A",
+            say: "Battery is an intended harmful or offensive contact with the plaintiff's person. No injury is needed, and the plaintiff need not know.",
+            elements: ["An act by the defendant", "Intent to cause a harmful or offensive contact (or imminent apprehension of one)", "A harmful or offensive contact with the plaintiff's person", "The act causes the contact"],
+            ordered: true,
+            distractorElements: ["Physical injury to the plaintiff", "The plaintiff's awareness at the moment of contact"],
+            exceptions: [
+              "Offensive means offensive to a reasonable sense of personal dignity, an objective test",
+              "No physical injury is required, and an unconscious or sleeping plaintiff can recover",
+              "Words alone are not a contact",
+            ],
+            cite: "Rest. 2d Torts §13", citeAsk: "Which Restatement section defines battery?",
+            ex: [
+              { facts: "A man pours a drink over a stranger's head as a prank.", result: "Battery: an offensive contact, intended, with no injury needed." },
+              { facts: "A man says insulting things to a stranger but never touches her.", result: "No battery: words alone are not a contact." },
+            ],
+            terms: ["harmful contact", "offensive contact"],
+            quiz: [
+              { t: "tf", q: "Battery requires that the plaintiff suffer a physical injury.", a: false, why: "Battery protects dignity as well as safety. An offensive contact is enough." },
+              { t: "tf", q: "A plaintiff who was asleep and learned of the contact only later cannot recover for battery.", a: false, why: "Awareness at the time of the contact is not an element of battery." },
+              { t: "mcq", q: "Whether a contact is offensive is judged by...", options: ["What would offend a reasonable sense of personal dignity", "How the plaintiff in fact reacted", "Whether the defendant meant to insult the plaintiff"], a: "What would offend a reasonable sense of personal dignity", why: "The test is objective: a reasonable person's sense of dignity, not the plaintiff's unusual sensitivity and not the defendant's motive." },
+            ],
+            hook: "Vosburg v. Putney: a light kick on a schoolroom shin, a badly injured leg. He took the plaintiff as he found him.",
+            status: "general", src: "Rest. 2d Torts §§13, 18-19; torts.md §2.2",
+          },
+          {
+            id: "u12-h-battery-spit", kind: "hypo", cat: "I.A", callType: "prevail", rule: "u12-r-battery", issue: "offensive contact without injury", grid: true,
+            stem: "During an argument in a parking lot over a parking space, a man spat in a stranger's face. The stranger wiped it off and was not injured, but he was humiliated in front of his family. The man had meant to insult him. The stranger sued the man for battery.",
+            call: "Will the stranger prevail?",
+            options: [
+              { text: "Yes, because the man intentionally made an offensive contact, and no physical injury is required.", why: "Battery protects dignity as well as safety: an intended contact that offends a reasonable sense of personal dignity is enough." },
+              { text: "No, because the stranger was not physically injured and wiped the spit away without any harm.", why: "Physical injury is not an element of battery.", trap: 5 },
+              { text: "Yes, but only if the stranger can prove that the spit carried a disease or caused physical illness.", why: "No physical harm need be proved; an offensive contact is enough.", trap: 5 },
+              { text: "No, because the man meant only to insult the stranger and did not touch him with his hands.", why: "Battery requires contact with the person, not contact by hand; the man's insulting purpose supplies the intent.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["spat in a stranger's face"],
+            say: "Battery protects dignity as well as safety: an intended offensive contact is enough, injury or none.",
+            status: "general",
+            src: "Rest. 2d Torts §§13, 18-19; torts.md §2.2",
+          },
+          {
+            id: "u12-h-battery-held", kind: "hypo", cat: "I.A", callType: "prevail", rule: "u12-r-battery", issue: "contact with a held object", grid: true,
+            stem: "A man, annoyed at a stranger in a food-truck line, knocked a coffee cup out of the stranger's hand without touching the hand itself. The stranger was not hurt but was deeply insulted. The man had intended to humiliate the stranger. The stranger sued the man for battery.",
+            call: "Will the stranger prevail?",
+            options: [
+              { text: "Yes, because knocking an object out of a person's hand can be an offensive contact with that person.", why: "Under the usual rule, the person extends to things so closely connected that touching them is touching the person." },
+              { text: "No, because the man never touched the stranger's body, only the coffee cup that the stranger held.", why: "Contact with something held or worn can count as contact with the person.", trap: 5 },
+              { text: "No, because the stranger suffered no physical injury from the incident, only insult to his dignity.", why: "Battery does not require injury; an offensive contact is enough.", trap: 5 },
+              { text: "Yes, but only for assault, because there was no contact with the stranger's body itself.", why: "If the contact with the held cup counts, battery is the tort; assault is the apprehension tort.", trap: 9 },
+            ],
+            answer: 0,
+            facts: ["knocked a coffee cup out of the stranger's hand"],
+            say: "The cup in your hand counts as you. Dignity is what battery protects.",
+            status: "unsure", src: "Rest. 2d Torts §18 cmt. c (not re-read); torts.md §2.5 (INT-3, held back)",
+          },
+          {
             id: "u12-r-intent", kind: "rule", title: "Intent in the intentional torts", cat: "I.A",
             say: "Intent is purpose or knowledge to a substantial certainty. Motive and mistake do not matter, and a child can have it.",
             elements: ["An act by the defendant", "Purpose to bring about the contact or invasion, or knowledge to a substantial certainty that it will result"],
@@ -51,7 +108,7 @@
             ],
             cite: "Garratt v. Dailey", citeAsk: "Which case teaches that substantial certainty is enough for intent?",
             ex: [
-              { facts: "A boy pulls a chair away as a guest begins to sit, meaning it as a joke.", result: "Intent: he knew with substantial certainty that she would fall; a playful motive does not matter." },
+              { facts: "A man sprays a friend with a garden hose as a prank, knowing she is standing in its path.", result: "Intent: he knew with substantial certainty the water would hit her; a playful motive does not matter." },
               { facts: "A man fences land he honestly believes is his, and the fence crosses the boundary.", result: "Intent to place the fence there is enough for trespass; the honest mistake is no defense." },
             ],
             terms: ["intent", "substantial certainty", "transferred intent"],
@@ -80,6 +137,14 @@
             status: "general", src: "Rest. 2d Torts §16; torts.md §2.5 (INT-1, rewritten)",
           },
           {
+            id: "u12-c-garratt", kind: "case", name: "Garratt v. Dailey", year: 1955,
+            holding: "A defendant who knows with substantial certainty that a contact will result has the intent for battery, even without hostility; a young child can be liable on that basis.",
+            facts: "A five-year-old moved a lawn chair just as Ruth Garratt was about to sit; she fell and was badly hurt. The court asked whether he knew she would sit where the chair had been.",
+            say: "Substantial certainty is intent. Ruth Garratt's chair is the picture to remember.",
+            hook: "The court sent the case back to find one fact: did the boy know she would sit there?",
+            status: "general", src: "Garratt v. Dailey, 46 Wash. 2d 197, 279 P.2d 1091 (1955); hooks.jsonl",
+          },
+          {
             id: "u12-h-motive-child", kind: "hypo", cat: "I.A", callType: "prevail", rule: "u12-r-intent", issue: "child's intent and motive", transfer: true,
             stem: "A six-year-old child, thinking it would be funny, pulled a chair away just as his aunt began to sit down. The child knew that she was about to sit, and she fell and broke her wrist. The aunt sued the child, through a guardian, for battery. No statute of the jurisdiction bears on the case.",
             call: "Will the aunt's claim succeed?",
@@ -93,70 +158,6 @@
             facts: ["The child knew that she was about to sit"],
             say: "Playful is a motive, not a defense. Knowing she would fall is intent, at any age that understands it.",
             status: "general", src: "Garratt v. Dailey (1955); NCBE NextGen UBE Content Scope (Torts I: intent, motive, minors); torts.md §2.5 (INT-2, rewritten)",
-          },
-          {
-            id: "u12-c-garratt", kind: "case", name: "Garratt v. Dailey", year: 1955,
-            holding: "A defendant who knows with substantial certainty that a contact will result has the intent for battery, even without hostility; a young child can be liable on that basis.",
-            facts: "A five-year-old moved a lawn chair just as Ruth Garratt was about to sit; she fell and was badly hurt. The court asked whether he knew she would sit where the chair had been.",
-            say: "Substantial certainty is intent. Ruth Garratt's chair is the picture to remember.",
-            hook: "The court sent the case back to find one fact: did the boy know she would sit there?",
-            status: "general", src: "Garratt v. Dailey, 46 Wash. 2d 197, 279 P.2d 1091 (1955); hooks.jsonl",
-          },
-          {
-            id: "u12-r-battery", kind: "rule", title: "Battery", cat: "I.A",
-            say: "Battery is an intended harmful or offensive contact with the plaintiff's person. No injury is needed, and the plaintiff need not know.",
-            elements: ["An act by the defendant", "Intent to cause a harmful or offensive contact (or imminent apprehension of one)", "A harmful or offensive contact with the plaintiff's person", "The act causes the contact"],
-            ordered: true,
-            distractorElements: ["Physical injury to the plaintiff", "The plaintiff's awareness at the moment of contact"],
-            exceptions: [
-              "Offensive means offensive to a reasonable sense of personal dignity, an objective test",
-              "No physical injury is required, and an unconscious or sleeping plaintiff can recover",
-              "Words alone are not a contact",
-            ],
-            cite: "Rest. 2d Torts §13", citeAsk: "Which Restatement section defines battery?",
-            ex: [
-              { facts: "A man pours a drink over a stranger's head as a prank.", result: "Battery: an offensive contact, intended, with no injury needed." },
-              { facts: "A man says insulting things to a stranger but never touches her.", result: "No battery: words alone are not a contact." },
-            ],
-            terms: ["harmful contact", "offensive contact"],
-            quiz: [
-              { t: "tf", q: "Battery requires that the plaintiff suffer a physical injury.", a: false, why: "Battery protects dignity as well as safety. An offensive contact is enough." },
-              { t: "tf", q: "A plaintiff who was asleep and learned of the contact only later cannot recover for battery.", a: false, why: "Awareness at the time of the contact is not an element of battery." },
-              { t: "mcq", q: "Whether a contact is offensive is judged by...", options: ["What would offend a reasonable sense of personal dignity", "How the plaintiff in fact reacted", "Whether the defendant meant to insult the plaintiff"], a: "What would offend a reasonable sense of personal dignity", why: "The test is objective: a reasonable person's sense of dignity, not the plaintiff's unusual sensitivity and not the defendant's motive." },
-            ],
-            hook: "Vosburg v. Putney: a light kick on a schoolroom shin, a badly injured leg. He took the plaintiff as he found him.",
-            status: "general", src: "Rest. 2d Torts §§13, 18-19; torts.md §2.2",
-          },
-          {
-            id: "u12-h-battery-held", kind: "hypo", cat: "I.A", callType: "prevail", rule: "u12-r-battery", issue: "contact with a held object", grid: true,
-            stem: "A man, annoyed at a stranger in a food-truck line, knocked a coffee cup out of the stranger's hand without touching the hand itself. The stranger was not hurt but was deeply insulted. The man had intended to humiliate the stranger. The stranger sued the man for battery.",
-            call: "Will the stranger prevail?",
-            options: [
-              { text: "Yes, because knocking an object out of a person's hand can be an offensive contact with that person.", why: "Under the usual rule, the person extends to things so closely connected that touching them is touching the person." },
-              { text: "No, because the man never touched the stranger's body, only the coffee cup that the stranger held.", why: "Contact with something held or worn can count as contact with the person.", trap: 5 },
-              { text: "No, because the stranger suffered no physical injury from the incident, only insult to his dignity.", why: "Battery does not require injury; an offensive contact is enough.", trap: 5 },
-              { text: "Yes, but only for assault, because there was no contact with the stranger's body itself.", why: "If the contact with the held cup counts, battery is the tort; assault is the apprehension tort.", trap: 9 },
-            ],
-            answer: 0,
-            facts: ["knocked a coffee cup out of the stranger's hand"],
-            say: "The cup in your hand counts as you. Dignity is what battery protects.",
-            status: "unsure", src: "Rest. 2d Torts §18 cmt. c (not re-read); torts.md §2.5 (INT-3, held back)",
-          },
-          {
-            id: "u12-h-battery-spit", kind: "hypo", cat: "I.A", callType: "prevail", rule: "u12-r-battery", issue: "offensive contact without injury", grid: true,
-            stem: "During an argument in a parking lot over a parking space, a man spat in a stranger's face. The stranger wiped it off and was not injured, but he was humiliated in front of his family. The man had meant to insult him. The stranger sued the man for battery.",
-            call: "Will the stranger prevail?",
-            options: [
-              { text: "Yes, because the man intentionally made an offensive contact, and no physical injury is required.", why: "Battery protects dignity as well as safety: an intended contact that offends a reasonable sense of personal dignity is enough." },
-              { text: "No, because the stranger was not physically injured and wiped the spit away without any harm.", why: "Physical injury is not an element of battery.", trap: 5 },
-              { text: "Yes, but only if the stranger can prove that the spit carried a disease or caused physical illness.", why: "No physical harm need be proved; an offensive contact is enough.", trap: 5 },
-              { text: "No, because the man meant only to insult the stranger and did not touch him with his hands.", why: "Battery requires contact with the person, not contact by hand; the man's insulting purpose supplies the intent.", trap: 5 },
-            ],
-            answer: 0,
-            facts: ["spat in a stranger's face"],
-            say: "Battery protects dignity as well as safety: an intended offensive contact is enough, injury or none.",
-            status: "general",
-            src: "Rest. 2d Torts §§13, 18-19; torts.md §2.2",
           },
           {
             id: "u12-r-assault", kind: "rule", title: "Assault", cat: "I.A",
@@ -173,7 +174,7 @@
             cite: "Rest. 2d Torts §21", citeAsk: "Which Restatement section defines assault?",
             ex: [
               { facts: "A man swings a fist at a woman who sees it coming and steps aside, untouched.", result: "Assault: she reasonably apprehended an imminent contact. No contact occurred, so no battery." },
-              { facts: "A man tells a woman across a river that he will hurt her next week.", result: "No assault: the threatened contact is not imminent." },
+              { facts: "A man texts a coworker that he will 'settle things' with her at next month's meeting.", result: "No assault: a threat of future harm is not imminent." },
             ],
             terms: ["apprehension", "imminent"],
             quiz: [
@@ -192,12 +193,12 @@
               { text: "No, because the threatened contact was not imminent.", why: "Assault requires reasonable apprehension of an imminent contact. A threat to shoot tomorrow, from across a river, is not imminent." },
               { text: "Yes, because the woman intended to frighten the man and he was genuinely terrified.", why: "Intent and fear are present, but the element of imminence is missing.", trap: 2 },
               { text: "Yes, because the man reasonably believed that the woman would carry out the threat.", why: "A reasonable belief about the future is not apprehension of an imminent contact.", trap: 9 },
-              { text: "No, because words alone can never constitute an assault.", why: "Words combined with other acts or circumstances can; the failure here is imminence, not the use of words.", trap: 7 },
+              { text: "No, because an assault requires that the defendant be close enough to touch the plaintiff.", why: "Apparent ability to bring about an imminent contact is enough, as with a gun across a room; the failure here is imminence.", trap: 1 },
             ],
             answer: 0,
             facts: ["I am going to shoot you tomorrow", "across a wide river"],
             say: "Tomorrow is not imminent. No imminent contact, no assault, however frightened he was.",
-            status: "general", src: "Rest. 2d Torts §§21, 31; torts.md §2.5 (INT-4, rewritten)",
+            status: "general", src: "Rest. 2d Torts §§21, 29, 31; torts.md §2.5 (INT-4, rewritten; option D replaced after review)",
           },
           {
             id: "u12-r-false-imprisonment", kind: "rule", title: "False imprisonment and the shopkeeper's privilege", cat: "I.A",
@@ -214,7 +215,7 @@
             cite: "Rest. 2d Torts §35", citeAsk: "Which Restatement section defines false imprisonment?",
             ex: [
               { facts: "A guard locks a janitor in a storeroom as a prank; the janitor sleeps through it and never learns of the lock.", result: "No false imprisonment: no awareness and no harm." },
-              { facts: "A store manager detains a customer for ten minutes on reasonable suspicion of theft; she turns out to be innocent.", result: "Privileged: reasonable grounds, manner and time protect the store." },
+              { facts: "A hardware store holds a customer at the exit for a quarter of an hour after its alarm sounds; a cashier had forgotten to remove a tag.", result: "Privileged if the grounds, manner and time were reasonable; the customer's innocence does not matter." },
             ],
             terms: ["confinement", "shopkeeper's privilege"],
             quiz: [
@@ -305,14 +306,14 @@
           },
           {
             id: "u12-r-property-torts", kind: "rule", title: "Trespass to land, trespass to chattels and conversion", cat: "I.A",
-            say: "Trespass to land needs only intent to enter. Trespass to chattels needs harm. Conversion is a serious interference that forces a sale at full value.",
+            say: "Trespass to land needs only intent to enter. Trespass to chattels needs dispossession or harm. Conversion is a serious interference that forces a sale.",
             elements: ["Trespass to land: intent to enter, or cause entry on, land in another's possession", "Trespass to chattels: intermeddling that dispossesses, harms or deprives the owner of use", "Conversion: interference serious enough to justify a forced sale at full value"],
             ordered: false,
             distractorElements: ["Intent to trespass", "Actual harm to the land"],
             exceptions: [
               "Mistake and good faith are no defense to any of the three torts",
               "Trespass to land: no harm is required, nominal damages are available, and a good-faith boundary mistake is no defense",
-              "Trespass to chattels needs actual harm: dispossession, impairment, loss of use for a substantial time, or bodily harm",
+              "Trespass to chattels is actionable on a dispossession (taking it), or on harm: impairment, loss of use for a substantial time, or bodily harm (Rest. 2d §218)",
               "Conversion factors: extent and duration of control, intent to assert a right inconsistent with the owner's, good faith, harm done, and expense to the owner; remedy is full value",
               "Smoke, noise and odors are traditionally nuisance, not trespass",
             ],
@@ -324,10 +325,10 @@
             terms: ["trespass to chattels", "conversion", "forced sale"],
             quiz: [
               { t: "tf", q: "A good-faith purchaser from a thief cannot be liable for conversion.", a: false, why: "Good faith is no defense. A buyer from a thief acquires no title, and refusing the owner's demand is conversion." },
-              { t: "mcq", q: "A man borrows a stranger's bicycle without permission for an afternoon and returns it undamaged. The owner's best claim is...", options: ["Trespass to chattels, if she can show harm or loss of use", "Conversion, for the full value of the bicycle", "Nothing, because the bicycle was returned"], a: "Trespass to chattels, if she can show harm or loss of use", why: "A brief use is not serious enough for conversion; trespass to chattels needs actual harm, such as loss of use, which she may or may not be able to show." },
+              { t: "mcq", q: "A man takes a stranger's bicycle without permission for an afternoon and returns it undamaged. The owner's best claim is...", options: ["Trespass to chattels: taking it was a dispossession", "Conversion, for the full value of the bicycle", "Nothing, because the bicycle was returned undamaged"], a: "Trespass to chattels: taking it was a dispossession", why: "A brief dispossession is trespass to chattels (Rest. 2d §218(a)), not a forced sale; conversion needs a more serious interference." },
               { t: "bucket", q: "Which tort?", buckets: ["Trespass to land", "Conversion"], items: [{ text: "A neighbor builds a fence three feet onto the plaintiff's lot", bucket: "Trespass to land" }, { text: "A storage company sells a customer's furniture without authority", bucket: "Conversion" }, { text: "A hiker crosses a posted private field", bucket: "Trespass to land" }, { text: "A repair shop refuses to return a customer's car and uses it for months", bucket: "Conversion" }] },
             ],
-            status: "general", src: "Rest. 2d Torts §§158, 217-218, 222A; torts.md §2.3",
+            status: "general", src: "Rest. 2d Torts §§158, 217-218, 221, 222A (secondary sources, not re-read); torts.md §2.3",
           },
           {
             id: "u12-h-trespass-mistake", kind: "hypo", cat: "I.A", callType: "prevail", rule: "u12-r-property-torts", issue: "trespass to land and honest mistake", grid: true,
@@ -379,7 +380,7 @@
             ],
             cite: "Rest. 2d Torts §892A", citeAsk: "Which Restatement section states the effect of consent?",
             ex: [
-              { facts: "A patient consents to removal of a cyst; the surgeon also removes an unrelated mole, with no urgency.", result: "Battery as to the mole: outside the scope of consent and no emergency." },
+              { facts: "A patient consents to a filling in one tooth; the dentist also pulls a healthy neighboring tooth, with no urgency.", result: "Battery as to the extraction: outside the scope of consent and no emergency." },
               { facts: "An unconscious accident victim needs immediate surgery, and no relative can be reached.", result: "Consent is implied: no battery." },
             ],
             terms: ["consent", "scope of consent"],
@@ -418,8 +419,8 @@
             ],
             cite: "Katko v. Briney", citeAsk: "Which case bars deadly force, even by spring gun, to protect property?",
             ex: [
-              { facts: "A patron lightly shoves another patron, who responds by stabbing him with a knife.", result: "No self-defense: the force was disproportionate." },
-              { facts: "An owner rigs a shotgun to fire at anyone who opens the door of his empty barn.", result: "No privilege: deadly force may not protect property alone." },
+              { facts: "A man jostled at a concert responds by smashing a bottle over the jostler's head.", result: "No self-defense: the force was disproportionate." },
+              { facts: "A shop owner wires a lethal electric charge to the doorknob of his closed shop.", result: "No privilege: deadly force, by device or otherwise, may not protect property alone." },
             ],
             terms: ["proportionate force", "initial aggressor", "spring gun"],
             quiz: [
@@ -493,7 +494,7 @@
             cite: "Vincent v. Lake Erie Transportation Co.", citeAsk: "Which case holds that a boat owner who ties up to a dock in a storm must pay for the damage?",
             ex: [
               { facts: "Officials blow up houses in a wildfire's path to stop it from reaching the town.", result: "Public necessity: privileged, and no liability for the houses." },
-              { facts: "A boater in a gale ties to a private dock, which the waves damage.", result: "Private necessity: privileged to stay, but he pays for the damage to the dock." },
+              { facts: "A hiker caught in a blizzard breaks a cabin window and burns the owner's firewood to survive.", result: "Private necessity: privileged to enter and stay, but she pays for the window and the wood." },
             ],
             terms: ["public necessity", "private necessity", "incomplete privilege"],
             quiz: [
@@ -527,7 +528,7 @@
             distractorElements: ["Deadly force to keep a thief from escaping with property", "Force against anyone who now holds the owner's goods"],
             exceptions: [
               "Excessive force ends the privilege and is itself a battery",
-              "A buyer who has the goods by the seller's consent, such as a defaulting buyer, may not be forcibly dispossessed; the seller must use legal process",
+              "A seller may not use force against a buyer who holds the goods by the seller's consent, such as a defaulting buyer; it must use legal process or, with a security interest, peaceful repossession without a breach of the peace (UCC 9-609)",
               "A police officer may arrest on probable cause; a private citizen's common-law privilege depends on a felony actually having been committed, and a mistake about that is traditionally no protection (states vary)",
               "A teacher's privilege to discipline is much narrower than a parent's, and many states bar corporal punishment in schools",
             ],
@@ -539,7 +540,7 @@
             ],
             terms: ["recapture of chattels", "fresh pursuit", "citizen's arrest"],
             quiz: [
-              { t: "tf", q: "A seller who sold goods on credit may use reasonable force to retake them from a buyer who has defaulted.", a: false, why: "The buyer has the goods by the seller's consent. The seller must use legal process, not force." },
+              { t: "tf", q: "A seller who sold goods on credit may use reasonable force to retake them from a buyer who has defaulted.", a: false, why: "The buyer has the goods by the seller's consent, so force is not privileged. The seller must use legal process or a peaceful repossession." },
               { t: "tf", q: "A parent may use reasonable force to discipline a child, in proportion to the child's age and misbehavior.", a: true, why: "Parental discipline is a privilege, limited by reasonableness." },
               { t: "mcq", q: "A bystander who sees a felony in progress and holds the felon for the police is privileged if...", options: ["The felony was actually committed and he used reasonable force", "He merely suspects a minor offense", "He first obtains a warrant"], a: "The felony was actually committed and he used reasonable force", why: "The citizen's privilege depends on a real felony and on reasonable force; no warrant is needed." },
             ],
@@ -567,14 +568,14 @@
             stem: "A seller sold a television to a buyer on credit and delivered it to the buyer's home. When the buyer missed two payments, the seller's owner went to the buyer's home, demanded the television and, when the buyer refused, pushed the buyer aside and carried it out. The buyer was bruised but not seriously hurt. The buyer sued the seller's owner for battery.",
             call: "Is the seller's owner liable?",
             options: [
-              { text: "Yes, because the buyer held the television with the seller's consent, so the seller had to use legal process.", why: "Force to recapture goods is privileged only against one who took them wrongfully, not against a buyer who has them by the seller's consent." },
+              { text: "Yes, because the buyer held the television with the seller's consent, so the seller could not use force to retake it.", why: "Force to recapture goods is privileged only against one who took them wrongfully, not against a buyer who has them by the seller's consent." },
               { text: "No, because an owner may use reasonable force to retake his own property from anyone, at any time and place.", why: "The privilege needs fresh pursuit, a demand and a wrongful taking, so the statement is too broad.", trap: 7 },
               { text: "No, because a buyer who has defaulted forfeits any right to keep possession of the television.", why: "A default gives the seller a claim, not a privilege to use force.", trap: 5 },
               { text: "Yes, but only if the force used was deadly or likely to cause serious bodily harm.", why: "Any force beyond the privilege is a battery, not only deadly force.", trap: 5 },
             ],
             answer: 0,
             facts: ["missed two payments"],
-            say: "Retake by force only from a thief in fresh pursuit, never from a buyer you sold to.",
+            say: "Retake by force only from a thief in fresh pursuit, never by force from a buyer you sold to.",
             status: "unsure",
             src: "Rest. 2d Torts §§100-106 (secondary sources, not re-read); torts.md §2.4, §9 (recapture of chattels held back)",
           },
@@ -610,7 +611,7 @@
         items: [
           {
             id: "u12-r-negligence", kind: "rule", title: "The five elements of negligence", cat: "II.B",
-            say: "Negligence is duty, breach, actual cause, proximate cause and damages. About half of all Torts questions on the MBE are here.",
+            say: "Negligence is duty, breach, actual cause, proximate cause and damages. NCBE says about half of the Torts questions are on negligence.",
             elements: ["Duty of care owed to the plaintiff", "Breach: conduct below the standard of a reasonably prudent person", "Actual cause (but-for or substantial factor)", "Proximate cause (scope of the risk)", "Actual damage (not nominal): harm of a kind the law compensates in negligence"],
             ordered: true,
             distractorElements: ["Intent to cause harm", "Foreseeable economic loss"],
@@ -620,7 +621,7 @@
               "Hand formula (Carroll Towing): breach if the burden of precaution is less than the probability of harm times its gravity (B < PL); an aid, not a required test",
               "NCBE: approximately half of the Torts questions are based on negligence",
             ],
-            cite: "United States v. Carroll Towing Co.",
+            cite: "NCBE MBE Subject Matter Outline (Torts II)", citeAsk: "Which document says about half of the Torts questions are on negligence?",
             ex: [
               { facts: "A driver runs a red light and hits a pedestrian, who suffers a broken leg.", result: "All five elements: duty of a driver, breach, but-for and proximate cause, physical damage." },
               { facts: "A driver runs a red light, hits nothing and harms no one.", result: "No negligence claim: damage is missing." },
@@ -652,7 +653,7 @@
             ],
             cite: "Palsgraf v. Long Island Railroad Co.", citeAsk: "Which case limits duty to foreseeable plaintiffs?",
             ex: [
-              { facts: "A guard negligently drops a package, which happens to hold unmarked fireworks; the blast topples a scale onto a woman far down the platform.", result: "No duty to her under the majority view: nothing made her a foreseeable plaintiff." },
+              { facts: "A driver negligently clips a parked car whose trunk, unknown to anyone, holds a gas cylinder; it ruptures and a fragment hurts a woman a block away.", result: "No duty to her under the majority view: a fender-bender risked nothing to someone a block away." },
               { facts: "A passerby is hurt stopping a runaway truck that a negligent driver left unbraked.", result: "Duty: a rescuer is foreseeable." },
             ],
             terms: ["zone of danger", "foreseeable plaintiff"],
@@ -687,6 +688,21 @@
             status: "general", src: "Palsgraf v. Long Island R.R. Co., 248 N.Y. 339, 162 N.E. 99 (1928); hooks.jsonl",
           },
           {
+            id: "u12-h-rescue", kind: "hypo", cat: "II.E", callType: "prevail", rule: "u12-r-foreseeable-plaintiff", issue: "rescuer as a foreseeable plaintiff", grid: true,
+            stem: "A delivery driver, running late on a lunch route, negligently left a truck on a slope without setting the brake. The truck began rolling toward a toddler playing in a yard. A passerby ran in, stopped the truck, and wrenched his back. The passerby sued the delivery driver for negligence.",
+            call: "Will the passerby prevail?",
+            options: [
+              { text: "Yes, because a rescuer is a foreseeable plaintiff when a defendant's negligence endangers another person.", why: "Danger invites rescue, and a reasonable rescuer may recover from the person who created the peril." },
+              { text: "No, because the passerby voluntarily assumed the risk of injury when he ran in to stop the truck.", why: "A reasonable rescuer does not assume the risk in the bar sense.", trap: 10 },
+              { text: "No, because the passerby had no duty to help a stranger, so he cannot recover for helping one.", why: "True, but it does not answer the call: the question is the defendant's duty to the rescuer.", trap: 6 },
+              { text: "Yes, but only if the toddler in the yard was actually injured by the rolling delivery truck that day.", why: "The rescue doctrine does not require that the person in peril be injured.", trap: 3 },
+            ],
+            answer: 0,
+            facts: ["wrenched his back"],
+            say: "Danger invites rescue: the rescuer is a foreseeable plaintiff.",
+            status: "general", src: "Wagner v. International Railway (Cardozo, N.Y. 1921); torts.md §4.2, §4.7 (CAU-8, rewritten)",
+          },
+          {
             id: "u12-r-no-duty", kind: "rule", title: "No duty to act, and its exceptions", cat: "II.A",
             say: "No general duty to rescue. Duty arises from a special relationship, from creating the peril, or from an undertaking that adds risk or induces reliance.",
             elements: ["General rule: no duty to rescue or aid a stranger", "Exception: a special relationship (carrier, innkeeper, business and invitee, custodian, school)", "Exception: the defendant created or worsened the peril", "Exception: an undertaking that increases the risk or induces reliance"],
@@ -698,8 +714,8 @@
             ],
             cite: "Rest. 3d Torts §42", citeAsk: "Which Restatement section governs duties arising from an undertaking?",
             ex: [
-              { facts: "A strong swimmer watches a stranger drown in a public lake and does nothing.", result: "No duty: no special relationship, no created peril, no undertaking." },
-              { facts: "A caller dials 911 for an injured stranger and then leaves; she added no risk and induced no reliance.", result: "No duty from the call (the NCBE's own example)." },
+              { facts: "A tourist on a pier watches a stranger's kayak capsize and walks on.", result: "No duty: no special relationship, no created peril, no undertaking." },
+              { facts: "A jogger tells a lost child to wait on a bench and then jogs on; she added no risk and induced no reliance.", result: "No duty arose from the brief contact." },
             ],
             terms: ["nonfeasance", "special relationship", "voluntary undertaking"],
             quiz: [
@@ -749,12 +765,13 @@
               "Tarasoff: a therapist who knows a patient is a serious danger to a reasonably identifiable victim must take reasonable steps to protect the victim; the exact scope varies by state",
               "Parents are not vicariously liable at common law, but they are liable for their own negligence in failing to control a child they know to be dangerous",
               "Negligent entrustment of a car or gun to someone known or likely to misuse it is the supplier's own negligence",
+              "A car owner is not vicariously liable for a permitted driver at common law; a family-purpose doctrine or an owner-consent statute changes that only if the stem names it",
               "A statute may make parents liable, up to a stated cap, for a child's willful or malicious property damage; the stem states the statute",
             ],
             cite: "Tarasoff v. Regents of the University of California", citeAsk: "Which case imposed a duty to protect a reasonably identifiable victim?",
             ex: [
               { facts: "A therapist learns that a patient intends to kill a named person and does nothing.", result: "Duty to take reasonable steps to protect the victim." },
-              { facts: "A parent knows her teenager has repeatedly attacked younger children and keeps a loaded rifle within his reach.", result: "Duty: she can control him and knows of the danger." },
+              { facts: "A camp director knows a counselor has repeatedly hit campers and still puts him in charge of a cabin.", result: "Duty: the camp can control him and knows of the danger." },
             ],
             terms: ["special relationship", "negligent entrustment"],
             quiz: [
@@ -806,17 +823,18 @@
               "Emergency: judged as a reasonable person would act in the emergency, if the defendant did not create it",
               "Adult activities, such as driving a car or operating a motorboat or snowmobile, take the adult standard even for a child",
               "Professional negligence usually needs expert testimony unless it is within common knowledge; states split on informed-consent disclosure (reasonable physician or reasonable patient)",
+              "Very young children: Rest. 3d §10(b) treats a child under five as incapable of negligence; older rules vary by state, so the stem will say",
             ],
             cite: "Rest. 2d Torts §283A", citeAsk: "Which Restatement section sets the standard of care for children?",
             ex: [
-              { facts: "A fourteen-year-old drives a motorboat at high speed through a swimming area.", result: "Adult standard: motorized vehicles are adult activities." },
-              { facts: "A man with a known delusional disorder drives and runs a red light during a delusion.", result: "His mental illness is not considered; the reasonable-person standard applies." },
+              { facts: "A thirteen-year-old drives a farm tractor on a county road and sideswipes a cyclist.", result: "Adult standard: motorized vehicles are adult activities." },
+              { facts: "A man of very low intelligence misjudges how much a ladder will hold and drops a load on a passerby.", result: "His low intelligence is not considered; the reasonable-person standard applies." },
             ],
             terms: ["reasonably prudent person", "adult activity", "emergency doctrine"],
             quiz: [
               { t: "tf", q: "A defendant's mental illness lowers the standard of care applied to him in negligence.", a: false, why: "Mental illness and low intelligence are not taken into account in the reasonable-person standard." },
               { t: "bucket", q: "Taken into account, or not?", buckets: ["Taken into account", "Not taken into account"], items: [{ text: "Blindness", bucket: "Taken into account" }, { text: "Low intelligence", bucket: "Not taken into account" }, { text: "A child's age", bucket: "Taken into account" }, { text: "A paranoid delusion", bucket: "Not taken into account" }, { text: "A sudden, unforeseeable heart attack", bucket: "Taken into account" }] },
-              { t: "mcq", q: "A twelve-year-old operates a snowmobile and injures a person. The standard is that of...", options: ["A reasonable adult operating a snowmobile", "A reasonable twelve-year-old", "A reasonable twelve-year-old with snowmobile experience"], a: "A reasonable adult operating a snowmobile", why: "The NCBE's own analysis treats motorized vehicles, snowmobiles included, as adult activities." },
+              { t: "mcq", q: "A twelve-year-old operates a snowmobile and injures a person. The standard is that of...", options: ["A reasonable adult operating a snowmobile", "A reasonable twelve-year-old", "A reasonable twelve-year-old with snowmobile experience"], a: "A reasonable adult operating a snowmobile", why: "Operating a motorized vehicle, a snowmobile included, is the standard example of an adult activity." },
             ],
             status: "general", src: "Rest. 2d Torts §§283-289, 283A; Rest. 3d Torts: Liab. Phys. & Emot. Harm §§10-12; NCBE MEE July 2015 analysis (children and snowmobiles); torts.md §3.2",
           },
@@ -867,6 +885,36 @@
             src: "Rest. 2d Torts §296; NCBE NextGen UBE Content Scope (Torts II.B: persons in emergency situations); torts.md §3.2",
           },
           {
+            id: "u12-h-malpractice-expert", kind: "hypo", cat: "II.B", callType: "motion", rule: "u12-r-rpp", issue: "professional standard and expert proof", grid: true,
+            stem: "A patient who developed a hernia after abdominal surgery sued her surgeon for negligence. She testified that the surgeon had closed the incision with a single layer of stitches rather than two, and that she believed two layers would have been safer. She called no expert witness. The surgeon's records were complete, and he had performed the operation many times. Whether one layer met the standard of practice is a technical question beyond the knowledge of ordinary jurors. At the close of the patient's case, the surgeon moved for judgment as a matter of law.",
+            call: "How should the court rule on the motion?",
+            options: [
+              { text: "Grant it, because the patient offered no expert testimony on what a reasonable surgeon would have done.", why: "A professional is held to the skill and knowledge of a reasonable member of the profession, and proving that standard ordinarily needs an expert unless the error is within common knowledge." },
+              { text: "Deny it, because the jury may decide from its own common sense whether one layer of stitches was careless.", why: "Common knowledge covers obvious errors, such as a sponge left inside; the stem says this choice is technical.", trap: 9 },
+              { text: "Deny it, because the hernia would not have occurred unless the surgeon had been negligent.", why: "Nothing in the stem shows that such hernias do not ordinarily occur without negligence; that too would need proof.", trap: 3 },
+              { text: "Grant it, because a surgeon is liable only for gross negligence in choosing between accepted techniques.", why: "The standard is reasonable professional care, not gross negligence; the claim fails for lack of proof of that standard.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["She called no expert witness"],
+            say: "Professionals are judged by the reasonable professional, and proving that standard usually takes an expert.",
+            status: "general", src: "Rest. 2d Torts §299A; torts.md §3.2",
+          },
+          {
+            id: "u12-h-disability-standard", kind: "hypo", cat: "II.B", callType: "instruct", rule: "u12-r-rpp", issue: "physical disability and the standard",
+            stem: "A man who has been blind since birth was walking on a city sidewalk with his white cane when he fell into a trench that a utility crew had dug and left unguarded. His dog guide was at home that day with an injured paw. He sued the utility, which argued that he was comparatively negligent for walking alone on a street he did not know well. The jurisdiction applies pure comparative fault.",
+            call: "Which instruction should the court give on the man's own care?",
+            options: [
+              { text: "He must use the care of a reasonable person who is blind, under like circumstances.", why: "Physical disabilities are part of the circumstances: the standard is a reasonable person with the same disability." },
+              { text: "He must use the care of a reasonable sighted person, because the standard of care is objective.", why: "The standard is objective, but physical disabilities such as blindness are taken into account.", trap: 5 },
+              { text: "He must use only the care that he personally was capable of, given his own experience and abilities.", why: "The standard is not subjective; it is a reasonable person with his disability.", trap: 4 },
+              { text: "He cannot be found at fault at all, because a person with a disability owes no duty of care for his own safety.", why: "A disabled plaintiff must still use reasonable care, judged by a reasonable person with the same disability.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["blind since birth"],
+            say: "Blindness counts: the standard is a reasonable blind person. Mental illness does not count.",
+            status: "general", src: "Rest. 2d Torts §283C; Rest. 3d Torts: Liab. Phys. & Emot. Harm §11(a); torts.md §3.2",
+          },
+          {
             id: "u12-r-custom", kind: "rule", title: "Custom, and arguing breach", cat: "II.B",
             say: "Custom is evidence of due care, not conclusive. A whole industry can lag. Hand's formula: B less than P times L means negligent.",
             elements: ["Custom is relevant evidence of reasonable care", "Custom is not conclusive: an entire industry can lag behind reasonable care", "Hand formula: negligent if the burden of the precaution is less than the probability of harm times its gravity", "Compliance with a statute or regulation is evidence of due care, not a bar"],
@@ -877,7 +925,7 @@
             ],
             cite: "United States v. Carroll Towing Co.", citeAsk: "Which case gave us the B < PL formula?",
             ex: [
-              { facts: "Every tug operator on a river skips weather radios, and a tug without one is wrecked by an unforecast storm.", result: "Custom is not conclusive: the jury may still find negligence (The T.J. Hooper)." },
+              { facts: "Every hotel chain in a city skips window guards on upper floors, and a toddler falls from an open window.", result: "Custom is evidence, not conclusive: the jury may still find the omission negligent (the T.J. Hooper rule)." },
               { facts: "A $100 precaution would avoid a one-in-a-thousand chance of a $1,000,000 loss.", result: "B ($100) is less than PL ($1,000), so omitting it is negligent." },
             ],
             terms: ["custom", "Hand formula"],
@@ -891,19 +939,19 @@
           },
           {
             id: "u12-h-custom", kind: "hypo", cat: "II.B", callType: "accurate", rule: "u12-r-custom", issue: "industry custom and breach", grid: true,
-            stem: "Every tugboat operator on a river carried no weather radio, because radios were thought unnecessary. A tug operator without one was caught by an unforecast storm that a radio would have warned about, and the tug's barges were wrecked. The barge owner sued the operator for negligence and showed that a radio was inexpensive and widely available. The operator offered evidence of the universal custom.",
+            stem: "Every tugboat operator on a river carried no weather radio, because radios were thought unnecessary. A tug operator without one was caught by a storm that radio weather broadcasts had forecast the day before, which a radio would have warned about, and the tug's barges were wrecked. The barge owner sued the operator for negligence and showed that a radio was inexpensive and widely available. The operator offered evidence of the universal custom.",
             call: "Does the universal custom of the operators bar a finding of negligence?",
             options: [
               { text: "No, because custom is relevant evidence of due care but is not conclusive.", why: "The T.J. Hooper: an entire industry can lag behind reasonable care." },
               { text: "Yes, because conformity to a universal custom conclusively establishes due care.", why: "Custom does not control; it is evidence only.", trap: 5 },
-              { text: "Yes, because the operator could not have foreseen an unforecast storm.", why: "The storm was unforecast, but a radio would have warned of it, and the call is about what custom does to breach.", trap: 6 },
+              { text: "Yes, because without a radio, which no operator carried, the operator could not have learned of the storm.", why: "His ignorance was the result of the omitted precaution. Custom does not decide breach; the question is what custom does to the standard.", trap: 5 },
               { text: "No, because evidence of custom is inadmissible to prove the standard of care.", why: "Custom is admissible evidence.", trap: 5 },
             ],
             answer: 0,
             facts: ["a radio was inexpensive and widely available"],
             say: "Everybody does it is evidence, not an answer.",
             hook: "The T.J. Hooper: an entire industry, lagging.",
-            status: "general", src: "The T.J. Hooper (1932); torts.md §3.3 (NEG-12, rewritten)",
+            status: "general", src: "The T.J. Hooper, 60 F.2d 737 (2d Cir. 1932) (the storm had been forecast on radio broadcasts); torts.md §3.3 (NEG-12, rewritten; stem corrected after review)",
           },
           {
             id: "u12-r-per-se", kind: "rule", title: "Negligence per se", cat: "II.B",
@@ -919,7 +967,7 @@
             ],
             cite: "Rest. 3d Torts §14", citeAsk: "Which Restatement section covers negligence per se?",
             ex: [
-              { facts: "A restaurant skips a fire-sprinkler system required by ordinance; a loose ceiling tile, unrelated to fire, falls on a customer.", result: "No negligence per se: the harm is not of the type the ordinance targets." },
+              { facts: "An ordinance requires pool fences to keep small children out; a neighbor's dog wanders into an unfenced pool and drowns.", result: "No negligence per se: the dog's owner is not in the class the ordinance protects." },
               { facts: "A driver passes a school bus with its stop signs out, and a child is struck.", result: "Negligence per se: the child is in the class and the harm is of the type the statute targets." },
             ],
             terms: ["negligence per se", "protected class"],
@@ -945,6 +993,36 @@
             facts: ["unrelated to any fire"],
             say: "Right class, wrong harm: no negligence per se.",
             status: "general", src: "Rest. 3d Torts §14; torts.md §3.3 (NEG-10, rewritten)",
+          },
+          {
+            id: "u12-h-per-se-excuse", kind: "hypo", cat: "II.B", callType: "prevail", rule: "u12-r-per-se", issue: "excused statutory violation", grid: true,
+            stem: "A statute requires drivers to keep to the right half of the road. A driver traveling at a lawful speed on a narrow two-lane road rounded a bend and found a fallen tree blocking her lane. With no room to stop, she swerved into the left lane and collided with an oncoming delivery van. Neither driver had been using a phone. The van's driver, who was hurt, sued her and relied only on her violation of the statute.",
+            call: "Will the van driver prevail on negligence per se?",
+            options: [
+              { text: "No, because her violation was excused by a sudden emergency that she did not create.", why: "An unexcused violation establishes breach; an emergency not of the defendant's making, or a case where compliance is more dangerous, excuses it." },
+              { text: "Yes, because she crossed into the left lane in violation of a statute that protects other drivers on the road.", why: "Class and type of harm fit, but a violation is negligence per se only if it is unexcused.", trap: 2 },
+              { text: "Yes, because a violation of a traffic statute is negligence per se whatever the reason for it.", why: "Excuses such as an emergency the defendant did not create defeat negligence per se.", trap: 7 },
+              { text: "No, because the van driver was not in the class of persons that a lane statute is meant to protect.", why: "Oncoming drivers are the very class a keep-right statute protects; the reason is the excuse.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["found a fallen tree blocking her lane"],
+            say: "A violation is negligence per se only if it is unexcused. An emergency she did not cause is an excuse.",
+            status: "general", src: "Rest. 3d Torts: Liab. Phys. & Emot. Harm §15; Rest. 2d Torts §288A (secondary sources, not re-read); torts.md §3.2",
+          },
+          {
+            id: "u12-h-per-se-license", kind: "hypo", cat: "II.B", callType: "prevail", rule: "u12-r-per-se", issue: "licensing statute violation", grid: true,
+            stem: "A statute makes it a misdemeanor to drive without a valid license. A man whose license had expired two weeks earlier was driving carefully, within the speed limit, when a cyclist ran a red light and swerved into the side of his car. The cyclist was injured and sued the man for negligence. At trial the cyclist offered no evidence of careless driving and argued only that driving without a valid license was negligence per se.",
+            call: "Will the cyclist prevail?",
+            options: [
+              { text: "No, because the expired license did not cause the collision, and a licensing statute does not target this harm.", why: "Licensing violations generally are not negligence per se: a careful unlicensed driver is no more likely to cause this crash." },
+              { text: "Yes, because the man was committing a misdemeanor at the moment that the collision occurred.", why: "A criminal statute sets the standard only if it targets this kind of harm and the violation caused it.", trap: 5 },
+              { text: "Yes, because the licensing statute was enacted to protect the safety of everyone using the road.", why: "Licensing screens drivers in general; an expired license did not make a careful driver's car hit the cyclist.", trap: 10 },
+              { text: "No, because the cyclist ran the red light, and a plaintiff who is at fault can never recover.", why: "Under the default of pure comparative fault her fault would reduce, not bar, her recovery; the real defect is causation.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["driving carefully, within the speed limit"],
+            say: "A missing license does not cause a crash. Licensing statutes rarely support negligence per se.",
+            status: "general", src: "Rest. 3d Torts: Liab. Phys. & Emot. Harm §14 (secondary sources, not re-read); torts.md §3.2",
           },
           {
             id: "u12-r-res-ipsa", kind: "rule", title: "Res ipsa loquitur", cat: "II.C",
@@ -996,6 +1074,21 @@
             say: "Burns far from the incision do not happen without carelessness. The jury may infer breach.",
             status: "general", src: "Ybarra v. Spangard (1944); Rest. 2d Torts §328D; torts.md §3.3 (NEG-13, rewritten)",
           },
+          {
+            id: "u12-h-res-ipsa-control", kind: "hypo", cat: "II.C", callType: "prevail", rule: "u12-r-res-ipsa", issue: "res ipsa and control", grid: true,
+            stem: "During a crowded holiday celebration, a heavy armchair fell from an upper window of a downtown hotel and struck a pedestrian on the sidewalk below. Every room on that side of the hotel was rented to guests, who had exclusive use of their rooms and the furniture in them. The hotel's housekeepers had last entered the rooms that morning. Nobody saw who pushed or dropped the chair. The pedestrian sued the hotel for negligence and relied solely on res ipsa loquitur.",
+            call: "Will the pedestrian get to the jury on res ipsa loquitur?",
+            options: [
+              { text: "No, because guests, not the hotel, controlled the rooms and the furniture, so the evidence does not point to the hotel.", why: "Res ipsa needs evidence that eliminates other responsible causes. Guests with exclusive use of the rooms are a likely cause the stem never rules out." },
+              { text: "Yes, because a heavy chair does not ordinarily fall from a hotel window unless someone has been negligent.", why: "That is only the first element. The inference must also point to the defendant, and here the guests had the chair.", trap: 2 },
+              { text: "Yes, because a hotel owes the public the highest degree of care in managing its building and furniture.", why: "The standard of care does not supply proof that the hotel, rather than a guest, caused the fall.", trap: 10 },
+              { text: "No, because res ipsa loquitur applies only in medical cases where the plaintiff was unconscious.", why: "Res ipsa is a general rule of circumstantial proof; the unconscious patient is only one setting.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["who had exclusive use of their rooms and the furniture in them"],
+            say: "Res ipsa points at whoever controlled the thing. If guests had the chair, the inference does not reach the hotel.",
+            status: "general", src: "Rest. 2d Torts §328D(1)(b); Larson v. St. Francis Hotel, 83 Cal. App. 2d 210 (1948) (secondary sources, not re-read); torts.md §3.2",
+          },
         ],
       },
       {
@@ -1018,8 +1111,8 @@
             ],
             cite: "Rest. 2d Torts §§333-343", citeAsk: "Which Restatement sections set the traditional duties to entrants?",
             ex: [
-              { facts: "A host knows a back step is rotten and says nothing to a dinner guest.", result: "Liable: he knew of a concealed danger the licensee could not discover." },
-              { facts: "A grocery store never inspects an aisle where a spill has sat for an hour.", result: "Liable to an invitee: the duty includes inspection." },
+              { facts: "A host knows the end of her dock is rotten and lets a weekend guest walk out on it without a word.", result: "Liable: she knew of a concealed danger the licensee could not discover." },
+              { facts: "A hardware store never checks a stack of paint cans on a high shelf, and a loose can falls on a customer.", result: "Liable to an invitee if inspection would have found it: the duty includes inspection." },
             ],
             terms: ["trespasser", "licensee", "invitee"],
             quiz: [
@@ -1083,7 +1176,7 @@
           },
           {
             id: "u12-a-invitee-notice", kind: "argue", cat: "II.E", rule: "u12-r-entrants", issue: "invitee and notice of a spill",
-            stem: "A shopper slipped on a puddle of spilled liquid in the aisle of a supermarket and was injured. No employee had seen the spill. Store records showed that the aisle had last been inspected ninety minutes earlier, although the store's own policy called for inspection every fifteen minutes. The shopper sued the store for negligence.",
+            stem: "A shopper slipped on a puddle of spilled liquid in the aisle of a supermarket and was injured. No employee had seen the spill. Store records showed that the aisle had last been inspected ninety minutes earlier, although the store's own policy called for inspection every fifteen minutes. The liquid had partly dried around its edges, and several shopping-cart tracks ran through it. The shopper sued the store for negligence.",
             call: "What is the shopper's best argument?",
             options: [
               { text: "The spill lay there long enough that reasonable inspection would have found it, so the store had constructive notice.", why: "An invitee is owed inspection. A condition that reasonable inspection would have revealed gives constructive notice.", },
@@ -1092,6 +1185,7 @@
               { text: "The store was negligent per se, because it broke its own written policy of inspecting the aisle every fifteen minutes.", why: "An internal policy is not a statute; it is at most evidence of the standard of care.", trap: 4 },
             ],
             answer: 0,
+            facts: ["several shopping-cart tracks ran through it"],
             say: "Slip and fall: show the store made the mess or had notice, actual or constructive.",
             status: "general", src: "Rest. 2d Torts §343; torts.md §3.2",
           },
@@ -1109,7 +1203,37 @@
             facts: ["The jurisdiction applies the firefighter's rule"],
             say: "Professional rescuers cannot sue over the negligence that created the need for their services.",
             status: "general",
-            src: "Rest. 2d Torts §§342-343 (secondary sources, not re-read); torts.md §3.1",
+            src: "Firefighter's rule, black letter from secondary sources (some states have abolished it); torts.md §3.1",
+          },
+          {
+            id: "u12-h-landlord-common-area", kind: "hypo", cat: "II.E", callType: "liable", rule: "u12-r-entrants", issue: "landlord's duty in common areas", grid: true,
+            stem: "A landlord leased apartments in a three-story building and kept control of the shared front stairway. Two months earlier, a tenant had told the landlord that the stair railing was loose, and the landlord had not repaired it. A friend visiting a tenant for dinner leaned on the railing, which gave way, and she fell and was injured. The lease made tenants responsible for repairs inside their own apartments. The jurisdiction retains the traditional rules on entrants and on landlords. The friend sued the landlord for negligence.",
+            call: "Is the landlord liable to the friend?",
+            options: [
+              { text: "Yes, because a landlord must use reasonable care to keep common areas it controls safe, and it knew of the railing.", why: "Common areas are an exception to a lessor's general freedom from liability, and the landlord had notice and did nothing." },
+              { text: "No, because a lessor is not liable for dangerous conditions on premises that it has leased to tenants.", why: "That is the general rule for the leased apartments, but the stairway stayed in the landlord's control.", trap: 9 },
+              { text: "No, because the friend was the tenant's social guest, so the landlord owed her no duty at all.", why: "A tenant's guest lawfully uses the common stairway, and the landlord owes her reasonable care there.", trap: 10 },
+              { text: "Yes, because a landlord is strictly liable for any injury caused by a defect anywhere in its building.", why: "Landlord liability is negligence-based; it turns on control and notice.", trap: 4 },
+            ],
+            answer: 0,
+            facts: ["kept control of the shared front stairway"],
+            say: "Landlords are mostly not liable for leased space, but they are for common areas they keep and know are unsafe.",
+            status: "general", src: "Rest. 2d Torts §§356, 360 (secondary sources, not re-read); torts.md §3.1",
+          },
+          {
+            id: "u12-h-urban-tree", kind: "hypo", cat: "II.E", callType: "prevail", rule: "u12-r-entrants", issue: "natural condition harming a passerby", grid: true,
+            stem: "A homeowner in a densely built city neighborhood knew that a large oak on her front lawn was badly rotted and leaned over the public sidewalk. An arborist had told her that it could fall in the next storm and that removing it would cost $900. She did nothing. A month later, in an ordinary windstorm, a large limb broke off and struck a pedestrian walking on the sidewalk. The pedestrian sued the homeowner for negligence.",
+            call: "Will the pedestrian prevail?",
+            options: [
+              { text: "Yes, because a possessor in a city must use reasonable care to keep trees beside a public way from endangering passersby.", why: "The old no-duty rule for natural conditions gives way in urban areas, and she knew of the danger and the cheap fix." },
+              { text: "No, because a possessor of land owes no duty to persons outside the land for harm from natural conditions.", why: "That traditional rule survives for rural land; trees beside a city sidewalk are the recognized exception.", trap: 9 },
+              { text: "No, because the pedestrian never entered the land, so the duties owed to entrants give him no claim.", why: "The entrant categories govern people on the land; a possessor also owes duties to people on an adjacent public way.", trap: 10 },
+              { text: "Yes, because an owner is strictly liable for any harm done by a tree that grows on her property.", why: "Liability is negligence-based: it turns on her knowledge and failure to act.", trap: 4 },
+            ],
+            answer: 0,
+            facts: ["densely built city neighborhood", "badly rotted"],
+            say: "Natural conditions: in the country, no duty to passersby; in a city, an owner who knows a tree is rotten must act.",
+            status: "general", src: "Rest. 2d Torts §363 (secondary sources, not re-read); torts.md §3.1",
           },
           {
             id: "u12-r-339", kind: "rule", title: "Child trespassers: Restatement §339", cat: "II.E",
@@ -1124,7 +1248,7 @@
             ],
             cite: "Rest. 2d Torts §339", citeAsk: "Which Restatement section governs child trespassers?",
             ex: [
-              { facts: "A homeowner leaves an old refrigerator with a latching door in an unfenced yard next to a playground.", result: "Possible liability: all five factors may be met, and the fix (removing the door) is cheap." },
+              { facts: "A utility leaves a high-voltage transformer box unlocked beside a schoolyard that children cut through daily.", result: "Possible liability: all five factors may be met, and the fix (a lock) is cheap." },
               { facts: "A landowner has a natural pond in a remote field.", result: "No liability under §339: the rule covers artificial conditions." },
             ],
             terms: ["attractive nuisance", "artificial condition"],
@@ -1140,7 +1264,7 @@
             stem: "A homeowner left an old refrigerator with a latching door in his unfenced side yard, beside a playground where children often played. A 'No Trespassing' sign hung on the yard's gate, and neighborhood children had often been seen climbing in the yard. Removing the latch would have cost almost nothing. A seven-year-old climbed inside, the door latched, and she was seriously injured. The jurisdiction retains the traditional categories of entrants. The child's guardian sued the homeowner.",
             call: "Will the guardian prevail?",
             options: [
-              { text: "Yes, because the Rest. 2d §339 factors are met, so he owed the child reasonable care.", why: "Rest. 2d §339 applies: children known to trespass, an artificial condition risking serious harm, a child too young to appreciate it, a trivial burden to fix it, and no care taken." },
+              { text: "Yes, because he knew children trespassed there, the latch posed a serious risk they would not appreciate, and removing it cost almost nothing.", why: "Rest. 2d §339 applies: children known to trespass, an artificial condition risking serious harm, a child too young to appreciate it, a trivial burden to fix it, and no care taken." },
               { text: "No, because the child was a trespasser who entered the yard despite a posted 'No Trespassing' sign.", why: "Trespassing children are protected by §339, and a sign means little to a child too young to appreciate the risk.", trap: 9 },
               { text: "Yes, but only if the refrigerator attracted the child into the yard in the first place.", why: "Attraction onto the land is not an element of §339.", trap: 5 },
               { text: "No, because an old refrigerator is not an inherently dangerous instrumentality like a loaded gun.", why: "Section 339 turns on the five factors, not on inherent danger.", trap: 10 },
@@ -1168,7 +1292,7 @@
             ],
             cite: "Rest. 3d Torts §51", citeAsk: "Which Restatement (Third) section states the possessor's general duty of reasonable care to entrants?",
             ex: [
-              { facts: "The stem says the jurisdiction requires reasonable care toward all lawful entrants.", result: "A social guest is owed reasonable care, including inspection that a reasonable host would do." },
+              { facts: "The stem says the state requires reasonable care toward all lawful entrants, and a plumber giving a free estimate trips on a torn rug.", result: "Ask what a careful owner would have done: would a reasonable look have found the rug?" },
               { facts: "The stem says nothing about the jurisdiction's approach.", result: "Use the traditional categories." },
             ],
             terms: ["status", "modern approach"],
@@ -1207,8 +1331,8 @@
             ],
             cite: "Consolidated Rail Corp. v. Gottshall", citeAsk: "Which Supreme Court case adopted the zone-of-danger test for FELA?",
             ex: [
-              { facts: "A cyclist narrowly avoids a car that runs a stop sign and develops panic attacks.", result: "Zone of danger: she may recover for the distress." },
-              { facts: "A mother hears nothing and is told about her child's accident five minutes later.", result: "No bystander recovery: no contemporaneous perception." },
+              { facts: "A warehouse worker jumps clear of a forklift that a driver negligently swings at her, and later has nightmares.", result: "Zone of danger: she may recover for the distress." },
+              { facts: "A father learns by phone, an hour later, that his son was hurt in a school-bus crash.", result: "No bystander recovery: no contemporaneous perception." },
             ],
             terms: ["zone of danger", "bystander", "contemporaneous perception"],
             quiz: [
@@ -1220,7 +1344,7 @@
           },
           {
             id: "u12-h-bystander-timing", kind: "hypo", cat: "II.E", callType: "prevail", rule: "u12-r-nied", issue: "bystander and contemporaneous perception",
-            stem: "A mother was inside her home when a speeding driver struck her child in the street outside. She neither saw nor heard the collision. A neighbor told her what had happened five minutes later, and she suffered severe emotional distress. The jurisdiction permits bystander recovery for negligently inflicted emotional distress. The mother sued the driver for her own distress.",
+            stem: "A mother was inside her home when a speeding driver struck her child in the street outside. She neither saw nor heard the collision. A neighbor told her what had happened five minutes later, and she suffered severe emotional distress. The jurisdiction allows a bystander to recover only if she was present at the scene of the injury-producing event and then aware that it was injuring a close relative. The mother sued the driver for her own distress.",
             call: "Will the mother prevail on her own claim?",
             options: [
               { text: "No, because she did not contemporaneously perceive the injury-producing event.", why: "Bystander recovery requires presence and contemporaneous sensory perception of the event." },
@@ -1239,7 +1363,7 @@
             call: "Will the cyclist prevail?",
             options: [
               { text: "Yes, because she was placed in immediate danger of physical impact by the driver's negligence.", why: "Zone of danger: immediate risk of impact is enough, and no touching is required." },
-              { text: "No, because she suffered no physical impact from the car and no physical injury of any kind.", why: "That is the discarded impact rule.", trap: 11 },
+              { text: "No, because she suffered no physical impact from the car and no physical injury of any kind.", why: "That is the minority impact rule; this jurisdiction uses the zone of danger.", trap: 11 },
               { text: "No, because distress without any bodily injury is never compensable in a negligence action.", why: "The stem's rule allows recovery for plaintiffs in the zone of danger.", trap: 7 },
               { text: "Yes, because the driver violated a traffic statute when he ran through the stop sign at the corner.", why: "The violation may establish breach, but the question is whether distress alone is recoverable.", trap: 10 },
             ],
@@ -1260,8 +1384,8 @@
             ],
             cite: "Robins Dry Dock v. Flint", citeAsk: "Which case denies negligence recovery for pure economic loss?",
             ex: [
-              { facts: "A contractor cuts a utility cable and a bakery loses three days' profits; its ovens and stock are undamaged.", result: "No recovery: pure economic loss." },
-              { facts: "The same blackout spoils the bakery's refrigerated stock.", result: "Recoverable: property damage, with lost profits following from it." },
+              { facts: "A trucker negligently spills chemicals that close a highway for a day; a roadside diner loses a day's sales but nothing it owns is damaged.", result: "No recovery: pure economic loss." },
+              { facts: "The same spill's fumes spoil the diner's produce.", result: "Recoverable: property damage, with lost profits following from it." },
             ],
             terms: ["pure economic loss"],
             quiz: [
@@ -1292,7 +1416,7 @@
             options: [
               { text: "Yes, because negligently reporting a spouse's death is a special-relationship category of likely distress.", why: "Erroneous death notices, like mishandled corpses, are recognized special-relationship cases." },
               { text: "No, because she was never in the zone of danger of physical impact from any negligent conduct by the hospital.", why: "The zone-of-danger rule governs direct victims of physical danger, not special-relationship cases.", trap: 10 },
-              { text: "No, because she suffered no physical impact, and negligence law compensates distress only after physical impact.", why: "The impact rule is discarded, and she also had physical symptoms.", trap: 11 },
+              { text: "No, because she suffered no physical impact, and negligence law compensates distress only after physical impact.", why: "That is the minority impact rule, which the stem's jurisdiction does not use; she also had physical symptoms.", trap: 11 },
               { text: "Yes, but only if the hospital employee intended to deceive her or knew that the report was false.", why: "Negligence suffices; intent is not required.", trap: 5 },
             ],
             answer: 0,
@@ -1320,8 +1444,8 @@
             ],
             cite: "Summers v. Tice", citeAsk: "Which case shifts the burden of proof to two negligent hunters?",
             ex: [
-              { facts: "A hotel posts no lifeguard, but the guest had died of a heart attack on the deck before he fell into the pool.", result: "No but-for cause: the missing lifeguard changed nothing." },
-              { facts: "Two negligent factories' fires merge and burn a barn that either fire alone would have destroyed.", result: "Each is a substantial factor, so each is a cause." },
+              { facts: "A driver's brakes were negligently worn, but he never pressed the brake pedal before the crash.", result: "No but-for cause: good brakes would have changed nothing." },
+              { facts: "Two motorcyclists roar past a horse at once; either engine alone would have spooked it, and its rider is thrown.", result: "Each is a substantial factor, so each is a cause." },
             ],
             terms: ["but-for", "substantial factor", "alternative liability"],
             quiz: [
@@ -1395,6 +1519,21 @@
             src: "Rest. 2d Torts §876(a) (secondary sources, not re-read); NCBE NextGen UBE Content Scope (Torts II.D); torts.md §4.1",
           },
           {
+            id: "u12-h-market-share", kind: "hypo", cat: "II.D", callType: "remedy", rule: "u12-r-actual-cause", issue: "market share liability",
+            stem: "A woman developed a cancer that medical evidence linked to a drug her mother took during pregnancy thirty years earlier. Dozens of companies made the drug to an identical formula, and no records show which company's pills her mother took. She sued the five largest makers, which together held 90% of the market. One of them, which held 30% of the market, could not prove that it did not make her mother's pills. The jurisdiction has adopted market share liability and holds each defendant liable only for its share of the market.",
+            call: "What is the 30% manufacturer's liability?",
+            options: [
+              { text: "30% of her damages, its share of the market for the drug.", why: "Under the stem's market share rule, each maker of the identical drug pays in proportion to its share of the market." },
+              { text: "All of her damages, because each maker that cannot clear itself is jointly and severally liable.", why: "That is alternative liability; the stem's rule limits each defendant to its market share.", trap: 10 },
+              { text: "Nothing, because she cannot prove which manufacturer made the pills her mother took.", why: "That is the usual identification rule, which market share liability replaces in this jurisdiction.", trap: 4 },
+              { text: "One-fifth of her damages, because she sued five manufacturers and their shares are presumed equal.", why: "Shares follow the market, not the number of defendants sued.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["liable only for its share of the market"],
+            say: "Where adopted, market share liability: identical product, unknown maker, each pays its share of the market.",
+            status: "general", src: "Sindell v. Abbott Laboratories, 26 Cal. 3d 588 (1980); torts.md §4.1",
+          },
+          {
             id: "u12-c-summers", kind: "case", name: "Summers v. Tice", year: 1948,
             holding: "When two defendants were both negligent toward the plaintiff and only one caused the harm, the burden shifts to each to prove he did not cause it; if neither can, both are liable.",
             facts: "Two hunters fired toward a quail and one pellet hit a member of the party in the eye; no one could say whose gun it was.",
@@ -1411,6 +1550,7 @@
               modern: "Recovery for the lost chance itself, usually in proportion to the chance lost.",
             },
             splitNote: "The jurisdictions divide, so a stem that tests this must state which view the jurisdiction follows.",
+            cite: "Herskovits v. Group Health Cooperative", citeAsk: "Which case allowed a patient's estate to recover for a lost chance of survival below 50%?",
             ex: [
               { facts: "A negligent delay in diagnosis reduces a patient's chance of survival from 40% to 10%.", result: "Traditional: nothing. Modern: damages in proportion to the lost 30 percentage points." },
             ],
@@ -1420,6 +1560,21 @@
               { t: "mcq", q: "Under the modern view, a defendant whose negligence reduced a patient's chance of survival from 40% to 10% is liable for...", options: ["The lost chance, often proportionally", "Nothing, because the chance was under 50%", "The full value of the patient's life"], a: "The lost chance, often proportionally", why: "The modern view compensates the lost chance itself, usually in proportion." },
             ],
             status: "unsure", src: "Herskovits v. Group Health; Matsuyama v. Birnbaum (not re-read); torts.md §4.1",
+          },
+          {
+            id: "u12-h-loss-of-chance", kind: "hypo", cat: "II.D", callType: "prevail", rule: "u12-r-loss-of-chance", issue: "lost chance under the traditional rule", grid: true,
+            stem: "A patient went to a clinic with a lump that a careful physician would have biopsied at once. The physician negligently told him it was harmless. When the cancer was found eight months later, it had spread, and he died within the year. Experts agreed that with a prompt diagnosis his chance of surviving five years would have been 35%, and that the delay reduced it to 10%. The jurisdiction follows the traditional rule and has not adopted recovery for a lost chance. His estate sued the physician for wrongful death.",
+            call: "Will the estate prevail?",
+            options: [
+              { text: "No, because even with prompt care he would more likely than not have died, so the negligence was not shown to cause the death.", why: "The traditional rule asks whether the negligence more likely than not caused the death; a 35% chance never got there." },
+              { text: "Yes, because the physician's negligence cut the patient's chance of survival by 25 percentage points.", why: "That is the lost-chance theory, which the stem says the jurisdiction has not adopted.", trap: 4 },
+              { text: "Yes, but only for 25% of the full damages for his death, in proportion to the chance that was lost.", why: "Proportional recovery is the modern view; the jurisdiction follows the traditional rule.", trap: 4 },
+              { text: "No, because a physician is not liable for a misdiagnosis unless it was grossly negligent.", why: "The standard is reasonable professional care; the claim fails on causation.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["his chance of surviving five years would have been 35%"],
+            say: "Traditional rule: a chance under 50% fails the more-likely-than-not test. Lost-chance recovery needs the stem to adopt it.",
+            status: "general", src: "Herskovits v. Group Health Coop., 664 P.2d 474 (Wash. 1983) (modern view, not re-read); torts.md §4.1",
           },
           {
             id: "u12-r-proximate", kind: "rule", title: "Proximate cause: scope of the risk", cat: "II.E",
@@ -1438,8 +1593,8 @@
             ],
             cite: "Rest. 3d Torts §29", citeAsk: "Which Restatement section limits liability to the scope of the risk?",
             ex: [
-              { facts: "A driver speeds; seconds before the car would have reached an intersection, a healthy tree falls on the passenger's seat; at the speed limit they would have been farther back.", result: "But-for cause yes, proximate cause no: the tree is outside the risks that made speeding negligent." },
-              { facts: "A rear-end collision that would cause minor whiplash breaks many bones in a plaintiff with an undiagnosed bone disease.", result: "Liable for all of it: the eggshell plaintiff." },
+              { facts: "A hotel keeps an unlabeled can of rat poison beside a hot coffee burner; the heat makes it explode and burns a guest.", result: "Outside the scope of the risk: the danger that made it negligent was poisoning, not explosion." },
+              { facts: "A negligently swung door that would bruise most people ruptures a passenger's spleen, which an illness had enlarged.", result: "Liable for all of it: the eggshell plaintiff." },
             ],
             terms: ["scope of the risk", "eggshell plaintiff", "superseding cause"],
             quiz: [
@@ -1483,9 +1638,8 @@
           },
           {
             id: "u12-c-wagon-mound", kind: "case", name: "Overseas Tankship v. Morts Dock (Wagon Mound No. 1)", year: 1961,
-            holding: "A defendant is liable only for harm of a kind that was reasonably foreseeable, rejecting liability for all direct consequences.",
+            holding: "A defendant is liable only for harm of a kind that was reasonably foreseeable; the Privy Council declined to follow the directness test of Re Polemis (1921).",
             facts: "Oil spilled from a ship in Sydney harbor; sparks ignited it and fire damaged a wharf. The court held that fire was not reasonably foreseeable.",
-            overrules: "Re Polemis (1921)",
             say: "Foreseeable type of harm, not mere directness: Wagon Mound over Polemis.",
             status: "general", src: "Overseas Tankship (U.K.) Ltd. v. Morts Dock & Engineering Co. [1961] A.C. 388 (P.C.); torts.md §4.2",
           },
@@ -1535,21 +1689,6 @@
             say: "A crime that is the very risk of the negligence does not cut the chain.",
             status: "unsure", src: "Rest. 2d Torts §448-449; torts.md §4.7 (CAU-7, held back: states differ on landlord liability for crime)",
           },
-          {
-            id: "u12-h-rescue", kind: "hypo", cat: "II.E", callType: "prevail", rule: "u12-r-foreseeable-plaintiff", issue: "rescuer as a foreseeable plaintiff", grid: true,
-            stem: "A delivery driver, running late on a lunch route, negligently left a truck on a slope without setting the brake. The truck began rolling toward a toddler playing in a yard. A passerby ran in, stopped the truck, and wrenched his back. The passerby sued the delivery driver for negligence.",
-            call: "Will the passerby prevail?",
-            options: [
-              { text: "Yes, because a rescuer is a foreseeable plaintiff when a defendant's negligence endangers another person.", why: "Danger invites rescue, and a reasonable rescuer may recover from the person who created the peril." },
-              { text: "No, because the passerby voluntarily assumed the risk of injury when he ran in to stop the truck.", why: "A reasonable rescuer does not assume the risk in the bar sense.", trap: 10 },
-              { text: "No, because the passerby had no duty to help a stranger, so he cannot recover for helping one.", why: "True, but it does not answer the call: the question is the defendant's duty to the rescuer.", trap: 6 },
-              { text: "Yes, but only if the toddler in the yard was actually injured by the rolling delivery truck that day.", why: "The rescue doctrine does not require that the person in peril be injured.", trap: 3 },
-            ],
-            answer: 0,
-            facts: ["wrenched his back"],
-            say: "Danger invites rescue: the rescuer is a foreseeable plaintiff.",
-            status: "general", src: "Wagner v. International Railway (Cardozo, N.Y. 1921); torts.md §4.2, §4.7 (CAU-8, rewritten)",
-          },
         ],
       },
       {
@@ -1569,8 +1708,8 @@
             ],
             cite: "NCBE MBE Subject Matter Outline (Torts II.D)",
             ex: [
-              { facts: "A defendant is 60% at fault, a co-defendant 40% at fault and insolvent, and the plaintiff has $200,000 in damages.", result: "The solvent defendant owes the full $200,000 and may seek contribution from the other." },
-              { facts: "A delivery company pays $50,000 solely because of its employee's negligence.", result: "It may seek full indemnity from the employee." },
+              { facts: "Two contractors' negligence brings down a $90,000 ceiling; fault is split 70-30, and the 70% contractor has no assets.", result: "The 30% contractor can be made to pay all $90,000 and may seek contribution from the other." },
+              { facts: "A hospital pays $50,000 solely because of a nurse's negligence.", result: "It may seek full indemnity from the nurse." },
             ],
             terms: ["joint and several liability", "contribution", "indemnity"],
             quiz: [
@@ -1613,6 +1752,21 @@
             status: "exam", src: "NCBE MBE Subject Matter Outline (Torts note); torts.md §4.7 (MUL-2, rewritten)",
           },
           {
+            id: "u12-h-release-one", kind: "hypo", cat: "II.D", callType: "remedy", rule: "u12-r-joint-several", issue: "release of one tortfeasor",
+            stem: "Two drivers negligently caused a collision that injured a passenger, whose damages were $100,000. The passenger settled with the first driver for $30,000 and signed a release that named only the first driver. She then sued the second driver. The jurisdiction applies joint and several liability and has a statute providing that a release of one tortfeasor does not discharge the others unless its terms so provide, but reduces the claim against them by the amount paid.",
+            call: "How much may the passenger recover from the second driver?",
+            options: [
+              { text: "$70,000, because the release did not discharge him, and the claim is reduced by the $30,000 already paid.", why: "Under the stem's statute, a release of one is not a release of all, and the others get credit for the payment." },
+              { text: "Nothing, because a release of one joint tortfeasor releases all of the others as well.", why: "That was the old common-law rule; the stem's statute keeps the claim against the others alive.", trap: 11 },
+              { text: "$100,000, because the release named only the first driver and has no effect on the second.", why: "The release does not discharge him, but the statute credits the $30,000 already paid.", trap: 2 },
+              { text: "$50,000, because the second driver is liable only for half of the passenger's damages.", why: "Joint and several liability makes him answer for the whole, less the credit.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["reduces the claim against them by the amount paid"],
+            say: "A release of one is not a release of all; the others get credit for what was paid.",
+            status: "general", src: "Uniform Contribution Among Tortfeasors Act §4 (secondary sources, not re-read); NCBE MBE Subject Matter Outline (Torts II.D); torts.md §4.3",
+          },
+          {
             id: "u12-r-vicarious", kind: "rule", title: "Vicarious liability: employees and scope of employment", cat: "II.F", exam: ["mbe"],
             say: "An employer answers for an employee's torts within the scope of employment: a detour stays in, a frolic is out. Negligent hiring is the employer's own fault.",
             elements: ["Employment: the employer controls the manner and means of the work", "The tort is within the scope of employment: the kind of work, roughly within time and space, motivated at least in part to serve the employer", "A minor detour stays within scope; a frolic leaves it", "The employer is also liable for its own negligent hiring, retention, supervision or entrustment"],
@@ -1622,11 +1776,12 @@
               "Going and coming from work is generally outside the scope",
               "An employee's intentional tort is within scope if motivated at least in part by a purpose to serve the employer",
               "An employer held vicariously liable may seek indemnity from the employee",
+              "Partners: a partnership, and each partner, answers for a partner's tort committed in the ordinary course of the partnership's business",
             ],
             cite: "Rest. 3d Agency §7.07", citeAsk: "Which Restatement section states the scope-of-employment rule?",
             ex: [
               { facts: "A delivery driver turns two blocks off route to buy gum, then negligently hits a pedestrian on the way back.", result: "Detour: still within the scope of employment." },
-              { facts: "After the last delivery, a driver goes forty miles the other way to see a friend and hits a pedestrian.", result: "Frolic: outside the scope; the employer is not vicariously liable." },
+              { facts: "After her last job of the day, a plumber drives the company van two hours to a beach resort and crashes on the way.", result: "Frolic: outside the scope; the employer is not vicariously liable." },
             ],
             terms: ["respondeat superior", "scope of employment", "frolic and detour"],
             quiz: [
@@ -1689,7 +1844,7 @@
             ],
             cite: "Rest. 2d Torts §427", citeAsk: "Which Restatement section covers inherently dangerous work by a contractor?",
             ex: [
-              { facts: "A city hires an independent firm to implode a vacant building, and debris damages a neighbor's store.", result: "The city is liable: inherently dangerous work." },
+              { facts: "A homeowner hires an independent crew to blast out a tree stump, and a rock smashes a neighbor's window.", result: "The homeowner is liable: inherently dangerous work." },
               { facts: "A homeowner hires an independent painter, who negligently drops a ladder on a passerby.", result: "The homeowner is not liable: ordinary work, no exception." },
             ],
             terms: ["independent contractor", "nondelegable duty"],
@@ -1732,7 +1887,7 @@
             src: "Rest. 3d Agency §2.03; Rest. 2d Torts §429 (secondary sources, not re-read); torts.md §4.4",
           },
           {
-            id: "u12-h-negligent-hiring", kind: "hypo", cat: "II.F", callType: "prevail", rule: "u12-r-independent-contractor", issue: "negligent entrustment of a vehicle",
+            id: "u12-h-negligent-hiring", kind: "hypo", cat: "II.F", callType: "prevail", rule: "u12-r-control-third", issue: "negligent entrustment of a vehicle",
             stem: "A company hired a driver knowing that he had three prior convictions for driving while intoxicated, and let him keep the company van at home overnight. On a Sunday, using the van for a purely personal trip, he drove while intoxicated and injured a pedestrian. The jurisdiction recognizes negligent entrustment and negligent hiring. The pedestrian sued the company on those theories.",
             call: "Will the pedestrian prevail on those theories?",
             options: [
@@ -1746,6 +1901,21 @@
             say: "Vicarious liability needs scope. Direct negligence in entrusting a vehicle, or in hiring, does not.",
             hook: "The keys were the company's mistake, whatever the day of the week.",
             status: "general", src: "Rest. 2d Torts §390; Rest. 3d Agency §7.05; torts.md §4.7 (VIC-5, rewritten)",
+          },
+          {
+            id: "u12-h-car-owner", kind: "hypo", cat: "II.F", callType: "liable", rule: "u12-r-control-third", issue: "car owner and a permitted driver", grid: true,
+            stem: "A woman lent her car for an afternoon to a friend whom she had known for years and reasonably believed to be a careful driver with a clean record. The friend, running an errand of his own, negligently ran a stop sign and struck a cyclist. The car had passed a safety inspection the month before. No statute of the jurisdiction makes car owners liable for permitted drivers, and the jurisdiction has not adopted the family-purpose doctrine. The cyclist sued the woman.",
+            call: "Is the woman liable to the cyclist?",
+            options: [
+              { text: "No, because an owner is not vicariously liable for a permitted driver, and she had no reason to think he was unsafe.", why: "At common law ownership alone does not make the owner answer for the borrower, and negligent entrustment needs reason to know of the danger." },
+              { text: "Yes, because the owner of a car is liable for any negligence of a driver who uses it with her permission.", why: "That is the rule only under an owner-liability statute, which the stem rules out.", trap: 4 },
+              { text: "Yes, because she negligently entrusted the car to a driver who then drove it negligently.", why: "Entrustment is negligent only if she knew or should have known he was unsafe; the stem says the opposite.", trap: 3 },
+              { text: "No, because the friend was not her employee and was not acting within the scope of any employment.", why: "True, but she could still be liable for her own negligence in lending the car; the key covers both routes.", trap: 9 },
+            ],
+            answer: 0,
+            facts: ["reasonably believed to be a careful driver"],
+            say: "Lending a car is not liability. Look for a statute, the family-purpose doctrine, or a borrower she knew was dangerous.",
+            status: "general", src: "Rest. 2d Torts §390; torts.md §4.4 (VIC-6, rewritten)",
           },
         ],
       },
@@ -1767,7 +1937,7 @@
               "NCBE's own analysis names the contributory-negligence jurisdictions: Alabama, Maryland, North Carolina, Virginia and the District of Columbia",
               "Modified comparative fault bars at 50% in some jurisdictions and at 51% in others; the stem states which",
               "A plaintiff's ordinary negligence is generally no defense to an intentional tort",
-              "Last clear chance (MBE only; not in NextGen): the defendant's last opportunity to avoid the harm, knowing of the plaintiff's peril",
+              "Last clear chance (MBE only; not in NextGen): the defendant had the last clear opportunity to avoid the harm and knew or should have known of a helpless plaintiff's peril (actual knowledge for an inattentive plaintiff)",
             ],
             cite: "NCBE MBE Subject Matter Outline (Torts II.G)",
             ex: [
@@ -1777,10 +1947,10 @@
             terms: ["pure comparative fault", "modified comparative fault", "contributory negligence"],
             quiz: [
               { t: "tf", q: "Unless the question says otherwise, a plaintiff whose fault is greater than the defendant's recovers nothing.", a: false, why: "The default is pure comparative fault, so the plaintiff's recovery is only reduced." },
-              { t: "mcq", q: "In a jurisdiction that bars a plaintiff who is 50% or more at fault, a plaintiff 50% at fault with $80,000 in damages recovers...", options: ["Nothing", "$40,000", "$80,000"], a: "Nothing", why: "The bar applies at 50%. In a 51% jurisdiction the answer would be $40,000." },
+              { t: "mcq", q: "In a jurisdiction that bars a plaintiff who is 50% or more at fault, a plaintiff 50% at fault with $60,000 in damages recovers...", options: ["Nothing", "$30,000", "$60,000"], a: "Nothing", why: "The bar applies at 50%. In a 51% jurisdiction the answer would be $30,000." },
               { t: "bucket", q: "Which rule does the stem point to?", buckets: ["Pure comparative", "Contributory"], items: [{ text: "The stem says nothing about the plaintiff's fault rule", bucket: "Pure comparative" }, { text: "The stem says the jurisdiction follows contributory negligence", bucket: "Contributory" }, { text: "The stem asks for a reduction by the plaintiff's percentage and nothing more", bucket: "Pure comparative" }] },
             ],
-            hook: "Silence means pure comparative fault. Contributory negligence is the stale default of old exams.",
+            hook: "Silence means pure comparative fault. Contributory negligence needs the stem to say so.",
             status: "exam", src: "NCBE MBE Subject Matter Outline (Torts note; II.G); NCBE MEE July 2015 analysis (contributory-negligence jurisdictions); torts.md §4.5",
           },
           {
@@ -1826,8 +1996,8 @@
             ],
             answer: 0,
             facts: ["had ample time to stop the train but did not"],
-            say: "Contributory negligence bars her, unless the defendant had the last clear chance and knew.",
-            status: "general", src: "Rest. 2d Torts §§479-480; NCBE MBE Subject Matter Outline (Torts II.G); torts.md §4.7 (DEF-3, rewritten)",
+            say: "Contributory negligence bars her, unless the defendant had the last clear chance to avoid the harm.",
+            status: "general", src: "Rest. 2d Torts §§479 (helpless plaintiff: knows or has reason to know), 480 (inattentive plaintiff: actual knowledge), as applied in state cases; NCBE MBE Subject Matter Outline (Torts II.G); torts.md §4.7 (DEF-3, rewritten)",
           },
           {
             id: "u12-r-assumption", kind: "rule", title: "Assumption of risk: express, primary and secondary", cat: "II.G",
@@ -1841,7 +2011,7 @@
             ],
             cite: "Rest. 2d Torts §496A", citeAsk: "Which Restatement section states the general principle of assumption of risk?",
             ex: [
-              { facts: "A climber signs a clear release, then is hurt when a gym employee consciously ignores a badly frayed rope.", result: "The release probably does not cover gross negligence or recklessness." },
+              { facts: "A skier signs a clear release, then is hurt when the resort knowingly leaves a broken chairlift bar in service for weeks.", result: "The release probably does not cover gross negligence or recklessness." },
               { facts: "A plaintiff knowingly uses a stairway that the landlord negligently let fall into disrepair.", result: "Secondary assumption of risk: in a comparative-fault state it reduces recovery." },
             ],
             terms: ["express assumption of risk", "primary assumption of risk", "secondary assumption of risk"],
@@ -1865,7 +2035,7 @@
             answer: 0,
             facts: ["left it in use for a month"],
             say: "A release covers carelessness. It does not cover a conscious choice to leave a known danger.",
-            hook: "Texas hypo: the rodeo waiver. A clear release helps with carelessness, not with recklessness.",
+            hook: "The rodeo waiver: a clear release helps with carelessness, not with recklessness.",
             status: "general", src: "Rest. 2d Torts §496B; torts.md §4.5, §4.7 (DEF-5, rewritten)",
           },
           {
@@ -1903,8 +2073,8 @@
             ],
             cite: "State Farm Mutual Automobile Insurance Co. v. Campbell",
             ex: [
-              { facts: "A plaintiff's $40,000 in medical bills were paid by her health insurer.", result: "She may still recover them from the defendant under the collateral source rule." },
-              { facts: "A careless driver rear-ends a stopped car.", result: "No punitive damages: ordinary negligence is not malicious, willful or reckless." },
+              { facts: "An injured cyclist's lost wages were replaced by her employer's disability plan.", result: "She may still recover them from the defendant under the collateral source rule." },
+              { facts: "A store employee carelessly fails to sweep up a grape, and a shopper slips.", result: "No punitive damages: ordinary negligence is not malicious, willful or reckless." },
             ],
             terms: ["collateral source rule", "punitive damages", "consortium"],
             quiz: [
@@ -1989,7 +2159,7 @@
             ],
             cite: "NCBE MBE Subject Matter Outline (Torts note)", citeAsk: "Which document tells examinees to assume survival and wrongful death actions are available?",
             ex: [
-              { facts: "A driver's negligence kills a man after three hours of conscious pain.", result: "The estate recovers his pain and suffering; his survivors recover their own losses." },
+              { facts: "A worker survives a negligently caused factory fire for two days in great pain and then dies, leaving a husband.", result: "The estate recovers her pain before death; her husband recovers his own losses." },
             ],
             terms: ["survival action", "wrongful death"],
             quiz: [
@@ -1999,7 +2169,7 @@
             status: "exam", src: "NCBE MBE Subject Matter Outline (Torts, note); torts.md §4.6",
           },
           {
-            id: "u12-h-survival", kind: "hypo", callType: "prevail", rule: "u12-r-survival-wrongful-death", issue: "survival versus wrongful death", exam: ["mbe"],
+            id: "u12-h-survival", kind: "hypo", callType: "status", rule: "u12-r-survival-wrongful-death", issue: "survival versus wrongful death", exam: ["mbe"],
             stem: "A driver's negligence killed a man, who experienced three hours of conscious pain at the scene before he died. His widow and minor child were his only survivors. An action was brought to recover damages for the man's conscious pain and suffering before death. Assume the jurisdiction has survival and wrongful death statutes in the usual form.",
             call: "To whom does the claim for the man's conscious pain and suffering belong?",
             options: [
@@ -2023,7 +2193,7 @@
             status: "exam", src: "NCBE MBE Subject Matter Outline (Torts note); torts.md §7.1",
           },
           {
-            id: "u12-tr-victim-died", kind: "trap", cat: "5",
+            id: "u12-tr-victim-died", kind: "trap", cat: "5", exam: ["mbe"],
             stem: "A negligent driver's collision kills a pedestrian, and her family sues the driver.",
             wrong: "There is no claim, because the pedestrian is dead and a tort claim does not survive death.",
             right: "The estate may sue under the survival statute and the family under the wrongful death statute: the exam says to assume both exist.",
@@ -2039,19 +2209,21 @@
         items: [
           {
             id: "u12-r-animals", kind: "rule", title: "Strict liability for animals", cat: "III", exam: ["mbe"],
-            say: "Wild animal: strict liability, however careful. Domestic animal: only with notice of a dangerous propensity. Trespassing livestock: strict for property damage.",
-            elements: ["Wild animal: the possessor is strictly liable for harm from its dangerous propensities, however careful", "Domestic animal: strictly liable only if the possessor knew or had reason to know of an abnormally dangerous propensity", "Trespassing livestock: strictly liable for harm to land or crops", "Harm must flow from the animal's dangerous propensity"],
+            say: "Wild animal: strict liability, however careful. Domestic animal: only with notice of a dangerous propensity. Trespassing livestock: strict for its harm.",
+            elements: ["Wild animal: the possessor is strictly liable for harm from its dangerous propensities, however careful", "Domestic animal: strictly liable only if the possessor knew or had reason to know of an abnormally dangerous propensity", "Trespassing livestock: strictly liable for the foreseeable harm of the intrusion", "Harm must flow from the animal's dangerous propensity"],
             ordered: false,
             distractorElements: ["Strict liability for any harm a dog causes", "A prior bite is required"],
             exceptions: [
               "A prior bite is not required for a domestic animal: repeated lunging or aggression gives notice",
               "Normal playfulness is not notice of a dangerous propensity",
               "Dog-bite statutes in many states impose strict liability; the stem says when one applies",
-              "Livestock trespass covers harm to land and crops, not personal injury",
+              "Trespassing livestock: liability covers harm to the land, its possessor, household members and their chattels that might reasonably be expected from the intrusion (a trespassing bull gores the farmer)",
+              "Animals straying onto land from a highway, and fence-out statutes in some western states, are negligence or statute questions; the stem says",
+              "A trespasser on the keeper's land generally cannot claim strict liability for a wild animal kept there (Rest. 2d §511); negligence may still apply",
             ],
             ex: [
-              { facts: "A man brings his pet cheetah, on a short leash, to a party, and it claws a guest.", result: "Strict liability: a wild animal, whatever the care taken." },
-              { facts: "A dog that has twice lunged at mail carriers bites one.", result: "Strict liability: the owner had notice of the propensity, though the dog had never bitten anyone." },
+              { facts: "A woman keeps a pet python in a locked glass tank; it escapes anyway and bites a neighbor.", result: "Strict liability: a wild animal, whatever the care taken." },
+              { facts: "A horse that has bitten two stable hands bites a rider.", result: "Strict liability: the owner had notice of the horse's dangerous propensity." },
             ],
             terms: ["wild animal", "domestic animal", "one-bite rule"],
             quiz: [
@@ -2059,7 +2231,7 @@
               { t: "bucket", q: "Strictly liable?", buckets: ["Strictly liable", "Negligence only"], items: [{ text: "A keeper of a pet chimpanzee that injures a visitor", bucket: "Strictly liable" }, { text: "The owner of a gentle dog that bites a child who stepped on its tail", bucket: "Negligence only" }, { text: "A farmer whose cattle break through a fence and trample a neighbor's crop", bucket: "Strictly liable" }, { text: "The owner of a dog that has twice attacked passersby", bucket: "Strictly liable" }] },
               { t: "mcq", q: "A gentle dog that has never shown aggression bites a child who stepped on its tail. No statute applies. The owner's strict liability is...", options: ["None: no notice of a dangerous propensity", "Present: all dogs are dangerous", "Present: the child was a licensee"], a: "None: no notice of a dangerous propensity", why: "A domestic animal triggers strict liability only with notice of an abnormally dangerous propensity." },
             ],
-            status: "general", src: "Rest. 2d Torts §§504-518 (secondary sources; not re-read); NCBE MBE Subject Matter Outline (Torts III); torts.md §5.1",
+            status: "unsure", src: "Rest. 2d Torts §504 (as quoted in Williams v. Goodwin, 41 Cal. App. 3d 496 (1974)); §§505-518 (secondary sources, not re-read); NCBE MBE Subject Matter Outline (Torts III); torts.md §5.1",
           },
           {
             id: "u12-t-scienter", kind: "term", term: "scienter", lang: "latin", exam: ["mbe"],
@@ -2131,13 +2303,14 @@
             exceptions: [
               "Due care is no defense",
               "The harm must result from the risk that makes the activity abnormally dangerous (NCBE's NextGen text)",
-              "Defenses: comparative negligence, knowing and voluntary assumption of risk, and extraordinary unforeseeable events",
+              "Defenses: the plaintiff's comparative fault (traditionally only knowingly and unreasonably encountering the risk) and assumption of risk",
+              "An unexpected act of a third person, an animal or a force of nature does not excuse the defendant if the harm is within the abnormal risk (Rest. 2d §522)",
               "Whether an activity is abnormally dangerous is a question of law for the court",
             ],
             cite: "Rest. 2d Torts §520", citeAsk: "Which Restatement section lists the factors for an abnormally dangerous activity?",
             ex: [
-              { facts: "A quarry blasts rock with every precaution; a fragment flies half a mile and cracks a windshield.", result: "Strict liability: blasting is abnormally dangerous, and the harm came from that danger." },
-              { facts: "A bakery's gas oven leaks through a negligent fitting.", result: "Negligence only: ordinary gas service is common and care makes it safe." },
+              { facts: "A pest-control firm fumigates a house with toxic gas using every precaution; the gas seeps next door and sickens a neighbor.", result: "Strict liability: fumigation is abnormally dangerous, and the harm came from that danger." },
+              { facts: "A homeowner's backyard grill tips over and starts a fire.", result: "Negligence only: grilling is common and care makes it safe." },
             ],
             terms: ["abnormally dangerous activity", "common usage"],
             quiz: [
@@ -2146,7 +2319,7 @@
               { t: "mcq", q: "Who decides whether an activity is abnormally dangerous?", options: ["The court, as a question of law", "The jury, as a question of fact", "The legislature"], a: "The court, as a question of law", why: "The factors are applied by the judge." },
             ],
             hook: "Rylands v. Fletcher (1868): a mill reservoir bursts into abandoned mine shafts and floods the neighbor's colliery.",
-            status: "general", src: "Rest. 2d Torts §§519-520; Rest. 3d Torts: Liab. Phys. & Emot. Harm §20; NCBE NextGen UBE Content Scope (Torts III); torts.md §5.2",
+            status: "general", src: "Rest. 2d Torts §§519-520, 522-524 (§522 as summarized in a treatise); Rest. 3d Torts: Liab. Phys. & Emot. Harm §20; NCBE NextGen UBE Content Scope (Torts III); torts.md §5.2",
           },
           {
             id: "u12-h-blasting", kind: "hypo", cat: "III", callType: "liable", rule: "u12-r-abnormally-dangerous", issue: "blasting and strict liability", grid: true,
@@ -2197,12 +2370,12 @@
           },
           {
             id: "u12-h-ordinary-activity", kind: "hypo", cat: "III", callType: "accurate", rule: "u12-r-abnormally-dangerous", issue: "ordinary activity is negligence only",
-            stem: "A bakery in a commercial district operated gas ovens connected to the city gas main. An employee of the bakery negligently failed to tighten a fitting. Gas leaked, and an explosion injured a customer in the neighboring shop. The customer sued the bakery. The jurisdiction applies the rules the exam assumes.",
-            call: "On what basis may the neighboring customer recover from the bakery?",
+            stem: "A bakery in a commercial district operated gas ovens connected to the city gas main. An employee of the bakery negligently failed to tighten a fitting. Gas leaked, and an explosion injured a shopper in the neighboring store. The shopper sued the bakery.",
+            call: "On what basis may the shopper recover from the bakery?",
             options: [
               { text: "Only on negligence, because operating gas ovens is a common activity that reasonable care makes safe.", why: "The activity is not abnormally dangerous: it is of common usage, and the risk is eliminated by care." },
               { text: "On strict liability, because gas explosions are extremely dangerous and cause serious injury to bystanders.", why: "Danger alone is not enough; the risk must remain high despite reasonable care and the activity must be uncommon.", trap: 10 },
-              { text: "On strict liability, because the harm from the explosion fell on a third party who was not a customer.", why: "The victim's status does not make an ordinary activity abnormally dangerous.", trap: 5 },
+              { text: "On strict liability, because the harm fell on a neighbor and not on one of the bakery's own customers.", why: "The victim's status does not make an ordinary activity abnormally dangerous.", trap: 5 },
               { text: "On no basis, because the bakery itself acted only through an employee who failed to tighten the fitting.", why: "An employer is vicariously liable for its employee's negligence within the scope of employment.", trap: 5 },
             ],
             answer: 0,
@@ -2226,7 +2399,7 @@
             cite: "Rest. 2d Torts §822", citeAsk: "Which Restatement section states when a private nuisance gives rise to liability?",
             ex: [
               { facts: "A cement plant's dust and noise substantially interfere with the neighbors' homes; the plant is zoned industrial and employs hundreds.", result: "Zoning and utility are factors, not defenses." },
-              { facts: "A paper mill kills the fish in a river; a commercial fisher and a weekend angler sue.", result: "Only the fisher, whose harm differs in kind, may sue for the public nuisance." },
+              { facts: "A factory's runoff closes a public beach; a beach-rental shop and a weekend swimmer both sue.", result: "Only the shop, whose harm differs in kind, may sue for the public nuisance." },
             ],
             terms: ["private nuisance", "public nuisance", "coming to the nuisance"],
             quiz: [
@@ -2363,11 +2536,12 @@
               "Anyone foreseeably harmed may sue: users, consumers and bystanders; privity is not required",
               "Every commercial seller in the chain is liable; an innocent retailer may seek indemnity from the manufacturer",
               "Damage only to the product itself is economic loss for warranty or contract (East River)",
+              "Negligence is a separate route: a maker owes reasonable care to every foreseeable user, without privity (MacPherson)",
             ],
             cite: "Rest. 2d Torts §402A", citeAsk: "Which Restatement section imposes strict liability on sellers of defective products?",
             ex: [
-              { facts: "A grocery sells a sealed jar of sauce with glass shards left by a production error.", result: "The grocery is strictly liable and may seek indemnity from the manufacturer." },
-              { facts: "A retired teacher sells his used lawnmower, which has a cracked guard, at a garage sale.", result: "Not strictly liable: not in the business of selling mowers." },
+              { facts: "A pharmacy sells a sealed bottle of vitamins holding metal shavings from the maker's machinery.", result: "The pharmacy is strictly liable and may seek indemnity from the manufacturer." },
+              { facts: "A dentist sells her old office chair to a colleague.", result: "Not strictly liable: she is not in the business of selling chairs." },
             ],
             terms: ["commercial seller", "defective condition", "indemnity"],
             quiz: [
@@ -2426,7 +2600,7 @@
           {
             id: "u12-r-warranty", kind: "rule", title: "UCC warranties against a seller of goods", cat: "III",
             say: "Warranty is contract: an affirmation of fact, merchantability or fitness. Fault is not required, and who may sue depends on 2-318.",
-            elements: ["Express warranty (2-313): an affirmation of fact or promise that is part of the basis of the bargain", "Implied warranty of merchantability (2-314): a merchant's goods are fit for their ordinary purposes", "Implied warranty of fitness (2-315): the seller knows the buyer's particular purpose and that the buyer relies on the seller's skill to select the goods", "Disclaimer (2-316): to exclude merchantability, mention it and be conspicuous in a writing", "Who may sue (2-318): the buyer, and the beneficiaries that the state's version of the section names"],
+            elements: ["Express warranty (2-313): an affirmation of fact or promise that is part of the basis of the bargain", "Implied warranty of merchantability (2-314): a merchant's goods are fit for their ordinary purposes", "Implied warranty of fitness (2-315): the seller knows the buyer's particular purpose and that the buyer relies on the seller's skill to select the goods", "Disclaimer (2-316(2)): language excluding merchantability must mention it and, if written, be conspicuous", "Who may sue (2-318): the buyer, and the beneficiaries that the state's version of the section names"],
             ordered: false,
             distractorElements: ["The seller failed to use reasonable care", "The buyer inspected the goods before buying"],
             exceptions: [
@@ -2439,17 +2613,17 @@
             cite: "UCC 2-314",
             citeAsk: "Which UCC section creates the implied warranty of merchantability?",
             ex: [
-              { facts: "A buyer tells a hardware clerk what paint he will spray and relies on the clerk's recommendation of a sprayer, which proves unsuitable.", result: "Implied warranty of fitness: the seller knew the purpose and the buyer relied on its skill." },
+              { facts: "A hiker tells an outfitter she needs a tent for a winter summit and buys the one the clerk picks; it collapses in the first snowstorm.", result: "Implied warranty of fitness: the seller knew the purpose and the buyer relied on its skill." },
               { facts: "A written contract says in bold capitals, 'SOLD AS IS.'", result: "The implied warranties are excluded." },
             ],
             terms: ["express warranty", "merchantability", "fitness for a particular purpose"],
             quiz: [
-              { t: "tf", q: "A merchant may exclude the implied warranty of merchantability in a writing only if the language mentions merchantability and is conspicuous.", a: true, why: "UCC 2-316(2) sets exactly that requirement, though 'as is' language can also exclude the implied warranties." },
+              { t: "tf", q: "Under UCC 2-316(2), a written disclaimer of the implied warranty of merchantability must mention merchantability and be conspicuous.", a: true, why: "That is 2-316(2). Separately, 'as is' or similar language under 2-316(3)(a) excludes all implied warranties." },
               { t: "tf", q: "A buyer who sues for breach of an implied warranty must prove that the seller was negligent.", a: false, why: "Warranty is contract. Fault is not an element." },
               { t: "mcq", q: "Which warranty arises only when the seller knows the buyer's particular purpose and the buyer relies on the seller's skill?", options: ["Fitness for a particular purpose", "Merchantability", "Express warranty"], a: "Fitness for a particular purpose", why: "UCC 2-315 turns on the seller's knowledge of the purpose and the buyer's reliance." },
             ],
             status: "general",
-            src: "UCC 2-313, 2-314, 2-315, 2-316, 2-318, 2-607(3)(a), 2-719(3); torts.md §5.3",
+            src: "UCC 2-313, 2-314, 2-315, 2-316(2)-(3), 2-318, 2-607(3)(a), 2-719(3); torts.md §5.3",
           },
           {
             id: "u12-h-warranty-fitness", kind: "hypo", cat: "III", callType: "prevail", rule: "u12-r-warranty", issue: "implied warranty of fitness", grid: true,
@@ -2485,8 +2659,8 @@
           },
           {
             id: "u12-r-defect-types", kind: "rule", title: "Three kinds of product defect", cat: "III",
-            say: "Made wrong, designed wrong, warned wrong. Only manufacturing defects are truly strict; design and warning claims turn on reasonableness.",
-            elements: ["Manufacturing defect: the product departs from its intended design, even with all possible care", "Design defect: a reasonable alternative design would have reduced the foreseeable risk, and omitting it makes the product not reasonably safe", "Warning defect: reasonable instructions or warnings would have reduced the foreseeable risk", "Only manufacturing defects are truly strict; design and warning claims turn on reasonableness"],
+            say: "Made wrong, designed wrong, warned wrong. Under Rest. 3d only manufacturing defects are truly strict; design and warning claims turn on reasonableness.",
+            elements: ["Manufacturing defect: the product departs from its intended design, even with all possible care", "Design defect: a reasonable alternative design would have reduced the foreseeable risk, and omitting it makes the product not reasonably safe", "Warning defect: reasonable instructions or warnings would have reduced the foreseeable risk"],
             ordered: false,
             split: {
               restatement: "Rest. 3d §2(b): risk-utility, usually requiring proof of a reasonable alternative design.",
@@ -2494,6 +2668,7 @@
             },
             splitNote: "The stem says which test the jurisdiction uses.",
             exceptions: [
+              "Under Rest. 3d only manufacturing defects are truly strict; under the consumer-expectations test that many states keep, a design defect is strict too",
               "No duty to warn of open and obvious dangers",
               "Learned intermediary: for prescription drugs the warning goes to the prescribing physician",
               "Foreseeable misuse must be guarded against by design or warning",
@@ -2501,7 +2676,7 @@
             ],
             cite: "Rest. 3d Torts: Prod. Liab. §2", citeAsk: "Which Restatement section defines the three kinds of defect?",
             ex: [
-              { facts: "A table saw has no blade brake although an inexpensive, proven brake was feasible.", result: "Design defect, if the jurisdiction uses the reasonable-alternative-design test." },
+              { facts: "A pressure cooker has no lid lock although a cheap, proven lock was feasible, and the lid blows off.", result: "Design defect, if the jurisdiction uses the reasonable-alternative-design test." },
               { facts: "A chef's knife has no warning that the blade is sharp.", result: "No warning defect: no duty to warn of an open and obvious danger." },
             ],
             terms: ["manufacturing defect", "design defect", "failure to warn"],
@@ -2553,7 +2728,7 @@
             ],
             cite: "UCC 2-719(3)", citeAsk: "Which UCC section makes limits on personal-injury damages prima facie unconscionable?",
             ex: [
-              { facts: "An owner removes a shredder's guard in a way the maker could not foresee, and a worker is hurt.", result: "Substantial unforeseeable alteration: the maker is relieved." },
+              { facts: "A buyer rewires a toaster to run on industrial voltage, which the maker could not foresee, and it catches fire.", result: "Substantial unforeseeable alteration: the maker is relieved." },
               { facts: "A sales contract says 'sold as is, no liability for injury.'", result: "The disclaimer does not defeat a personal-injury claim in strict liability." },
             ],
             terms: ["substantial alteration", "state of the art", "preemption"],
@@ -2574,10 +2749,10 @@
               { text: "The sales contract disclaimed all liability for injuries", bucket: "Does not help the maker", why: "A disclaimer does not defeat personal-injury strict liability." },
               { text: "The plaintiff bought from a retailer and not from the maker", bucket: "Does not help the maker", why: "Privity is not required." },
               { text: "The maker used all possible care in manufacturing", bucket: "Does not help the maker", why: "Care is irrelevant to a manufacturing defect." },
-              { text: "The maker complied with all government safety regulations", bucket: "Does not help the maker", why: "Compliance is evidence only, not a complete defense." },
+              { text: "The maker argues that complying with all government safety regulations bars the claim outright", bucket: "Does not help the maker", why: "Compliance is evidence that the product was not defective, not a complete bar (preemption is a separate question)." },
             ],
-            say: "Fault of the plaintiff, unforeseeable misuse and alteration help. Disclaimers, privity, care and compliance do not.",
-            status: "general", src: "Rest. 3d Torts: Prod. Liab. §§15-18; UCC 2-719(3); torts.md §5.3",
+            say: "Fault of the plaintiff, unforeseeable misuse and alteration help. Disclaimers, privity, care, and compliance as a complete bar do not.",
+            status: "general", src: "Rest. 3d Torts: Prod. Liab. §§4(b), 15-18; UCC 2-719(3); torts.md §5.3",
           },
           {
             id: "u12-h-alteration", kind: "hypo", cat: "III", callType: "prevail", rule: "u12-r-products-defenses", issue: "substantial alteration after sale", grid: true,
@@ -2596,6 +2771,21 @@
             status: "general", src: "Rest. 2d Torts §402A(1)(b); torts.md §5.5 (PRO-6, rewritten)",
           },
           {
+            id: "u12-h-products-comparative", kind: "hypo", cat: "III", callType: "remedy", rule: "u12-r-products-defenses", issue: "comparative fault in a products case",
+            stem: "A homeowner's new riding mower had a defectively designed throttle that sometimes stuck open. He noticed it sticking twice but kept mowing a steep slope rather than stopping to have it checked. The third time, the mower ran away down the slope, and he was injured. In his strict products liability action against the manufacturer, the jury found the design defective, set his damages at $100,000 and found him 30% at fault for continuing to use the mower. The question does not say which fault rule the jurisdiction applies.",
+            call: "How much may the homeowner recover?",
+            options: [
+              { text: "$70,000, because his comparative fault reduces a strict products liability recovery.", why: "Silence means pure comparative fault, and a plaintiff's fault, including a knowing, unreasonable encounter with the defect, reduces a products recovery." },
+              { text: "$100,000, because a plaintiff's fault is never a defense to a claim in strict liability.", why: "Comparative fault reduces strict products recoveries.", trap: 7 },
+              { text: "Nothing, because he assumed the risk by continuing to use a mower he knew was defective.", why: "Under comparative fault, a knowing, unreasonable encounter with the risk reduces recovery rather than barring it.", trap: 11 },
+              { text: "Nothing, because he misused the mower by operating it on a steep slope.", why: "Mowing a slope is a foreseeable use; nothing shows unforeseeable misuse.", trap: 3 },
+            ],
+            answer: 0,
+            facts: ["found him 30% at fault"],
+            say: "Pure comparative fault applies in strict products cases too: reduce, do not bar.",
+            status: "general", src: "Rest. 3d Torts: Prod. Liab. §17; NCBE MBE Subject Matter Outline (Torts note: pure comparative fault); torts.md §5.3",
+          },
+          {
             id: "u12-h-learned-intermediary", kind: "hypo", cat: "III", callType: "prevail", rule: "u12-r-defect-types", issue: "learned intermediary", grid: true,
             stem: "A drug manufacturer adequately warned prescribing physicians of a serious side effect of its prescription medicine but gave patients no direct warning. A physician who knew of the warning prescribed the drug after weighing its risks, and the patient suffered the side effect. The patient sued the manufacturer, alleging failure to warn.",
             call: "Will the patient prevail on the failure-to-warn claim?",
@@ -2611,6 +2801,21 @@
             status: "general", src: "Rest. 3d Torts: Prod. Liab. §6(d); torts.md §5.3, §5.5 (PRO-7, rewritten)",
           },
           {
+            id: "u12-h-failure-to-warn", kind: "hypo", cat: "III", callType: "prevail", rule: "u12-r-defect-types", issue: "warning of a hidden danger", grid: true,
+            stem: "A company made a drain cleaner that gives off a toxic gas when it mixes with ordinary household bleach. The company knew of the danger from its own tests. The label explained how to use the product but said nothing about bleach. A homeowner poured the cleaner into a sink where she had used bleach an hour earlier and was hospitalized after breathing the gas. Stores sold the product in bright yellow bottles. She sued the company in strict products liability.",
+            call: "Will the homeowner prevail?",
+            options: [
+              { text: "Yes, because a reasonable warning about bleach would have reduced a foreseeable risk that users would not recognize.", why: "A warning defect: the maker knew of a non-obvious danger in foreseeable use and said nothing." },
+              { text: "No, because the product worked exactly as designed and had no flaw from the manufacturing process.", why: "That answers a manufacturing-defect claim; a product can be defective for want of a warning.", trap: 9 },
+              { text: "No, because she misused the product by pouring it into a sink where bleach had been used.", why: "Using a drain cleaner after another common cleaner is foreseeable use, which the warning had to address.", trap: 5 },
+              { text: "Yes, because any product that can give off a toxic gas is unreasonably dangerous whatever its label says.", why: "An adequate warning can make such a product reasonably safe; the defect here is the missing warning.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["said nothing about bleach"],
+            say: "Warn of the foreseeable danger a user would not see coming. A hidden chemical reaction is the classic case.",
+            status: "general", src: "Rest. 3d Torts: Prod. Liab. §2(c); Rest. 2d Torts §402A cmt. j; torts.md §5.3",
+          },
+          {
             id: "u12-c-macpherson", kind: "case", name: "MacPherson v. Buick Motor Co.", year: 1916,
             holding: "A manufacturer owes a duty of reasonable care to foreseeable users of a product that is dangerous if negligently made; privity of contract is not required.",
             facts: "A wooden wheel on a new Buick collapsed; the buyer sued the car maker, not the dealer who sold it.",
@@ -2618,9 +2823,24 @@
             status: "general", src: "MacPherson v. Buick Motor Co., 217 N.Y. 382, 111 N.E. 1050 (1916); hooks.jsonl",
           },
           {
+            id: "u12-h-negligence-maker", kind: "hypo", cat: "III", callType: "prevail", rule: "u12-r-strict-products", issue: "negligence claim without privity", grid: true,
+            stem: "A manufacturer assembled ladders from rungs that it bought from a supplier. It did not test the rungs, although a simple test that other manufacturers used would have shown that one batch was brittle. A painter bought one of the ladders from a hardware store, and a rung snapped and injured him. The painter sued the manufacturer for negligence. The manufacturer argued that it owed him no duty because it had no contract with him.",
+            call: "Will the manufacturer's argument succeed?",
+            options: [
+              { text: "No, because a manufacturer owes reasonable care to foreseeable users of its product, whether or not they bought from it.", why: "MacPherson ended the privity requirement in negligence, and skipping a cheap, standard test of the parts is a breach." },
+              { text: "Yes, because a manufacturer owes a duty of care only to the persons with whom it has contracted.", why: "That is the privity rule that MacPherson rejected.", trap: 11 },
+              { text: "Yes, because the supplier that made the rungs, and not the manufacturer, was responsible for the defect.", why: "A maker that assembles a product must use reasonable care in testing the parts it puts into it.", trap: 5 },
+              { text: "No, because a manufacturer is strictly liable for every defect, so negligence need not be shown.", why: "The painter sued in negligence, and strict liability does not reach every defect; the answer is that privity is not required.", trap: 4 },
+            ],
+            answer: 0,
+            facts: ["it had no contract with him"],
+            say: "No privity needed in negligence: the maker owes care to whoever foreseeably uses the product.",
+            status: "general", src: "MacPherson v. Buick Motor Co., 217 N.Y. 382 (1916); Rest. 2d Torts §395; torts.md §5.3",
+          },
+          {
             id: "u12-c-east-river", kind: "case", name: "East River Steamship Corp. v. Transamerica Delaval Inc.", year: 1986,
             holding: "A manufacturer in a commercial relationship has no duty in negligence or strict products liability to prevent a product from injuring itself; such loss is for contract and warranty.",
-            facts: "Defective turbines on supertankers damaged only themselves; the owners sued in tort for repairs and lost use.",
+            facts: "Defective turbines on chartered supertankers damaged only themselves; the charterers sued in tort for repairs and lost income.",
             say: "A product that harms only itself is a contract problem, not a tort.",
             status: "book", src: "East River S.S. Corp. v. Transamerica Delaval Inc., 476 U.S. 858 (1986)",
           },
@@ -2646,7 +2866,7 @@
             ],
             cite: "Rest. 2d Torts §558", citeAsk: "Which Restatement section states the elements of defamation?",
             ex: [
-              { facts: "A man tells guests that a dentist 'never passed his licensing exam,' and the dentist can prove no specific financial loss.", result: "Slander per se: it injures him in his profession, so special damages are not needed." },
+              { facts: "A woman tells her book club that the town pharmacist dilutes prescriptions to save money; he can prove no lost sales.", result: "Slander per se: it injures him in his profession, so special damages are not needed." },
               { facts: "A sealed letter calling a contractor a thief is read only by the contractor.", result: "No publication: no defamation." },
             ],
             terms: ["libel", "slander", "publication"],
@@ -2703,7 +2923,7 @@
             cite: "New York Times Co. v. Sullivan", citeAsk: "Which case requires actual malice for a public official's defamation claim?",
             ex: [
               { facts: "A magazine publishes a false story that a famous actor was fired for stealing, knowing that the story was invented.", result: "Actual malice: the public figure may recover, including presumed and punitive damages." },
-              { facts: "A newspaper prints a false bribery story about a mayor, relying on one unchecked source, with no sign it doubted the story.", result: "Failure to investigate is not actual malice; the mayor loses." },
+              { facts: "A station airs a false story about a judge that its reporter privately doubted and chose not to check.", result: "Reckless disregard: publishing despite serious doubts is actual malice (St. Amant)." },
             ],
             terms: ["actual malice", "public figure", "matter of public concern"],
             quiz: [
@@ -2735,7 +2955,7 @@
               { l: "Gertz v. Robert Welch", r: "A private figure on a public concern needs at least negligence; no presumed or punitive damages without actual malice" },
               { l: "Philadelphia Newspapers v. Hepps", r: "A private-figure plaintiff proves falsity when a media defendant speaks on a matter of public concern" },
               { l: "Dun and Bradstreet v. Greenmoss", r: "Presumed and punitive damages are allowed without actual malice on a purely private matter" },
-              { l: "Milkovich v. Lorain Journal", r: "No separate opinion privilege; only statements not provable as false are protected" },
+              { l: "Milkovich v. Lorain Journal", r: "No separate opinion privilege; statements not provable as false, or not reasonably read as stating facts, are protected" },
               { l: "Hustler v. Falwell", r: "A public figure cannot recover for emotional distress from a parody without a false statement of fact and actual malice" },
               { l: "Time, Inc. v. Hill", r: "False light on a matter of public interest needs knowledge of falsity or reckless disregard" },
               { l: "Cox Broadcasting v. Cohn", r: "No liability for accurately publishing facts from open public court records" },
@@ -2891,12 +3111,12 @@
               "Cox Broadcasting: accurate publication of information from open public court records cannot be punished",
               "Florida Star: truthful information lawfully obtained on a matter of public significance may be punished only for a state interest of the highest order",
               "Time v. Hill: false light on matters of public interest requires knowledge of falsity or reckless disregard",
-              "Privacy rights are personal: they do not survive death, and relatives cannot assert them; a few states reject false light",
+              "Privacy rights are personal: except for appropriation, only the living person whose privacy was invaded may sue (Rest. 2d §652I); a few states reject false light",
             ],
             cite: "Rest. 2d Torts §652A", citeAsk: "Which Restatement section introduces the four privacy torts?",
             ex: [
-              { facts: "A detective secretly bugs a woman's bedroom and publishes nothing.", result: "Intrusion upon seclusion: no publication is needed." },
-              { facts: "An advertiser puts a private woman's photo on a billboard without consent.", result: "Appropriation of her likeness." },
+              { facts: "A landlord drills a peephole into a tenant's bathroom and tells no one.", result: "Intrusion upon seclusion: no publication is needed." },
+              { facts: "A gym runs a member's photo in its newspaper ads without asking her.", result: "Appropriation of her likeness." },
             ],
             terms: ["intrusion", "appropriation", "false light", "public disclosure"],
             quiz: [
@@ -2904,7 +3124,7 @@
               { t: "mcq", q: "Which privacy tort requires no publication at all?", options: ["Intrusion upon seclusion", "Public disclosure of private facts", "False light"], a: "Intrusion upon seclusion", why: "The wrong is complete on the intrusion." },
               { t: "tf", q: "A newspaper may be held liable for accurately printing a victim's name copied from a publicly filed indictment.", a: false, why: "Cox Broadcasting: the First Amendment bars liability for accurately publishing information from open court records." },
             ],
-            status: "general", src: "Rest. 2d Torts §§652A-652E; Cox Broadcasting Corp. v. Cohn, 420 U.S. 469 (1975); Florida Star v. B.J.F., 491 U.S. 524 (1989); Time, Inc. v. Hill, 385 U.S. 374 (1967); torts.md §6.3",
+            status: "general", src: "Rest. 2d Torts §§652A-652E, 652I; Cox Broadcasting Corp. v. Cohn, 420 U.S. 469 (1975); Florida Star v. B.J.F., 491 U.S. 524 (1989); Time, Inc. v. Hill, 385 U.S. 374 (1967); torts.md §6.3",
           },
           {
             id: "u12-p-privacy-elements", kind: "pairs", set: "Privacy tort and its signature element", mode: "concept",
@@ -2915,7 +3135,7 @@
               { l: "False light", r: "The defendant knew of or recklessly disregarded the falsity" },
               { l: "Defamation", r: "A false statement of fact injures reputation" },
             ],
-            spare: ["The plaintiff's heirs may sue for the privacy invasion"],
+            spare: ["The plaintiff must prove special damages"],
             say: "Every privacy tort has a signature: no publication, no truth defense, a likeness, a knowing falsehood.",
             status: "general", src: "Rest. 2d Torts §§652B-652E, 558; torts.md §6.3",
           },
@@ -2952,7 +3172,7 @@
           {
             id: "u12-h-public-records", kind: "hypo", cat: "IV.B", callType: "prevail", rule: "u12-r-privacy", issue: "accurate publication of public records", grid: true,
             stem: "A newspaper accurately printed the name of a sexual-assault victim, copying it from a publicly filed indictment, in a story about the prosecution of her attacker. The victim sued the newspaper for public disclosure of private facts, alleging that the publication embarrassed and harmed her.",
-            call: "Will the family's claim succeed?",
+            call: "Will the victim's claim succeed?",
             options: [
               { text: "No, because the First Amendment bars liability for accurately publishing facts from open court records.", why: "Cox Broadcasting: the State may not impose liability for accurate publication of facts in open judicial records." },
               { text: "Yes, because the facts were private and embarrassing, and the victim never consented to their publication.", why: "Embarrassment does not override the constitutional protection.", trap: 8 },
@@ -3010,6 +3230,20 @@
             say: "Private figures get a lower fault bar, but only for real injury.",
             status: "book", src: "Gertz v. Robert Welch, Inc., 418 U.S. 323 (1974)",
           },
+          {
+            id: "u12-c-st-amant", kind: "case", name: "St. Amant v. Thompson", year: 1968,
+            holding: "Reckless disregard means the publisher in fact entertained serious doubts about the truth; failing to investigate before publishing is not enough.",
+            facts: "A candidate read on television a union member's false charge that a deputy sheriff took bribes, without checking it.",
+            say: "Actual malice is about doubts the publisher really had, not about the checking he skipped.",
+            status: "general", src: "St. Amant v. Thompson, 390 U.S. 727 (1968); torts.md §6.2",
+          },
+          {
+            id: "u12-c-snyder", kind: "case", name: "Snyder v. Phelps", year: 2011,
+            holding: "Peaceful picketing on matters of public concern, on public land near a funeral, is protected by the First Amendment and cannot support liability for intentional infliction of emotional distress.",
+            facts: "Church members picketed near a soldier's funeral with signs about public issues; his father won an emotional distress verdict that the Court set aside.",
+            say: "Speech on public matters in a public place cannot be punished through the emotional distress tort, however hurtful.",
+            status: "general", src: "Snyder v. Phelps, 562 U.S. 443 (2011); torts.md §2.2",
+          },
         ],
       },
       {
@@ -3031,8 +3265,8 @@
             ],
             cite: "Rest. 2d Torts §525", citeAsk: "Which Restatement section states liability for fraudulent misrepresentation?",
             ex: [
-              { facts: "A dealer says, 'This is the best sedan on the lot, and you will love it.'", result: "Puffery: not a statement of fact, so no fraud." },
-              { facts: "A seller says 'the roof was replaced last year' knowing it was not.", result: "Fraud: a false material fact, knowingly, to induce a purchase." },
+              { facts: "A jeweler tells a shopper the ring shows 'the finest craftsmanship in the county.'", result: "Puffery: not a statement of fact, so no fraud." },
+              { facts: "A seller says a horse 'has never been lame', knowing a vet treated it for lameness last spring.", result: "Fraud: a false material fact, knowingly, to induce a purchase." },
             ],
             terms: ["scienter", "puffery", "justifiable reliance"],
             quiz: [
@@ -3058,6 +3292,21 @@
             status: "general", src: "Rest. 2d Torts §§525, 538A; torts.md §6.6 (MIS-1, rewritten)",
           },
           {
+            id: "u12-h-concealment", kind: "hypo", cat: "IV.C", callType: "prevail", rule: "u12-r-fraud", issue: "active concealment", grid: true,
+            stem: "Before listing her house for sale, a seller had the ceilings of two bedrooms repainted to cover water stains from a roof leak that she knew had not been repaired. She said nothing about the roof, and the buyer asked no questions about it. The buyer's inspector looked at the ceilings and saw nothing unusual. Three months after the closing, the roof leaked badly, and repairs cost $18,000. The contract contained no warranty about the roof. The buyer sued the seller for fraud.",
+            call: "Will the buyer prevail?",
+            options: [
+              { text: "Yes, because painting over the stains to hide a known defect is active concealment, which counts as a misrepresentation.", why: "Concealing a material fact to prevent its discovery is treated like a false statement, even without words." },
+              { text: "No, because the seller said nothing about the roof, and silence is not actionable without a fiduciary duty.", why: "Silence alone is not fraud, but painting over the stains was conduct, not silence.", trap: 9 },
+              { text: "No, because the buyer's inspector examined the ceilings, so the buyer relied on his own inspection.", why: "The concealment defeated the inspection; the buyer relied on the clean ceilings the seller created.", trap: 3 },
+              { text: "Yes, because a seller of a house always has a duty to disclose every defect that she knows about.", why: "There is no absolute duty to disclose every defect; the concealment is what makes this actionable.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["repainted to cover water stains"],
+            say: "Silence is not fraud, but hiding the defect is. Paint over a stain and you have spoken.",
+            status: "general", src: "Rest. 2d Torts §§550-551 (secondary sources, not re-read); torts.md §6.4",
+          },
+          {
             id: "u12-h-negligent-misrepresentation", kind: "hypo", cat: "IV.C", callType: "prevail", rule: "u12-r-fraud", issue: "negligent misrepresentation to a known group",
             stem: "An accountant negligently prepared an audit report that overstated a company's profits. The accountant knew that the company would give the report to a particular bank in support of a specific loan application. The bank relied on the report, made the loan, and lost money when the company defaulted. The jurisdiction follows the Restatement (Second) approach to negligent misrepresentation. The bank sued the accountant.",
             call: "Will the bank prevail?",
@@ -3077,10 +3326,10 @@
             stem: "A seller of a used boat told a buyer, honestly and with no reason to doubt it, that the boat's engine had been replaced the previous year. The statement was false because the seller's mechanic had made an error in the maintenance records on which the seller relied. The buyer relied on the statement, bought the boat, and later paid $4,000 to repair the engine. The jurisdiction has adopted the Restatement rule in section 552C, which makes a seller liable for innocent misrepresentation of a material fact. The buyer sued the seller.",
             call: "Will the buyer prevail?",
             options: [
-              { text: "Yes, because §552C makes a seller liable for an innocent misrepresentation that induced the sale.", why: "Where adopted, §552C imposes liability for an innocent but material misrepresentation that induced the sale." },
-              { text: "No, because fraud requires that the seller knew the statement was false or was reckless about its truth.", why: "That is fraud, but the stem adopts §552C, which does not require scienter.", trap: 9 },
-              { text: "No, because the seller owed the buyer no duty of care in telling him about the engine's history.", why: "Liability under §552C does not depend on a duty of care or negligence.", trap: 4 },
-              { text: "Yes, but only if the seller was negligent in relying on the maintenance records that his mechanic kept.", why: "Negligence is the standard for negligent misrepresentation, not for §552C.", trap: 5 },
+              { text: "Yes, because the jurisdiction makes a seller liable for an innocent but material misstatement that induced the sale.", why: "Where adopted, Rest. 2d §552C imposes liability for an innocent but material misrepresentation that induced the sale." },
+              { text: "No, because fraud requires that the seller knew the statement was false or was reckless about its truth.", why: "That is fraud, but the stem adopts the innocent-misrepresentation rule, which does not require scienter.", trap: 9 },
+              { text: "No, because the seller owed the buyer no duty of care in telling him about the engine's history.", why: "Liability for innocent misrepresentation in a sale does not depend on a duty of care or negligence.", trap: 4 },
+              { text: "Yes, but only if the seller was negligent in relying on the maintenance records that his mechanic kept.", why: "Negligence is the standard for negligent misrepresentation, not for innocent misrepresentation in a sale.", trap: 5 },
             ],
             answer: 0,
             facts: ["honestly and with no reason to doubt it"],
@@ -3101,8 +3350,8 @@
             cite: "Rest. 2d Torts §766", citeAsk: "Which Restatement section covers intentional interference with an existing contract?",
             hook: "Pennzoil v. Texaco: a Texas jury found that Texaco had interfered with Pennzoil's deal to buy Getty Oil, and the verdict ran into the billions.",
             ex: [
-              { facts: "A rival offers a supplier a higher price to break its two-year exclusive contract with the plaintiff.", result: "Improper: inducing breach of a definite-term contract." },
-              { facts: "A pizzeria cuts prices and advertises to win a rival's customers, and also falsely says the rival 'uses expired cheese.'", result: "Price cuts: privileged competition. The lie: improper means." },
+              { facts: "A rival restaurant offers a head chef double pay to quit in the middle of a three-year employment contract.", result: "Improper: inducing breach of a definite-term contract." },
+              { facts: "A bike shop runs a half-price sale to win a rival's customers and falsely tells them the rival 'sells stolen bikes.'", result: "The sale: privileged competition. The lie: improper means." },
             ],
             terms: ["tortious interference", "competitor's privilege", "injurious falsehood"],
             quiz: [
@@ -3156,6 +3405,46 @@
             say: "A knowing lie about a rival's goods that costs orders is injurious falsehood: competition does not privilege it.",
             status: "general",
             src: "Rest. 2d Torts §§623A, 626 (secondary sources, not re-read); torts.md §6.5",
+          },
+          {
+            id: "u12-p-tort-cases", kind: "pairs", set: "Torts cases and the rules they stand for", mode: "case-holding",
+            pairs: [
+              { l: "Palsgraf v. Long Island Railroad", r: "Duty runs only to plaintiffs within the foreseeable zone of danger" },
+              { l: "Summers v. Tice", r: "Two negligent defendants must each disprove causation, or both are liable" },
+              { l: "Vincent v. Lake Erie Transportation", r: "Private necessity privileges using another's property, but the user pays for the damage" },
+              { l: "Katko v. Briney", r: "No deadly force, even by a spring gun, to protect property alone" },
+              { l: "The T.J. Hooper", r: "Industry custom is evidence of due care, not conclusive" },
+              { l: "MacPherson v. Buick", r: "A manufacturer owes reasonable care to foreseeable users without privity" },
+              { l: "Tarasoff v. Regents", r: "A therapist must take reasonable steps to protect a reasonably identifiable victim" },
+              { l: "Boomer v. Atlantic Cement", r: "A court may deny a nuisance injunction on payment of permanent damages" },
+            ],
+            spare: ["A defendant is liable for every direct consequence of negligence, foreseeable or not"],
+            say: "The exam asks for the rule, not the name, but the name is the handle you remember it by.",
+            status: "general", src: "Palsgraf, 248 N.Y. 339 (1928); Summers v. Tice, 33 Cal. 2d 80 (1948); Vincent, 109 Minn. 456 (1910); Katko, 183 N.W.2d 657 (Iowa 1971); The T.J. Hooper, 60 F.2d 737 (2d Cir. 1932); MacPherson, 217 N.Y. 382 (1916); Tarasoff, 17 Cal. 3d 425 (1976); Boomer, 26 N.Y.2d 219 (1970); torts.md §8",
+          },
+          {
+            id: "u12-r-wrongful-proceedings", kind: "rule", title: "Malicious prosecution, wrongful civil proceedings and abuse of process",
+            say: "Malicious prosecution: a baseless case, begun for an improper purpose, that ended in the plaintiff's favor. Abuse of process: process misused for another aim.",
+            elements: ["The defendant began or continued criminal proceedings against the plaintiff", "The proceedings ended in the plaintiff's favor", "There was no probable cause", "The defendant acted for an improper purpose", "Damages"],
+            ordered: false,
+            distractorElements: ["The plaintiff was convicted at trial", "The defendant made a defamatory statement"],
+            exceptions: [
+              "Wrongful civil proceedings: the same elements for a baseless civil suit; some states also require a special injury, such as seizure of property",
+              "Abuse of process: using legal process, even one properly begun, mainly for a purpose it was not designed for, plus a willful act in its use",
+              "A settlement or compromise is not a termination in the plaintiff's favor",
+              "These torts are not on NCBE's MBE outline; know them as background",
+            ],
+            cite: "Rest. 2d Torts §653", citeAsk: "Which Restatement section states the elements of malicious prosecution?",
+            ex: [
+              { facts: "A store owner, angry at a former employee, swears out a theft complaint he knows is baseless; the charge is dismissed.", result: "Malicious prosecution: no probable cause, improper purpose, favorable termination." },
+              { facts: "A creditor files a valid collection suit but uses a subpoena to pressure the debtor into dropping an unrelated claim.", result: "Abuse of process: process used for an ulterior purpose." },
+            ],
+            terms: ["malicious prosecution", "abuse of process"],
+            quiz: [
+              { t: "tf", q: "A person may sue for malicious prosecution while the criminal case against her is still pending.", a: false, why: "The proceedings must first have ended in her favor." },
+              { t: "mcq", q: "Which fact defeats a malicious prosecution claim?", options: ["The defendant had probable cause to start the proceedings", "The defendant disliked the plaintiff", "The charge was dismissed"], a: "The defendant had probable cause to start the proceedings", why: "Probable cause answers the claim whatever the defendant's feelings; a dismissal is the favorable termination the plaintiff needs." },
+            ],
+            status: "general", src: "Rest. 2d Torts §§653, 660, 674, 682 (secondary sources, not re-read); torts.md §6.5",
           },
         ],
       },

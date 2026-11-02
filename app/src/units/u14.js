@@ -1,40 +1,57 @@
 // u14 · Traps, distractors and exam day (cross-subject unit: the deck the mistakes notebook feeds, and the last-two-weeks unit).
 //
-// Six lessons, 117 items: 68 `trap` cards (26 distractor-type cards including the stale-rule cards for Frye, Pennoyer, Lemon, Roe and Humphrey's,
-// 16 forgotten-defaults cards, 26 cross-subject confusions), 21 `hypo` items (10 "reading the call" with `facts` and `grid`, 11 timed at exam
-// pace, five of them about 90 to 115 words), 15 `rule` cards (defaults, what the MBE leaves out, qualifiers, call tasks, pacing, score, hours, exam week),
-// 5 `pairs`, 3 `sort`, 1 `steps`, 4 `num`. Every hypo is tagged with the subject and NCBE outline category it
-// belongs to, so the Question of the Day and the mocks can draw it for that subject. All hypo `rule` ids point at u14's own rule cards, so
-// the unit has no `dep` and passes the validator on its own. Fact patterns are our own; nothing is copied from an NCBE question or from a
-// commercial outline (the research drafts were used only to choose which trap to teach). The distinctive NCBE sample patterns named in
-// crim.md §15.3 and the guard-dog pattern in questions.md §9 were deliberately not reused (u14-tr-family-dog uses a family pet instead).
+// Six lessons, 120 items: 68 `trap` cards (25 distractor-type cards, including the stale-rule cards for Frye, Lemon, Roe and Humphrey's,
+// 16 forgotten-defaults cards, 27 cross-subject confusions), 22 `hypo` items (one cold opener in lesson 1, 10 "reading the call" with `facts`
+// and `grid`, 11 at exam pace), 15 `rule` cards, 7 `pairs` (two of them define the eleven distractor types at the top of lesson 1, so the
+// "name the distractor type" game does not depend on u1), 3 `sort`, 1 `steps`, 4 `num`. Every hypo is tagged with the subject and NCBE
+// outline category it belongs to. All hypo `rule` ids point at u14's own rule cards, so the unit has no `dep`. Fact patterns are our own;
+// nothing is copied from an NCBE question or from a commercial outline. The distinctive NCBE sample patterns named in crim.md §15.3 and the
+// guard-dog pattern in questions.md §9 were deliberately not reused (u14-tr-family-dog uses a family pet instead).
 //
-// No item is `unsure`. Items a reviewer should still double-check (all `general`, `book` or `exam`; none re-read in the primary text this session):
+// Deep verification pass, Nov. 2, 2026 (two independent checkers plus a re-check of each finding):
+//   - Fixed: u14-tr-x-will-person (Alden v. Maine: a State keeps immunity in its own courts; the wrong option now says it has none),
+//     u14-tr-humphrey-slaughter (holding narrowed to multimember agencies exercising executive power; Federal Reserve and Morrison left open),
+//     u14-h-parol-assume (the oral term is now a consistent additional term, so only the assumption excludes it), u14-h-t-805 (new facts:
+//     a police report under 803(8), one stated purpose), u14-tr-def-american-rule (recast as the "NextGen-only topic" trap, exam ["mbe"]),
+//     u14-tr-x-1404-1406 and u14-p-choice-of-law-cases (Atlantic Marine exception), u14-p-rule12 (12(h)(2) survivors), stems of
+//     u14-tr-x-805-layers, u14-tr-def-fre-resgestae, u14-h-t-assurance, u14-h-t-marketable; Restatement sections on the necessity cards;
+//     u14-tr-child-standard ("dangerous" adult activity; cat 2); trap-type labels (type 1 now used on four hypo distractors).
+//   - Lesson 1: Pennoyer card removed (minimum contacts is taught in u2); the lesson now opens with the two type-definition pairs and a short
+//     hypo so the "Spot the issue" opener runs. u14-tr-mistake-honest-reasonable stays in lesson 1 because the brief names honest vs
+//     reasonable as a near-twin example.
+//   - Not built (engine work, outside this file): lesson 5's "9 questions in 15 minutes, timer enforced" block. The 11 exam-pace hypos are
+//     ordinary lesson hypos with the 110-second pace bar, never enforced.
+//
+// No item is `unsure`. Items a reviewer should still double-check (all `general`, `book` or `exam`):
+//   - u14-tr-humphrey-slaughter: Trump v. Slaughter (June 29, 2026) read via an LII summary; conlaw.md §15 asks for Part III-B and the
+//     Morrison v. Olson passage to be re-read. Marked `recent`, so it is an extension card.
 //   - u14-tr-x-klaxon-semtek: the Semtek holding as federal common law borrowing the rendering federal court's State's preclusion law (civpro.md §15).
 //   - u14-tr-def-lien, u14-tr-def-mitigation, u14-tr-def-habitability, u14-tr-hostile-faith: Real Property majority-rule conventions (property.md §3);
-//     NCBE does not state them, and the cards say so. The adverse-possession stem names the majority view because the hostility test splits.
-//   - u14-tr-def-statutory-rape: majority strict liability as to age (crim.md §4; u7-r-statutory says the same).
-//   - u14-tr-def-american-rule: tagged exam: ["nextgen"] only, because the research found the American rule named only in NextGen's Torts text (torts.md §7).
-//   - u14-tr-humphrey-slaughter: Trump v. Slaughter (June 29, 2026) read on LII (holding sentence and vote); marked `recent`, so it is an extension card.
-//   - u14-tr-x-1404-1406: now says "courts generally hold" and cites Martin v. Stokes (6th Cir. 1980); the Supreme Court cases concern §1404(a) only.
-//   - u14-tr-oral-land-nephew: "part performance usually needs possession plus payment or improvements" varies by State; the stem makes all three absent.
-//   - u14-tr-x-private-necessity: breaking a window and burning chairs as compensable harm under private necessity (Vincent v. Lake Erie; torts.md §2).
-//   - u14-h-easement-accurate: strict versus reasonable necessity differs by State; the key says only that the easement ends when the necessity ends.
-//   - u14-h-former-testimony-assume: "similar motive" is judged on a plaintiff suing the designer and then the contractor over the same collapse (a judgment call, arguably clear).
-//   - u14-h-wild-regardless: Rest. (Second) of Torts §507 (wild animals) recalled from the Restatement, not re-read; torts.md §5.
+//     NCBE does not state them, and the cards say so.
+//   - u14-tr-def-statutory-rape: majority strict liability as to age (crim.md §4).
+//   - u14-tr-def-american-rule: relies on torts.md §7 that the American rule is named in NextGen's Torts scope and not in the MBE outline.
+//   - u14-tr-x-1404-1406: Martin v. Stokes, 623 F.2d 469, 472-73 (6th Cir. 1980) confirmed from secondary excerpts (Justia/vLex snippets,
+//     later circuits citing it), not the full opinion.
+//   - u14-tr-x-207-additional: Official Comment 4 to UCC 2-207 (warranty disclaimer as a material alteration) recalled, not re-read.
+//   - u14-tr-oral-land-nephew: part performance varies by State; the stem makes possession, payment and improvements all absent.
+//   - u14-tr-x-private-necessity: Rest. (Second) of Torts §197 (land) and §263 (chattels), recalled.
+//   - u14-h-easement-accurate: strict versus reasonable necessity differs by State; the key says only that the easement ends with the necessity.
+//   - u14-h-former-testimony-assume: "similar motive" judged on the same plaintiff, same collapse, same defect theory.
+//   - u14-h-wild-regardless: Rest. (Second) of Torts §507 recalled, not re-read.
 //   - u14-h-t-fees-amount: contractual attorney's fees count toward the amount in controversy (majority rule; civpro.md §4).
-//   - u14-r-checkpoints, u14-r-mark-return, u14-n-hour-one, u14-n-hour-two, u14-n-block, u14-n-softcap: the 33/66/100 checkpoints, the 9-question block and the
-//     2.5-minute soft cap are secondary advice (UT Austin MBE prep handout, JD Advising) or arithmetic on NCBE's 1.8 minutes per question, not NCBE statements.
-//   - u14-r-score: NCBE means (131.2 Feb 2026, 140.7 July 2026) and 2025 pass rates (63% / 47% / 69%) are from NCBE releases read via research/format.md §2; re-check the wording
-//     "bar-exam pass rates reported by NCBE" against the 2025 statistics article before launch.
-//   - u14-r-hours: the 400-500 hours over 8-10 weeks line is labelled "commonly recommended by prep companies"; it has no cite on purpose (the validator's one warning
-//     per non-legal card: hours, last 14 days, night before, stress).
-//   - u14-r-stress: both citations (Ramirez & Beilock 2011; Jamieson, Mendes, Blackstock & Schmader 2010) are from memory of the papers, not re-read this session.
-//   - u14-r-morning: the research does not verify the curriculum's "ID, no laptop on the MBE, pencils" lines, so the card says only what NCBE says (only the answer sheet is
-//     scored, no extra time to transfer answers) and sends the learner to the board's own instructions.
-//   - u14-r-dates: NCBE's MBE page (ncbex.org/exams/mbe, read Nov. 2, 2026) lists Feb. 24, 2027, July 28, 2027 and Feb. 23, 2028; format.md §3 and CURRICULUM.md still call the July and 2028 dates "derived" and should be updated. The card keeps "confirm with your board".
-//   - u14-r-nextgen-note: "about 22 jurisdictions by July 2027" is 10 plus 12 from NCBE's October 23, 2026 table; West Virginia (conflicting NCBE pages) is never named.
-//   - u14-r-last14: "one full 100-question Session as a dress rehearsal" is advice; the engine does not schedule it. The phase rules (review only, every card due, review cap at exam minus 3 days) are engine.js.
+//   - u14-r-checkpoints, u14-r-mark-return, u14-n-*: the 33/66/100 checkpoints, the 9-question block and the 2.5-minute soft cap are secondary
+//     advice (UT Austin MBE prep handout, JD Advising) or arithmetic on NCBE's 1.8 minutes per question, not NCBE statements.
+//   - u14-r-score: means 131.2 (Feb. 2026) and 140.7 (July 2026) and the 2025 pass rates 47% / 69% verified; the "63% overall" figure was
+//     removed because NCBE does not state it. The "135 doubles to 270" line is arithmetic labelled a rule of thumb.
+//   - u14-r-hours: "commonly recommended by prep companies"; no cite on purpose.
+//   - u14-r-stress: Ramirez & Beilock (2011) and Jamieson et al. (2010) citations from memory of the papers.
+//   - u14-r-morning: the curriculum's "ID, no laptop, pencils" lines are not verified, so the card says only what NCBE says and sends the
+//     learner to the board's instructions (needs NCBE or board confirmation before adding a packing list).
+//   - u14-r-dates: NCBE's MBE page lists Feb. 24, 2027, July 28, 2027 and Feb. 23, 2028; the Tuesday written days are derived. format.md §3
+//     and CURRICULUM.md still say "derived" for the MBE days and should be updated.
+//   - u14-r-nextgen-note: 10 + 12 jurisdictions from NCBE's Oct. 23, 2026 table; "seven of eight" holds through Feb. 2028 (Family Law joins
+//     NextGen from July 2028, noted as an exception).
+//   - u14-r-last14: the dress-rehearsal Session is advice; the engine does not schedule it.
 /* eslint-disable max-len */
 (function () {
   const unit = {
@@ -50,6 +67,51 @@
         id: "u14l1",
         title: "The eleven distractors, one subject at a time",
         items: [
+          {
+            id: "u14-p-types-a", kind: "pairs", set: "Wrong-answer shapes 1 to 6", mode: "concept",
+            pairs: [
+              { l: "Reaches the key's verdict, but for a reason that is false or does not apply", r: "Right result, wrong reason" },
+              { l: "States the rule correctly but leaves out an element the facts fail", r: "Right rule, missing element" },
+              { l: "Depends on a fact the stem never gives", r: "Assumed fact" },
+              { l: "Applies the wrong law or test, such as the common law to a sale of goods", r: "Wrong body of law or wrong standard" },
+              { l: "States the rule incorrectly", r: "Misstated rule" },
+              { l: "A correct statement of law aimed at a different question", r: "True, but does not answer the call" },
+            ],
+            spare: ["Absolute words", "Stale rule"],
+            say: "Every wrong option has a shape. Name the shape and you know why it is wrong.",
+            status: "general", src: "Objection's eleven distractor types (engine TRAP_TYPES); questions.md §5; CURRICULUM.md §3",
+          },
+          {
+            id: "u14-p-types-b", kind: "pairs", set: "Wrong-answer shapes 7 to 11", mode: "concept",
+            pairs: [
+              { l: "Says always, never, any or every where the rule has exceptions", r: "Absolute words" },
+              { l: "Picks the side you feel for, not the side the rule favors", r: "Sympathetic facts" },
+              { l: "Swaps in a neighboring standard, such as 'should have known' for 'knew'", r: "Near-twin (less complete rule)" },
+              { l: "Reaches for a famous doctrine the facts do not trigger", r: "Impressive doctrine, wrong fit" },
+              { l: "States a rule that has been overruled or replaced", r: "Stale rule" },
+            ],
+            spare: ["Assumed fact", "Misstated rule"],
+            say: "Absolute words, sympathy, near-twins, fancy doctrine and stale rules: five more shapes, the same habit of naming them.",
+            status: "general", src: "Objection's eleven distractor types (engine TRAP_TYPES); questions.md §5; CURRICULUM.md §3",
+          },
+          {
+            id: "u14-h-mailbox-types", kind: "hypo", cat: "I", subject: "contracts", callType: "prevail", rule: "u14-r-call-task", issue: "mailbox rule and revocation", grid: true,
+            stem: "A homeowner mails a painter a letter offering $5,000 to paint her house and inviting acceptance by mail. The next day she changes her mind and mails the painter a letter revoking the offer. The day after that, before the revocation arrives, the painter mails a signed letter accepting the offer. The revocation reaches the painter an hour later. The homeowner refuses to let the painter start, and the painter sues for breach of contract.",
+            short: "An offeree mails an acceptance before receiving the offeror's mailed revocation.",
+            call: "Was a contract formed?",
+            options: [
+              { text: "Yes, because an acceptance by mail is effective when sent, and a revocation is effective only when the offeree receives it.", why: "The acceptance was mailed before the revocation arrived, so the contract was formed on dispatch." },
+              { text: "Yes, because the homeowner's written offer was irrevocable for a reasonable time as a firm offer.", why: "The verdict is right, but the firm-offer rule is for a merchant's signed offer to sell goods; painting a house is a service.", trap: 1 },
+              { text: "No, because the homeowner mailed her revocation before the painter mailed the acceptance.", why: "A revocation takes effect when the offeree receives it, not when it is mailed.", trap: 5 },
+              { text: "No, because an acceptance is never effective until the offeror receives it.", why: "Under the mailbox rule an authorized acceptance is effective on dispatch; 'never' is false.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["before the revocation arrives, the painter mails a signed letter accepting the offer"],
+            findAsk: "Tap the fact that decides which letter wins.",
+            say: "Acceptance by mail works when sent; revocation works when received. Mailed first, received later: the acceptance wins.",
+            hook: "The acceptance counts when it leaves; the revocation counts when it lands.",
+            status: "general", src: "Rest. (Second) of Contracts §63(a) (acceptance on dispatch), §42 (revocation on receipt); UCC 2-205 contrast; contracts.md",
+          },
           {
             id: "u14-tr-scope-risk", kind: "trap", cat: "1", subject: "torts",
             stem: "A driver negligently exceeds the speed limit. Because of the extra speed, the car passes under a roadside tree at the instant lightning splits it, and a falling limb injures the passenger. The passenger sues the driver.",
@@ -73,12 +135,12 @@
           {
             id: "u14-tr-803-6-practice", kind: "trap", cat: "2", subject: "evidence",
             stem: "A patient sues a hospital over a fall. The hospital offers a nurse's handwritten note, written an hour after the fall, saying she warned the patient not to get up alone. The hospital has no policy of writing such notes; she wrote it on her own, worried about a lawsuit. The patient objects: hearsay.",
-            wrong: "The note is admissible as a business record, because it was made near the time by a person with knowledge and kept in the hospital's files.",
+            wrong: "The note is admissible as a business record, because it was made near the time by a nurse with knowledge of the fall.",
             right: "The note is not a business record: nothing shows that making such records was a regular practice of the hospital's activity.",
-            why: "Rule 803(6) has five parts. The first two are met, but the third is not: making the record must be a regular practice of the activity. A one-off note written with a lawsuit in mind also invites a trustworthiness objection.",
+            why: "Timing and personal knowledge (803(6)(A)) are met, but the record was not made as a regular practice of the hospital's activity (803(6)(B)-(C)). A one-off note written with a lawsuit in mind also invites a trustworthiness objection.",
             say: "Business records need every part of 803(6). Skip 'regular practice' and the note is just hearsay in a folder.",
             hook: "Five parts, one that fails: the record must be routine, not a one-off.",
-            status: "book", src: "FRE 803(6)(A)-(E); evidence.md §6.3",
+            status: "book", src: "FRE 803(6)(A)-(E); evidence.md §6.3 (rechecked Nov. 2026: wrong option no longer adds a filing fact)",
           },
           {
             id: "u14-tr-burglary-night", kind: "trap", cat: "2", subject: "crim",
@@ -221,14 +283,14 @@
             status: "general", src: "Statutory receiving of stolen property (knowledge element); crim.md §4",
           },
           {
-            id: "u14-tr-child-standard", kind: "trap", cat: "9", subject: "torts",
+            id: "u14-tr-child-standard", kind: "trap", cat: "2", subject: "torts",
             stem: "A 15-year-old, driving a car on a public road, negligently runs a stop sign and injures a pedestrian. The driver's lawyer argues that the jury should judge the driver by the care expected of a reasonable 15-year-old.",
             wrong: "The driver is judged by the standard of a reasonable child of the same age, intelligence and experience.",
             right: "The driver is judged by the adult standard, because driving a car is an adult activity.",
-            why: "The child standard is a real rule, but the wrong option states it without its exception. A child who engages in an activity characteristically undertaken by adults, such as driving, is held to the adult standard.",
-            say: "A child gets the child standard, except in adult activities like driving: then the adult standard applies.",
-            hook: "The less complete rule sounds right until you ask what is missing.",
-            status: "general", src: "Rest. (Third) of Torts: Liab. for Phys. & Emot. Harm §10(c); torts.md §1",
+            why: "The child standard is the right rule, missing its adult-activity exception. A child who engages in a dangerous activity characteristically undertaken by adults, such as driving, is held to the adult standard.",
+            say: "A child gets the child standard, except in dangerous adult activities like driving: then the adult standard applies.",
+            hook: "The rule sounds right until you ask what is missing.",
+            status: "general", src: "Rest. (Third) of Torts: Liab. for Phys. & Emot. Harm §10(c) ('dangerous activity that is characteristically undertaken by adults'); torts.md §1",
           },
           {
             id: "u14-tr-family-dog", kind: "trap", cat: "10", subject: "torts",
@@ -274,11 +336,11 @@
             id: "u14-tr-humphrey-slaughter", kind: "trap", cat: "11", subject: "conlaw", recent: true,
             stem: "Congress creates a multimember commission with power to investigate and bring enforcement actions against unfair business practices. A statute lets the President remove a commissioner only for inefficiency, neglect of duty or malfeasance in office. The President removes a commissioner over a policy disagreement, and the commissioner sues for reinstatement.",
             wrong: "The removal is invalid, because Congress may limit the President's power to remove the commissioners of an independent multimember agency.",
-            right: "The removal is valid: a for-cause limit on the President's power to remove officers who exercise executive power violates the separation of powers.",
-            why: "The wrong option states the rule of Humphrey's Executor (1935), which Trump v. Slaughter (2026) overruled for such an agency. Older outlines still teach it, so check the date on any rule about removal.",
+            right: "The removal is valid: under Trump v. Slaughter (2026), a statute may not limit the President's power to remove the commissioners of a multimember agency exercising executive power like this one.",
+            why: "The wrong option states the rule of Humphrey's Executor (1935), which Trump v. Slaughter (2026) overruled for such an agency. The Court left the Federal Reserve open, and limits on removing inferior officers (Morrison v. Olson) are a separate question.",
             say: "Humphrey's Executor is the stale rule: for an agency like the FTC the President may remove commissioners at will.",
             hook: "Old outlines teach the independent agency. Check the date before you trust the rule.",
-            status: "general", src: "Trump v. Slaughter, No. 25-332 (U.S. June 29, 2026); Humphrey's Executor v. United States, 295 U.S. 602 (1935); Seila Law LLC v. CFPB, 591 U.S. 197 (2020); conlaw.md",
+            status: "general", src: "Trump v. Slaughter, No. 25-332 (U.S. June 29, 2026) (Federal Reserve left open; Trump v. Cook, No. 25A312, same day); Morrison v. Olson, 487 U.S. 654 (1988); Humphrey's Executor v. United States, 295 U.S. 602 (1935); Seila Law LLC v. CFPB, 591 U.S. 197 (2020); conlaw.md",
           },
           {
             id: "u14-tr-mistake-honest-reasonable", kind: "trap", cat: "9", subject: "crim",
@@ -299,16 +361,6 @@
             say: "Frye (general acceptance) is the stale test. FRE 702 asks whether the method is reliable and reliably applied.",
             hook: "Frye is the stale rule; 702 is the rule in force.",
             status: "book", src: "FRE 702 (as amended Dec. 1, 2023); Daubert v. Merrell Dow Pharmaceuticals, 509 U.S. 579 (1993); evidence.md §1.5",
-          },
-          {
-            id: "u14-tr-pennoyer-presence", kind: "trap", cat: "11", subject: "civpro",
-            stem: "A State B manufacturer regularly ships its product directly to customers in State A and advertises there. A State A customer is injured by the product in State A and sues in a State A court. The manufacturer is served at its State B headquarters under State A's long-arm statute and has never had an office or employee in State A.",
-            wrong: "The State A court lacks jurisdiction, because the manufacturer was never physically present in State A.",
-            right: "The State A court has specific jurisdiction, because the manufacturer purposefully directed its product into State A and the claim arises from that contact.",
-            why: "Physical presence is the old territorial rule of Pennoyer. Since International Shoe, a nonresident defendant is subject to jurisdiction if it has minimum contacts with the forum and the suit does not offend fair play and substantial justice.",
-            say: "Physical presence is not the test since International Shoe: purposeful contacts plus a claim that arises from them.",
-            hook: "Pennoyer's newspaper-notice judgment is the story; minimum contacts is the rule now.",
-            status: "general", src: "International Shoe Co. v. Washington, 326 U.S. 310 (1945); Ford Motor Co. v. Montana Eighth Judicial District Court, 592 U.S. 351 (2021); civpro.md §6",
           },
         ],
       },
@@ -401,13 +453,13 @@
           },
           {
             id: "u14-tr-def-fre-resgestae", kind: "trap", cat: "4", subject: "evidence",
-            stem: "At trial, a witness testifies that a bystander shouted 'He ran the light!' about ten minutes after a collision, after the bystander had walked calmly to the curb and talked with others. The statement is offered to prove that the driver ran the light. The driver objects: hearsay.",
+            stem: "At trial, a witness testifies that a bystander remarked in a level voice, 'He ran the light,' about ten minutes after a collision, after the bystander had walked calmly to the curb and talked with others. The statement is offered to prove that the driver ran the light. The driver objects: hearsay.",
             wrong: "The statement is admissible as part of the res gestae.",
             right: "The statement is inadmissible hearsay: the Federal Rules of Evidence have no res gestae exception, and no 803 exception fits.",
             why: "Evidence questions assume the FRE. The old res gestae catch-all was broken into specific rules: a present sense impression needs near-immediacy and an excited utterance needs a startled declarant. A calm remark ten minutes later is neither.",
             say: "FRE only: there is no res gestae exception, so a calm remark ten minutes later is hearsay.",
             hook: "Res gestae, 'things done': the old catch-all the FRE took apart.",
-            status: "book", src: "FRE 802; FRE 803(1)-(2); hooks.jsonl (res gestae)",
+            status: "book", src: "FRE 802; FRE 803(1)-(2); hooks.jsonl (res gestae); stem reworded Nov. 2026 so nothing suggests excitement",
           },
           {
             id: "u14-tr-def-joint", kind: "trap", cat: "4", subject: "torts",
@@ -492,7 +544,7 @@
           {
             id: "u14-tr-def-mpc-theft", kind: "trap", cat: "4", subject: "crim",
             stem: "In a jurisdiction that defines crimes as at common law, a man lies to a car dealer about his employment to get a car on credit. The dealer, believing him, intends to transfer both possession and title and hands over the car and the signed title.",
-            wrong: "He is guilty of larceny by trick, because the Model Penal Code treats every fraudulent acquisition of property as a single crime of theft.",
+            wrong: "He is guilty of theft, because modern law treats every fraudulent acquisition of property as a single consolidated theft offense.",
             right: "He is guilty of false pretenses, not larceny: title passed, and the stem applies the common law rather than the Model Penal Code's consolidated theft offense.",
             why: "The stem names common law, so the MPC's single theft offense is not available. At common law larceny by trick requires that only possession pass; when title passes, the crime is false pretenses.",
             say: "No MPC unless the stem says so: the common law keeps larceny, embezzlement and false pretenses apart.",
@@ -500,15 +552,15 @@
             status: "general", src: "Common-law false pretenses; MPC §223.1 (consolidation); crim.md §4",
           },
           {
-            id: "u14-tr-def-american-rule", kind: "trap", cat: "5", subject: "torts",
-            stem: "A plaintiff wins a negligence judgment for $50,000 and has paid $15,000 in attorney's fees. No statute and no contract term shifts fees, and the plaintiff moves to recover them from the defendant as the prevailing party.",
-            wrong: "The plaintiff recovers the fees, because the winning party is entitled to attorney's fees.",
-            right: "The plaintiff recovers no fees, because under the American rule each side bears its own fees absent a statute, a contract, or a recognized exception.",
-            why: "'The loser pays' is the English rule. In the United States each party pays its own lawyer unless a statute, a contract term, or an exception such as bad faith says otherwise. NextGen Torts text; not listed in the MBE outline.",
-            say: "American rule: each side pays its own lawyer unless a statute, a contract, or a recognized exception says otherwise.",
-            hook: "The winner's invoice is the winner's problem.",
-            status: "general", src: "Alyeska Pipeline Service Co. v. Wilderness Society, 421 U.S. 240 (1975); NextGen Torts content scope (named there, not in the MBE outline); torts.md §7",
-            exam: ["nextgen"],
+            id: "u14-tr-def-american-rule", kind: "trap", cat: "misapplied", subject: "traps",
+            stem: "A candidate preparing for the legacy MBE finds a page on the American rule on attorney's fees in an outline of the NextGen Torts scope, and plans to memorize it as an MBE Torts topic.",
+            wrong: "Memorize it as an MBE topic: every Torts topic NextGen names is also on the MBE.",
+            right: "Give it no MBE time: the MBE Torts outline does not list it, and NextGen's scope is not the MBE's.",
+            why: "The two exams' outlines differ. The American rule (each side pays its own lawyer absent a statute, a contract or a recognized exception) is named in NextGen's Torts scope, not in the MBE outline.",
+            say: "NextGen's list is not the MBE's list. Study what the MBE outline names, and check your board's exam.",
+            hook: "Same subject name, different outline.",
+            status: "general", src: "NCBE MBE Subject Matter Outline, Torts; NCBE NextGen UBE Content Scope (Aug. 2025), Torts; Alyeska Pipeline Service Co. v. Wilderness Society, 421 U.S. 240 (1975); torts.md §7 (recast Nov. 2026 from a NextGen-only rule card)",
+            exam: ["mbe"],
           },
           {
             id: "u14-tr-def-nextgen-only", kind: "trap", cat: "misapplied", subject: "traps",
@@ -647,7 +699,7 @@
             why: "Only public necessity, which averts a community-wide danger, is a complete privilege. Private necessity is an incomplete privilege: the entry is not wrongful, but the person who benefits must pay for the actual harm done.",
             say: "Private necessity excuses the entry, not the bill. Public necessity is the complete defense.",
             hook: "Vincent v. Lake Erie: the ship tied to the dock in the storm paid for the dock.",
-            status: "general", src: "Vincent v. Lake Erie Transportation Co., 109 Minn. 456 (1910); Rest. (Second) of Torts §§196-197; torts.md §2",
+            status: "general", src: "Vincent v. Lake Erie Transportation Co., 109 Minn. 456 (1910); Rest. (Second) of Torts §197 (land), §263 (chattels); torts.md §2",
           },
           {
             id: "u14-tr-x-public-necessity", kind: "trap", cat: "4", subject: "torts",
@@ -657,17 +709,17 @@
             why: "The wrong option states the rule for private necessity, an incomplete privilege that protects an individual's interest. Public necessity protects the community, so the actor is not liable for the harm to the property.",
             say: "Public necessity is a complete privilege. Private necessity excuses the entry but not the bill.",
             hook: "Same words, two privileges: ask whom the act protected, the community or one person.",
-            status: "general", src: "Rest. (Second) of Torts §262; Surocco v. Geary, 3 Cal. 69 (1853); Vincent v. Lake Erie Transportation Co., 109 Minn. 456 (1910); torts.md §2",
+            status: "general", src: "Rest. (Second) of Torts §196 (land; §262 is the chattels counterpart); Surocco v. Geary, 3 Cal. 69 (1853); Vincent v. Lake Erie Transportation Co., 109 Minn. 456 (1910); torts.md §2",
           },
           {
-            id: "u14-tr-x-will-person", kind: "trap", cat: "4", subject: "conlaw",
+            id: "u14-tr-x-will-person", kind: "trap", cat: "5", subject: "conlaw",
             stem: "A man sues a State in its own state court under 42 U.S.C. §1983, seeking money damages for a violation of his federal constitutional rights by a state agency. The State argues that the suit cannot proceed.",
-            wrong: "The suit is barred by the Eleventh Amendment, which gives a State immunity from damages suits in any court.",
-            right: "The suit fails because a State is not a 'person' under §1983; the Eleventh Amendment is not the reason, because it limits only the federal courts.",
-            why: "Two doctrines, two questions. The Eleventh Amendment is about federal-court jurisdiction over a State. Will v. Michigan Department of State Police (1989) holds that a State is not a 'person' under §1983, whatever the court.",
-            say: "A State is not a 'person' under §1983 (Will). The Eleventh Amendment is a separate, federal-court doctrine.",
-            hook: "Eleventh Amendment: which court. Section 1983: which defendant.",
-            status: "book", src: "Will v. Michigan Department of State Police, 491 U.S. 58 (1989); 42 U.S.C. §1983; U.S. Const. amend. XI; conlaw.md §5.2",
+            wrong: "The suit may proceed, because the Eleventh Amendment limits only the federal courts, so a State has no immunity in its own courts.",
+            right: "The suit fails because a State is not a 'person' under §1983 (Will), so the court never needs to reach immunity.",
+            why: "Will v. Michigan Department of State Police (1989), a case from a state court, holds that a State is not a 'person' under §1983 in any court. The Eleventh Amendment's text limits federal courts, but a State's immunity in its own courts rests on Alden v. Maine (1999).",
+            say: "A State is not a 'person' under §1983 (Will), in any court. Its immunity in its own courts comes from Alden v. Maine, not the Eleventh Amendment's text.",
+            hook: "Section 1983: which defendant. Sovereign immunity: whether the State can be sued at all.",
+            status: "general", src: "Will v. Michigan Department of State Police, 491 U.S. 58 (1989); Alden v. Maine, 527 U.S. 706 (1999); 42 U.S.C. §1983; U.S. Const. amend. XI; conlaw.md §5.2",
           },
           {
             id: "u14-tr-x-ex-parte-young", kind: "trap", cat: "4", subject: "conlaw",
@@ -681,13 +733,13 @@
           },
           {
             id: "u14-tr-x-805-layers", kind: "trap", cat: "6", subject: "evidence",
-            stem: "In a civil suit over a store's broken freezer door, a customer telephoned the store and told a clerk, 'the freezer door was already hanging off its hinge.' The clerk wrote the statement in the store's regular incident log. The customer is not an employee and had no duty to report. The plaintiff offers the log entry to prove that the door was broken. The store objects: hearsay.",
+            stem: "In a civil suit over a store's broken freezer door, a customer telephoned the store and told a clerk, 'the freezer door was already hanging off its hinge.' The clerk wrote the statement in the store's regular incident log. The customer called the next morning to describe what she had seen the evening before. The customer is not an employee and had no duty to report. The plaintiff offers the log entry to prove that the door was broken. The store objects: hearsay.",
             wrong: "The entry is admissible as a business record, because the clerk made it in the regular course of the store's business.",
             right: "The entry is inadmissible: the customer's statement inside it is a second layer of hearsay, and the business-records exception does not cover it.",
             why: "Hearsay within hearsay is admissible only if each layer fits an exception (FRE 805). The log satisfies 803(6) for the clerk's recording, but the outsider who had no business duty to report supplies a layer that needs its own exception.",
             say: "Hearsay within hearsay needs an exception for every layer. A business record does not vouch for an outsider's statement in it.",
             hook: "Two speakers, two questions: the clerk's record, and the customer's words.",
-            status: "book", src: "FRE 805; FRE 803(6); evidence.md §6.3",
+            status: "book", src: "FRE 805; FRE 803(6); FRE 803(1)-(2) ruled out by the next-morning call; evidence.md §6.3",
           },
           {
             id: "u14-tr-x-209-modification", kind: "trap", cat: "4", subject: "contracts",
@@ -735,14 +787,24 @@
             status: "book", src: "UCC 2-207(2); UCC 2-309(1); contracts.md",
           },
           {
+            id: "u14-tr-x-207-additional", kind: "trap", cat: "2", subject: "contracts",
+            stem: "Two merchants form a contract for goods by exchanging forms. The seller's acknowledgment adds a clause, not in the buyer's purchase order, disclaiming the implied warranty of merchantability. Neither form is expressly conditional, the purchase order does not limit acceptance to its own terms, and the buyer never objects. The goods prove unmerchantable.",
+            wrong: "The disclaimer is part of the contract, because between merchants an additional term becomes part of the contract unless the offeror objects.",
+            right: "The disclaimer is not part of the contract: between merchants an additional term joins only if it does not materially alter the contract, and a warranty disclaimer does.",
+            why: "Under 2-207(2) an additional term between merchants joins unless the offer limits acceptance to its terms, the term materially alters the contract, or the offeror objects in time. Official Comment 4 lists a clause negating standard warranties as a material alteration.",
+            say: "Additional term between merchants: it joins unless the offer limits acceptance, it materially alters the deal, or the offeror objects.",
+            hook: "Three gates for an add-on: the offer's limit, material alteration, a timely objection.",
+            status: "book", src: "UCC 2-207(2)(a)-(c) and Official Comment 4; contracts.md",
+          },
+          {
             id: "u14-tr-x-1404-1406", kind: "trap", cat: "4", subject: "civpro",
             stem: "A State A plaintiff sues a State B defendant in a State A federal district for an injury that occurred in State B. The court finds that venue is improper in State A and transfers the case to State B under 28 U.S.C. §1406(a). State A's choice-of-law rules would apply State A's law, and State B's rules would apply State B's law. The question is which State's choice-of-law rules apply after the transfer.",
             wrong: "State A's rules, because a transfer never changes the choice-of-law rules, as after a §1404(a) transfer.",
             right: "State B's rules: after a transfer for improper venue under §1406(a), courts generally hold that the transferee court applies the choice-of-law rules of its own State.",
-            why: "After a convenience transfer under §1404(a) the transferee applies the transferor's choice-of-law rules (Van Dusen). After a §1406(a) or §1631 transfer, where the first court was the wrong court, courts generally hold that the transferee applies its own State's rules.",
-            say: "1404 (convenient forum): the transferor's law follows the case. 1406 (wrong venue): the new court's own law applies.",
+            why: "After a convenience transfer under §1404(a) the transferee applies the transferor's choice-of-law rules (Van Dusen), except when the transfer enforces a valid forum-selection clause (Atlantic Marine, 2013). After a §1406(a) transfer from the wrong court, courts generally hold that the transferee applies its own State's rules.",
+            say: "1404: the transferor's law follows (not when enforcing a forum-selection clause). 1406: the new court's own law applies.",
             hook: "Wrong venue loses the old law; mere convenience keeps it.",
-            status: "general", src: "28 U.S.C. §1404(a); 28 U.S.C. §1406(a); Van Dusen v. Barrack, 376 U.S. 612 (1964); Ferens v. John Deere Co., 494 U.S. 516 (1990); Martin v. Stokes, 623 F.2d 469 (6th Cir. 1980) (lower-court consensus on §1406(a)); civpro.md §7.1",
+            status: "general", src: "28 U.S.C. §1404(a); 28 U.S.C. §1406(a); Van Dusen v. Barrack, 376 U.S. 612 (1964); Ferens v. John Deere Co., 494 U.S. 516 (1990); Atlantic Marine Construction Co. v. U.S. District Court, 571 U.S. 49 (2013); Martin v. Stokes, 623 F.2d 469, 472-73 (6th Cir. 1980) (holding confirmed Nov. 2026 from secondary excerpts, not the full opinion); civpro.md §7.1",
           },
           {
             id: "u14-tr-x-801d2-804b3", kind: "trap", cat: "4", subject: "evidence",
@@ -899,14 +961,14 @@
               { l: "The summons was delivered by a method the rules do not allow", r: "FRCP 12(b)(5)" },
             ],
             spare: ["FRCP 12(e)", "FRCP 12(c)"],
-            say: "Subject matter, personal jurisdiction, venue, process, service, plausibility: 12(b)(1) through (6). Only 12(b)(1) can never be waived.",
-            status: "book", src: "FRCP 12(b)(1)-(6); FRCP 12(h); civpro.md §10",
+            say: "12(b)(2)-(5) are waived if left out of the first response; 12(b)(6) and 12(b)(7) last through trial; 12(b)(1) is never waived.",
+            status: "book", src: "FRCP 12(b)(1)-(6); FRCP 12(h)(1)-(3); civpro.md §10",
           },
           {
             id: "u14-p-choice-of-law-cases", kind: "pairs", set: "Klaxon, Semtek, Van Dusen and company", mode: "case-holding",
             pairs: [
               { l: "Klaxon", r: "A federal court in diversity applies the forum State's choice-of-law rules" },
-              { l: "Van Dusen", r: "After a §1404(a) transfer, the transferee applies the transferor State's law" },
+              { l: "Van Dusen", r: "After a §1404(a) transfer, the transferee applies the transferor State's law (not when a forum-selection clause is enforced)" },
               { l: "Ferens", r: "The Van Dusen rule holds even when the plaintiff requested the §1404(a) transfer" },
               { l: "Semtek", r: "A federal diversity judgment has the preclusive effect the rendering State's law gives it" },
               { l: "Hanna", r: "A valid Federal Rule that answers the question controls over a state rule" },
@@ -914,7 +976,7 @@
             ],
             spare: ["A federal court applies federal common law to every issue in a diversity case"],
             say: "Klaxon picks choice-of-law rules, Van Dusen and Ferens follow a §1404 transfer, Semtek governs preclusion, Hanna governs procedure, Erie governs substance.",
-            status: "general", src: "Erie R.R. v. Tompkins (1938); Hanna v. Plumer, 380 U.S. 460 (1965); Klaxon Co. v. Stentor, 313 U.S. 487 (1941); Van Dusen v. Barrack, 376 U.S. 612 (1964); Ferens v. John Deere Co., 494 U.S. 516 (1990); Semtek Int'l v. Lockheed Martin, 531 U.S. 497 (2001); civpro.md §7.1, §8, §15",
+            status: "general", src: "Erie R.R. v. Tompkins (1938); Hanna v. Plumer, 380 U.S. 460 (1965); Klaxon Co. v. Stentor, 313 U.S. 487 (1941); Van Dusen v. Barrack, 376 U.S. 612 (1964); Atlantic Marine Constr. Co. v. U.S. Dist. Ct., 571 U.S. 49 (2013); Ferens v. John Deere Co., 494 U.S. 516 (1990); Semtek Int'l v. Lockheed Martin, 531 U.S. 497 (2001); civpro.md §7.1, §8, §15",
           },
           {
             id: "u14-p-evidence-rules", kind: "pairs", set: "Which Evidence rule?", mode: "rule-number", cat: "I",
@@ -977,20 +1039,20 @@
           },
           {
             id: "u14-h-parol-assume", kind: "hypo", cat: "III", subject: "contracts", callType: "admissible", rule: "u14-r-qualifiers", issue: "parol evidence and full integration", grid: true,
-            stem: "A buyer and a seller sign a written contract for the sale of 200 generators. The writing recites that it is the complete and exclusive statement of the parties' agreement and provides that delivery is due within 30 days. The buyer later sues for breach and offers testimony that, before signing, the seller orally agreed to deliver within 10 days. The seller objects. Assume that the court finds the writing was intended as a complete and exclusive statement of the agreement.",
-            call: "Is the buyer's testimony about the oral 10-day term admissible?",
+            stem: "A buyer and a seller sign a written contract for the sale of 200 generators for $300,000. The writing states the price and provides that delivery is due within 30 days; it says nothing about installation. The buyer later sues for breach and offers testimony that, before signing, the seller orally agreed to install the generators at no charge. The seller objects. Assume that the court finds the writing was intended as a complete and exclusive statement of the agreement.",
+            call: "Is the buyer's testimony about the oral installation term admissible?",
             options: [
               { text: "Yes, because an oral agreement made before a written contract is always admissible to show the parties' true intent.", why: "The parol evidence rule says the opposite for an integrated writing, and 'always' overreaches.", trap: 7 },
-              { text: "No, because a writing intended as a complete and exclusive statement may not be contradicted or supplemented by evidence of prior agreements.", why: "A completely integrated writing for goods cannot be contradicted or supplemented by prior agreements (UCC 2-202), and the assumption makes this one complete." },
-              { text: "Yes, because the 10-day term merely supplements the writing as a consistent additional term.", why: "Consistent additional terms are allowed only with a partial integration. This term contradicts the 30-day term, and the assumption rules supplements out.", trap: 4 },
-              { text: "No, because a sale of goods over $500 must be in a writing signed by the party against whom it is enforced.", why: "A signed writing exists, so the statute of frauds is satisfied. The question is whether prior oral terms may be added to it.", trap: 6 },
+              { text: "No, because a writing intended as a complete and exclusive statement may not be contradicted or supplemented by evidence of prior agreements.", why: "Under UCC 2-202 a consistent additional term may supplement a writing, but not one intended as complete and exclusive; the assumption makes this one complete, so even a consistent term is excluded." },
+              { text: "Yes, because free installation is a consistent additional term that supplements the writing.", why: "Consistent additional terms come in only if the writing is not complete and exclusive, and the assumption says it is.", trap: 2 },
+              { text: "No, because a sale of goods for $500 or more must be in a writing signed by the party against whom it is enforced.", why: "A signed writing exists, so the statute of frauds is satisfied. The question is whether a prior oral term may be added to it.", trap: 1 },
             ],
             answer: 1,
             facts: ["Assume that the court finds the writing was intended as a complete and exclusive statement"],
             findAsk: "Tap the sentence that decides the question: 'Assume that' is an order.",
-            say: "'Assume that' is an order. Complete and exclusive means no contradicting and no supplementing from prior agreements.",
+            say: "'Assume that' is an order. Without it a consistent extra term could supplement the writing; with it, nothing from before the signing gets in.",
             hook: "The assumption is the whole item: obey it.",
-            status: "book", src: "UCC 2-202; contracts.md",
+            status: "book", src: "UCC 2-202(b); UCC 2-201(1); contracts.md (rewritten Nov. 2026 so that only the assumption excludes the term)",
           },
           {
             id: "u14-h-no-crime-driver", kind: "hypo", cat: "III", subject: "crim", callType: "crime", rule: "u14-r-qualifiers", issue: "accomplice liability needs intent",
@@ -1162,7 +1224,7 @@
               { text: "Yes, because the plaintiff, against whom it is offered, had an opportunity and a similar motive to cross-examine the carpenter at the earlier trial.", why: "FRE 804(b)(1): former testimony is admissible against a party who had an opportunity and similar motive to develop it, once the declarant is unavailable." },
               { text: "No, because the testimony was given in a different lawsuit, and hearsay from another proceeding is never admissible.", why: "Prior testimony is hearsay, but the former-testimony exception exists for exactly this case; 'never' is false.", trap: 7 },
               { text: "No, because the contractor, who is offering it, was not a party to the earlier trial and had no chance to cross-examine.", why: "The rule asks whether the party against whom the testimony is offered had the chance, not the party offering it.", trap: 9 },
-              { text: "Yes, because testimony given under oath is not hearsay.", why: "Prior testimony is hearsay; it comes in only because an exception applies.", trap: 5 },
+              { text: "Yes, because testimony given under oath is not hearsay.", why: "Prior testimony is hearsay; it comes in only because an exception applies.", trap: 1 },
             ],
             answer: 0,
             facts: ["Assume that the contractor made every reasonable effort to locate him", "cross-examined the carpenter at length"],
@@ -1258,7 +1320,7 @@
             options: [
               { text: "Denied, because attorney's fees that the contract entitles the prevailing party to recover count toward the amount in controversy.", why: "§1332(a) excludes interest and costs, but fees count when a contract or statute provides for them: $80,000 exceeds $75,000." },
               { text: "Granted, because attorney's fees never count toward the amount in controversy.", why: "Fees do count when a contract or statute provides for them.", trap: 7 },
-              { text: "Denied, because the court may not look behind the plaintiff's demand at all.", why: "The good-faith demand controls only unless it appears to a legal certainty that the claim is for less; the court may test that, and here the fees carry the claim over $75,000.", trap: 5 },
+              { text: "Denied, because the court may not look behind the plaintiff's demand at all.", why: "The good-faith demand controls only unless it appears to a legal certainty that the claim is for less; the court may test that, and here the fees carry the claim over $75,000.", trap: 1 },
               { text: "Granted, because the amount must exceed $75,000 in damages alone, exclusive of any fees.", why: "The statute excludes interest and costs, not contractual fees.", trap: 5 },
             ],
             answer: 0,
@@ -1285,19 +1347,19 @@
           },
           {
             id: "u14-h-t-805", kind: "hypo", cat: "V", subject: "evidence", callType: "admissible", rule: "u14-r-checkpoints", issue: "hearsay within hearsay", grid: true,
-            stem: "A shopper slips on a wet floor in a grocery store and sues the store. To show that the store knew of the spill, the shopper offers an entry from the store's incident log. The entry was written by a clerk, as the store's regular practice, and says, 'A customer told me by phone that the produce aisle had a puddle by the cooler since morning.' The customer is not an employee and has never been identified. The store's records custodian testifies that the log is kept in the ordinary course of business. The store objects that the entry is hearsay. The shopper offers the entry to prove that the puddle was there that morning.",
-            call: "Is the entry admissible to prove that the puddle was there that morning?",
+            stem: "A cyclist sues a driver in federal court for injuries from a collision at an intersection. The cyclist offers the investigating police officer's written accident report, which the officer prepared as part of her official duties. The officer did not see the collision. The report records that an unidentified bystander, speaking calmly about an hour after the collision, told the officer that the driver had run the red light. The report states no finding of its own on who ran the light. The driver objects that the bystander's statement in the report is hearsay.",
+            call: "Is the bystander's statement in the report admissible to prove that the driver ran the red light?",
             options: [
-              { text: "No, because the clerk's entry satisfies the business-records exception, but the customer's statement within it is a separate layer of hearsay that needs its own exception.", why: "FRE 805 requires an exception or exclusion for each layer. The customer had no business duty to report, so 803(6) does not cover that layer." },
-              { text: "Yes, because the clerk recorded the statement in the store's regular course of business.", why: "The record vouches for the clerk's act of recording, not for the truth of an outsider's statement inside it.", trap: 2 },
-              { text: "Yes, because a statement about a condition the customer saw is admissible whenever it is relevant.", why: "Relevance does not answer a hearsay objection, and no exception covers it.", trap: 6 },
-              { text: "No, because a business record is never admissible to prove the truth of what it says.", why: "Business records are admissible for their truth when 803(6) is met; 'never' is false.", trap: 7 },
+              { text: "No, because the bystander's statement is a second layer of hearsay that the public-records exception does not cover.", why: "FRE 805 needs an exception for each layer. The report may record what the officer observed under a duty, but the bystander had no duty to report, and no other exception fits." },
+              { text: "Yes, because a police report prepared under a legal duty is admissible in a civil case as a public record.", why: "The public-records exception covers the officer's own observations and findings, not the truth of an outsider's statement inside the report.", trap: 2 },
+              { text: "Yes, because a statement describing an event is admissible when it is made shortly after the event.", why: "A present sense impression must be made while or immediately after the declarant perceived the event; a calm statement an hour later is neither that nor an excited utterance.", trap: 9 },
+              { text: "No, because a police report is never admissible in a civil case.", why: "Public records, including factual findings from a legally authorized investigation, are admissible in civil cases; 'never' is false.", trap: 7 },
             ],
             answer: 0,
-            facts: ["The customer is not an employee", "kept in the ordinary course of business"],
-            findAsk: "Tap the fact that creates the second layer and the fact that satisfies the first.",
-            say: "Hearsay within hearsay needs an exception for each layer. A business record does not vouch for an outsider's words.",
-            status: "book", src: "FRE 805; FRE 803(6); evidence.md §6.3",
+            facts: ["an unidentified bystander, speaking calmly about an hour after the collision", "The officer did not see the collision"],
+            findAsk: "Tap the facts that create the second layer and keep the other exceptions out.",
+            say: "Hearsay within hearsay needs an exception for each layer. A police report does not vouch for a bystander's words inside it.",
+            status: "book", src: "FRE 805; FRE 803(8)(A)(ii)-(iii); FRE 803(1)-(2); evidence.md §6.3 (rewritten Nov. 2026: one stated purpose, new facts unlike u14-tr-x-805-layers)",
           },
           {
             id: "u14-h-t-sex-license", kind: "hypo", cat: "IV", subject: "conlaw", callType: "constitutional", rule: "u14-r-checkpoints", issue: "sex classification scrutiny", grid: true,
@@ -1317,19 +1379,19 @@
           },
           {
             id: "u14-h-t-assurance", kind: "hypo", cat: "IV", subject: "contracts", callType: "prevail", rule: "u14-r-checkpoints", issue: "adequate assurance of performance", grid: true,
-            stem: "A manufacturer contracts to sell and deliver 1,000 custom parts to a buyer in 60 days. After 20 days, the buyer learns that the manufacturer's only factory is being foreclosed on. The buyer reasonably demands written assurance that the manufacturer will perform. The manufacturer does not respond for 35 days, and the buyer buys the parts from another supplier and sues for the extra cost.",
+            stem: "A manufacturer contracts to sell and deliver 1,000 custom parts to a buyer in 60 days. After 20 days, the buyer learns that the manufacturer's only factory is being foreclosed on. The buyer promptly sends the manufacturer a written demand for adequate assurance of performance. The manufacturer does not respond for 35 days, and the buyer buys the parts from another supplier and sues for the extra cost.",
             call: "Will the buyer prevail on its claim that the manufacturer breached?",
             options: [
               { text: "Yes, because a failure to give adequate assurance within a reasonable time, not exceeding 30 days, is a repudiation.", why: "UCC 2-609: reasonable grounds for insecurity allow a written demand, and silence beyond a reasonable time (30 days at most) is a repudiation." },
               { text: "No, because an anticipatory repudiation requires an express statement that the seller will not perform.", why: "Under Article 2 a failure to give adequate assurance is itself a repudiation.", trap: 5 },
-              { text: "Yes, because the foreclosure on the factory was itself a repudiation of the contract.", why: "The foreclosure gave grounds for insecurity, not a repudiation; the silence after the demand is what repudiates.", trap: 5 },
+              { text: "Yes, because the foreclosure on the factory was itself a repudiation of the contract.", why: "The foreclosure gave grounds for insecurity, not a repudiation; the silence after the demand is what repudiates.", trap: 1 },
               { text: "No, because the manufacturer's performance was not yet due when the buyer bought the parts elsewhere.", why: "The right principle (performance not yet due) with an element missing: the failure to give assurance made the repudiation actionable.", trap: 2 },
             ],
             answer: 0,
-            facts: ["demands written assurance", "does not respond for 35 days"],
+            facts: ["written demand for adequate assurance of performance", "does not respond for 35 days"],
             findAsk: "Tap the two facts that make the silence a repudiation.",
             say: "Reasonable grounds for insecurity plus no adequate assurance within a reasonable time, 30 days at most, is a repudiation.",
-            status: "book", src: "UCC 2-609(1), 2-609(4); contracts.md",
+            status: "book", src: "UCC 2-609(1) (demand 'in writing'), 2-609(4); contracts.md",
           },
           {
             id: "u14-h-t-bat", kind: "hypo", cat: "I", subject: "crim", callType: "crime", rule: "u14-r-checkpoints", issue: "murder: intent to inflict serious injury",
@@ -1365,7 +1427,7 @@
           },
           {
             id: "u14-h-t-marketable", kind: "hypo", cat: "III", subject: "property", callType: "status", rule: "u14-r-checkpoints", issue: "marketable title at closing", grid: true,
-            stem: "A seller contracts in writing to sell a house to a buyer for $400,000, with closing in 60 days and a $20,000 deposit held by the seller's lawyer. The contract says nothing about the quality of title. The buyer, who plans to move for a new job in the spring, orders a title search. It shows that the house is subject to a recorded mortgage securing the seller's loan, which the seller says will be paid from the sale proceeds at closing. The buyer now wants to cancel and recover the deposit.",
+            stem: "A seller contracts in writing to sell a house to a buyer for $400,000, with closing in 60 days and a $20,000 deposit held by the seller's lawyer. The contract says nothing about the quality of title. The buyer, who plans to move for a new job in the spring, orders a title search. It shows that the house is subject to a recorded mortgage securing the seller's loan. The loan balance is $150,000, well below the price, and the seller says it will be paid from the sale proceeds at closing. The buyer now wants to cancel and recover the deposit.",
             call: "Is the buyer entitled to cancel and recover the deposit?",
             options: [
               { text: "No, because marketable title is required at closing, and a mortgage the seller can pay off from the proceeds at closing does not make the title unmarketable.", why: "Marketability is tested at closing, and the implied covenant is satisfied if the seller delivers marketable title then." },
@@ -1377,7 +1439,7 @@
             facts: ["closing in 60 days", "paid from the sale proceeds at closing"],
             findAsk: "Tap the facts that show when title is tested.",
             say: "Marketable title is tested at closing: a mortgage the seller will pay off then is not a defect.",
-            status: "general", src: "Implied marketable title in land contracts; property.md §2 (Category III)",
+            status: "general", src: "Implied marketable title in land contracts; property.md §2 (Category III) (loan balance added Nov. 2026 so the payoff at closing is certain)",
           },
           {
             id: "u14-h-t-medical", kind: "hypo", cat: "II", subject: "torts", callType: "liable", rule: "u14-r-checkpoints", issue: "negligent medical care and causation", grid: true,
@@ -1436,7 +1498,8 @@
               "NCBE publishes no table that turns raw answers into a scaled score",
               "National means: 131.2 in February 2026 and 140.7 in July 2026",
               "A scaled 140 sits just below the July 2026 national mean, and it does not mean 140 correct answers",
-              "Your board sets its own passing score, so check it",
+              "On the UBE the MBE is half of a 400-point total, and each board sets its own passing total",
+              "Rule of thumb: aim for an MBE score that, matched by your written score, reaches your board's total (135 doubles to 270)",
             ],
             ordered: false,
             distractorElements: ["A scaled 140 means 70% correct"],
@@ -1444,7 +1507,7 @@
             numbers: [
               { label: "February 2026 national mean", value: "131.2" },
               { label: "July 2026 national mean", value: "140.7" },
-              { label: "2025 bar-exam pass rates reported by NCBE", value: "63% overall, 47% in February, 69% in July" },
+              { label: "2025 bar-exam pass rates reported by NCBE", value: "47% in February, 69% in July" },
             ],
             cite: "NCBE MBE scores page",
             citeAsk: "Which NCBE page explains how MBE scores are scaled and equated?",
@@ -1456,7 +1519,7 @@
               { t: "tf", q: "NCBE publishes a table converting raw MBE scores to scaled scores.", a: false, why: "NCBE says it is not possible to know in advance how many questions must be answered correctly for a given scaled score." },
               { t: "mcq", q: "Which statement fits NCBE's 2026 national figures?", options: ["February takers are mostly repeaters; July takers mostly first-timers", "February takers are mostly first-timers; July takers mostly repeaters", "The mix of takers does not differ between sittings"], a: "February takers are mostly repeaters; July takers mostly first-timers", why: "NCBE reported about 71% repeaters in February 2026 and about 76% first-timers in July 2026." },
             ],
-            status: "exam", src: "NCBE MBE scores page (ncbex.org/exams/mbe/scores); NCBE national mean announcements for February 2026 and July 2026; The Bar Examiner, 2025 statistics; format.md §2",
+            status: "exam", src: "NCBE MBE scores page (ncbex.org/exams/mbe/scores); NCBE national mean announcements for February 2026 and July 2026; The Bar Examiner, 2025 statistics (47% Feb., 69% July; the earlier '63% overall' was our own weighting and was removed Nov. 2026); NCBE UBE page (MBE 50% of the UBE score, 400-point scale, passing score set by each jurisdiction); format.md §2",
           },
           {
             id: "u14-r-hours", kind: "rule", title: "How long to study: what is commonly recommended", exam: ["mbe"],
@@ -1587,8 +1650,8 @@
             hook: "The MBE falls on the last Wednesday of February and July.",
             elements: [
               "The MBE is given on the last Wednesday of February and July",
-              "February 2027: February 23-24, with the MBE on February 24 (listed by NCBE)",
-              "July 2027: July 27-28, with the MBE on July 28 (listed by NCBE)",
+              "February 2027: the MBE on February 24 (listed by NCBE), the written day on February 23",
+              "July 2027: the MBE on July 28 (listed by NCBE), the written day on July 27",
               "February 2028: the last legacy administration, with the MBE on February 23 (listed by NCBE)",
             ],
             ordered: true,
@@ -1608,22 +1671,22 @@
               { t: "tf", q: "NCBE's MBE page lists July 28, 2027 as an MBE day, but your board still sets your own sitting.", a: true, why: "NCBE lists the MBE dates, and each board administers its own exam and registration, so confirm with yours." },
               { t: "tf", q: "The MBE is given on a Tuesday, the day before the written parts.", a: false, why: "The MBE is on the last Wednesday; the written parts are given the Tuesday before." },
             ],
-            status: "exam", src: "NCBE MBE exam page (ncbex.org/exams/mbe), which lists Feb. 24, 2027, July 28, 2027 and Feb. 23, 2028 (read Nov. 2, 2026); NCBE: MBE on the last Wednesday of February and July (ncbex.org/exams/ube/about-ube); NextGen dates July 27-28, 2027 (NCBE); format.md §3 (its 'derived' note is superseded)",
+            status: "exam", src: "NCBE MBE exam page (ncbex.org/exams/mbe), which lists Feb. 24, 2027, July 28, 2027 and Feb. 23, 2028 (read Nov. 2, 2026); NCBE: MBE on the last Wednesday of February and July (ncbex.org/exams/ube/about-ube); the Tuesday written days (Feb. 23 and July 27, 2027) are derived from the Tuesday-Wednesday pattern, not read on an NCBE page; format.md §3 and CURRICULUM.md still call the MBE dates 'derived' (superseded for the MBE days)",
           },
           {
             id: "u14-r-nextgen-note", kind: "rule", title: "If your jurisdiction gives NextGen",
-            say: "Ten jurisdictions already give NextGen, twelve more join in July 2027, and the rest still give the legacy exam. Seven of NextGen's eight subjects are the MBE's.",
+            say: "Ten jurisdictions already give NextGen, twelve more join in July 2027, and the rest still give the legacy exam. Seven NextGen subjects are the MBE's.",
             hook: "About 22 jurisdictions on NextGen by July 2027; the rest still on the MBE.",
             elements: [
               "NextGen began in July 2026 in 10 jurisdictions, and they give it in February 2027 too",
               "Twelve more jurisdictions join in July 2027, about 22 in all",
               "Every other jurisdiction that uses the MBE still gives the legacy exam; the last legacy sitting is February 2028",
-              "Seven of NextGen's eight subjects are the MBE's, so this course carries over",
+              "Through February 2028, seven of NextGen's eight subjects are the MBE's, so this course carries over",
               "Business Associations, integrated question sets and performance tasks do not carry over",
             ],
             ordered: false,
             distractorElements: ["Every jurisdiction switched in July 2026"],
-            exceptions: ["Check the NCBE jurisdiction table and your own board: a few dates have been announced differently on different pages"],
+            exceptions: ["Check the NCBE jurisdiction table and your own board: a few dates have been announced differently on different pages", "From July 2028 NextGen adds Family Law, so the overlap becomes seven of nine"],
             cite: "NCBE NextGen UBE jurisdiction table",
             citeAsk: "Which NCBE table lists when each jurisdiction starts the NextGen UBE?",
             ex: [

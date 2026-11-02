@@ -3,7 +3,8 @@
 // lien theory unless the stem says otherwise. Splits are stated in the stem of every hypo that depends on one (English v
 // American rule, future advances, installment forfeiture, misindexed deeds, severance by contract, anti-deficiency,
 // seller's purchase-money priority, a defaulting buyer's restitution, the Rule Against Perpetuities for options, equal
-// dignities, judgment creditors as purchasers). Where the default is the majority rule the stem is silent on purpose, as
+// dignities, judgment creditors as purchasers, brokers' commissions on a buyer's default, a seller's insurance proceeds,
+// early- and late-recorded deeds). Where the default is the majority rule the stem is silent on purpose, as
 // the exam is: risk of loss, present covenants and remote grantees, objective hostility, builders' warranty, oral
 // conditions on delivery. Every fact pattern is original; the research drafts in research/property.md were rewritten with
 // new facts, and no NCBE question is reused (u11-h-release-original, which tracked the released NCBE sample's structure,
@@ -11,48 +12,70 @@
 // Verified against primary text read for this unit: 12 U.S.C. §1701j-3(b), (d) (Garn-St Germain, Cornell LII) and
 // 12 C.F.R. §191.5(b)(1) (occupancy condition). Everything else is black-letter law from the research files ("general").
 // Outline-heading cites were dropped from the rule cards (the heading stays in src); a cite remains only where there is
-// primary authority the exam expects. Cards without a cite (marketable title, options, brokerage, merger, foreclosure,
-// liens, recording acts, wills) draw only a validator warning.
+// primary authority the exam expects. Cards without a cite (marketable title, disclosure, options, brokerage, merger,
+// foreclosure, liens, recording acts, wills) draw only a validator warning.
 //
-// UNDER REVIEW (status "unsure"):
-//   u11-h-remedy-restitution   a defaulting buyer with no liquidated damages clause recovers the deposit less the seller's
-//                              actual damages (Rest. (3d) Restitution): flagged split in property.md §6 #12 and Module 15;
-//                              the stem states the rule, but a reviewer must confirm the section number and the label.
+// UNDER REVIEW (status "unsure"): none. u11-h-remedy-restitution moved to "general" in the 2026-11-02 verification pass:
+//   its stem states the rule, and the sources are Rest. (2d) Contracts §374(1) and Rest. (3d) Restitution and Unjust
+//   Enrichment §36 ("Restitution to a Party in Default").
+//
+// 2026-11-02 verification pass (Opus): further assurances is breached by a refusal to perfect title, not by eviction;
+// brokerage split re-keyed traditional (ready, willing and able buyer accepted) v modern (Ellsworth Dobbs: closing, unless
+// the seller's wrongful act), since a seller's wrongful refusal owes the commission under both; English v American rule
+// re-keyed traditional v modern (no majority count claimed); the vendor-PMM hypo now gives the bank notice and names a
+// notice statute; the Texas color-of-title number, the "about half the states" redemption statistic and the Stambovsky
+// cite on the disclosure card were removed; adverse possession against a future interest is limited to interests that
+// existed at entry; merger is limited to title, estate, possession and quantity; trap labels corrected (forfeiture and
+// first-in-time are not stale law). Installment contracts moved to lesson 3, options to lesson 2, discharge to lesson 4,
+// title insurance to lesson 7. New hypos: English rule, broker and a defaulting buyer, insurance proceeds, omitted junior
+// tenant, senior modification (§7.3), adverse possession against a later-created remainder, special warranty, known
+// encumbrance, covenant damages cap, early-recorded and late-recorded deeds (both stated in the stem), survey exception,
+// owner's policy does not run. No 2025-26 Supreme Court case bears on this unit, so it has no `recent` items.
 //
 // CHECK (status "general" but a reviewer should confirm the label or boundary):
 //   u11-r-sof, u11-h-sof-*     part performance: the cards say possession plus payment or improvements, with "any two of
 //                              three" noted as a variant; no hypo turns on the variant. Rest. (2d) Contracts §129 cited;
 //                              u11-a-sof-estoppel relies on §139 (reliance), not re-read.
-//   u11-r-time-remedies        English v American rule labelled minority v majority (property.md §6 #12 flags the count);
-//                              the stem always names the rule. The 10 percent deposit is a hedged "common" figure, not a
-//                              rule, and there is no num item for it. Rest. (2d) Contracts §356 cited, not re-read.
-//   u11-r-risk-of-loss         Uniform Vendor and Purchaser Risk Act paraphrased from enacted versions (NY GOL §5-1311,
-//                              Mich. MCL 565.701); the seller's insurance proceeds point is stated as "courts differ".
+//   u11-r-time-remedies        English v American rule keyed traditional v modern, not majority v minority (property.md §6
+//                              #12 flags the count); u11-h-english-rule names the rule in its stem. The 10 percent deposit
+//                              is a hedged "common" figure, not a rule. Rest. (2d) Contracts §§356, 374 cited, not re-read.
+//   u11-r-brokerage, u11-h-broker-buyer-default   traditional v modern (Ellsworth Dobbs, 50 N.J. 528 (1967)); the hypo
+//                              names the traditional rule.
+//   u11-r-risk-of-loss, u11-h-risk-insurance   Uniform Vendor and Purchaser Risk Act paraphrased from enacted versions
+//                              (NY GOL §5-1311, Mich. MCL 565.701); the insurance-proceeds rule is stated in the stem.
 //   u11-r-equitable-conversion contract by one joint tenant severs the tenancy: stated as a split, never labelled majority.
 //   u11-r-options, u11-h-option-*  an option in gross is void under the unmodified common-law Rule Against Perpetuities;
 //                              some courts exempt commercial options, so both stems state the rule. A right of first
 //                              refusal may also fall to the Rule; u11-h-rofr-notice says the Rule does not apply.
-//   u11-r-installment, c-skendzel  Skendzel v. Marshall, 261 Ind. 226, 301 N.E.2d 641 (1973): cite from memory.
-//   u11-c-stambovsky, c-howard, c-mannillo, c-delacuesta, c-tyler   holdings and cites from memory or secondary summaries.
-//   u11-r-pmm                  vendor's PMM over a lender's PMM (Rest. (3d) Mortgages §7.2(c)): some courts decline it,
-//                              so u11-h-pmm-vendor states the rule.
-//   u11-r-future-advances      traditional v open-end statute split and Rest. (3d) Mortgages §2.3 not read.
-//   u11-r-subrogation          Rest. (3d) Mortgages §7.6 not read. Traditional approach: actual knowledge bars
-//                              subrogation; §7.6 and a growing number of courts reject that bar. The card says both; the
-//                              hypo's stem says there was no actual knowledge. Rest. (3d) Suretyship §41 (modification
-//                              discharges a surety to the extent of prejudice) also not read.
+//   u11-c-stambovsky, c-howard, c-mannillo, c-skendzel, c-delacuesta, c-tyler   reporter cites confirmed by two checkers
+//                              (Stambovsky 169 A.D.2d 254; Howard 3 Wn. App. 393; Mannillo 54 N.J. 378; Skendzel 261 Ind.
+//                              226; de la Cuesta 458 U.S. 141; Tyler 598 U.S. 631); opinions not re-read here.
+//   u11-r-pmm                  vendor's PMM over a lender's PMM (Rest. (3d) Mortgages §7.2(c)), subject to the recording
+//                              act: some courts decline it, so u11-h-pmm-vendor states the rule and the bank's notice.
+//   u11-r-future-advances      traditional v open-end statute split and Rest. (3d) Mortgages §2.3 not read; whether a
+//                              recorded junior is notice or actual notice is needed is stated as a split, never labelled.
+//   u11-r-subrogation          Rest. (3d) Mortgages §7.6 (subrogation) and §7.3 (modification of senior mortgages, used by
+//                              u11-h-senior-modification) not re-read. Traditional approach: actual knowledge bars
+//                              subrogation; §7.6 and a growing number of courts reject that bar. Rest. (3d) Suretyship §41
+//                              (modification discharges a surety to the extent of prejudice) also not read.
 //   u11-r-before-foreclosure   prepayment: the card and u11-h-prepayment state the traditional no-right rule; the hypo's
 //                              stem states it because statutes differ.
-//   u11-r-liens                federal tax lien (I.R.C. §6323(a)) from memory.
+//   u11-r-liens                federal tax lien (26 U.S.C. §6323(a)) not re-read.
 //   u11-r-authority            equal dignities rule is state-specific (the stem states it); property.md §1.3 lists
 //                              "persons authorized to execute documents" as outside the NextGen scope, so the card and
 //                              hypo are tagged mbe-only: confirm against NCBE's table.
 //   u11-r-description          construction priorities and Rest. (2d) Contracts §155 (reformation) from memory.
-//   u11-r-covenants            remote-grantee rule: present covenants do not run (majority); the "minority" label is general.
+//   u11-r-covenants            remote-grantee rule: present covenants do not run (majority); the "minority" label is
+//                              general. Known-encumbrance rule and the price cap (u11-h-encumbrance-knowledge,
+//                              u11-h-warranty-damages) are general black letter.
+//   u11-r-shelter-wild         early-recorded (u11-h-estoppel-early-record) and late-recorded (u11-h-late-recorded, Morse
+//                              v. Curtis) deeds are splits: both stems state the rule.
 //   u11-r-wills                UPC §§2-603, 2-606, 2-607 paraphrased; anti-lapse covers only certain relatives, and the
 //                              stems of the lapse hypos state the class their statute covers.
-//   u11-r-ap-color-tacking     Tex. Civ. Prac. & Rem. Code §16.024 (3 years, title or color of title) is flavour only;
-//                              §§16.025-16.027 were not verified and are not used.
+//   u11-r-mortgage-theories    NCBE's "assume lien theory" is stated for NextGen (Bar Examiner, Fall 2025); for the MBE
+//                              the card says only that lien theory is the majority and a stem that needs another names it.
+//   Roundup: the brief's "15 timed hypos + recording-act Cross-Examination" is not in this file; the engine's
+//                              buildRoundup draws 8 quizzable items from the unit plus one match.
 /* eslint-disable max-len */
 (function () {
   const unit = {
@@ -60,13 +83,85 @@
     title: "Real Property II: deals, mortgages and titles",
     blurb: "Contracts of sale, mortgages and foreclosure, adverse possession, deeds and recording acts: three of the five fifths of the Property questions.",
     subject: "property",
-    assume: "Lien theory of mortgages unless the question says otherwise (the assumption NCBE gives for the NextGen Property exam). The question names the recording act, the adverse possession period, and any split rule you need, such as who bears the risk of loss or how optional future advances rank. NCBE says about one-fifth of the Real Property questions come from each of categories I through V; this unit covers III (contracts), IV (mortgages) and V (titles).",
+    assume: "Lien theory of mortgages unless the question says otherwise (the assumption NCBE gives for the NextGen Property exam). The question names the recording act, the adverse possession period, and any split rule you need, such as how optional future advances rank or whether a contract by one joint tenant severs the tenancy. Where a question is silent, apply the majority rule (for example, the buyer bears the risk of loss). NCBE says about one-fifth of the Real Property questions come from each of categories I through V; this unit covers III (contracts), IV (mortgages) and V (titles).",
     exam: ["mbe", "nextgen"],
     lessons: [
       {
         id: "u11l1",
         title: "The contract of sale",
         items: [
+          {
+            id: "u11-r-brokerage", kind: "rule", cat: "III.A", title: "Real estate brokerage", exam: ["mbe"],
+            say: "A broker earns the commission by producing a ready, willing and able buyer; the type of listing decides whether the owner's own sale pays.",
+            elements: ["The broker is the seller's agent and fiduciary", "Open listing: commission only if this broker produces the buyer", "Exclusive agency: commission if any broker sells; the owner may sell alone", "Exclusive right to sell: commission whoever sells, including the owner", "Earned when the broker produces a ready, willing and able buyer on the seller's terms"],
+            ordered: false,
+            distractorElements: ["Earned only if the buyer signs the listing", "Payable by the buyer"],
+            exceptions: [
+              "An unlicensed broker generally cannot recover a commission",
+              "Dual agency needs the informed consent of both principals; a conflicted broker may forfeit the commission",
+              "Many states require the listing to be in a signed writing (state-specific)",
+            ],
+            split: {
+              traditional: "The commission is earned when the broker produces a ready, willing and able buyer whom the seller accepts, even if the buyer later defaults and the sale never closes.",
+              modern: "The commission is earned only if the sale closes, unless the seller's own wrongful act prevents closing; a buyer's default without the seller's fault defeats it.",
+            },
+            splitNote: "Under either rule a seller who wrongfully refuses to close still owes the commission; the rules part when the buyer defaults. The stem quotes the listing or names the rule.",
+            ex: [
+              { facts: "An exclusive right to sell is signed; the owner sells the house herself to a neighbor.", result: "The broker still earns the commission." },
+              { facts: "An exclusive agency is signed; the owner sells the house herself to a neighbor.", result: "No commission: the owner reserved the right to sell alone." },
+            ],
+            terms: ["listing agreement", "ready, willing and able", "procuring cause"],
+            quiz: [
+              { t: "tf", q: "Under an exclusive right to sell listing, the owner who sells the property herself owes the broker a commission.", a: true, why: "That is what distinguishes it from an exclusive agency listing." },
+              { t: "tf", q: "A broker who produced a ready, willing and able buyer loses the commission if the seller wrongfully refuses to close.", a: false, why: "Under the traditional and the modern rule alike, the seller cannot avoid the commission by refusing to perform." },
+              { t: "bucket", q: "Which listing is described?", buckets: ["Open", "Exclusive agency", "Exclusive right to sell"], items: [{ text: "The broker is paid only if she is the one who finds the buyer", bucket: "Open" }, { text: "The owner can sell alone without paying; no other broker may sell", bucket: "Exclusive agency" }, { text: "The broker is paid even if the owner finds the buyer", bucket: "Exclusive right to sell" }] },
+            ],
+            hook: "Three listings, three doors: open pays whoever finds the buyer, exclusive agency pays the agent unless you sell alone, exclusive right to sell pays the agent every time.",
+            status: "general", src: "property.md Module 14; Ellsworth Dobbs, Inc. v. Johnson, 50 N.J. 528, 236 A.2d 843 (1967) (the modern rule, general); NCBE MBE Subject Matter Outline (Real Property III.A)",
+          },
+          {
+            id: "u11-h-broker-exclusive-agency", kind: "hypo", cat: "III.A", callType: "prevail", rule: "u11-r-brokerage", issue: "exclusive agency and owner's own sale", grid: true, exam: ["mbe"],
+            stem: "An owner signed an exclusive agency listing with a broker for 90 days. During the term, a neighbor who had seen the for-sale sign approached the owner directly, and the owner sold the house to the neighbor without any help from the broker or any other broker. The broker demanded the commission under the listing.",
+            call: "Will the broker recover the commission?",
+            options: [
+              { text: "Yes, because the neighbor saw the broker's sign, which made the broker the procuring cause of the sale.", why: "Procuring cause is the test for an open listing. Under an exclusive agency the owner may sell alone.", trap: 10 },
+              { text: "Yes, because any sale of the property during the term of an exclusive listing entitles the broker to a commission.", why: "That describes an exclusive right to sell; an exclusive agency reserves the owner's right to sell without a broker.", trap: 9 },
+              { text: "No, because under an exclusive agency listing the owner may sell without a broker and without paying a commission.", why: "An exclusive agency bars only the owner from using other brokers; it does not bar the owner's own sale." },
+              { text: "No, because the neighbor did not sign the listing agreement and so is not bound to the broker.", why: "The commission claim is against the owner, not the buyer, and the buyer's signature is irrelevant.", trap: 1 },
+            ],
+            answer: 2,
+            facts: ["exclusive agency listing", "without any help from the broker"],
+            say: "Exclusive agency: the owner may sell alone. Exclusive right to sell: the broker is paid either way.",
+            status: "general", src: "property.md Module 14 (P14-2, rewritten)",
+          },
+          {
+            id: "u11-h-broker-buyer-default", kind: "hypo", cat: "III.A", callType: "liable", rule: "u11-r-brokerage", issue: "buyer defaults after acceptance", grid: true, exam: ["mbe"],
+            stem: "An owner signed an exclusive right to sell listing that promised a broker a 6 percent commission and said nothing about when the commission would be earned. The broker found a buyer who was ready, willing and able to buy on the owner's terms, and the owner and the buyer signed a contract of sale. Before closing, the buyer changed her mind and refused to close, without any fault on the owner's part. The owner kept the buyer's deposit and did not sue her. The broker demanded the commission. The jurisdiction follows the traditional rule on when a broker earns a commission.",
+            call: "Is the owner liable for the commission?",
+            options: [
+              { text: "Yes, because the broker earned it by producing a ready, willing and able buyer whom the owner accepted.", why: "Under the traditional rule the broker's work is done when the owner accepts a ready, willing and able buyer; the buyer's later default does not undo it." },
+              { text: "No, because a commission is earned only when the sale closes and the price is paid.", why: "That is the modern rule, which many listing forms also adopt; the stem names the traditional rule and the listing is silent.", trap: 4 },
+              { text: "Yes, because the owner kept the buyer's deposit, and the broker may claim it as the commission.", why: "The deposit is not the broker's money; the commission is owed because the broker produced a buyer the owner accepted.", trap: 1 },
+              { text: "No, because an owner who is not at fault for the failed sale never owes a commission.", why: "Fault matters under the modern rule; under the traditional rule the commission was earned before the buyer defaulted.", trap: 7 },
+            ],
+            answer: 0,
+            facts: ["ready, willing and able", "without any fault on the owner's part"],
+            say: "Traditional rule: the broker earns the fee when the seller accepts a ready, willing and able buyer, even if that buyer later walks away.",
+            status: "general", src: "property.md Module 14; Ellsworth Dobbs, Inc. v. Johnson, 50 N.J. 528 (1967) (the modern rule, general; the stem names the rule)",
+          },
+          {
+            id: "u11-p-listing", kind: "pairs", exam: ["mbe"], set: "Listings and commissions", mode: "concept",
+            pairs: [
+              { l: "Open listing", r: "Commission only if this broker produces the buyer" },
+              { l: "Exclusive agency", r: "Commission if any broker sells; the owner may sell alone" },
+              { l: "Exclusive right to sell", r: "Commission whoever sells, including the owner" },
+              { l: "Buyer signs, then defaults without the seller's fault", r: "Commission still earned (traditional rule)" },
+              { l: "Unlicensed broker", r: "Generally cannot recover a commission" },
+            ],
+            spare: ["Commission owed by the buyer"],
+            say: "Three listings, one question: does the owner's own sale pay the broker?",
+            status: "general", src: "property.md Module 14; Ellsworth Dobbs, Inc. v. Johnson (1967) (the modern rule, general)",
+          },
           {
             id: "u11-r-sof", kind: "rule", cat: "III.B", title: "Statute of frauds for land, part performance and estoppel",
             say: "A land contract needs a writing signed by the defendant; possession plus payment or improvements can substitute, payment alone cannot.",
@@ -95,7 +190,7 @@
           },
           {
             id: "u11-h-sof-deposit", kind: "hypo", cat: "III.B", callType: "remedy", rule: "u11-r-sof", issue: "part performance by payment alone", grid: true,
-            stem: "A homeowner orally agreed to sell a house to a buyer for $300,000, and the buyer handed over a $15,000 check as a deposit, which the homeowner cashed. The buyer did not move in, made no repairs, and received nothing in writing signed by the homeowner. Before the date set for closing, the homeowner sold the house to someone else for $320,000 and offered to return the deposit. The buyer sued for specific performance of the oral agreement. The jurisdiction follows the majority rule on part performance.",
+            stem: "A homeowner orally agreed to sell a house to a buyer for $300,000, and the buyer handed over a $15,000 check as a deposit, which the homeowner cashed. The buyer did not move in, made no repairs, and received nothing in writing signed by the homeowner. Before the date set for closing, the homeowner sold the house to someone else for $320,000 and offered to return the deposit. The buyer sued for specific performance of the oral agreement.",
             call: "Is the buyer entitled to specific performance?",
             options: [
               { text: "Yes, because the homeowner accepted and cashed the deposit, which is part performance that removes the contract from the statute of frauds.", why: "Payment alone, even accepted payment, is not enough; the buyer also needs possession. The buyer's remedy is restitution of the deposit.", trap: 5 },
@@ -113,9 +208,9 @@
             stem: "A landowner orally agreed to sell an unimproved lot to a neighbor for $80,000. The neighbor paid $20,000, took possession of the lot with the landowner's consent, and spent $30,000 building a garage on it. The landowner then refused to convey, pointing out that the only writing was an unsigned note the neighbor had written. The neighbor sued for specific performance.",
             call: "Will the neighbor prevail?",
             options: [
-              { text: "Yes, because possession, payment and substantial improvements are part performance that takes the oral contract out of the statute of frauds.", why: "The neighbor took possession and also paid and improved the land; those acts point unmistakably to the oral contract, so equity enforces it." },
+              { text: "Yes, because possession, payment and improvements are part performance that removes the statute of frauds bar.", why: "The neighbor took possession and also paid and improved the land; those acts point unmistakably to the oral contract, so equity enforces it." },
               { text: "No, because there is no writing signed by the landowner, and part performance can never satisfy the statute of frauds.", why: "Part performance is the classic exception. It supports specific performance without a signed writing.", trap: 5 },
-              { text: "No, because the neighbor's own unsigned note is not a memorandum signed by the party to be charged.", why: "True as far as it goes, but the exception does not depend on a memorandum: possession plus payment and improvements take the contract outside the statute.", trap: 2 },
+              { text: "No, because the neighbor's own unsigned note is not a memorandum signed by the party to be charged.", why: "True as far as it goes, but the exception does not depend on a memorandum: possession plus payment and improvements take the contract outside the statute.", trap: 6 },
               { text: "Yes, because a seller is estopped to deny a land contract as soon as the buyer pays any part of the price.", why: "Estoppel needs reasonable, detrimental reliance. A bare payment does not estop; here the possession and the improvements carry the case.", trap: 5 },
             ],
             answer: 0,
@@ -147,12 +242,12 @@
               "Time becomes of the essence by an express clause, by the circumstances, or by reasonable notice after a delay",
               "Land is unique, so specific performance is available to the buyer and to the seller",
               "A deposit is enforced as liquidated damages if it was a reasonable forecast of loss when the contract was made; about 10 percent is common, but reasonableness, not a fixed percentage, is the test",
-              "With no valid liquidated damages clause, some courts let a defaulting buyer recover the deposit less the seller's actual damages (Rest. (3d) Restitution) and others let the seller keep it; the stem says",
+              "With no valid liquidated damages clause, some courts let a defaulting buyer recover the deposit less the seller's actual damages (Rest. (2d) Contracts §374(1); Rest. (3d) Restitution and Unjust Enrichment §36) and others let the seller keep it; the stem says",
               "Deed and price are exchanged at closing as concurrent conditions: each side must tender",
             ],
             split: {
-              majority: "American rule: when the seller breaches, the buyer recovers the benefit of the bargain (market value minus contract price).",
-              minority: "English rule: if the seller cannot convey good title and is not in bad faith, the buyer recovers only the deposit and title expenses.",
+              modern: "American rule: when the seller breaches, the buyer recovers the benefit of the bargain (market value minus contract price).",
+              traditional: "English rule (Flureau v. Thornhill): a seller who cannot convey good title and is not in bad faith owes only the deposit and title expenses.",
             },
             splitNote: "The stem names the rule: 'the jurisdiction follows the English rule' limits the buyer to the deposit and title expenses unless the seller acted in bad faith.",
             cite: "Rest. (2d) Contracts §356", citeAsk: "Which Restatement (Second) of Contracts section tests a liquidated damages term, such as a deposit the seller may keep?",
@@ -167,7 +262,7 @@
               { t: "bucket", q: "Is time of the essence?", buckets: ["Of the essence", "Not of the essence"], items: [{ text: "The contract says 'time is of the essence' beside the closing date", bucket: "Of the essence" }, { text: "The contract sets a closing date and says nothing else about time", bucket: "Not of the essence" }, { text: "After a delay, one party gives the other a reasonable notice fixing a new, firm date", bucket: "Of the essence" }] },
             ],
             hook: "Equity looks to substance, not the calendar: a few days late is a damages problem, not a forfeiture.",
-            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property III.B); Rest. (2d) Contracts §§356-357 (general); property.md Module 15 (English v American rule is a flagged split)",
+            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property III.B); Rest. (2d) Contracts §§356-357, 374 (general); Flureau v. Thornhill, 2 Wm. Bl. 1078 (1776) (English rule); property.md Module 15 (English v American rule is a flagged split; no count is claimed, the stem names the rule)",
           },
           {
             id: "u11-h-time-late-tender", kind: "hypo", cat: "III.B", callType: "remedy", rule: "u11-r-time-remedies", issue: "time not of the essence", grid: true,
@@ -186,12 +281,12 @@
           },
           {
             id: "u11-h-remedy-deposit", kind: "hypo", cat: "III.B", callType: "prevail", rule: "u11-r-time-remedies", issue: "liquidated deposit retained", grid: true,
-            stem: "A buyer signed a contract to buy a building for $500,000 and paid a $50,000 deposit. The contract stated that, if the buyer defaulted, the seller could keep the deposit as liquidated damages, because the seller's loss from a default would be difficult to estimate, and the $50,000 was a reasonable forecast of it when the contract was made. The buyer defaulted without excuse. The seller resold the building six months later and proved an actual loss of $35,000. The jurisdiction enforces liquidated damages clauses that were a reasonable forecast of loss when the contract was made. The buyer sued to recover $15,000 of the deposit.",
+            stem: "A buyer signed a contract to buy a building for $500,000 and paid a $50,000 deposit. The contract stated that, if the buyer defaulted, the seller could keep the deposit as liquidated damages, because the seller's loss from a default would be difficult to estimate. The buyer defaulted without excuse. The seller resold the building six months later and proved an actual loss of $35,000. The jurisdiction enforces liquidated damages clauses that were a reasonable forecast of loss when the contract was made. The buyer sued to recover $15,000 of the deposit.",
             call: "Will the buyer recover any part of the deposit?",
             options: [
               { text: "Yes, because the seller may keep only the loss it actually proved after the resale.", why: "In this jurisdiction the test is the reasonable forecast when the contract was made (the stem says so). Some courts also weigh actual loss, but not here.", trap: 4 },
-              { text: "Yes, because a deposit of more than 5 percent of the price is always a penalty.", why: "There is no fixed percentage ceiling: the test is whether the forecast was reasonable when the contract was made, and the stem says it was.", trap: 7 },
-              { text: "No, because the clause was a reasonable forecast when made, so the seller may keep the whole deposit.", why: "A reasonable pre-estimate of hard-to-measure loss is enforced as liquidated damages in this jurisdiction, even though the resale showed a smaller loss." },
+              { text: "Yes, because a deposit of more than 5 percent of the price is always a penalty.", why: "There is no fixed percentage ceiling: the test is whether the forecast was reasonable when the contract was made, and 10 percent for a hard-to-measure loss is a reasonable one.", trap: 7 },
+              { text: "No, because the clause was a reasonable forecast when made, so the seller may keep the whole deposit.", why: "A 10 percent deposit for a loss hard to estimate at signing is a reasonable forecast, so it is enforced here even though the resale showed a smaller loss." },
               { text: "No, because a defaulting buyer forfeits the deposit and also owes the seller its further actual loss.", why: "A liquidated damages clause replaces actual damages: the seller cannot keep the deposit and also sue for the loss.", trap: 1 },
             ],
             answer: 2,
@@ -206,13 +301,13 @@
             options: [
               { text: "All $40,000, because a defaulting buyer is always entitled to the return of the whole deposit.", why: "The seller may subtract its actual damages from the deposit before the buyer recovers anything.", trap: 7 },
               { text: "$28,000, because the buyer may recover the deposit less the seller's actual damages.", why: "$40,000 minus the $12,000 loss the seller proved leaves $28,000, under the rule the stem states." },
-              { text: "Nothing, because a buyer who defaults without excuse forfeits the deposit whatever the seller's loss.", why: "That is the traditional forfeiture rule; the stem says this jurisdiction lets the buyer recover the excess.", trap: 11 },
+              { text: "Nothing, because a buyer who defaults without excuse forfeits the deposit whatever the seller's loss.", why: "That is the forfeiture rule some jurisdictions still apply; the stem says this one lets the buyer recover the excess.", trap: 4 },
               { text: "Nothing, because the deposit was a liquidated sum that the seller was entitled to keep in full.", why: "The contract had no liquidated damages clause, so there was no agreed sum to enforce.", trap: 3 },
             ],
             answer: 1,
             facts: ["no liquidated damages clause", "the deposit less the seller's actual damages"],
             say: "With no liquidated damages clause, a buyer who defaults may recover the deposit minus the seller's actual loss, where the jurisdiction allows it.",
-            status: "unsure", src: "Rest. (3d) Restitution and Unjust Enrichment (defaulting buyer; section number not verified); property.md Module 15 and §6 #12 (flagged split; the stem states the rule)",
+            status: "general", src: "Rest. (2d) Contracts §374(1); Rest. (3d) Restitution and Unjust Enrichment §36; property.md Module 15 and §6 #12 (split; the stem states the rule)",
           },
           {
             id: "u11-h-sp-abatement", kind: "hypo", cat: "III.B", callType: "remedy", rule: "u11-r-time-remedies", issue: "specific performance with abatement", grid: true,
@@ -231,7 +326,7 @@
           },
           {
             id: "u11-h-seller-damages", kind: "hypo", cat: "III.B", callType: "remedy", rule: "u11-r-time-remedies", issue: "seller's damages for a buyer's breach",
-            stem: "A buyer signed a written contract to buy a warehouse for $600,000 and defaulted without excuse; the buyer had paid no deposit, and the contract had no liquidated damages clause. The seller kept the warehouse and sued the buyer for damages. On the date of the breach the warehouse's market value was $540,000. The jurisdiction applies the usual contract measure of damages.",
+            stem: "A buyer signed a written contract to buy a warehouse for $600,000 and defaulted without excuse; the buyer had paid no deposit, and the contract had no liquidated damages clause. The seller kept the warehouse and sued the buyer for damages. On the date of the breach the warehouse's market value was $540,000.",
             call: "What is the measure of the seller's damages?",
             options: [
               { text: "The contract price less the market value on the date of breach: $60,000.", why: "A seller's damages are the contract price minus the land's market value at the breach, plus any incidental loss." },
@@ -243,6 +338,29 @@
             facts: ["market value was $540,000", "no liquidated damages clause"],
             say: "A seller's damages are the contract price minus the market value when the buyer broke the deal.",
             status: "general", src: "property.md Module 15 (buyer's breach: contract price less market value at breach); Rest. (2d) Contracts §347 (general)",
+          },
+          {
+            id: "u11-h-english-rule", kind: "hypo", cat: "III.B", callType: "remedy", rule: "u11-r-time-remedies", issue: "English rule, good-faith seller",
+            stem: "A seller contracted in good faith to sell a lot to a buyer for $200,000. The buyer paid a $10,000 deposit and spent $1,500 on a title examination. The examination showed that a stranger held a valid recorded claim to the whole lot, which the seller had not known about and could not clear. By the date set for closing, the lot's market value had risen to $260,000. The buyer sued the seller for damages. The jurisdiction follows the English rule on a seller who cannot convey good title.",
+            call: "What may the buyer recover?",
+            options: [
+              { text: "The $10,000 deposit and the $1,500 cost of the title examination.", why: "Under the English rule a seller who cannot convey good title and is not in bad faith owes only the deposit and the buyer's title expenses." },
+              { text: "$60,000 for the lost bargain, plus the return of the $10,000 deposit.", why: "That is the American rule's benefit of the bargain; the stem names the English rule, which limits a good-faith seller's liability.", trap: 4 },
+              { text: "Nothing, because a seller who did not know of the defect has not breached the contract.", why: "The seller did breach by failing to convey good title; good faith limits the damages, it does not erase the claim.", trap: 5 },
+              { text: "Specific performance of the contract with a $60,000 abatement of the price.", why: "Abatement reduces the price for land the seller can convey; this seller can convey nothing, and abatement never pays for a rise in value.", trap: 10 },
+            ],
+            answer: 0,
+            facts: ["follows the English rule", "had not known about and could not clear"],
+            say: "English rule: a good-faith seller who cannot make title returns the deposit and title costs, not the benefit of the bargain.",
+            status: "general", src: "Flureau v. Thornhill, 2 Wm. Bl. 1078 (1776) (English rule, general); property.md Module 15 and §6 #12 (split; the stem states the rule)",
+          },
+          {
+            id: "u11-st-land-contract", kind: "steps", cat: "III.B", title: "Can the buyer enforce this land contract? (a working order)",
+            steps: ["Is there a writing signed by the party to be charged that identifies the parties, the land and the price?", "If not, did the buyer take possession and also pay or improve the land?", "If not, did the buyer rely reasonably and to her detriment, so that refusing enforcement would be unconscionable?", "Was each side's tender made at closing, and was time of the essence?", "Which remedy fits: specific performance, damages, or rescission with a refund?"],
+            distractors: ["Was the contract recorded?", "Was the deposit at least ten percent of the price?", "Which party drafted the contract?"],
+            applyTo: { facts: "An oral land contract: the buyer paid a deposit but never moved in, built nothing and did nothing else in reliance.", stop: "If not, did the buyer rely reasonably and to her detriment, so that refusing enforcement would be unconscionable?", why: "No part performance and no reliance: the contract is unenforceable and the buyer gets restitution." },
+            say: "A working order, not a rule of law: writing, part performance, estoppel, tender and time, then remedy.",
+            status: "general", src: "Rest. (2d) Contracts §§110, 129; property.md Module 15",
           },
           {
             id: "u11-r-marketable", kind: "rule", cat: "III.C", title: "Marketable title",
@@ -341,8 +459,8 @@
               "Many states extend the new-home warranty to later purchasers",
               "A statute may add a seller disclosure form on top of the common law",
               "The warranty concerns the quality of the building, so it is collateral to the conveyance of title and survives merger",
+              "The builder's warranty covers latent defects, not those a reasonable pre-purchase inspection would reveal",
             ],
-            cite: "Stambovsky v. Ackley",
             ex: [
               { facts: "A builder sells a new house with a defective foundation; the contract is silent on warranties.", result: "The builder impliedly warranted workmanlike construction and habitability." },
               { facts: "A homeowner paints over water stains to hide a known leak and sells 'as is'.", result: "'As is' does not protect active concealment: the buyer may recover." },
@@ -354,7 +472,7 @@
               { t: "bucket", q: "Can the buyer recover for this nondisclosure?", buckets: ["Recoverable", "Not recoverable"], items: [{ text: "The seller of a used home hid a known crack in the foundation under new carpet", bucket: "Recoverable" }, { text: "The seller of a used home never mentioned that the roof is 20 years old; it is visible and the buyer could inspect it", bucket: "Not recoverable" }, { text: "The builder of a new home used a defective footing, sold without a conspicuous disclaimer", bucket: "Recoverable" }] },
             ],
             hook: "Caveat emptor ('let the buyer beware') is Latin for the old rule; the modern law has cut so many holes in it that it leaks.",
-            status: "general", src: "Stambovsky v. Ackley, 169 A.D.2d 254 (N.Y. App. Div. 1991) (general); property.md Module 19; NCBE NextGen Content Scope (builders versus sellers of existing property)",
+            status: "general", src: "property.md Module 19; NCBE NextGen Content Scope (builders versus sellers of existing property); Stambovsky v. Ackley (1991) is the case card, limited to nondisclosure of a seller-created condition (N.Y.)",
           },
           {
             id: "u11-h-builder-warranty", kind: "hypo", cat: "III.F", callType: "prevail", rule: "u11-r-disclosure", issue: "builder-vendor implied warranty", grid: true,
@@ -364,7 +482,7 @@
               { text: "No, because the contract merged into the deed, which contained no promise about the condition of the house.", why: "Merger covers promises about title and the estate conveyed. The builder's warranty about the quality of the building is collateral and survives.", trap: 10 },
               { text: "No, because a buyer of real property takes it as is unless the builder expressly warranted its condition.", why: "Caveat emptor has given way, for new homes sold by builders, to an implied warranty of workmanlike construction and habitability.", trap: 11 },
               { text: "Yes, because a builder-vendor of a new house impliedly warrants workmanlike construction and habitability.", why: "The majority rule implies the warranty from the builder's sale of a new house, even when the contract is silent." },
-              { text: "Yes, because the foundation defect would have been obvious to any reasonable inspection.", why: "The stem says the buyer found the defect eight months later, and the warranty does not depend on whether the defect was obvious.", trap: 3 },
+              { text: "Yes, because the foundation defect would have been obvious to any reasonable inspection.", why: "If the defect had been obvious, that would hurt the buyer: the implied warranty covers latent defects a reasonable inspection would not reveal, and this one surfaced only after eight months.", trap: 3 },
             ],
             answer: 2,
             facts: ["constructed a new house on speculation", "said nothing about the condition of the house"],
@@ -377,7 +495,7 @@
             call: "Will the buyer prevail?",
             options: [
               { text: "No, because the 'as is' clause disclaims all claims relating to the condition of the house.", why: "An 'as is' clause bars implied-warranty claims, not claims for fraud or active concealment.", trap: 5 },
-              { text: "No, because a seller of a used home has no duty to disclose and the buyer bought at his own risk.", why: "Caveat emptor no longer protects a seller who actively conceals a known defect.", trap: 11 },
+              { text: "No, because a seller of a used home has no duty to disclose and the buyer bought at his own risk.", why: "Even where caveat emptor survives, it never protected a seller who actively conceals a known defect.", trap: 4 },
               { text: "Yes, because an 'as is' clause does not protect a seller who actively conceals a known latent defect.", why: "Painting over the stains and hiding them was concealment of a defect the buyer could not reasonably discover." },
               { text: "Yes, because every seller of a used home impliedly warrants that it is habitable.", why: "The implied warranty of habitability runs from builders of new homes, not from sellers of used ones.", trap: 4 },
             ],
@@ -392,8 +510,14 @@
             facts: "A buyer learned after signing that the house was widely reputed to be haunted, a reputation the seller had publicized locally, and was allowed to rescind.",
             hook: "The haunted-house case: the ghost was in the neighborhood newspapers, but nobody told the out-of-town buyer.",
             say: "The haunted-house case: a hidden, value-destroying condition the buyer could not discover lets the buyer rescind.",
-            status: "general", src: "Stambovsky v. Ackley, 169 A.D.2d 254 (N.Y. App. Div. 1991) (from memory, VERIFY); property.md Module 19",
+            status: "general", src: "Stambovsky v. Ackley, 169 A.D.2d 254, 572 N.Y.S.2d 672 (App. Div. 1991) (rescission for nondisclosure of a seller-created condition, N.Y.); property.md Module 19",
           },
+        ],
+      },
+      {
+        id: "u11l2",
+        title: "Options, equitable conversion, risk of loss and merger",
+        items: [
           {
             id: "u11-r-options", kind: "rule", cat: "III.E", title: "Options and rights of first refusal",
             say: "An option must be exercised strictly on time and without qualification; a right of first refusal binds a buyer who takes with notice.",
@@ -479,126 +603,6 @@
             say: "An option that lives and dies with a lease cannot vest late, so the Rule Against Perpetuities leaves it alone.",
             status: "general", src: "property.md Module 18 (an option appurtenant to a lease is generally exempt from the Rule)",
           },
-          {
-            id: "u11-r-brokerage", kind: "rule", cat: "III.A", title: "Real estate brokerage", exam: ["mbe"],
-            say: "A broker earns the commission by producing a ready, willing and able buyer; the type of listing decides whether the owner's own sale pays.",
-            elements: ["The broker is the seller's agent and fiduciary", "Open listing: commission only if this broker produces the buyer", "Exclusive agency: commission if any broker sells; the owner may sell alone", "Exclusive right to sell: commission whoever sells, including the owner", "Earned when the broker produces a ready, willing and able buyer on the seller's terms"],
-            ordered: false,
-            distractorElements: ["Earned only if the buyer signs the listing", "Payable by the buyer"],
-            exceptions: [
-              "An unlicensed broker generally cannot recover a commission",
-              "Dual agency needs the informed consent of both principals; a conflicted broker may forfeit the commission",
-              "Many states require the listing to be in a signed writing (state-specific)",
-            ],
-            split: {
-              majority: "The commission is earned when the broker produces a ready, willing and able buyer; the seller's refusal to close does not defeat it.",
-              minority: "The commission is earned only at closing (many listing forms say so); a buyer's default without the seller's fault defeats it.",
-            },
-            splitNote: "The stem quotes the listing or names the rule.",
-            ex: [
-              { facts: "An exclusive right to sell is signed; the owner sells the house herself to a neighbor.", result: "The broker still earns the commission." },
-              { facts: "An exclusive agency is signed; the owner sells the house herself to a neighbor.", result: "No commission: the owner reserved the right to sell alone." },
-            ],
-            terms: ["listing agreement", "ready, willing and able", "procuring cause"],
-            quiz: [
-              { t: "tf", q: "Under an exclusive right to sell listing, the owner who sells the property herself owes the broker a commission.", a: true, why: "That is what distinguishes it from an exclusive agency listing." },
-              { t: "tf", q: "Under the majority rule, a broker who produced a ready, willing and able buyer loses the commission if the seller refuses to close.", a: false, why: "The seller cannot avoid the commission by refusing to perform." },
-              { t: "bucket", q: "Which listing is described?", buckets: ["Open", "Exclusive agency", "Exclusive right to sell"], items: [{ text: "The broker is paid only if she is the one who finds the buyer", bucket: "Open" }, { text: "The owner can sell alone without paying; no other broker may sell", bucket: "Exclusive agency" }, { text: "The broker is paid even if the owner finds the buyer", bucket: "Exclusive right to sell" }] },
-            ],
-            hook: "Three listings, three doors: open pays whoever finds the buyer, exclusive agency pays the agent unless you sell alone, exclusive right to sell pays the agent every time.",
-            status: "general", src: "property.md Module 14; NCBE MBE Subject Matter Outline (Real Property III.A)",
-          },
-          {
-            id: "u11-h-broker-exclusive-agency", kind: "hypo", cat: "III.A", callType: "prevail", rule: "u11-r-brokerage", issue: "exclusive agency and owner's own sale", grid: true, exam: ["mbe"],
-            stem: "An owner signed an exclusive agency listing with a broker for 90 days. During the term, a neighbor who had seen the for-sale sign approached the owner directly, and the owner sold the house to the neighbor without any help from the broker or any other broker. The broker demanded the commission under the listing.",
-            call: "Will the broker recover the commission?",
-            options: [
-              { text: "Yes, because the neighbor saw the broker's sign, which made the broker the procuring cause of the sale.", why: "Procuring cause is the test for an open listing. Under an exclusive agency the owner may sell alone.", trap: 10 },
-              { text: "Yes, because any sale of the property during the term of an exclusive listing entitles the broker to a commission.", why: "That describes an exclusive right to sell; an exclusive agency reserves the owner's right to sell without a broker.", trap: 9 },
-              { text: "No, because under an exclusive agency listing the owner may sell without a broker and without paying a commission.", why: "An exclusive agency bars only the owner from using other brokers; it does not bar the owner's own sale." },
-              { text: "No, because the neighbor did not sign the listing agreement and so is not bound to the broker.", why: "The commission claim is against the owner, not the buyer, and the buyer's signature is irrelevant.", trap: 1 },
-            ],
-            answer: 2,
-            facts: ["exclusive agency listing", "without any help from the broker"],
-            say: "Exclusive agency: the owner may sell alone. Exclusive right to sell: the broker is paid either way.",
-            status: "general", src: "property.md Module 14 (P14-2, rewritten)",
-          },
-          {
-            id: "u11-p-listing", kind: "pairs", exam: ["mbe"], set: "Listings and commissions", mode: "concept",
-            pairs: [
-              { l: "Open listing", r: "Commission only if this broker produces the buyer" },
-              { l: "Exclusive agency", r: "Commission if any broker sells; the owner may sell alone" },
-              { l: "Exclusive right to sell", r: "Commission whoever sells, including the owner" },
-              { l: "Seller refuses to close with a ready, willing and able buyer", r: "Commission earned (majority rule)" },
-              { l: "Unlicensed broker", r: "Generally cannot recover a commission" },
-            ],
-            spare: ["Commission owed by the buyer"],
-            say: "Three listings, one question: does the owner's own sale pay the broker?",
-            status: "general", src: "property.md Module 14",
-          },
-          {
-            id: "u11-r-installment", kind: "rule", cat: "IV.A", title: "Installment land contracts (contracts for deed)", exam: ["mbe"],
-            say: "The seller keeps title until the last payment; the traditional rule allows forfeiture, but many courts now protect the buyer's accrued equity.",
-            elements: ["Buyer takes possession and pays in installments", "Seller keeps legal title until the last payment", "Traditional rule: on default the seller may declare a forfeiture and keep the payments", "Many courts now treat the buyer's equity like a mortgagor's", "Buyer is the equitable owner and (majority) bears the risk of loss"],
-            ordered: false,
-            distractorElements: ["Buyer takes legal title at the first payment", "The seller must always foreclose judicially"],
-            exceptions: [
-              "The statute of frauds applies to the contract",
-              "Many states restrict forfeiture by statute, with grace periods or notice requirements",
-              "Courts look through the label: an installment contract used as security is a disguised mortgage",
-            ],
-            split: {
-              traditional: "Forfeiture is enforced as written: time is of the essence, and the seller keeps the land and the payments.",
-              modern: "Forfeiture is not enforced against a buyer with substantial equity: the seller must foreclose, give a grace period, or return the excess over damages.",
-            },
-            splitNote: "The stem names the approach the jurisdiction takes.",
-            cite: "Skendzel v. Marshall",
-            ex: [
-              { facts: "A buyer has paid 70 percent of the price over 14 years and misses three payments.", result: "In a protective jurisdiction the seller must foreclose, not simply declare a forfeiture." },
-            ],
-            terms: ["contract for deed", "forfeiture", "equity"],
-            quiz: [
-              { t: "tf", q: "Under the traditional rule, an installment seller who declares a forfeiture may keep all payments the buyer has made.", a: true, why: "That is the harshness the modern trend corrects." },
-              { t: "mcq", q: "In a jurisdiction protecting installment buyers with substantial equity, a seller whose buyer defaults must usually...", options: ["Foreclose as if the contract were a mortgage", "Keep the payments as rent", "Forfeit the land to the buyer"], a: "Foreclose as if the contract were a mortgage", why: "The contract is treated as a mortgage." },
-            ],
-            hook: "A Texas-sized contract for deed: pay for fourteen years, miss three payments, and the old rule lets the seller keep the ranch and every dollar. Modern courts make the seller foreclose.",
-            status: "general", src: "Skendzel v. Marshall, 261 Ind. 226, 301 N.E.2d 641 (1973) (from memory, VERIFY); property.md Module 21",
-          },
-          {
-            id: "u11-h-installment-forfeiture", kind: "hypo", cat: "IV.A", callType: "prevail", rule: "u11-r-installment", issue: "installment contract forfeiture", grid: true, exam: ["mbe"],
-            stem: "A seller and a buyer signed a 20-year installment land contract for a house. The contract provided that, if the buyer missed three payments, the seller could declare a forfeiture, keep all payments as rent, and retake possession. After 14 years, when the buyer had paid 70 percent of the price, the buyer lost a job and missed three payments. The seller declared a forfeiture and sued for possession. The jurisdiction does not enforce forfeiture against an installment buyer with substantial equity and treats the contract as a mortgage.",
-            call: "Is the seller entitled to possession under the forfeiture clause?",
-            options: [
-              { text: "Yes, because the contract says forfeiture follows three missed payments and time is of the essence.", why: "This is the traditional rule, which the stem says the jurisdiction has rejected for buyers with substantial equity.", trap: 11 },
-              { text: "Yes, because the seller holds legal title until the last payment is made.", why: "Holding legal title as security does not allow forfeiture where the contract is treated as a mortgage; the seller must foreclose.", trap: 10 },
-              { text: "No, because the buyer's accrued equity is protected and the seller must foreclose as with a mortgage.", why: "The jurisdiction treats the installment contract as a mortgage, so the seller's remedy is foreclosure and the buyer's equity is not forfeited." },
-              { text: "No, because an installment land contract is void unless it is recorded with the county.", why: "Recording protects against third parties; it is not a condition of the contract's validity.", trap: 5 },
-            ],
-            answer: 2,
-            facts: ["20-year installment land contract", "paid 70 percent of the price"],
-            say: "Fourteen years of payments are equity. In a protective state the seller forecloses; it does not forfeit.",
-            status: "general", src: "property.md Module 21 (P21-4, rewritten); Skendzel v. Marshall (1973)",
-          },
-          {
-            id: "u11-c-skendzel", kind: "case", exam: ["mbe"], subject: "property", name: "Skendzel v. Marshall", year: 1973,
-            holding: "A seller under an installment land contract may not forfeit a buyer who has paid a substantial part of the price; the contract is treated as a mortgage and must be foreclosed.",
-            say: "Skendzel: a buyer with real equity cannot be forfeited; the seller must foreclose like a lender.",
-            status: "general", src: "Skendzel v. Marshall, 261 Ind. 226, 301 N.E.2d 641 (1973) (from memory, VERIFY); property.md Module 21",
-          },
-          {
-            id: "u11-st-land-contract", kind: "steps", cat: "III.B", title: "Can the buyer enforce this land contract? (a working order)",
-            steps: ["Is there a writing signed by the party to be charged that identifies the parties, the land and the price?", "If not, did the buyer take possession and also pay or improve the land?", "If not, did the buyer rely reasonably and to her detriment, so that refusing enforcement would be unconscionable?", "Was each side's tender made at closing, and was time of the essence?", "Which remedy fits: specific performance, damages, or rescission with a refund?"],
-            distractors: ["Was the contract recorded?", "Was the deposit at least ten percent of the price?", "Which party drafted the contract?"],
-            applyTo: { facts: "An oral land contract: the buyer paid a deposit but never moved in and built nothing.", stop: "If not, did the buyer take possession and also pay or improve the land?", why: "Payment alone is not part performance, so the buyer is left with restitution unless estoppel applies." },
-            say: "A working order, not a rule of law: writing, part performance, estoppel, tender and time, then remedy.",
-            status: "general", src: "Rest. (2d) Contracts §§110, 129; property.md Module 15",
-          },
-        ],
-      },
-      {
-        id: "u11l2",
-        title: "Equitable conversion, risk of loss and merger",
-        items: [
           {
             id: "u11-r-equitable-conversion", kind: "rule", cat: "III.D", title: "Equitable conversion", exam: ["mbe"],
             say: "Once a land contract is specifically enforceable, the buyer holds equitable title and the seller holds legal title as security for the price.",
@@ -700,6 +704,21 @@
             status: "general", src: "Uniform Vendor and Purchaser Risk Act as enacted; property.md Module 17",
           },
           {
+            id: "u11-h-risk-insurance", kind: "hypo", cat: "III.D", callType: "remedy", rule: "u11-r-risk-of-loss", issue: "seller's insurance proceeds credited to buyer", exam: ["mbe"],
+            stem: "A seller and a buyer signed a valid contract for the sale of a house for $300,000, with closing in 60 days. The contract said nothing about the risk of loss or insurance, and the seller kept her own fire policy in force. Before closing, and before the buyer took possession, lightning set a fire that destroyed the house, and the seller's insurer paid the seller $180,000. The jurisdiction puts the risk of loss on the buyer once the contract is signed and requires a seller who collects insurance on the property to hold it for the buyer. The seller tendered a deed and demanded the full price.",
+            call: "How much must the buyer pay at closing?",
+            options: [
+              { text: "$120,000, because the buyer bears the loss but is credited with the seller's insurance money.", why: "The buyer must close, but the seller holds the $180,000 for the buyer and cannot collect the price and the insurance both." },
+              { text: "$300,000, because the buyer bore the risk of loss and the policy was the seller's own contract.", why: "The buyer does bear the risk, but the stem says a seller who collects insurance holds it for the buyer, so it reduces the price.", trap: 2 },
+              { text: "Nothing, because the house burned before the buyer received either title or possession.", why: "That is the Uniform Act result; the stem puts the risk on the buyer from the signing of the contract.", trap: 4 },
+              { text: "$150,000, because a casualty that is no one's fault is split equally between the parties.", why: "No rule splits a no-fault loss equally; the buyer bears it, with credit for the insurance.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["hold it for the buyer", "paid the seller $180,000"],
+            say: "The buyer bears the fire, but the seller cannot pocket both the price and the insurance: the proceeds are credited to the buyer.",
+            status: "general", src: "property.md Module 17 (the seller's insurance proceeds; courts differ, so the stem states the rule)",
+          },
+          {
             id: "u11-a-risk-seller-fault", kind: "argue", cat: "III.D", rule: "u11-r-risk-of-loss", issue: "seller's fault shifts the loss", exam: ["mbe"],
             stem: "A buyer signed a valid contract to buy a house and lot from a seller, with closing set for 45 days later. The contract said nothing about the risk of loss. Before closing, an employee of the seller who was repairing a leak left a torch burning, and the resulting fire destroyed the house. The jurisdiction follows the common-law majority rule that the buyer bears the risk of loss when neither party is at fault. The seller demanded that the buyer close and pay the full price.",
             call: "What is the buyer's best argument for refusing to close?",
@@ -707,7 +726,7 @@
               { text: "The buyer bears only no-fault losses, and this fire was caused by the seller's own employee.", why: "The majority rule allocates a no-fault loss to the buyer; a loss caused by the seller's fault stays with the seller." },
               { text: "The seller still holds legal title, so the seller bears the risk of loss until the deed is delivered.", why: "That is the minority rule; the majority rule treats the buyer as owner in equity.", trap: 4 },
               { text: "The contract is unenforceable because it did not allocate the risk of loss.", why: "A gap in the contract does not make it unenforceable; the default rule fills it.", trap: 5 },
-              { text: "The buyer bears the risk only after taking possession, and the buyer had not yet moved in.", why: "Possession shifts the risk to the buyer in every jurisdiction; its absence does not by itself shift the risk to the seller under the majority rule.", trap: 4 },
+              { text: "The buyer bears the risk only after taking possession, and the buyer had not yet moved in.", why: "Possession moves the risk to the buyer under the Uniform Act; under the majority rule the buyer bears no-fault risk even without possession, so its absence does not help her here.", trap: 4 },
             ],
             answer: 0,
             say: "The buyer's risk is for no-fault losses. Fault by the seller or the seller's people keeps the loss on the seller.",
@@ -750,7 +769,7 @@
             options: [
               { text: "Yes, because a joint tenant's death always passes the whole property to the survivor.", why: "Survivorship operates only if the joint tenancy is intact at death, and here the contract severed it.", trap: 7 },
               { text: "Yes, because a contract of sale does not change the title until the deed is delivered.", why: "The stem says the jurisdiction treats a specifically enforceable contract as severing the tenancy.", trap: 4 },
-              { text: "No, because the contract severed the joint tenancy, so the deceased sibling's one-half interest did not pass by survivorship.", why: "After severance the siblings were tenants in common, and the deceased sibling's half passed through her estate subject to the buyer's contract." },
+              { text: "No, because the contract severed the joint tenancy, so her half did not pass by survivorship.", why: "After severance the siblings were tenants in common, and the deceased sibling's half passed through her estate subject to the buyer's contract." },
               { text: "No, because the deceased sibling's will passed her half to her husband free of the buyer's contract.", why: "The result is right, but the husband takes only subject to the contract; it is the severance that defeats survivorship.", trap: 1 },
             ],
             answer: 2,
@@ -761,13 +780,14 @@
           {
             id: "u11-r-merger", kind: "rule", cat: "III.G", title: "Merger of the contract into the deed",
             say: "Promises about the title and the land itself merge into the deed; separate promises to act after closing survive.",
-            elements: ["Seller delivers and buyer accepts the deed", "The contract merges into the deed", "Promises about title, possession, quantity and quality of the estate merge", "Collateral promises to be performed after closing survive", "Fraud and mistake survive"],
+            elements: ["Seller delivers and buyer accepts the deed", "The contract merges into the deed", "Promises about the title, the kind of estate conveyed, possession at closing and the quantity of land merge", "Collateral promises to be performed after closing survive", "Fraud and mistake survive"],
             ordered: false,
             distractorElements: ["Every term of the contract survives the deed", "Merger applies only if the deed says so"],
             exceptions: [
               "An express clause that a promise survives closing is honored",
               "After merger the buyer's remedy for title defects lies in the deed's covenants of title (lesson 6)",
               "A builder-vendor's implied warranty of habitability survives as collateral to the conveyance",
+              "Promises about the physical condition of the building are usually collateral and survive",
             ],
             ex: [
               { facts: "The contract promises 5 acres; the accepted deed describes 4.5 acres.", result: "The acreage promise merged; the deed controls." },
@@ -788,7 +808,7 @@
             options: [
               { text: "Yes, because a term of the contract survives the delivery of the deed unless the deed expressly cancels it.", why: "The opposite is the rule: terms about the estate conveyed merge into the deed unless an exception applies.", trap: 5 },
               { text: "Yes, because the buyer did not discover the shortfall until after closing.", why: "The buyer's late discovery does not defeat merger absent fraud or mistake, which the buyer does not allege.", trap: 8 },
-              { text: "No, because the contract's quantity term merged into the deed, which controls.", why: "A promise about the quantity of the estate is merged when the buyer accepts the deed; the buyer's remedies lie in the deed's covenants." },
+              { text: "No, because the contract's quantity term merged into the deed, which controls.", why: "A promise about the quantity of land merges when the buyer accepts the deed. The deed describes 4.5 acres, so absent fraud or mistake the buyer has no claim for the shortfall." },
               { text: "No, because the general warranty deed conveyed everything the contract promised.", why: "The deed conveyed only the 4.5 acres it described; the result is right because the larger promise merged into it.", trap: 1 },
             ],
             answer: 2,
@@ -817,7 +837,7 @@
             call: "What is the buyer's best response to the seller's merger argument?",
             options: [
               { text: "Merger does not apply to fraud, and the seller knowingly concealed the damage.", why: "Fraud is an exception to merger, so the buyer may sue on the concealment although the deed was accepted." },
-              { text: "A promise about the condition of the house is a promise about title, so it survives the deed.", why: "Title promises merge into the deed; the buyer's claim survives because of the fraud, not because of a title promise.", trap: 5 },
+              { text: "A promise about the condition of the house is a promise about title, so it survives the deed.", why: "A condition promise is not a title promise, and title promises merge. Fraud is the response that defeats merger whatever the promise was about.", trap: 5 },
               { text: "Merger applies only if the buyer knew of the damage when accepting the deed, and the buyer did not.", why: "Merger does not depend on what the buyer knew; it reaches a buyer who accepts the deed whether or not she knew.", trap: 5 },
               { text: "A buyer may sue on any term of a sale contract until the statute of limitations on contracts expires.", why: "Merger cuts off contract terms about the estate conveyed once the deed is accepted, absent an exception.", trap: 7 },
             ],
@@ -870,7 +890,7 @@
             terms: ["mortgagor", "mortgagee", "lien theory", "title theory", "deed of trust"],
             quiz: [
               { t: "tf", q: "In a lien-theory jurisdiction, the mortgagee holds legal title to the land until the debt is paid.", a: false, why: "The mortgagee holds only a lien; the mortgagor holds title." },
-              { t: "mcq", q: "A question about mortgages does not state the theory the jurisdiction follows. Assume...", options: ["Lien theory", "Title theory", "Intermediate theory"], a: "Lien theory", why: "NCBE's instruction for NextGen, and the safe default for the MBE." },
+              { t: "mcq", q: "A question about mortgages does not state the theory the jurisdiction follows. Assume...", options: ["Lien theory", "Title theory", "Intermediate theory"], a: "Lien theory", why: "NCBE states that assumption for NextGen; lien theory is also the majority approach, and an MBE question that turns on another theory names it." },
               { t: "bucket", q: "Which theory fits?", buckets: ["Lien theory", "Title theory"], items: [{ text: "The borrower holds title and the right to possession", bucket: "Lien theory" }, { text: "The lender may take possession even before default", bucket: "Title theory" }, { text: "The mortgage is only security for the debt", bucket: "Lien theory" }] },
             ],
             hook: "Lien theory: the lender holds a lien, the borrower holds the land.",
@@ -945,13 +965,62 @@
             status: "general", src: "NCBE MBE Subject Matter Outline (Real Property IV.D, payment including prepayment); property.md Module 23 (the stem states the rule)",
           },
           {
+            id: "u11-r-installment", kind: "rule", cat: "IV.A", title: "Installment land contracts (contracts for deed)", exam: ["mbe"],
+            say: "The seller keeps title until the last payment; the traditional rule allows forfeiture, but many courts now protect the buyer's accrued equity.",
+            elements: ["Buyer takes possession and pays in installments", "Seller keeps legal title until the last payment", "Traditional rule: on default the seller may declare a forfeiture and keep the payments", "Many courts now treat the buyer's equity like a mortgagor's", "Buyer is the equitable owner and (majority) bears the risk of loss"],
+            ordered: false,
+            distractorElements: ["Buyer takes legal title at the first payment", "The seller must always foreclose judicially"],
+            exceptions: [
+              "The statute of frauds applies to the contract",
+              "Many states restrict forfeiture by statute, with grace periods or notice requirements",
+              "Courts look through the label: an installment contract used as security is a disguised mortgage",
+            ],
+            split: {
+              traditional: "Forfeiture is enforced as written: time is of the essence, and the seller keeps the land and the payments.",
+              modern: "Forfeiture is not enforced against a buyer with substantial equity: the seller must foreclose, give a grace period, or return the excess over damages.",
+            },
+            splitNote: "The stem names the approach the jurisdiction takes.",
+            cite: "Skendzel v. Marshall",
+            ex: [
+              { facts: "A buyer has paid 70 percent of the price over 14 years and misses three payments.", result: "In a protective jurisdiction the seller must foreclose, not simply declare a forfeiture." },
+            ],
+            terms: ["contract for deed", "forfeiture", "equity"],
+            quiz: [
+              { t: "tf", q: "Under the traditional rule, an installment seller who declares a forfeiture may keep all payments the buyer has made.", a: true, why: "That is the harshness the modern trend corrects." },
+              { t: "mcq", q: "In a jurisdiction protecting installment buyers with substantial equity, a seller whose buyer defaults must usually...", options: ["Foreclose as if the contract were a mortgage", "Keep the payments as rent", "Forfeit the land to the buyer"], a: "Foreclose as if the contract were a mortgage", why: "The contract is treated as a mortgage." },
+            ],
+            hook: "A Texas-sized contract for deed: pay for fourteen years, miss three payments, and the old rule lets the seller keep the ranch and every dollar. Modern courts make the seller foreclose.",
+            status: "general", src: "Skendzel v. Marshall, 261 Ind. 226, 301 N.E.2d 641 (1973); property.md Module 21",
+          },
+          {
+            id: "u11-h-installment-forfeiture", kind: "hypo", cat: "IV.A", callType: "prevail", rule: "u11-r-installment", issue: "installment contract forfeiture", grid: true, exam: ["mbe"],
+            stem: "A seller and a buyer signed a 20-year installment land contract for a house. The contract provided that, if the buyer missed three payments, the seller could declare a forfeiture, keep all payments as rent, and retake possession. After 14 years, when the buyer had paid 70 percent of the price, the buyer lost a job and missed three payments. The seller declared a forfeiture and sued for possession. The jurisdiction does not enforce forfeiture against an installment buyer with substantial equity and treats the contract as a mortgage.",
+            call: "Is the seller entitled to possession under the forfeiture clause?",
+            options: [
+              { text: "Yes, because the contract says forfeiture follows three missed payments and time is of the essence.", why: "Some states still enforce forfeiture as written, but the stem says this jurisdiction has rejected it for buyers with substantial equity.", trap: 4 },
+              { text: "Yes, because the seller holds legal title until the last payment is made.", why: "Holding legal title as security does not allow forfeiture where the contract is treated as a mortgage; the seller must foreclose.", trap: 10 },
+              { text: "No, because the buyer's accrued equity is protected and the seller must foreclose as with a mortgage.", why: "The jurisdiction treats the installment contract as a mortgage, so the seller's remedy is foreclosure and the buyer's equity is not forfeited." },
+              { text: "No, because an installment land contract is void unless it is recorded with the county.", why: "Recording protects against third parties; it is not a condition of the contract's validity.", trap: 5 },
+            ],
+            answer: 2,
+            facts: ["20-year installment land contract", "paid 70 percent of the price"],
+            say: "Fourteen years of payments are equity. In a protective state the seller forecloses; it does not forfeit.",
+            status: "general", src: "property.md Module 21 (P21-4, rewritten); Skendzel v. Marshall (1973)",
+          },
+          {
+            id: "u11-c-skendzel", kind: "case", exam: ["mbe"], subject: "property", name: "Skendzel v. Marshall", year: 1973,
+            holding: "A seller under an installment land contract may not forfeit a buyer who has paid a substantial part of the price; the contract is treated as a mortgage and must be foreclosed.",
+            say: "Skendzel: a buyer with real equity cannot be forfeited; the seller must foreclose like a lender.",
+            status: "general", src: "Skendzel v. Marshall, 261 Ind. 226, 301 N.E.2d 641 (1973); property.md Module 21",
+          },
+          {
             id: "u11-r-disguised", kind: "rule", exam: ["mbe"], cat: "IV.A", title: "Disguised mortgages: the absolute deed and the equitable mortgage",
             say: "A deed that looks absolute but secures a debt is a mortgage; parol evidence proves the purpose and the borrower may redeem.",
             elements: ["A deed absolute in form is given to secure a debt", "Parol evidence is admissible to show the security purpose", "Signs: a debt exists, the grantor stays in possession, the price is far below value", "The grantor keeps the equity of redemption; the grantee must foreclose", "A bona fide purchaser from the grantee without notice takes free"],
             ordered: false,
             distractorElements: ["The parol evidence rule bars proof of the oral promise to reconvey", "The grantee owns the land outright after one year"],
             exceptions: [
-              "An installment land contract used as security may be treated as a mortgage (lesson 1)",
+              "An installment land contract used as security may be treated as a mortgage (above)",
               "Equitable mortgage: a court treats an informal instrument as a mortgage when it was intended as security",
             ],
             ex: [
@@ -986,7 +1055,7 @@
             ordered: false,
             distractorElements: ["Redemption lasts one year after any foreclosure sale", "A lender's option to buy is valid if recorded"],
             exceptions: [
-              "About half the states give statutory redemption after the sale; the stem gives the period and the price",
+              "Some states give statutory redemption after the sale; the question gives the period and the price",
               "An agreement made after default, for new consideration and without overreaching, is not a clog",
             ],
             ex: [
@@ -1057,10 +1126,10 @@
             stem: "An owner mortgaged her house to a bank for $300,000 and later sold the house to a buyer by a deed stating that the conveyance was 'subject to' the mortgage. The buyer made no promise to pay the debt. The buyer later stopped paying, and the bank foreclosed. The sale brought $240,000, leaving a $60,000 deficiency. The jurisdiction permits deficiency judgments.",
             call: "From whom may the bank collect the deficiency?",
             options: [
-              { text: "From the buyer only, because the buyer was the owner when the default occurred.", why: "Ownership at default does not create personal liability; only a promise to pay the debt does.", trap: 3 },
+              { text: "From the buyer only, because the buyer owned the house when the default occurred and the bank foreclosed.", why: "Ownership at default does not create personal liability; only a promise to pay the debt does.", trap: 3 },
               { text: "From the owner or the buyer, because both are liable on the debt.", why: "That is the result of an assumption, which the buyer did not make.", trap: 4 },
-              { text: "From neither, because the land alone secures the debt once the owner has sold it.", why: "The owner stays liable on the note after the sale; the bank looks to her for the deficiency.", trap: 2 },
-              { text: "From the owner only, because the buyer took subject to the mortgage and never became personally liable.", why: "The owner signed the note and was never released; the buyer, who made no promise, owes nothing personally." },
+              { text: "From neither, because once the owner has sold the house, only the land secures the debt.", why: "The owner stays liable on the note after the sale; the bank looks to her for the deficiency.", trap: 2 },
+              { text: "From the owner only, because the buyer took subject to the mortgage and is not personally liable.", why: "The owner signed the note and was never released; the buyer, who made no promise, owes nothing personally." },
             ],
             answer: 3,
             facts: ["subject to", "made no promise to pay the debt"],
@@ -1142,7 +1211,7 @@
             options: [
               { text: "No, because a lease is never a transfer of an interest in the property.", why: "A lease is an interest in the property; the clause here expressly reaches leases.", trap: 5 },
               { text: "No, because the homeowner has made every payment on time, so the lender's security is not impaired.", why: "Federal law enforces the clause without proof of impairment, except against the listed transfers.", trap: 8 },
-              { text: "Yes, because any lease, however short, may trigger a due-on-sale clause in a mortgage.", why: "A lease of three years or less with no purchase option is protected; the error lies in ignoring that exception.", trap: 9 },
+              { text: "Yes, because any lease, however short, may trigger a due-on-sale clause in a mortgage.", why: "The verdict is right, but the reason is wrong: a lease of three years or less with no purchase option is protected. This lease runs four years.", trap: 1 },
               { text: "Yes, because the federal statute protects only leases of three years or less.", why: "Only a lease of three years or less without a purchase option is protected, and this lease runs four years." },
             ],
             answer: 3,
@@ -1152,7 +1221,7 @@
           },
           { id: "u11-n-lease-three", kind: "num", cat: "IV.C", ask: "The longest lease, in years, that a home lender may not treat as a due-on-sale event when the lease has no purchase option", answer: "3 years", alt: ["3", "three years", "three"], say: "Three years or less with no purchase option.", status: "book", src: "12 U.S.C. §1701j-3(d)(4)", exam: ["mbe"] },
           { id: "u11-n-units", kind: "num", cat: "IV.C", ask: "A home loan falls under the federal list of protected transfers when the property has fewer than how many dwelling units", answer: "5", alt: ["five"], say: "Fewer than five dwelling units: houses, duplexes and small apartment buildings.", status: "book", src: "12 U.S.C. §1701j-3(d)", exam: ["mbe"] },
-          { id: "u11-c-delacuesta", kind: "case", exam: ["mbe"], subject: "property", name: "Fidelity Federal Savings and Loan Association v. de la Cuesta", year: 1982, holding: "Federal regulations that let federally chartered savings associations enforce due-on-sale clauses preempt state laws restricting the clauses.", say: "De la Cuesta: federal law lets lenders enforce due-on-sale clauses over state objections.", status: "general", src: "458 U.S. 141 (1982) (from memory, VERIFY); 12 U.S.C. §1701j-3" },
+          { id: "u11-c-delacuesta", kind: "case", exam: ["mbe"], subject: "property", name: "Fidelity Federal Savings and Loan Association v. de la Cuesta", year: 1982, holding: "Federal regulations that let federally chartered savings associations enforce due-on-sale clauses preempt state laws restricting the clauses.", say: "De la Cuesta: federal law lets lenders enforce due-on-sale clauses over state objections.", status: "general", src: "Fidelity Fed. Sav. & Loan Ass'n v. de la Cuesta, 458 U.S. 141 (1982); 12 U.S.C. §1701j-3" },
           { id: "u11-t-inter-vivos", kind: "term", subject: "property", term: "inter vivos", lang: "latin", literal: "between the living", meaning: "A transfer made during the transferor's life, as opposed to one made by will at death.", use: "Due-on-sale exceptions: a transfer into an inter vivos trust in which the borrower remains a beneficiary.", pairWith: "testamentary", hook: "A gift inter vivos needs the donor's intent, delivery and acceptance, all while the donor is alive.", say: "Inter vivos: while alive. The opposite is testamentary: at death by will.", status: "general", src: "12 U.S.C. §1701j-3(d)(8); hooks.jsonl", exam: ["mbe"] },
           {
             id: "u11-r-mortgagee-transfer", kind: "rule", cat: "IV.C", title: "Transfers by the mortgagee: the mortgage follows the note", exam: ["mbe"],
@@ -1204,6 +1273,12 @@
             say: "Hold the note and you hold the mortgage; the paper trail for the lien can follow later.",
             status: "general", src: "property.md Module 22; Carpenter v. Longan (1872) (general)",
           },
+        ],
+      },
+      {
+        id: "u11l4",
+        title: "Discharge, foreclosure and priorities",
+        items: [
           {
             id: "u11-r-discharge", kind: "rule", cat: "IV.D", title: "Discharge of a mortgage", exam: ["mbe"],
             say: "Payment discharges the lien; redemption ends at the sale unless a statute extends it; a deed in lieu does not cut off junior liens.",
@@ -1234,7 +1309,7 @@
               { text: "No, because the equity of redemption ends at the foreclosure sale, and nothing remained to redeem.", why: "That is the common-law rule; the statute adds a six-month redemption period after the sale.", trap: 4 },
               { text: "No, because redemption after the sale is possible only if the bidder consents to give the land back.", why: "Statutory redemption is a right, exercised by tendering the statutory price within the period.", trap: 5 },
               { text: "Yes, because the equity of redemption survives the sale until the bidder records the deed.", why: "The right comes from the statute and the six-month period, not from the bidder's recording.", trap: 5 },
-              { text: "Yes, because the statute gave six months after the sale to redeem and the owner tendered the statutory price in time.", why: "A statutory right of redemption is enforced by the tender of the price set by the statute; the stem supplies it." },
+              { text: "Yes, because the owner tendered the statutory price within the six months the statute allows.", why: "A statutory right of redemption is enforced by the tender of the price set by the statute; the stem supplies it." },
             ],
             answer: 3,
             facts: ["six months after the sale", "tendered the sale price with interest and costs"],
@@ -1250,12 +1325,6 @@
             say: "A deed in lieu is quicker than foreclosure for a reason: it does not wipe out the juniors.",
             status: "general", src: "property.md Module 23 (P23-1)",
           },
-        ],
-      },
-      {
-        id: "u11l4",
-        title: "Foreclosure and priorities",
-        items: [
           {
             id: "u11-r-foreclosure", kind: "rule", cat: "IV.E", title: "Foreclosure: types, parties and what survives",
             say: "Join every interest the sale is meant to cut off. A junior left out keeps its lien, and a senior always survives a junior's foreclosure.",
@@ -1275,6 +1344,7 @@
             quiz: [
               { t: "tf", q: "A foreclosure by a first mortgagee extinguishes a second mortgage whose holder was not made a party.", a: false, why: "An omitted junior is not bound; its lien survives." },
               { t: "tf", q: "A buyer at a junior mortgagee's foreclosure sale takes free of the senior mortgage.", a: false, why: "The senior lien survives a junior's foreclosure." },
+              { t: "tf", q: "A foreclosure under a power of sale requires a court to order the sale.", a: false, why: "A power-of-sale foreclosure is nonjudicial: the trustee or mortgagee sells under the instrument and the statute, without a court order." },
               { t: "bucket", q: "Cut off by the foreclosing first mortgagee's sale?", buckets: ["Cut off", "Survives"], items: [{ text: "A recorded second mortgage whose holder was joined", bucket: "Cut off" }, { text: "A recorded second mortgage whose holder was not joined", bucket: "Survives" }, { text: "The owner's equity of redemption", bucket: "Cut off" }, { text: "A lease that was signed before the mortgage", bucket: "Survives" }] },
             ],
             hook: "Skip a junior in the lawsuit and its lien rides on.",
@@ -1309,6 +1379,21 @@
             facts: ["without joining the first bank", "remains current"],
             say: "Foreclose a junior and the senior is still there when the dust settles.",
             status: "general", src: "property.md Module 24 (P24-3, rewritten)",
+          },
+          {
+            id: "u11-h-omitted-tenant", kind: "hypo", cat: "IV.E", callType: "status", rule: "u11-r-foreclosure", issue: "junior tenant not joined", grid: true,
+            stem: "An owner mortgaged an office building to a bank, which recorded the mortgage. A year later the owner leased one floor to a tenant for ten years. The owner defaulted, and the bank foreclosed by judicial sale, naming the owner but not the tenant as a party. A buyer bought the building at the sale and ordered the tenant to leave, arguing that the lease was junior to the mortgage.",
+            call: "Must the tenant leave?",
+            options: [
+              { text: "Yes, because a lease made after the mortgage is junior to it and is ended by the foreclosure.", why: "A junior lease is cut off only if the tenant is joined in the foreclosure, and this tenant was not.", trap: 2 },
+              { text: "Yes, because a foreclosure buyer takes free of every interest created after the mortgage.", why: "The sale cuts off only the junior interests whose holders were made parties.", trap: 7 },
+              { text: "No, because a junior tenant who was not joined in the foreclosure keeps the lease.", why: "The tenant was a necessary party to cut off the junior lease; the buyer takes the building subject to it." },
+              { text: "No, because a lease of commercial space survives any foreclosure, senior or junior.", why: "A junior lease is cut off when the tenant is joined; only a lease made before the mortgage survives either way.", trap: 5 },
+            ],
+            answer: 2,
+            facts: ["not the tenant as a party", "A year later the owner leased"],
+            say: "A lease made after the mortgage is junior, but only a tenant who is joined in the foreclosure loses it.",
+            status: "general", src: "property.md Module 24 (necessary parties; an omitted junior interest survives, general)",
           },
           {
             id: "u11-r-waterfall", kind: "rule", cat: "IV.E", title: "The foreclosure proceeds, in order",
@@ -1428,8 +1513,8 @@
             options: [
               { text: "The first bank, because its recorded mortgage was earlier and covers later-acquired land.", why: "First in time yields to the purchase-money rule: the developer took the parcel subject to the lender who financed it.", trap: 2 },
               { text: "The first bank, because an after-acquired-property clause always outranks later liens.", why: "An after-acquired-property clause does not outrank a purchase-money mortgage on the acquired land.", trap: 7 },
-              { text: "Neither bank has priority; they share pro rata according to the amounts owed.", why: "There is a ranking: the purchase-money lender comes first.", trap: 5 },
-              { text: "The second bank, because its purchase-money mortgage has priority over an earlier after-acquired-property clause.", why: "The first bank's lien attached to the parcel only as the developer acquired it, and the developer acquired it subject to the purchase-money mortgage." },
+              { text: "Neither bank has priority over the other; they share the proceeds pro rata according to the amounts owed.", why: "There is a ranking: the purchase-money lender comes first.", trap: 5 },
+              { text: "The second bank, because a purchase-money mortgage outranks an earlier after-acquired-property clause.", why: "The first bank's lien attached to the parcel only as the developer acquired it, and the developer acquired it subject to the purchase-money mortgage." },
             ],
             answer: 3,
             facts: ["purchase-money mortgage on the parcel", "all land the developer then owned or later acquired"],
@@ -1438,18 +1523,18 @@
           },
           {
             id: "u11-h-pmm-vendor", kind: "hypo", cat: "IV.A", callType: "status", rule: "u11-r-pmm", issue: "seller's purchase-money mortgage versus lender's",
-            stem: "A buyer bought a building for $500,000 at a single closing. A bank lent the buyer $350,000 and took a purchase-money mortgage on the building, and the seller took back a second purchase-money mortgage for the remaining $150,000. The bank recorded its mortgage first, and the seller recorded hers an hour later. The jurisdiction follows the Restatement rule that a seller's purchase-money mortgage has priority over a third-party lender's purchase-money mortgage on the same purchase, unless the seller agreed to rank behind the lender. The seller made no such agreement. The buyer defaulted.",
+            stem: "A buyer bought a building for $500,000 at a single closing. A bank lent the buyer $350,000 and took a purchase-money mortgage on the building, and the seller took back a second purchase-money mortgage for the remaining $150,000. The bank knew, before it recorded, that the seller was taking back a purchase-money mortgage. The bank recorded its mortgage first, and the seller recorded hers an hour later. The jurisdiction has a notice recording statute and follows the Restatement rule that a seller's purchase-money mortgage has priority over a third-party lender's purchase-money mortgage on the same purchase, unless the seller agreed to rank behind the lender. The seller made no such agreement. The buyer defaulted.",
             call: "Which mortgage has priority?",
             options: [
               { text: "The seller's mortgage, because the stated rule ranks it ahead of the bank's.", why: "The rule the stem states ranks the seller's purchase-money mortgage first, and there was no agreement to subordinate." },
-              { text: "The bank's mortgage, because it was recorded first and the first to record has priority.", why: "First in time or in recording is the default; the stated purchase-money rule displaces it between these two mortgages.", trap: 2 },
+              { text: "The bank's mortgage, because it was recorded first and the first to record has priority.", why: "The bank knew of the seller's mortgage, so the notice statute does not help it, and the stated purchase-money rule ranks the seller first.", trap: 2 },
               { text: "The bank's mortgage, because it financed most of the price and so must be repaid first.", why: "The size of a loan does not set priority.", trap: 8 },
               { text: "Neither, because the two purchase-money mortgages share the proceeds pro rata.", why: "No rule splits them pro rata; the stated rule ranks the seller's mortgage first.", trap: 5 },
             ],
             answer: 0,
             facts: ["a seller's purchase-money mortgage has priority", "made no such agreement"],
             say: "Where the stem says so, the seller who takes back a mortgage ranks ahead of the bank that lent the rest.",
-            status: "general", src: "Rest. (3d) Prop.: Mortgages §7.2(c) (general; some courts decline it, so the stem states the rule)",
+            status: "general", src: "Rest. (3d) Prop.: Mortgages §7.2(c) (general; the priority is subject to the recording act, so the stem gives the bank notice; some courts decline the rule, so the stem states it)",
           },
           {
             id: "u11-r-future-advances", kind: "rule", cat: "IV.A", title: "Future advance mortgages",
@@ -1460,6 +1545,7 @@
             exceptions: [
               "A lender that made an optional advance before it had notice of the intervening lien keeps priority for that advance",
               "Obligatory advances keep priority even after notice of a junior lien",
+              "Courts divide on whether the junior's recording alone is notice to the senior lender or actual notice is needed; the stem says what the lender knew",
             ],
             split: {
               traditional: "An optional advance made with notice of an intervening lien ranks behind that lien.",
@@ -1476,7 +1562,7 @@
               { t: "mcq", q: "A lender is bound by the loan agreement to make an advance. A second mortgage is recorded and the lender learns of it. The advance...", options: ["Keeps the first mortgage's priority", "Ranks behind the second mortgage", "Ranks equally with the second mortgage"], a: "Keeps the first mortgage's priority", why: "An obligatory advance keeps priority whatever notice the lender has." },
             ],
             hook: "Obligatory advances are promises, so they keep their place in line; optional advances are favors, and a favor made with notice goes to the back.",
-            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property IV.A); Rest. (3d) Prop.: Mortgages §2.3 (general; the split is flagged, VERIFY); property.md Module 25",
+            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property IV.A); Rest. (3d) Prop.: Mortgages §2.3 (general, not re-read; the split is flagged, so the stem states the rule); property.md Module 25",
           },
           {
             id: "u11-h-future-advance-optional", kind: "hypo", cat: "IV.A", callType: "status", rule: "u11-r-future-advances", issue: "optional advance with notice",
@@ -1528,7 +1614,7 @@
               { t: "tf", q: "A senior mortgage modified to the prejudice of a junior loses priority to the extent of the prejudice.", a: true, why: "The junior is not made worse off by a modification it did not agree to." },
             ],
             hook: "The refinancer who pays off the first mortgage steps into the first lender's shoes, but only as far as the money it put in.",
-            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property IV.C); Rest. (3d) Prop.: Mortgages §7.6 (general; the knowledge point differs between the traditional and Restatement approaches, so the stem says); property.md Module 25",
+            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property IV.C); Rest. (3d) Prop.: Mortgages §7.6 (subrogation) and §7.3 (modification of senior mortgages) (general; the knowledge point differs between the traditional and Restatement approaches, so the stem says); property.md Module 25",
           },
           {
             id: "u11-h-subrogation-refi", kind: "hypo", cat: "IV.C", callType: "status", rule: "u11-r-subrogation", issue: "equitable subrogation after refinancing", exam: ["mbe"],
@@ -1561,6 +1647,21 @@
             status: "general", src: "property.md Module 25 (subordination by agreement, general)",
           },
           {
+            id: "u11-h-senior-modification", kind: "hypo", cat: "IV.C", callType: "status", rule: "u11-r-subrogation", issue: "senior modified to junior's prejudice", exam: ["mbe"],
+            stem: "An owner's land was subject to a first mortgage held by a bank, securing a $200,000 loan at 5 percent, and a recorded second mortgage held by a lender, securing $60,000. The first mortgage reserved no right to modify its terms. Without the lender's knowledge or consent, the bank and the owner later agreed to raise the rate on the first loan to 9 percent. The owner defaulted on both loans, and the land sold at foreclosure for $250,000 after costs. The bank claims $230,000, of which $20,000 is interest that accrued only because of the rate increase.",
+            call: "How should the $250,000 be distributed?",
+            options: [
+              { text: "$210,000 to the bank, then $40,000 to the lender; the extra interest ranks behind the lender.", why: "A senior mortgage modified to a junior's material prejudice keeps priority except to the extent of the prejudice, so the $20,000 increase ranks after the second mortgage." },
+              { text: "$230,000 to the bank, then $20,000 to the lender, because the first mortgage keeps its full priority.", why: "A modification that prejudices a junior does not carry the senior's priority for the added amount.", trap: 5 },
+              { text: "$60,000 to the lender, then $190,000 to the bank, because the modification cost the bank its priority.", why: "The senior loses priority only to the extent of the prejudice; its original debt still ranks first.", trap: 7 },
+              { text: "Pro rata between the bank and the lender, because the modification made the mortgages equal in rank.", why: "No rule makes them equal; the original first-mortgage debt keeps first place.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["Without the lender's knowledge or consent", "accrued only because of the rate increase"],
+            say: "Change the senior loan behind the junior's back and the change, not the whole loan, drops below the junior.",
+            status: "general", src: "Rest. (3d) Prop.: Mortgages §7.3(b) (modification of senior mortgages; general); property.md Module 25",
+          },
+          {
             id: "u11-st-priority", kind: "steps", cat: "IV", title: "Ranking competing liens on one parcel (a working order)", exam: ["mbe"],
             steps: ["Is there a real property tax lien with statutory superpriority?", "Is any mortgage a purchase-money mortgage against claims arising through the buyer?", "Did any lienholder agree to subordinate, or did a senior modify its loan to a junior's prejudice?", "Otherwise rank first in time, subject to the recording act", "Within one mortgage, separate obligatory advances from optional ones"],
             distractors: ["Which lender lent the larger sum?", "Which lender is the larger institution?", "Which lien was drafted first?"],
@@ -1587,7 +1688,7 @@
               { t: "tf", q: "A judgment lien attaches to land in the county where the judgment is docketed.", a: true, why: "That is the usual statutory rule." },
             ],
             hook: "Taxes first: by statute, the county's lien jumps the line.",
-            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property V.E); I.R.C. §6323(a) (general; VERIFY); property.md Module 31",
+            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property V.E); 26 U.S.C. §6323(a) (general); property.md Module 31",
           },
           {
             id: "u11-h-tax-lien", kind: "hypo", cat: "V.E", callType: "status", rule: "u11-r-liens", issue: "tax lien versus earlier mortgage", exam: ["mbe"],
@@ -1604,7 +1705,7 @@
             say: "Taxes first. The statute puts the county ahead of the mortgage that came before it.",
             status: "general", src: "property.md Module 31 (P31-1, rewritten); the stem states the statute",
           },
-          { id: "u11-c-tyler", kind: "case", subject: "conlaw", name: "Tyler v. Hennepin County", year: 2023, holding: "A county that sells a home for unpaid taxes may keep only the taxes owed; keeping the surplus is a taking that requires just compensation.", facts: "A county sold a woman's condominium for far more than her tax debt and kept the surplus.", say: "Tax foreclosure: the county gets its taxes, not the owner's leftover equity.", status: "general", src: "Tyler v. Hennepin County, 598 U.S. 631 (2023) (from memory, VERIFY)" },
+          { id: "u11-c-tyler", kind: "case", subject: "conlaw", name: "Tyler v. Hennepin County", year: 2023, holding: "A county that sells a home for unpaid taxes may keep only the taxes owed; keeping the surplus is a taking that requires just compensation.", facts: "A county sold a woman's condominium for far more than her tax debt and kept the surplus.", say: "Tax foreclosure: the county gets its taxes, not the owner's leftover equity.", status: "general", src: "Tyler v. Hennepin County, 598 U.S. 631 (2023)" },
         ],
       },
       {
@@ -1619,6 +1720,7 @@
             distractorElements: ["Payment of the property taxes", "Good faith belief that the land is one's own", "A written claim of title"],
             exceptions: [
               "Continuous means the use an average owner of that kind of land would make: seasonal use can qualify",
+              "Abandonment by the possessor, or the owner's effective re-entry or suit, interrupts the period; it starts again from zero",
               "Permission, a license or a lease defeats hostility; a tenant cannot possess adversely to the landlord during the lease",
               "The period is state-specific, so the stem gives it; most states do not require payment of taxes or good faith",
             ],
@@ -1639,7 +1741,7 @@
               { t: "bucket", q: "Satisfies the element, or not?", buckets: ["Satisfies", "Does not satisfy"], items: [{ text: "A family occupies a beach cabin every summer, as a typical owner of such a cabin would", bucket: "Satisfies" }, { text: "A neighbor keeps cattle on the strip, but the owner's cattle graze it as well", bucket: "Does not satisfy" }, { text: "A possessor secretly uses a remote cave on the land, with nothing visible to anyone who inspects the parcel", bucket: "Does not satisfy" }, { text: "A neighbor builds a barn on the strip, plainly visible from the road", bucket: "Satisfies" }] },
             ],
             hook: "CHANGE: Continuous, Hostile, Actual, Notorious, Goes on for the period, Exclusive. Texas flavor: the rancher who moves the fence and runs cattle there.",
-            status: "general", src: "Mannillo v. Gorski, 54 N.J. 378 (1969) (general); LII Wex, adverse possession; hooks.jsonl (CHANGE); property.md Module 26",
+            status: "general", src: "Mannillo v. Gorski, 54 N.J. 378, 255 A.2d 258 (1969) (general); LII Wex, adverse possession; hooks.jsonl (CHANGE); property.md Module 26",
           },
           {
             id: "u11-h-ap-permission", kind: "hypo", cat: "V.A", callType: "prevail", rule: "u11-r-ap-elements", issue: "permission defeats hostility", grid: true,
@@ -1697,7 +1799,6 @@
               "Some states shorten the period for possession under color of title",
             ],
             cite: "Howard v. Kunto",
-            numbers: [{ label: "Texas, for flavor only (the exam gives the period): possession under title or color of title (Tex. Civ. Prac. & Rem. Code §16.024)", value: "3 years" }],
             ex: [
               { facts: "A holder of a void deed to 100 acres farms 20 of them for the full period; no one occupies the other 80.", result: "In a color-of-title jurisdiction she owns all 100 acres." },
               { facts: "One possessor orally hands over the lot to another after 8 years.", result: "Privity exists: the second tacks the first's years." },
@@ -1707,7 +1808,8 @@
               { t: "tf", q: "A possessor with no document (a claim of right) who occupies part of a tract acquires the whole tract.", a: false, why: "Only color of title extends possession to the whole described parcel." },
               { t: "tf", q: "Tacking is permitted when the earlier possessor voluntarily hands the land to the next, even without a deed.", a: true, why: "A voluntary transfer of possession supplies privity." },
             ],
-            status: "general", src: "Howard v. Kunto, 3 Wn. App. 393 (1970) (general); Tex. Civ. Prac. & Rem. Code §16.024; property.md Module 26",
+            hook: "Some states shorten the period for possession under color of title; the question will give you the period.",
+            status: "general", src: "Howard v. Kunto, 3 Wn. App. 393, 477 P.2d 210 (1970) (general); property.md Module 26",
           },
           {
             id: "u11-h-ap-tacking", kind: "hypo", cat: "V.A", callType: "prevail", rule: "u11-r-ap-color-tacking", issue: "tacking by voluntary transfer", grid: true,
@@ -1742,12 +1844,13 @@
           {
             id: "u11-r-ap-limits", kind: "rule", cat: "V.A", title: "When the clock starts, stops and cannot run",
             say: "A disability at accrual delays the clock; a future interest is not hurt until it becomes possessory; the government and cotenants are special.",
-            elements: ["A disability (such as minority) existing when the claim accrues delays the start of the period", "A disability arising later does not stop the clock, and disabilities do not tack", "Against a future interest, the clock starts only when the interest becomes possessory", "Adverse possession against a life tenant bars only the life estate", "No adverse possession against the government", "A cotenant needs ouster or clear repudiation"],
+            elements: ["A disability (such as minority) existing when the claim accrues delays the start of the period", "A disability arising later does not stop the clock, and disabilities do not tack", "Against a future interest that existed at entry, the clock starts only when it becomes possessory", "Adverse possession against a life tenant bars only the life estate", "No adverse possession against the government", "A cotenant needs ouster or clear repudiation"],
             ordered: false,
             distractorElements: ["The clock runs against a remainder from the day the possessor enters", "A disability arising in the last year stops the clock"],
             exceptions: [
               "The new title vests at the end of the period without a judgment, but a judgment is needed for marketable or insurable title",
               "Agreed-boundary and acquiescence are separate doctrines that can fix a disputed boundary line",
+              "If the possession began against a fee owner who later created a life estate or other future interest, the period already running continues against all of them",
             ],
             ex: [
               { facts: "A stranger occupies land held 'to A for life, then to B'. A dies after 20 years.", result: "B's clock starts at A's death; the stranger holds only A's life estate against B." },
@@ -1792,6 +1895,21 @@
             status: "general", src: "property.md Module 26 (P26-5, rewritten)",
           },
           {
+            id: "u11-h-ap-later-remainder", kind: "hypo", cat: "V.A", callType: "prevail", rule: "u11-r-ap-limits", issue: "remainder created after possession began", grid: true,
+            stem: "A stranger entered an owner's vacant tract and occupied it openly, continuously and without permission. Five years later, the owner, who then held the tract in fee simple, conveyed it 'to my daughter for life, then to my son.' The stranger stayed on. The daughter died in the thirteenth year of the stranger's occupation, and in the seventeenth year the son sued the stranger for possession. The statutory period is 15 years.",
+            call: "Will the son prevail?",
+            options: [
+              { text: "Yes, because the period could not run against the son's remainder until the daughter died.", why: "That protects a future interest that existed when the possession began; this remainder was carved out after the clock had started against the fee owner.", trap: 9 },
+              { text: "Yes, because the owner's conveyance interrupted the possession and restarted the clock.", why: "A conveyance by the owner is not a re-entry or a suit, so it does not interrupt the stranger's possession.", trap: 5 },
+              { text: "No, because the period began against the fee owner and kept running against those who took from her.", why: "The clock started against the whole fee; the daughter and the son took subject to it, so after 15 years the stranger owns the tract." },
+              { text: "No, because a remainderman who does not sue during the life estate loses the claim.", why: "A remainderman generally cannot sue for possession during the life estate; the son loses because the clock had started before his remainder existed.", trap: 5 },
+            ],
+            answer: 2,
+            facts: ["Five years later", "then held the tract in fee simple"],
+            say: "A clock that started against a full owner keeps running against everyone who later takes from her.",
+            status: "general", src: "property.md Module 26 (general black-letter rule: a period that begins against a fee owner is not suspended by her later creation of future interests)",
+          },
+          {
             id: "u11-h-ap-reverter", kind: "hypo", cat: "V.A", callType: "prevail", rule: "u11-r-ap-limits", issue: "adverse possession against a reverter", grid: true,
             stem: "An owner conveyed a tract to a church 'so long as the land is used for church purposes, and if it ceases to be so used, to revert to the grantor.' A neighbor fenced a corner of the tract and used it openly, without permission, from year 2 after the conveyance. The church stopped using the land for church purposes in year 8, and the neighbor stayed in occupation until year 20. The statutory period is 15 years. The grantor then sued the neighbor to recover the corner.",
             call: "Will the grantor prevail?",
@@ -1833,12 +1951,13 @@
               { text: "A possessor grazes cattle on the land with the owner's oral permission", bucket: "Fails", why: "Permission defeats hostility." },
               { text: "Two strangers occupy in turn, 4 years each, with no transfer between them, where the period is 7 years", bucket: "Fails", why: "No privity, so no tacking." },
               { text: "A possessor builds a fence by mistake 10 feet over the line and farms to it for the full period, under the objective test", bucket: "Can succeed", why: "State of mind is irrelevant under the objective test." },
+              { text: "A possessor occupies for 8 years, abandons the land for 3 years, then returns for 8 more, where the period is 15", bucket: "Fails", why: "Abandonment breaks continuity: the clock restarts on her return." },
             ],
             say: "Permission, a government owner, a lone cotenant or a gap between strangers: those fail. Real, hostile use for the full period wins.",
             status: "general", src: "property.md Module 26",
           },
-          { id: "u11-c-howard", kind: "case", subject: "property", name: "Howard v. Kunto", year: 1970, holding: "Seasonal use of a vacation home can be continuous possession, and successive occupants are in privity, so they may tack, even though their deeds omitted the land actually occupied.", say: "Howard v. Kunto: summer use counts as continuous, and a handoff of the occupied land supplies privity for tacking.", status: "general", src: "Howard v. Kunto, 3 Wn. App. 393, 477 P.2d 210 (1970) (general; VERIFY); property.md Module 26" },
-          { id: "u11-c-mannillo", kind: "case", subject: "property", name: "Mannillo v. Gorski", year: 1969, holding: "A possessor's mistaken belief about the boundary does not defeat hostility; adverse possession turns on what the possessor did, not on a hostile intent.", say: "Mannillo v. Gorski: an honest boundary mistake does not defeat hostility under the objective majority test.", status: "general", src: "Mannillo v. Gorski, 54 N.J. 378, 255 A.2d 258 (1969) (general; VERIFY); property.md Module 26" },
+          { id: "u11-c-howard", kind: "case", subject: "property", name: "Howard v. Kunto", year: 1970, holding: "Seasonal use of a vacation home can be continuous possession, and successive occupants are in privity, so they may tack, even though their deeds omitted the land actually occupied.", say: "Howard v. Kunto: summer use counts as continuous, and a handoff of the occupied land supplies privity for tacking.", status: "general", src: "Howard v. Kunto, 3 Wn. App. 393, 477 P.2d 210 (1970); property.md Module 26" },
+          { id: "u11-c-mannillo", kind: "case", subject: "property", name: "Mannillo v. Gorski", year: 1969, holding: "A possessor's mistaken belief about the boundary does not defeat hostility; adverse possession turns on what the possessor did, not on a hostile intent.", say: "Mannillo v. Gorski: an honest boundary mistake does not defeat hostility under the objective majority test.", status: "general", src: "Mannillo v. Gorski, 54 N.J. 378, 255 A.2d 258 (1969); property.md Module 26" },
         ],
       },
       {
@@ -2097,13 +2216,14 @@
           },
           {
             id: "u11-r-covenants", kind: "rule", cat: "V.B", title: "The six covenants of title",
-            say: "Three present covenants (seisin, right to convey, against encumbrances) break at delivery and do not run; three future covenants run and break on eviction.",
+            say: "Three present covenants (seisin, right to convey, against encumbrances) break at delivery and do not run; three future covenants run and break later.",
             elements: ["Seisin: the grantor owns the estate conveyed", "Right to convey: the grantor has the power to transfer it", "Against encumbrances: no mortgages, liens or easements except those the deed excepts", "Warranty: the grantor will defend the title against lawful claims", "Quiet enjoyment: the grantee will not be evicted by paramount title", "Further assurances: the grantor will sign what is needed to perfect the title"],
             ordered: false,
             distractorElements: ["Marketable title", "Habitability"],
             exceptions: [
-              "Future covenants (warranty, quiet enjoyment, further assurances) are breached only by actual or constructive eviction by paramount title, and they run with the land",
-              "Damages are generally capped at the price paid, plus interest and costs",
+              "Warranty and quiet enjoyment are breached only by actual or constructive eviction by paramount title; further assurances is breached when the grantor refuses to do what is needed to perfect the title. All three future covenants run with the land",
+              "The grantee's knowledge of an encumbrance such as a mortgage does not bar a claim on the covenant against encumbrances; the measure is the cost of removing it or the loss in value, capped at the price",
+              "Damages are generally capped at the price paid, plus interest and costs; later improvements and appreciation are not recoverable from the grantor",
               "General warranty deed: all six covenants. Special warranty deed: covenants only against the grantor's own acts. Quitclaim: none",
             ],
             split: {
@@ -2155,7 +2275,7 @@
           },
           {
             id: "u11-h-covenant-future-remote", kind: "hypo", cat: "V.B", callType: "liable", rule: "u11-r-covenants", issue: "future covenants and a remote grantee",
-            stem: "An owner conveyed land to a first buyer by general warranty deed, although a stranger actually held title to the land. The first buyer conveyed it to a second buyer by general warranty deed. The stranger then proved paramount title and evicted the second buyer. The second buyer sued the owner for breach of the covenants in the owner's deed. The jurisdiction follows the majority rule on covenants of title.",
+            stem: "An owner conveyed land to a first buyer by general warranty deed, although a stranger actually held title to the land. The first buyer conveyed it to a second buyer by general warranty deed. The stranger then proved paramount title and evicted the second buyer. The second buyer sued the owner for breach of the covenants in the owner's deed.",
             call: "Which claim may the second buyer assert against the owner?",
             options: [
               { text: "Breach of the covenant of seisin, because the owner did not own the land.", why: "Seisin is a present covenant: breached at delivery and, under the majority rule, not enforceable by a remote grantee.", trap: 5 },
@@ -2167,6 +2287,51 @@
             facts: ["stranger actually held title", "evicted the second buyer"],
             say: "Evicted? Sue on warranty and quiet enjoyment: they ride along with the land.",
             status: "general", src: "property.md Module 27 (P27-4, rewritten)",
+          },
+          {
+            id: "u11-h-special-warranty", kind: "hypo", cat: "V.B", callType: "prevail", rule: "u11-r-covenants", issue: "special warranty and a prior owner's grant", grid: true,
+            stem: "A prior owner of land granted a neighbor a recorded right-of-way across it. Years later the prior owner sold the land to a seller, and later still the seller sold it to a buyer by a special warranty deed that did not mention the right-of-way. The seller never granted any interest in the land to anyone. After closing, the neighbor began using the right-of-way, and the buyer sued the seller for breach of the deed's covenants.",
+            call: "Will the buyer prevail?",
+            options: [
+              { text: "Yes, because the right-of-way was an encumbrance on the land when the seller delivered the deed.", why: "That would breach a general warranty deed's covenant against encumbrances; a special warranty deed answers only for the grantor's own acts.", trap: 9 },
+              { text: "Yes, because every deed of land implies a covenant that the land is free of easements.", why: "No such covenant is implied; a deed carries the covenants it gives, and this one gives only special warranty.", trap: 5 },
+              { text: "No, because a special warranty deed covers only defects arising from the grantor's own acts.", why: "The right-of-way came from a prior owner, not from the seller, so it falls outside the special warranty." },
+              { text: "No, because the right-of-way was recorded, so the buyer took the land with notice of it.", why: "Notice does not bar a claim on a covenant; the buyer loses because the special warranty does not reach a prior owner's grant.", trap: 1 },
+            ],
+            answer: 2,
+            facts: ["special warranty deed", "never granted any interest in the land"],
+            say: "A special warranty deed answers only for what the grantor herself did; a burden from an earlier owner is outside it.",
+            status: "general", src: "property.md Module 27 (special warranty deed: covenants against the grantor's own acts)",
+          },
+          {
+            id: "u11-h-encumbrance-knowledge", kind: "hypo", cat: "V.B", callType: "remedy", rule: "u11-r-covenants", issue: "known encumbrance and covenant damages",
+            stem: "An owner conveyed land to a buyer for $150,000 by a general warranty deed that excepted no encumbrances. The land was subject to a recorded $40,000 mortgage, and the buyer knew of the mortgage before closing. The owner never paid it. To stop a foreclosure, the buyer paid off the $40,000 mortgage and then sued the owner for breach of the covenant against encumbrances.",
+            call: "What may the buyer recover?",
+            options: [
+              { text: "$40,000, the amount she paid to remove the mortgage; her knowledge of it does not bar the claim.", why: "The covenant protects even a grantee who knew of the encumbrance, and she recovers what she reasonably paid to remove it, which is within the price." },
+              { text: "Nothing, because a buyer who knew of the mortgage at closing accepted the land subject to it.", why: "Knowledge does not bar a claim on an express covenant against encumbrances; protection is what the covenant was for.", trap: 5 },
+              { text: "Nothing, because the covenant against encumbrances is breached only if the buyer is evicted.", why: "Eviction breaches the future covenants; the covenant against encumbrances is a present covenant, breached at delivery.", trap: 9 },
+              { text: "$150,000, the full price, because the covenant was breached on the day the deed was delivered.", why: "The price is a ceiling, not the measure: the buyer's loss is the $40,000 she paid to remove the encumbrance.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["the buyer knew of the mortgage before closing", "paid off the $40,000 mortgage"],
+            say: "Knowing about the mortgage does not waive the covenant: the buyer recovers what it cost to clear it, up to the price.",
+            status: "general", src: "property.md Module 27 (covenant against encumbrances; damages are the cost to remove, capped at the price; general)",
+          },
+          {
+            id: "u11-h-warranty-damages", kind: "hypo", cat: "V.B", callType: "remedy", rule: "u11-r-covenants", issue: "covenant damages capped at the price",
+            stem: "An owner conveyed a lot to a buyer for $100,000 by a general warranty deed. The buyer then built a house on the lot for $250,000. Five years after the conveyance, a stranger proved paramount title to the lot and evicted the buyer; by then the lot and house were worth $400,000. The buyer sued the owner for breach of the covenants of warranty and quiet enjoyment.",
+            call: "What is the most the buyer can recover from the owner?",
+            options: [
+              { text: "The $100,000 price, with interest, because covenant damages are capped at the price paid.", why: "The usual measure returns the purchase price with interest; the grantor does not insure later improvements or a rise in value." },
+              { text: "$400,000, the value of the lot and the house on the day the buyer was evicted.", why: "Value at eviction is not the measure; the grantor's liability is limited to what the grantor received.", trap: 5 },
+              { text: "$350,000, the price of the lot plus the cost of the house that the buyer built.", why: "The cost of improvements is not recoverable from the grantor on the covenants under the usual rule; the cap is the price.", trap: 5 },
+              { text: "Nothing, because the claim arose at delivery and is barred five years later.", why: "Warranty and quiet enjoyment are future covenants, breached by the eviction, so the claim arose when the stranger evicted the buyer.", trap: 9 },
+            ],
+            answer: 0,
+            facts: ["evicted the buyer", "built a house on the lot for $250,000"],
+            say: "Covenant damages give back the price, with interest, not the house you built or the rise in value.",
+            status: "general", src: "property.md Module 27 (damages capped at the price paid, general)",
           },
           {
             id: "u11-p-deed-types", kind: "pairs", set: "Deeds and covenants", mode: "concept",
@@ -2190,6 +2355,7 @@
             exceptions: [
               "The estoppel runs against the grantor and those claiming under him, not against the true owner",
               "Courts differ on whether a special warranty deed passes after-acquired title; the stem will use a general warranty deed or a quitclaim",
+              "A deed recorded before its grantor acquired title: courts divide on whether it is in the chain of title for later buyers, so the stem says (lesson 8)",
             ],
             ex: [
               { facts: "An owner conveys by warranty deed land she does not own, then buys it from the true owner.", result: "Title passes to the grantee automatically." },
@@ -2230,7 +2396,7 @@
       },
       {
         id: "u11l7",
-        title: "Transfer by will and by operation of law",
+        title: "Wills, intestacy and title insurance",
         items: [
           {
             id: "u11-r-wills", kind: "rule", cat: "V.C", title: "Transfer by will: ademption, lapse and exoneration", exam: ["mbe"],
@@ -2240,7 +2406,7 @@
             distractorElements: ["A general devise of money is adeemed when the testator spends it", "The estate must always pay off a mortgage on a devised parcel"],
             exceptions: [
               "Modern approach (UPC §2-606): a devisee may take the unpaid sale price, insurance proceeds or a condemnation award",
-              "A lapsed gift falls into the residue unless the will or a statute provides otherwise: a gift to a stranger still lapses, because anti-lapse statutes cover only certain relatives (UPC §2-603: the testator's grandparents and their descendants; many states only descendants or siblings of the testator)",
+              "A lapsed gift falls into the residue unless the will or a statute provides otherwise: a gift to a stranger still lapses, because anti-lapse statutes cover only certain relatives (UPC §2-603: a grandparent, a descendant of a grandparent, or a stepchild of the testator; many states cover only descendants or siblings)",
               "Devises come in three kinds: specific (a particular parcel), general (a sum or kind of property from the estate) and residuary (what is left); only a specific devise adeems",
               "Intestacy: land passes to the heirs under the statute of the State where the land lies (the situs), whatever the owner's domicile",
             ],
@@ -2292,7 +2458,7 @@
             stem: "A testator's valid will devised 'my cabin to my brother' and 'all the rest of my property to my friend.' The brother died before the testator, leaving a daughter who survived the testator. The will said nothing about what should happen if the brother died first. The jurisdiction has an anti-lapse statute under which, when a devisee who is the testator's sibling or descendant dies before the testator, the devisee's descendants take the gift unless the will provides otherwise.",
             call: "Who is entitled to the cabin?",
             options: [
-              { text: "The brother's daughter, because the anti-lapse statute passes a covered relative's gift to her descendants.", why: "The brother is a sibling, the statute covers siblings, and the will says nothing to the contrary." },
+              { text: "The brother's daughter, because the anti-lapse statute saves a gift to a predeceased sibling.", why: "The brother is a sibling, the statute covers siblings, and the will says nothing to the contrary." },
               { text: "The friend, because a gift to a devisee who dies first lapses into the residue.", why: "That is the result without a statute; the anti-lapse statute applies to a predeceased sibling and saves the gift.", trap: 2 },
               { text: "The testator's heirs at law, because the lapsed gift passes by intestacy.", why: "The will has a residuary clause, and the statute saves the gift in any event; nothing passes by intestacy.", trap: 5 },
               { text: "The brother's estate, because a devise vests in the devisee when the will is signed.", why: "A will speaks at the testator's death; a devisee who dies first takes nothing, and his estate gets nothing.", trap: 5 },
@@ -2325,7 +2491,7 @@
               { text: "The spouse and the child equally, because the law of the State where the land lies governs.", why: "Real property passes by the intestacy law of the situs, here State B, whatever the owner's domicile." },
               { text: "The spouse alone, because the law of the decedent's domicile governs who takes his land.", why: "The domicile's law governs personal property; land follows the law of the State where it lies.", trap: 4 },
               { text: "The child alone, because land descends to the decedent's children ahead of a surviving spouse.", why: "Neither statute gives the child the whole farm.", trap: 5 },
-              { text: "The spouse alone, because a court of State A, where he lived and died, settles every question about his estate.", why: "A State A court cannot apply State A's statute to land located in State B.", trap: 10 },
+              { text: "The spouse alone, because a court of State A, where he lived and died, settles every question about his estate.", why: "Whichever court hears the case, succession to land is governed by the law of the State where the land lies.", trap: 10 },
             ],
             answer: 0,
             facts: ["owning a farm in State B", "died without a will"],
@@ -2347,6 +2513,90 @@
             ],
             say: "Specific names a thing, general names a sum, residuary takes what is left. Only specific devises adeem.",
             status: "general", src: "property.md Module 28 (specific, general and residuary devises)",
+          },
+          {
+            id: "u11-r-title-insurance", kind: "rule", cat: "V.D", title: "Title insurance", exam: ["mbe"],
+            say: "Title insurance indemnifies against defects that exist at the policy date, not those the insured creates; a standard policy excepts survey matters.",
+            elements: ["An indemnity contract against loss from title defects existing at the policy date", "The insurer defends covered claims and pays covered loss up to the policy limit", "An owner's policy protects the buyer; a lender's policy protects the mortgagee", "Excluded: matters created by the insured, and matters arising after the policy date", "Excluded: zoning and governmental regulation, and known matters the insured did not disclose", "A standard policy excepts what a survey or inspection would show"],
+            ordered: false,
+            distractorElements: ["The insurer guarantees the title is marketable", "The insurer pays the full value of the land whatever the limit"],
+            exceptions: [
+              "Extended coverage, issued after a survey and inspection, removes some standard exceptions",
+              "Insurable title is not marketable title unless the contract says so (lesson 1)",
+              "A policy covers hidden record risks such as a forgery or an undelivered deed, unless it excludes them",
+              "An owner's policy does not run with the land: a later buyer for value is not insured and must buy her own policy",
+            ],
+            ex: [
+              { facts: "A forged deed in the chain before the policy date surfaces; no exclusion applies.", result: "The insurer must defend and indemnify up to the policy limit." },
+              { facts: "The insured grants an easement after the policy date.", result: "Not covered: a matter created by the insured and arising after the policy date." },
+            ],
+            terms: ["title insurance", "owner's policy", "lender's policy", "policy limit"],
+            quiz: [
+              { t: "tf", q: "A title insurance policy covers a defect that the insured created after the policy date.", a: false, why: "It is excluded." },
+              { t: "tf", q: "Title insurance covers hidden record defects such as a forged deed in the chain, unless the policy excludes them.", a: true, why: "That is the risk it is bought for." },
+              { t: "mcq", q: "A lender's policy protects...", options: ["The mortgagee", "The buyer", "The seller"], a: "The mortgagee", why: "An owner's policy protects the buyer." },
+            ],
+            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property V.D); property.md Module 30",
+          },
+          {
+            id: "u11-h-ti-created", kind: "hypo", cat: "V.D", callType: "liable", rule: "u11-r-title-insurance", issue: "title insurance and matters the insured created", grid: true, exam: ["mbe"],
+            stem: "A buyer purchased a house and obtained an owner's title insurance policy. A year later the buyer granted a neighbor an express easement across the lot. The neighbor's use reduced the lot's value, and the buyer filed a claim under the policy. The policy contains the standard exclusion for matters created or agreed to by the insured.",
+            call: "Is the insurer liable?",
+            options: [
+              { text: "Yes, because an owner's policy covers any easement that burdens the land, whoever created it.", why: "It covers existing defects, not burdens that the insured creates.", trap: 5 },
+              { text: "Yes, because the neighbor's easement impairs the very title that the policy insures against loss.", why: "It does impair the title, but the exclusion for matters created by the insured applies.", trap: 2 },
+              { text: "No, because a title insurance policy never covers any easement of any kind.", why: "It can cover existing easements; this one is excluded because the insured created it.", trap: 7 },
+              { text: "No, because the insured created the easement after the policy date, a matter the policy excludes.", why: "Policies cover defects existing at the policy date, not the insured's own later acts." },
+            ],
+            answer: 3,
+            facts: ["created or agreed to by the insured", "granted a neighbor an express easement"],
+            say: "Insurance covers the title you bought, not the burdens you add afterward.",
+            status: "general", src: "property.md Module 30 (P30-1, rewritten)",
+          },
+          {
+            id: "u11-h-ti-forgery", kind: "hypo", cat: "V.D", callType: "liable", rule: "u11-r-title-insurance", issue: "title insurance and a hidden forgery", exam: ["mbe"],
+            stem: "A buyer bought a farm and received an owner's title insurance policy that excluded only matters created by the insured, matters arising after the policy date, and governmental regulation. Two years later a person claiming to be the heir of a former owner sued the buyer, alleging that a deed in the seller's chain of title, executed forty years earlier, was forged. The deed was in fact forged. The buyer tendered the claim to the insurer.",
+            call: "What is the insurer's obligation?",
+            options: [
+              { text: "None, because a defect in the record chain was the buyer's risk, discoverable by the buyer's own search.", why: "Title insurance exists to cover hidden defects that a search does not reveal.", trap: 5 },
+              { text: "To pay the full market value of the farm to the buyer, whatever limit the policy states.", why: "Liability is capped at the policy limit.", trap: 7 },
+              { text: "None, because the insurer is liable only for defects that a survey would reveal.", why: "Matters a survey would show are standard exceptions, not the only covered risks.", trap: 5 },
+              { text: "To defend the buyer and pay covered loss up to the policy limit, because the forgery is a covered hidden risk.", why: "A forged deed in the chain is a covered hidden risk." },
+            ],
+            answer: 3,
+            facts: ["was in fact forged", "excluded only matters created by the insured"],
+            say: "Forgery in the chain is what title insurance is for: defend, then pay up to the limit.",
+            status: "general", src: "property.md Module 30 (P30-2, rewritten)",
+          },
+          {
+            id: "u11-h-ti-survey", kind: "hypo", cat: "V.D", callType: "liable", rule: "u11-r-title-insurance", issue: "standard survey exception", grid: true, exam: ["mbe"],
+            stem: "A buyer bought a lot and received a standard owner's title insurance policy. The buyer did not have a survey made. The policy excepted 'any encroachment or other matter that an accurate survey or inspection of the land would disclose.' A year later the buyer learned that a neighbor's garage, built long before, extended four feet onto the lot, and a court held that the neighbor had acquired that strip by adverse possession. The buyer claimed the loss under the policy.",
+            call: "Is the insurer liable for the loss?",
+            options: [
+              { text: "No, because a survey or inspection would have disclosed the garage, and the policy excepts that.", why: "A standard policy excepts what a survey or inspection would show, and the encroaching garage was there to be seen." },
+              { text: "No, because title insurance never covers a loss caused by adverse possession.", why: "Extended coverage can reach off-record risks; this loss is outside the policy because of the survey exception.", trap: 7 },
+              { text: "Yes, because the encroachment existed on the policy date, and the policy covers defects existing then.", why: "Existing at the policy date is necessary but not enough; the survey exception removes this matter.", trap: 2 },
+              { text: "Yes, because the buyer did not know of the encroachment when the policy was issued.", why: "The buyer's ignorance does not override an exception for matters a survey would disclose.", trap: 5 },
+            ],
+            answer: 0,
+            facts: ["did not have a survey made", "extended four feet onto the lot"],
+            say: "A standard policy insures the record, not the ground: what a survey or inspection would show is excepted.",
+            status: "general", src: "property.md Module 30 (standard survey exception, general)",
+          },
+          {
+            id: "u11-h-ti-no-run", kind: "hypo", cat: "V.D", callType: "liable", rule: "u11-r-title-insurance", issue: "owner's policy does not run", grid: true, exam: ["mbe"],
+            stem: "An owner bought a house and received an owner's title insurance policy. Years later she sold the house to a buyer by general warranty deed, and the buyer bought no policy of her own. After closing, a deed forged decades earlier surfaced in the chain of title, and the buyer lost the house to the true heir. The buyer made a claim under the owner's policy.",
+            call: "Is the insurer liable to the buyer under the owner's policy?",
+            options: [
+              { text: "No, because an owner's policy protects only the insured and does not run with the land.", why: "The buyer was never insured; her remedy is against the owner on the deed's covenants of title." },
+              { text: "No, because a forged deed in the chain is a risk that title insurance does not cover.", why: "A forgery is a classic covered risk; the problem is that the buyer is not an insured.", trap: 5 },
+              { text: "Yes, because title insurance runs with the land to each later owner of the property.", why: "Covenants of warranty run with the land; an owner's policy does not, so a later buyer needs her own.", trap: 5 },
+              { text: "Yes, because the forgery existed on the policy date, so the defect is a covered one.", why: "The defect is covered, but only for the insured, and the buyer is not the insured.", trap: 2 },
+            ],
+            answer: 0,
+            facts: ["bought no policy of her own", "made a claim under the owner's policy"],
+            say: "An owner's policy protects the person who bought it; the next buyer needs her own, and sues her seller on the deed.",
+            status: "general", src: "property.md Module 30 (an owner's policy does not run with the land, general)",
           },
         ],
       },
@@ -2443,7 +2693,7 @@
             call: "Who owns the lot?",
             options: [
               { text: "The second buyer, because she paid value without notice and recorded first.", why: "She satisfies both parts of a race-notice statute; she would also win under a notice statute and under a race statute." },
-              { text: "The first buyer, because she was first in time and her deed was valid when delivered.", why: "That is the common-law result; the recording statute lets a later purchaser without notice who records first defeat an unrecorded deed.", trap: 11 },
+              { text: "The first buyer, because she was first in time and her deed was valid when delivered.", why: "That is the common-law result; the recording statute lets a later purchaser without notice who records first defeat an unrecorded deed.", trap: 4 },
               { text: "The first buyer, because a deed recorded the next day relates back to its date of delivery.", why: "Recording does not relate back; the second buyer's recording came first.", trap: 5 },
               { text: "Neither, because both paid value, so they hold the lot as tenants in common.", why: "The statute gives priority to one of them; it does not create a cotenancy.", trap: 5 },
             ],
@@ -2451,21 +2701,6 @@
             facts: ["no notice of the first deed", "recorded at once"],
             say: "No notice and first to record: the later buyer wins under a notice, race-notice or race statute.",
             status: "general", src: "property.md Module 29; hooks.jsonl (Race, Notice, Race-notice)",
-          },
-          {
-            id: "u11-h-rec-record-notice", kind: "hypo", cat: "V.D", callType: "title", rule: "u11-r-bfp", issue: "record notice from a prior recorded deed",
-            stem: "In a jurisdiction with a notice recording statute, an owner conveyed a farm to a first buyer, who recorded her deed the same day. A year later the owner conveyed the same farm to a second buyer for full value. The second buyer never searched the records and had no actual knowledge of the first deed. The first buyer sued to quiet title against the second buyer.",
-            call: "Who owns the farm?",
-            options: [
-              { text: "The first buyer, because her recorded deed gave the second buyer constructive notice of it.", why: "A properly recorded deed in the chain is record notice to every later buyer, whether or not the buyer searched." },
-              { text: "The second buyer, because she had no actual knowledge of the first deed.", why: "Notice includes record notice, not just actual knowledge; the second buyer is charged with what a search would have shown.", trap: 2 },
-              { text: "The second buyer, because a purchaser has no duty to search the records before buying.", why: "A buyer may skip the search, but the law charges her with what the records contain.", trap: 5 },
-              { text: "The first buyer, because she was first in time and recording is irrelevant under a notice statute.", why: "The result is right, but recording matters here: it is what gave the second buyer record notice.", trap: 1 },
-            ],
-            answer: 0,
-            facts: ["recorded her deed the same day", "never searched the records"],
-            say: "A deed on the record warns every later buyer, whether or not she looks.",
-            status: "general", src: "property.md Module 29 (record notice); hooks.jsonl (Race, Notice, Race-notice)",
           },
           {
             id: "u11-r-bfp", kind: "rule", cat: "V.D", title: "Bona fide purchasers and notice",
@@ -2508,6 +2743,21 @@
             ],
             say: "Value and no notice. Gifts, inheritances, nominal prices and unasked questions are out.",
             status: "general", src: "property.md Module 29",
+          },
+          {
+            id: "u11-h-rec-record-notice", kind: "hypo", cat: "V.D", callType: "title", rule: "u11-r-bfp", issue: "record notice from a prior recorded deed",
+            stem: "In a jurisdiction with a notice recording statute, an owner conveyed a farm to a first buyer, who recorded her deed the same day. A year later the owner conveyed the same farm to a second buyer for full value. The second buyer never searched the records and had no actual knowledge of the first deed. The first buyer sued to quiet title against the second buyer.",
+            call: "Who owns the farm?",
+            options: [
+              { text: "The first buyer, because her recorded deed gave the second buyer constructive notice of it.", why: "A properly recorded deed in the chain is record notice to every later buyer, whether or not the buyer searched." },
+              { text: "The second buyer, because she had no actual knowledge of the first deed.", why: "Notice includes record notice, not just actual knowledge; the second buyer is charged with what a search would have shown.", trap: 2 },
+              { text: "The second buyer, because a purchaser has no duty to search the records before buying.", why: "A buyer may skip the search, but the law charges her with what the records contain.", trap: 5 },
+              { text: "The first buyer, because she was first in time and recording is irrelevant under a notice statute.", why: "The result is right, but recording matters here: it is what gave the second buyer record notice.", trap: 1 },
+            ],
+            answer: 0,
+            facts: ["recorded her deed the same day", "never searched the records"],
+            say: "A deed on the record warns every later buyer, whether or not she looks.",
+            status: "general", src: "property.md Module 29 (record notice); hooks.jsonl (Race, Notice, Race-notice)",
           },
           {
             id: "u11-h-inquiry-possession", kind: "hypo", cat: "V.D", callType: "title", rule: "u11-r-bfp", issue: "inquiry notice from possession", grid: true,
@@ -2575,7 +2825,7 @@
             call: "Will the first buyer prevail?",
             options: [
               { text: "Yes, because the judgment creditor gave no new value and is not a purchaser the statute protects.", why: "The statute protects purchasers and mortgagees for value; the creditor's old debt is not new value." },
-              { text: "Yes, because a judgment lien never attaches to land that the debtor has previously conveyed.", why: "Whether the lien reaches the land turns on the recording statute; the creditor loses because she is not a protected purchaser.", trap: 1 },
+              { text: "Yes, because a judgment lien attaches to land only after the creditor records a deed from the debtor.", why: "A docketed judgment becomes a lien by statute; no deed is needed. The creditor loses because she is not a protected purchaser.", trap: 5 },
               { text: "No, because a docketed judgment lien outranks every unrecorded deed.", why: "A lien creditor takes only the debtor's interest, subject to prior unrecorded interests unless the statute protects the creditor.", trap: 7 },
               { text: "No, because the creditor had no notice of the first deed, which is all the statute requires.", why: "The statute also requires the creditor to be a purchaser or mortgagee who gave value, and she is neither.", trap: 2 },
             ],
@@ -2608,6 +2858,7 @@
             exceptions: [
               "Most states use a grantor-grantee index; some use a tract index",
               "A buyer who searched only the correct names and periods in the chain is not charged with deeds outside it",
+              "Courts divide on a deed recorded before its grantor acquired title and on a deed recorded late, after the grantor's recorded deed to someone else; the stem says whether either is in the chain",
             ],
             ex: [
               { facts: "A bona fide purchaser sells to a buyer who knows of the earlier unrecorded deed.", result: "The buyer takes the purchaser's protection and wins." },
@@ -2652,7 +2903,37 @@
             status: "general", src: "property.md Module 29 (P29-4, rewritten)",
           },
           {
-            id: "u11-h-estoppel-recording", kind: "hypo", cat: "V.D", callType: "title", rule: "u11-r-estoppel-deed", issue: "estoppel by deed against a later purchaser", exam: ["mbe"],
+            id: "u11-h-estoppel-early-record", kind: "hypo", cat: "V.D", callType: "title", rule: "u11-r-shelter-wild", issue: "deed recorded before grantor had title", exam: ["mbe"],
+            stem: "The jurisdiction has a notice recording statute and a grantor-grantee index, and holds that a deed recorded before its grantor acquired title is outside the chain of title. A seller who held no title to a lot conveyed it to a first buyer by general warranty deed, and the first buyer recorded the deed at once. A year later the seller bought the lot from its true owner and recorded that deed. The seller then sold the lot to a second buyer for full value. The second buyer searched the grantor index under the seller's name from the date the seller acquired title, found nothing, had no other notice, and recorded.",
+            call: "Who owns the lot?",
+            options: [
+              { text: "The first buyer, because her deed was recorded first and estoppel passed the seller's later title to her.", why: "Estoppel binds the seller, but the stated rule puts the early-recorded deed outside the chain, so it gave the second buyer no notice.", trap: 2 },
+              { text: "The first buyer, because a searcher must check each grantor's name back to the start of the records.", why: "The stem states the rule: a searcher need not look under a grantor's name for the time before the grantor acquired title.", trap: 4 },
+              { text: "The second buyer, because the first deed, recorded before the seller had title, gave her no notice.", why: "Estoppel passed title to the first buyer as against the seller, but the second buyer paid value without record or other notice, so the notice statute protects her." },
+              { text: "The second buyer, because a deed from someone who does not own the land is void.", why: "The result is right, but the first deed was not void: estoppel by deed would pass the seller's later title to the first buyer as against the seller.", trap: 1 },
+            ],
+            answer: 2,
+            facts: ["recorded before its grantor acquired title", "from the date the seller acquired title"],
+            say: "Estoppel by deed binds the seller, but a deed recorded before the seller had title is invisible to a careful later buyer where the stem says so.",
+            status: "general", src: "property.md Module 27 and Module 29 (estoppel by deed versus the recording act; whether an early-recorded deed is in the chain is a split, so the stem states the rule)",
+          },
+          {
+            id: "u11-h-late-recorded", kind: "hypo", cat: "V.D", callType: "title", rule: "u11-r-shelter-wild", issue: "deed recorded late, outside the chain",
+            stem: "The jurisdiction has a notice recording statute and a grantor-grantee index, and holds that a deed recorded after its grantor's recorded deed of the same land to someone else is outside the chain of title. An owner conveyed a lot to a first buyer for value, and the first buyer did not record. The owner then conveyed the lot to a second buyer, who knew of the first deed and recorded. The first buyer then recorded. Later the second buyer sold the lot to a third buyer for full value. The third buyer searched the index, found the owner's deed to the second buyer, had no other notice, and recorded.",
+            call: "Who owns the lot?",
+            options: [
+              { text: "The first buyer, because she recorded before the third buyer bought or recorded.", why: "Under the stated rule her deed, recorded after the owner's recorded deed to the second buyer, is outside the third buyer's chain and gave no notice.", trap: 2 },
+              { text: "The first buyer, because the second buyer took with notice and so had no title to pass on.", why: "The second buyer could not defeat the first buyer, but the third buyer is herself a purchaser for value without notice.", trap: 9 },
+              { text: "The third buyer, because the first buyer's late-recorded deed gave her no notice.", why: "She paid value and, under the stated rule, had no record notice of a deed outside her chain, so the notice statute protects her." },
+              { text: "The third buyer, because the shelter rule passes the second buyer's protection to her.", why: "The second buyer had notice, so she had no protection to pass on; the third buyer wins on her own lack of notice.", trap: 1 },
+            ],
+            answer: 2,
+            facts: ["found the owner's deed to the second buyer", "The first buyer then recorded"],
+            say: "Where the stem says so, a deed recorded after the grantor's next recorded deed is outside the chain, and a later careful buyer wins.",
+            status: "general", src: "property.md Module 29 (late-recorded deed and the chain of title; a split, so the stem states the rule; Morse v. Curtis, 140 Mass. 112 (1885), general)",
+          },
+          {
+            id: "u11-h-estoppel-recording", kind: "hypo", cat: "V.D", callType: "title", rule: "u11-r-estoppel-deed", issue: "estoppel by deed, unrecorded first deed", exam: ["mbe"],
             stem: "In a jurisdiction with a notice recording statute, an owner who held no title conveyed a house to a first buyer by general warranty deed. The first buyer did not record. The owner later bought the house from the true owner and recorded that deed. The owner then conveyed the house to a second buyer for full value, and the second buyer, who had no notice of the first deed, recorded. The first buyer claims the house under the doctrine of estoppel by deed.",
             call: "Who owns the house?",
             options: [
@@ -2664,7 +2945,7 @@
             answer: 3,
             facts: ["general warranty deed", "had no notice of the first deed"],
             say: "Estoppel by deed binds the grantor, but an unrecorded deed still loses to a later buyer without notice.",
-            status: "general", src: "property.md Module 27 and Module 29 (the estoppel-versus-recording trap)",
+            status: "general", src: "property.md Module 27 and Module 29 (estoppel by deed does not defeat a later purchaser without notice; the early-recorded variant is u11-h-estoppel-early-record)",
           },
           {
             id: "u11-st-recording", kind: "steps", cat: "V.D", title: "Working a recording-act problem, in order",
@@ -2686,59 +2967,6 @@
             spare: ["A court judgment confirming every deed in the chain"],
             say: "Five tools, five jobs: protect the later buyer, register the title, clear old claims, summarize the record, insure the risk.",
             status: "general", src: "property.md Module 29 and Module 30 (Torrens and marketable title acts, general)",
-          },
-          {
-            id: "u11-r-title-insurance", kind: "rule", cat: "V.D", title: "Title insurance", exam: ["mbe"],
-            say: "Title insurance indemnifies against defects that exist at the policy date, not those the insured creates; a standard policy excepts survey matters.",
-            elements: ["An indemnity contract against loss from title defects existing at the policy date", "The insurer defends covered claims and pays covered loss up to the policy limit", "An owner's policy protects the buyer; a lender's policy protects the mortgagee", "Excluded: matters created by the insured, and matters arising after the policy date", "Excluded: zoning and governmental regulation, and known matters the insured did not disclose", "A standard policy excepts what a survey or inspection would show"],
-            ordered: false,
-            distractorElements: ["The insurer guarantees the title is marketable", "The insurer pays the full value of the land whatever the limit"],
-            exceptions: [
-              "Extended coverage, issued after a survey and inspection, removes some standard exceptions",
-              "Insurable title is not marketable title unless the contract says so (lesson 1)",
-              "A policy covers hidden record risks such as a forgery or an undelivered deed, unless it excludes them",
-            ],
-            ex: [
-              { facts: "A forged deed in the chain before the policy date surfaces; no exclusion applies.", result: "The insurer must defend and indemnify up to the policy limit." },
-              { facts: "The insured grants an easement after the policy date.", result: "Not covered: a matter created by the insured and arising after the policy date." },
-            ],
-            terms: ["title insurance", "owner's policy", "lender's policy", "policy limit"],
-            quiz: [
-              { t: "tf", q: "A title insurance policy covers a defect that the insured created after the policy date.", a: false, why: "It is excluded." },
-              { t: "tf", q: "Title insurance covers hidden record defects such as a forged deed in the chain, unless the policy excludes them.", a: true, why: "That is the risk it is bought for." },
-              { t: "mcq", q: "A lender's policy protects...", options: ["The mortgagee", "The buyer", "The seller"], a: "The mortgagee", why: "An owner's policy protects the buyer." },
-            ],
-            status: "general", src: "NCBE MBE Subject Matter Outline (Real Property V.D); property.md Module 30",
-          },
-          {
-            id: "u11-h-ti-created", kind: "hypo", cat: "V.D", callType: "liable", rule: "u11-r-title-insurance", issue: "title insurance and matters the insured created", grid: true, exam: ["mbe"],
-            stem: "A buyer purchased a house and obtained an owner's title insurance policy. A year later the buyer granted a neighbor an express easement across the lot. The neighbor's use reduced the lot's value, and the buyer filed a claim under the policy. The policy contains the standard exclusion for matters created or agreed to by the insured.",
-            call: "Is the insurer liable?",
-            options: [
-              { text: "Yes, because an owner's policy covers any easement that burdens the land, whoever created it.", why: "It covers existing defects, not burdens that the insured creates.", trap: 5 },
-              { text: "Yes, because the neighbor's easement impairs the very title that the policy insures against loss.", why: "It does impair the title, but the exclusion for matters created by the insured applies.", trap: 2 },
-              { text: "No, because a title insurance policy never covers any easement of any kind.", why: "It can cover existing easements; this one is excluded because the insured created it.", trap: 7 },
-              { text: "No, because the insured created the easement after the policy date, a matter the policy excludes.", why: "Policies cover defects existing at the policy date, not the insured's own later acts." },
-            ],
-            answer: 3,
-            facts: ["created or agreed to by the insured", "granted a neighbor an express easement"],
-            say: "Insurance covers the title you bought, not the burdens you add afterward.",
-            status: "general", src: "property.md Module 30 (P30-1, rewritten)",
-          },
-          {
-            id: "u11-h-ti-forgery", kind: "hypo", cat: "V.D", callType: "liable", rule: "u11-r-title-insurance", issue: "title insurance and a hidden forgery", exam: ["mbe"],
-            stem: "A buyer bought a farm and received an owner's title insurance policy that excluded only matters created by the insured, matters arising after the policy date, and governmental regulation. Two years later a person claiming to be the heir of a former owner sued the buyer, alleging that a deed in the seller's chain of title, executed forty years earlier, was forged. The deed was in fact forged. The buyer tendered the claim to the insurer.",
-            call: "What is the insurer's obligation?",
-            options: [
-              { text: "None, because a defect in the record chain was the buyer's risk, discoverable by the buyer's own search.", why: "Title insurance exists to cover hidden defects that a search does not reveal.", trap: 5 },
-              { text: "To pay the full market value of the farm to the buyer, whatever limit the policy states.", why: "Liability is capped at the policy limit.", trap: 7 },
-              { text: "None, because the insurer is liable only for defects that a survey would reveal.", why: "Matters a survey would show are standard exceptions, not the only covered risks.", trap: 5 },
-              { text: "To defend the buyer and pay covered loss up to the policy limit, because the forgery is a covered hidden risk.", why: "A forged deed in the chain is a covered hidden risk." },
-            ],
-            answer: 3,
-            facts: ["was in fact forged", "excluded only matters created by the insured"],
-            say: "Forgery in the chain is what title insurance is for: defend, then pay up to the limit.",
-            status: "general", src: "property.md Module 30 (P30-2, rewritten)",
           },
           { id: "u11-t-bona-fide", kind: "term", subject: "property", term: "bona fide", lang: "latin", literal: "in good faith", meaning: "Genuine and without notice of any defect; a bona fide purchaser pays value and takes without notice of an earlier claim.", use: "Recording acts: the bona fide purchaser is the person the statutes protect.", pairWith: "donee", hook: "Bona fide is the Latin for good faith: the star of every recording-act question.", say: "A bona fide purchaser: value paid, nothing known, nothing that should have been asked.", status: "general", src: "hooks.jsonl (bona fide purchaser)" },
           { id: "u11-t-lis-pendens", kind: "term", subject: "property", term: "lis pendens", lang: "latin", literal: "a suit pending", meaning: "A notice recorded against land that litigation about the land is under way; later purchasers take subject to the outcome.", use: "Recording acts: a recorded notice of a pending suit gives constructive notice to later purchasers.", hook: "A flag planted in the record: whoever buys after it buys the lawsuit too.", say: "Lis pendens: a recorded warning that a suit about this land is pending.", status: "general", src: "hooks.jsonl (lis pendens)" },
