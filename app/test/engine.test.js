@@ -227,6 +227,9 @@ test("find marks the deciding facts in the stem despite punctuation", () => {
   const it = IX.items.get("u0-h-forum-defendant");
   const q = E.qFind(IX, it);
   assert.deepEqual(q.answer.map((i) => q.words[i]).join(" "), "State C state court principal place of business in State C.", "tokens come back in stem order");
+  assert.equal(q.groups.length, it.facts.length, "one tap group per deciding fact");
+  assert.deepEqual(q.groups.flat().slice().sort((a, b) => a - b), q.answer, "the groups cover exactly the answer tokens");
+  assert.ok(!q.explain.includes(it.facts[0]), "the explanation does not repeat the facts the answer line already shows");
 });
 
 test("the grid question splits the options into two verdicts and keeps the key", () => {

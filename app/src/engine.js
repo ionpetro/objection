@@ -539,14 +539,20 @@ const Engine = (() => {
     const toks = tokens(it.stem);
     const keys = toks.map(stripMarks);
     const answer = new Set();
+    const groups = []; // one group of token indices per deciding fact: tapping any word of a phrase selects the phrase
     for (const f of it.facts) {
       const want = tokens(f).map(stripMarks);
       for (let i = 0; i + want.length <= keys.length; i++) {
-        if (want.every((w, k) => keys[i + k] === w)) { for (let k = 0; k < want.length; k++) answer.add(i + k); break; }
+        if (want.every((w, k) => keys[i + k] === w)) {
+          const g = [];
+          for (let k = 0; k < want.length; k++) { answer.add(i + k); g.push(i + k); }
+          groups.push(g);
+          break;
+        }
       }
     }
     if (!answer.size) return null;
-    return { type: "find", itemId: it.id, label: L.find, prompt: it.findAsk || `Tap the words that decide: ${it.call}`, words: toks, answer: [...answer].sort((a, b) => a - b), explain: `${it.facts.join("; ")}. ${it.options[it.answer].why || ""}`.trim() };
+    return { type: "find", itemId: it.id, label: L.find, prompt: it.findAsk || `Tap the words that decide: ${it.call}`, words: toks, answer: [...answer].sort((a, b) => a - b), groups, explain: (it.options[it.answer].why || it.say || "").trim() };
   }
   /** A wrong option shown as a student's pick: key or distractor? then the fix. */
   function qSpotOption(ix, it, r) {
@@ -556,7 +562,7 @@ const Engine = (() => {
     const i = showWrong ? wrongs[Math.floor(r() * wrongs.length)] : it.answer;
     const shown = it.options[i];
     const fixOptions = shuffle(it.options.map(optText), r);
-    return { type: "spot", itemId: it.id, label: L.spot, prompt: `${it.call} A classmate answered:`, stem: it.stem, shown: optText(shown), isRight: !showWrong, fixOptions, fix: optText(it.options[it.answer]), trapType: showWrong ? shown.trap : null, explain: `${showWrong ? `${TRAP_TYPES[shown.trap] || "Distractor"}: ${shown.why || ""}` : shown.why || ""} ${it.options[it.answer].why || ""}`.trim() };
+    return { type: "spot", itemId: it.id, label: L.spot, prompt: `${it.call} A classmate answered:`, stem: it.stem, shown: optText(shown), isRight: !showWrong, fixOptions, fix: optText(it.options[it.answer]), trapType: showWrong ? shown.trap : null, explain: (showWrong ? `${TRAP_TYPES[shown.trap] || "Distractor"}: ${shown.why || ""} ${it.options[it.answer].why || ""}` : shown.why || "").trim() };
   }
 
   // rules

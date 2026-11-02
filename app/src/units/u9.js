@@ -3276,7 +3276,7 @@
           {
             id: "u9-r-807", exam: ["mbe"], kind: "rule", title: "The residual exception", cat: "V.K",
             say: "The residual exception needs trustworthiness, higher probative value than other evidence the proponent can obtain, and notice.",
-            elements: ["Sufficient guarantees of trustworthiness in the totality of circumstances, and corroborating evidence if any", "More probative on the point than any other evidence the proponent can obtain through reasonable efforts", "Reasonable written pretrial notice of the substance and the declarant's name", "The statement does not fit a category in Rule 803 or 804"],
+            elements: ["Sufficient guarantees of trustworthiness in the totality of circumstances, and corroborating evidence if any", "More probative on the point than any other evidence the proponent can obtain through reasonable efforts", "Reasonable written pretrial notice of the substance and the declarant's name", "It applies even when the statement is a near miss under Rule 803 or 804 (the 2019 text dropped the old not-specifically-covered wording)"],
             ordered: false,
             exceptions: ["Rule 807 is rarely the best answer: use it only when no categorical exception fits", "The court may excuse late notice for good cause"],
             cite: "FRE 807", citeAsk: "Which rule is the residual exception to the hearsay rule?",

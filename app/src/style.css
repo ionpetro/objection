@@ -185,6 +185,7 @@ body.run-open { overflow: hidden; } /* the page behind a run must not scroll und
 .timer { height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-top: 10px; }
 .timer > i { display: block; height: 100%; width: 100%; background: var(--flame); transform-origin: left; }
 .stage { flex: 1; overflow-y: auto; padding-block: 22px 18px; display: flex; flex-direction: column; gap: 18px; min-height: 0; }
+.stage > * { flex-shrink: 0; } /* the stage scrolls; its blocks (slots, option lists, stems) must never be squeezed to their min-height */
 .qlabel { font-size: 13px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .qlabel.guess { color: var(--brass-deep); }
 .qlabel .marks { margin-left: auto; color: var(--muted); text-transform: none; letter-spacing: 0; }

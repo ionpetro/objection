@@ -42,7 +42,7 @@
     title: "Real Property I: ownership and rights in land",
     blurb: "Two of Property's five equal fifths: who owns the land, and what everyone else may do on it.",
     subject: "property",
-    assume: "Defaults for this unit, because the stems announce anything else: common law with the modern majority rule wherever one exists (lien theory of mortgages; the American rule on delivery of possession; mitigation after abandonment; an implied warranty of habitability in residential leases; no self-help eviction). Shelley's Case, Worthier Title and the destructibility of contingent remainders are abolished. The common-law Rule Against Perpetuities applies unmodified unless the stem names a reform. A stem names any recording act, limitations period, Restatement adoption or zoning ordinance it needs.",
+    assume: "Defaults for this unit, because the stems announce anything else: common law with the modern majority rule wherever one exists (lien theory of mortgages; the English rule on delivery of possession (the landlord must deliver actual possession); mitigation after abandonment; an implied warranty of habitability in residential leases; no self-help eviction). Shelley's Case, Worthier Title and the destructibility of contingent remainders are abolished. The common-law Rule Against Perpetuities applies unmodified unless the stem names a reform. A stem names any recording act, limitations period, Restatement adoption or zoning ordinance it needs.",
     exam: ["mbe", "nextgen"],
     lessons: [
       // ------------------------------------------------------------------------------------------------------------------
@@ -1377,14 +1377,14 @@
               "Periodic: renews until a full period's notice, ending at the end of a period",
               "At will: no fixed term, and either side may end it",
               "Holdover: the landlord elects to evict or to bind the tenant to a periodic tenancy; accepting rent is the election",
-              "The landlord must deliver actual possession on the day the term begins (American rule)",
+              "The landlord must deliver actual possession on the day the term begins (English rule, the majority in the US)",
             ],
             ordered: false,
             split: {
-              majority: "American rule: the landlord must deliver actual possession when the term begins.",
-              minority: "English rule: the landlord need only deliver the legal right to possession.",
+              majority: "English rule (the majority of US jurisdictions): the landlord must deliver actual possession when the term begins.",
+              minority: "American rule: the landlord need only deliver the legal right to possession; the new tenant must evict a holdover.",
             },
-            splitNote: "The stem names the rule if it matters. The American rule is this unit's default.",
+            splitNote: "The stem names the rule if it matters. The names are the trap: the English rule is the US majority, and it is this unit's default.",
             exceptions: [
               "An oral lease that the statute of frauds makes unenforceable as a term usually creates a periodic tenancy measured by the rent period",
               "Notice must be at least one full period and must end the tenancy at the end of a period. At common law, year-to-year tenancies need six months' notice, and statutes often shorten the notice further",
@@ -1394,13 +1394,13 @@
             cite: "NCBE MBE Subject Matter Outline (Real Property I.C)", citeAsk: "Which part of the NCBE outline covers types of tenancies, possession and rent?",
             ex: [
               { facts: "A one-year lease ends June 30; the tenant stays and the landlord accepts July's rent.", result: "The landlord elected a periodic tenancy and cannot evict at once as a trespasser." },
-              { facts: "On the first day of the term the prior tenant is still in the house.", result: "American rule: the landlord breached, and the new tenant may terminate and recover damages." },
+              { facts: "On the first day of the term the prior tenant is still in the house.", result: "English rule (majority): the landlord breached, and the new tenant may terminate and recover damages." },
             ],
             terms: ["term of years", "periodic tenancy", "tenancy at will", "tenancy at sufferance", "holdover"],
             quiz: [
               { t: "tf", q: "A tenant whose one-year lease has ended, who stays, and whose rent the landlord then accepts, may be evicted at once as a trespasser.", a: false, why: "Accepting rent after the term is the landlord's election to treat the tenant as a periodic tenant." },
               { t: "mcq", q: "A tenant under an oral three-year lease (the statute of frauds requires a writing for leases over one year) takes possession and pays monthly rent. What does the tenant hold?", options: ["A month-to-month periodic tenancy", "A three-year term of years", "A tenancy at sufferance"], a: "A month-to-month periodic tenancy", why: "The oral term is unenforceable, but possession plus rent usually creates a periodic tenancy measured by the rent period." },
-              { t: "tf", q: "Under the American rule, the landlord must deliver actual possession when the term begins.", a: true, why: "The English rule, which requires only the legal right to possession, is the minority view." },
+              { t: "tf", q: "Under the American rule, the landlord must deliver actual possession when the term begins.", a: false, why: "The names are backwards from what you would guess: the English rule (the US majority) requires actual possession; the American rule, the minority, requires only the legal right to possession." },
               { t: "tf", q: "At common law, a landlord may end a year-to-year tenancy by giving one day's notice before the year ends.", a: false, why: "Notice must be at least one full period and end the tenancy at the end of a period, but at common law six months' notice suffices for a year-to-year tenancy." },
             ],
             status: "general", src: "property.md Module 5; NCBE MBE Subject Matter Outline, Real Property I.C (headings)",
@@ -1436,18 +1436,18 @@
             status: "general", src: "property.md Module 5 (P5-2 rewritten)",
           },
           {
-            id: "u10-h-delivery", kind: "hypo", cat: "I.C", callType: "status", rule: "u10-r-tenancies", issue: "American rule on delivery of possession",
-            stem: "In a jurisdiction that follows the American rule on delivery of possession, a landlord leased a house to a tenant for a one-year term beginning September 1. On September 1, the prior tenant, whose lease had expired, was still in the house and refused to leave. The landlord told the new tenant to evict the prior tenant at the new tenant's own expense. The new tenant has paid no rent.",
+            id: "u10-h-delivery", kind: "hypo", cat: "I.C", callType: "status", rule: "u10-r-tenancies", issue: "English rule on delivery of possession",
+            stem: "In a jurisdiction that follows the English rule on delivery of possession, a landlord leased a house to a tenant for a one-year term beginning September 1. On September 1, the prior tenant, whose lease had expired, was still in the house and refused to leave. The landlord told the new tenant to evict the prior tenant at the new tenant's own expense. The new tenant has paid no rent.",
             call: "Which statement is correct?",
             options: [
-              { text: "The new tenant may terminate the lease and recover damages, because the landlord must deliver actual possession on the day the term begins.", why: "Under the American rule a prior holdover in possession is the landlord's breach of the duty to deliver actual possession." },
-              { text: "The new tenant must bring an eviction action against the prior tenant, because the landlord must deliver the legal right to possession, not physical possession.", why: "That is the English rule. The stem names the American rule.", trap: 4 },
+              { text: "The new tenant may terminate the lease and recover damages, because the landlord must deliver actual possession on the day the term begins.", why: "Under the English rule a prior holdover in possession is the landlord's breach of the duty to deliver actual possession." },
+              { text: "The new tenant must bring an eviction action against the prior tenant, because the landlord must deliver the legal right to possession, not physical possession.", why: "That is the American rule, the minority. The stem names the English rule.", trap: 4 },
               { text: "The new tenant owes rent from September 1, because the lease took effect when the term began.", why: "Rent is owed for premises the landlord delivers. A landlord who breaches the duty of delivery cannot demand it.", trap: 5 },
               { text: "The lease is void for failure of consideration, so the new tenant has no remedy against the landlord.", why: "The lease is valid, and the tenant has remedies against the landlord.", trap: 5 },
             ],
             answer: 0,
-            facts: ["American rule on delivery of possession", "refused to leave"],
-            say: "American rule: the landlord must hand over actual possession, not just the right to it.",
+            facts: ["English rule on delivery of possession", "refused to leave"],
+            say: "English rule (US majority): the landlord must hand over actual possession, not just the right to it.",
             status: "general", src: "property.md Module 5 (P5-3 rewritten)",
           },
           {

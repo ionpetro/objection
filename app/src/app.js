@@ -53,39 +53,40 @@
   /** Amicus, the armadillo in a bow tie. mood: happy | sad | cheer | robe | sleepy */
   function mascot(mood = "happy") {
     const sad = mood === "sad", sleepy = mood === "sleepy";
+    // Eyes sit high on a long face; the snout runs down to the nose.
     const eyes = sleepy
-      ? '<path d="M50 56q4 3 8 0M72 56q4 3 8 0" stroke="var(--m-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
+      ? '<path d="M52 50q4 3 8 0M70 50q4 3 8 0" stroke="var(--m-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
       : sad
-        ? '<path d="M50 56q4-3 8 0M72 56q4-3 8 0" stroke="var(--m-ink)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="54" cy="58" r="2" fill="var(--m-ink)"/><circle cx="76" cy="58" r="2" fill="var(--m-ink)"/>'
-        : '<circle cx="54" cy="56" r="3.4" fill="var(--m-ink)"/><circle cx="76" cy="56" r="3.4" fill="var(--m-ink)"/><circle cx="55.3" cy="54.8" r="1.1" fill="#fff"/><circle cx="77.3" cy="54.8" r="1.1" fill="#fff"/>';
+        ? '<path d="M51 48.5q4-4.5 9-2.5M70 46q5-2 9 2.5" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="56" cy="52" r="2.4" fill="var(--m-ink)"/><circle cx="74" cy="52" r="2.4" fill="var(--m-ink)"/>'
+        : '<circle cx="56" cy="50" r="3.2" fill="var(--m-ink)"/><circle cx="74" cy="50" r="3.2" fill="var(--m-ink)"/><circle cx="57.2" cy="48.8" r="1.1" fill="#fff"/><circle cx="75.2" cy="48.8" r="1.1" fill="#fff"/>';
     const mouth = sad
-      ? '<path d="M59 75q6-4.5 12 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+      ? '<path d="M60 82q5-3.5 10 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
       : mood === "cheer"
-        ? '<path d="M57 70.5q8 9 16 0z" fill="var(--m-ink)"/><path d="M61 73.5q4 3.5 8 0z" fill="var(--m-tongue)"/>'
-        : sleepy ? '<path d="M59 72q6 2.5 12 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
-          : '<path d="M58 70.5q7 5.5 14 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>';
-    // Armadillo, front view: a wide banded shell body, a pointed snout, small rounded ears and a banded cap on the
-    // head, a long tail, a bow tie at the neck. (Not a wolf: no pointed ears; not a bear: the snout and the bands.)
-    const bands = '<path d="M27 70q38 12 76 0M25 80q40 13 80 0M29 91q36 11 72 0" stroke="var(--m-band)" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.85"/>';
+        ? '<path d="M58.5 78q6.5 7.5 13 0z" fill="var(--m-ink)"/><path d="M62 80.5q3 3 6 0z" fill="var(--m-tongue)"/>'
+        : sleepy ? '<path d="M60 79.5q5 2 10 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>'
+          : '<path d="M59.5 78.5q5.5 4.5 11 0" stroke="var(--m-ink)" stroke-width="2.2" fill="none" stroke-linecap="round"/>';
+    // Amicus, front view: a big banded shell, a long face that narrows to a snout with the nose at its tip, tall oval
+    // ears up top, a banded plate on the forehead, a tail curling out to the right, a bow tie under the chin.
+    const bands = '<path d="M27 72q38 12 76 0M25 82q40 13 80 0M29 93q36 11 72 0" stroke="var(--m-band)" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.85"/>';
     const arms = mood === "cheer"
-      ? '<path d="M30 76q-12-8-8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M100 76q12-8 8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/>'
-      : '<ellipse cx="46" cy="102" rx="9" ry="5" fill="var(--m-skin)"/><ellipse cx="84" cy="102" rx="9" ry="5" fill="var(--m-skin)"/>';
-    const robe = mood === "robe" ? '<path d="M32 88q33 14 66 0v18H32z" fill="#1a1a1f"/><path d="M58 88h14l-7 12z" fill="#fff"/>' : "";
-    const zz = sleepy ? '<text x="98" y="36" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="700" font-size="14" fill="var(--muted)">z z</text>' : "";
+      ? '<path d="M30 78q-12-8-8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M100 78q12-8 8-24" stroke="var(--m-skin)" stroke-width="7" stroke-linecap="round" fill="none"/>'
+      : '<ellipse cx="44" cy="103" rx="9" ry="5" fill="var(--m-skin)"/><ellipse cx="86" cy="103" rx="9" ry="5" fill="var(--m-skin)"/><path d="M38 105v3M44 106v3M50 105v3M80 105v3M86 106v3M92 105v3" stroke="var(--m-ink)" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>';
+    const robe = mood === "robe" ? '<path d="M32 90q33 14 66 0v18H32z" fill="#1a1a1f"/><path d="M58 90h14l-7 12z" fill="#fff"/>' : "";
+    const zz = sleepy ? '<text x="98" y="30" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="700" font-size="14" fill="var(--muted)">z z</text>' : "";
     return `<svg class="mascot" viewBox="0 0 130 116" role="img" aria-label="Amicus, the armadillo">
-      <ellipse cx="65" cy="107" rx="46" ry="5" fill="var(--line)"/>
-      <path d="M100 92q16 2 20-10" stroke="var(--m-shell)" stroke-width="7" stroke-linecap="round" fill="none"/>
-      <ellipse cx="65" cy="82" rx="42" ry="26" fill="var(--m-shell)"/>
+      <ellipse cx="65" cy="108" rx="46" ry="5" fill="var(--line)"/>
+      <path d="M102 92q14 4 20-6t2-16" stroke="var(--m-shell)" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <ellipse cx="65" cy="84" rx="42" ry="25" fill="var(--m-shell)"/>
       ${bands}
       ${arms}
-      <ellipse cx="42" cy="38" rx="7" ry="9" transform="rotate(-22 42 38)" fill="var(--m-skin)"/><ellipse cx="88" cy="38" rx="7" ry="9" transform="rotate(22 88 38)" fill="var(--m-skin)"/>
-      <ellipse cx="42.5" cy="39" rx="3.4" ry="5.4" transform="rotate(-22 42.5 39)" fill="var(--m-tongue)" opacity="0.5"/><ellipse cx="87.5" cy="39" rx="3.4" ry="5.4" transform="rotate(22 87.5 39)" fill="var(--m-tongue)" opacity="0.5"/>
-      <path d="M40 52q0-20 25-20t25 20q0 12-9 20l-16 10-16-10q-9-8-9-20z" fill="var(--m-skin)"/>
-      <path d="M42 45q23-16 46 0l-2.5 4q-20.500-12-41 0z" fill="var(--m-shell)"/><path d="M45 39.500q20-10.500 40 0" stroke="var(--m-band)" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.8"/>
-      <ellipse cx="65" cy="67" rx="14" ry="11" fill="var(--m-belly)"/>
-      <ellipse cx="65" cy="63.500" rx="5" ry="3.600" fill="var(--m-ink)"/><circle cx="63.500" cy="62.500" r="1.100" fill="#fff" opacity="0.7"/>
+      <ellipse cx="50" cy="26" rx="5.2" ry="11" transform="rotate(-14 50 26)" fill="var(--m-skin)"/><ellipse cx="80" cy="26" rx="5.2" ry="11" transform="rotate(14 80 26)" fill="var(--m-skin)"/>
+      <ellipse cx="50.5" cy="27" rx="2.4" ry="7" transform="rotate(-14 50.5 27)" fill="var(--m-tongue)" opacity="0.55"/><ellipse cx="79.5" cy="27" rx="2.4" ry="7" transform="rotate(14 79.5 27)" fill="var(--m-tongue)" opacity="0.55"/>
+      <path d="M44 44q0-20 21-20t21 20q0 20-14 34q-4 5-7 7q-3-2-7-7q-14-14-14-34z" fill="var(--m-skin)"/>
+      <path d="M46 37q19-11 38 0l-1.5 4.5q-17.5-9.5-35 0z" fill="var(--m-shell)"/><path d="M48.5 31.5q16.5-8.5 33 0" stroke="var(--m-band)" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M54 62q11-6 22 0q-1 14-11 22q-10-8-11-22z" fill="var(--m-belly)"/>
+      <ellipse cx="65" cy="72" rx="4.6" ry="3.4" fill="var(--m-ink)"/><circle cx="63.6" cy="71" r="1.1" fill="#fff" opacity="0.7"/>
       ${eyes}${mouth}
-      <path d="M53 85l12 3.500 12-3.500v9l-12-3.500-12 3.500z" fill="var(--brand)"/><circle cx="65" cy="89" r="2.600" fill="var(--brass)"/>
+      <path d="M53 88l12 3.5 12-3.5v9l-12-3.5-12 3.5z" fill="var(--brand)"/><circle cx="65" cy="92" r="2.6" fill="var(--brass)"/>
       ${robe}${zz}
     </svg>`;
   }
@@ -251,7 +252,7 @@
     if (!pool.length) return null;
     return pool[(Math.abs(E.daysBetween("2026-01-01", today())) * 7) % pool.length];
   }
-  const greetings = ["Ten minutes on the docket?", "One sitting keeps the streak alive.", "The call of the question first. Always.", "Objection is a muscle. Let's lift."];
+  const greetings = ["Ten minutes on the docket?", "One sitting keeps the streak alive.", "The call of the question first. Always.", "Every sitting is a rep. Let's lift."];
   function learnView() {
     const t = today();
     const todayXp = S.days[t] || 0;
@@ -265,7 +266,7 @@
     const rod = ruleOfDay();
     const name = S.name ? `${S.name}, ` : "";
     const late = new Date().getHours() >= 23;
-    const greet = late && cd.days <= 14 ? `${name}the exam is in the morning; so is the law. Sleep.` : todayXp >= S.goal ? `${name}goal billed for today. Sustained.` : S.lastDay === t ? `${name}good work. A little more reaches today's goal.` : `${name}${pick(greetings).toLowerCase()}`;
+    const greet = late && cd.days <= 14 ? `${name}the exam is in the morning; so is the law. Sleep.` : todayXp >= S.goal ? `${name}goal billed for today. Sustained.` : S.lastDay === t ? `${name}good work. A little more reaches today's goal.` : `${name}${name ? (g => g.charAt(0).toLowerCase() + g.slice(1))(pick(greetings)) : pick(greetings)}`;
     const seg = cd.phase.id === "foundations" ? 1 : cd.phase.id === "discovery" ? 2 : 3;
     const left = E.remainingSittings(IX, S);
     const perDay = cd.days > 0 ? Math.ceil((left / cd.days) * 2) / 2 : 0;
@@ -704,16 +705,26 @@
   // ---------- find (tap words in the stem) ----------
   function drawFind(q) {
     const sel = new Set();
-    const inner = `${header(q)}<p class="prompt">${esc(q.prompt)}</p><div class="findtext" id="find">${q.words.map((w, i) => `<button class="tok" data-i="${i}">${esc(w)}</button>`).join("")}</div>`;
+    const groups = q.groups && q.groups.length ? q.groups : [q.answer];
+    const groupOf = (i) => groups.find((g) => g.includes(i)) || [i]; // a phrase is tapped as one: any word selects the whole fact
+    const n = groups.length;
+    const inner = `${header(q)}<p class="prompt">${esc(q.prompt)}</p><p class="muted" style="font-weight:700;font-size:14px">${n === 1 ? "One fact decides it. Tap a word in it." : `${["", "", "Two", "Three", "Four", "Five"][n] || n} facts decide it. Tap a word in each.`}</p><div class="findtext" id="find">${q.words.map((w, i) => `<button class="tok" data-i="${i}">${esc(w)}</button>`).join("")}</div>`;
     shell(inner, footerBtn("Check", "", "check", true));
     const check = $("#check");
-    $$(".tok").forEach((b) => b.addEventListener("click", () => { if (run.answered) return; const i = +b.dataset.i; if (sel.has(i)) sel.delete(i); else sel.add(i); b.classList.toggle("sel", sel.has(i)); check.disabled = sel.size === 0; }));
+    const toks = $$(".tok");
+    toks.forEach((b) => b.addEventListener("click", () => {
+      if (run.answered) return;
+      const g = groupOf(+b.dataset.i);
+      const on = !sel.has(g[0]);
+      for (const i of g) { if (on) sel.add(i); else sel.delete(i); toks[i].classList.toggle("sel", on); }
+      check.disabled = sel.size === 0;
+    }));
     check.addEventListener("click", () => {
       if (run.answered) return;
       run.answered = true;
       const want = new Set(q.answer);
       let ok = sel.size === want.size;
-      $$(".tok").forEach((b) => { const i = +b.dataset.i; b.classList.remove("sel"); if (want.has(i) && sel.has(i)) b.classList.add("ok"); else if (sel.has(i)) { b.classList.add("bad"); ok = false; } else if (want.has(i)) { b.classList.add("miss"); ok = false; } });
+      toks.forEach((b) => { const i = +b.dataset.i; b.classList.remove("sel"); if (want.has(i) && sel.has(i)) b.classList.add("ok"); else if (sel.has(i)) { b.classList.add("bad"); ok = false; } else if (want.has(i)) { b.classList.add("miss"); ok = false; } });
       resolve(q, ok);
     });
   }
@@ -831,7 +842,7 @@
     if (q.type === "build") return esc(q.answer.join(q.orderFree ? " · " : " → "));
     if (q.type === "type") return esc(q.answer[0]);
     if (q.type === "tf") return esc(q.answer ? q.yes : q.no);
-    if (q.type === "find") return esc(q.answer.map((i) => q.words[i]).join(" "));
+    if (q.type === "find") return esc((q.groups && q.groups.length ? q.groups : [q.answer]).map((g) => g.map((i) => q.words[i]).join(" ")).join(" · "));
     if (q.type === "spot") return esc(q.fix);
     return "";
   }
@@ -889,7 +900,7 @@
     const streakLine = !wasActive && st.streakUp ? (st.usedFreeze ? `A continuance saved the streak. ${plural(S.streak, "day", "days")} on the docket.` : S.streak > 1 ? `${plural(S.streak, "day", "days")} on the docket.` : "Day 1 on the docket. See you tomorrow.") : `Streak: ${plural(S.streak, "day", "days")}.`;
     shell(`<div class="results">
       ${mascot("cheer")}
-      <h1>${perfect && run.scored ? "Sine errore." : acc < 50 ? pick(["Overruled, for now.", "The notebook learns first.", "Again, with the notebook."]) : pick(["Sustained.", "Court is adjourned.", "Well argued."])}</h1>
+      <h1>${perfect && run.scored ? "No objections." : acc < 50 ? pick(["Overruled, for now.", "The notebook learns first.", "Again, with the notebook."]) : pick(["Sustained.", "Court is adjourned.", "Well argued."])}</h1>
       <div class="resgrid">
         <div class="res gold"><div class="h">Billed</div><div class="v">+${gained}m</div></div>
         <div class="res olive"><div class="h">Accuracy</div><div class="v">${acc}%</div></div>

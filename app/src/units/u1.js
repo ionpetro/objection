@@ -31,7 +31,7 @@
     title: "Read the call: how an MBE question works",
     blurb: "Twenty minutes on the paper, the anatomy of an item, the fourteen calls and the eleven traps. Everything else builds on it.",
     subject: "skills",
-    assume: "This unit teaches the exam, not a subject. It borrows a handful of small rules that need no prior lesson (removal, habit evidence, contract modification, Miranda, the Torts fault defaults) so you can practise reading the call on day one. Each subject unit opens with its own controlling-law card, because the exam does.",
+    assume: "No subject yet: this unit teaches the exam itself. The few rules it borrows for practice (removal, habit evidence, UCC modification, Miranda) come back in full in their own units.",
     exam: ["mbe", "nextgen"],
     lessons: [
       // ------------------------------------------------------------------------------------------------
