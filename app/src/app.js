@@ -34,7 +34,7 @@
   const sisterLinks = () => FAMILY.filter((a) => a.id !== "objection").map((a) => `<a href="${a.url}/?utm_source=objection&utm_medium=sister_link" target="_blank" rel="noopener" data-sister="${a.id}">${a.name}</a> (${a.en})`).join(" · ");
   const sisterNote = () => `<p class="sister">More free, open-source apps like this: ${sisterLinks()}</p>`;
   const REPO = "https://github.com/ionpetro/objection";
-  const ghLink = (cls, where, inner) => (REPO ? `<a class="${cls}" href="${REPO}" target="_blank" rel="noopener" data-gh="${where}" aria-label="The Objection code on GitHub">${inner}</a>` : "");
+  const ghLink = (cls, where, inner, label) => (REPO ? `<a class="${cls}" href="${REPO}" target="_blank" rel="noopener" data-gh="${where}" aria-label="${label || "The Objection code on GitHub"}" title="${label || "The Objection code on GitHub"}">${inner}</a>` : "");
   const FREE_NOTE = "Objection is free and always will be. The code is open (MIT). The only thing we do is measure how it's used with PostHog, so we can make it better. No account, no ads; your progress stays in this browser.";
 
   // ---------- GitHub star prompt ----------
@@ -245,7 +245,7 @@
         <span class="stat" title="Continuances (streak freezes)" style="color:var(--brand)">${I.shield}<span>${S.freezes}</span></span>
         <span class="stat xp" title="Billable minutes">${I.clock}<span>${S.xp}</span></span>
       </div>
-      ${ghLink("gh", "topbar", `${I.github}<span class="gh-label">GitHub</span>`)}
+      ${ghLink("gh", "topbar", `${I.github}<span class="gh-label">${I.star}<span class="gh-text">Star</span></span>`, "Star Objection on GitHub")}
     </header>`;
   }
   function tabbar() {
@@ -254,7 +254,7 @@
   function siteNote() { return `<footer class="sitenote">${sisterNote()}<p><b>${FREE_NOTE}</b></p>${ghLink("btn ghost gh-cta", "footer", `${I.github}<span>Star it on GitHub</span>`)}<p class="sitenote-sub">A star helps other people find it.</p><p>Every card says where its rule was checked (FRE, FRCP, Title 28, UCC, the Constitution, a Supreme Court opinion). Cards still under review say so. Objection drills the MBE; it is not legal advice and it is not affiliated with NCBE.</p></footer>`; }
 
   function render() {
-    if (!S.onboarded) { app().innerHTML = onboarding(); bindOnboarding(); return; }
+    if (!S.onboarded) { app().innerHTML = topbar() + onboarding(); bindOnboarding(); return; }
     const body = { learn: learnView, lex: lexView, me: meView }[ui.tab]();
     app().innerHTML = topbar() + `<main class="view">${body}${siteNote()}</main>` + tabbar();
     bindCommon();

@@ -455,7 +455,8 @@ body.run-open { overflow: hidden; } /* the page behind a run must not scroll und
 .gh svg { width: 18px; height: 18px; flex: none; }
 .gh-label { display: inline-flex; align-items: center; gap: 3px; }
 .gh-label svg { width: 14px; height: 14px; color: var(--brass-deep); }
-@media (max-width: 430px) { .gh-label { display: none; } .gh { padding: 4px 8px; } }
+.gh-text { display: inline; }
+@media (max-width: 430px) { .gh-text { display: none; } .gh { padding: 4px 8px; } }
 .sitenote .gh-cta { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 15px; padding: 10px 18px; margin: 8px 0; }
 .sitenote .gh-cta svg { width: 18px; height: 18px; }
 
