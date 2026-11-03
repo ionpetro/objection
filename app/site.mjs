@@ -8,7 +8,17 @@ const { loadUnits } = require("./src/course.js");
 const { Engine: E } = require("./src/engine.js");
 
 export const SITE = process.env.SITE_URL || "https://objection-bar.vercel.app";
-export const REPO = process.env.REPO_URL || "";
+export const REPO = process.env.REPO_URL || "https://github.com/ionpetro/objection";
+
+// The family of free, open-source learning apps. Keep this list the same in Skepsis, Carpe, Gnothi and Objection (app.js and site.mjs).
+const FAMILY = [
+  { id: "skepsis", name: "Skepsis", url: "https://skepsis-greek.vercel.app", repo: "https://github.com/ionpetro/skepsis", en: "the Greek hiding in everyday English", el: "οι ελληνικές ρίζες που κρύβονται στα αγγλικά" },
+  { id: "carpe", name: "Carpe", url: "https://carpe-latin.vercel.app", repo: "https://github.com/ionpetro/carpe", en: "Latin for Greece's national exams", el: "Λατινικά για τις Πανελλαδικές" },
+  { id: "gnothi", name: "Gnothi", url: "https://gnothi-greek.vercel.app", repo: "https://github.com/ionpetro/gnothi", en: "Ancient Greek for Greece's national exams", el: "Αρχαία Ελληνικά για τις Πανελλαδικές" },
+  { id: "objection", name: "Objection", url: "https://objection-bar.vercel.app", repo: "https://github.com/ionpetro/objection", en: "prep for the US bar exam", el: "προετοιμασία για τις εξετάσεις δικηγόρων των ΗΠΑ" },
+];
+const SISTERS = FAMILY.filter((a) => a.id !== "objection");
+const sisterHref = (a) => `${a.url}/?utm_source=objection&amp;utm_medium=sister_link`;
 // PostHog (optional): set POSTHOG_KEY in app/.env. Without it no analytics code ships at all.
 const POSTHOG_KEY = process.env.POSTHOG_KEY || "";
 const POSTHOG_HOST = process.env.POSTHOG_HOST || "https://us.i.posthog.com";
@@ -57,8 +67,8 @@ table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:8px 6px;b
 .pill{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:999px;background:var(--brand-soft);color:var(--brand)}
 footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}footer a{font-weight:700}`;
 
-const nav = () => `<nav class="top" aria-label="Site"><a class="brand" href="/">Objection</a><a href="/outline">Outline</a><a href="/about">About</a>${REPO ? `<a href="${REPO}">GitHub</a>` : ""}</nav>`;
-const foot = () => `<footer><p>${NAME}: ${TAGLINE} Every rule is checked against the primary text (FRE, FRCP, Title 28, UCC Articles 1 and 2, the Constitution, Supreme Court opinions) or marked as under review. No NCBE question text and no commercial-outline text appears here; the fact patterns are our own. ${NAME} is free and will stay free${REPO ? `; the code is open (MIT): <a href="${REPO}">GitHub</a>` : ""}. We count how it is used with PostHog so we can improve it. No account, no ads. Not affiliated with NCBE. Not legal advice.</p></footer>`;
+const nav = () => `<nav class="top" aria-label="Site"><a class="brand" href="/">Objection</a><a href="/outline">Outline</a><a href="/about">About</a><a href="${REPO}">GitHub</a></nav>`;
+const foot = () => `<footer><p>${NAME}: ${TAGLINE} Every rule is checked against the primary text (FRE, FRCP, Title 28, UCC Articles 1 and 2, the Constitution, Supreme Court opinions) or marked as under review. No NCBE question text and no commercial-outline text appears here; the fact patterns are our own. <b>${NAME} is free and always will be. The code is open (MIT): <a href="${REPO}">GitHub</a></b> (a star helps others find it). The only thing we do is measure how it's used with PostHog, so we can make it better. No account, no ads. Not affiliated with NCBE. Not legal advice. More free, open-source apps like this: ${SISTERS.map((a) => `<a href="${sisterHref(a)}">${a.name}</a> (${a.en})`).join(" · ")}</p></footer>`;
 const page = ({ title, desc, path, body, jsonld, type }) => `<!doctype html><html lang="en"><head>${head({ title, desc, path, jsonld, type })}<style>${PAGE_CSS}</style></head><body><div class="wrap">${nav()}${body}${foot()}</div></body></html>`;
 
 /** Every rule card, with its unit, for the outline page. */
@@ -96,7 +106,8 @@ function aboutPage(units) {
       <li><b>No punishment.</b> No hearts, no lives; weekends never break a streak.</li></ul>
     <h2>Accuracy</h2><p>Every card says where its rule was checked: the FRE, FRCP, Title 28, UCC Articles 1 and 2, the Constitution, a Restatement section, a Supreme Court opinion, or NCBE's own outline. Cards that have not been verified against primary text say "under review" and never appear in the Question of the Day or the mocks. We do not invent statistics; the only weights shown are NCBE's own fractions, in NCBE's words.</p>
     <h2>Which exam</h2><p>The legacy MBE is given through February 2028. In February and July 2027 most jurisdictions still sit it; about 22 will have moved to the NextGen UBE by July 2027. Seven of NextGen's eight concepts are the MBE subjects under the same law, so Objection carries over; it does not yet cover Business Associations, integrated question sets or performance tasks. Confirm your dates and exam with your board.</p>
-    <h2>Free, and what we count</h2><p>${NAME} is free and will stay free. No account, no ads. We count anonymously with <a href="https://posthog.com">PostHog</a> how the app is used (which lessons start and finish, where people get stuck) and watch session recordings where everything typed is hidden, to find what to fix. Your progress stays in your browser.${REPO ? ` The code is open under the MIT license: <a href="${REPO}">GitHub</a>.` : ""}</p>
+    <h2>Free, open, and what we count</h2><p>${NAME} is free and always will be. No account, no ads. We count anonymously with <a href="https://posthog.com">PostHog</a> how the app is used (which lessons start and finish, where people get stuck) and watch session recordings where everything typed is hidden, to find what to fix. Your progress stays in your browser. The code is open under the MIT license: <a href="${REPO}">${REPO.replace("https://", "")}</a>.</p>
+    <h2>The family</h2><p>${NAME} is one of four free, open-source learning apps, each one a short daily game:</p><ul>${FAMILY.map((a) => `<li>${a.id === "objection" ? `<b>${a.name}</b>` : `<a href="${sisterHref(a)}">${a.name}</a>`}: ${a.en} (<a href="${a.repo}">code</a>)</li>`).join("")}</ul><p>If one helps you, a star on GitHub helps other people find it.</p>
     <a class="cta" href="/">Open the docket</a>`;
   return page({ title: `About ${NAME}`, desc: DESC, path: "/about", body, jsonld: [{ "@context": "https://schema.org", "@type": "AboutPage", name: `About ${NAME}`, inLanguage: "en", url: `${SITE}/about` }] });
 }
@@ -112,7 +123,7 @@ function appPage(appMarkup, units) {
   const app = appMarkup.replace(/<title>[^<]*<\/title>\s*/, "").replace(/<meta (charset|name="(description|viewport)")[^>]*>\s*/g, "").replace(/<link rel="(preconnect|stylesheet)"[^>]*>\s*/g, "");
   const n = outline(units).length;
   const fallback = `<noscript><div style="max-width:640px;margin:24px auto;padding:0 16px;font-family:system-ui"><h1>${NAME}: ${TAGLINE}</h1><p>${esc(DESC)}</p><p><a href="/outline">Outline (${n} rules)</a> · <a href="/about">About</a></p></div></noscript>`;
-  const footer = `<footer class="site-foot" aria-label="More"><a href="/outline">Outline</a><a href="/about">About ${NAME}</a>${REPO ? `<a href="${REPO}">Free forever · open source on GitHub</a>` : ""}</footer>`;
+  const footer = `<footer class="site-foot" aria-label="More"><a href="/outline">Outline</a><a href="/about">About ${NAME}</a><a href="${REPO}">Free forever · open source on GitHub</a>${SISTERS.map((a) => `<a href="${sisterHref(a)}">Sister app: ${a.name}</a>`).join("")}</footer>`;
   return `<!doctype html><html lang="en"><head>${head({ title: `${NAME}: MBE prep, ten minutes a day`, desc: DESC, path: "/", jsonld })}
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}
 .site-foot{max-width:560px;margin:-8px auto 0;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;font:700 13px/1.4 "Nunito Sans",system-ui,sans-serif;padding:0 max(16px,env(safe-area-inset-right,0px)) calc(96px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}

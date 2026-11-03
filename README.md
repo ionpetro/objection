@@ -12,6 +12,17 @@ Objection is a playful, Duolingo-style web app that prepares a US law graduate f
 
 ---
 
+## Open source, and the family
+
+Objection is free and open source (MIT). **If it helps you, please [star the repo](https://github.com/ionpetro/objection)**: a star helps other people find it. Corrections and pull requests are welcome.
+
+Objection is one of four free, open-source learning apps built the same way (short daily lessons, spaced review, no account):
+
+- **Skepsis**: the Greek hiding in everyday English. [Play](https://skepsis-greek.vercel.app) · [GitHub](https://github.com/ionpetro/skepsis)
+- **Carpe**: Latin for Greece's national exams. [Play](https://carpe-latin.vercel.app) · [GitHub](https://github.com/ionpetro/carpe)
+- **Gnothi**: Ancient Greek for Greece's national exams. [Play](https://gnothi-greek.vercel.app) · [GitHub](https://github.com/ionpetro/gnothi)
+- **Objection** (this one): prep for the US bar exam (MBE). [Play](https://objection-bar.vercel.app) · [GitHub](https://github.com/ionpetro/objection)
+
 ## What it is
 
 An app for the phone and the laptop that makes MBE prep a game: ten minutes a sitting, with every question in the shape the examiners use (a fact pattern with no names, one call, four options, **the best answer**, and a reason every distractor is wrong). The mascot is **Amicus**, an armadillo in a bow tie (amicus curiae, "friend of the court"; the armadillo is the Texas nod). Points are **billable minutes**, the speed round is **Cross-Examination** (one wrong answer and the witness walks), the ranks run from 1L through Associate and Partner to Judge and Justice, and the mistakes notebook is called **Overruled**.

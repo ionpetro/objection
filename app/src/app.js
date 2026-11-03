@@ -20,9 +20,48 @@
   function track(event, props = {}) {
     try { if (window.posthog && typeof window.posthog.capture === "function") window.posthog.capture(event, props); } catch { /* analytics must never break the app */ }
   }
-  const REPO = ""; // set to the public repository URL once one exists; the GitHub buttons render only then
+  // ---------- sister apps ----------
+  /** The family of free, open-source learning apps. Keep this list the same in Skepsis, Carpe, Gnothi and Objection (app.js and site.mjs). */
+  const FAMILY = [
+    { id: "skepsis", name: "Skepsis", url: "https://skepsis-greek.vercel.app", repo: "https://github.com/ionpetro/skepsis", en: "the Greek hiding in everyday English", el: "οι ελληνικές ρίζες που κρύβονται στα αγγλικά" },
+    { id: "carpe", name: "Carpe", url: "https://carpe-latin.vercel.app", repo: "https://github.com/ionpetro/carpe", en: "Latin for Greece's national exams", el: "Λατινικά για τις Πανελλαδικές" },
+    { id: "gnothi", name: "Gnothi", url: "https://gnothi-greek.vercel.app", repo: "https://github.com/ionpetro/gnothi", en: "Ancient Greek for Greece's national exams", el: "Αρχαία Ελληνικά για τις Πανελλαδικές" },
+    { id: "objection", name: "Objection", url: "https://objection-bar.vercel.app", repo: "https://github.com/ionpetro/objection", en: "prep for the US bar exam", el: "προετοιμασία για τις εξετάσεις δικηγόρων των ΗΠΑ" },
+  ];
+  /** Links to the other apps in the family, tagged so each app's analytics shows where visitors came from. */
+  const sisterLinks = () => FAMILY.filter((a) => a.id !== "objection").map((a) => `<a href="${a.url}/?utm_source=objection&utm_medium=sister_link" target="_blank" rel="noopener" data-sister="${a.id}">${a.name}</a> (${a.en})`).join(" · ");
+  const sisterNote = () => `<p class="sister">More free, open-source apps like this: ${sisterLinks()}</p>`;
+  const REPO = "https://github.com/ionpetro/objection";
   const ghLink = (cls, where, inner) => (REPO ? `<a class="${cls}" href="${REPO}" target="_blank" rel="noopener" data-gh="${where}" aria-label="The Objection code on GitHub">${inner}</a>` : "");
-  const FREE_NOTE = "Objection is free and will stay free. No account, no ads. We count how it is used with PostHog so we can make it better; your progress stays in this browser.";
+  const FREE_NOTE = "Objection is free and always will be. The code is open (MIT). The only thing we do is measure how it's used with PostHog, so we can make it better. No account, no ads; your progress stays in this browser.";
+
+  // ---------- GitHub star prompt ----------
+  // Asked on the lesson-finished screen, never as a pop-up (same rules as Skepsis): ask after the
+  // first finished lesson; if "Not now", ask once more on a later day after a perfect lesson
+  // or the daily goal. Never more than twice, never again after a click.
+  const STAR_KEY = "objection-star-v1";
+  const starState = () => { try { return JSON.parse(localStorage.getItem(STAR_KEY) || "{}") || {}; } catch { return {}; } };
+  const saveStar = (st) => { try { localStorage.setItem(STAR_KEY, JSON.stringify(st)); } catch { /* storage blocked: we just may ask again */ } };
+  /** Counts this finished lesson and returns why to ask now ("first_lesson", "perfect", "daily_goal"), or null. */
+  function starMoment({ perfect, goalHit }) {
+    const st = starState();
+    st.lessons = (st.lessons || 0) + 1;
+    let why = null;
+    if (!st.clicked && (st.asks || 0) === 0) why = "first_lesson";
+    else if (!st.clicked && st.asks === 1 && st.lastAsk !== today() && (perfect || goalHit)) why = perfect ? "perfect" : "daily_goal";
+    if (why) { st.asks = (st.asks || 0) + 1; st.lastAsk = today(); }
+    saveStar(st);
+    return why ? { why, lessons: st.lessons, ask: st.asks } : null;
+  }
+  const starCard = () => `<div class="starask" id="starask" role="note">
+      <div class="starask-text"><b>Enjoying Objection?</b><span>It's free and open source. A star on GitHub helps other people find it.</span></div>
+      <div class="starask-btns"><a class="btn gh-cta" id="star-go" href="${REPO}" target="_blank" rel="noopener">${I.github}<span>Star it on GitHub</span></a><button class="btn ghost" type="button" id="star-later">Not now</button></div>
+    </div>`;
+  function bindStarCard(star) {
+    track("star_prompt_shown", { trigger: star.why, lessons: star.lessons, ask: star.ask });
+    $("#star-go").addEventListener("click", () => { const st = starState(); st.clicked = true; saveStar(st); track("star_prompt_clicked", { trigger: star.why, lessons: star.lessons, ask: star.ask }); track("github_clicked", { where: "star_prompt" }); $("#starask").remove(); });
+    $("#star-later").addEventListener("click", () => { track("star_prompt_dismissed", { trigger: star.why, lessons: star.lessons, ask: star.ask }); $("#starask").remove(); $("#next") && $("#next").focus(); });
+  }
 
   // ---------- icons ----------
   const I = {
@@ -210,7 +249,7 @@
   function tabbar() {
     return `<nav class="tabbar" aria-label="Sections"><div class="tabbar-inner">${TABS.map((t) => `<button class="tab" data-tab="${t.id}" ${ui.tab === t.id ? 'aria-current="page"' : ""}>${t.icon}<span>${t.label}</span></button>`).join("")}</div></nav>`;
   }
-  function siteNote() { return `<footer class="sitenote"><p><b>${FREE_NOTE}</b></p>${ghLink("btn ghost gh-cta", "footer", `${I.github}<span>The code on GitHub</span>`)}<p>Every card says where its rule was checked (FRE, FRCP, Title 28, UCC, the Constitution, a Supreme Court opinion). Cards still under review say so. Objection drills the MBE; it is not legal advice and it is not affiliated with NCBE.</p></footer>`; }
+  function siteNote() { return `<footer class="sitenote">${sisterNote()}<p><b>${FREE_NOTE}</b></p>${ghLink("btn ghost gh-cta", "footer", `${I.github}<span>Star it on GitHub</span>`)}<p class="sitenote-sub">A star helps other people find it.</p><p>Every card says where its rule was checked (FRE, FRCP, Title 28, UCC, the Constitution, a Supreme Court opinion). Cards still under review say so. Objection drills the MBE; it is not legal advice and it is not affiliated with NCBE.</p></footer>`; }
 
   function render() {
     if (!S.onboarded) { app().innerHTML = onboarding(); bindOnboarding(); return; }
@@ -402,6 +441,7 @@
   function bindCommon() {
     const root = app();
     $$("[data-gh]", root).forEach((a) => a.addEventListener("click", () => track("github_clicked", { where: a.dataset.gh })));
+    $$("[data-sister]", root).forEach((a) => a.addEventListener("click", () => track("sister_app_clicked", { to: a.dataset.sister })));
     $$("[data-tab]", root).forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
     $$("[data-start]", root).forEach((b) => b.addEventListener("click", () => startNode(E.pathNodes(IX).find((n) => n.id === b.dataset.start))));
     $$("[data-goal]", root).forEach((b) => b.addEventListener("click", () => { const from = S.goal; S.goal = +b.dataset.goal; if (from !== S.goal) track("goal_changed", { from_xp: from, to_xp: S.goal }); save(); render(); }));
@@ -896,6 +936,7 @@
     syncProgress();
     const acc = run.scored ? Math.round((run.right / run.scored) * 100) : 100;
     const secs = Math.round((Date.now() - run.start) / 1000);
+    const star = starMoment({ perfect, goalHit: prevTodayXp < S.goal && (S.days[t] || 0) >= S.goal });
     sfx.done(); if (perfect || fresh.length) confetti();
     const streakLine = !wasActive && st.streakUp ? (st.usedFreeze ? `A continuance saved the streak. ${plural(S.streak, "day", "days")} on the docket.` : S.streak > 1 ? `${plural(S.streak, "day", "days")} on the docket.` : "Day 1 on the docket. See you tomorrow.") : `Streak: ${plural(S.streak, "day", "days")}.`;
     shell(`<div class="results">
@@ -910,10 +951,12 @@
       <p style="font-weight:800">${esc(streakLine)}</p>
       ${sittingLine ? `<p class="muted" style="font-weight:700">${esc(sittingLine)}</p>` : ""}
       ${fresh.map((b) => `<div class="newbadge">${seal(b.name[0]).replace("<svg", '<svg width="40" height="40"')}<div>New badge: ${esc(b.name)}<br><span class="muted">${esc(b.desc)}</span></div></div>`).join("")}
+      ${star ? starCard() : ""}
     </div>`, footerBtn("Continue", "gold"));
     $(".progress > i") && ($(".progress > i").style.width = "100%");
     $("#next").addEventListener("click", closeRun);
     $("#next").focus();
+    if (star) bindStarCard(star);
   }
 
   // ---------- mocks: answers hidden until the end, mark and return, the clock enforced ----------
