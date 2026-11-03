@@ -10,12 +10,14 @@ const { Engine: E } = require("./src/engine.js");
 export const SITE = process.env.SITE_URL || "https://objection-bar.vercel.app";
 export const REPO = process.env.REPO_URL || "https://github.com/ionpetro/objection";
 
-// The family of free, open-source learning apps. Keep this list the same in Skepsis, Carpe, Gnothi and Objection (app.js and site.mjs).
+// The family of free, open-source learning apps. Keep this list the same in Skepsis, Carpe, Gnothi, Objection, Agora and Oikos (app.js and site.mjs).
 const FAMILY = [
   { id: "skepsis", name: "Skepsis", url: "https://skepsis-greek.vercel.app", repo: "https://github.com/ionpetro/skepsis", en: "the Greek hiding in everyday English", el: "οι ελληνικές ρίζες που κρύβονται στα αγγλικά" },
   { id: "carpe", name: "Carpe", url: "https://carpe-latin.vercel.app", repo: "https://github.com/ionpetro/carpe", en: "Latin for Greece's national exams", el: "Λατινικά για τις Πανελλαδικές" },
   { id: "gnothi", name: "Gnothi", url: "https://gnothi-greek.vercel.app", repo: "https://github.com/ionpetro/gnothi", en: "Ancient Greek for Greece's national exams", el: "Αρχαία Ελληνικά για τις Πανελλαδικές" },
   { id: "objection", name: "Objection", url: "https://objection-bar.vercel.app", repo: "https://github.com/ionpetro/objection", en: "prep for the US bar exam", el: "προετοιμασία για τις εξετάσεις δικηγόρων των ΗΠΑ" },
+  { id: "agora", name: "Agora", url: "https://agora-sales.vercel.app", repo: "https://github.com/ionpetro/agora", en: "sales and negotiation, with ethics", el: "πωλήσεις και διαπραγμάτευση, με ηθική" },
+  { id: "oikos", name: "Oikos", url: "https://oikos-azure-five.vercel.app", repo: "https://github.com/ionpetro/oikos", en: "economics and incentives", el: "οικονομικά και κίνητρα" },
 ];
 const SISTERS = FAMILY.filter((a) => a.id !== "objection");
 const sisterHref = (a) => `${a.url}/?utm_source=objection&amp;utm_medium=sister_link`;
@@ -107,7 +109,7 @@ function aboutPage(units) {
     <h2>Accuracy</h2><p>Every card says where its rule was checked: the FRE, FRCP, Title 28, UCC Articles 1 and 2, the Constitution, a Restatement section, a Supreme Court opinion, or NCBE's own outline. Cards that have not been verified against primary text say "under review" and never appear in the Question of the Day or the mocks. We do not invent statistics; the only weights shown are NCBE's own fractions, in NCBE's words.</p>
     <h2>Which exam</h2><p>The legacy MBE is given through February 2028. In February and July 2027 most jurisdictions still sit it; about 22 will have moved to the NextGen UBE by July 2027. Seven of NextGen's eight concepts are the MBE subjects under the same law, so Objection carries over; it does not yet cover Business Associations, integrated question sets or performance tasks. Confirm your dates and exam with your board.</p>
     <h2>Free, open, and what we count</h2><p>${NAME} is free and always will be. No account, no ads. We count anonymously with <a href="https://posthog.com">PostHog</a> how the app is used (which lessons start and finish, where people get stuck) and watch session recordings where everything typed is hidden, to find what to fix. Your progress stays in your browser. The code is open under the MIT license: <a href="${REPO}">${REPO.replace("https://", "")}</a>.</p>
-    <h2>The family</h2><p>${NAME} is one of four free, open-source learning apps, each one a short daily game:</p><ul>${FAMILY.map((a) => `<li>${a.id === "objection" ? `<b>${a.name}</b>` : `<a href="${sisterHref(a)}">${a.name}</a>`}: ${a.en} (<a href="${a.repo}">code</a>)</li>`).join("")}</ul><p>If one helps you, a star on GitHub helps other people find it.</p>
+    <h2>The family</h2><p>${NAME} is one of six free, open-source learning apps, each one a short daily game:</p><ul>${FAMILY.map((a) => `<li>${a.id === "objection" ? `<b>${a.name}</b>` : `<a href="${sisterHref(a)}">${a.name}</a>`}: ${a.en} (<a href="${a.repo}">code</a>)</li>`).join("")}</ul><p>If one helps you, a star on GitHub helps other people find it.</p>
     <a class="cta" href="/">Open the docket</a>`;
   return page({ title: `About ${NAME}`, desc: DESC, path: "/about", body, jsonld: [{ "@context": "https://schema.org", "@type": "AboutPage", name: `About ${NAME}`, inLanguage: "en", url: `${SITE}/about` }] });
 }
