@@ -2,7 +2,7 @@
 
 *Objection sustained. Bar passed.*
 
-**Live:** https://objection-bar.vercel.app (placeholder: not deployed yet; the Vercel project does not exist until the first `vercel deploy`)
+**Live:** https://objection-bar.vercel.app
 
 **Open source** under the [MIT license](LICENSE). Free, and it will always be free. No account, no ads. The only thing we do is measure how it's used with [PostHog](https://posthog.com) (anonymous; session recordings hide anything typed) so we can make it better. Corrections to the law are very welcome: open an issue or a pull request, and say which rule, statute or case you checked.
 
@@ -16,7 +16,7 @@ Objection is a playful, Duolingo-style web app that prepares a US law graduate f
 
 Objection is free and open source (MIT). **If it helps you, please [star the repo](https://github.com/ionpetro/objection)**: a star helps other people find it. Corrections and pull requests are welcome.
 
-Objection is one of six free, open-source learning apps built the same way (short daily lessons, spaced review, no account):
+Objection is one of eight free, open-source learning apps built the same way (short daily lessons and spaced review):
 
 - **Skepsis**: the Greek hiding in everyday English. [Play](https://skepsis-greek.vercel.app) · [GitHub](https://github.com/ionpetro/skepsis)
 - **Carpe**: Latin for Greece's national exams. [Play](https://carpe-latin.vercel.app) · [GitHub](https://github.com/ionpetro/carpe)
@@ -24,6 +24,8 @@ Objection is one of six free, open-source learning apps built the same way (shor
 - **Objection** (this one): prep for the US bar exam (MBE). [Play](https://objection-bar.vercel.app) · [GitHub](https://github.com/ionpetro/objection)
 - **Agora**: sales and negotiation, with ethics. [Play](https://agora-sales-xi.vercel.app) · [GitHub](https://github.com/ionpetro/agora)
 - **Oikos**: economics and incentives. [Play](https://oikos-azure-five.vercel.app) · [GitHub](https://github.com/ionpetro/oikos)
+- **Guanxi**: Mandarin and local culture. [Play](https://guanxi-mandarin.vercel.app) · [GitHub](https://github.com/ionpetro/guanxi)
+- **Everyday Ethics**: everyday choices and ethical judgment. [Private preview](https://everyday-ethics-ion.wintrypenny4.chatgpt.site) · [GitHub](https://github.com/ionpetro/everyday-ethics)
 
 ## What it is
 
