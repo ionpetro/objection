@@ -30,7 +30,7 @@
     {"id": "agora", "name": "Agora", "url": "https://agora-sales-xi.vercel.app", "repo": "https://github.com/ionpetro/agora", "en": "sales and negotiation, with ethics", "el": "πωλήσεις και διαπραγμάτευση, με ηθική"},
     {"id": "oikos", "name": "Oikos", "url": "https://oikos-azure-five.vercel.app", "repo": "https://github.com/ionpetro/oikos", "en": "economics and incentives", "el": "οικονομικά και κίνητρα"},
     {"id": "guanxi", "name": "Guanxi", "url": "https://guanxi-mandarin.vercel.app", "repo": "https://github.com/ionpetro/guanxi", "en": "Mandarin and local culture", "el": "Μανδαρινικά και τοπική κουλτούρα"},
-    {"id": "everyday-ethics", "name": "Everyday Ethics", "url": "https://everyday-ethics-ion.wintrypenny4.chatgpt.site", "repo": "https://github.com/ionpetro/everyday-ethics", "en": "everyday choices and ethical judgment · private preview", "el": "καθημερινές επιλογές και ηθική κρίση · ιδιωτική προεπισκόπηση"},
+    {"id": "everyday-ethics", "name": "Everyday Ethics", "url": "https://everyday-ethics.vercel.app", "repo": "https://github.com/ionpetro/everyday-ethics", "en": "everyday choices and ethical judgment", "el": "καθημερινές επιλογές και ηθική κρίση"},
   ];
   /** Links to the other apps in the family, tagged so each app's analytics shows where visitors came from. */
   const sisterLinks = () => FAMILY.filter((a) => a.id !== "objection").map((a) => `<a href="${a.url}/?utm_source=objection&utm_medium=sister_link" target="_blank" rel="noopener" data-sister="${a.id}">${a.name}</a> (${a.en}; <a href="${a.repo}" target="_blank" rel="noopener noreferrer" aria-label="${a.name} on GitHub">GitHub</a>)`).join(" · ");
