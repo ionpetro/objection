@@ -31,6 +31,7 @@
     {"id": "oikos", "name": "Oikos", "url": "https://oikos.tryskepsis.com", "repo": "https://github.com/ionpetro/oikos", "en": "economics and incentives", "el": "οικονομικά και κίνητρα"},
     {"id": "guanxi", "name": "Guanxi", "url": "https://guanxi.tryskepsis.com", "repo": "https://github.com/ionpetro/guanxi", "en": "Mandarin and local culture", "el": "Μανδαρινικά και τοπική κουλτούρα"},
     {"id": "everyday-ethics", "name": "Everyday Ethics", "url": "https://ethics.tryskepsis.com", "repo": "https://github.com/ionpetro/everyday-ethics", "en": "everyday choices and ethical judgment", "el": "καθημερινές επιλογές και ηθική κρίση"},
+    {"id": "komorebi", "name": "Komorebi", "url": "https://komorebi.tryskepsis.com", "repo": "https://github.com/ionpetro/komorebi", "en": "Japanese through everyday life", "el": "Ιαπωνικά μέσα από την καθημερινή ζωή"},
   ];
   /** Links to the other apps in the family, tagged so each app's analytics shows where visitors came from. */
   const sisterLinks = () => FAMILY.filter((a) => a.id !== "objection").map((a) => `<a href="${a.url}/?utm_source=objection&utm_medium=sister_link" target="_blank" rel="noopener" data-sister="${a.id}">${a.name}</a> (${a.en}; <a href="${a.repo}" target="_blank" rel="noopener noreferrer" aria-label="${a.name} on GitHub">GitHub</a>)`).join(" · ");
