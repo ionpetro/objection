@@ -161,7 +161,12 @@ const Engine = (() => {
       if (s.freezes < 1) s.freezes = 1;
     }
     if (s.lastDay === today) return out;
-    if (!s.lastDay || s.lastDay > today) {
+    if (s.lastDay && s.lastDay > today) {
+      // the saved day is ahead of this device's today (travel west, or the clock moved back): keep the streak
+      if (s.lastDay > addDays(today, 1)) s.lastDay = today; // more than a day ahead was a wrong clock: re-anchor
+      return out;
+    }
+    if (!s.lastDay) {
       s.streak = 1;
     } else {
       const missed = missedWeekdays(s.lastDay, today);
@@ -176,8 +181,8 @@ const Engine = (() => {
     return out;
   }
   function liveStreak(s, today) {
-    if (!s.lastDay || s.lastDay > today) return 0;
-    if (s.lastDay === today) return s.streak;
+    if (!s.lastDay) return 0;
+    if (s.lastDay >= today) return s.streak; // a saved day ahead of the device clock keeps the streak (see touchStreak)
     const missed = missedWeekdays(s.lastDay, today);
     // touchStreak refills one freeze at the start of each week, so count it here too.
     const freezes = s.freezeWeek !== weekKey(today) ? Math.max(s.freezes, 1) : s.freezes;
@@ -246,9 +251,11 @@ const Engine = (() => {
     const it = s.items[id];
     if (correct) {
       it.right += 1;
+      it.run = (it.run || 0) + 1; // right answers in a row since the last miss (the notebook lets go at 2)
       if (it.due <= today) it.box = Math.min(it.box + 1, INTERVALS.length);
     } else {
       it.wrong += 1;
+      it.run = 0;
       it.box = weight < 1 ? Math.max(1, it.box - 1) : 1;
       if (trap) recordTrap(s, id, trap, today);
     }
@@ -280,7 +287,7 @@ const Engine = (() => {
   }
   /** «Overruled» notebook: items missed at least twice, worst first. */
   function notebookItems(s) {
-    return Object.entries(s.items).filter(([, v]) => v.wrong >= 2).sort((a, b) => b[1].wrong - a[1].wrong || a[1].box - b[1].box).map(([k]) => k);
+    return Object.entries(s.items).filter(([, v]) => v.wrong >= 2 && (v.run || 0) < 2).sort((a, b) => b[1].wrong - a[1].wrong || a[1].box - b[1].box).map(([k]) => k);
   }
 
   // ---------- source labels ----------
@@ -605,12 +612,19 @@ const Engine = (() => {
     return { type: "type", itemId: it.id, label: L.cite, prompt, answer: [it.cite], cite: true, placeholder: "e.g. 1006 or 12(b)(6)", fallbackOptions: shuffle([it.cite, ...wrong], r), explain };
   }
   /** Inline quick check after a rule card. */
+  /** A true statement for a rule card: its own one-sentence rule. Used to balance true/false, which is
+   *  authored mostly as "False". Never for an "unsure" card or a multi-sentence rule. */
+  const trueStatement = (it) => it.kind === "rule" && it.status !== "unsure" && typeof it.say === "string" && it.say.length <= 170 && (it.say.match(/[.!?](\s|$)/g) || []).length <= 1 ? it.say : null;
   function qQuiz(ix, it, r, i) {
     const q = (it.quiz || [])[i];
     if (!q) return null;
     const base = { itemId: it.id, label: L.quiz, explain: q.why || it.say };
     if (q.t === "mcq") return { ...base, type: "mcq", prompt: q.q, options: shuffle(q.options, r), answer: q.a };
-    if (q.t === "tf") return { ...base, type: "tf", prompt: q.q, answer: q.a, yes: "True", no: "False" };
+    if (q.t === "tf") {
+      const t = !q.a && r() < 0.5 && trueStatement(it);
+      if (t) return { ...base, type: "tf", prompt: t, answer: true, yes: "True", no: "False", explain: `True: this is the rule itself.${q.why ? ` The trap version, "${q.q}", is false: ${q.why}` : ""}` };
+      return { ...base, type: "tf", prompt: q.q, answer: q.a, yes: "True", no: "False" };
+    }
     if (q.t === "bucket") return { ...base, type: "bucket", label: L.sort, prompt: q.q || "Sort each one", buckets: q.buckets, items: shuffle(q.items, r), answer: q.items };
     return null;
   }
@@ -741,7 +755,7 @@ const Engine = (() => {
     if (it.kind === "term") return { itemId: it.id, front: it.term, sub: it.literal ? `literally: ${it.literal}` : "", back: it.meaning, hook: it.use || it.hook || "" };
     if (it.kind === "num") return { itemId: it.id, front: it.ask, sub: "", back: it.answer, hook: it.say };
     if (it.kind === "case") return { itemId: it.id, front: `${it.name} (${it.year})`, sub: it.facts || "", back: it.holding, hook: "" };
-    if (it.kind === "rule") { const tf = (it.quiz || []).filter((q) => q.t === "tf"); const q = tf[i % Math.max(1, tf.length)]; if (q) return { itemId: it.id, front: q.q, sub: "True or false?", back: q.a ? "True" : "False", hook: q.why || "" }; return { itemId: it.id, front: it.title, sub: it.cite || "", back: it.say, hook: (it.elements || []).join(" · ") }; }
+    if (it.kind === "rule") { const tf = (it.quiz || []).filter((q) => q.t === "tf"); const q = tf[i % Math.max(1, tf.length)]; const t = q && !q.a && i % 2 === 1 && trueStatement(it); if (t) return { itemId: it.id, front: t, sub: "True or false?", back: "True", hook: "This is the rule itself." }; if (q) return { itemId: it.id, front: q.q, sub: "True or false?", back: q.a ? "True" : "False", hook: q.why || "" }; return { itemId: it.id, front: it.title, sub: it.cite || "", back: it.say, hook: (it.elements || []).join(" · ") }; }
     return null;
   }
   function qSwipe(cards) {
