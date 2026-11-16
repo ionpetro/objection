@@ -247,7 +247,8 @@ test("hypo review prefers an unseen sibling with the same rule", () => {
   const ix = { ...IX, siblings: () => [seen, sib], items: new Map([...IX.items, [sib.id, sib]]) };
   E.learn(s, seen.id, "2026-11-01");
   const q = E.qReview(ix, seen, E.rng(1), s);
-  assert.equal(q.itemId, sib.id);
+  assert.equal(q.shownId, sib.id); // the learner sees fresh facts from the unseen sibling
+  assert.equal(q.itemId, seen.id); // but the due card is the one graded and rescheduled
   assert.equal(q.label, E.L.transfer);
 });
 

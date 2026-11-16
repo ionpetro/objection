@@ -32,6 +32,7 @@
     {"id": "guanxi", "name": "Guanxi", "url": "https://guanxi.tryskepsis.com", "repo": "https://github.com/ionpetro/guanxi", "en": "Mandarin and local culture", "el": "Μανδαρινικά και τοπική κουλτούρα"},
     {"id": "everyday-ethics", "name": "Everyday Ethics", "url": "https://ethics.tryskepsis.com", "repo": "https://github.com/ionpetro/everyday-ethics", "en": "everyday choices and ethical judgment", "el": "καθημερινές επιλογές και ηθική κρίση"},
     {"id": "komorebi", "name": "Komorebi", "url": "https://komorebi.tryskepsis.com", "repo": "https://github.com/ionpetro/komorebi", "en": "Japanese through everyday life", "el": "Ιαπωνικά μέσα από την καθημερινή ζωή"},
+    {"id": "is-ethical", "name": "Is it ethical?", "url": "https://is-ethical.tryskepsis.com", "repo": "https://github.com/ionpetro/is-ethical", "en": "humans and AI agents vote yes or no on ethics questions", "el": "άνθρωποι και πράκτορες AI ψηφίζουν ναι ή όχι σε ηθικά ερωτήματα"},
   ];
   /** Links to the other apps in the family, tagged so each app's analytics shows where visitors came from. */
   const sisterLinks = () => FAMILY.filter((a) => a.id !== "objection").map((a) => `<a href="${a.url}/?utm_source=objection&utm_medium=sister_link" target="_blank" rel="noopener" data-sister="${a.id}">${a.name}</a> (${a.en}; <a href="${a.repo}" target="_blank" rel="noopener noreferrer" aria-label="${a.name} on GitHub">GitHub</a>)`).join(" · ");
@@ -181,7 +182,15 @@
 
   // ---------- state ----------
   function loadLocal() {
-    try { const raw = localStorage.getItem(LS_KEY); if (raw) return Object.assign(E.freshState(), JSON.parse(raw)); } catch { /* storage can be blocked */ }
+    try {
+      const raw = localStorage.getItem(LS_KEY);
+      if (raw) {
+        const fresh = E.freshState(), saved = JSON.parse(raw), s = Object.assign(E.freshState(), saved && typeof saved === "object" ? saved : {});
+        // a field of the wrong type (e.g. items: null from a bad edit) would throw on every render: fall back to its default
+        for (const [k, v] of Object.entries(fresh)) if (v !== null && typeof v === "object" && (typeof s[k] !== "object" || s[k] === null || Array.isArray(v) !== Array.isArray(s[k]))) s[k] = v;
+        return s;
+      }
+    } catch { /* storage can be blocked, or the save is not JSON */ }
     return E.freshState();
   }
   let S = loadLocal();
@@ -312,16 +321,17 @@
     const rod = ruleOfDay();
     const name = S.name ? `${S.name}, ` : "";
     const late = new Date().getHours() >= 23;
-    const greet = late && cd.days <= 14 ? `${name}the exam is in the morning; so is the law. Sleep.` : todayXp >= S.goal ? `${name}goal billed for today. Sustained.` : S.lastDay === t ? `${name}good work. A little more reaches today's goal.` : `${name}${name ? (g => g.charAt(0).toLowerCase() + g.slice(1))(pick(greetings)) : pick(greetings)}`;
+    const examEve = late && cd.days === 1;
+    const greet = examEve ? `${name}the exam is in the morning; so is the law. Sleep.` : todayXp >= S.goal ? `${name}goal billed for today. Sustained.` : S.lastDay === t ? `${name}good work. A little more reaches today's goal.` : `${name}${name ? (g => g.charAt(0).toLowerCase() + g.slice(1))(pick(greetings)) : pick(greetings)}`;
     const seg = cd.phase.id === "foundations" ? 1 : cd.phase.id === "discovery" ? 2 : 3;
     const left = E.remainingSittings(IX, S);
     const perDay = cd.days > 0 ? Math.ceil((left / cd.days) * 2) / 2 : 0;
-    const paceLine = left === 0 ? "Every courtroom is done: review only from here." : cd.days > 0 ? `To finish every unit by then: ~${perDay} sittings a day, about ${Math.ceil((perDay * 5) / 5) * 5} minutes.` : "";
+    const paceLine = left === 0 ? "Every courtroom is done: review only from here." : cd.days > 0 ? `To finish every unit by then: ~${perDay} sittings a day, about ${Math.ceil((perDay * 10) / 5) * 5} minutes.` : "";
     const nb = E.notebookItems(S).length;
     const mockOpen = (Object.keys(S.done).length >= 1 || Object.keys(S.sittings).length >= 1) && learned >= 10; // one finished sitting is enough: a lesson can take 2-3
     const sessionOpen = Object.keys(S.done).filter((k) => k.endsWith("-review")).length >= 4;
     return `
-      <section class="hero">${mascot(late && cd.days <= 14 ? "sleepy" : todayXp >= S.goal ? "cheer" : "happy")}<div class="bubble">${esc(greet.charAt(0).toUpperCase() + greet.slice(1))}</div></section>
+      <section class="hero">${mascot(examEve ? "sleepy" : todayXp >= S.goal ? "cheer" : "happy")}<div class="bubble ph-no-capture">${esc(greet.charAt(0).toUpperCase() + greet.slice(1))}</div></section>
       ${S.sits === "nextgen" ? `<section class="banner">NextGen candidate: Objection drills the seven MBE subjects that NextGen also tests. It does not cover Business Associations, integrated question sets or performance tasks yet.</section>` : ""}
       <section class="countdown">
         <div class="n tnum">${cd.days >= 0 ? cd.days : 0}<small>${cd.days === 1 ? "day" : "days"}</small></div>

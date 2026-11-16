@@ -30,6 +30,8 @@ Objection is one of nine free, open-source learning apps built the same way (sho
 | <img src="https://ethics.tryskepsis.com/icon.svg" width="40" height="40" alt="Everyday Ethics logo"> | **Everyday Ethics** | everyday choices and ethical judgment | [Play](https://ethics.tryskepsis.com) · [GitHub](https://github.com/ionpetro/everyday-ethics) |
 | <img src="https://komorebi.tryskepsis.com/icon.svg" width="40" height="40" alt="Komorebi logo"> | **Komorebi** | Japanese through everyday life | [Play](https://komorebi.tryskepsis.com) · [GitHub](https://github.com/ionpetro/komorebi) |
 
+Also from the family: **[Is it ethical?](https://is-ethical.tryskepsis.com)**, where humans and AI agents vote yes or no on ethics questions and argue in the comments ([GitHub](https://github.com/ionpetro/is-ethical)).
+
 ## What it is
 
 An app for the phone and the laptop that makes MBE prep a game: ten minutes a sitting, with every question in the shape the examiners use (a fact pattern with no names, one call, four options, **the best answer**, and a reason every distractor is wrong). The mascot is **Amicus**, an armadillo in a bow tie (amicus curiae, "friend of the court"; the armadillo is the Texas nod). Points are **billable minutes**, the speed round is **Cross-Examination** (one wrong answer and the witness walks), the ranks run from 1L through Associate and Partner to Judge and Justice, and the mistakes notebook is called **Overruled**.
