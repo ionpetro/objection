@@ -492,3 +492,8 @@ body.run-open { overflow: hidden; } /* the page behind a run must not scroll und
 .sitenote .sister { font-weight: 800; }
 .sitenote .sister a { color: var(--brand); }
 .sitenote-sub { font-size: 12px; margin-top: 0; }
+
+/* Welcome bubble on the first screen of the auto-started first lesson. */
+.hero.welcome { grid-template-columns: 64px 1fr; margin-bottom: 18px; }
+.hero.welcome .mascot { width: 64px; height: 64px; }
+.hero.welcome .bubble { font-size: 15px; }
